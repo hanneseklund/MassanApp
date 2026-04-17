@@ -309,6 +309,243 @@ body {
   font-size: 15px;
 }
 
+/* Subview shared: lists spaced inside the event-subview card. */
+.news-list,
+.articles-list,
+.exhibitor-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.news-item,
+.article {
+  display: grid;
+  gap: 4px;
+}
+
+.news-item + .news-item,
+.article + .article {
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.news-item__date {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.news-item__title,
+.article__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.news-item__body,
+.article__body {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+/* Program: day heading + sessions. */
+.program-day + .program-day {
+  margin-top: 20px;
+}
+
+.program-day__heading {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.program-day__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.session {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.session__time {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.session__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.session__meta,
+.session__speakers {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.session__description {
+  margin: 2px 0 0 0;
+  font-size: 14px;
+}
+
+/* Exhibitor index cards. */
+.exhibitor-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.exhibitor-card__link {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  padding: 12px 14px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.exhibitor-card__name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.exhibitor-card__booth {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.exhibitor-card__desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Exhibitor detail. */
+.back-link {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.exhibitor-detail {
+  display: grid;
+  gap: 8px;
+}
+
+.exhibitor-detail__name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.exhibitor-detail__booth {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.exhibitor-detail__desc {
+  margin: 0;
+  font-size: 14px;
+}
+
+.exhibitor-detail__link {
+  word-break: break-all;
+  color: var(--accent);
+}
+
+/* Practical information sections. */
+.practical {
+  display: grid;
+  gap: 18px;
+}
+
+.practical__section h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.practical__section p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.practical__note {
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+
+.practical__section ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  display: grid;
+  gap: 6px;
+}
+
+.overrides {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.overrides__item {
+  display: grid;
+  gap: 2px;
+}
+
+.overrides__item dt {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.overrides__item dd {
+  margin: 0;
+  font-size: 14px;
+}
+
 .hint {
   color: var(--ink-muted);
   font-size: 14px;
