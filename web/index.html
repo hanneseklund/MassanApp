@@ -435,12 +435,160 @@
         </p>
       </section>
 
-      <!-- My Pages view: stub until the auth task wires it up. -->
-      <section class="view__body" x-show="$store.app.view === 'me'">
-        <p class="placeholder">
-          My Pages, My Tickets, and newsletter preferences will be implemented
-          in a later task.
-        </p>
+      <!-- Auth view: register, sign-in, and simulated social providers.
+           Email/password is validated only as far as the prototype needs:
+           the password is stored hashed locally and re-checked on sign-in,
+           but there is no password policy. -->
+      <section
+        class="view__body"
+        x-show="$store.app.view === 'auth'"
+        x-data="authView()"
+      >
+        <div class="auth-card">
+          <div class="auth-tabs" role="tablist" aria-label="Auth mode">
+            <button
+              type="button"
+              role="tab"
+              class="auth-tabs__tab"
+              :class="mode === 'signin' && 'auth-tabs__tab--active'"
+              :aria-selected="mode === 'signin'"
+              @click="setMode('signin')"
+            >
+              Sign in
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="auth-tabs__tab"
+              :class="mode === 'register' && 'auth-tabs__tab--active'"
+              :aria-selected="mode === 'register'"
+              @click="setMode('register')"
+            >
+              Register
+            </button>
+          </div>
+
+          <form class="auth-form" @submit.prevent="submit()">
+            <label class="auth-form__field">
+              <span class="auth-form__label">Email</span>
+              <input
+                type="email"
+                autocomplete="email"
+                required
+                x-model="email"
+              />
+            </label>
+            <label class="auth-form__field" x-show="mode === 'register'">
+              <span class="auth-form__label">Display name</span>
+              <input
+                type="text"
+                autocomplete="name"
+                x-model="displayName"
+              />
+            </label>
+            <label class="auth-form__field">
+              <span class="auth-form__label">Password</span>
+              <input
+                type="password"
+                autocomplete="current-password"
+                required
+                x-model="password"
+              />
+            </label>
+            <p class="auth-form__error" x-show="error" x-text="error"></p>
+            <button type="submit" class="auth-form__submit">
+              <span x-show="mode === 'signin'">Sign in</span>
+              <span x-show="mode === 'register'">Create account</span>
+            </button>
+          </form>
+
+          <div class="auth-divider" aria-hidden="true">
+            <span>or</span>
+          </div>
+
+          <div class="auth-social">
+            <button
+              type="button"
+              class="auth-social__button"
+              @click="socialSignIn('google')"
+            >
+              Continue with Google
+              <span class="sim-chip">simulated</span>
+            </button>
+            <button
+              type="button"
+              class="auth-social__button"
+              @click="socialSignIn('microsoft')"
+            >
+              Continue with Microsoft
+              <span class="sim-chip">simulated</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Pages view: visible when a user is signed in. Visitors who
+           arrive at #/me without a session are nudged to the auth view. -->
+      <section
+        class="view__body"
+        x-show="$store.app.view === 'me'"
+        x-data="meView()"
+      >
+        <template x-if="user()">
+          <div class="me">
+            <header class="me__header">
+              <p class="me__name" x-text="user().display_name"></p>
+              <p class="me__email" x-text="user().email"></p>
+              <p class="me__provider">
+                Signed in with
+                <span x-text="providerLabel(user().auth_provider)"></span>
+                <span
+                  class="sim-chip"
+                  x-show="isSimulated()"
+                >simulated</span>
+              </p>
+            </header>
+            <ul class="me__links">
+              <li>
+                <button type="button" class="me__link" @click="openTickets()">
+                  My Tickets
+                  <span class="me__link-hint">coming in a later task</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="me__link"
+                  @click="openNewsletter()"
+                >
+                  Newsletter preferences
+                  <span class="me__link-hint">coming in a later task</span>
+                </button>
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="me__signout"
+              @click="signOut()"
+            >
+              Sign out
+            </button>
+          </div>
+        </template>
+        <template x-if="!user()">
+          <div class="me me--signed-out">
+            <p class="placeholder">
+              Sign in to see your tickets and newsletter preferences.
+            </p>
+            <button
+              type="button"
+              class="auth-form__submit"
+              @click="$store.app.goAuth('calendar')"
+            >
+              Sign in or register
+            </button>
+          </div>
+        </template>
       </section>
     </main>
 

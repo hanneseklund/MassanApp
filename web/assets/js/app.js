@@ -5,7 +5,8 @@
 //   #/event/<slug>                                   -> event home
 //   #/event/<slug>/<subview>                         -> event subview
 //   #/event/<slug>/exhibitors/<exhibitor-id>         -> exhibitor detail
-//   #/me                                             -> My Pages (stub until auth task)
+//   #/auth                                           -> registration / sign-in
+//   #/me                                             -> signed-in My Pages
 //
 // Data is loaded from web/data/catalog.json, which mirrors the Supabase
 // table structure documented in docs/implementation-specification.md.
@@ -41,6 +42,7 @@ function parseHash(hash) {
   const clean = hash.replace(/^#\/?/, "");
   if (!clean) return { view: "calendar" };
   const parts = clean.split("/").filter(Boolean);
+  if (parts[0] === "auth") return { view: "auth" };
   if (parts[0] === "me") return { view: "me" };
   if (parts[0] === "event" && parts[1]) {
     if (parts[2] === "exhibitors" && parts[3]) {
@@ -59,6 +61,7 @@ function parseHash(hash) {
 
 function buildHash(state) {
   if (state.view === "calendar") return "#/";
+  if (state.view === "auth") return "#/auth";
   if (state.view === "me") return "#/me";
   if (state.view === "event") {
     if (state.eventSubview === "exhibitors" && state.exhibitorId) {
@@ -72,6 +75,65 @@ function buildHash(state) {
   return "#/";
 }
 
+// Session persistence. Password hashing is intentionally lightweight —
+// the prototype stores user records in localStorage only, and there is
+// no real security model until Supabase Auth replaces this layer.
+const SESSION_KEY = "massan.session";
+const USERS_KEY = "massan.users";
+
+function hashPassword(pw) {
+  let h = 0;
+  const s = String(pw ?? "");
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+  }
+  return `h${h}`;
+}
+
+function newUserId() {
+  return "user-" + Math.random().toString(36).slice(2, 10);
+}
+
+function loadUsersFromStorage() {
+  try {
+    const raw = localStorage.getItem(USERS_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveUsersToStorage(users) {
+  localStorage.setItem(USERS_KEY, JSON.stringify(users));
+}
+
+function loadSessionFromStorage() {
+  try {
+    const raw = localStorage.getItem(SESSION_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveSessionToStorage(user) {
+  if (user) {
+    localStorage.setItem(SESSION_KEY, JSON.stringify(user));
+  } else {
+    localStorage.removeItem(SESSION_KEY);
+  }
+}
+
+function publicUserRecord(user) {
+  return {
+    id: user.id,
+    email: user.email,
+    display_name: user.display_name,
+    auth_provider: user.auth_provider,
+    simulated: !!user.simulated,
+  };
+}
+
 document.addEventListener("alpine:init", () => {
   // App-wide navigation and simulation state.
   Alpine.store("app", {
@@ -82,6 +144,9 @@ document.addEventListener("alpine:init", () => {
     isSimulated: true,
     toast: "",
     _toastTimer: null,
+    // View to return to once the user completes an auth flow. Defaults
+    // to the calendar when entering auth from the chrome "Me" button.
+    _preAuthView: "calendar",
 
     init() {
       this._applyHash();
@@ -109,7 +174,22 @@ document.addEventListener("alpine:init", () => {
       this._navigate({ view: "calendar" });
     },
     goMe() {
-      this._navigate({ view: "me" });
+      if (Alpine.store("session").isSignedIn) {
+        this._navigate({ view: "me" });
+      } else {
+        this._preAuthView = "calendar";
+        this._navigate({ view: "auth" });
+      }
+    },
+    goAuth(preAuthView) {
+      this._preAuthView = preAuthView || "calendar";
+      this._navigate({ view: "auth" });
+    },
+    afterAuth() {
+      const target = this._preAuthView || "calendar";
+      this._preAuthView = "calendar";
+      if (target === "me") this._navigate({ view: "me" });
+      else this._navigate({ view: "calendar" });
     },
     selectEvent(eventId) {
       this._navigate({ view: "event", eventId, eventSubview: "home" });
@@ -142,6 +222,7 @@ document.addEventListener("alpine:init", () => {
 
     chromeTitle() {
       if (this.view === "calendar") return "Events";
+      if (this.view === "auth") return "Sign in";
       if (this.view === "me") return "My Pages";
       if (this.view === "event") {
         const ev = Alpine.store("catalog").eventById(this.eventId);
@@ -154,6 +235,100 @@ document.addEventListener("alpine:init", () => {
       this.toast = `${label} is coming in a later task`;
       clearTimeout(this._toastTimer);
       this._toastTimer = setTimeout(() => (this.toast = ""), 2400);
+    },
+  });
+
+  // Session store: local-only authentication for the prototype.
+  // Users and the signed-in session persist in localStorage so refreshes
+  // keep the same user signed in. When Supabase Auth is wired in later,
+  // `register`, `signIn`, and `signOut` become the only hook points that
+  // need to switch implementation.
+  Alpine.store("session", {
+    user: null,
+
+    init() {
+      this.user = loadSessionFromStorage();
+    },
+
+    get isSignedIn() {
+      return !!this.user;
+    },
+
+    register({ email, displayName, password }) {
+      const trimmedEmail = String(email || "").trim();
+      if (!trimmedEmail) throw new Error("Enter an email address.");
+      const users = loadUsersFromStorage();
+      const existing = users.find(
+        (u) => u.email.toLowerCase() === trimmedEmail.toLowerCase()
+      );
+      if (existing) {
+        throw new Error("An account with that email already exists.");
+      }
+      const record = {
+        id: newUserId(),
+        email: trimmedEmail,
+        display_name: String(displayName || "").trim() || trimmedEmail,
+        auth_provider: "email",
+        simulated: false,
+        password_hash: hashPassword(password),
+      };
+      users.push(record);
+      saveUsersToStorage(users);
+      const user = publicUserRecord(record);
+      this.user = user;
+      saveSessionToStorage(user);
+      return user;
+    },
+
+    signIn({ email, password }) {
+      const trimmedEmail = String(email || "").trim();
+      const users = loadUsersFromStorage();
+      const record = users.find(
+        (u) =>
+          u.email.toLowerCase() === trimmedEmail.toLowerCase() &&
+          u.password_hash === hashPassword(password) &&
+          u.auth_provider === "email"
+      );
+      if (!record) throw new Error("Email or password is incorrect.");
+      const user = publicUserRecord(record);
+      this.user = user;
+      saveSessionToStorage(user);
+      return user;
+    },
+
+    signOut() {
+      this.user = null;
+      saveSessionToStorage(null);
+    },
+
+    // `simulatedSocialSignIn(provider)` returns a fake session for Google
+    // or Microsoft without contacting the provider. The resulting session
+    // carries `simulated: true` so the UI can label it clearly.
+    simulatedSocialSignIn(provider) {
+      if (!["google", "microsoft"].includes(provider)) {
+        throw new Error(`Unknown provider: ${provider}`);
+      }
+      const users = loadUsersFromStorage();
+      const placeholderEmail = `${provider}-simulated@massanapp.local`;
+      let record = users.find(
+        (u) => u.email === placeholderEmail && u.auth_provider === provider
+      );
+      if (!record) {
+        record = {
+          id: newUserId(),
+          email: placeholderEmail,
+          display_name:
+            provider === "google" ? "Google user" : "Microsoft user",
+          auth_provider: provider,
+          simulated: true,
+        };
+        users.push(record);
+        saveUsersToStorage(users);
+      }
+      const user = publicUserRecord(record);
+      this.user = user;
+      saveSessionToStorage(user);
+      return user;
     },
   });
 
@@ -391,4 +566,82 @@ function formatDayHeading(iso) {
 
 function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
+}
+
+const PROVIDER_LABELS = {
+  email: "Email",
+  google: "Google",
+  microsoft: "Microsoft",
+};
+
+function providerLabel(provider) {
+  return PROVIDER_LABELS[provider] ?? provider;
+}
+
+function authView() {
+  return {
+    mode: "signin",
+    email: "",
+    displayName: "",
+    password: "",
+    error: "",
+    setMode(mode) {
+      this.mode = mode;
+      this.error = "";
+    },
+    submit() {
+      this.error = "";
+      try {
+        if (this.mode === "register") {
+          Alpine.store("session").register({
+            email: this.email,
+            displayName: this.displayName,
+            password: this.password,
+          });
+        } else {
+          Alpine.store("session").signIn({
+            email: this.email,
+            password: this.password,
+          });
+        }
+        this.email = "";
+        this.displayName = "";
+        this.password = "";
+        Alpine.store("app").afterAuth();
+      } catch (err) {
+        this.error = err.message || "Something went wrong.";
+      }
+    },
+    socialSignIn(provider) {
+      this.error = "";
+      try {
+        Alpine.store("session").simulatedSocialSignIn(provider);
+        Alpine.store("app").afterAuth();
+      } catch (err) {
+        this.error = err.message || "Something went wrong.";
+      }
+    },
+  };
+}
+
+function meView() {
+  return {
+    providerLabel,
+    user() {
+      return Alpine.store("session").user;
+    },
+    isSimulated() {
+      return !!this.user()?.simulated;
+    },
+    signOut() {
+      Alpine.store("session").signOut();
+      Alpine.store("app").goCalendar();
+    },
+    openTickets() {
+      Alpine.store("app").notImplemented("My Tickets");
+    },
+    openNewsletter() {
+      Alpine.store("app").notImplemented("Newsletter preferences");
+    },
+  };
 }
