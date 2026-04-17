@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+web/assets/env.local.js
+.DS_Store
+*.log

@@ -1,0 +1,38 @@
+{
+  "_note": "Placeholder events for the scaffold. The load-stockholmsmassan-event-data task replaces this with real seeded data.",
+  "events": [
+    {
+      "id": "nordbygg-2026",
+      "name": "Nordbygg 2026",
+      "type": "Trade fair",
+      "category": "Construction and real estate",
+      "start_date": "2026-04-21",
+      "end_date": "2026-04-24",
+      "ticket_model": "public_ticket",
+      "audience_rule": "public",
+      "summary": "Nordic construction trade fair. Placeholder entry until the seeded data task completes."
+    },
+    {
+      "id": "estro-2026",
+      "name": "ESTRO 2026",
+      "type": "Congress",
+      "category": "Health & Medicine",
+      "start_date": "2026-05-08",
+      "end_date": "2026-05-12",
+      "ticket_model": "registration",
+      "audience_rule": "professional",
+      "summary": "European radiation oncology congress. Placeholder entry until the seeded data task completes."
+    },
+    {
+      "id": "eha-2026",
+      "name": "EHA2026 Congress",
+      "type": "Congress",
+      "category": "Health & Medicine",
+      "start_date": "2026-06-11",
+      "end_date": "2026-06-14",
+      "ticket_model": "registration",
+      "audience_rule": "professional",
+      "summary": "European hematology congress. Placeholder entry until the seeded data task completes."
+    }
+  ]
+}
