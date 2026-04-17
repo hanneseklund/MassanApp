@@ -97,6 +97,27 @@ supabase db push
 psql "$SUPABASE_DB_URL" -f supabase/seed/seed.sql
 ```
 
+## Hosted preview
+
+A Cloudflare Pages deploy mirrors the `agent` branch at
+<https://agent.massanapp-prototype.pages.dev/>. Any push to `agent` is
+auto-published, so the preview reflects the latest committed state on
+that branch — uncommitted local changes are not visible there until they
+are pushed.
+
+Use the hosted preview when a reviewer or tester wants to exercise the
+prototype without installing Node, cloning the repo, or running a local
+server. Run it locally instead when you need to test changes that are
+not yet committed, or when you need to point the frontend at a Supabase
+project using a local `env.local.js`.
+
+The hosted build currently runs in the Supabase-less local-seed mode:
+the Pages project has no `SUPABASE_URL` / `SUPABASE_ANON_KEY` wired up,
+so authentication, ticket purchase, and newsletter signup behave the
+same as the simulated mode described above. If Supabase env wiring is
+added to the Pages project later, this section must be updated to
+describe what becomes real versus simulated in the hosted environment.
+
 ## Environment variables
 
 The prototype reads a small number of values at runtime:
@@ -114,6 +135,12 @@ No service-role key is ever required or used by the frontend.
 Before marking a change ready for review, run through this checklist in
 mobile emulation. Each item maps to acceptance criteria in
 `docs/functional-specification.md`.
+
+The checklist can be run against either a local server (for uncommitted
+changes or Supabase-backed builds) or the hosted preview at
+<https://agent.massanapp-prototype.pages.dev/> for changes that have
+already been pushed to the `agent` branch — see the Hosted preview
+section above for the caveats.
 
 ### Calendar and event selection
 
