@@ -1,0 +1,636 @@
+{
+  "_note": "Seed data for the MassanApp prototype. Venue facts come from the Stockholmsmassan research note. Event dates, types, and categories reflect the official Stockholmsmassan calendar on 2026-04-17. Per-event news, articles, program items, exhibitors, and speakers are clearly simulated content scoped to this prototype; production use would pull from the event's own sources.",
+  "venue": {
+    "id": "stockholmsmassan",
+    "name": "Stockholmsmassan",
+    "address": {
+      "street": "Massvagen 1",
+      "postal_code": "125 80",
+      "city": "Alvsjo",
+      "country": "Sweden"
+    },
+    "transport": {
+      "summary": "Alvsjo station is adjacent to Stockholmsmassan. Commuter trains from Stockholm City take about 9 minutes. Direct travel from Arlanda Airport to Alvsjo is also available.",
+      "modes": [
+        {
+          "mode": "Commuter train",
+          "detail": "SL pendeltag from Stockholm City stops directly at Alvsjo station in about 9 minutes."
+        },
+        {
+          "mode": "From Arlanda Airport",
+          "detail": "Direct services from Arlanda to Alvsjo are available without changing in central Stockholm."
+        },
+        {
+          "mode": "Bus",
+          "detail": "Several SL bus lines stop at Alvsjo stationsplan, which is a short walk from the main entrance."
+        },
+        {
+          "mode": "Bike",
+          "detail": "Marked cycle paths connect Alvsjo to central Stockholm. Covered bike parking is available near the main entrance."
+        }
+      ]
+    },
+    "parking": {
+      "summary": "About 2,000 parking spaces on site, additional nearby overflow parking, and EV charging.",
+      "onsite_spaces": 2000,
+      "ev_charging": true,
+      "notes": "Parking is paid and fills quickly during large trade fairs and congresses. Pre-booking is recommended for events with heavy visitor volumes."
+    },
+    "restaurants": [
+      {
+        "name": "Restaurant Rattvik",
+        "description": "Full-service on-site restaurant serving lunch during events."
+      },
+      {
+        "name": "Cafe Kista",
+        "description": "Coffee, pastries, and quick lunch options near the main foyer."
+      },
+      {
+        "name": "Bistro Nordic",
+        "description": "Seasonal a-la-carte menu oriented to business lunches and congress delegates."
+      },
+      {
+        "name": "Hall Cafeteria East",
+        "description": "Buffet-style cafeteria close to the East Halls for peak-lunch throughput."
+      },
+      {
+        "name": "Hall Cafeteria West",
+        "description": "Buffet-style cafeteria close to the West Halls."
+      },
+      {
+        "name": "Espresso Bar Foyer",
+        "description": "Quick espresso and grab-and-go snacks inside the main foyer."
+      }
+    ],
+    "security": {
+      "summary": "Stockholmsmassan is the first exhibition venue in Sweden certified to the SHORE safety standard. Bag checks, access control, and event-specific entry procedures are in place.",
+      "general_rules": [
+        "Bags are subject to visual inspection at entry.",
+        "Oversize luggage should be left at the cloakroom or returned to a hotel.",
+        "Follow staff and signage regarding special entrances for specific events.",
+        "Report anything suspicious to on-site security; emergency exits are marked throughout the venue."
+      ]
+    },
+    "sustainability": "Stockholmsmassan is ISO 20121 certified and runs an active sustainability program spanning energy, waste, catering, and supplier choices.",
+    "maps": [
+      {
+        "id": "stockholmsmassan-overview",
+        "name": "Venue overview",
+        "description": "High-level map showing entrances, halls, foyers, and conference rooms. Rendered inline in the prototype as a placeholder graphic."
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "nordbygg-2026",
+      "venue_id": "stockholmsmassan",
+      "name": "Nordbygg 2026",
+      "subtitle": "Nordic construction trade fair",
+      "type": "Trade fair",
+      "category": "Construction and real estate",
+      "audience_rule": "public",
+      "ticket_model": "public_ticket",
+      "start_date": "2026-04-21",
+      "end_date": "2026-04-24",
+      "summary": "Nordbygg is the leading Nordic meeting place for the construction and real-estate industry, with exhibitors, seminars, and industry news across four days at Stockholmsmassan.",
+      "branding": {
+        "primary_color": "#0b3d91",
+        "accent_color": "#f4b400",
+        "logo": null
+      },
+      "overrides": {
+        "entrance": "Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.",
+        "bag_rules": "Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.",
+        "access_notes": "A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis."
+      }
+    },
+    {
+      "id": "estro-2026",
+      "venue_id": "stockholmsmassan",
+      "name": "ESTRO 2026",
+      "subtitle": "European Society for Radiotherapy and Oncology Annual Congress",
+      "type": "Congress",
+      "category": "Health & Medicine",
+      "audience_rule": "professional",
+      "ticket_model": "registration",
+      "start_date": "2026-05-15",
+      "end_date": "2026-05-19",
+      "summary": "ESTRO 2026 is the European Society for Radiotherapy and Oncology annual congress, covering clinical practice, physics, radiobiology, and technology across a multi-track program.",
+      "branding": {
+        "primary_color": "#123f66",
+        "accent_color": "#ce3f4a",
+        "logo": null
+      },
+      "overrides": {
+        "entrance": "Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.",
+        "bag_rules": "Standard venue bag rules apply; congress materials are distributed at the registration desk.",
+        "access_notes": "Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes."
+      }
+    },
+    {
+      "id": "eha-2026",
+      "venue_id": "stockholmsmassan",
+      "name": "EHA2026 Congress",
+      "subtitle": "European Hematology Association Annual Congress",
+      "type": "Congress",
+      "category": "Health & Medicine",
+      "audience_rule": "professional",
+      "ticket_model": "registration",
+      "start_date": "2026-06-11",
+      "end_date": "2026-06-14",
+      "summary": "The European Hematology Association annual congress brings clinicians and researchers together for plenaries, symposia, abstract presentations, and an industry exhibition.",
+      "branding": {
+        "primary_color": "#8a1f57",
+        "accent_color": "#f5b233",
+        "logo": null
+      },
+      "overrides": {
+        "entrance": "EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.",
+        "bag_rules": "Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom.",
+        "access_notes": "On-demand session recordings are available to registered delegates on the EHA congress platform after the congress."
+      }
+    }
+  ],
+  "news": [
+    {
+      "id": "nordbygg-2026-news-exhibitors-crossed",
+      "event_id": "nordbygg-2026",
+      "published_at": "2026-03-02T09:00:00Z",
+      "title": "Nordbygg 2026 exhibitor registrations cross 700",
+      "body": "Simulated. Nordbygg reports that more than 700 exhibitors have confirmed attendance, spanning sustainable materials, prefabrication, building services, and digital tools for the construction industry."
+    },
+    {
+      "id": "nordbygg-2026-news-sustainability-stage",
+      "event_id": "nordbygg-2026",
+      "published_at": "2026-03-18T09:00:00Z",
+      "title": "Sustainability stage program finalized",
+      "body": "Simulated. The Sustainability Stage program for Nordbygg 2026 covers circular construction, low-carbon concrete, and energy retrofits. All sessions are open to fair visitors without extra registration."
+    },
+    {
+      "id": "nordbygg-2026-news-safety-workshop",
+      "event_id": "nordbygg-2026",
+      "published_at": "2026-04-01T09:00:00Z",
+      "title": "Site-safety workshops added to day three",
+      "body": "Simulated. Day three of the fair adds hands-on workshops on site-safety equipment, PPE, and fall-protection. Capacity is limited and managed at the workshop entrance."
+    },
+    {
+      "id": "nordbygg-2026-news-ticket-pickup",
+      "event_id": "nordbygg-2026",
+      "published_at": "2026-04-14T09:00:00Z",
+      "title": "Ticket pickup and visitor tips for opening day",
+      "body": "Simulated. Visitors are encouraged to pre-register and use mobile tickets to skip the queues at opening. Coffee will be available in the main foyer from 8:00."
+    },
+    {
+      "id": "estro-2026-news-late-breaking",
+      "event_id": "estro-2026",
+      "published_at": "2026-04-05T09:00:00Z",
+      "title": "Late-breaking abstract window closes",
+      "body": "Simulated. The late-breaking abstract submission window for ESTRO 2026 has closed. Accepted late-breakers will be added to the searchable program next week."
+    },
+    {
+      "id": "estro-2026-news-industry-symposia",
+      "event_id": "estro-2026",
+      "published_at": "2026-04-20T09:00:00Z",
+      "title": "Industry symposia and hands-on demos announced",
+      "body": "Simulated. Industry symposia and hands-on demos for ESTRO 2026 have been published in the congress program. Delegates can filter their personal agenda to include or exclude industry content."
+    },
+    {
+      "id": "eha-2026-news-platform-open",
+      "event_id": "eha-2026",
+      "published_at": "2026-05-05T09:00:00Z",
+      "title": "EHA2026 congress platform opens to registered delegates",
+      "body": "Simulated. The EHA2026 congress platform is now available to registered delegates, with networking, profile setup, and the full searchable program."
+    }
+  ],
+  "articles": [
+    {
+      "id": "nordbygg-2026-article-why-attend",
+      "event_id": "nordbygg-2026",
+      "title": "Why Nordbygg 2026 is the Nordic construction meeting point",
+      "body": "Simulated. Nordbygg collects the Nordic construction and real-estate industry under one roof at Stockholmsmassan: manufacturers, consultants, architects, developers, and public-sector procurement teams. The fair combines an exhibitor floor, a seminar program, and dedicated stages for sustainability and digital tools. Visitors use the fair to benchmark products, meet suppliers in person, and get an overview of emerging regulation.",
+      "hero_image": null
+    },
+    {
+      "id": "nordbygg-2026-article-what-to-see",
+      "event_id": "nordbygg-2026",
+      "title": "What to see on a one-day visit",
+      "body": "Simulated. If you only have one day at Nordbygg 2026, focus on the Sustainability Stage in the morning, spend midday on the exhibitor floor around the prefabrication and building-services areas, and close the day with a site-safety workshop or a digital-tools demo. The event-first app view lets you save a short list of exhibitors to visit on the floor.",
+      "hero_image": null
+    },
+    {
+      "id": "estro-2026-article-program-highlights",
+      "event_id": "estro-2026",
+      "title": "ESTRO 2026 program highlights",
+      "body": "Simulated. The ESTRO 2026 program covers clinical radiation oncology, medical physics, radiobiology, brachytherapy, and technology and innovation tracks. Plenary sessions open and close each day, with parallel tracks and poster sessions filling the rest of the schedule. Delegates are encouraged to build a personal agenda before the congress opens."
+    }
+  ],
+  "program": [
+    {
+      "id": "nordbygg-2026-program-opening",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-21",
+      "start_time": "09:00",
+      "end_time": "09:30",
+      "title": "Opening and industry welcome",
+      "description": "Simulated. Official opening of Nordbygg 2026 with remarks from industry and venue representatives.",
+      "location": "Main Stage, A-Hall",
+      "track": "Keynote"
+    },
+    {
+      "id": "nordbygg-2026-program-low-carbon-concrete",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-21",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "title": "Low-carbon concrete in practice",
+      "description": "Simulated. Practitioner panel on low-carbon concrete mixes and procurement practices in Nordic construction projects.",
+      "location": "Sustainability Stage, B-Hall",
+      "track": "Sustainability"
+    },
+    {
+      "id": "nordbygg-2026-program-circular-construction",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-21",
+      "start_time": "13:00",
+      "end_time": "14:00",
+      "title": "Circular construction from design to demolition",
+      "description": "Simulated. Case studies from Nordic developers on circular construction, material reuse, and end-of-life planning.",
+      "location": "Sustainability Stage, B-Hall",
+      "track": "Sustainability"
+    },
+    {
+      "id": "nordbygg-2026-program-prefab",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-22",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "title": "Prefabrication and industrialized building",
+      "description": "Simulated. Current state of prefabricated construction systems in the Nordic market and what large public projects are adopting.",
+      "location": "Main Stage, A-Hall",
+      "track": "Industry"
+    },
+    {
+      "id": "nordbygg-2026-program-digital-tools",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-22",
+      "start_time": "11:30",
+      "end_time": "12:30",
+      "title": "Digital tools on site",
+      "description": "Simulated. Live demos of site-management, BIM, and field-reporting tools relevant to Nordic contractors and consultants.",
+      "location": "Digital Stage, C-Hall",
+      "track": "Digital"
+    },
+    {
+      "id": "nordbygg-2026-program-procurement",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-22",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "title": "Sustainable procurement in the public sector",
+      "description": "Simulated. How Nordic municipalities and public-sector developers are integrating climate, circularity, and social criteria into procurement.",
+      "location": "Sustainability Stage, B-Hall",
+      "track": "Sustainability"
+    },
+    {
+      "id": "nordbygg-2026-program-safety-workshop",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-23",
+      "start_time": "10:00",
+      "end_time": "11:30",
+      "title": "Hands-on site safety workshop",
+      "description": "Simulated. Hands-on workshop on PPE, fall-protection, and incident response on construction sites. Capacity is limited and managed at the workshop entrance.",
+      "location": "Workshop Room 3, C-Hall",
+      "track": "Safety"
+    },
+    {
+      "id": "nordbygg-2026-program-energy-retrofits",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-23",
+      "start_time": "13:00",
+      "end_time": "14:00",
+      "title": "Energy retrofits at scale",
+      "description": "Simulated. Case studies from Nordic property owners on large-scale energy retrofits, financing, and tenant communication.",
+      "location": "Main Stage, A-Hall",
+      "track": "Industry"
+    },
+    {
+      "id": "nordbygg-2026-program-networking",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-23",
+      "start_time": "16:00",
+      "end_time": "18:00",
+      "title": "Industry networking reception",
+      "description": "Simulated. Evening networking reception for exhibitors and registered industry visitors in the main foyer.",
+      "location": "Main Foyer",
+      "track": "Networking"
+    },
+    {
+      "id": "nordbygg-2026-program-closing-panel",
+      "event_id": "nordbygg-2026",
+      "day": "2026-04-24",
+      "start_time": "13:00",
+      "end_time": "14:00",
+      "title": "Closing panel and 2027 outlook",
+      "description": "Simulated. Closing panel reflecting on the 2026 edition and previewing the Nordic construction outlook for 2027.",
+      "location": "Main Stage, A-Hall",
+      "track": "Keynote"
+    },
+
+    {
+      "id": "estro-2026-program-opening-plenary",
+      "event_id": "estro-2026",
+      "day": "2026-05-15",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "title": "Opening plenary",
+      "description": "Simulated. Opening plenary of ESTRO 2026 with state-of-the-art lectures across radiation oncology.",
+      "location": "Auditorium North",
+      "track": "Plenary",
+      "speaker_ids": ["estro-2026-speaker-lindqvist"]
+    },
+    {
+      "id": "estro-2026-program-clinical-track",
+      "event_id": "estro-2026",
+      "day": "2026-05-15",
+      "start_time": "11:00",
+      "end_time": "12:30",
+      "title": "Clinical track: adaptive radiotherapy",
+      "description": "Simulated. Parallel clinical session on adaptive radiotherapy workflows and outcomes.",
+      "location": "Room 210",
+      "track": "Clinical",
+      "speaker_ids": ["estro-2026-speaker-morales"]
+    },
+    {
+      "id": "estro-2026-program-physics-track",
+      "event_id": "estro-2026",
+      "day": "2026-05-16",
+      "start_time": "09:00",
+      "end_time": "10:30",
+      "title": "Physics track: dose calculation and QA",
+      "description": "Simulated. Parallel physics session on dose calculation advances and treatment quality assurance.",
+      "location": "Room 220",
+      "track": "Physics",
+      "speaker_ids": ["estro-2026-speaker-bergstrom"]
+    },
+    {
+      "id": "estro-2026-program-radiobiology-track",
+      "event_id": "estro-2026",
+      "day": "2026-05-16",
+      "start_time": "13:00",
+      "end_time": "14:30",
+      "title": "Radiobiology track: combination therapies",
+      "description": "Simulated. Parallel radiobiology session on combining radiation with systemic therapies.",
+      "location": "Room 230",
+      "track": "Radiobiology"
+    },
+    {
+      "id": "estro-2026-program-poster-session",
+      "event_id": "estro-2026",
+      "day": "2026-05-17",
+      "start_time": "12:30",
+      "end_time": "14:00",
+      "title": "Poster session A",
+      "description": "Simulated. First poster session with authors present at their posters on the exhibition floor.",
+      "location": "Exhibition Hall",
+      "track": "Posters"
+    },
+    {
+      "id": "estro-2026-program-industry-symposium",
+      "event_id": "estro-2026",
+      "day": "2026-05-18",
+      "start_time": "12:45",
+      "end_time": "13:45",
+      "title": "Industry symposium: imaging advances",
+      "description": "Simulated. Sponsored industry symposium on imaging advances in radiation oncology.",
+      "location": "Auditorium East",
+      "track": "Industry"
+    },
+    {
+      "id": "estro-2026-program-closing",
+      "event_id": "estro-2026",
+      "day": "2026-05-19",
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "title": "Closing ceremony",
+      "description": "Simulated. Closing ceremony and awards for ESTRO 2026.",
+      "location": "Auditorium North",
+      "track": "Plenary"
+    },
+
+    {
+      "id": "eha-2026-program-opening-plenary",
+      "event_id": "eha-2026",
+      "day": "2026-06-11",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "title": "Opening plenary",
+      "description": "Simulated. Opening plenary of the EHA2026 congress with keynote lectures on hematology research.",
+      "location": "Auditorium North",
+      "track": "Plenary"
+    },
+    {
+      "id": "eha-2026-program-symposium",
+      "event_id": "eha-2026",
+      "day": "2026-06-12",
+      "start_time": "11:00",
+      "end_time": "12:30",
+      "title": "Symposium: lymphoid malignancies",
+      "description": "Simulated. Multi-presenter symposium on advances in lymphoid malignancy treatment.",
+      "location": "Room 310",
+      "track": "Clinical"
+    },
+    {
+      "id": "eha-2026-program-late-breaker",
+      "event_id": "eha-2026",
+      "day": "2026-06-13",
+      "start_time": "14:00",
+      "end_time": "15:30",
+      "title": "Late-breaking abstracts",
+      "description": "Simulated. Late-breaking abstract session with oral presentations selected for high impact.",
+      "location": "Auditorium North",
+      "track": "Late-breaking"
+    },
+    {
+      "id": "eha-2026-program-poster-walks",
+      "event_id": "eha-2026",
+      "day": "2026-06-13",
+      "start_time": "12:30",
+      "end_time": "14:00",
+      "title": "Poster walks",
+      "description": "Simulated. Guided poster walks through selected abstracts, with authors present.",
+      "location": "Exhibition Hall",
+      "track": "Posters"
+    },
+    {
+      "id": "eha-2026-program-closing",
+      "event_id": "eha-2026",
+      "day": "2026-06-14",
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "title": "Closing ceremony",
+      "description": "Simulated. Closing ceremony with awards and 2027 preview.",
+      "location": "Auditorium North",
+      "track": "Plenary"
+    }
+  ],
+  "exhibitors": [
+    {
+      "id": "nordbygg-2026-exhibitor-nordicpanel",
+      "event_id": "nordbygg-2026",
+      "name": "NordicPanel Systems",
+      "booth": "A12",
+      "description": "Simulated exhibitor. Prefabricated wall and roof systems for Nordic residential and commercial projects.",
+      "website": "https://example.com/nordicpanel",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-betoncircular",
+      "event_id": "nordbygg-2026",
+      "name": "BetonCircular",
+      "booth": "A14",
+      "description": "Simulated exhibitor. Low-carbon and recycled-content concrete for infrastructure and residential projects.",
+      "website": "https://example.com/betoncircular",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-bytetools",
+      "event_id": "nordbygg-2026",
+      "name": "ByteTools Site",
+      "booth": "C22",
+      "description": "Simulated exhibitor. Field-reporting and BIM coordination tools for construction sites.",
+      "website": "https://example.com/bytetools",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-fjordwin",
+      "event_id": "nordbygg-2026",
+      "name": "FjordWin Windows",
+      "booth": "B08",
+      "description": "Simulated exhibitor. Triple-glazed windows designed for Nordic climates.",
+      "website": "https://example.com/fjordwin",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-kalmarpipe",
+      "event_id": "nordbygg-2026",
+      "name": "KalmarPipe",
+      "booth": "B10",
+      "description": "Simulated exhibitor. Plumbing and building-services solutions for large residential projects.",
+      "website": "https://example.com/kalmarpipe",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-greenroofsnordic",
+      "event_id": "nordbygg-2026",
+      "name": "GreenRoofs Nordic",
+      "booth": "B24",
+      "description": "Simulated exhibitor. Green-roof and stormwater retention systems for urban projects.",
+      "website": "https://example.com/greenroofsnordic",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-safeliftnordic",
+      "event_id": "nordbygg-2026",
+      "name": "SafeLift Nordic",
+      "booth": "C12",
+      "description": "Simulated exhibitor. Fall-protection, site-safety PPE, and training services.",
+      "website": "https://example.com/safeliftnordic",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-boreasinsulation",
+      "event_id": "nordbygg-2026",
+      "name": "Boreas Insulation",
+      "booth": "A22",
+      "description": "Simulated exhibitor. High-performance insulation for passive-house and retrofit projects.",
+      "website": "https://example.com/boreasinsulation",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-voltagridhvac",
+      "event_id": "nordbygg-2026",
+      "name": "VoltaGrid HVAC",
+      "booth": "B30",
+      "description": "Simulated exhibitor. Electrified heating, ventilation, and air-conditioning systems.",
+      "website": "https://example.com/voltagridhvac",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-sagasurveys",
+      "event_id": "nordbygg-2026",
+      "name": "Saga Surveys",
+      "booth": "C30",
+      "description": "Simulated exhibitor. Drone-based site surveys and as-built 3D scanning.",
+      "website": "https://example.com/sagasurveys",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-lundwoodworks",
+      "event_id": "nordbygg-2026",
+      "name": "Lund Woodworks",
+      "booth": "A30",
+      "description": "Simulated exhibitor. Engineered timber and cross-laminated timber components.",
+      "website": "https://example.com/lundwoodworks",
+      "logo": null
+    },
+    {
+      "id": "nordbygg-2026-exhibitor-gridlinepower",
+      "event_id": "nordbygg-2026",
+      "name": "GridLine Power",
+      "booth": "C14",
+      "description": "Simulated exhibitor. Site power distribution, temporary grid solutions, and EV charging for construction sites.",
+      "website": "https://example.com/gridlinepower",
+      "logo": null
+    },
+    {
+      "id": "estro-2026-exhibitor-radonicsolutions",
+      "event_id": "estro-2026",
+      "name": "Radonic Solutions",
+      "booth": "Stand 12",
+      "description": "Simulated exhibitor. Treatment planning systems and adaptive radiotherapy tools.",
+      "website": "https://example.com/radonicsolutions",
+      "logo": null
+    },
+    {
+      "id": "estro-2026-exhibitor-northimaging",
+      "event_id": "estro-2026",
+      "name": "North Imaging",
+      "booth": "Stand 18",
+      "description": "Simulated exhibitor. On-treatment imaging and image guidance for radiation oncology.",
+      "website": "https://example.com/northimaging",
+      "logo": null
+    },
+    {
+      "id": "eha-2026-exhibitor-hematechnordic",
+      "event_id": "eha-2026",
+      "name": "Hematech Nordic",
+      "booth": "Stand 22",
+      "description": "Simulated exhibitor. Hematology diagnostics and laboratory instruments.",
+      "website": "https://example.com/hematechnordic",
+      "logo": null
+    }
+  ],
+  "speakers": [
+    {
+      "id": "estro-2026-speaker-lindqvist",
+      "name": "Dr. Eva Lindqvist",
+      "bio": "Simulated speaker profile. Radiation oncologist focused on adaptive radiotherapy.",
+      "affiliation": "Karolinska University Hospital",
+      "avatar": null
+    },
+    {
+      "id": "estro-2026-speaker-morales",
+      "name": "Dr. Luis Morales",
+      "bio": "Simulated speaker profile. Clinical researcher in head-and-neck radiation oncology.",
+      "affiliation": "Hospital Clinic de Barcelona",
+      "avatar": null
+    },
+    {
+      "id": "estro-2026-speaker-bergstrom",
+      "name": "Dr. Anna Bergstrom",
+      "bio": "Simulated speaker profile. Medical physicist focused on dose calculation and QA.",
+      "affiliation": "Uppsala University Hospital",
+      "avatar": null
+    }
+  ]
+}

@@ -186,6 +186,34 @@ Where Supabase is not configured for local development, the frontend
 falls back to local seed JSON in `web/data/` so the prototype remains
 demoable without credentials.
 
+### Seed data layout
+
+The prototype ships a single seed file, `web/data/catalog.json`, that
+mirrors the Supabase table structure so the same data shape can be
+consumed with or without Supabase:
+
+```
+{
+  "venue":      { ... one shared venue record ... },
+  "events":     [ ... event records with venue_id and overrides ... ],
+  "news":       [ ... news items keyed by event_id ... ],
+  "articles":   [ ... articles keyed by event_id ... ],
+  "program":    [ ... program items keyed by event_id ... ],
+  "exhibitors": [ ... exhibitors keyed by event_id ... ],
+  "speakers":   [ ... optional speakers for congress events ... ]
+}
+```
+
+Per-entity `event_id` values match the `id` of the event they belong to.
+The venue is a single object, not a list, because the prototype only
+models Stockholmsmassan.
+
+Supabase migrations live in `supabase/migrations/` and create tables
+that mirror these collections. The matching seed SQL lives in
+`supabase/seed/seed.sql`. The SQL seed and the JSON seed are kept in
+sync by hand: when one is updated the other should be updated in the
+same change.
+
 ## Simulated integrations
 
 All simulations must be centralized and easy to replace:

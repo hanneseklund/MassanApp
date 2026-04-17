@@ -44,6 +44,12 @@ In this mode, authentication, ticket purchase, and newsletter signup are
 backed by simulations and in-memory state. Refreshing the page resets
 any simulated tickets and sessions.
 
+The seed content the frontend reads in this mode lives in
+`web/data/catalog.json`. It contains the shared venue record for
+Stockholmsmassan and seeded events (`Nordbygg 2026`, `ESTRO 2026`,
+`EHA2026 Congress`) along with their news, articles, program items,
+exhibitors, and speaker entries.
+
 ## Running the frontend against Supabase
 
 1. Create a Supabase project (or reuse the shared prototype project
