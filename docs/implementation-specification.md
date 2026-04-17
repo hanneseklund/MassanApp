@@ -52,9 +52,13 @@ The frontend is a single-page prototype built around a small number of
 views:
 
 - `calendar` — the upcoming-events calendar.
-- `event` — the selected event's mini-homepage, which itself contains
-  subviews for News, Articles, Program, Exhibitor index, Exhibitor detail,
-  Practical information, and Newsletter.
+- `event` — the selected event's mini-homepage. The event hero and
+  section navigation render for every event subview. The event view
+  has a default `home` subview (the landing state when an event is
+  first opened) and named subviews for News, Articles, Program,
+  Exhibitor index, Exhibitor detail, Practical information, and
+  Newsletter. Hash routes that target an event without a subview
+  (for example `#/event/nordbygg-2026`) resolve to `home`.
 - `auth` — registration and sign-in.
 - `me` — logged-in "My Pages", including My Tickets and newsletter
   preferences.

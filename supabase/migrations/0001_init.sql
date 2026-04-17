@@ -101,9 +101,11 @@ create table if not exists public.tickets (
   user_id uuid references auth.users(id) on delete cascade,
   event_id text not null references public.events(id) on delete restrict,
   ticket_type text not null default 'standard',
+  ticket_type_label text not null,
   attendee_name text not null,
   attendee_email text not null,
   qr_payload text not null,
+  transaction_ref text not null,
   purchased_at timestamptz not null default now()
 );
 

@@ -380,6 +380,10 @@ function generateTicketQr(ticket) {
   return { payload, svg: ticketQrSvg(payload) };
 }
 
+function ticketQrSvgFor(ticket) {
+  return generateTicketQr(ticket).svg;
+}
+
 // `simulatedEmail(kind, payload)` — no-op in production hosting; logs a
 // structured record to the console during development so reviewers can
 // see the would-be email. The kind values are documented in
@@ -1234,9 +1238,7 @@ function purchaseView() {
       }
     },
 
-    qrSvgFor(ticket) {
-      return generateTicketQr(ticket).svg;
-    },
+    qrSvgFor: ticketQrSvgFor,
   };
 }
 
@@ -1276,9 +1278,7 @@ function myTicketsView() {
         year: "numeric",
       });
     },
-    qrSvgFor(ticket) {
-      return generateTicketQr(ticket).svg;
-    },
+    qrSvgFor: ticketQrSvgFor,
   };
 }
 
