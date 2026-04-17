@@ -50,35 +50,72 @@ Stockholmsmassan and seeded events (`Nordbygg 2026`, `ESTRO 2026`,
 `EHA2026 Congress`) along with their news, articles, program items,
 exhibitors, and speaker entries.
 
-## Running the frontend against Supabase
+## Shared Supabase backend
 
-1. Create a Supabase project (or reuse the shared prototype project
-   when one is available).
-2. Apply the migrations in `supabase/migrations/` and seed the data in
-   `supabase/seed/`. Using the Supabase CLI:
+The prototype uses a single shared Supabase project for all testing,
+both from the `agent` branch Cloudflare Pages deployment
+(`https://agent.massanapp-prototype.pages.dev/`) and the `main` branch
+deployment. There is no per-branch, per-developer, or per-environment
+backend.
 
-   ```
-   supabase db push
-   supabase db seed
-   ```
+- Project: `massanapp-prototype`
+- Ref: `esvyrbsypfgpdhijyywz`
+- URL: `https://esvyrbsypfgpdhijyywz.supabase.co`
+- Region: `eu-north-1`
+- Only the publishable (anon) key is used from the frontend. Row Level
+  Security (see `supabase/migrations/0001_init.sql`) enforces
+  per-user access for tickets and newsletter subscriptions.
 
-3. Provide the anon key and project URL to the frontend through a local
-   configuration file (for example `web/assets/env.local.js`) that sets
-   the Supabase URL and anon key at runtime. This file must be gitignored.
-4. Start the static server as above.
+Because the shared project serves both deployments, schema and seed
+changes are applied to it immediately when they are developed — see
+the rule in `AGENTS.md` under "Publishing database changes". A migration
+that is in the repository but not yet applied to the shared project is
+a bug and will break the `agent` deployment.
 
-When Supabase is configured, email sign-up and sign-in go through
-Supabase Auth. Simulated social sign-in and simulated payment remain
-simulated regardless of Supabase configuration.
+## Running the frontend against the shared Supabase project
+
+1. Configure the frontend with the shared project URL and publishable
+   key. These values are safe to commit because the publishable key is
+   the public anon key gated by Row Level Security. The Cloudflare Pages
+   deployments pick up the committed values automatically.
+2. Optionally override locally with `web/assets/env.local.js` (gitignored,
+   see `.gitignore`) to point a local dev run at a different Supabase
+   project. This is an escape hatch, not the default.
+3. Start the static server as described above.
+
+When the frontend is wired to Supabase, email sign-up and sign-in go
+through Supabase Auth. Simulated social sign-in and simulated payment
+remain simulated regardless of Supabase configuration.
+
+## Applying migrations and seed to the shared project
+
+Agents working in Claude or Claude Code apply migrations through the
+Supabase MCP rather than the `supabase` CLI:
+
+- Schema change: `mcp__claude_ai_Supabase__apply_migration` with
+  `project_id=esvyrbsypfgpdhijyywz`, a snake_case `name` matching the
+  filename (for example `0002_add_user_profiles`), and the SQL body
+  copied from `supabase/migrations/NNNN_name.sql`.
+- Seed change: `mcp__claude_ai_Supabase__execute_sql` with
+  `project_id=esvyrbsypfgpdhijyywz` and the updated `supabase/seed/seed.sql`.
+
+If you do not have MCP access, the Supabase CLI equivalents are:
+
+```
+supabase link --project-ref esvyrbsypfgpdhijyywz
+supabase db push
+psql "$SUPABASE_DB_URL" -f supabase/seed/seed.sql
+```
 
 ## Environment variables
 
 The prototype reads a small number of values at runtime:
 
-- `SUPABASE_URL` — Supabase project URL. Optional; absence triggers
-  local-seed fallback.
-- `SUPABASE_ANON_KEY` — Supabase anon key. Optional; must be absent or
-  paired with `SUPABASE_URL`.
+- `SUPABASE_URL` — Supabase project URL. Committed for the shared
+  prototype project; overridable via `web/assets/env.local.js` for
+  local dev against a different project.
+- `SUPABASE_ANON_KEY` — Supabase publishable (anon) key. Committed
+  alongside the URL for the same reason; RLS enforces access.
 
 No service-role key is ever required or used by the frontend.
 

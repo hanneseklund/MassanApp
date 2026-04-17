@@ -65,11 +65,52 @@ updating `docs/functional-specification.md` and
 ## Stack at a glance
 
 - Frontend: static HTML, CSS, JavaScript, Alpine.js.
-- Hosting: Cloudflare Pages.
+- Hosting: Cloudflare Pages. The `agent` branch auto-deploys to
+  `https://agent.massanapp-prototype.pages.dev/`; the `main` branch
+  auto-deploys to the production URL.
 - Backend: Supabase (Postgres, Auth, optional Storage).
 - No custom backend service. The frontend talks to Supabase directly.
 
 See `docs/implementation-specification.md` for the authoritative version.
+
+## Shared Supabase backend
+
+The prototype uses **one** Supabase project for all testing. Both the
+`agent` branch Cloudflare Pages deployment and the `main` branch
+deployment read from the same database.
+
+- Project name: `massanapp-prototype`
+- Project ref: `esvyrbsypfgpdhijyywz`
+- Region: `eu-north-1`
+- URL: `https://esvyrbsypfgpdhijyywz.supabase.co`
+
+Only the publishable (anon) key is used in the frontend. The service
+role key is never committed or used anywhere in this repository.
+
+### Publishing database changes
+
+When an agent develops a database schema or seed change, it must land in
+the shared project **in the same task** — do not let the repository
+drift ahead of the live database.
+
+1. Add the SQL to the repository under `supabase/migrations/NNNN_name.sql`
+   for schema changes, or update `supabase/seed/seed.sql` for seed
+   changes. Migration filenames are zero-padded and strictly increasing.
+2. Apply the change to the shared project via the Supabase MCP in the
+   same session:
+   - Schema: call `mcp__claude_ai_Supabase__apply_migration` with
+     `project_id=esvyrbsypfgpdhijyywz`, a snake_case `name` matching the
+     filename, and the SQL body.
+   - Seed / data: call `mcp__claude_ai_Supabase__execute_sql` with the
+     updated seed SQL.
+3. Verify the change landed. For schema: `list_tables` or
+   `list_migrations`. For seed: a `select count(*)` via `execute_sql`.
+
+If the MCP is not available in the current session, the task is
+blocked — move it to `agent/tasks_blocked/` rather than committing a
+migration that has not been applied. The reverse is also not allowed:
+never apply a migration to the shared project that has not been
+committed to `supabase/migrations/`.
 
 ## Seed events
 
