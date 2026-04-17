@@ -976,6 +976,331 @@ body {
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
 }
 
+/* Event hero: the ticket CTA area can host one or two buttons when a
+   visitor already owns a ticket for the event. */
+.event-hero__actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.event-hero__cta--alt {
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* Ticket purchase flow. */
+.purchase {
+  display: grid;
+  gap: 14px;
+}
+
+.purchase__header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: grid;
+  gap: 2px;
+}
+
+.purchase__event {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.purchase__dates {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.purchase__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  text-align: center;
+}
+
+.purchase__steps li {
+  padding: 6px 4px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.purchase__step--active {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.purchase__body {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.purchase__step-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ticket-types {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ticket-type {
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  display: grid;
+  gap: 4px;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  min-height: 56px;
+}
+
+.ticket-type--selected {
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 2px rgba(11, 61, 145, 0.12);
+}
+
+.ticket-type__name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ticket-type__desc {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.ticket-type__price {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.purchase__summary {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.purchase__summary-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.purchase__summary-list {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.purchase__summary-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.purchase__summary-row dt {
+  font-size: 12px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.purchase__summary-row dd {
+  margin: 0;
+  font-size: 14px;
+}
+
+.purchase__sim-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.purchase__primary {
+  appearance: none;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: none;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.purchase__primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.purchase__secondary {
+  appearance: none;
+  background: var(--surface);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.purchase__ref {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.purchase__ref code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: var(--ink);
+  background: var(--bg);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* Shared ticket card used on the confirmation screen and My Tickets. */
+.ticket-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.ticket-card__header {
+  display: grid;
+  gap: 2px;
+}
+
+.ticket-card__event {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ticket-card__dates {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.ticket-card__qr {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-card__qr svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ticket-card__meta {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.ticket-card__meta-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.ticket-card__meta-row dt {
+  font-size: 12px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ticket-card__meta-row dd {
+  margin: 0;
+  font-size: 14px;
+}
+
+.ticket-card__sim {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* My Tickets list. */
+.tickets {
+  display: grid;
+  gap: 12px;
+}
+
+.tickets__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
 @media (min-width: 600px) {
   .events__link {
     padding: 18px 20px;

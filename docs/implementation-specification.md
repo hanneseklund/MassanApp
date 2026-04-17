@@ -182,8 +182,20 @@ Exactly one venue record is expected in the prototype.
 
 ### Ticket
 
-- `id`, `user_id`, `event_id`, `ticket_type`, `attendee_name`,
-  `attendee_email`, `qr_payload`, `purchased_at`
+- `id`, `user_id`, `event_id`, `ticket_type`, `ticket_type_label`,
+  `attendee_name`, `attendee_email`, `qr_payload`, `transaction_ref`,
+  `purchased_at`
+- Tickets are scoped to the owning `user_id`. In local-seed mode they
+  are persisted to `localStorage` under `massan.tickets` as a single
+  list and filtered by `user_id` in the UI. A Supabase-backed mode will
+  replace this with a `tickets` table protected by Row Level Security.
+- Available ticket types are derived from the event's `ticket_model`:
+  - `public_ticket` events offer `day_pass` ("Day pass") and
+    `full_event` ("Full event pass") at minimum.
+  - `registration` events offer a single `delegate` ("Delegate
+    registration") type.
+  Ticket-type catalogs live in the frontend (not in seed JSON) so the
+  same simulated catalog applies regardless of how an event was loaded.
 
 ### Newsletter subscription
 
@@ -251,16 +263,22 @@ All simulations must be centralized and easy to replace:
 - `simulatedSocialSignIn(provider)` — returns a fake session for Google
   or Microsoft without calling the provider. It sets
   `session.auth_provider = provider` and `session.simulated = true`.
-- `simulatedPayment(order)` — always succeeds after a short delay. It
-  produces a plausible transaction reference but does not contact any
-  payment service.
+- `simulatedPayment(order)` — returns a Promise that resolves after a
+  short delay with `{ ok: true, transaction_ref }`. The reference is a
+  plausible-looking string (e.g. `SIM-XXXXXXXX`) but no payment service
+  is contacted. The delay lets the UI show a "processing" state.
 - `simulatedEmail(kind, payload)` — no-op in production prototype
   hosting; in development it logs the would-be email to the console.
   Known `kind` values: `newsletter_confirmation` (sent on newsletter
   signup). Ticket-confirmation and auth-confirmation kinds are reserved
   for later tasks.
-- `generateTicketQr(ticket)` — produces a QR payload from the ticket ID
-  and a salted event ID. The QR does not have to validate at a real venue.
+- `generateTicketQr(ticket)` — produces a QR payload string from the
+  ticket id and a salted event id, and renders a QR-like SVG matrix
+  deterministically derived from that payload. The matrix has the
+  three finder patterns in the corners and a body fill driven by a
+  hash of the payload. It is visually recognizable as a QR code but is
+  not a real QR-encoded credential, so it does not validate at a real
+  venue.
 
 Simulations must be clearly labeled in the UI during development and
 testing, for example with a small "simulated" chip, so reviewers can see

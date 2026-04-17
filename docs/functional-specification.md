@@ -158,19 +158,33 @@ The prototype must support this end-to-end path without gaps:
 
 ### Ticket purchase (simulated)
 
-- The flow starts from the event's ticket call-to-action.
-- It collects the minimum information needed to produce a plausible
-  ticket record (for example: ticket type, attendee name, email).
-- It shows an order summary and a final "confirm" action.
-- No real payment is taken. The confirmation step always succeeds.
-- On success the new ticket appears in My Tickets.
+- The flow starts from the event's ticket call-to-action: "Get tickets"
+  on events with public ticketing and "Register as delegate" on
+  congress-style events that use registration.
+- A visitor who is not signed in is sent to the auth view first and
+  returned to the purchase flow after sign-in.
+- The flow has three steps:
+  1. Pick a ticket type. Public-ticketing events offer at least two
+     simulated types (for example "Day pass" and "Full event pass").
+     Congress events offer a single "Delegate registration" type.
+  2. Confirm attendee details (name and email, defaulted from the
+     signed-in profile) and review an order summary.
+  3. Confirm the purchase. No real payment is taken; the confirmation
+     step always succeeds and is visibly marked as simulated.
+- On success the visitor sees a confirmation screen with a link to My
+  Tickets, and the new ticket appears there.
+- Once a visitor owns a ticket for an event, the event home view also
+  shows a "View ticket" affordance that opens My Tickets.
 
 ### My Tickets
 
-- Lists the tickets the logged-in visitor has purchased.
-- Each ticket shows the event, date, ticket type, attendee, and a QR code
-  for venue entry. The QR code is generated locally from ticket metadata
-  and does not need to be a valid venue-access credential.
+- Lists the tickets the signed-in visitor has purchased, scoped to that
+  user id.
+- Each ticket shows the event, dates, ticket type, attendee, purchase
+  date, and a QR code for venue entry. The QR code is generated locally
+  from ticket metadata and does not need to be a valid venue-access
+  credential.
+- Tickets persist across page reloads.
 
 ## Event archetype coverage
 

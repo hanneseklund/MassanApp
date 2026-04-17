@@ -177,10 +177,21 @@ section above for the caveats.
 
 ### Ticket purchase (simulated)
 
-- While signed in, start a ticket purchase from an event that supports
-  tickets (for example `Nordbygg 2026`).
-- Complete the flow. Confirm the success state.
-- Open My Tickets and confirm the new ticket appears with a QR code.
+- While signed out, tap "Get tickets" on `Nordbygg 2026`. Confirm the
+  app routes through the auth view and returns to the purchase flow
+  after sign-in.
+- In step 1 pick a ticket type (for example "Day pass"). In step 2
+  confirm the attendee details (defaulted from the profile) and review
+  the order summary. In step 3 confirm the purchase. A "simulated"
+  label is visible at least on the confirmation screen.
+- Open My Tickets from the confirmation screen and confirm the new
+  ticket appears with event name, dates, ticket type, attendee,
+  purchase date, and a QR code rendered as SVG.
+- Return to the `Nordbygg 2026` event home view and confirm the CTA
+  now also offers "View ticket".
+- Open `ESTRO 2026`, tap "Register as delegate", complete the flow, and
+  confirm a delegate ticket appears in My Tickets.
+- Reload the page. Tickets persist across the reload.
 
 ### Newsletter
 

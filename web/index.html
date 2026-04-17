@@ -127,14 +127,25 @@
               <h2 class="event-hero__name" x-text="event().name"></h2>
               <p class="event-hero__dates" x-text="formatDates(event())"></p>
               <p class="event-hero__summary" x-text="event().summary"></p>
-              <button
-                class="event-hero__cta"
-                type="button"
-                x-show="event().ticket_model === 'public_ticket'"
-                @click="$store.app.notImplemented('Ticket purchase')"
+              <div
+                class="event-hero__actions"
+                x-show="event().ticket_model !== 'none'"
               >
-                Get tickets
-              </button>
+                <button
+                  class="event-hero__cta"
+                  type="button"
+                  @click="startPurchase()"
+                  x-text="ticketCtaLabel(event())"
+                ></button>
+                <button
+                  class="event-hero__cta event-hero__cta--alt"
+                  type="button"
+                  x-show="hasTicket()"
+                  @click="$store.app.goTickets()"
+                >
+                  View ticket
+                </button>
+              </div>
             </header>
 
             <nav class="event-nav" aria-label="Event sections">
@@ -613,7 +624,7 @@
               <li>
                 <button type="button" class="me__link" @click="openTickets()">
                   My Tickets
-                  <span class="me__link-hint">coming in a later task</span>
+                  <span class="me__link-hint" x-text="ticketCountHint()"></span>
                 </button>
               </li>
             </ul>
@@ -697,10 +708,272 @@
             <button
               type="button"
               class="auth-form__submit"
-              @click="$store.app.goAuth('calendar')"
+              @click="$store.app.goAuth('me')"
             >
               Sign in or register
             </button>
+          </div>
+        </template>
+      </section>
+
+      <!-- Purchase view: three-step simulated ticket flow scoped to one
+           event. A visitor who lands here while signed out is routed
+           through the auth view and returned afterwards. -->
+      <section
+        class="view__body"
+        x-show="$store.app.view === 'purchase'"
+        x-data="purchaseView()"
+      >
+        <template x-if="event()">
+          <div class="purchase">
+            <header class="purchase__header">
+              <p class="purchase__event" x-text="event().name"></p>
+              <p class="purchase__dates" x-text="formatDates(event())"></p>
+            </header>
+
+            <ol class="purchase__steps" aria-label="Purchase progress">
+              <li :class="step >= 1 && 'purchase__step--active'">
+                1. Ticket
+              </li>
+              <li :class="step >= 2 && 'purchase__step--active'">
+                2. Details
+              </li>
+              <li :class="step >= 3 && 'purchase__step--active'">
+                3. Confirm
+              </li>
+            </ol>
+
+            <template x-if="step === 1">
+              <div class="purchase__body">
+                <h3 class="purchase__step-title">Pick a ticket</h3>
+                <ul class="ticket-types">
+                  <template x-for="t in ticketTypes()" :key="t.id">
+                    <li>
+                      <button
+                        type="button"
+                        class="ticket-type"
+                        :class="ticketTypeId === t.id && 'ticket-type--selected'"
+                        :aria-pressed="ticketTypeId === t.id"
+                        @click="ticketTypeId = t.id"
+                      >
+                        <span class="ticket-type__name" x-text="t.label"></span>
+                        <span
+                          class="ticket-type__desc"
+                          x-text="t.description"
+                        ></span>
+                        <span
+                          class="ticket-type__price"
+                          x-text="t.price"
+                        ></span>
+                      </button>
+                    </li>
+                  </template>
+                </ul>
+                <p class="auth-form__error" x-show="error" x-text="error"></p>
+                <button
+                  class="purchase__primary"
+                  type="button"
+                  :disabled="!ticketTypeId"
+                  @click="continueToDetails()"
+                >
+                  Continue
+                </button>
+              </div>
+            </template>
+
+            <template x-if="step === 2">
+              <form class="purchase__body" @submit.prevent="confirm()">
+                <h3 class="purchase__step-title">Attendee details</h3>
+                <label class="auth-form__field">
+                  <span class="auth-form__label">Attendee name</span>
+                  <input
+                    type="text"
+                    autocomplete="name"
+                    required
+                    x-model="attendeeName"
+                  />
+                </label>
+                <label class="auth-form__field">
+                  <span class="auth-form__label">Attendee email</span>
+                  <input
+                    type="email"
+                    autocomplete="email"
+                    required
+                    x-model="attendeeEmail"
+                  />
+                </label>
+                <section class="purchase__summary">
+                  <h4 class="purchase__summary-title">Order summary</h4>
+                  <dl class="purchase__summary-list">
+                    <div class="purchase__summary-row">
+                      <dt>Event</dt>
+                      <dd x-text="event().name"></dd>
+                    </div>
+                    <div class="purchase__summary-row">
+                      <dt>Dates</dt>
+                      <dd x-text="formatDates(event())"></dd>
+                    </div>
+                    <div class="purchase__summary-row">
+                      <dt>Ticket</dt>
+                      <dd x-text="selectedTicketType()?.label ?? ''"></dd>
+                    </div>
+                    <div class="purchase__summary-row">
+                      <dt>Price</dt>
+                      <dd x-text="selectedTicketType()?.price ?? ''"></dd>
+                    </div>
+                  </dl>
+                  <p class="purchase__sim-note">
+                    Payment is <span class="sim-chip">simulated</span> — no
+                    real charge is made.
+                  </p>
+                </section>
+                <p class="auth-form__error" x-show="error" x-text="error"></p>
+                <button
+                  class="purchase__primary"
+                  type="submit"
+                  :disabled="processing"
+                >
+                  <span x-show="!processing">Confirm purchase</span>
+                  <span x-show="processing">Processing…</span>
+                </button>
+                <button
+                  class="purchase__secondary"
+                  type="button"
+                  :disabled="processing"
+                  @click="goToStep(1)"
+                >
+                  Back
+                </button>
+              </form>
+            </template>
+
+            <template x-if="step === 3 && confirmedTicket">
+              <div class="purchase__body">
+                <h3 class="purchase__step-title">
+                  Ticket confirmed
+                  <span class="sim-chip">simulated</span>
+                </h3>
+                <p class="purchase__ref">
+                  Transaction reference:
+                  <code x-text="confirmedTicket.transaction_ref"></code>
+                </p>
+                <article class="ticket-card">
+                  <header class="ticket-card__header">
+                    <p class="ticket-card__event" x-text="event().name"></p>
+                    <p
+                      class="ticket-card__dates"
+                      x-text="formatDates(event())"
+                    ></p>
+                  </header>
+                  <div
+                    class="ticket-card__qr"
+                    x-html="qrSvgFor(confirmedTicket)"
+                  ></div>
+                  <dl class="ticket-card__meta">
+                    <div class="ticket-card__meta-row">
+                      <dt>Ticket</dt>
+                      <dd x-text="confirmedTicket.ticket_type_label"></dd>
+                    </div>
+                    <div class="ticket-card__meta-row">
+                      <dt>Attendee</dt>
+                      <dd x-text="confirmedTicket.attendee_name"></dd>
+                    </div>
+                  </dl>
+                </article>
+                <button
+                  class="purchase__primary"
+                  type="button"
+                  @click="$store.app.goTickets()"
+                >
+                  View in My Tickets
+                </button>
+                <button
+                  class="purchase__secondary"
+                  type="button"
+                  @click="$store.app.selectEvent(event().id)"
+                >
+                  Back to event
+                </button>
+              </div>
+            </template>
+          </div>
+        </template>
+        <p class="hint" x-show="!event()">
+          Event not found. Return to the calendar.
+        </p>
+      </section>
+
+      <!-- My Tickets view: list of purchased tickets for the signed-in
+           user, each with a locally generated QR presentation. -->
+      <section
+        class="view__body"
+        x-show="$store.app.view === 'tickets'"
+        x-data="myTicketsView()"
+      >
+        <template x-if="!signedIn()">
+          <div class="me me--signed-out">
+            <p class="placeholder">Sign in to see your tickets.</p>
+            <button
+              type="button"
+              class="auth-form__submit"
+              @click="$store.app.goAuth({ view: 'tickets' })"
+            >
+              Sign in or register
+            </button>
+          </div>
+        </template>
+        <template x-if="signedIn()">
+          <div class="tickets">
+            <p class="placeholder" x-show="tickets().length === 0">
+              You don't have any tickets yet. Pick an event from the
+              calendar to buy one.
+            </p>
+            <ul class="tickets__list" x-show="tickets().length > 0">
+              <template x-for="ticket in tickets()" :key="ticket.id">
+                <li>
+                  <article class="ticket-card">
+                    <header class="ticket-card__header">
+                      <p
+                        class="ticket-card__event"
+                        x-text="eventName(ticket)"
+                      ></p>
+                      <p
+                        class="ticket-card__dates"
+                        x-text="eventForTicket(ticket) ? formatDates(eventForTicket(ticket)) : ''"
+                      ></p>
+                    </header>
+                    <div
+                      class="ticket-card__qr"
+                      x-html="qrSvgFor(ticket)"
+                    ></div>
+                    <dl class="ticket-card__meta">
+                      <div class="ticket-card__meta-row">
+                        <dt>Ticket</dt>
+                        <dd x-text="ticket.ticket_type_label"></dd>
+                      </div>
+                      <div class="ticket-card__meta-row">
+                        <dt>Attendee</dt>
+                        <dd x-text="ticket.attendee_name"></dd>
+                      </div>
+                      <div class="ticket-card__meta-row">
+                        <dt>Email</dt>
+                        <dd x-text="ticket.attendee_email"></dd>
+                      </div>
+                      <div class="ticket-card__meta-row">
+                        <dt>Purchased</dt>
+                        <dd
+                          x-text="formatPurchaseDate(ticket.purchased_at)"
+                        ></dd>
+                      </div>
+                    </dl>
+                    <p class="ticket-card__sim">
+                      Venue entry is
+                      <span class="sim-chip">simulated</span>.
+                    </p>
+                  </article>
+                </li>
+              </template>
+            </ul>
           </div>
         </template>
       </section>

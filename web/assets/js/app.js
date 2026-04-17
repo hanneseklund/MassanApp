@@ -22,6 +22,46 @@ const EVENT_SUBVIEWS = [
   "newsletter",
 ];
 
+// Simulated ticket-type catalog keyed by event.ticket_model. Kept in
+// the frontend so the same catalog applies whether the event was
+// loaded from catalog.json or Supabase.
+const TICKET_TYPES = {
+  public_ticket: [
+    {
+      id: "day_pass",
+      label: "Day pass",
+      description: "Entry for one day of the event.",
+      price: "SEK 295",
+    },
+    {
+      id: "full_event",
+      label: "Full event pass",
+      description: "Entry for every day of the event.",
+      price: "SEK 595",
+    },
+  ],
+  registration: [
+    {
+      id: "delegate",
+      label: "Delegate registration",
+      description: "Full congress access for all program days.",
+      price: "EUR 450",
+    },
+  ],
+};
+
+function ticketTypesFor(event) {
+  if (!event) return [];
+  return TICKET_TYPES[event.ticket_model] ?? [];
+}
+
+function ticketCtaLabel(event) {
+  if (!event) return "";
+  if (event.ticket_model === "public_ticket") return "Get tickets";
+  if (event.ticket_model === "registration") return "Register as delegate";
+  return "";
+}
+
 const SECTION_LABELS = [
   { id: "news", label: "News" },
   { id: "articles", label: "Articles" },
@@ -79,7 +119,11 @@ function parseHash(hash) {
   const parts = clean.split("/").filter(Boolean);
   if (parts[0] === "auth") return { view: "auth" };
   if (parts[0] === "me") return { view: "me" };
+  if (parts[0] === "tickets") return { view: "tickets" };
   if (parts[0] === "event" && parts[1]) {
+    if (parts[2] === "purchase") {
+      return { view: "purchase", eventId: parts[1] };
+    }
     if (parts[2] === "exhibitors" && parts[3]) {
       return {
         view: "event",
@@ -98,6 +142,10 @@ function buildHash(state) {
   if (state.view === "calendar") return "#/";
   if (state.view === "auth") return "#/auth";
   if (state.view === "me") return "#/me";
+  if (state.view === "tickets") return "#/tickets";
+  if (state.view === "purchase" && state.eventId) {
+    return `#/event/${state.eventId}/purchase`;
+  }
   if (state.view === "event") {
     if (state.eventSubview === "exhibitors" && state.exhibitorId) {
       return `#/event/${state.eventId}/exhibitors/${state.exhibitorId}`;
@@ -209,6 +257,129 @@ function newSubscriptionId() {
   return "sub-" + Math.random().toString(36).slice(2, 10);
 }
 
+// Ticket persistence. In local-seed mode tickets live in localStorage
+// as a flat list and are filtered by user_id at read time. A Supabase
+// mode will swap this for a `tickets` table with RLS.
+const TICKETS_KEY = "massan.tickets";
+
+function loadTicketsFromStorage() {
+  try {
+    const raw = localStorage.getItem(TICKETS_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveTicketsToStorage(list) {
+  localStorage.setItem(TICKETS_KEY, JSON.stringify(list));
+}
+
+function newTicketId() {
+  return "ticket-" + Math.random().toString(36).slice(2, 10);
+}
+
+// `simulatedPayment(order)` — always resolves after a short delay with
+// a plausible transaction reference. No payment service is contacted.
+function simulatedPayment(order) {
+  return new Promise((resolve) => {
+    const ref = "SIM-" + Math.random().toString(36).slice(2, 10).toUpperCase();
+    setTimeout(() => resolve({ ok: true, transaction_ref: ref, order }), 600);
+  });
+}
+
+// QR code for a ticket. The payload binds the ticket id to its event
+// id with a salt so two tickets with the same id across events would
+// still produce distinct payloads. The SVG renderer draws a visually
+// QR-like matrix: three finder patterns in the corners and a
+// hash-driven body fill. It is not a valid venue-access credential.
+const QR_SALT = "stockholmsmassan-prototype";
+const QR_SIZE = 25;
+
+function ticketQrPayload(ticket) {
+  return `massan:${ticket.id}:${ticket.event_id}:${QR_SALT}`;
+}
+
+function qrHashBytes(str, length) {
+  const out = new Uint8Array(length);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  for (let i = 0; i < length; i++) {
+    h ^= (i + 1) * 0x9e3779b1;
+    h = Math.imul(h, 0x01000193);
+    out[i] = (h >>> (i % 24)) & 0xff;
+  }
+  return out;
+}
+
+function ticketQrMatrix(payload) {
+  const size = QR_SIZE;
+  const m = Array.from({ length: size }, () => new Array(size).fill(0));
+  const finders = [
+    [0, 0],
+    [0, size - 7],
+    [size - 7, 0],
+  ];
+  for (const [fr, fc] of finders) {
+    for (let r = 0; r < 7; r++) {
+      for (let c = 0; c < 7; c++) {
+        const on =
+          r === 0 ||
+          r === 6 ||
+          c === 0 ||
+          c === 6 ||
+          (r >= 2 && r <= 4 && c >= 2 && c <= 4);
+        m[fr + r][fc + c] = on ? 1 : 0;
+      }
+    }
+  }
+  const inFinderZone = (r, c) => {
+    const tl = r < 8 && c < 8;
+    const tr = r < 8 && c >= size - 8;
+    const bl = r >= size - 8 && c < 8;
+    return tl || tr || bl;
+  };
+  const bytes = qrHashBytes(payload, size * size);
+  for (let r = 0; r < size; r++) {
+    for (let c = 0; c < size; c++) {
+      if (inFinderZone(r, c)) continue;
+      m[r][c] = bytes[r * size + c] & 1;
+    }
+  }
+  return m;
+}
+
+function ticketQrSvg(payload) {
+  const matrix = ticketQrMatrix(payload);
+  const size = matrix.length;
+  const cell = 8;
+  const quiet = 2;
+  const total = (size + quiet * 2) * cell;
+  let cells = "";
+  for (let r = 0; r < size; r++) {
+    for (let c = 0; c < size; c++) {
+      if (!matrix[r][c]) continue;
+      const x = (c + quiet) * cell;
+      const y = (r + quiet) * cell;
+      cells += `<rect x="${x}" y="${y}" width="${cell}" height="${cell}"/>`;
+    }
+  }
+  return (
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${total} ${total}" ` +
+    `width="100%" height="100%" role="img" aria-label="Ticket QR code">` +
+    `<rect width="100%" height="100%" fill="#ffffff"/>` +
+    `<g fill="#0f172a">${cells}</g></svg>`
+  );
+}
+
+function generateTicketQr(ticket) {
+  const payload = ticketQrPayload(ticket);
+  return { payload, svg: ticketQrSvg(payload) };
+}
+
 // `simulatedEmail(kind, payload)` — no-op in production hosting; logs a
 // structured record to the console during development so reviewers can
 // see the would-be email. The kind values are documented in
@@ -235,9 +406,10 @@ document.addEventListener("alpine:init", () => {
     isSimulated: true,
     toast: "",
     _toastTimer: null,
-    // View to return to once the user completes an auth flow. Defaults
-    // to the calendar when entering auth from the chrome "Me" button.
-    _preAuthView: "calendar",
+    // Where to go after an auth flow completes. Stored as a route-like
+    // object so that deep targets (e.g. the purchase flow for a given
+    // event) can be resumed after sign-in.
+    _preAuth: { view: "calendar" },
 
     init() {
       this._applyHash();
@@ -268,19 +440,45 @@ document.addEventListener("alpine:init", () => {
       if (Alpine.store("session").isSignedIn) {
         this._navigate({ view: "me" });
       } else {
-        this._preAuthView = "calendar";
+        this._preAuth = { view: "me" };
         this._navigate({ view: "auth" });
       }
     },
-    goAuth(preAuthView) {
-      this._preAuthView = preAuthView || "calendar";
+    goTickets() {
+      if (Alpine.store("session").isSignedIn) {
+        this._navigate({ view: "tickets" });
+      } else {
+        this._preAuth = { view: "tickets" };
+        this._navigate({ view: "auth" });
+      }
+    },
+    startPurchase(eventId) {
+      if (!eventId) return;
+      if (Alpine.store("session").isSignedIn) {
+        this._navigate({ view: "purchase", eventId });
+      } else {
+        this._preAuth = { view: "purchase", eventId };
+        this._navigate({ view: "auth" });
+      }
+    },
+    goAuth(target) {
+      if (typeof target === "string") {
+        this._preAuth = { view: target };
+      } else if (target && typeof target === "object") {
+        this._preAuth = { ...target };
+      } else {
+        this._preAuth = { view: "calendar" };
+      }
       this._navigate({ view: "auth" });
     },
     afterAuth() {
-      const target = this._preAuthView || "calendar";
-      this._preAuthView = "calendar";
-      if (target === "me") this._navigate({ view: "me" });
-      else this._navigate({ view: "calendar" });
+      const target = this._preAuth || { view: "calendar" };
+      this._preAuth = { view: "calendar" };
+      if (target.view === "me") this._navigate({ view: "me" });
+      else if (target.view === "tickets") this._navigate({ view: "tickets" });
+      else if (target.view === "purchase" && target.eventId) {
+        this._navigate({ view: "purchase", eventId: target.eventId });
+      } else this._navigate({ view: "calendar" });
     },
     selectEvent(eventId) {
       this._navigate({ view: "event", eventId, eventSubview: "home" });
@@ -315,6 +513,11 @@ document.addEventListener("alpine:init", () => {
       if (this.view === "calendar") return "Events";
       if (this.view === "auth") return "Sign in";
       if (this.view === "me") return "My Pages";
+      if (this.view === "tickets") return "My Tickets";
+      if (this.view === "purchase") {
+        const ev = Alpine.store("catalog").eventById(this.eventId);
+        return ev ? `Get tickets · ${ev.name}` : "Get tickets";
+      }
       if (this.view === "event") {
         const ev = Alpine.store("catalog").eventById(this.eventId);
         return ev ? ev.name : "Event";
@@ -610,6 +813,44 @@ document.addEventListener("alpine:init", () => {
     },
   });
 
+  // Tickets store: flat list persisted in localStorage and filtered by
+  // user_id at read time. When Supabase is wired in, `add`, `forUser`,
+  // and `hasForEvent` become the only hook points that need to switch
+  // implementation.
+  Alpine.store("tickets", {
+    tickets: [],
+
+    init() {
+      this.tickets = loadTicketsFromStorage();
+    },
+
+    _persist() {
+      saveTicketsToStorage(this.tickets);
+    },
+
+    forUser(userId) {
+      if (!userId) return [];
+      return this.tickets.filter((t) => t.user_id === userId);
+    },
+
+    forUserAndEvent(userId, eventId) {
+      if (!userId || !eventId) return [];
+      return this.tickets.filter(
+        (t) => t.user_id === userId && t.event_id === eventId
+      );
+    },
+
+    hasForEvent(userId, eventId) {
+      return this.forUserAndEvent(userId, eventId).length > 0;
+    },
+
+    add(ticket) {
+      this.tickets.push(ticket);
+      this._persist();
+      return ticket;
+    },
+  });
+
   // Filter state for the calendar view.
   Alpine.store("filters", {
     query: "",
@@ -690,9 +931,20 @@ function eventView() {
     formatDates,
     formatNewsDate,
     formatDayHeading,
+    ticketCtaLabel,
     event() {
       const id = Alpine.store("app").eventId;
       return id ? Alpine.store("catalog").eventById(id) : null;
+    },
+    hasTicket() {
+      const ev = this.event();
+      const user = Alpine.store("session").user;
+      if (!ev || !user) return false;
+      return Alpine.store("tickets").hasForEvent(user.id, ev.id);
+    },
+    startPurchase() {
+      const ev = this.event();
+      if (ev) Alpine.store("app").startPurchase(ev.id);
     },
     news() {
       const ev = this.event();
@@ -844,7 +1096,188 @@ function meView() {
       Alpine.store("app").goCalendar();
     },
     openTickets() {
-      Alpine.store("app").notImplemented("My Tickets");
+      Alpine.store("app").goTickets();
+    },
+    ticketCountHint() {
+      const user = this.user();
+      if (!user) return "";
+      const count = Alpine.store("tickets").forUser(user.id).length;
+      if (!count) return "No tickets yet";
+      return count === 1 ? "1 ticket" : `${count} tickets`;
+    },
+  };
+}
+
+// Purchase view: three-step simulated ticket purchase flow. Local
+// Alpine state owns the step counter and form values; the persisted
+// ticket is written via `Alpine.store("tickets").add` once simulated
+// payment succeeds.
+function purchaseView() {
+  return {
+    step: 1,
+    ticketTypeId: null,
+    attendeeName: "",
+    attendeeEmail: "",
+    processing: false,
+    error: "",
+    confirmedTicket: null,
+    formatDates,
+
+    init() {
+      this.$watch(
+        () => [
+          Alpine.store("app").view,
+          Alpine.store("app").eventId,
+          Alpine.store("session").user?.id,
+        ],
+        () => {
+          if (Alpine.store("app").view === "purchase") this._hydrate();
+        }
+      );
+      this._hydrate();
+    },
+
+    _hydrate() {
+      this.step = 1;
+      this.ticketTypeId = null;
+      this.processing = false;
+      this.error = "";
+      this.confirmedTicket = null;
+      const user = Alpine.store("session").user;
+      this.attendeeName = user?.display_name ?? "";
+      this.attendeeEmail = user?.email ?? "";
+    },
+
+    event() {
+      const id = Alpine.store("app").eventId;
+      return id ? Alpine.store("catalog").eventById(id) : null;
+    },
+
+    ticketTypes() {
+      return ticketTypesFor(this.event());
+    },
+
+    selectedTicketType() {
+      const id = this.ticketTypeId;
+      return this.ticketTypes().find((t) => t.id === id) ?? null;
+    },
+
+    goToStep(step) {
+      this.step = step;
+      this.error = "";
+    },
+
+    continueToDetails() {
+      if (!this.ticketTypeId) {
+        this.error = "Pick a ticket type to continue.";
+        return;
+      }
+      this.goToStep(2);
+    },
+
+    async confirm() {
+      const ev = this.event();
+      const type = this.selectedTicketType();
+      if (!ev || !type) {
+        this.error = "Pick a ticket type first.";
+        this.step = 1;
+        return;
+      }
+      const user = Alpine.store("session").user;
+      if (!user) {
+        this.error = "Sign in to complete the purchase.";
+        return;
+      }
+      const name = String(this.attendeeName || "").trim();
+      const email = String(this.attendeeEmail || "").trim();
+      if (!name || !email) {
+        this.error = "Attendee name and email are required.";
+        return;
+      }
+      this.error = "";
+      this.processing = true;
+      try {
+        const payment = await simulatedPayment({
+          user_id: user.id,
+          event_id: ev.id,
+          ticket_type: type.id,
+          attendee_email: email,
+        });
+        const ticket = {
+          id: newTicketId(),
+          user_id: user.id,
+          event_id: ev.id,
+          ticket_type: type.id,
+          ticket_type_label: type.label,
+          attendee_name: name,
+          attendee_email: email,
+          transaction_ref: payment.transaction_ref,
+          purchased_at: new Date().toISOString(),
+        };
+        ticket.qr_payload = ticketQrPayload(ticket);
+        Alpine.store("tickets").add(ticket);
+        simulatedEmail("ticket_confirmation", {
+          to: email,
+          user_id: user.id,
+          event_id: ev.id,
+          event_name: ev.name,
+          ticket_id: ticket.id,
+          ticket_type: ticket.ticket_type,
+          transaction_ref: ticket.transaction_ref,
+        });
+        this.confirmedTicket = ticket;
+        this.step = 3;
+      } catch (err) {
+        this.error = err.message || "Could not complete the purchase.";
+      } finally {
+        this.processing = false;
+      }
+    },
+
+    qrSvgFor(ticket) {
+      return generateTicketQr(ticket).svg;
+    },
+  };
+}
+
+// My Tickets view: lists the signed-in user's tickets with QR-code
+// presentation. Visitors arriving here without a session get a prompt
+// to sign in.
+function myTicketsView() {
+  return {
+    formatDates,
+    signedIn() {
+      return !!Alpine.store("session").user;
+    },
+    tickets() {
+      const user = Alpine.store("session").user;
+      if (!user) return [];
+      return Alpine.store("tickets")
+        .forUser(user.id)
+        .slice()
+        .sort((a, b) =>
+          (b.purchased_at || "").localeCompare(a.purchased_at || "")
+        );
+    },
+    eventName(ticket) {
+      return (
+        Alpine.store("catalog").eventById(ticket.event_id)?.name ??
+        ticket.event_id
+      );
+    },
+    eventForTicket(ticket) {
+      return Alpine.store("catalog").eventById(ticket.event_id);
+    },
+    formatPurchaseDate(iso) {
+      if (!iso) return "";
+      return new Date(iso).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      });
+    },
+    qrSvgFor(ticket) {
+      return generateTicketQr(ticket).svg;
     },
   };
 }
