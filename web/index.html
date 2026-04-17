@@ -421,10 +421,68 @@
               </template>
 
               <template x-if="$store.app.eventSubview === 'newsletter'">
-                <p class="placeholder">
-                  Newsletter signup and preferences will appear here (coming
-                  in a later task).
-                </p>
+                <div class="newsletter" x-data="newsletterSignup()">
+                  <template x-if="!submitted">
+                    <form class="newsletter-form" @submit.prevent="submit()">
+                      <p class="newsletter-form__intro">
+                        Get updates about
+                        <strong x-text="event().name"></strong> by email.
+                        Subscription is simulated in the prototype — no email
+                        is actually sent.
+                      </p>
+                      <label class="auth-form__field">
+                        <span class="auth-form__label">Email</span>
+                        <input
+                          type="email"
+                          autocomplete="email"
+                          required
+                          x-model="email"
+                        />
+                      </label>
+                      <fieldset class="newsletter-form__topics">
+                        <legend class="auth-form__label">
+                          I want to hear about
+                        </legend>
+                        <template x-for="topic in topics" :key="topic.key">
+                          <label class="newsletter-form__topic">
+                            <input
+                              type="checkbox"
+                              :checked="preferences[topic.key]"
+                              @change="preferences[topic.key] = $event.target.checked"
+                            />
+                            <span x-text="topic.label"></span>
+                          </label>
+                        </template>
+                      </fieldset>
+                      <p
+                        class="auth-form__error"
+                        x-show="error"
+                        x-text="error"
+                      ></p>
+                      <button type="submit" class="auth-form__submit">
+                        Sign up for updates
+                      </button>
+                    </form>
+                  </template>
+                  <template x-if="submitted">
+                    <div class="newsletter-success">
+                      <p class="newsletter-success__title">You're signed up.</p>
+                      <p class="newsletter-success__body">
+                        We'll send updates to
+                        <strong x-text="email"></strong> about
+                        <strong x-text="event().name"></strong>.
+                        <span class="sim-chip">simulated</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="newsletter-success__edit"
+                        @click="editAgain()"
+                      >
+                        Edit preferences
+                      </button>
+                    </div>
+                  </template>
+                </div>
               </template>
             </div>
           </div>
@@ -555,17 +613,70 @@
                   <span class="me__link-hint">coming in a later task</span>
                 </button>
               </li>
-              <li>
-                <button
-                  type="button"
-                  class="me__link"
-                  @click="openNewsletter()"
-                >
-                  Newsletter preferences
-                  <span class="me__link-hint">coming in a later task</span>
-                </button>
-              </li>
             </ul>
+
+            <section class="me__section" x-data="newsletterPreferences()">
+              <h2 class="me__section-title">Newsletter preferences</h2>
+              <p
+                class="placeholder"
+                x-show="subscriptions().length === 0 && !venueWide()"
+              >
+                No newsletter subscriptions yet. Visit an event and open
+                its Newsletter tab to sign up.
+              </p>
+
+              <label class="newsletter-prefs__venue-row">
+                <span class="newsletter-prefs__venue-label">
+                  All Stockholmsmassan events
+                  <span class="newsletter-prefs__venue-hint">
+                    Receive venue-wide announcements.
+                  </span>
+                </span>
+                <input
+                  type="checkbox"
+                  :checked="!!venueWide()"
+                  @change="toggleVenueWide()"
+                />
+              </label>
+
+              <ul
+                class="newsletter-prefs__list"
+                x-show="subscriptions().length > 0"
+              >
+                <template x-for="sub in subscriptions()" :key="sub.id">
+                  <li class="newsletter-prefs__item">
+                    <div class="newsletter-prefs__header">
+                      <p
+                        class="newsletter-prefs__event"
+                        x-text="sub.event_name"
+                      ></p>
+                      <button
+                        type="button"
+                        class="newsletter-prefs__unsubscribe"
+                        @click="unsubscribe(sub.id)"
+                      >
+                        Unsubscribe
+                      </button>
+                    </div>
+                    <ul class="newsletter-prefs__topics">
+                      <template x-for="topic in topics" :key="topic.key">
+                        <li class="newsletter-prefs__topic">
+                          <label>
+                            <input
+                              type="checkbox"
+                              :checked="sub.preferences[topic.key]"
+                              @change="togglePreference(sub, topic.key)"
+                            />
+                            <span x-text="topic.label"></span>
+                          </label>
+                        </li>
+                      </template>
+                    </ul>
+                  </li>
+                </template>
+              </ul>
+            </section>
+
             <button
               type="button"
               class="me__signout"

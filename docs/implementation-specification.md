@@ -170,6 +170,17 @@ Exactly one venue record is expected in the prototype.
 
 - `id`, `user_id` (nullable for anonymous signup), `email`, `event_id`
   (nullable for venue-wide), `preferences` (JSON)
+- `preferences` in the prototype is an object of boolean topic flags:
+  `program_highlights`, `news`, and `exhibitor_updates`. All three
+  default to `true` on signup. New topic keys may be added later;
+  missing keys are treated as `true` so older records remain valid.
+- Subscriptions are unique per (`email`, `event_id`) pair for anonymous
+  signups and per (`user_id`, `event_id`) pair for signed-in users.
+  `event_id === null` represents the venue-wide "All
+  Stockholmsmassan events" subscription.
+- In local-seed mode the subscription list is persisted to
+  `localStorage` under `massan.newsletter`. A Supabase-backed mode will
+  replace this with a `newsletter_subscriptions` table.
 
 ## Supabase usage
 
@@ -226,6 +237,9 @@ All simulations must be centralized and easy to replace:
   payment service.
 - `simulatedEmail(kind, payload)` — no-op in production prototype
   hosting; in development it logs the would-be email to the console.
+  Known `kind` values: `newsletter_confirmation` (sent on newsletter
+  signup). Ticket-confirmation and auth-confirmation kinds are reserved
+  for later tasks.
 - `generateTicketQr(ticket)` — produces a QR payload from the ticket ID
   and a salted event ID. The QR does not have to validate at a real venue.
 
