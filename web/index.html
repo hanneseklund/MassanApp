@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0b3d91" />
+    <title>MassanApp</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <script defer src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body x-data x-cloak>
+    <!-- Simulated-mode banner so reviewers see this is a prototype. -->
+    <div class="sim-banner" x-show="$store.app.isSimulated">
+      Prototype · simulated data and integrations
+    </div>
+
+    <!-- Top chrome. "Back to events" appears only when an event is selected,
+         per the one-event-at-a-time navigation rule. -->
+    <header class="chrome">
+      <button
+        class="chrome__back"
+        type="button"
+        x-show="$store.app.view !== 'calendar'"
+        @click="$store.app.goCalendar()"
+        aria-label="Back to events"
+      >
+        <span aria-hidden="true">&larr;</span> Events
+      </button>
+      <h1 class="chrome__title" x-text="$store.app.chromeTitle()"></h1>
+      <button
+        class="chrome__me"
+        type="button"
+        @click="$store.app.goMe()"
+        aria-label="My Pages"
+      >
+        Me
+      </button>
+    </header>
+
+    <main class="view">
+      <!-- Calendar view: upcoming events with filters and search. -->
+      <section
+        class="view__body"
+        x-show="$store.app.view === 'calendar'"
+        x-data="calendarView()"
+      >
+        <div class="filters">
+          <label class="filters__search">
+            <span class="sr-only">Search events</span>
+            <input
+              type="search"
+              placeholder="Search events"
+              x-model.debounce.150ms="$store.filters.query"
+              autocomplete="off"
+            />
+          </label>
+          <div class="filters__row">
+            <label>
+              <span class="sr-only">Type</span>
+              <select x-model="$store.filters.type">
+                <option value="">All types</option>
+                <template x-for="t in types" :key="t">
+                  <option :value="t" x-text="t"></option>
+                </template>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">Category</span>
+              <select x-model="$store.filters.category">
+                <option value="">All categories</option>
+                <template x-for="c in categories" :key="c">
+                  <option :value="c" x-text="c"></option>
+                </template>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">Month</span>
+              <select x-model="$store.filters.month">
+                <option value="">All months</option>
+                <template x-for="m in months" :key="m">
+                  <option :value="m" x-text="m"></option>
+                </template>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <p class="hint" x-show="filtered().length === 0">
+          No events match the current filters.
+        </p>
+
+        <ul class="events">
+          <template x-for="event in filtered()" :key="event.id">
+            <li class="events__card">
+              <button
+                type="button"
+                class="events__link"
+                @click="$store.app.selectEvent(event.id)"
+              >
+                <span class="events__type" x-text="event.type"></span>
+                <span class="events__name" x-text="event.name"></span>
+                <span class="events__dates" x-text="formatDates(event)"></span>
+                <span class="events__summary" x-text="event.summary"></span>
+              </button>
+            </li>
+          </template>
+        </ul>
+      </section>
+
+      <!-- Event view: mini-homepage scoped to the selected event. -->
+      <section
+        class="view__body"
+        x-show="$store.app.view === 'event'"
+        x-data="eventView()"
+      >
+        <template x-if="event()">
+          <div>
+            <header class="event-hero">
+              <p class="event-hero__type" x-text="event().type"></p>
+              <h2 class="event-hero__name" x-text="event().name"></h2>
+              <p class="event-hero__dates" x-text="formatDates(event())"></p>
+              <p class="event-hero__summary" x-text="event().summary"></p>
+              <button
+                class="event-hero__cta"
+                type="button"
+                x-show="event().ticket_model === 'public_ticket'"
+                @click="$store.app.notImplemented('Ticket purchase')"
+              >
+                Get tickets
+              </button>
+            </header>
+
+            <nav class="event-nav" aria-label="Event sections">
+              <template x-for="section in sections" :key="section.id">
+                <button
+                  type="button"
+                  class="event-nav__tab"
+                  :class="$store.app.eventSubview === section.id && 'event-nav__tab--active'"
+                  @click="$store.app.goEventSubview(section.id)"
+                  x-text="section.label"
+                ></button>
+              </template>
+            </nav>
+
+            <div class="event-subview">
+              <template x-if="$store.app.eventSubview === 'home'">
+                <p class="placeholder">
+                  Pick a section above to explore this event.
+                </p>
+              </template>
+              <template x-if="$store.app.eventSubview === 'news'">
+                <p class="placeholder">
+                  News will appear here once event data is loaded.
+                </p>
+              </template>
+              <template x-if="$store.app.eventSubview === 'articles'">
+                <p class="placeholder">
+                  Articles will appear here once event data is loaded.
+                </p>
+              </template>
+              <template x-if="$store.app.eventSubview === 'program'">
+                <p class="placeholder">
+                  The program will appear here once event data is loaded.
+                </p>
+              </template>
+              <template x-if="$store.app.eventSubview === 'exhibitors'">
+                <p class="placeholder">
+                  The exhibitor index will appear here once event data is
+                  loaded.
+                </p>
+              </template>
+              <template x-if="$store.app.eventSubview === 'practical'">
+                <p class="placeholder">
+                  Shared Stockholmsmassan venue information and event-specific
+                  overrides will appear here.
+                </p>
+              </template>
+              <template x-if="$store.app.eventSubview === 'newsletter'">
+                <p class="placeholder">
+                  Newsletter signup and preferences will appear here.
+                </p>
+              </template>
+            </div>
+          </div>
+        </template>
+
+        <p class="hint" x-show="!event()">
+          Event not found. Return to the calendar.
+        </p>
+      </section>
+
+      <!-- My Pages view: stub until the auth task wires it up. -->
+      <section class="view__body" x-show="$store.app.view === 'me'">
+        <p class="placeholder">
+          My Pages, My Tickets, and newsletter preferences will be implemented
+          in a later task.
+        </p>
+      </section>
+    </main>
+
+    <!-- Lightweight toast for "not yet implemented" actions in the scaffold. -->
+    <div class="toast" x-show="$store.app.toast" x-transition>
+      <span x-text="$store.app.toast"></span>
+    </div>
+  </body>
+</html>
