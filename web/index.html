@@ -152,36 +152,278 @@
                   Pick a section above to explore this event.
                 </p>
               </template>
+
               <template x-if="$store.app.eventSubview === 'news'">
-                <p class="placeholder">
-                  News will appear here once event data is loaded.
-                </p>
+                <div>
+                  <p class="placeholder" x-show="news().length === 0">
+                    No news yet for this event.
+                  </p>
+                  <ul class="news-list" x-show="news().length > 0">
+                    <template x-for="item in news()" :key="item.id">
+                      <li class="news-item">
+                        <p
+                          class="news-item__date"
+                          x-text="formatNewsDate(item.published_at)"
+                        ></p>
+                        <h3
+                          class="news-item__title"
+                          x-text="item.title"
+                        ></h3>
+                        <p class="news-item__body" x-text="item.body"></p>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
               </template>
+
               <template x-if="$store.app.eventSubview === 'articles'">
-                <p class="placeholder">
-                  Articles will appear here once event data is loaded.
-                </p>
+                <div>
+                  <p class="placeholder" x-show="articles().length === 0">
+                    No articles yet for this event.
+                  </p>
+                  <ul class="articles-list" x-show="articles().length > 0">
+                    <template x-for="a in articles()" :key="a.id">
+                      <li class="article">
+                        <h3 class="article__title" x-text="a.title"></h3>
+                        <p class="article__body" x-text="a.body"></p>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
               </template>
+
               <template x-if="$store.app.eventSubview === 'program'">
-                <p class="placeholder">
-                  The program will appear here once event data is loaded.
-                </p>
+                <div>
+                  <p class="placeholder" x-show="programByDay().length === 0">
+                    No program published yet for this event.
+                  </p>
+                  <template x-for="group in programByDay()" :key="group.day">
+                    <section class="program-day">
+                      <h3
+                        class="program-day__heading"
+                        x-text="formatDayHeading(group.day)"
+                      ></h3>
+                      <ul class="program-day__list">
+                        <template
+                          x-for="session in group.sessions"
+                          :key="session.id"
+                        >
+                          <li class="session">
+                            <p
+                              class="session__time"
+                              x-text="session.start_time + '–' + session.end_time"
+                            ></p>
+                            <h4
+                              class="session__title"
+                              x-text="session.title"
+                            ></h4>
+                            <p
+                              class="session__meta"
+                              x-text="session.location + (session.track ? ' · ' + session.track : '')"
+                            ></p>
+                            <p
+                              class="session__speakers"
+                              x-show="speakerNames(session).length > 0"
+                              x-text="'Speakers: ' + speakerNames(session).join(', ')"
+                            ></p>
+                            <p
+                              class="session__description"
+                              x-text="session.description"
+                            ></p>
+                          </li>
+                        </template>
+                      </ul>
+                    </section>
+                  </template>
+                </div>
               </template>
-              <template x-if="$store.app.eventSubview === 'exhibitors'">
-                <p class="placeholder">
-                  The exhibitor index will appear here once event data is
-                  loaded.
-                </p>
+
+              <template
+                x-if="$store.app.eventSubview === 'exhibitors' && !$store.app.exhibitorId"
+              >
+                <div>
+                  <label class="filters__search">
+                    <span class="sr-only">Search exhibitors</span>
+                    <input
+                      type="search"
+                      placeholder="Search exhibitors"
+                      x-model.debounce.150ms="exhibitorQuery"
+                      autocomplete="off"
+                    />
+                  </label>
+                  <p
+                    class="placeholder"
+                    x-show="filteredExhibitors().length === 0"
+                  >
+                    No exhibitors match your search.
+                  </p>
+                  <ul
+                    class="exhibitor-list"
+                    x-show="filteredExhibitors().length > 0"
+                  >
+                    <template
+                      x-for="e in filteredExhibitors()"
+                      :key="e.id"
+                    >
+                      <li class="exhibitor-card">
+                        <button
+                          type="button"
+                          class="exhibitor-card__link"
+                          @click="$store.app.selectExhibitor(e.id)"
+                        >
+                          <span
+                            class="exhibitor-card__name"
+                            x-text="e.name"
+                          ></span>
+                          <span
+                            class="exhibitor-card__booth"
+                            x-text="'Booth ' + e.booth"
+                          ></span>
+                          <span
+                            class="exhibitor-card__desc"
+                            x-text="e.description"
+                          ></span>
+                        </button>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
               </template>
+
+              <template
+                x-if="$store.app.eventSubview === 'exhibitors' && $store.app.exhibitorId"
+              >
+                <div>
+                  <button
+                    type="button"
+                    class="back-link"
+                    @click="$store.app.backToExhibitors()"
+                  >
+                    <span aria-hidden="true">&larr;</span> Back to exhibitors
+                  </button>
+                  <template x-if="exhibitor()">
+                    <article class="exhibitor-detail">
+                      <h3
+                        class="exhibitor-detail__name"
+                        x-text="exhibitor().name"
+                      ></h3>
+                      <p
+                        class="exhibitor-detail__booth"
+                        x-text="'Booth ' + exhibitor().booth"
+                      ></p>
+                      <p
+                        class="exhibitor-detail__desc"
+                        x-text="exhibitor().description"
+                      ></p>
+                      <p x-show="exhibitor().website">
+                        <a
+                          class="exhibitor-detail__link"
+                          :href="exhibitor().website"
+                          target="_blank"
+                          rel="noopener"
+                          x-text="exhibitor().website"
+                        ></a>
+                      </p>
+                    </article>
+                  </template>
+                  <p class="hint" x-show="!exhibitor()">
+                    Exhibitor not found.
+                  </p>
+                </div>
+              </template>
+
               <template x-if="$store.app.eventSubview === 'practical'">
-                <p class="placeholder">
-                  Shared Stockholmsmassan venue information and event-specific
-                  overrides will appear here.
-                </p>
+                <div class="practical">
+                  <section class="practical__section">
+                    <h3>Getting here</h3>
+                    <p x-text="venue().transport?.summary"></p>
+                    <ul>
+                      <template
+                        x-for="mode in venue().transport?.modes ?? []"
+                        :key="mode.mode"
+                      >
+                        <li>
+                          <strong x-text="mode.mode"></strong>:
+                          <span x-text="mode.detail"></span>
+                        </li>
+                      </template>
+                    </ul>
+                  </section>
+                  <section class="practical__section">
+                    <h3>Parking</h3>
+                    <p x-text="venue().parking?.summary"></p>
+                    <p
+                      class="practical__note"
+                      x-text="venue().parking?.notes"
+                    ></p>
+                  </section>
+                  <section class="practical__section">
+                    <h3>Restaurants and cafes</h3>
+                    <ul>
+                      <template
+                        x-for="r in venue().restaurants ?? []"
+                        :key="r.name"
+                      >
+                        <li>
+                          <strong x-text="r.name"></strong>:
+                          <span x-text="r.description"></span>
+                        </li>
+                      </template>
+                    </ul>
+                  </section>
+                  <section class="practical__section">
+                    <h3>Security and entry</h3>
+                    <p x-text="venue().security?.summary"></p>
+                    <ul>
+                      <template
+                        x-for="rule in venue().security?.general_rules ?? []"
+                        :key="rule"
+                      >
+                        <li x-text="rule"></li>
+                      </template>
+                    </ul>
+                  </section>
+                  <section
+                    class="practical__section practical__section--maps"
+                    x-show="(venue().maps ?? []).length > 0"
+                  >
+                    <h3>Venue maps</h3>
+                    <ul>
+                      <template
+                        x-for="m in venue().maps ?? []"
+                        :key="m.id"
+                      >
+                        <li>
+                          <strong x-text="m.name"></strong>:
+                          <span x-text="m.description"></span>
+                        </li>
+                      </template>
+                    </ul>
+                  </section>
+                  <section
+                    class="practical__section practical__section--overrides"
+                    x-show="hasOverrides()"
+                  >
+                    <h3>Notes for this event</h3>
+                    <dl class="overrides">
+                      <template
+                        x-for="entry in Object.entries(overrides())"
+                        :key="entry[0]"
+                      >
+                        <div class="overrides__item">
+                          <dt x-text="overrideLabel(entry[0])"></dt>
+                          <dd x-text="entry[1]"></dd>
+                        </div>
+                      </template>
+                    </dl>
+                  </section>
+                </div>
               </template>
+
               <template x-if="$store.app.eventSubview === 'newsletter'">
                 <p class="placeholder">
-                  Newsletter signup and preferences will appear here.
+                  Newsletter signup and preferences will appear here (coming
+                  in a later task).
                 </p>
               </template>
             </div>

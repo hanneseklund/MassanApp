@@ -1,10 +1,11 @@
 // MassanApp prototype — Alpine.js stores and view components.
 //
 // The prototype uses hash-based routing so views are linkable:
-//   #/                          -> calendar
-//   #/event/<slug>              -> event home
-//   #/event/<slug>/<subview>    -> event subview
-//   #/me                        -> My Pages (stub until auth task)
+//   #/                                               -> calendar
+//   #/event/<slug>                                   -> event home
+//   #/event/<slug>/<subview>                         -> event subview
+//   #/event/<slug>/exhibitors/<exhibitor-id>         -> exhibitor detail
+//   #/me                                             -> My Pages (stub until auth task)
 //
 // Data is loaded from web/data/catalog.json, which mirrors the Supabase
 // table structure documented in docs/implementation-specification.md.
@@ -42,8 +43,16 @@ function parseHash(hash) {
   const parts = clean.split("/").filter(Boolean);
   if (parts[0] === "me") return { view: "me" };
   if (parts[0] === "event" && parts[1]) {
+    if (parts[2] === "exhibitors" && parts[3]) {
+      return {
+        view: "event",
+        eventId: parts[1],
+        eventSubview: "exhibitors",
+        exhibitorId: parts[3],
+      };
+    }
     const subview = parts[2] && EVENT_SUBVIEWS.includes(parts[2]) ? parts[2] : "home";
-    return { view: "event", eventId: parts[1], eventSubview: subview };
+    return { view: "event", eventId: parts[1], eventSubview: subview, exhibitorId: null };
   }
   return { view: "calendar" };
 }
@@ -52,6 +61,9 @@ function buildHash(state) {
   if (state.view === "calendar") return "#/";
   if (state.view === "me") return "#/me";
   if (state.view === "event") {
+    if (state.eventSubview === "exhibitors" && state.exhibitorId) {
+      return `#/event/${state.eventId}/exhibitors/${state.exhibitorId}`;
+    }
     const sub = state.eventSubview && state.eventSubview !== "home"
       ? `/${state.eventSubview}`
       : "";
@@ -66,6 +78,7 @@ document.addEventListener("alpine:init", () => {
     view: "calendar",
     eventId: null,
     eventSubview: "home",
+    exhibitorId: null,
     isSimulated: true,
     toast: "",
     _toastTimer: null,
@@ -80,6 +93,7 @@ document.addEventListener("alpine:init", () => {
       this.view = parsed.view;
       this.eventId = parsed.eventId ?? null;
       this.eventSubview = parsed.eventSubview ?? "home";
+      this.exhibitorId = parsed.exhibitorId ?? null;
     },
 
     _navigate(next) {
@@ -106,6 +120,23 @@ document.addEventListener("alpine:init", () => {
         view: "event",
         eventId: this.eventId,
         eventSubview: subview,
+      });
+    },
+    selectExhibitor(exhibitorId) {
+      if (!this.eventId) return;
+      this._navigate({
+        view: "event",
+        eventId: this.eventId,
+        eventSubview: "exhibitors",
+        exhibitorId,
+      });
+    },
+    backToExhibitors() {
+      if (!this.eventId) return;
+      this._navigate({
+        view: "event",
+        eventId: this.eventId,
+        eventSubview: "exhibitors",
       });
     },
 
@@ -179,6 +210,9 @@ document.addEventListener("alpine:init", () => {
       return this.exhibitors
         .filter((e) => e.event_id === eventId)
         .sort((a, b) => a.name.localeCompare(b.name));
+    },
+    exhibitorById(id) {
+      return this.exhibitors.find((e) => e.id === id) ?? null;
     },
     speakerById(id) {
       return this.speakers.find((s) => s.id === id) ?? null;
@@ -262,15 +296,97 @@ function calendarView() {
   };
 }
 
+const OVERRIDE_LABELS = {
+  entrance: "Entrance",
+  bag_rules: "Bag rules",
+  access_notes: "Access notes",
+};
+
 function eventView() {
   return {
     sections: SECTION_LABELS,
+    exhibitorQuery: "",
     formatDates,
+    formatNewsDate,
+    formatDayHeading,
     event() {
       const id = Alpine.store("app").eventId;
       return id ? Alpine.store("catalog").eventById(id) : null;
     },
+    news() {
+      const ev = this.event();
+      return ev ? Alpine.store("catalog").newsForEvent(ev.id) : [];
+    },
+    articles() {
+      const ev = this.event();
+      return ev ? Alpine.store("catalog").articlesForEvent(ev.id) : [];
+    },
+    programByDay() {
+      const ev = this.event();
+      if (!ev) return [];
+      const sessions = Alpine.store("catalog").programForEvent(ev.id);
+      const groups = new Map();
+      for (const s of sessions) {
+        if (!groups.has(s.day)) groups.set(s.day, []);
+        groups.get(s.day).push(s);
+      }
+      return [...groups.entries()].map(([day, list]) => ({ day, sessions: list }));
+    },
+    speakerNames(session) {
+      if (!session.speaker_ids?.length) return [];
+      return session.speaker_ids
+        .map((id) => Alpine.store("catalog").speakerById(id))
+        .filter(Boolean)
+        .map((s) => s.name);
+    },
+    filteredExhibitors() {
+      const ev = this.event();
+      if (!ev) return [];
+      const list = Alpine.store("catalog").exhibitorsForEvent(ev.id);
+      const q = this.exhibitorQuery.trim().toLowerCase();
+      if (!q) return list;
+      return list.filter(
+        (e) =>
+          e.name.toLowerCase().includes(q) ||
+          (e.booth ?? "").toLowerCase().includes(q) ||
+          (e.description ?? "").toLowerCase().includes(q)
+      );
+    },
+    exhibitor() {
+      const id = Alpine.store("app").exhibitorId;
+      return id ? Alpine.store("catalog").exhibitorById(id) : null;
+    },
+    venue() {
+      return Alpine.store("catalog").venue ?? {};
+    },
+    overrides() {
+      return this.event()?.overrides ?? {};
+    },
+    hasOverrides() {
+      return Object.keys(this.overrides()).length > 0;
+    },
+    overrideLabel(key) {
+      return OVERRIDE_LABELS[key] ?? key.replace(/_/g, " ");
+    },
   };
+}
+
+function formatNewsDate(iso) {
+  if (!iso) return "";
+  return new Date(iso).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
+
+function formatDayHeading(iso) {
+  if (!iso) return "";
+  return new Date(iso).toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
 }
 
 function uniqueSorted(values) {
