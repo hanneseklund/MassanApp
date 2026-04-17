@@ -24,32 +24,6 @@ git clone https://github.com/hanneseklund/MassanApp.git
 cd MassanApp
 ```
 
-## Running the frontend without Supabase
-
-The prototype is designed to run with local seed data when Supabase is
-not configured, so it can be demoed without cloud credentials.
-
-1. Start a static HTTP server from the `web/` directory. Any minimal
-   server works; examples:
-
-   - `npx http-server web -p 8080`
-   - `python3 -m http.server 8080 --directory web`
-
-2. Open `http://localhost:8080/` in a browser.
-
-3. In DevTools, switch to a mobile device emulation profile (for example
-   iPhone 14) to confirm mobile-first layout.
-
-In this mode, authentication, ticket purchase, and newsletter signup are
-backed by simulations and in-memory state. Refreshing the page resets
-any simulated tickets and sessions.
-
-The seed content the frontend reads in this mode lives in
-`web/data/catalog.json`. It contains the shared venue record for
-Stockholmsmassan and seeded events (`Nordbygg 2026`, `ESTRO 2026`,
-`EHA2026 Congress`) along with their news, articles, program items,
-exhibitors, and speaker entries.
-
 ## Shared Supabase backend
 
 The prototype uses a single shared Supabase project for all testing,
@@ -72,20 +46,36 @@ the rule in `AGENTS.md` under "Publishing database changes". A migration
 that is in the repository but not yet applied to the shared project is
 a bug and will break the `agent` deployment.
 
-## Running the frontend against the shared Supabase project
+## Running the frontend
 
-1. Configure the frontend with the shared project URL and publishable
-   key. These values are safe to commit because the publishable key is
-   the public anon key gated by Row Level Security. The Cloudflare Pages
-   deployments pick up the committed values automatically.
-2. Optionally override locally with `web/assets/env.local.js` (gitignored,
-   see `.gitignore`) to point a local dev run at a different Supabase
-   project. This is an escape hatch, not the default.
-3. Start the static server as described above.
+The frontend reads its catalog (venue, events, news, articles, program,
+exhibitors, speakers) from the shared Supabase prototype project on
+every load. An internet connection and the committed Supabase config
+in `web/assets/env.js` are required; there is no offline fallback.
 
-When the frontend is wired to Supabase, email sign-up and sign-in go
-through Supabase Auth. Simulated social sign-in and simulated payment
-remain simulated regardless of Supabase configuration.
+1. Start a static HTTP server from the `web/` directory. Any minimal
+   server works; examples:
+
+   - `npx http-server web -p 8080`
+   - `python3 -m http.server 8080 --directory web`
+
+2. Open `http://localhost:8080/` in a browser.
+
+3. In DevTools, switch to a mobile device emulation profile (for example
+   iPhone 14) to confirm mobile-first behavior.
+
+To point a local dev run at a different Supabase project (an escape
+hatch, not the default), create `web/assets/env.local.js` (gitignored)
+that reassigns `window.MASSANAPP_ENV`. Otherwise the Cloudflare Pages
+deployments and local dev both hit the shared project.
+
+Authentication, ticket purchase, and newsletter signup remain simulated
+in the prototype — see "Known simulated behaviors" below. Only the
+catalog is read from Supabase today; email sign-up through Supabase
+Auth is a later task.
+
+`web/data/catalog.json` is kept in the repo as a reference copy of the
+seed shape for reviewers. It is not loaded by the running app.
 
 ## Applying migrations and seed to the shared project
 

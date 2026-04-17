@@ -8,8 +8,9 @@
 //   #/auth                                           -> registration / sign-in
 //   #/me                                             -> signed-in My Pages
 //
-// Data is loaded from web/data/catalog.json, which mirrors the Supabase
-// table structure documented in docs/implementation-specification.md.
+// Catalog data is loaded from the shared Supabase prototype project.
+// The URL and publishable key come from window.MASSANAPP_ENV (set in
+// assets/env.js). See docs/implementation-specification.md.
 
 const EVENT_SUBVIEWS = [
   "home",
@@ -30,12 +31,46 @@ const SECTION_LABELS = [
   { id: "newsletter", label: "Newsletter" },
 ];
 
-async function loadCatalog() {
-  const response = await fetch("data/catalog.json", { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load catalog: ${response.status}`);
+function supabaseClient() {
+  const env = window.MASSANAPP_ENV;
+  if (!env?.SUPABASE_URL || !env?.SUPABASE_ANON_KEY) {
+    throw new Error(
+      "Supabase config missing. Check that assets/env.js is loaded.",
+    );
   }
-  return response.json();
+  if (!window.supabase?.createClient) {
+    throw new Error("Supabase JS SDK not loaded.");
+  }
+  return window.supabase.createClient(env.SUPABASE_URL, env.SUPABASE_ANON_KEY);
+}
+
+async function loadCatalog() {
+  const db = supabaseClient();
+  const [venue, events, news, articles, program, exhibitors, speakers] =
+    await Promise.all([
+      db.from("venues").select("*").limit(1).single(),
+      db.from("events").select("*"),
+      db.from("news_items").select("*"),
+      db.from("articles").select("*"),
+      db.from("program_items").select("*"),
+      db.from("exhibitors").select("*"),
+      db.from("speakers").select("*"),
+    ]);
+  const firstError = [venue, events, news, articles, program, exhibitors, speakers]
+    .map((r) => r.error)
+    .find(Boolean);
+  if (firstError) {
+    throw new Error(`Failed to load catalog: ${firstError.message}`);
+  }
+  return {
+    venue: venue.data,
+    events: events.data,
+    news: news.data,
+    articles: articles.data,
+    program: program.data,
+    exhibitors: exhibitors.data,
+    speakers: speakers.data,
+  };
 }
 
 function parseHash(hash) {
@@ -398,8 +433,8 @@ document.addEventListener("alpine:init", () => {
     },
   });
 
-  // Catalog store: venue, events, and per-event content. Loaded from the
-  // seed JSON so the prototype can run without Supabase credentials.
+  // Catalog store: venue, events, and per-event content. Loaded from
+  // the shared Supabase prototype project via loadCatalog().
   Alpine.store("catalog", {
     venue: null,
     events: [],

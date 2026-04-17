@@ -76,8 +76,27 @@ Alpine.js stores and components own the following state:
 - `cart` and `tickets`: in-progress ticket purchase and the user's owned
   tickets.
 
-Data is loaded lazily per view. The catalog is populated either from
-Supabase or from local seed JSON during development.
+Data is loaded from the shared Supabase prototype project. Supabase is
+a hard dependency of the frontend: the calendar, event views, and
+practical-info views all read from Postgres through the Supabase JS
+client. The earlier `web/data/catalog.json` fallback is retained only
+as a reference copy of the seed shape; the app does not read it at
+runtime.
+
+### Catalog loading
+
+On first app load the `catalog` store issues seven parallel `select *`
+queries against the shared project: `venues` (single row),
+`events`, `news_items`, `articles`, `program_items`, `exhibitors`,
+and `speakers`. The rows are kept in memory for the life of the
+session and filtered per event in view components. The Supabase URL
+and publishable (anon) key are read from `window.MASSANAPP_ENV`, set
+by `web/assets/env.js` (committed) with optional override from
+`web/assets/env.local.js` (gitignored).
+
+If the Supabase queries fail, the app surfaces the error through the
+`catalog.error` state and the calendar view shows a failure message
+instead of silently falling back to stale data.
 
 ### Alpine.js usage rules
 
