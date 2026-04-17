@@ -6,7 +6,8 @@
 //   #/event/<slug>/<subview>    -> event subview
 //   #/me                        -> My Pages (stub until auth task)
 //
-// Data is loaded from web/data/events.json. Real seeding is a later task.
+// Data is loaded from web/data/catalog.json, which mirrors the Supabase
+// table structure documented in docs/implementation-specification.md.
 
 const EVENT_SUBVIEWS = [
   "home",
@@ -28,7 +29,7 @@ const SECTION_LABELS = [
 ];
 
 async function loadCatalog() {
-  const response = await fetch("data/events.json", { cache: "no-store" });
+  const response = await fetch("data/catalog.json", { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Failed to load catalog: ${response.status}`);
   }
@@ -125,16 +126,29 @@ document.addEventListener("alpine:init", () => {
     },
   });
 
-  // Catalog store: events, exhibitors, etc. Loaded from seed JSON for now.
+  // Catalog store: venue, events, and per-event content. Loaded from the
+  // seed JSON so the prototype can run without Supabase credentials.
   Alpine.store("catalog", {
+    venue: null,
     events: [],
+    news: [],
+    articles: [],
+    program: [],
+    exhibitors: [],
+    speakers: [],
     loading: true,
     error: null,
 
     async init() {
       try {
         const data = await loadCatalog();
+        this.venue = data.venue ?? null;
         this.events = data.events ?? [];
+        this.news = data.news ?? [];
+        this.articles = data.articles ?? [];
+        this.program = data.program ?? [];
+        this.exhibitors = data.exhibitors ?? [];
+        this.speakers = data.speakers ?? [];
       } catch (err) {
         this.error = err.message;
       } finally {
@@ -144,6 +158,40 @@ document.addEventListener("alpine:init", () => {
 
     eventById(id) {
       return this.events.find((e) => e.id === id) ?? null;
+    },
+    newsForEvent(eventId) {
+      return this.news
+        .filter((n) => n.event_id === eventId)
+        .sort((a, b) => (b.published_at || "").localeCompare(a.published_at || ""));
+    },
+    articlesForEvent(eventId) {
+      return this.articles.filter((a) => a.event_id === eventId);
+    },
+    programForEvent(eventId) {
+      return this.program
+        .filter((p) => p.event_id === eventId)
+        .sort((a, b) => {
+          const d = (a.day || "").localeCompare(b.day || "");
+          return d !== 0 ? d : (a.start_time || "").localeCompare(b.start_time || "");
+        });
+    },
+    exhibitorsForEvent(eventId) {
+      return this.exhibitors
+        .filter((e) => e.event_id === eventId)
+        .sort((a, b) => a.name.localeCompare(b.name));
+    },
+    speakerById(id) {
+      return this.speakers.find((s) => s.id === id) ?? null;
+    },
+    practicalInfoForEvent(eventId) {
+      // Shared venue data plus per-event overrides. Event overrides only
+      // replace the specific fields that legitimately differ; transport,
+      // parking, restaurants, and security stay shared across events.
+      const ev = this.eventById(eventId);
+      return {
+        venue: this.venue,
+        overrides: ev?.overrides ?? {},
+      };
     },
   });
 
