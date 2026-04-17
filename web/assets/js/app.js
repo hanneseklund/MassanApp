@@ -134,6 +134,62 @@ function publicUserRecord(user) {
   };
 }
 
+// Newsletter subscription persistence. In local-seed mode subscriptions
+// live in localStorage; a Supabase-backed mode will replace these helpers.
+const NEWSLETTER_KEY = "massan.newsletter";
+const NEWSLETTER_PREF_KEYS = [
+  "program_highlights",
+  "news",
+  "exhibitor_updates",
+];
+
+function defaultNewsletterPreferences() {
+  return Object.fromEntries(NEWSLETTER_PREF_KEYS.map((k) => [k, true]));
+}
+
+function normalizeNewsletterPreferences(pref) {
+  const out = defaultNewsletterPreferences();
+  if (pref && typeof pref === "object") {
+    for (const k of NEWSLETTER_PREF_KEYS) {
+      if (k in pref) out[k] = !!pref[k];
+    }
+  }
+  return out;
+}
+
+function loadNewsletterFromStorage() {
+  try {
+    const raw = localStorage.getItem(NEWSLETTER_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveNewsletterToStorage(list) {
+  localStorage.setItem(NEWSLETTER_KEY, JSON.stringify(list));
+}
+
+function newSubscriptionId() {
+  return "sub-" + Math.random().toString(36).slice(2, 10);
+}
+
+// `simulatedEmail(kind, payload)` — no-op in production hosting; logs a
+// structured record to the console during development so reviewers can
+// see the would-be email. The kind values are documented in
+// docs/implementation-specification.md.
+function simulatedEmail(kind, payload) {
+  const host = typeof window !== "undefined" ? window.location?.hostname : "";
+  const isDev =
+    !host ||
+    host === "localhost" ||
+    host === "127.0.0.1" ||
+    host.endsWith(".local");
+  if (isDev && typeof console !== "undefined") {
+    console.info("[simulatedEmail]", kind, payload);
+  }
+}
+
 document.addEventListener("alpine:init", () => {
   // App-wide navigation and simulation state.
   Alpine.store("app", {
@@ -250,6 +306,13 @@ document.addEventListener("alpine:init", () => {
       this.user = loadSessionFromStorage();
     },
 
+    _linkNewsletter(user) {
+      const store = Alpine.store("newsletter");
+      if (store && typeof store.attachUser === "function") {
+        store.attachUser(user);
+      }
+    },
+
     get isSignedIn() {
       return !!this.user;
     },
@@ -277,6 +340,7 @@ document.addEventListener("alpine:init", () => {
       const user = publicUserRecord(record);
       this.user = user;
       saveSessionToStorage(user);
+      this._linkNewsletter(user);
       return user;
     },
 
@@ -293,6 +357,7 @@ document.addEventListener("alpine:init", () => {
       const user = publicUserRecord(record);
       this.user = user;
       saveSessionToStorage(user);
+      this._linkNewsletter(user);
       return user;
     },
 
@@ -328,6 +393,7 @@ document.addEventListener("alpine:init", () => {
       const user = publicUserRecord(record);
       this.user = user;
       saveSessionToStorage(user);
+      this._linkNewsletter(user);
       return user;
     },
   });
@@ -401,6 +467,111 @@ document.addEventListener("alpine:init", () => {
         venue: this.venue,
         overrides: ev?.overrides ?? {},
       };
+    },
+  });
+
+  // Newsletter store: subscriptions by (email/user, event). Persisted in
+  // localStorage so anonymous signups survive reloads and sign-in
+  // attaches matching anonymous subscriptions to the new user.
+  Alpine.store("newsletter", {
+    subscriptions: [],
+
+    init() {
+      this.subscriptions = loadNewsletterFromStorage().map((s) => ({
+        ...s,
+        preferences: normalizeNewsletterPreferences(s.preferences),
+      }));
+      const current = Alpine.store("session")?.user;
+      if (current) this.attachUser(current);
+    },
+
+    _persist() {
+      saveNewsletterToStorage(this.subscriptions);
+    },
+
+    findForEvent({ email, userId, eventId }) {
+      const eid = eventId ?? null;
+      return (
+        this.subscriptions.find((s) => {
+          if ((s.event_id ?? null) !== eid) return false;
+          if (userId && s.user_id === userId) return true;
+          if (email && (s.email || "").toLowerCase() === email.toLowerCase()) {
+            return true;
+          }
+          return false;
+        }) ?? null
+      );
+    },
+
+    forUser(userId, email) {
+      return this.subscriptions.filter(
+        (s) =>
+          (userId && s.user_id === userId) ||
+          (email && (s.email || "").toLowerCase() === email.toLowerCase())
+      );
+    },
+
+    subscribe({ email, userId, eventId, preferences }) {
+      const cleanEmail = String(email || "").trim();
+      if (!cleanEmail) throw new Error("Enter an email address.");
+      const prefs = normalizeNewsletterPreferences(preferences);
+      const eid = eventId ?? null;
+      const existing = this.findForEvent({
+        email: cleanEmail,
+        userId,
+        eventId: eid,
+      });
+      if (existing) {
+        existing.email = cleanEmail;
+        existing.preferences = prefs;
+        if (userId && !existing.user_id) existing.user_id = userId;
+        this._persist();
+        return existing;
+      }
+      const record = {
+        id: newSubscriptionId(),
+        user_id: userId ?? null,
+        email: cleanEmail,
+        event_id: eid,
+        preferences: prefs,
+      };
+      this.subscriptions.push(record);
+      this._persist();
+      return record;
+    },
+
+    updatePreferences(id, preferences) {
+      const sub = this.subscriptions.find((s) => s.id === id);
+      if (!sub) return null;
+      sub.preferences = normalizeNewsletterPreferences({
+        ...sub.preferences,
+        ...preferences,
+      });
+      this._persist();
+      return sub;
+    },
+
+    unsubscribe(id) {
+      const before = this.subscriptions.length;
+      this.subscriptions = this.subscriptions.filter((s) => s.id !== id);
+      if (this.subscriptions.length !== before) this._persist();
+    },
+
+    // When a visitor signs in, link any anonymous subscriptions that
+    // match their email to the new user id so preferences carry over.
+    attachUser(user) {
+      if (!user?.id || !user.email) return;
+      let changed = false;
+      for (const s of this.subscriptions) {
+        if (
+          !s.user_id &&
+          (s.email || "").toLowerCase() === user.email.toLowerCase()
+        ) {
+          s.user_id = user.id;
+          changed = true;
+        }
+      }
+      if (changed) this._persist();
     },
   });
 
@@ -640,8 +811,155 @@ function meView() {
     openTickets() {
       Alpine.store("app").notImplemented("My Tickets");
     },
-    openNewsletter() {
-      Alpine.store("app").notImplemented("Newsletter preferences");
+  };
+}
+
+const NEWSLETTER_TOPICS = [
+  { key: "program_highlights", label: "Program highlights" },
+  { key: "news", label: "News" },
+  { key: "exhibitor_updates", label: "Exhibitor updates" },
+];
+
+// Newsletter signup form for an event's Newsletter subview. Pre-fills
+// the email from the signed-in user when available, re-hydrates any
+// prior subscription for this (email, event) pair, and toggles into a
+// success state after submit.
+function newsletterSignup() {
+  return {
+    topics: NEWSLETTER_TOPICS,
+    email: "",
+    preferences: defaultNewsletterPreferences(),
+    submitted: false,
+    error: "",
+
+    event() {
+      const id = Alpine.store("app").eventId;
+      return id ? Alpine.store("catalog").eventById(id) : null;
+    },
+
+    init() {
+      this.$watch(
+        () => [Alpine.store("app").eventId, Alpine.store("session").user?.id],
+        () => this._hydrate()
+      );
+      this._hydrate();
+    },
+
+    _hydrate() {
+      this.error = "";
+      this.submitted = false;
+      const user = Alpine.store("session").user;
+      const eventId = Alpine.store("app").eventId;
+      this.email = user?.email ?? "";
+      const existing = user
+        ? Alpine.store("newsletter").findForEvent({
+            email: user.email,
+            userId: user.id,
+            eventId,
+          })
+        : null;
+      if (existing) {
+        this.email = existing.email;
+        this.preferences = { ...existing.preferences };
+        this.submitted = true;
+      } else {
+        this.preferences = defaultNewsletterPreferences();
+      }
+    },
+
+    submit() {
+      this.error = "";
+      try {
+        const user = Alpine.store("session").user;
+        const eventId = Alpine.store("app").eventId;
+        const record = Alpine.store("newsletter").subscribe({
+          email: this.email,
+          userId: user?.id ?? null,
+          eventId,
+          preferences: this.preferences,
+        });
+        const event = Alpine.store("catalog").eventById(eventId);
+        simulatedEmail("newsletter_confirmation", {
+          to: record.email,
+          user_id: record.user_id,
+          event_id: record.event_id,
+          event_name: event?.name ?? null,
+          preferences: record.preferences,
+        });
+        this.submitted = true;
+      } catch (err) {
+        this.error = err.message || "Could not sign up.";
+      }
+    },
+
+    editAgain() {
+      this.submitted = false;
+    },
+  };
+}
+
+// Newsletter preferences list shown in My Pages. Lists the signed-in
+// user's subscriptions by event plus a venue-wide row that can be
+// toggled on and off.
+function newsletterPreferences() {
+  return {
+    topics: NEWSLETTER_TOPICS,
+
+    subscriptions() {
+      const user = Alpine.store("session").user;
+      if (!user) return [];
+      return Alpine.store("newsletter")
+        .forUser(user.id, user.email)
+        .filter((s) => s.event_id !== null)
+        .map((s) => ({
+          ...s,
+          event_name:
+            Alpine.store("catalog").eventById(s.event_id)?.name ?? s.event_id,
+        }))
+        .sort((a, b) => (a.event_name || "").localeCompare(b.event_name || ""));
+    },
+
+    venueWide() {
+      const user = Alpine.store("session").user;
+      if (!user) return null;
+      return Alpine.store("newsletter").findForEvent({
+        email: user.email,
+        userId: user.id,
+        eventId: null,
+      });
+    },
+
+    togglePreference(sub, key) {
+      Alpine.store("newsletter").updatePreferences(sub.id, {
+        [key]: !sub.preferences[key],
+      });
+    },
+
+    unsubscribe(id) {
+      Alpine.store("newsletter").unsubscribe(id);
+    },
+
+    toggleVenueWide() {
+      const user = Alpine.store("session").user;
+      if (!user) return;
+      const existing = this.venueWide();
+      if (existing) {
+        Alpine.store("newsletter").unsubscribe(existing.id);
+        return;
+      }
+      const record = Alpine.store("newsletter").subscribe({
+        email: user.email,
+        userId: user.id,
+        eventId: null,
+        preferences: defaultNewsletterPreferences(),
+      });
+      simulatedEmail("newsletter_confirmation", {
+        to: record.email,
+        user_id: record.user_id,
+        event_id: null,
+        event_name: "All Stockholmsmassan events",
+        preferences: record.preferences,
+      });
     },
   };
 }

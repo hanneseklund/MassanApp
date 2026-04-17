@@ -130,9 +130,18 @@ mobile emulation. Each item maps to acceptance criteria in
 
 ### Newsletter
 
-- Sign up for the event newsletter. Confirm the UI indicates success.
-- As a logged-in user, open newsletter preferences and change at least
-  one preference.
+- On an event's Newsletter subview, submit the signup form with an
+  email address. Confirm the UI shows a success state and that a
+  `newsletter_confirmation` entry is logged to the browser console.
+- Reload the page and confirm the success state persists for that
+  email (the subscription is keyed by email).
+- Sign in, then on another event's Newsletter subview sign up again.
+  Confirm that in My Pages → Newsletter preferences the new
+  subscription appears under the signed-in user.
+- Toggle one of the per-event topic preferences and unsubscribe from
+  one event. Reload the page and confirm both changes persist.
+- Toggle the venue-wide "All Stockholmsmassan events" subscription on
+  and off and confirm the state persists across reloads.
 
 ## Regression checks for shared venue data
 
