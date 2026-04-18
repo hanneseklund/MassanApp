@@ -105,6 +105,10 @@ drift ahead of the live database.
      updated seed SQL.
 3. Verify the change landed. For schema: `list_tables` or
    `list_migrations`. For seed: a `select count(*)` via `execute_sql`.
+4. When `supabase/seed/seed.sql` changes, update `web/data/catalog.json`
+   in the same commit so the reference copy of the seed shape stays
+   useful for reviewers. See the "Seed data layout" section of
+   `docs/implementation-specification.md`.
 
 If the MCP is not available in the current session, the task is
 blocked — move it to `agent/tasks_blocked/` rather than committing a

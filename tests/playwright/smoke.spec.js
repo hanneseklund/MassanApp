@@ -127,6 +127,20 @@ test.describe("Calendar and event selection", () => {
     }
     await page.selectOption('select >> nth=0', { label: "All types" });
 
+    // Month filter (checklist step 2). The dropdown is populated from
+    // `monthLabel()` of the current upcoming events, so pick whatever
+    // the first non-default option is and assert the list narrows to
+    // at least one card for that month.
+    const monthSelect = page.locator("select").nth(2);
+    const monthOptions = await monthSelect
+      .locator('option:not([value=""])')
+      .allTextContents();
+    expect(monthOptions.length).toBeGreaterThan(0);
+    const chosenMonth = monthOptions[0];
+    await monthSelect.selectOption({ label: chosenMonth });
+    await expect(page.locator(".events__card")).not.toHaveCount(0);
+    await monthSelect.selectOption({ label: "All months" });
+
     await page.fill(
       'input[type="search"][placeholder="Search events"]',
       "Nordbygg",
