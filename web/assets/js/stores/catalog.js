@@ -93,15 +93,5 @@ export function catalogStore() {
     speakerById(id) {
       return this.speakers.find((s) => s.id === id) ?? null;
     },
-    practicalInfoForEvent(eventId) {
-      // Shared venue data plus per-event overrides. Event overrides only
-      // replace the specific fields that legitimately differ; transport,
-      // parking, restaurants, and security stay shared across events.
-      const ev = this.eventById(eventId);
-      return {
-        venue: this.venue,
-        overrides: ev?.overrides ?? {},
-      };
-    },
   };
 }
