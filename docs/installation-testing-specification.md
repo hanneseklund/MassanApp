@@ -329,23 +329,6 @@ Every numbered item in the checklist above maps to at least one
 assertion in the suite. When the checklist changes, update the suite
 in the same pull request.
 
-Steps 1–11 (calendar, event content, congress archetype) run by
-default. Steps 12–28 (auth, ticket purchase, newsletter) require the
-shared Supabase project to have email confirmation disabled and
-anonymous sign-ins enabled, which are Authentication → Providers /
-Sign In toggles in the Supabase dashboard. They also require
-anonymous provider to be on for simulated Google / Microsoft
-sign-in. Because both are currently off, the auth-dependent tests are
-gated behind `SMOKE_AUTH=1` to keep the default `npm run smoke` green
-on the config as it ships. Run them once the dashboard is corrected:
-
-```
-SMOKE_AUTH=1 npm run smoke
-```
-
-The tracking task for flipping the dashboard and removing the gate
-is `agent/tasks/enable-supabase-auth-for-smoke-tests.md`.
-
 ## Regression checks for shared venue data
 
 When editing venue-shared content:

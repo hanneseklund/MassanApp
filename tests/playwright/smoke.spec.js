@@ -8,18 +8,6 @@ const TEST_EMAIL = "smoke+e2e@example.com";
 const TEST_PASSWORD = "MassanApp-smoke-2026!";
 const TEST_DISPLAY_NAME = "Smoke Tester";
 
-// The auth / ticket / newsletter tests require the shared Supabase
-// project to have email confirmation disabled and anonymous sign-ins
-// enabled. As of 2026-04-18 the project has email confirmation ON
-// and anonymous sign-ins OFF, which breaks the register + simulated
-// social sign-in paths and rate-limits repeated signup attempts. Set
-// SMOKE_AUTH=1 to opt in once the dashboard toggles are corrected —
-// tracked in agent/tasks/enable-supabase-auth-for-smoke-tests.md.
-const AUTH_SUITE_ENABLED = process.env.SMOKE_AUTH === "1";
-const describeAuth = AUTH_SUITE_ENABLED
-  ? test.describe
-  : test.describe.skip;
-
 // One suite, one sequence: later tests depend on the account created
 // or signed into by earlier ones.
 test.describe.configure({ mode: "serial" });
@@ -71,7 +59,7 @@ async function signOutIfSignedIn(page) {
   const signout = page.locator("button.me__signout");
   if (await signout.isVisible().catch(() => false)) {
     await signout.click();
-    await expect(page.locator(".me--signed-out")).toBeVisible();
+    await waitForSessionState(page, false);
   }
 }
 
@@ -257,7 +245,7 @@ test.describe("Congress archetype", () => {
   });
 });
 
-describeAuth("Registration and sign-in", () => {
+test.describe("Registration and sign-in", () => {
   test("12-14: register or sign in with the smoke account, sign out, sign back in", async ({
     page,
   }) => {
@@ -266,7 +254,7 @@ describeAuth("Registration and sign-in", () => {
     await waitForSignedIn(page);
 
     await page.locator(".me__signout").click();
-    await expect(page.locator(".me--signed-out")).toBeVisible();
+    await waitForSessionState(page, false);
 
     // Sign back in via the tab.
     await page.goto("/#/auth");
@@ -287,6 +275,8 @@ describeAuth("Registration and sign-in", () => {
     await page
       .locator(".auth-social__button", { hasText: "Continue with Google" })
       .click();
+    await waitForSessionState(page, true);
+    await page.goto("/#/me");
     await expect(page.locator(".me .me__provider")).toContainText("Google", {
       timeout: 10_000,
     });
@@ -296,11 +286,11 @@ describeAuth("Registration and sign-in", () => {
 
     // Clean up so subsequent tests start from the email account.
     await page.locator(".me__signout").click();
-    await expect(page.locator(".me--signed-out")).toBeVisible();
+    await waitForSessionState(page, false);
   });
 });
 
-describeAuth("Ticket purchase (simulated)", () => {
+test.describe("Ticket purchase (simulated)", () => {
   test("16-22: auth detour, purchase Nordbygg day pass, purchase ESTRO delegate, tickets persist across reload", async ({
     page,
   }) => {
@@ -343,7 +333,7 @@ describeAuth("Ticket purchase (simulated)", () => {
       page.locator(".purchase__step-title", { hasText: "Ticket confirmed" }),
     ).toBeVisible({ timeout: 15_000 });
     await expect(page.locator(".purchase__ref code")).toContainText(/^SIM-/);
-    await expect(page.locator(".ticket-card__qr svg")).toBeVisible();
+    await expect(page.locator(".purchase .ticket-card__qr svg")).toBeVisible();
     await expect(
       page.locator(".purchase__step-title .sim-chip", { hasText: "simulated" }),
     ).toBeVisible();
@@ -400,7 +390,9 @@ describeAuth("Ticket purchase (simulated)", () => {
         .locator(".purchase__primary", { hasText: "View in My Tickets" })
         .click();
       await expect(
-        page.locator(".tickets__list .ticket-card", { hasText: "ESTRO 2026" }),
+        page
+          .locator(".tickets__list .ticket-card", { hasText: "ESTRO 2026" })
+          .first(),
       ).toBeVisible();
     }
 
@@ -408,12 +400,14 @@ describeAuth("Ticket purchase (simulated)", () => {
     await page.reload();
     await expect(page).toHaveURL(/#\/tickets/);
     await expect(
-      page.locator(".tickets__list .ticket-card", { hasText: "Nordbygg 2026" }),
+      page
+        .locator(".tickets__list .ticket-card", { hasText: "Nordbygg 2026" })
+        .first(),
     ).toBeVisible();
   });
 });
 
-describeAuth("Newsletter", () => {
+test.describe("Newsletter", () => {
   test("23-24: anonymous signup shows success; reload returns to blank form (RLS-invisible)", async ({
     page,
   }) => {
@@ -425,7 +419,9 @@ describeAuth("Newsletter", () => {
     );
 
     const anonEmail = `smoke-anon+${Date.now()}@example.com`;
-    await page.locator('input[autocomplete="email"]').fill(anonEmail);
+    await page
+      .locator('.newsletter-form input[autocomplete="email"]')
+      .fill(anonEmail);
     await page
       .locator(".auth-form__submit", { hasText: "Sign up for updates" })
       .click();

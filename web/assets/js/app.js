@@ -785,29 +785,36 @@ document.addEventListener("alpine:init", () => {
         event_id: eid,
         preferences: prefs,
       };
+      // Anonymous inserts can't chain `.select()`: the SELECT RLS policy
+      // on newsletter_subscriptions requires `auth.uid() = user_id`, and
+      // RETURNING the just-inserted row under that policy raises a
+      // 42501 RLS violation. Omit the representation for anon and
+      // synthesize the UI record from the submitted payload.
+      if (!userId) {
+        const { error } = await db
+          .from("newsletter_subscriptions")
+          .insert(row);
+        if (error) throw new Error(error.message);
+        return {
+          id: null,
+          user_id: null,
+          email: cleanEmail,
+          event_id: eid,
+          preferences: prefs,
+        };
+      }
       const { data, error } = await db
         .from("newsletter_subscriptions")
         .insert(row)
         .select("*")
-        .maybeSingle();
+        .single();
       if (error) throw new Error(error.message);
-      if (data) {
-        const normalized = {
-          ...data,
-          preferences: normalizeNewsletterPreferences(data.preferences),
-        };
-        this.subscriptions.push(normalized);
-        return normalized;
-      }
-      // Anonymous insert: RLS blocks the post-insert SELECT so data is
-      // null. Return the submitted row for UI success state.
-      return {
-        id: null,
-        user_id: null,
-        email: cleanEmail,
-        event_id: eid,
-        preferences: prefs,
+      const normalized = {
+        ...data,
+        preferences: normalizeNewsletterPreferences(data.preferences),
       };
+      this.subscriptions.push(normalized);
+      return normalized;
     },
 
     async updatePreferences(id, preferencesPatch) {
