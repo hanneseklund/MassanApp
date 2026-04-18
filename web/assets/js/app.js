@@ -23,8 +23,8 @@ const EVENT_SUBVIEWS = [
 ];
 
 // Simulated ticket-type catalog keyed by event.ticket_model. Kept in
-// the frontend so the same catalog applies whether the event was
-// loaded from catalog.json or Supabase.
+// the frontend so the catalog stays stable regardless of how the
+// event was loaded.
 const TICKET_TYPES = {
   public_ticket: [
     {
@@ -408,8 +408,6 @@ document.addEventListener("alpine:init", () => {
     eventSubview: "home",
     exhibitorId: null,
     isSimulated: true,
-    toast: "",
-    _toastTimer: null,
     // Where to go after an auth flow completes. Stored as a route-like
     // object so that deep targets (e.g. the purchase flow for a given
     // event) can be resumed after sign-in.
@@ -527,12 +525,6 @@ document.addEventListener("alpine:init", () => {
         return ev ? ev.name : "Event";
       }
       return "MassanApp";
-    },
-
-    notImplemented(label) {
-      this.toast = `${label} is coming in a later task`;
-      clearTimeout(this._toastTimer);
-      this._toastTimer = setTimeout(() => (this.toast = ""), 2400);
     },
   });
 

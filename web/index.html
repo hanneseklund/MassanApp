@@ -727,7 +727,7 @@
             <button
               type="button"
               class="auth-form__submit"
-              @click="$store.app.goAuth('me')"
+              @click="$store.app.goAuth({ view: 'me' })"
             >
               Sign in or register
             </button>
@@ -997,10 +997,5 @@
         </template>
       </section>
     </main>
-
-    <!-- Lightweight toast for "not yet implemented" actions in the scaffold. -->
-    <div class="toast" x-show="$store.app.toast" x-transition>
-      <span x-text="$store.app.toast"></span>
-    </div>
   </body>
 </html>

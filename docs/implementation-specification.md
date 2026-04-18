@@ -80,8 +80,7 @@ prototype.
 Alpine.js stores and components own the following state:
 
 - `app`: current view, selected event, selected event subview, selected
-  exhibitor, simulated-mode flag, post-auth return target, and a
-  transient toast.
+  exhibitor, simulated-mode flag, and post-auth return target.
 - `session`: current authenticated user record, including the
   `auth_provider` and `simulated` flag for the social-sign-in stub.
 - `catalog`: venue, events, news, articles, program items, exhibitors,

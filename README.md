@@ -57,6 +57,15 @@ proposed as a specification change before it is implemented.
 
 ## Status
 
-The project is in early scaffolding. Agent-driven tasks live under
-`agent/tasks/`, with completed tasks moved to `agent/tasks_completed/` and
-tasks waiting on user input moved to `agent/tasks_blocked/`.
+The end-to-end prototype flow in
+[docs/functional-specification.md](docs/functional-specification.md) is
+implemented: calendar with filtering, event mini-homepages (news,
+articles, program, exhibitors, practical info, newsletter), simulated
+email/social sign-in, simulated ticket purchase, and My Tickets. The
+catalog is served from the shared Supabase project; authentication,
+tickets, and newsletter signup remain in `localStorage` until Supabase
+Auth is wired in.
+
+Agent-driven tasks live under `agent/tasks/`, with completed tasks
+moved to `agent/tasks_completed/` and tasks waiting on user input
+moved to `agent/tasks_blocked/`.

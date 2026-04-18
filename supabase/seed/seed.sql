@@ -62,7 +62,7 @@ insert into public.venues (
     jsonb_build_object(
       'id', 'stockholmsmassan-overview',
       'name', 'Venue overview',
-      'description', 'High-level map showing entrances, halls, foyers, and conference rooms. Rendered inline in the prototype as a placeholder graphic.'
+      'description', 'High-level map of entrances, halls, foyers, and conference rooms. The prototype lists available maps without rendering them.'
     )
   )
 )

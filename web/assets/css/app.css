@@ -966,20 +966,6 @@ body {
   min-height: 44px;
 }
 
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
-  background: var(--ink);
-  color: #ffffff;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  z-index: 30;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
-}
-
 /* Event hero: the ticket CTA area can host one or two buttons when a
    visitor already owns a ticket for the event. */
 .event-hero__actions {
