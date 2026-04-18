@@ -186,6 +186,15 @@ body {
   min-height: 44px;
 }
 
+.events__image {
+  width: calc(100% + 32px);
+  margin: -14px -16px 10px -16px;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  display: block;
+  background: var(--surface-muted, #eee);
+}
+
 .events__type {
   font-size: 12px;
   text-transform: uppercase;
@@ -221,6 +230,27 @@ body {
   margin-bottom: 12px;
   display: grid;
   gap: 6px;
+  overflow: hidden;
+}
+
+.event-hero__image-wrap {
+  margin: -16px -16px 10px -16px;
+  display: block;
+}
+
+.event-hero__image {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  display: block;
+  background: var(--surface-muted, #eee);
+}
+
+.event-hero__image-credit {
+  font-size: 11px;
+  color: var(--ink-muted);
+  padding: 4px 16px 0 16px;
+  margin: 0;
 }
 
 .event-hero__type {

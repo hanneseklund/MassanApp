@@ -128,6 +128,15 @@
                 class="events__link"
                 @click="$store.app.selectEvent(event.id)"
               >
+                <template x-if="event.branding?.hero_image">
+                  <img
+                    class="events__image"
+                    :src="event.branding.hero_image"
+                    :alt="event.name + ' hero image'"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </template>
                 <span class="events__type" x-text="event.type"></span>
                 <span class="events__name" x-text="event.name"></span>
                 <span class="events__dates" x-text="formatDates(event)"></span>
@@ -147,6 +156,22 @@
         <template x-if="event()">
           <div>
             <header class="event-hero">
+              <template x-if="event().branding?.hero_image">
+                <figure class="event-hero__image-wrap">
+                  <img
+                    class="event-hero__image"
+                    :src="event().branding.hero_image"
+                    :alt="event().name + ' hero image'"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption
+                    class="event-hero__image-credit"
+                    x-show="event().branding?.hero_image_credit"
+                    x-text="'Image: ' + event().branding.hero_image_credit"
+                  ></figcaption>
+                </figure>
+              </template>
               <p class="event-hero__type" x-text="event().type"></p>
               <h2 class="event-hero__name" x-text="event().name"></h2>
               <p class="event-hero__dates" x-text="formatDates(event())"></p>

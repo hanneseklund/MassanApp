@@ -38,6 +38,7 @@ The prototype aims for a shallow, readable layout:
     assets/
       css/              stylesheets
       env.js            committed Supabase URL + anon key
+      images/           static images (event hero images live under events/)
       js/               ES modules (see "Frontend app structure" below)
     data/               reference copy of the seed shape (not loaded at runtime)
   supabase/             Supabase migrations and seed scripts
@@ -254,7 +255,9 @@ Exactly one venue record is expected in the prototype.
 - `ticket_model` (`public_ticket`, `registration`, `none`)
 - `summary`
 - `venue_id` (FK to Venue)
-- `branding` (optional colors/logo)
+- `branding` (optional colors/logo; also carries `hero_image` as a
+  relative path into `web/assets/images/events/` and `hero_image_credit`
+  for attribution of scraped event imagery)
 - `overrides` (JSON of event-specific practical-info overrides)
 
 ### News item

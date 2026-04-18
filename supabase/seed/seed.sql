@@ -11,6 +11,11 @@
 -- docs/research-stockholmsmassan-and-venue-apps.md). Per-event news,
 -- articles, program items, exhibitors, and speakers below are clearly
 -- simulated content scoped to this prototype.
+--
+-- Event hero images (branding.hero_image) reference files committed at
+-- web/assets/images/events/ that were downloaded from the public
+-- Stockholmsmassan calendar event pages on 2026-04-18 and are used here
+-- with attribution (branding.hero_image_credit).
 
 begin;
 
@@ -85,7 +90,11 @@ insert into public.events (
     'Trade fair', 'Construction and real estate', 'public', 'public_ticket',
     date '2026-04-21', date '2026-04-24',
     'Nordbygg is the leading Nordic meeting place for the construction and real-estate industry, with exhibitors, seminars, and industry news across four days at Stockholmsmassan.',
-    jsonb_build_object('primary_color', '#0b3d91', 'accent_color', '#f4b400', 'logo', null),
+    jsonb_build_object(
+      'primary_color', '#0b3d91', 'accent_color', '#f4b400', 'logo', null,
+      'hero_image', 'assets/images/events/nordbygg-2026.jpg',
+      'hero_image_credit', 'Stockholmsmassan'
+    ),
     jsonb_build_object(
       'entrance', 'Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.',
       'bag_rules', 'Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.',
@@ -97,7 +106,11 @@ insert into public.events (
     'Congress', 'Health & Medicine', 'professional', 'registration',
     date '2026-05-15', date '2026-05-19',
     'ESTRO 2026 is the European Society for Radiotherapy and Oncology annual congress, covering clinical practice, physics, radiobiology, and technology across a multi-track program.',
-    jsonb_build_object('primary_color', '#123f66', 'accent_color', '#ce3f4a', 'logo', null),
+    jsonb_build_object(
+      'primary_color', '#123f66', 'accent_color', '#ce3f4a', 'logo', null,
+      'hero_image', 'assets/images/events/estro-2026.webp',
+      'hero_image_credit', 'Stockholmsmassan'
+    ),
     jsonb_build_object(
       'entrance', 'Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.',
       'bag_rules', 'Standard venue bag rules apply; congress materials are distributed at the registration desk.',
@@ -109,7 +122,11 @@ insert into public.events (
     'Congress', 'Health & Medicine', 'professional', 'registration',
     date '2026-06-11', date '2026-06-14',
     'The European Hematology Association annual congress brings clinicians and researchers together for plenaries, symposia, abstract presentations, and an industry exhibition.',
-    jsonb_build_object('primary_color', '#8a1f57', 'accent_color', '#f5b233', 'logo', null),
+    jsonb_build_object(
+      'primary_color', '#8a1f57', 'accent_color', '#f5b233', 'logo', null,
+      'hero_image', 'assets/images/events/eha-2026.jpg',
+      'hero_image_credit', 'Stockholmsmassan'
+    ),
     jsonb_build_object(
       'entrance', 'EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.',
       'bag_rules', 'Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom.',

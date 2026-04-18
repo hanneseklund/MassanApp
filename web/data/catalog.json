@@ -1,5 +1,6 @@
 {
   "_note": "Seed data for the MassanApp prototype. Venue facts come from the Stockholmsmassan research note. Event dates, types, and categories reflect the official Stockholmsmassan calendar on 2026-04-17. Per-event news, articles, program items, exhibitors, and speakers are clearly simulated content scoped to this prototype; production use would pull from the event's own sources.",
+  "_image_credits": "Event hero images stored in web/assets/images/events/ were downloaded from the Stockholmsmassan calendar event pages (https://stockholmsmassan.se/en/calendar/) on 2026-04-18 and are used here as prototype content with attribution to Stockholmsmassan.",
   "venue": {
     "id": "stockholmsmassan",
     "name": "Stockholmsmassan",
@@ -96,7 +97,9 @@
       "branding": {
         "primary_color": "#0b3d91",
         "accent_color": "#f4b400",
-        "logo": null
+        "logo": null,
+        "hero_image": "assets/images/events/nordbygg-2026.jpg",
+        "hero_image_credit": "Stockholmsmassan"
       },
       "overrides": {
         "entrance": "Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.",
@@ -119,7 +122,9 @@
       "branding": {
         "primary_color": "#123f66",
         "accent_color": "#ce3f4a",
-        "logo": null
+        "logo": null,
+        "hero_image": "assets/images/events/estro-2026.webp",
+        "hero_image_credit": "Stockholmsmassan"
       },
       "overrides": {
         "entrance": "Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.",
@@ -142,7 +147,9 @@
       "branding": {
         "primary_color": "#8a1f57",
         "accent_color": "#f5b233",
-        "logo": null
+        "logo": null,
+        "hero_image": "assets/images/events/eha-2026.jpg",
+        "hero_image_credit": "Stockholmsmassan"
       },
       "overrides": {
         "entrance": "EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.",

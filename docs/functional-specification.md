@@ -92,11 +92,16 @@ The prototype must support this end-to-end path without gaps:
   (Conference, Congress, Event, Public fair, Trade fair), month, and
   free-text search.
 - Each event card shows the event name, dates, type, and a short summary.
+- When the event has a hero image, the card shows it above the text.
+  Cards without an image fall back to the text-only layout.
 - Tapping an event opens that event's home screen.
 
 ### Event home
 
 - Identifies the selected event at the top of the screen.
+- Displays the event's hero image above the title when one is available,
+  with a small image credit below it. Events without an image degrade to
+  text-only without an empty frame.
 - Summarizes what the event is and when it runs.
 - Surfaces the core event sections: News, Articles, Program, Exhibitor
   index, Practical information, Newsletter.
