@@ -13,9 +13,12 @@ in this document.
   for the prototype.
 - Hosting: Cloudflare Pages. The site is deployable as static assets.
 - Backend: Supabase project hosting Postgres, Auth, and optional Storage.
-  Supabase Auth handles email-based authentication. Social sign-in for
-  Google and Microsoft is simulated in the prototype but is structured so
-  that real Supabase OAuth providers can replace it later.
+  Supabase Auth is the target for email-based authentication; the
+  prototype currently uses a lightweight `localStorage` fallback and will
+  migrate to Supabase Auth in a later task (see the "User" entity under
+  Data model for the current state). Social sign-in for Google and
+  Microsoft is simulated in the prototype but is structured so that real
+  Supabase OAuth providers can replace it later.
 - Data access: Supabase JavaScript client from the frontend. No custom
   backend service is introduced in the prototype.
 - Icons and fonts: open web assets only. No paid SDKs.
@@ -246,7 +249,10 @@ Exactly one venue record is expected in the prototype.
 
 ## Supabase usage
 
-- Use Supabase Auth for email sign-up, sign-in, and session management.
+- Target: Supabase Auth handles email sign-up, sign-in, and session
+  management. The prototype currently stubs this in `localStorage` (see
+  "User" under Data model) and migrates to Supabase Auth in a later
+  task.
 - Tables mirror the data model above. Use Row Level Security so users can
   only read their own tickets and newsletter subscriptions, but can read
   shared venue and event content without authentication.
