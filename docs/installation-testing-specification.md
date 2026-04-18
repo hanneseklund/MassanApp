@@ -280,12 +280,13 @@ section above for the caveats.
 
 ### Language toggle
 
-29. From any view, tap the compact language toggle in the top chrome
-    (it shows `SV` when English is active and `EN` when Swedish is
-    active). Assert: the chrome title, primary nav labels, and hint
+29. From any view, tap the flag icon in the top chrome for the other
+    language (UK flag for English, Swedish flag for Swedish — the
+    active language's flag is fully opaque, the inactive one is
+    dimmed). Assert: the chrome title, primary nav labels, and hint
     copy switch language. Reload the page. Assert: the choice is
     preserved.
-30. Tap the toggle again to return to English. Assert: the chrome
+30. Tap the English (UK) flag to return to English. Assert: the chrome
     re-renders in English without requiring a reload. Event content
     (event names, summaries, news, articles, exhibitor copy,
     practical-info venue copy) stays in the language it was seeded in

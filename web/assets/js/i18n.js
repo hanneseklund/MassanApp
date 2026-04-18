@@ -28,7 +28,6 @@ const TRANSLATIONS = {
     "sim.chip": "simulated",
 
     "chrome.events": "Events",
-    "chrome.me": "Me",
     "chrome.lang_aria": "Language",
     "chrome.back_events_aria": "Back to events",
     "chrome.me_aria": "My Pages",
@@ -197,7 +196,6 @@ const TRANSLATIONS = {
     "sim.chip": "simulerad",
 
     "chrome.events": "Evenemang",
-    "chrome.me": "Jag",
     "chrome.lang_aria": "Språk",
     "chrome.back_events_aria": "Tillbaka till evenemang",
     "chrome.me_aria": "Mina sidor",

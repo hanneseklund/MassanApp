@@ -564,12 +564,15 @@ test.describe("Language toggle", () => {
     // English and "Evenemang" in Swedish.
     await gotoHome(page);
     await expect(page.locator(".chrome__title")).toHaveText("Events");
-    const toggle = page.locator(".chrome__lang");
-    await expect(toggle).toHaveText("SV");
+    const enButton = page.locator('.chrome__lang[data-lang="en"]');
+    const svButton = page.locator('.chrome__lang[data-lang="sv"]');
+    await expect(enButton).toHaveAttribute("aria-pressed", "true");
+    await expect(svButton).toHaveAttribute("aria-pressed", "false");
 
-    await toggle.click();
+    await svButton.click();
     await expect(page.locator(".chrome__title")).toHaveText("Evenemang");
-    await expect(toggle).toHaveText("EN");
+    await expect(svButton).toHaveAttribute("aria-pressed", "true");
+    await expect(enButton).toHaveAttribute("aria-pressed", "false");
     // Calendar placeholder copy should also swap.
     await expect(
       page.locator('input[type="search"]').first(),
@@ -578,12 +581,16 @@ test.describe("Language toggle", () => {
     // Persistence across reload.
     await page.reload();
     await expect(page.locator(".chrome__title")).toHaveText("Evenemang");
-    await expect(page.locator(".chrome__lang")).toHaveText("EN");
+    await expect(
+      page.locator('.chrome__lang[data-lang="sv"]'),
+    ).toHaveAttribute("aria-pressed", "true");
 
     // Toggle back to English and confirm it re-renders live.
-    await page.locator(".chrome__lang").click();
+    await page.locator('.chrome__lang[data-lang="en"]').click();
     await expect(page.locator(".chrome__title")).toHaveText("Events");
-    await expect(page.locator(".chrome__lang")).toHaveText("SV");
+    await expect(
+      page.locator('.chrome__lang[data-lang="en"]'),
+    ).toHaveAttribute("aria-pressed", "true");
 
     // Event content stays in its seeded language regardless of toggle
     // (see docs/functional-specification.md, "Accessibility and
@@ -598,7 +605,7 @@ test.describe("Language toggle", () => {
       .textContent();
     expect(seededSummary).toMatch(/Nordbygg is the leading Nordic/);
 
-    await page.locator(".chrome__lang").click();
+    await page.locator('.chrome__lang[data-lang="sv"]').click();
     await expect(
       page.locator(".event-nav__tab", { hasText: "Nyheter" }).first(),
     ).toBeVisible();
@@ -611,6 +618,6 @@ test.describe("Language toggle", () => {
     await expect(page.locator(".practical")).toContainText("Alvsjo station");
 
     // Restore English for later independent runs.
-    await page.locator(".chrome__lang").click();
+    await page.locator('.chrome__lang[data-lang="en"]').click();
   });
 });

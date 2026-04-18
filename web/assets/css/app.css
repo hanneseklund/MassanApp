@@ -162,14 +162,44 @@ a {
   justify-self: end;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .chrome__lang {
-  font-size: 13px;
-  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 6px;
-  min-width: 32px;
+  min-width: 36px;
+  opacity: 0.5;
+  transition: opacity 120ms ease;
+}
+
+.chrome__lang--active {
+  opacity: 1;
+}
+
+.chrome__flag {
+  width: 22px;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.chrome__me {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  margin-left: 4px;
+}
+
+.chrome__me-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: currentColor;
 }
 
 .view {
