@@ -35,7 +35,10 @@ The prototype aims for a shallow, readable layout:
   docs/                 specifications and research
   web/                  static frontend (Cloudflare Pages root)
     index.html          app shell
-    assets/             css, js, images
+    assets/
+      css/              stylesheets
+      env.js            committed Supabase URL + anon key
+      js/               ES modules (see "Frontend app structure" below)
     data/               reference copy of the seed shape (not loaded at runtime)
   supabase/             Supabase migrations and seed scripts
     migrations/
@@ -76,6 +79,72 @@ View switching is handled in Alpine.js state. The prototype may also use
 hash-based routing (for example `#/event/nordbygg-2026/program`) to make
 views linkable, but stateful client-side routing is sufficient for the
 prototype.
+
+### Frontend app structure
+
+The frontend is buildless: `web/` is served directly and no bundler,
+transpiler, or package step runs over the JavaScript. Browser-native
+ES modules carry the split. `web/index.html` loads the entrypoint with
+`<script type="module" src="assets/js/app.js">`.
+
+One view per file is normative. `web/assets/js/app.js` is a thin
+module that imports every store factory, every view factory, and the
+simulation helpers they need, and registers them on the
+`alpine:init` event. Each Alpine view (and each Alpine store) lives in
+its own file so a reviewer can open the single file that backs a given
+template. The layout is:
+
+```
+web/assets/js/
+  app.js                       entrypoint; registers stores and view
+                               factories on alpine:init
+  supabase.js                  singleton Supabase JS client
+  util/
+    dates.js                   formatDates, formatShortDate,
+                               formatDayHeading, monthLabel, uniqueSorted
+    sections.js                SECTION_LABELS, ticketCtaLabel,
+                               ticketTypesFor, TICKET_TYPES
+  simulations/
+    qr.js                      ticketQrPayload, ticketQrSvgFor +
+                               internal hash / matrix helpers
+    payment.js                 simulatedPayment
+    email.js                   simulatedEmail
+  newsletter/
+    preferences.js             default/normalize preferences,
+                               NEWSLETTER_PREF_KEYS, NEWSLETTER_TOPICS
+  stores/
+    app.js                     Alpine.store("app", ...) (navigation,
+                               hash routing, post-auth return target)
+    session.js                 Alpine.store("session", ...) (Supabase
+                               Auth mapping)
+    catalog.js                 Alpine.store("catalog", ...) (venue,
+                               events, news, articles, program,
+                               exhibitors, speakers)
+    tickets.js                 Alpine.store("tickets", ...)
+    newsletter.js              Alpine.store("newsletter", ...)
+    filters.js                 Alpine.store("filters", ...) (calendar
+                               free-text, type, category, month)
+  views/
+    calendar.js                calendarView()
+    event.js                   eventView()
+    auth.js                    authView()
+    me.js                      meView()
+    purchase.js                purchaseView()
+    my-tickets.js              myTicketsView()
+    newsletter-signup.js       newsletterSignup()
+    newsletter-preferences.js  newsletterPreferences()
+```
+
+The view factory names (`calendarView`, `eventView`, `authView`,
+`meView`, `purchaseView`, `myTicketsView`, `newsletterSignup`,
+`newsletterPreferences`) are exposed on `window` inside the
+`alpine:init` handler so the `x-data="<factory>()"` bindings in
+`index.html` continue to resolve. Stores keep their existing ids
+(`app`, `session`, `catalog`, `tickets`, `newsletter`, `filters`).
+
+When adding a new view or store, place it in its own module under
+`views/` or `stores/` and import it from `app.js`. Do not inline new
+view or store definitions into `app.js` or into another view's file.
 
 ### State management
 
@@ -130,8 +199,12 @@ instead of silently falling back to stale data.
 
 ### Alpine.js usage rules
 
-- Keep Alpine.js templates small and focused. One view per file or
-  section.
+- One view per file. Every Alpine view component (`calendarView`,
+  `eventView`, `authView`, `meView`, `purchaseView`, `myTicketsView`,
+  `newsletterSignup`, `newsletterPreferences`, and any future
+  component) lives in its own module under `web/assets/js/views/`, and
+  every Alpine store lives in its own module under
+  `web/assets/js/stores/`. See "Frontend app structure" above.
 - Use Alpine `$store` for cross-view state (session, cart, selected
   event).
 - Derived values go in Alpine `x-data` getters, not duplicated in the

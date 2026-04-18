@@ -12,10 +12,12 @@
     <script src="assets/env.js"></script>
     <script src="assets/env.local.js" onerror="void 0"></script>
     <script src="https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
-    <!-- app.js registers Alpine stores via alpine:init and must run
-         before the Alpine CDN build, which calls Alpine.start() via a
-         microtask at the end of its own execution. -->
-    <script src="assets/js/app.js" defer></script>
+    <!-- app.js is an ES module entrypoint that imports every Alpine
+         store and view factory and registers them on alpine:init. It
+         must be parsed before the Alpine CDN build, which dispatches
+         alpine:init via a microtask at the end of its own execution.
+         Module scripts are deferred by default. -->
+    <script type="module" src="assets/js/app.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"></script>
   </head>
   <body x-data x-cloak>
