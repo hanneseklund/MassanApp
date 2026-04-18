@@ -291,9 +291,12 @@ npx playwright install chromium  # once, to fetch the browser binary
 npm run smoke
 ```
 
-`npm run smoke` launches http-server on `http://127.0.0.1:8080/`
+`npm run smoke` launches http-server on `http://127.0.0.1:8787/`
 serving `web/`, runs the suite, and shuts the server down when done.
-To run against a different URL (for example the hosted preview) pass
+Port 8787 is used to avoid the 8080 / 8081 ports that the manual
+instructions above and many local dev tools occupy; override it with
+`PW_PORT=8080 npm run smoke` if needed. To run against a different URL
+(for example the hosted preview) pass
 `PW_BASE_URL=https://agent.massanapp-prototype.pages.dev npm run smoke`.
 
 The suite uses the Playwright "Pixel 7" device profile (Chromium
