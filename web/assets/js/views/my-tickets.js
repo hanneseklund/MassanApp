@@ -9,9 +9,6 @@ export function myTicketsView() {
   return {
     formatDates,
     formatShortDate,
-    signedIn() {
-      return !!Alpine.store("session").user;
-    },
     tickets() {
       const user = Alpine.store("session").user;
       if (!user) return [];

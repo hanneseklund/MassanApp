@@ -125,8 +125,7 @@ web/assets/js/
     dates.js                   formatDates, formatShortDate,
                                formatDayHeading, monthLabel, uniqueSorted
     sections.js                SECTION_LABELS, ticketCtaLabel,
-                               ticketTypesFor, TICKET_TYPES,
-                               canonicalTicketTypeLabel
+                               ticketTypesFor, canonicalTicketTypeLabel
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers

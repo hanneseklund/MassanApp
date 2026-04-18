@@ -1039,7 +1039,7 @@
         x-show="$store.app.view === 'tickets'"
         x-data="myTicketsView()"
       >
-        <template x-if="!signedIn()">
+        <template x-if="!$store.session.isSignedIn">
           <div class="me me--signed-out">
             <p class="placeholder" x-text="$store.lang.t('tickets.signed_out_hint')"></p>
             <button
@@ -1050,7 +1050,7 @@
             ></button>
           </div>
         </template>
-        <template x-if="signedIn()">
+        <template x-if="$store.session.isSignedIn">
           <div class="tickets">
             <p
               class="placeholder"

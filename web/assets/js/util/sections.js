@@ -70,10 +70,9 @@ const TICKET_TYPE_ENTRIES = {
   ],
 };
 
-// Kept for back-compat with anything that still imports `TICKET_TYPES`
-// directly. The `label` / `description` getters resolve against the
-// active UI language on access.
-export const TICKET_TYPES = Object.fromEntries(
+// The `label` / `description` getters resolve against the active UI
+// language on access so switching language re-renders bound templates.
+const TICKET_TYPES = Object.fromEntries(
   Object.entries(TICKET_TYPE_ENTRIES).map(([model, entries]) => [
     model,
     entries.map((entry) => ({
