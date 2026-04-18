@@ -92,11 +92,30 @@
           </div>
         </div>
 
-        <p class="hint" x-show="filtered().length === 0">
+        <p
+          class="hint"
+          x-show="$store.catalog.loading"
+          aria-live="polite"
+        >
+          Loading events…
+        </p>
+        <p
+          class="hint hint--error"
+          x-show="!$store.catalog.loading && $store.catalog.error"
+          role="alert"
+          x-text="'Could not load events: ' + $store.catalog.error"
+        ></p>
+        <p
+          class="hint"
+          x-show="!$store.catalog.loading && !$store.catalog.error && filtered().length === 0"
+        >
           No events match the current filters.
         </p>
 
-        <ul class="events">
+        <ul
+          class="events"
+          x-show="!$store.catalog.loading && !$store.catalog.error"
+        >
           <template x-for="event in filtered()" :key="event.id">
             <li class="events__card">
               <button

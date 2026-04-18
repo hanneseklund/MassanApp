@@ -60,8 +60,15 @@ views:
   Newsletter. Hash routes that target an event without a subview
   (for example `#/event/nordbygg-2026`) resolve to `home`.
 - `auth` — registration and sign-in.
-- `me` — logged-in "My Pages", including My Tickets and newsletter
-  preferences.
+- `me` — logged-in "My Pages", with profile basics, a link to My
+  Tickets, and newsletter preferences (including the venue-wide
+  "All Stockholmsmassan events" toggle).
+- `tickets` — the signed-in user's My Tickets wallet. Reached from
+  `me`, from the purchase confirmation screen, and from the
+  "View ticket" affordance on an event home view.
+- `purchase` — three-step simulated ticket purchase scoped to the
+  currently selected event. A visitor who lands here while signed
+  out is routed through `auth` and returned afterwards.
 
 View switching is handled in Alpine.js state. The prototype may also use
 hash-based routing (for example `#/event/nordbygg-2026/program`) to make
@@ -148,6 +155,8 @@ during data loading.
 - `parking` (text or structured object)
 - `restaurants` (list of {name, description})
 - `security` (text or structured object)
+- `sustainability` (text) — ISO 20121 / sustainability-program note,
+  reserved for later surfacing in the practical-info UI
 - `maps` (optional list of venue/hall maps)
 
 Exactly one venue record is expected in the prototype.
@@ -195,6 +204,13 @@ Exactly one venue record is expected in the prototype.
 - `id`, `email`, `display_name`, `auth_provider` (`email`, `google`,
   `microsoft`) — social providers carry a `simulated: true` flag in the
   prototype.
+- In the prototype, user records live in `localStorage` under
+  `massan.users` and include a `password_hash` field for email
+  accounts. The hash is intentionally lightweight and has no real
+  security value; it exists only so sign-in can re-check a password
+  entered at registration. The signed-in session lives under
+  `massan.session` and omits `password_hash`. Supabase Auth will
+  replace both stores when authentication is moved off the client.
 
 ### Ticket
 
@@ -284,8 +300,10 @@ All simulations must be centralized and easy to replace:
 - `simulatedEmail(kind, payload)` — no-op in production prototype
   hosting; in development it logs the would-be email to the console.
   Known `kind` values: `newsletter_confirmation` (sent on newsletter
-  signup). Ticket-confirmation and auth-confirmation kinds are reserved
-  for later tasks.
+  signup, including the venue-wide toggle) and `ticket_confirmation`
+  (sent when a simulated ticket purchase completes). An
+  `auth_confirmation` kind is reserved for when email registration
+  moves off `localStorage`.
 - `generateTicketQr(ticket)` — produces a QR payload string from the
   ticket id and a salted event id, and renders a QR-like SVG matrix
   deterministically derived from that payload. The matrix has the

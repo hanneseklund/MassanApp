@@ -553,6 +553,10 @@ body {
   padding: 24px 0;
 }
 
+.hint--error {
+  color: var(--danger, #b42318);
+}
+
 /* Auth view — register and sign-in. */
 .auth-card {
   display: grid;

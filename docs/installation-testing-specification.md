@@ -147,7 +147,10 @@ section above for the caveats.
 
 ### Calendar and event selection
 
-- Open the app. The calendar shows upcoming events.
+- Open the app. A brief "Loading events…" hint appears while the
+  catalog is fetched from Supabase, then the calendar shows upcoming
+  events. If the Supabase fetch fails, the calendar replaces the list
+  with an error message instead of a silently empty grid.
 - Apply a category filter and a month filter. The list updates.
 - Use free-text search to find `Nordbygg`. The Nordbygg 2026 card
   appears.
@@ -187,6 +190,8 @@ section above for the caveats.
   confirm the attendee details (defaulted from the profile) and review
   the order summary. In step 3 confirm the purchase. A "simulated"
   label is visible at least on the confirmation screen.
+- Confirm that a `ticket_confirmation` entry is logged to the browser
+  console when the purchase completes.
 - Open My Tickets from the confirmation screen and confirm the new
   ticket appears with event name, dates, ticket type, attendee,
   purchase date, and a QR code rendered as SVG.
