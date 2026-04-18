@@ -122,6 +122,12 @@ const TRANSLATIONS = {
     "auth.continue_microsoft": "Continue with Microsoft",
     "auth.generic_error": "Something went wrong.",
     "auth.mode_tablist_aria": "Auth mode",
+    "auth.err_email_required": "Enter an email address.",
+    "auth.err_confirm_email":
+      "Check your email to confirm the account, then sign in.",
+    "auth.err_bad_credentials": "Email or password is incorrect.",
+    "auth.err_simulated_social":
+      "Could not start simulated {provider} sign-in: {reason}",
 
     "me.signed_in_with": "Signed in with",
     "me.my_tickets_link": "My Tickets",
@@ -192,6 +198,7 @@ const TRANSLATIONS = {
 
     "newsletter.venue_wide_event_name": "All Stockholmsmassan events",
     "newsletter.err_signup": "Could not sign up.",
+    "newsletter.err_email_required": "Enter an email address.",
   },
 
   sv: {
@@ -296,6 +303,12 @@ const TRANSLATIONS = {
     "auth.continue_microsoft": "Fortsätt med Microsoft",
     "auth.generic_error": "Något gick fel.",
     "auth.mode_tablist_aria": "Inloggningsläge",
+    "auth.err_email_required": "Ange en e-postadress.",
+    "auth.err_confirm_email":
+      "Kontrollera din e-post för att bekräfta kontot och logga sedan in.",
+    "auth.err_bad_credentials": "E-post eller lösenord är felaktigt.",
+    "auth.err_simulated_social":
+      "Kunde inte starta simulerad inloggning med {provider}: {reason}",
 
     "me.signed_in_with": "Inloggad med",
     "me.my_tickets_link": "Mina biljetter",
@@ -368,6 +381,7 @@ const TRANSLATIONS = {
 
     "newsletter.venue_wide_event_name": "Alla Stockholmsmässan-evenemang",
     "newsletter.err_signup": "Kunde inte prenumerera.",
+    "newsletter.err_email_required": "Ange en e-postadress.",
   },
 };
 
@@ -392,4 +406,14 @@ export function translate(key, lang, params) {
 
 export function dateLocaleFor(lang) {
   return DATE_LOCALES[lang] ?? DATE_LOCALES[DEFAULT_LANGUAGE];
+}
+
+// Translate against the active UI language when Alpine's `lang` store
+// is available, otherwise fall back to the default-language entry.
+// Use this from modules that initialize before Alpine or from error
+// paths in stores that must keep working during the pre-init window.
+export function activeTranslate(key, params) {
+  const store = globalThis.Alpine?.store?.("lang");
+  if (store) return store.t(key, params);
+  return translate(key, DEFAULT_LANGUAGE, params);
 }

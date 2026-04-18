@@ -119,7 +119,8 @@ web/assets/js/
   app.js                       entrypoint; registers stores and view
                                factories on alpine:init
   i18n.js                      UI translation table (en, sv) +
-                               translate(), dateLocaleFor() helpers
+                               translate(), activeTranslate(),
+                               dateLocaleFor() helpers
   supabase.js                  singleton Supabase JS client
   util/
     dates.js                   formatDates, formatShortDate,

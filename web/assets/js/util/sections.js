@@ -9,20 +9,14 @@
 // canonical English copy so the wallet entry does not flip language
 // based on whoever happens to view it later.
 
-import { translate } from "../i18n.js";
+import { activeTranslate, translate, DEFAULT_LANGUAGE } from "../i18n.js";
 
-const FALLBACK_LANG = "en";
-
-function t(key, params) {
-  const store = globalThis.Alpine?.store?.("lang");
-  if (store) return store.t(key, params);
-  return translate(key, FALLBACK_LANG, params);
-}
+const t = activeTranslate;
 
 // English-only lookup for values that persist to the database and
 // therefore must not change with the active UI language.
 function tCanonical(key) {
-  return translate(key, FALLBACK_LANG);
+  return translate(key, DEFAULT_LANGUAGE);
 }
 
 // `label` is a getter so switching language immediately updates every

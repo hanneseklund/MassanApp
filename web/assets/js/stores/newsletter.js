@@ -6,6 +6,7 @@
 
 import { supabaseClient } from "../supabase.js";
 import { normalizeNewsletterPreferences } from "../newsletter/preferences.js";
+import { activeTranslate } from "../i18n.js";
 
 export function newsletterStore() {
   return {
@@ -61,7 +62,9 @@ export function newsletterStore() {
 
     async subscribe({ email, userId, eventId, preferences }) {
       const cleanEmail = String(email || "").trim();
-      if (!cleanEmail) throw new Error("Enter an email address.");
+      if (!cleanEmail) {
+        throw new Error(activeTranslate("newsletter.err_email_required"));
+      }
       const prefs = normalizeNewsletterPreferences(preferences);
       const eid = eventId ?? null;
       if (userId) {

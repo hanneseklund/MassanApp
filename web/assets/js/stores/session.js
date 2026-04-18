@@ -5,6 +5,7 @@
 // reloads, propagates through the UI.
 
 import { supabaseClient } from "../supabase.js";
+import { activeTranslate } from "../i18n.js";
 
 // Map a Supabase auth user into the flat shape the UI consumes. Works
 // for email-backed users and for anonymous users carrying simulated
@@ -59,7 +60,9 @@ export function sessionStore() {
 
     async register({ email, displayName, password }) {
       const trimmedEmail = String(email || "").trim();
-      if (!trimmedEmail) throw new Error("Enter an email address.");
+      if (!trimmedEmail) {
+        throw new Error(activeTranslate("auth.err_email_required"));
+      }
       const db = supabaseClient();
       const { data, error } = await db.auth.signUp({
         email: trimmedEmail,
@@ -74,9 +77,7 @@ export function sessionStore() {
       });
       if (error) throw new Error(error.message);
       if (!data.session) {
-        throw new Error(
-          "Check your email to confirm the account, then sign in.",
-        );
+        throw new Error(activeTranslate("auth.err_confirm_email"));
       }
       return this.user;
     },
@@ -88,7 +89,9 @@ export function sessionStore() {
         email: trimmedEmail,
         password: String(password || ""),
       });
-      if (error) throw new Error("Email or password is incorrect.");
+      if (error) {
+        throw new Error(activeTranslate("auth.err_bad_credentials"));
+      }
       return this.user;
     },
 
@@ -122,7 +125,10 @@ export function sessionStore() {
       });
       if (error) {
         throw new Error(
-          `Could not start simulated ${provider} sign-in: ${error.message}`,
+          activeTranslate("auth.err_simulated_social", {
+            provider,
+            reason: error.message,
+          }),
         );
       }
       return this.user;

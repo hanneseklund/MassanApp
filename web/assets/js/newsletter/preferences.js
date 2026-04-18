@@ -4,16 +4,13 @@
 // `NEWSLETTER_TOPICS` resolves its labels against the active UI
 // language so the topic list translates with the rest of the chrome.
 
+import { activeTranslate } from "../i18n.js";
+
 export const NEWSLETTER_PREF_KEYS = [
   "program_highlights",
   "news",
   "exhibitor_updates",
 ];
-
-function t(key) {
-  const store = globalThis.Alpine?.store?.("lang");
-  return store ? store.t(key) : key;
-}
 
 // Each topic exposes its label via a getter so Alpine bindings that
 // iterate over `topics` re-read the label on every render, which is
@@ -21,7 +18,7 @@ function t(key) {
 export const NEWSLETTER_TOPICS = NEWSLETTER_PREF_KEYS.map((pref) => ({
   key: pref,
   get label() {
-    return t(`newsletter.topic.${pref}`);
+    return activeTranslate(`newsletter.topic.${pref}`);
   },
 }));
 
