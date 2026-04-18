@@ -111,12 +111,15 @@ server. Run it locally instead when you need to test changes that are
 not yet committed, or when you need to point the frontend at a Supabase
 project using a local `env.local.js`.
 
-The hosted build currently runs in the Supabase-less local-seed mode:
-the Pages project has no `SUPABASE_URL` / `SUPABASE_ANON_KEY` wired up,
-so authentication, ticket purchase, and newsletter signup behave the
-same as the simulated mode described above. If Supabase env wiring is
-added to the Pages project later, this section must be updated to
-describe what becomes real versus simulated in the hosted environment.
+The hosted build reads its catalog from the shared Supabase prototype
+project via the committed `web/assets/env.js`, so the events, program,
+exhibitors, news, and articles on the hosted preview come from the
+same database as a local run. Authentication, ticket purchase, and
+newsletter signup remain simulated and live in the browser's
+`localStorage` — see "Known simulated behaviors" below. If any of
+these flows are migrated to Supabase later, this section must be
+updated to describe what becomes real versus simulated in the hosted
+environment.
 
 ## Environment variables
 

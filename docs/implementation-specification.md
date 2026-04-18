@@ -34,7 +34,7 @@ The prototype aims for a shallow, readable layout:
   web/                  static frontend (Cloudflare Pages root)
     index.html          app shell
     assets/             css, js, images
-    data/               optional seed JSON for local dev
+    data/               reference copy of the seed shape (not loaded at runtime)
   supabase/             Supabase migrations and seed scripts
     migrations/
     seed/
@@ -189,9 +189,9 @@ Exactly one venue record is expected in the prototype.
 - `id`, `user_id`, `event_id`, `ticket_type`, `ticket_type_label`,
   `attendee_name`, `attendee_email`, `qr_payload`, `transaction_ref`,
   `purchased_at`
-- Tickets are scoped to the owning `user_id`. In local-seed mode they
-  are persisted to `localStorage` under `massan.tickets` as a single
-  list and filtered by `user_id` in the UI. A Supabase-backed mode will
+- Tickets are scoped to the owning `user_id`. In the prototype they are
+  persisted to `localStorage` under `massan.tickets` as a single list
+  and filtered by `user_id` in the UI. A Supabase-backed mode will
   replace this with a `tickets` table protected by Row Level Security.
 - Available ticket types are derived from the event's `ticket_model`:
   - `public_ticket` events offer `day_pass` ("Day pass") and
@@ -213,9 +213,9 @@ Exactly one venue record is expected in the prototype.
   signups and per (`user_id`, `event_id`) pair for signed-in users.
   `event_id === null` represents the venue-wide "All
   Stockholmsmassan events" subscription.
-- In local-seed mode the subscription list is persisted to
-  `localStorage` under `massan.newsletter`. A Supabase-backed mode will
-  replace this with a `newsletter_subscriptions` table.
+- In the prototype the subscription list is persisted to `localStorage`
+  under `massan.newsletter`. A Supabase-backed mode will replace this
+  with a `newsletter_subscriptions` table.
 
 ## Supabase usage
 
@@ -228,15 +228,18 @@ Exactly one venue record is expected in the prototype.
 - The frontend talks to Supabase directly using the anon key. There is no
   separate API layer in the prototype.
 
-Where Supabase is not configured for local development, the frontend
-falls back to local seed JSON in `web/data/` so the prototype remains
-demoable without credentials.
+Supabase is a hard dependency for catalog loading — see the
+"Catalog loading" section above. There is no runtime JSON fallback.
 
 ### Seed data layout
 
-The prototype ships a single seed file, `web/data/catalog.json`, that
-mirrors the Supabase table structure so the same data shape can be
-consumed with or without Supabase:
+The authoritative seed is `supabase/seed/seed.sql`, applied to the
+shared project via the workflow in `AGENTS.md`. The schema it targets
+is defined in `supabase/migrations/`.
+
+`web/data/catalog.json` is retained in the repository as a reference
+copy of the seed shape so reviewers can inspect the expected data
+without querying Supabase:
 
 ```
 {
@@ -252,13 +255,8 @@ consumed with or without Supabase:
 
 Per-entity `event_id` values match the `id` of the event they belong to.
 The venue is a single object, not a list, because the prototype only
-models Stockholmsmassan.
-
-Supabase migrations live in `supabase/migrations/` and create tables
-that mirror these collections. The matching seed SQL lives in
-`supabase/seed/seed.sql`. The SQL seed and the JSON seed are kept in
-sync by hand: when one is updated the other should be updated in the
-same change.
+models Stockholmsmassan. When `seed.sql` changes, update
+`catalog.json` in the same change so the reference copy stays useful.
 
 ## Simulated integrations
 
@@ -328,10 +326,13 @@ that no real service is being hit.
 ## Deployability
 
 - Cloudflare Pages deploys the `web/` directory as a static site.
-- Supabase is a managed project and is provisioned out-of-band; the
-  repository carries migrations and seed data, not credentials.
-- The prototype must run locally without Supabase using the seed JSON
-  fallback, so that demos and reviews do not block on cloud setup.
+- Supabase is a managed project and is provisioned out-of-band. The
+  repository carries migrations, seed data, and the publishable (anon)
+  key via `web/assets/env.js`; the service-role key is never committed.
+- Running the frontend requires network access to the shared Supabase
+  project for catalog loading. Auth, ticket purchase, and newsletter
+  signup remain simulated in `localStorage` regardless of Supabase
+  state, so those flows are demoable independently.
 
 ## Change control
 
