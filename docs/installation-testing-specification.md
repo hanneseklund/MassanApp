@@ -64,6 +64,12 @@ in `web/assets/env.js` are required; there is no offline fallback.
 3. In DevTools, switch to a mobile device emulation profile (for example
    iPhone 14) to confirm mobile-first behavior.
 
+4. To run the automated smoke suite against the same local server, use
+   `npm install` once and then `npm run smoke` from the repo root. The
+   script starts its own http-server instance and executes the
+   Playwright suite in `tests/playwright/`. See "Automated smoke suite"
+   below for configuration and teardown behavior.
+
 To point a local dev run at a different Supabase project (an escape
 hatch, not the default), create `web/assets/env.local.js` (gitignored)
 that reassigns `window.MASSANAPP_ENV`. Otherwise the Cloudflare Pages
@@ -161,6 +167,11 @@ Before marking a change ready for review, run through this checklist in
 mobile emulation. Each item maps to acceptance criteria in
 `docs/functional-specification.md`.
 
+The checklist is phrased as numbered action/assert steps so it can be
+executed by a human in a browser or by the automated Playwright suite
+in `tests/playwright/smoke.spec.js`. The two must stay in sync; a new
+step here requires a matching assertion in the suite, and vice versa.
+
 The checklist can be run against either a local server (for uncommitted
 changes or Supabase-backed builds) or the hosted preview at
 <https://agent.massanapp-prototype.pages.dev/> for changes that have
@@ -169,84 +180,168 @@ section above for the caveats.
 
 ### Calendar and event selection
 
-- Open the app. A brief "Loading events…" hint appears while the
-  catalog is fetched from Supabase, then the calendar shows upcoming
-  events. If the Supabase fetch fails, the calendar replaces the list
-  with an error message instead of a silently empty grid.
-- Apply a category filter and a month filter. The list updates.
-- Use free-text search to find `Nordbygg`. The Nordbygg 2026 card
-  appears.
-- Tap `Nordbygg 2026`. The app switches into the event home view and the
-  calendar is no longer the active view.
+1. Open the app. Assert: a brief "Loading events…" hint appears and
+   then the calendar shows at least one event card (the Supabase
+   catalog load resolved without error).
+2. Select a type filter such as "Trade fair" and a month filter.
+   Assert: the event list updates and only matching cards remain.
+3. Clear the filters and search for `Nordbygg` in the free-text box.
+   Assert: the `Nordbygg 2026` card appears in the results.
+4. Tap `Nordbygg 2026`. Assert: the chrome title becomes
+   `Nordbygg 2026`, the calendar is no longer visible, and the URL
+   hash becomes `#/event/nordbygg-2026`.
 
 ### Event content
 
-- From `Nordbygg 2026`, open News, Articles, Program, Exhibitor index,
-  an exhibitor detail page, and Practical information in turn.
-- Confirm that practical information shows shared Stockholmsmassan venue
-  facts (transport to Alvsjo, parking, restaurants, security).
-- Confirm the presence of a "Back to events" route from at least one
-  subview and use it to return to the calendar.
+5. From `Nordbygg 2026`, open each of News, Articles, Program,
+   Exhibitors, Practical info, and Newsletter in turn. Assert: each
+   subview either renders content or a documented empty-state
+   placeholder, and the active tab indicator tracks the selection.
+6. From the Exhibitors index, open one exhibitor. Assert: the
+   exhibitor detail view renders and a "Back to exhibitors" button is
+   visible.
+7. Open Practical info. Assert: the shared Stockholmsmassan facts are
+   present — at minimum the word `Alvsjo` appears in transport copy,
+   and "Parking", "Restaurants and cafes", and "Security and entry"
+   sections render.
+8. Use the "Events" back button in the top chrome. Assert: the URL
+   hash returns to `#/` and the calendar is visible again.
 
 ### Congress archetype
 
-- Open at least one congress event (`ESTRO 2026` or `EHA2026 Congress`)
-  from the calendar.
-- Confirm the program and practical information render with seeded
-  data.
+9. From the calendar, open `ESTRO 2026` (or `EHA2026 Congress`).
+   Assert: the event home view loads with the event name in the chrome
+   title and the ticket CTA reads "Register as delegate".
+10. Open Program. Assert: at least one day heading and one session row
+    render.
+11. Open Practical info. Assert: the shared venue facts render for this
+    event too (same transport / parking / restaurants / security
+    sections as Nordbygg).
 
 ### Registration and sign-in
 
-- Register with a fresh `@example.com` email. The app enters a
-  logged-in state immediately (email confirmation is disabled on the
-  shared project). A row appears in `auth.users`.
-- Sign out. Sign back in with the same email and password.
-- Trigger the simulated Google sign-in. Confirm the session is created,
-  the UI indicates the provider is simulated, and a new anonymous row
-  appears in `auth.users` (simulated social sign-in rides on Supabase
-  anonymous auth).
+12. From My Pages (while signed out) choose "Sign in or register" and
+    register with a deterministic `@example.com` email (see "Test
+    account strategy" below). Assert: the session becomes signed-in —
+    My Pages shows the email and a "Sign out" button — without
+    requiring email confirmation. (If the email is already registered
+    from a prior run, sign in instead; both outcomes count as pass.)
+13. Sign out. Assert: the signed-out placeholder returns.
+14. Sign back in with the same email and password. Assert: My Pages
+    again shows the signed-in state.
+15. From the auth view choose "Continue with Google". Assert: the
+    session becomes signed-in, My Pages shows "Signed in with Google"
+    and a `simulated` chip, and the user is distinct from the email
+    user from step 12.
 
 ### Ticket purchase (simulated)
 
-- While signed out, tap "Get tickets" on `Nordbygg 2026`. Confirm the
-  app routes through the auth view and returns to the purchase flow
-  after sign-in.
-- In step 1 pick a ticket type (for example "Day pass"). In step 2
-  confirm the attendee details (defaulted from the profile) and review
-  the order summary. In step 3 confirm the purchase. A "simulated"
-  label is visible at least on the confirmation screen.
-- Confirm that a `ticket_confirmation` entry is logged to the browser
-  console when the purchase completes.
-- Open My Tickets from the confirmation screen and confirm the new
-  ticket appears with event name, dates, ticket type, attendee,
-  purchase date, and a QR code rendered as SVG. A row with the
-  matching `user_id`, `event_id`, and `ticket_type` appears in
-  `public.tickets`.
-- Return to the `Nordbygg 2026` event home view and confirm the CTA
-  now also offers "View ticket".
-- Open `ESTRO 2026`, tap "Register as delegate", complete the flow, and
-  confirm a delegate ticket appears in My Tickets.
-- Reload the page. The Supabase session is restored automatically and
-  the tickets still appear in My Tickets.
+16. While signed out, open `Nordbygg 2026` and tap "Get tickets".
+    Assert: the app navigates to the auth view.
+17. Sign in with the step-12 account. Assert: the app returns to the
+    purchase view (hash `#/event/nordbygg-2026/purchase`).
+18. Step 1: pick "Day pass". Step 2: keep the defaulted attendee name
+    and email, confirm the order summary shows event name, dates, and
+    price. Step 3: confirm. Assert: the confirmation screen shows a
+    `simulated` chip, a transaction reference, and a rendered QR SVG.
+    Assert: a `[simulatedEmail] ticket_confirmation` entry is logged
+    to the browser console.
+19. From the confirmation, open My Tickets. Assert: a ticket for
+    `Nordbygg 2026` appears with ticket type label, attendee name,
+    attendee email, a purchase date, and an SVG QR code.
+20. Return to `Nordbygg 2026`. Assert: the event home now shows both
+    "Get tickets" and "View ticket" CTAs.
+21. Open `ESTRO 2026`, tap "Register as delegate", and complete the
+    flow. Assert: the delegate ticket appears in My Tickets alongside
+    the Nordbygg ticket.
+22. Reload the page. Assert: the session is restored and both tickets
+    still appear in My Tickets.
 
 ### Newsletter
 
-- While signed out, open an event's Newsletter subview and submit the
-  signup form with an email address. The UI shows a success state and
-  a `newsletter_confirmation` entry is logged to the browser console.
-  A row appears in `public.newsletter_subscriptions` with a `null`
-  `user_id` and the submitted email. The anonymous visitor cannot
-  read the row back through RLS; reloading the page returns the form
-  to its blank state rather than to the success state.
-- Sign in. On an event's Newsletter subview sign up. The success state
-  appears, and a row appears with the signed-in user's `user_id`.
-  In My Pages → Newsletter preferences the new subscription appears
-  under the signed-in user.
-- Toggle one of the per-event topic preferences and unsubscribe from
-  one event. Reload the page and confirm both changes persist (they
-  are now reads and updates against Supabase, not `localStorage`).
-- Toggle the venue-wide "All Stockholmsmassan events" subscription on
-  and off and confirm the state persists across reloads.
+23. Sign out. Open `Nordbygg 2026` → Newsletter, submit the form with
+    a fresh `@example.com` address. Assert: the success state renders
+    and a `[simulatedEmail] newsletter_confirmation` entry is logged.
+24. Reload the page and open the same Newsletter subview. Assert: the
+    form returns to its blank state (the anonymous row is not visible
+    through RLS).
+25. Sign in again. Open `Nordbygg 2026` → Newsletter and submit.
+    Assert: the success state renders with the signed-in email
+    prefilled.
+26. Open My Pages → Newsletter preferences. Assert: the Nordbygg
+    subscription is listed.
+27. Toggle one per-event topic off and reload. Assert: the toggle
+    state persists.
+28. Toggle "All Stockholmsmassan events" on and reload. Assert: the
+    venue-wide toggle stays on. Toggle it off and reload. Assert: the
+    toggle stays off.
+
+## Automated smoke suite
+
+The automated counterpart to the checklist lives at
+`tests/playwright/smoke.spec.js` and is driven by Playwright.
+
+### Running it
+
+From the repo root:
+
+```
+npm install      # once, to pull playwright + http-server
+npx playwright install chromium  # once, to fetch the browser binary
+npm run smoke
+```
+
+`npm run smoke` launches http-server on `http://127.0.0.1:8080/`
+serving `web/`, runs the suite, and shuts the server down when done.
+To run against a different URL (for example the hosted preview) pass
+`PW_BASE_URL=https://agent.massanapp-prototype.pages.dev npm run smoke`.
+
+The suite uses the Playwright "Pixel 7" device profile (Chromium
+engine, smartphone viewport). The manual checklist uses iPhone 14 in
+Chrome DevTools; both are Chromium, so behavior matches even if the
+reported user agent differs.
+
+### Test account strategy
+
+Because the shared Supabase project is not reset between runs, the
+suite uses a deterministic email and password per repo checkout:
+
+- Email: `smoke+e2e@example.com`
+- Password: `MassanApp-smoke-2026!`
+
+The first run registers the account; subsequent runs sign in instead
+(`signUp` returns a "User already registered" error, which the suite
+treats as a pass signal and falls back to `signIn`). Simulated Google
+sign-in and anonymous newsletter signups leave additional
+`auth.users` and `public.newsletter_subscriptions` rows behind on every
+run; this is accepted prototype behavior and noisy rows can be cleaned
+up from the Supabase dashboard.
+
+The suite does not truncate any Supabase tables. A cleaner teardown
+would require a service-role key, which this repository does not ship.
+
+### Coverage
+
+Every numbered item in the checklist above maps to at least one
+assertion in the suite. When the checklist changes, update the suite
+in the same pull request.
+
+Steps 1–11 (calendar, event content, congress archetype) run by
+default. Steps 12–28 (auth, ticket purchase, newsletter) require the
+shared Supabase project to have email confirmation disabled and
+anonymous sign-ins enabled, which are Authentication → Providers /
+Sign In toggles in the Supabase dashboard. They also require
+anonymous provider to be on for simulated Google / Microsoft
+sign-in. Because both are currently off, the auth-dependent tests are
+gated behind `SMOKE_AUTH=1` to keep the default `npm run smoke` green
+on the config as it ships. Run them once the dashboard is corrected:
+
+```
+SMOKE_AUTH=1 npm run smoke
+```
+
+The tracking task for flipping the dashboard and removing the gate
+is `agent/tasks/enable-supabase-auth-for-smoke-tests.md`.
 
 ## Regression checks for shared venue data
 

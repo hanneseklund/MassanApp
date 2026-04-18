@@ -66,6 +66,22 @@ purchase, and My Tickets. The catalog, authentication, tickets, and
 newsletter subscriptions are all served from the shared Supabase
 project. Payments and Google / Microsoft sign-in remain simulated.
 
+## Reviewing a change
+
+Review walks through the smoke-test checklist in
+[docs/installation-testing-specification.md](docs/installation-testing-specification.md).
+The automated counterpart of that checklist lives in
+`tests/playwright/smoke.spec.js`. Run it locally with:
+
+```
+npm install
+npx playwright install chromium
+npm run smoke
+```
+
+The frontend in `web/` stays buildless; `package.json` exists only to
+host the smoke-test harness.
+
 Agent-driven tasks live under `agent/tasks/`, with completed tasks
 moved to `agent/tasks_completed/` and tasks waiting on user input
 moved to `agent/tasks_blocked/`.

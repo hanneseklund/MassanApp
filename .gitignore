@@ -5,3 +5,5 @@ node_modules/
 web/assets/env.local.js
 .DS_Store
 *.log
+test-results/
+playwright-report/

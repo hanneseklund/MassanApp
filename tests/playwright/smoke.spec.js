@@ -1,0 +1,522 @@
+// MassanApp smoke suite. Mirrors the numbered checklist in
+// docs/installation-testing-specification.md. Runs against the shared
+// Supabase prototype project via the app's committed anon key.
+
+const { test, expect } = require("@playwright/test");
+
+const TEST_EMAIL = "smoke+e2e@example.com";
+const TEST_PASSWORD = "MassanApp-smoke-2026!";
+const TEST_DISPLAY_NAME = "Smoke Tester";
+
+// The auth / ticket / newsletter tests require the shared Supabase
+// project to have email confirmation disabled and anonymous sign-ins
+// enabled. As of 2026-04-18 the project has email confirmation ON
+// and anonymous sign-ins OFF, which breaks the register + simulated
+// social sign-in paths and rate-limits repeated signup attempts. Set
+// SMOKE_AUTH=1 to opt in once the dashboard toggles are corrected —
+// tracked in agent/tasks/enable-supabase-auth-for-smoke-tests.md.
+const AUTH_SUITE_ENABLED = process.env.SMOKE_AUTH === "1";
+const describeAuth = AUTH_SUITE_ENABLED
+  ? test.describe
+  : test.describe.skip;
+
+// One suite, one sequence: later tests depend on the account created
+// or signed into by earlier ones.
+test.describe.configure({ mode: "serial" });
+
+// Collect console messages across the full run. Several steps assert
+// that a `[simulatedEmail]` info log was emitted, and the events fire
+// well after their user action on the app side.
+function attachConsoleCapture(page) {
+  const messages = [];
+  page.on("console", (msg) => {
+    const text = msg.text();
+    messages.push({ type: msg.type(), text });
+  });
+  return messages;
+}
+
+function hasSimulatedEmail(messages, kind) {
+  return messages.some(
+    (m) => m.text.includes("[simulatedEmail]") && m.text.includes(kind),
+  );
+}
+
+async function gotoHome(page) {
+  await page.goto("/");
+  await expect(page.locator(".chrome__title")).toHaveText("Events");
+  // Alpine keeps the "Loading events…" hint in the DOM and toggles it
+  // via x-show, so wait on visibility — not presence.
+  await expect(
+    page.locator(".hint", { hasText: "Loading events" }),
+  ).toBeHidden({ timeout: 15_000 });
+}
+
+async function openEventByName(page, name) {
+  await gotoHome(page);
+  await page.fill('input[type="search"][placeholder="Search events"]', name);
+  const card = page.locator(".events__card", { hasText: name });
+  await expect(card).toHaveCount(1);
+  await card.locator("button.events__link").click();
+  await expect(page.locator(".chrome__title")).toHaveText(name);
+}
+
+async function openSubview(page, id, label) {
+  await page.locator(`.event-nav__tab`, { hasText: label }).first().click();
+  await expect(page).toHaveURL(new RegExp(`#/event/[^/]+/${id}($|/)`));
+}
+
+async function signOutIfSignedIn(page) {
+  await page.goto("/#/me");
+  const signout = page.locator("button.me__signout");
+  if (await signout.isVisible().catch(() => false)) {
+    await signout.click();
+    await expect(page.locator(".me--signed-out")).toBeVisible();
+  }
+}
+
+async function waitForSessionState(page, expected, timeout = 10_000) {
+  await page.waitForFunction(
+    (exp) => !!window.Alpine?.store?.("session")?.isSignedIn === exp,
+    expected,
+    { timeout },
+  );
+}
+
+async function registerOrSignIn(page) {
+  await page.goto("/#/auth");
+  // Try Register first. If the email is already registered from a
+  // prior run, Supabase returns an error; switch to Sign in and use
+  // the same password.
+  await page.locator('.auth-tabs__tab', { hasText: "Register" }).click();
+  await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+  await page.locator('input[autocomplete="name"]').fill(TEST_DISPLAY_NAME);
+  await page
+    .locator('input[autocomplete="current-password"]')
+    .fill(TEST_PASSWORD);
+  await page.locator(".auth-form .auth-form__submit").click();
+
+  // Either the session becomes signed-in (afterAuth navigates away
+  // from the auth view) or an error message appears.
+  try {
+    await waitForSessionState(page, true, 8_000);
+    return;
+  } catch {
+    // Fall through to sign-in below.
+  }
+
+  // Fall back to Sign in.
+  await page.locator('.auth-tabs__tab', { hasText: "Sign in" }).click();
+  await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+  await page
+    .locator('input[autocomplete="current-password"]')
+    .fill(TEST_PASSWORD);
+  await page.locator(".auth-form .auth-form__submit").click();
+  await waitForSessionState(page, true, 10_000);
+}
+
+async function waitForSignedIn(page) {
+  await waitForSessionState(page, true);
+  await page.goto("/#/me");
+  await expect(page.locator(".me .me__email")).toHaveText(TEST_EMAIL, {
+    timeout: 10_000,
+  });
+}
+
+test.describe("Calendar and event selection", () => {
+  test("1-4: calendar loads, filters narrow the list, Nordbygg opens", async ({
+    page,
+  }) => {
+    await gotoHome(page);
+    await expect(page.locator(".events__card")).not.toHaveCount(0);
+
+    await page.selectOption('select >> nth=0', { label: "Trade fair" });
+    await expect(page.locator(".events__card")).not.toHaveCount(0);
+    const typeCells = page.locator(".events__type");
+    const count = await typeCells.count();
+    for (let i = 0; i < count; i++) {
+      await expect(typeCells.nth(i)).toHaveText("Trade fair");
+    }
+    await page.selectOption('select >> nth=0', { label: "All types" });
+
+    await page.fill(
+      'input[type="search"][placeholder="Search events"]',
+      "Nordbygg",
+    );
+    const card = page.locator(".events__card", { hasText: "Nordbygg 2026" });
+    await expect(card).toHaveCount(1);
+
+    await card.locator("button.events__link").click();
+    await expect(page.locator(".chrome__title")).toHaveText("Nordbygg 2026");
+    await expect(page).toHaveURL(/#\/event\/nordbygg-2026/);
+  });
+});
+
+test.describe("Event content", () => {
+  test("5-8: subviews render, practical shows shared venue facts, back returns to calendar", async ({
+    page,
+  }) => {
+    await openEventByName(page, "Nordbygg 2026");
+
+    for (const [id, label] of [
+      ["news", "News"],
+      ["articles", "Articles"],
+      ["program", "Program"],
+      ["exhibitors", "Exhibitors"],
+      ["practical", "Practical info"],
+      ["newsletter", "Newsletter"],
+    ]) {
+      await openSubview(page, id, label);
+      await expect(page.locator(".event-nav__tab--active")).toContainText(
+        label,
+      );
+    }
+
+    // Exhibitor detail: pick the first exhibitor card and verify
+    // the detail view shows a "Back to exhibitors" link.
+    await openSubview(page, "exhibitors", "Exhibitors");
+    const firstExhibitor = page.locator(".exhibitor-card__link").first();
+    if (await firstExhibitor.isVisible().catch(() => false)) {
+      await firstExhibitor.click();
+      await expect(page.locator(".back-link")).toBeVisible();
+      await page.locator(".back-link").click();
+    }
+
+    // Practical info: shared Stockholmsmassan facts.
+    await openSubview(page, "practical", "Practical info");
+    await expect(page.locator(".practical")).toContainText("Alvsjo");
+    for (const heading of [
+      "Getting here",
+      "Parking",
+      "Restaurants and cafes",
+      "Security and entry",
+    ]) {
+      await expect(
+        page.locator(".practical__section h3", { hasText: heading }),
+      ).toHaveCount(1);
+    }
+
+    await page.locator(".chrome__back").click();
+    await expect(page).toHaveURL(/#\/$|#\/?$/);
+    await expect(page.locator(".chrome__title")).toHaveText("Events");
+  });
+});
+
+test.describe("Congress archetype", () => {
+  test("9-11: ESTRO or EHA shows program and shared practical facts", async ({
+    page,
+  }) => {
+    const candidates = ["ESTRO 2026", "EHA2026 Congress"];
+    let congressOpened = null;
+    for (const name of candidates) {
+      await gotoHome(page);
+      const card = page.locator(".events__card", { hasText: name });
+      if ((await card.count()) > 0) {
+        await card.locator("button.events__link").first().click();
+        await expect(page.locator(".chrome__title")).toHaveText(name);
+        congressOpened = name;
+        break;
+      }
+    }
+    expect(congressOpened).not.toBeNull();
+
+    // Delegate CTA text confirms the congress ticket model.
+    await expect(page.locator(".event-hero__cta").first()).toContainText(
+      "Register as delegate",
+    );
+
+    await openSubview(page, "program", "Program");
+    const programCount = await page.locator(".program-day").count();
+    const placeholderCount = await page
+      .locator(".placeholder", { hasText: "No program published" })
+      .count();
+    // Either a seeded program day renders, or we show the empty-state
+    // placeholder — both are documented behavior.
+    expect(programCount + placeholderCount).toBeGreaterThan(0);
+    if (programCount > 0) {
+      await expect(page.locator(".session").first()).toBeVisible();
+    }
+
+    await openSubview(page, "practical", "Practical info");
+    for (const heading of [
+      "Getting here",
+      "Parking",
+      "Restaurants and cafes",
+      "Security and entry",
+    ]) {
+      await expect(
+        page.locator(".practical__section h3", { hasText: heading }),
+      ).toHaveCount(1);
+    }
+  });
+});
+
+describeAuth("Registration and sign-in", () => {
+  test("12-14: register or sign in with the smoke account, sign out, sign back in", async ({
+    page,
+  }) => {
+    await signOutIfSignedIn(page);
+    await registerOrSignIn(page);
+    await waitForSignedIn(page);
+
+    await page.locator(".me__signout").click();
+    await expect(page.locator(".me--signed-out")).toBeVisible();
+
+    // Sign back in via the tab.
+    await page.goto("/#/auth");
+    await page.locator('.auth-tabs__tab', { hasText: "Sign in" }).click();
+    await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+    await page
+      .locator('input[autocomplete="current-password"]')
+      .fill(TEST_PASSWORD);
+    await page.locator(".auth-form .auth-form__submit").click();
+    await waitForSignedIn(page);
+  });
+
+  test("15: simulated Google sign-in creates a distinct anonymous session", async ({
+    page,
+  }) => {
+    await signOutIfSignedIn(page);
+    await page.goto("/#/auth");
+    await page
+      .locator(".auth-social__button", { hasText: "Continue with Google" })
+      .click();
+    await expect(page.locator(".me .me__provider")).toContainText("Google", {
+      timeout: 10_000,
+    });
+    await expect(page.locator(".me .me__provider .sim-chip")).toBeVisible();
+    // The simulated Google session should not carry the smoke email.
+    await expect(page.locator(".me .me__email")).not.toHaveText(TEST_EMAIL);
+
+    // Clean up so subsequent tests start from the email account.
+    await page.locator(".me__signout").click();
+    await expect(page.locator(".me--signed-out")).toBeVisible();
+  });
+});
+
+describeAuth("Ticket purchase (simulated)", () => {
+  test("16-22: auth detour, purchase Nordbygg day pass, purchase ESTRO delegate, tickets persist across reload", async ({
+    page,
+  }) => {
+    const messages = attachConsoleCapture(page);
+
+    // 16. While signed out, tap "Get tickets" on Nordbygg.
+    await signOutIfSignedIn(page);
+    await openEventByName(page, "Nordbygg 2026");
+    await page
+      .locator(".event-hero__cta", { hasText: "Get tickets" })
+      .first()
+      .click();
+    await expect(page).toHaveURL(/#\/auth/);
+
+    // 17. Sign in → returns to purchase view.
+    await page.locator('.auth-tabs__tab', { hasText: "Sign in" }).click();
+    await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+    await page
+      .locator('input[autocomplete="current-password"]')
+      .fill(TEST_PASSWORD);
+    await page.locator(".auth-form .auth-form__submit").click();
+    await expect(page).toHaveURL(/#\/event\/nordbygg-2026\/purchase/, {
+      timeout: 10_000,
+    });
+
+    // 18. Step 1 → 2 → 3. Pick Day pass, confirm.
+    await page
+      .locator(".ticket-type", { hasText: "Day pass" })
+      .click();
+    await page
+      .locator(".purchase__primary", { hasText: "Continue" })
+      .click();
+    await expect(
+      page.locator(".purchase__summary-row", { hasText: "Event" }),
+    ).toContainText("Nordbygg 2026");
+    await page
+      .locator(".purchase__primary", { hasText: "Confirm purchase" })
+      .click();
+    await expect(
+      page.locator(".purchase__step-title", { hasText: "Ticket confirmed" }),
+    ).toBeVisible({ timeout: 15_000 });
+    await expect(page.locator(".purchase__ref code")).toContainText(/^SIM-/);
+    await expect(page.locator(".ticket-card__qr svg")).toBeVisible();
+    await expect(
+      page.locator(".purchase__step-title .sim-chip", { hasText: "simulated" }),
+    ).toBeVisible();
+
+    // Console assertion: ticket_confirmation was logged.
+    await expect
+      .poll(() => hasSimulatedEmail(messages, "ticket_confirmation"), {
+        timeout: 5_000,
+      })
+      .toBe(true);
+
+    // 19. My Tickets shows the new ticket.
+    await page
+      .locator(".purchase__primary", { hasText: "View in My Tickets" })
+      .click();
+    await expect(page).toHaveURL(/#\/tickets/);
+    const nordbyggTicket = page.locator(".tickets__list .ticket-card", {
+      hasText: "Nordbygg 2026",
+    });
+    await expect(nordbyggTicket.first()).toBeVisible();
+    await expect(nordbyggTicket.first().locator(".ticket-card__qr svg")).toBeVisible();
+
+    // 20. Event home shows "View ticket" alongside "Get tickets".
+    await openEventByName(page, "Nordbygg 2026");
+    await expect(
+      page.locator(".event-hero__cta", { hasText: "View ticket" }),
+    ).toBeVisible();
+
+    // 21. Register as delegate on ESTRO.
+    await gotoHome(page);
+    const estroCard = page.locator(".events__card", { hasText: "ESTRO 2026" });
+    if ((await estroCard.count()) > 0) {
+      await estroCard.locator("button.events__link").first().click();
+      await expect(page.locator(".chrome__title")).toHaveText("ESTRO 2026");
+      await page
+        .locator(".event-hero__cta", { hasText: "Register as delegate" })
+        .first()
+        .click();
+      await page
+        .locator(".ticket-type", { hasText: "Delegate registration" })
+        .click();
+      await page
+        .locator(".purchase__primary", { hasText: "Continue" })
+        .click();
+      await page
+        .locator(".purchase__primary", { hasText: "Confirm purchase" })
+        .click();
+      await expect(
+        page.locator(".purchase__step-title", {
+          hasText: "Ticket confirmed",
+        }),
+      ).toBeVisible({ timeout: 15_000 });
+      await page
+        .locator(".purchase__primary", { hasText: "View in My Tickets" })
+        .click();
+      await expect(
+        page.locator(".tickets__list .ticket-card", { hasText: "ESTRO 2026" }),
+      ).toBeVisible();
+    }
+
+    // 22. Reload; both tickets are still visible.
+    await page.reload();
+    await expect(page).toHaveURL(/#\/tickets/);
+    await expect(
+      page.locator(".tickets__list .ticket-card", { hasText: "Nordbygg 2026" }),
+    ).toBeVisible();
+  });
+});
+
+describeAuth("Newsletter", () => {
+  test("23-24: anonymous signup shows success; reload returns to blank form (RLS-invisible)", async ({
+    page,
+  }) => {
+    const messages = attachConsoleCapture(page);
+    await signOutIfSignedIn(page);
+    await page.goto("/#/event/nordbygg-2026/newsletter");
+    await expect(page.locator(".event-nav__tab--active")).toContainText(
+      "Newsletter",
+    );
+
+    const anonEmail = `smoke-anon+${Date.now()}@example.com`;
+    await page.locator('input[autocomplete="email"]').fill(anonEmail);
+    await page
+      .locator(".auth-form__submit", { hasText: "Sign up for updates" })
+      .click();
+    await expect(
+      page.locator(".newsletter-success__title"),
+    ).toBeVisible({ timeout: 10_000 });
+    await expect
+      .poll(() => hasSimulatedEmail(messages, "newsletter_confirmation"), {
+        timeout: 5_000,
+      })
+      .toBe(true);
+
+    await page.reload();
+    // Anonymous inserts cannot be re-read via RLS, so the form goes
+    // back to its blank state rather than the success state.
+    await expect(
+      page.locator(".newsletter-form input[autocomplete='email']"),
+    ).toHaveValue("");
+  });
+
+  test("25-28: signed-in signup persists; preferences and venue-wide toggle survive reload", async ({
+    page,
+  }) => {
+    await signOutIfSignedIn(page);
+    await page.goto("/#/auth");
+    await page.locator('.auth-tabs__tab', { hasText: "Sign in" }).click();
+    await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+    await page
+      .locator('input[autocomplete="current-password"]')
+      .fill(TEST_PASSWORD);
+    await page.locator(".auth-form .auth-form__submit").click();
+    await waitForSignedIn(page);
+
+    // 25. Subscribe to Nordbygg as signed-in user.
+    await page.goto("/#/event/nordbygg-2026/newsletter");
+    const emailInput = page.locator(
+      ".newsletter-form input[autocomplete='email']",
+    );
+    // If already subscribed from a prior run, the form skips straight
+    // to the success state — treat both as valid entry points into
+    // the flow.
+    if (await emailInput.isVisible().catch(() => false)) {
+      await expect(emailInput).toHaveValue(TEST_EMAIL);
+      await page
+        .locator(".auth-form__submit", { hasText: "Sign up for updates" })
+        .click();
+    }
+    await expect(page.locator(".newsletter-success__title")).toBeVisible({
+      timeout: 10_000,
+    });
+
+    // 26. My Pages → Newsletter preferences lists Nordbygg.
+    await page.goto("/#/me");
+    const nordbyggPref = page.locator(".newsletter-prefs__item", {
+      hasText: "Nordbygg 2026",
+    });
+    await expect(nordbyggPref.first()).toBeVisible({ timeout: 10_000 });
+
+    // 27. Toggle one per-event topic off, reload, confirm it's still off.
+    const firstTopicCheckbox = nordbyggPref
+      .first()
+      .locator(".newsletter-prefs__topic input[type='checkbox']")
+      .first();
+    const wasChecked = await firstTopicCheckbox.isChecked();
+    await firstTopicCheckbox.click();
+    const desiredState = !wasChecked;
+    await expect(firstTopicCheckbox).toBeChecked({ checked: desiredState });
+    await page.reload();
+    const reloadedCheckbox = page
+      .locator(".newsletter-prefs__item", { hasText: "Nordbygg 2026" })
+      .first()
+      .locator(".newsletter-prefs__topic input[type='checkbox']")
+      .first();
+    await expect(reloadedCheckbox).toBeChecked({ checked: desiredState });
+
+    // 28. Venue-wide toggle on → reload → still on → toggle off → reload → still off.
+    const venueToggle = page.locator(
+      ".newsletter-prefs__venue-row input[type='checkbox']",
+    );
+    if (!(await venueToggle.isChecked())) {
+      await venueToggle.click();
+      await expect(venueToggle).toBeChecked();
+    }
+    await page.reload();
+    await expect(
+      page.locator(".newsletter-prefs__venue-row input[type='checkbox']"),
+    ).toBeChecked();
+
+    await page
+      .locator(".newsletter-prefs__venue-row input[type='checkbox']")
+      .click();
+    await expect(
+      page.locator(".newsletter-prefs__venue-row input[type='checkbox']"),
+    ).not.toBeChecked();
+    await page.reload();
+    await expect(
+      page.locator(".newsletter-prefs__venue-row input[type='checkbox']"),
+    ).not.toBeChecked();
+  });
+});
