@@ -262,7 +262,10 @@
               </div>
             </header>
 
-            <nav class="event-nav" aria-label="Event sections">
+            <nav
+              class="event-nav"
+              :aria-label="$store.lang.t('event.sections_nav_aria')"
+            >
               <template x-for="section in sections" :key="section.id">
                 <button
                   type="button"
@@ -637,7 +640,11 @@
         x-data="authView()"
       >
         <div class="auth-card">
-          <div class="auth-tabs" role="tablist" aria-label="Auth mode">
+          <div
+            class="auth-tabs"
+            role="tablist"
+            :aria-label="$store.lang.t('auth.mode_tablist_aria')"
+          >
             <button
               type="button"
               role="tab"
@@ -848,7 +855,10 @@
               <p class="purchase__dates" x-text="formatDates(event())"></p>
             </header>
 
-            <ol class="purchase__steps" aria-label="Purchase progress">
+            <ol
+              class="purchase__steps"
+              :aria-label="$store.lang.t('purchase.steps_aria')"
+            >
               <li
                 :class="step >= 1 && 'purchase__step--active'"
                 x-text="$store.lang.t('purchase.step_ticket')"

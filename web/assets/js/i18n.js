@@ -68,6 +68,7 @@ const TRANSLATIONS = {
     "event.image_credit_prefix": "Image: ",
     "event.view_ticket": "View ticket",
     "event.not_found": "Event not found. Return to the calendar.",
+    "event.sections_nav_aria": "Event sections",
 
     "sections.news": "News",
     "sections.articles": "Articles",
@@ -120,6 +121,7 @@ const TRANSLATIONS = {
     "auth.continue_google": "Continue with Google",
     "auth.continue_microsoft": "Continue with Microsoft",
     "auth.generic_error": "Something went wrong.",
+    "auth.mode_tablist_aria": "Auth mode",
 
     "me.signed_in_with": "Signed in with",
     "me.my_tickets_link": "My Tickets",
@@ -138,6 +140,7 @@ const TRANSLATIONS = {
     "purchase.step_ticket": "1. Ticket",
     "purchase.step_details": "2. Details",
     "purchase.step_confirm": "3. Confirm",
+    "purchase.steps_aria": "Purchase progress",
     "purchase.pick_ticket": "Pick a ticket",
     "purchase.continue": "Continue",
     "purchase.attendee_details": "Attendee details",
@@ -239,6 +242,7 @@ const TRANSLATIONS = {
     "event.image_credit_prefix": "Bild: ",
     "event.view_ticket": "Visa biljett",
     "event.not_found": "Evenemanget hittades inte. Återvänd till kalendern.",
+    "event.sections_nav_aria": "Evenemangssektioner",
 
     "sections.news": "Nyheter",
     "sections.articles": "Artiklar",
@@ -291,6 +295,7 @@ const TRANSLATIONS = {
     "auth.continue_google": "Fortsätt med Google",
     "auth.continue_microsoft": "Fortsätt med Microsoft",
     "auth.generic_error": "Något gick fel.",
+    "auth.mode_tablist_aria": "Inloggningsläge",
 
     "me.signed_in_with": "Inloggad med",
     "me.my_tickets_link": "Mina biljetter",
@@ -310,6 +315,7 @@ const TRANSLATIONS = {
     "purchase.step_ticket": "1. Biljett",
     "purchase.step_details": "2. Uppgifter",
     "purchase.step_confirm": "3. Bekräfta",
+    "purchase.steps_aria": "Köpförlopp",
     "purchase.pick_ticket": "Välj en biljett",
     "purchase.continue": "Fortsätt",
     "purchase.attendee_details": "Deltagaruppgifter",
