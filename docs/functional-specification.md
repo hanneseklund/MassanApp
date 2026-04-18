@@ -225,8 +225,10 @@ The prototype explicitly simulates:
 
 - Payment processing during ticket purchase.
 - Google and Microsoft social sign-in.
-- Email delivery for registration, ticket confirmation, and newsletter
-  signup.
+- Email delivery for ticket-purchase confirmation and newsletter-signup
+  confirmation. Registration email is handled by Supabase Auth directly
+  (email confirmation is turned off on the shared prototype project, so
+  no email is actually sent during sign-up).
 - Any congress-platform or on-demand-content integrations that real
   events expose but the prototype does not wire up.
 
@@ -270,4 +272,6 @@ The prototype satisfies this specification when:
   information populated from seeded data.
 - Shared venue information is visibly reused across the seeded events
   rather than duplicated per event.
-- Newsletter signup and preferences work against a simulated backend.
+- Newsletter signup and preferences persist to the shared Supabase
+  project's `newsletter_subscriptions` table. The confirmation email for
+  the signup is simulated.
