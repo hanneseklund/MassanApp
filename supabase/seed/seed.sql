@@ -1,8 +1,11 @@
 -- MassanApp prototype seed data.
 --
--- Kept in sync by hand with web/data/catalog.json. The frontend can run
--- against either source; Supabase is the target once credentials are
--- configured, JSON is the local-dev fallback.
+-- This file is the authoritative seed for the shared Supabase prototype
+-- project. The frontend reads its catalog from Supabase at runtime; there
+-- is no JSON fallback. `web/data/catalog.json` is a hand-maintained
+-- reference copy of the shape produced by this seed and must be updated
+-- in the same change whenever this file changes (see
+-- docs/implementation-specification.md, "Seed data layout").
 --
 -- Venue facts are from public Stockholmsmassan sources (see
 -- docs/research-stockholmsmassan-and-venue-apps.md). Per-event news,

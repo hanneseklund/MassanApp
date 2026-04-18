@@ -72,13 +72,25 @@ prototype.
 
 Alpine.js stores and components own the following state:
 
-- `session`: current authenticated user, tokens, and "simulated provider"
-  flag.
-- `catalog`: cached list of events, exhibitors, program items, news,
-  articles, and shared venue data.
-- `ui`: current view, selected event, filter state, modal state.
-- `cart` and `tickets`: in-progress ticket purchase and the user's owned
-  tickets.
+- `app`: current view, selected event, selected event subview, selected
+  exhibitor, simulated-mode flag, post-auth return target, and a
+  transient toast.
+- `session`: current authenticated user record, including the
+  `auth_provider` and `simulated` flag for the social-sign-in stub.
+- `catalog`: venue, events, news, articles, program items, exhibitors,
+  and speakers loaded from the shared Supabase project, plus
+  `loading` / `error` flags for the initial fetch.
+- `filters`: free-text query, type, category, and month filters for the
+  calendar view.
+- `tickets`: flat list of purchased tickets persisted in
+  `localStorage`, filtered by `user_id` at read time.
+- `newsletter`: per-(user/email, event) subscription records persisted
+  in `localStorage`, including the venue-wide subscription where
+  `event_id === null`.
+
+In-progress ticket purchase state lives in the local Alpine component
+behind the `purchase` view rather than in a store, because nothing
+outside that view needs to read it.
 
 Data is loaded from the shared Supabase prototype project. Supabase is
 a hard dependency of the frontend: the calendar, event views, and
