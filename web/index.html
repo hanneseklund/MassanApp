@@ -527,9 +527,9 @@
       </section>
 
       <!-- Auth view: register, sign-in, and simulated social providers.
-           Email/password is validated only as far as the prototype needs:
-           the password is stored hashed locally and re-checked on sign-in,
-           but there is no password policy. -->
+           Email registration calls supabase.auth.signUp; simulated
+           Google / Microsoft buttons call supabase.auth.signInAnonymously
+           and stamp the resulting session with a provider label. -->
       <section
         class="view__body"
         x-show="$store.app.view === 'auth'"
@@ -587,9 +587,14 @@
               />
             </label>
             <p class="auth-form__error" x-show="error" x-text="error"></p>
-            <button type="submit" class="auth-form__submit">
-              <span x-show="mode === 'signin'">Sign in</span>
-              <span x-show="mode === 'register'">Create account</span>
+            <button
+              type="submit"
+              class="auth-form__submit"
+              :disabled="processing"
+            >
+              <span x-show="!processing && mode === 'signin'">Sign in</span>
+              <span x-show="!processing && mode === 'register'">Create account</span>
+              <span x-show="processing">Working…</span>
             </button>
           </form>
 
@@ -601,6 +606,7 @@
             <button
               type="button"
               class="auth-social__button"
+              :disabled="processing"
               @click="socialSignIn('google')"
             >
               Continue with Google
@@ -609,6 +615,7 @@
             <button
               type="button"
               class="auth-social__button"
+              :disabled="processing"
               @click="socialSignIn('microsoft')"
             >
               Continue with Microsoft

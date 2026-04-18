@@ -8,9 +8,10 @@
 //   #/auth                                           -> registration / sign-in
 //   #/me                                             -> signed-in My Pages
 //
-// Catalog data is loaded from the shared Supabase prototype project.
-// The URL and publishable key come from window.MASSANAPP_ENV (set in
-// assets/env.js). See docs/implementation-specification.md.
+// Catalog data, authentication, tickets, and newsletter subscriptions
+// all run against the shared Supabase prototype project. The URL and
+// publishable key come from window.MASSANAPP_ENV (set in assets/env.js).
+// See docs/implementation-specification.md.
 
 const EVENT_SUBVIEWS = [
   "home",
@@ -71,7 +72,11 @@ const SECTION_LABELS = [
   { id: "newsletter", label: "Newsletter" },
 ];
 
+// Singleton Supabase client. A single client per page keeps the auth
+// session consistent and lets `onAuthStateChange` fan out to stores.
+let _supabaseClient = null;
 function supabaseClient() {
+  if (_supabaseClient) return _supabaseClient;
   const env = window.MASSANAPP_ENV;
   if (!env?.SUPABASE_URL || !env?.SUPABASE_ANON_KEY) {
     throw new Error(
@@ -81,7 +86,11 @@ function supabaseClient() {
   if (!window.supabase?.createClient) {
     throw new Error("Supabase JS SDK not loaded.");
   }
-  return window.supabase.createClient(env.SUPABASE_URL, env.SUPABASE_ANON_KEY);
+  _supabaseClient = window.supabase.createClient(
+    env.SUPABASE_URL,
+    env.SUPABASE_ANON_KEY,
+  );
+  return _supabaseClient;
 }
 
 async function loadCatalog() {
@@ -158,68 +167,31 @@ function buildHash(state) {
   return "#/";
 }
 
-// Session persistence. Password hashing is intentionally lightweight —
-// the prototype stores user records in localStorage only, and there is
-// no real security model until Supabase Auth replaces this layer.
-const SESSION_KEY = "massan.session";
-const USERS_KEY = "massan.users";
-
-function hashPassword(pw) {
-  let h = 0;
-  const s = String(pw ?? "");
-  for (let i = 0; i < s.length; i++) {
-    h = ((h << 5) - h + s.charCodeAt(i)) | 0;
-  }
-  return `h${h}`;
-}
-
-function newUserId() {
-  return "user-" + Math.random().toString(36).slice(2, 10);
-}
-
-function loadUsersFromStorage() {
-  try {
-    const raw = localStorage.getItem(USERS_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveUsersToStorage(users) {
-  localStorage.setItem(USERS_KEY, JSON.stringify(users));
-}
-
-function loadSessionFromStorage() {
-  try {
-    const raw = localStorage.getItem(SESSION_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
-}
-
-function saveSessionToStorage(user) {
-  if (user) {
-    localStorage.setItem(SESSION_KEY, JSON.stringify(user));
-  } else {
-    localStorage.removeItem(SESSION_KEY);
-  }
-}
-
-function publicUserRecord(user) {
+// Map a Supabase auth user into the flat shape the UI consumes. Works
+// for email-backed users and for anonymous users carrying simulated
+// social-sign-in metadata.
+function mapSupabaseUser(supabaseUser) {
+  if (!supabaseUser) return null;
+  const metadata = supabaseUser.user_metadata || {};
+  const isAnonymous =
+    supabaseUser.is_anonymous === true ||
+    (!supabaseUser.email && !!metadata.simulated);
+  const provider =
+    metadata.auth_provider ||
+    supabaseUser.app_metadata?.provider ||
+    (isAnonymous ? "anonymous" : "email");
+  const email = supabaseUser.email || metadata.email || "";
+  const displayName =
+    metadata.display_name || supabaseUser.email || "Guest";
   return {
-    id: user.id,
-    email: user.email,
-    display_name: user.display_name,
-    auth_provider: user.auth_provider,
-    simulated: !!user.simulated,
+    id: supabaseUser.id,
+    email,
+    display_name: displayName,
+    auth_provider: provider,
+    simulated: !!metadata.simulated,
   };
 }
 
-// Newsletter subscription persistence. In local-seed mode subscriptions
-// live in localStorage; a Supabase-backed mode will replace these helpers.
-const NEWSLETTER_KEY = "massan.newsletter";
 const NEWSLETTER_PREF_KEYS = [
   "program_highlights",
   "news",
@@ -240,45 +212,6 @@ function normalizeNewsletterPreferences(pref) {
   return out;
 }
 
-function loadNewsletterFromStorage() {
-  try {
-    const raw = localStorage.getItem(NEWSLETTER_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveNewsletterToStorage(list) {
-  localStorage.setItem(NEWSLETTER_KEY, JSON.stringify(list));
-}
-
-function newSubscriptionId() {
-  return "sub-" + Math.random().toString(36).slice(2, 10);
-}
-
-// Ticket persistence. In local-seed mode tickets live in localStorage
-// as a flat list and are filtered by user_id at read time. A Supabase
-// mode will swap this for a `tickets` table with RLS.
-const TICKETS_KEY = "massan.tickets";
-
-function loadTicketsFromStorage() {
-  try {
-    const raw = localStorage.getItem(TICKETS_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveTicketsToStorage(list) {
-  localStorage.setItem(TICKETS_KEY, JSON.stringify(list));
-}
-
-function newTicketId() {
-  return "ticket-" + Math.random().toString(36).slice(2, 10);
-}
-
 // `simulatedPayment(order)` — always resolves after a short delay with
 // a plausible transaction reference. No payment service is contacted.
 function simulatedPayment(order) {
@@ -297,7 +230,7 @@ const QR_SALT = "stockholmsmassan-prototype";
 const QR_SIZE = 25;
 
 function ticketQrPayload(ticket) {
-  return `massan:${ticket.id}:${ticket.event_id}:${QR_SALT}`;
+  return `massan:${ticket.id || "new"}:${ticket.event_id}:${QR_SALT}`;
 }
 
 function qrHashBytes(str, length) {
@@ -375,13 +308,9 @@ function ticketQrSvg(payload) {
   );
 }
 
-function generateTicketQr(ticket) {
-  const payload = ticketQrPayload(ticket);
-  return { payload, svg: ticketQrSvg(payload) };
-}
-
 function ticketQrSvgFor(ticket) {
-  return generateTicketQr(ticket).svg;
+  const payload = ticket.qr_payload || ticketQrPayload(ticket);
+  return ticketQrSvg(payload);
 }
 
 // `simulatedEmail(kind, payload)` — no-op in production hosting; logs a
@@ -528,107 +457,105 @@ document.addEventListener("alpine:init", () => {
     },
   });
 
-  // Session store: local-only authentication for the prototype.
-  // Users and the signed-in session persist in localStorage so refreshes
-  // keep the same user signed in. When Supabase Auth is wired in later,
-  // `register`, `signIn`, and `signOut` become the only hook points that
-  // need to switch implementation.
+  // Session store: backed by Supabase Auth. `register`, `signIn`,
+  // `signOut`, and `simulatedSocialSignIn` call into the Supabase JS
+  // client; the store subscribes to `onAuthStateChange` so sign-in
+  // state, including token refresh and persisted sessions across
+  // reloads, propagates through the UI.
   Alpine.store("session", {
     user: null,
+    loading: true,
 
-    init() {
-      this.user = loadSessionFromStorage();
-    },
-
-    _linkNewsletter(user) {
-      const store = Alpine.store("newsletter");
-      if (store && typeof store.attachUser === "function") {
-        store.attachUser(user);
+    async init() {
+      const db = supabaseClient();
+      const { data, error } = await db.auth.getSession();
+      if (error) {
+        console.warn("Could not restore session:", error.message);
       }
+      this.user = mapSupabaseUser(data?.session?.user);
+      this.loading = false;
+      db.auth.onAuthStateChange((_event, session) => {
+        this.user = mapSupabaseUser(session?.user);
+        Alpine.store("tickets")?._onSessionChange?.();
+        Alpine.store("newsletter")?._onSessionChange?.();
+      });
+      Alpine.store("tickets")?._onSessionChange?.();
+      Alpine.store("newsletter")?._onSessionChange?.();
     },
 
     get isSignedIn() {
       return !!this.user;
     },
 
-    register({ email, displayName, password }) {
+    async register({ email, displayName, password }) {
       const trimmedEmail = String(email || "").trim();
       if (!trimmedEmail) throw new Error("Enter an email address.");
-      const users = loadUsersFromStorage();
-      const existing = users.find(
-        (u) => u.email.toLowerCase() === trimmedEmail.toLowerCase()
-      );
-      if (existing) {
-        throw new Error("An account with that email already exists.");
-      }
-      const record = {
-        id: newUserId(),
+      const db = supabaseClient();
+      const { data, error } = await db.auth.signUp({
         email: trimmedEmail,
-        display_name: String(displayName || "").trim() || trimmedEmail,
-        auth_provider: "email",
-        simulated: false,
-        password_hash: hashPassword(password),
-      };
-      users.push(record);
-      saveUsersToStorage(users);
-      const user = publicUserRecord(record);
-      this.user = user;
-      saveSessionToStorage(user);
-      this._linkNewsletter(user);
-      return user;
+        password: String(password || ""),
+        options: {
+          data: {
+            display_name:
+              String(displayName || "").trim() || trimmedEmail,
+            auth_provider: "email",
+          },
+        },
+      });
+      if (error) throw new Error(error.message);
+      if (!data.session) {
+        throw new Error(
+          "Check your email to confirm the account, then sign in.",
+        );
+      }
+      return this.user;
     },
 
-    signIn({ email, password }) {
+    async signIn({ email, password }) {
       const trimmedEmail = String(email || "").trim();
-      const users = loadUsersFromStorage();
-      const record = users.find(
-        (u) =>
-          u.email.toLowerCase() === trimmedEmail.toLowerCase() &&
-          u.password_hash === hashPassword(password) &&
-          u.auth_provider === "email"
-      );
-      if (!record) throw new Error("Email or password is incorrect.");
-      const user = publicUserRecord(record);
-      this.user = user;
-      saveSessionToStorage(user);
-      this._linkNewsletter(user);
-      return user;
+      const db = supabaseClient();
+      const { error } = await db.auth.signInWithPassword({
+        email: trimmedEmail,
+        password: String(password || ""),
+      });
+      if (error) throw new Error("Email or password is incorrect.");
+      return this.user;
     },
 
-    signOut() {
-      this.user = null;
-      saveSessionToStorage(null);
+    async signOut() {
+      const db = supabaseClient();
+      const { error } = await db.auth.signOut();
+      if (error) throw new Error(error.message);
     },
 
-    // `simulatedSocialSignIn(provider)` returns a fake session for Google
-    // or Microsoft without contacting the provider. The resulting session
-    // carries `simulated: true` so the UI can label it clearly.
-    simulatedSocialSignIn(provider) {
+    // Simulated Google / Microsoft sign-in. Creates a Supabase
+    // anonymous session and stamps provider metadata so the UI can
+    // label the session as simulated. RLS treats the anonymous
+    // user_id like any other for ticket and newsletter ownership.
+    async simulatedSocialSignIn(provider) {
       if (!["google", "microsoft"].includes(provider)) {
         throw new Error(`Unknown provider: ${provider}`);
       }
-      const users = loadUsersFromStorage();
+      const displayName =
+        provider === "google" ? "Google user" : "Microsoft user";
       const placeholderEmail = `${provider}-simulated@massanapp.local`;
-      let record = users.find(
-        (u) => u.email === placeholderEmail && u.auth_provider === provider
-      );
-      if (!record) {
-        record = {
-          id: newUserId(),
-          email: placeholderEmail,
-          display_name:
-            provider === "google" ? "Google user" : "Microsoft user",
-          auth_provider: provider,
-          simulated: true,
-        };
-        users.push(record);
-        saveUsersToStorage(users);
+      const db = supabaseClient();
+      const { error } = await db.auth.signInAnonymously({
+        options: {
+          data: {
+            auth_provider: provider,
+            simulated: true,
+            display_name: displayName,
+            email: placeholderEmail,
+          },
+        },
+      });
+      if (error) {
+        throw new Error(
+          `Could not start simulated ${provider} sign-in: ${error.message}`,
+        );
       }
-      const user = publicUserRecord(record);
-      this.user = user;
-      saveSessionToStorage(user);
-      this._linkNewsletter(user);
-      return user;
+      return this.user;
     },
   });
 
@@ -704,23 +631,115 @@ document.addEventListener("alpine:init", () => {
     },
   });
 
-  // Newsletter store: subscriptions by (email/user, event). Persisted in
-  // localStorage so anonymous signups survive reloads and sign-in
-  // attaches matching anonymous subscriptions to the new user.
+  // Tickets store: mirrors the signed-in user's rows from
+  // public.tickets. Row Level Security filters to rows where
+  // auth.uid() = user_id, so a plain `select` returns only the
+  // signed-in user's tickets. Inserts go through the Supabase client.
+  Alpine.store("tickets", {
+    tickets: [],
+    loading: false,
+    error: null,
+
+    init() {},
+
+    async _onSessionChange() {
+      const user = Alpine.store("session").user;
+      if (!user) {
+        this.tickets = [];
+        return;
+      }
+      this.loading = true;
+      this.error = null;
+      const db = supabaseClient();
+      const { data, error } = await db
+        .from("tickets")
+        .select("*")
+        .order("purchased_at", { ascending: false });
+      this.loading = false;
+      if (error) {
+        console.warn("Could not load tickets:", error.message);
+        this.error = error.message;
+        this.tickets = [];
+        return;
+      }
+      this.tickets = data || [];
+    },
+
+    forUser(userId) {
+      if (!userId) return [];
+      return this.tickets.filter((t) => t.user_id === userId);
+    },
+
+    forUserAndEvent(userId, eventId) {
+      if (!userId || !eventId) return [];
+      return this.tickets.filter(
+        (t) => t.user_id === userId && t.event_id === eventId,
+      );
+    },
+
+    hasForEvent(userId, eventId) {
+      return this.forUserAndEvent(userId, eventId).length > 0;
+    },
+
+    async add(ticket) {
+      const db = supabaseClient();
+      const row = {
+        user_id: ticket.user_id,
+        event_id: ticket.event_id,
+        ticket_type: ticket.ticket_type,
+        ticket_type_label: ticket.ticket_type_label,
+        attendee_name: ticket.attendee_name,
+        attendee_email: ticket.attendee_email,
+        qr_payload: ticket.qr_payload,
+        transaction_ref: ticket.transaction_ref,
+        purchased_at: ticket.purchased_at,
+      };
+      const { data, error } = await db
+        .from("tickets")
+        .insert(row)
+        .select("*")
+        .single();
+      if (error) throw new Error(error.message);
+      this.tickets.unshift(data);
+      return data;
+    },
+  });
+
+  // Newsletter store: for signed-in users, mirrors their rows in
+  // public.newsletter_subscriptions (including the venue-wide row
+  // where event_id IS NULL). Anonymous signups insert through the
+  // "anyone insert newsletter" RLS policy but cannot be read back,
+  // so the store only carries in-session state for those.
   Alpine.store("newsletter", {
     subscriptions: [],
+    loading: false,
+    error: null,
 
-    init() {
-      this.subscriptions = loadNewsletterFromStorage().map((s) => ({
+    init() {},
+
+    async _onSessionChange() {
+      const user = Alpine.store("session").user;
+      if (!user) {
+        this.subscriptions = [];
+        return;
+      }
+      this.loading = true;
+      this.error = null;
+      const db = supabaseClient();
+      const { data, error } = await db
+        .from("newsletter_subscriptions")
+        .select("*");
+      this.loading = false;
+      if (error) {
+        console.warn("Could not load newsletter subscriptions:", error.message);
+        this.error = error.message;
+        this.subscriptions = [];
+        return;
+      }
+      this.subscriptions = (data || []).map((s) => ({
         ...s,
         preferences: normalizeNewsletterPreferences(s.preferences),
       }));
-      const current = Alpine.store("session")?.user;
-      if (current) this.attachUser(current);
-    },
-
-    _persist() {
-      saveNewsletterToStorage(this.subscriptions);
     },
 
     findForEvent({ email, userId, eventId }) {
@@ -737,113 +756,95 @@ document.addEventListener("alpine:init", () => {
       );
     },
 
-    forUser(userId, email) {
-      return this.subscriptions.filter(
-        (s) =>
-          (userId && s.user_id === userId) ||
-          (email && (s.email || "").toLowerCase() === email.toLowerCase())
-      );
+    forUser(userId) {
+      if (!userId) return [];
+      return this.subscriptions.filter((s) => s.user_id === userId);
     },
 
-    subscribe({ email, userId, eventId, preferences }) {
+    async subscribe({ email, userId, eventId, preferences }) {
       const cleanEmail = String(email || "").trim();
       if (!cleanEmail) throw new Error("Enter an email address.");
       const prefs = normalizeNewsletterPreferences(preferences);
       const eid = eventId ?? null;
-      const existing = this.findForEvent({
-        email: cleanEmail,
-        userId,
-        eventId: eid,
-      });
-      if (existing) {
-        existing.email = cleanEmail;
-        existing.preferences = prefs;
-        if (userId && !existing.user_id) existing.user_id = userId;
-        this._persist();
-        return existing;
+      if (userId) {
+        const existing = this.findForEvent({
+          email: cleanEmail,
+          userId,
+          eventId: eid,
+        });
+        if (existing) {
+          return this._updateRow(existing.id, { email: cleanEmail, preferences: prefs });
+        }
       }
-      const record = {
-        id: newSubscriptionId(),
+      const db = supabaseClient();
+      const row = {
         user_id: userId ?? null,
         email: cleanEmail,
         event_id: eid,
         preferences: prefs,
       };
-      this.subscriptions.push(record);
-      this._persist();
-      return record;
+      const { data, error } = await db
+        .from("newsletter_subscriptions")
+        .insert(row)
+        .select("*")
+        .maybeSingle();
+      if (error) throw new Error(error.message);
+      if (data) {
+        const normalized = {
+          ...data,
+          preferences: normalizeNewsletterPreferences(data.preferences),
+        };
+        this.subscriptions.push(normalized);
+        return normalized;
+      }
+      // Anonymous insert: RLS blocks the post-insert SELECT so data is
+      // null. Return the submitted row for UI success state.
+      return {
+        id: null,
+        user_id: null,
+        email: cleanEmail,
+        event_id: eid,
+        preferences: prefs,
+      };
     },
 
-    updatePreferences(id, preferences) {
+    async updatePreferences(id, preferencesPatch) {
       const sub = this.subscriptions.find((s) => s.id === id);
       if (!sub) return null;
-      sub.preferences = normalizeNewsletterPreferences({
+      const merged = normalizeNewsletterPreferences({
         ...sub.preferences,
-        ...preferences,
+        ...preferencesPatch,
       });
-      this._persist();
-      return sub;
+      return this._updateRow(id, { preferences: merged });
     },
 
-    unsubscribe(id) {
-      const before = this.subscriptions.length;
+    async _updateRow(id, patch) {
+      const db = supabaseClient();
+      const { data, error } = await db
+        .from("newsletter_subscriptions")
+        .update(patch)
+        .eq("id", id)
+        .select("*")
+        .single();
+      if (error) throw new Error(error.message);
+      const normalized = {
+        ...data,
+        preferences: normalizeNewsletterPreferences(data.preferences),
+      };
+      const idx = this.subscriptions.findIndex((s) => s.id === id);
+      if (idx >= 0) this.subscriptions[idx] = normalized;
+      else this.subscriptions.push(normalized);
+      return normalized;
+    },
+
+    async unsubscribe(id) {
+      const db = supabaseClient();
+      const { error } = await db
+        .from("newsletter_subscriptions")
+        .delete()
+        .eq("id", id);
+      if (error) throw new Error(error.message);
       this.subscriptions = this.subscriptions.filter((s) => s.id !== id);
-      if (this.subscriptions.length !== before) this._persist();
-    },
-
-    // When a visitor signs in, link any anonymous subscriptions that
-    // match their email to the new user id so preferences carry over.
-    attachUser(user) {
-      if (!user?.id || !user.email) return;
-      let changed = false;
-      for (const s of this.subscriptions) {
-        if (
-          !s.user_id &&
-          (s.email || "").toLowerCase() === user.email.toLowerCase()
-        ) {
-          s.user_id = user.id;
-          changed = true;
-        }
-      }
-      if (changed) this._persist();
-    },
-  });
-
-  // Tickets store: flat list persisted in localStorage and filtered by
-  // user_id at read time. When Supabase is wired in, `add`, `forUser`,
-  // and `hasForEvent` become the only hook points that need to switch
-  // implementation.
-  Alpine.store("tickets", {
-    tickets: [],
-
-    init() {
-      this.tickets = loadTicketsFromStorage();
-    },
-
-    _persist() {
-      saveTicketsToStorage(this.tickets);
-    },
-
-    forUser(userId) {
-      if (!userId) return [];
-      return this.tickets.filter((t) => t.user_id === userId);
-    },
-
-    forUserAndEvent(userId, eventId) {
-      if (!userId || !eventId) return [];
-      return this.tickets.filter(
-        (t) => t.user_id === userId && t.event_id === eventId
-      );
-    },
-
-    hasForEvent(userId, eventId) {
-      return this.forUserAndEvent(userId, eventId).length > 0;
-    },
-
-    add(ticket) {
-      this.tickets.push(ticket);
-      this._persist();
-      return ticket;
     },
   });
 
@@ -1026,6 +1027,7 @@ const PROVIDER_LABELS = {
   email: "Email",
   google: "Google",
   microsoft: "Microsoft",
+  anonymous: "Guest",
 };
 
 function providerLabel(provider) {
@@ -1039,21 +1041,24 @@ function authView() {
     displayName: "",
     password: "",
     error: "",
+    processing: false,
     setMode(mode) {
       this.mode = mode;
       this.error = "";
     },
-    submit() {
+    async submit() {
+      if (this.processing) return;
       this.error = "";
+      this.processing = true;
       try {
         if (this.mode === "register") {
-          Alpine.store("session").register({
+          await Alpine.store("session").register({
             email: this.email,
             displayName: this.displayName,
             password: this.password,
           });
         } else {
-          Alpine.store("session").signIn({
+          await Alpine.store("session").signIn({
             email: this.email,
             password: this.password,
           });
@@ -1064,15 +1069,21 @@ function authView() {
         Alpine.store("app").afterAuth();
       } catch (err) {
         this.error = err.message || "Something went wrong.";
+      } finally {
+        this.processing = false;
       }
     },
-    socialSignIn(provider) {
+    async socialSignIn(provider) {
+      if (this.processing) return;
       this.error = "";
+      this.processing = true;
       try {
-        Alpine.store("session").simulatedSocialSignIn(provider);
+        await Alpine.store("session").simulatedSocialSignIn(provider);
         Alpine.store("app").afterAuth();
       } catch (err) {
         this.error = err.message || "Something went wrong.";
+      } finally {
+        this.processing = false;
       }
     },
   };
@@ -1087,8 +1098,12 @@ function meView() {
     isSimulated() {
       return !!this.user()?.simulated;
     },
-    signOut() {
-      Alpine.store("session").signOut();
+    async signOut() {
+      try {
+        await Alpine.store("session").signOut();
+      } catch (err) {
+        console.warn("Sign-out failed:", err.message);
+      }
       Alpine.store("app").goCalendar();
     },
     openTickets() {
@@ -1199,8 +1214,7 @@ function purchaseView() {
           ticket_type: type.id,
           attendee_email: email,
         });
-        const ticket = {
-          id: newTicketId(),
+        const draft = {
           user_id: user.id,
           event_id: ev.id,
           ticket_type: type.id,
@@ -1210,8 +1224,11 @@ function purchaseView() {
           transaction_ref: payment.transaction_ref,
           purchased_at: new Date().toISOString(),
         };
-        ticket.qr_payload = ticketQrPayload(ticket);
-        Alpine.store("tickets").add(ticket);
+        draft.qr_payload = ticketQrPayload(draft);
+        const ticket = await Alpine.store("tickets").add(draft);
+        // If the returned row did not include a persisted qr_payload,
+        // fall back to the draft so the confirmation screen still has one.
+        if (!ticket.qr_payload) ticket.qr_payload = draft.qr_payload;
         simulatedEmail("ticket_confirmation", {
           to: email,
           user_id: user.id,
@@ -1282,14 +1299,17 @@ const NEWSLETTER_TOPICS = [
 
 // Newsletter signup form for an event's Newsletter subview. Pre-fills
 // the email from the signed-in user when available, re-hydrates any
-// prior subscription for this (email, event) pair, and toggles into a
-// success state after submit.
+// prior subscription for this (user, event) pair from Supabase, and
+// toggles into a success state after submit. Anonymous signups show a
+// success state in-session but cannot be re-read after reload because
+// RLS on newsletter_subscriptions requires `auth.uid() = user_id`.
 function newsletterSignup() {
   return {
     topics: NEWSLETTER_TOPICS,
     email: "",
     preferences: defaultNewsletterPreferences(),
     submitted: false,
+    processing: false,
     error: "",
 
     event() {
@@ -1327,12 +1347,14 @@ function newsletterSignup() {
       }
     },
 
-    submit() {
+    async submit() {
+      if (this.processing) return;
       this.error = "";
+      this.processing = true;
       try {
         const user = Alpine.store("session").user;
         const eventId = Alpine.store("app").eventId;
-        const record = Alpine.store("newsletter").subscribe({
+        const record = await Alpine.store("newsletter").subscribe({
           email: this.email,
           userId: user?.id ?? null,
           eventId,
@@ -1349,6 +1371,8 @@ function newsletterSignup() {
         this.submitted = true;
       } catch (err) {
         this.error = err.message || "Could not sign up.";
+      } finally {
+        this.processing = false;
       }
     },
 
@@ -1369,7 +1393,7 @@ function newsletterPreferences() {
       const user = Alpine.store("session").user;
       if (!user) return [];
       return Alpine.store("newsletter")
-        .forUser(user.id, user.email)
+        .forUser(user.id)
         .filter((s) => s.event_id !== null)
         .map((s) => ({
           ...s,
@@ -1389,37 +1413,53 @@ function newsletterPreferences() {
       });
     },
 
-    togglePreference(sub, key) {
-      Alpine.store("newsletter").updatePreferences(sub.id, {
-        [key]: !sub.preferences[key],
-      });
+    async togglePreference(sub, key) {
+      try {
+        await Alpine.store("newsletter").updatePreferences(sub.id, {
+          [key]: !sub.preferences[key],
+        });
+      } catch (err) {
+        console.warn("Could not update preference:", err.message);
+      }
     },
 
-    unsubscribe(id) {
-      Alpine.store("newsletter").unsubscribe(id);
+    async unsubscribe(id) {
+      try {
+        await Alpine.store("newsletter").unsubscribe(id);
+      } catch (err) {
+        console.warn("Could not unsubscribe:", err.message);
+      }
     },
 
-    toggleVenueWide() {
+    async toggleVenueWide() {
       const user = Alpine.store("session").user;
       if (!user) return;
       const existing = this.venueWide();
       if (existing) {
-        Alpine.store("newsletter").unsubscribe(existing.id);
+        try {
+          await Alpine.store("newsletter").unsubscribe(existing.id);
+        } catch (err) {
+          console.warn("Could not unsubscribe venue-wide:", err.message);
+        }
         return;
       }
-      const record = Alpine.store("newsletter").subscribe({
-        email: user.email,
-        userId: user.id,
-        eventId: null,
-        preferences: defaultNewsletterPreferences(),
-      });
-      simulatedEmail("newsletter_confirmation", {
-        to: record.email,
-        user_id: record.user_id,
-        event_id: null,
-        event_name: "All Stockholmsmassan events",
-        preferences: record.preferences,
-      });
+      try {
+        const record = await Alpine.store("newsletter").subscribe({
+          email: user.email,
+          userId: user.id,
+          eventId: null,
+          preferences: defaultNewsletterPreferences(),
+        });
+        simulatedEmail("newsletter_confirmation", {
+          to: record.email,
+          user_id: record.user_id,
+          event_id: null,
+          event_name: "All Stockholmsmassan events",
+          preferences: record.preferences,
+        });
+      } catch (err) {
+        console.warn("Could not subscribe venue-wide:", err.message);
+      }
     },
   };
 }

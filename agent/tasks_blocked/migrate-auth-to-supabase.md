@@ -124,3 +124,25 @@ Notes:
 - If email confirmation is left on, prefer teaching the UI to reflect
   it over adding a service-role workaround; the prototype must never
   hold a service-role key.
+
+## Status: blocked on shared-project Auth config (2026-04-18)
+
+The code, schema migration (`0002_newsletter_delete_policy`), and all
+three specifications and the README are updated in the working tree.
+Acceptance-criteria verification is blocked on two project-level Auth
+settings on the shared `massanapp-prototype` Supabase project. Both
+must be flipped in the Supabase dashboard (they are not exposed via
+the Supabase MCP and the prototype must never hold a service-role
+key):
+
+1. **Allow anonymous sign-ins** — currently `false`. Needed for the
+   simulated Google / Microsoft buttons which call
+   `supabase.auth.signInAnonymously` to create a real `auth.uid()` for
+   ticket / newsletter ownership.
+2. **Confirm email** — currently enabled (`mailer_autoconfirm: false`).
+   Needed disabled so `supabase.auth.signUp` returns a usable session
+   immediately for smoke testing with `@example.com` addresses.
+
+Asked on issue #1 (comment of 2026-04-18). Once both toggles are
+flipped, move this file back to `agent/tasks/` and the next session
+will run the smoke-test checklist end to end.

@@ -141,9 +141,11 @@ The prototype must support this end-to-end path without gaps:
 
 ### Registration and sign-in
 
-- Email registration is the primary path. Password or passwordless is an
-  implementation choice; the flow must complete without real email
-  delivery in the prototype.
+- Email registration is the primary path. Accounts are created in
+  Supabase Auth; email confirmation is disabled on the shared prototype
+  project so sign-up completes without waiting on an email. If
+  confirmation is ever enabled, the UI must show a "check your email"
+  state and continue to work once the visitor confirms.
 - Google and Microsoft sign-in options are visible. In the prototype they
   are simulated: selecting them creates a fake signed-in session without
   contacting the real provider.

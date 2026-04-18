@@ -69,10 +69,36 @@ hatch, not the default), create `web/assets/env.local.js` (gitignored)
 that reassigns `window.MASSANAPP_ENV`. Otherwise the Cloudflare Pages
 deployments and local dev both hit the shared project.
 
-Authentication, ticket purchase, and newsletter signup remain simulated
-in the prototype — see "Known simulated behaviors" below. Only the
-catalog is read from Supabase today; email sign-up through Supabase
-Auth is a later task.
+Authentication, ticket purchase, and newsletter signup all talk to the
+shared Supabase project: accounts are created in Supabase Auth,
+purchased tickets insert rows into `public.tickets` under Row Level
+Security, and newsletter signups insert rows into
+`public.newsletter_subscriptions`. Payments and Google / Microsoft
+sign-in remain simulated — see "Known simulated behaviors" below.
+
+For this to work the shared project's Auth configuration must have
+email confirmation disabled (so `signUp` returns a usable session
+immediately) and anonymous sign-ins enabled (so the simulated
+Google / Microsoft buttons can create a session without real OAuth).
+Both settings live in the Supabase dashboard under Authentication →
+Providers / Sign In.
+
+### Smoke testing against the shared project
+
+Because every local run, every `agent` deploy, and every `main` deploy
+shares one Supabase project, a smoke-test run leaves rows behind in
+`auth.users`, `public.tickets`, and `public.newsletter_subscriptions`.
+The prototype does not reset the database between runs. When running
+the checklist:
+
+- Prefer a deterministic `@example.com` email address per tester (for
+  example `smoke+your-initials@example.com`). Reusing the same address
+  across runs means `signUp` will refuse after the first run, so sign
+  in instead of registering on subsequent runs.
+- Simulated Google / Microsoft runs produce an anonymous
+  `auth.users` row each time. This is acceptable prototype behavior;
+  they can be cleaned up from the Supabase dashboard if the list
+  becomes noisy.
 
 `web/data/catalog.json` is kept in the repo as a reference copy of the
 seed shape for reviewers. It is not loaded by the running app.
@@ -111,15 +137,11 @@ server. Run it locally instead when you need to test changes that are
 not yet committed, or when you need to point the frontend at a Supabase
 project using a local `env.local.js`.
 
-The hosted build reads its catalog from the shared Supabase prototype
-project via the committed `web/assets/env.js`, so the events, program,
-exhibitors, news, and articles on the hosted preview come from the
-same database as a local run. Authentication, ticket purchase, and
-newsletter signup remain simulated and live in the browser's
-`localStorage` — see "Known simulated behaviors" below. If any of
-these flows are migrated to Supabase later, this section must be
-updated to describe what becomes real versus simulated in the hosted
-environment.
+The hosted build reads its catalog, authentication, tickets, and
+newsletter subscriptions from the shared Supabase prototype project via
+the committed `web/assets/env.js`, so a local run and the hosted
+preview share one database. Payments and Google / Microsoft sign-in
+remain simulated — see "Known simulated behaviors" below.
 
 ## Environment variables
 
@@ -175,11 +197,14 @@ section above for the caveats.
 
 ### Registration and sign-in
 
-- Register with an email. Confirm that the app enters a logged-in state
-  or clearly simulates the email-confirmation step.
-- Sign out. Sign back in with the same email.
-- Trigger the simulated Google sign-in. Confirm the session is created
-  and that the UI indicates the provider is simulated.
+- Register with a fresh `@example.com` email. The app enters a
+  logged-in state immediately (email confirmation is disabled on the
+  shared project). A row appears in `auth.users`.
+- Sign out. Sign back in with the same email and password.
+- Trigger the simulated Google sign-in. Confirm the session is created,
+  the UI indicates the provider is simulated, and a new anonymous row
+  appears in `auth.users` (simulated social sign-in rides on Supabase
+  anonymous auth).
 
 ### Ticket purchase (simulated)
 
@@ -194,25 +219,32 @@ section above for the caveats.
   console when the purchase completes.
 - Open My Tickets from the confirmation screen and confirm the new
   ticket appears with event name, dates, ticket type, attendee,
-  purchase date, and a QR code rendered as SVG.
+  purchase date, and a QR code rendered as SVG. A row with the
+  matching `user_id`, `event_id`, and `ticket_type` appears in
+  `public.tickets`.
 - Return to the `Nordbygg 2026` event home view and confirm the CTA
   now also offers "View ticket".
 - Open `ESTRO 2026`, tap "Register as delegate", complete the flow, and
   confirm a delegate ticket appears in My Tickets.
-- Reload the page. Tickets persist across the reload.
+- Reload the page. The Supabase session is restored automatically and
+  the tickets still appear in My Tickets.
 
 ### Newsletter
 
-- On an event's Newsletter subview, submit the signup form with an
-  email address. Confirm the UI shows a success state and that a
-  `newsletter_confirmation` entry is logged to the browser console.
-- Reload the page and confirm the success state persists for that
-  email (the subscription is keyed by email).
-- Sign in, then on another event's Newsletter subview sign up again.
-  Confirm that in My Pages → Newsletter preferences the new
-  subscription appears under the signed-in user.
+- While signed out, open an event's Newsletter subview and submit the
+  signup form with an email address. The UI shows a success state and
+  a `newsletter_confirmation` entry is logged to the browser console.
+  A row appears in `public.newsletter_subscriptions` with a `null`
+  `user_id` and the submitted email. The anonymous visitor cannot
+  read the row back through RLS; reloading the page returns the form
+  to its blank state rather than to the success state.
+- Sign in. On an event's Newsletter subview sign up. The success state
+  appears, and a row appears with the signed-in user's `user_id`.
+  In My Pages → Newsletter preferences the new subscription appears
+  under the signed-in user.
 - Toggle one of the per-event topic preferences and unsubscribe from
-  one event. Reload the page and confirm both changes persist.
+  one event. Reload the page and confirm both changes persist (they
+  are now reads and updates against Supabase, not `localStorage`).
 - Toggle the venue-wide "All Stockholmsmassan events" subscription on
   and off and confirm the state persists across reloads.
 
@@ -230,9 +262,14 @@ When editing venue-shared content:
 These are expected in the prototype and are not bugs:
 
 - Payments succeed without real charges.
-- Google and Microsoft sign-in do not contact real providers.
-- Email delivery is logged to the browser console in development and
-  does not leave the browser.
+- Google and Microsoft sign-in do not contact real providers; they
+  create a Supabase anonymous session and tag it with the chosen
+  provider name.
+- `simulatedEmail` entries (`ticket_confirmation`,
+  `newsletter_confirmation`) are logged to the browser console in
+  development and do not leave the browser. Supabase Auth may still
+  send real account emails (password reset, etc.) if a feature that
+  triggers one is exercised.
 - QR codes generated for tickets are not valid credentials at the real
   venue.
 

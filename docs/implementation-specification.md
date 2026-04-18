@@ -13,11 +13,10 @@ in this document.
   for the prototype.
 - Hosting: Cloudflare Pages. The site is deployable as static assets.
 - Backend: Supabase project hosting Postgres, Auth, and optional Storage.
-  Supabase Auth is the target for email-based authentication; the
-  prototype currently uses a lightweight `localStorage` fallback and will
-  migrate to Supabase Auth in a later task (see the "User" entity under
-  Data model for the current state). Social sign-in for Google and
-  Microsoft is simulated in the prototype but is structured so that real
+  Supabase Auth handles email sign-up and sign-in through the Supabase
+  JavaScript client. Social sign-in for Google and Microsoft is simulated
+  on top of Supabase anonymous sessions (see the "User" entity under Data
+  model and "Simulated integrations" below), structured so that real
   Supabase OAuth providers can replace it later.
 - Data access: Supabase JavaScript client from the frontend. No custom
   backend service is introduced in the prototype.
@@ -84,18 +83,24 @@ Alpine.js stores and components own the following state:
 
 - `app`: current view, selected event, selected event subview, selected
   exhibitor, simulated-mode flag, and post-auth return target.
-- `session`: current authenticated user record, including the
-  `auth_provider` and `simulated` flag for the social-sign-in stub.
+- `session`: the Supabase Auth user mapped into a flat record with `id`,
+  `email`, `display_name`, `auth_provider`, and `simulated` flags. The
+  store subscribes to `supabase.auth.onAuthStateChange` so that sign-in,
+  sign-out, and token refresh propagate to the UI.
 - `catalog`: venue, events, news, articles, program items, exhibitors,
   and speakers loaded from the shared Supabase project, plus
   `loading` / `error` flags for the initial fetch.
 - `filters`: free-text query, type, category, and month filters for the
   calendar view.
-- `tickets`: flat list of purchased tickets persisted in
-  `localStorage`, filtered by `user_id` at read time.
-- `newsletter`: per-(user/email, event) subscription records persisted
-  in `localStorage`, including the venue-wide subscription where
-  `event_id === null`.
+- `tickets`: the signed-in user's ticket rows, loaded from
+  `public.tickets` through RLS and refetched on sign-in. Ticket inserts
+  go through the Supabase client so RLS enforces ownership.
+- `newsletter`: for signed-in users, subscription rows for the current
+  user loaded from `public.newsletter_subscriptions` through RLS
+  (including the venue-wide subscription where `event_id IS NULL`). For
+  anonymous visitors the store holds only the in-session success state —
+  the row exists in Supabase but cannot be read back through RLS until
+  the visitor signs in.
 
 In-progress ticket purchase state lives in the local Alpine component
 behind the `purchase` view rather than in a store, because nothing
@@ -204,25 +209,33 @@ Exactly one venue record is expected in the prototype.
 ### User
 
 - `id`, `email`, `display_name`, `auth_provider` (`email`, `google`,
-  `microsoft`) — social providers carry a `simulated: true` flag in the
-  prototype.
-- In the prototype, user records live in `localStorage` under
-  `massan.users` and include a `password_hash` field for email
-  accounts. The hash is intentionally lightweight and has no real
-  security value; it exists only so sign-in can re-check a password
-  entered at registration. The signed-in session lives under
-  `massan.session` and omits `password_hash`. Supabase Auth will
-  replace both stores when authentication is moved off the client.
+  `microsoft`), `simulated` (bool).
+- Users are Supabase Auth accounts in `auth.users`. Email sign-up and
+  sign-in use `supabase.auth.signUp` and
+  `supabase.auth.signInWithPassword`; no password material is stored in
+  the browser. `display_name` is carried in the Supabase user
+  `user_metadata` so it survives across sessions.
+- Simulated Google and Microsoft sign-in reuse Supabase's anonymous
+  authentication (`supabase.auth.signInAnonymously`) and stamp
+  `user_metadata` with `auth_provider = 'google' | 'microsoft'`,
+  `simulated = true`, and a `display_name` / placeholder `email` the UI
+  can show. The resulting anonymous user still has a stable `auth.uid()`
+  so Row Level Security on tickets and newsletter subscriptions applies
+  uniformly to both real and simulated sessions.
+- The frontend maps the Supabase user into a flat `session.user` record
+  with the fields above so the rest of the app can consume it without
+  knowing whether the user is anonymous, simulated, or email-backed.
 
 ### Ticket
 
 - `id`, `user_id`, `event_id`, `ticket_type`, `ticket_type_label`,
   `attendee_name`, `attendee_email`, `qr_payload`, `transaction_ref`,
   `purchased_at`
-- Tickets are scoped to the owning `user_id`. In the prototype they are
-  persisted to `localStorage` under `massan.tickets` as a single list
-  and filtered by `user_id` in the UI. A Supabase-backed mode will
-  replace this with a `tickets` table protected by Row Level Security.
+- Tickets live in `public.tickets` with Row Level Security so a user can
+  read and insert only rows where `auth.uid() = user_id`. The frontend
+  inserts a new row at the end of the simulated purchase flow and reads
+  the signed-in user's rows for the My Tickets view. There is no
+  `localStorage` tickets store.
 - Available ticket types are derived from the event's `ticket_model`:
   - `public_ticket` events offer `day_pass` ("Day pass") and
     `full_event` ("Full event pass") at minimum.
@@ -234,32 +247,43 @@ Exactly one venue record is expected in the prototype.
 ### Newsletter subscription
 
 - `id`, `user_id` (nullable for anonymous signup), `email`, `event_id`
-  (nullable for venue-wide), `preferences` (JSON)
+  (nullable for venue-wide), `preferences` (JSON), `created_at`.
 - `preferences` in the prototype is an object of boolean topic flags:
   `program_highlights`, `news`, and `exhibitor_updates`. All three
   default to `true` on signup. New topic keys may be added later;
   missing keys are treated as `true` so older records remain valid.
-- Subscriptions are unique per (`email`, `event_id`) pair for anonymous
-  signups and per (`user_id`, `event_id`) pair for signed-in users.
-  `event_id === null` represents the venue-wide "All
-  Stockholmsmassan events" subscription.
-- In the prototype the subscription list is persisted to `localStorage`
-  under `massan.newsletter`. A Supabase-backed mode will replace this
-  with a `newsletter_subscriptions` table.
+- Logical uniqueness is per (`user_id`, `event_id`) for signed-in users
+  and per (`email`, `event_id`) for anonymous signups.
+  `event_id IS NULL` represents the venue-wide "All Stockholmsmassan
+  events" subscription. The prototype does not enforce uniqueness with a
+  database constraint — the frontend re-uses the existing row when it
+  finds one and the "anyone insert" RLS policy tolerates duplicate
+  anonymous rows.
+- Rows live in `public.newsletter_subscriptions`. RLS allows anyone to
+  insert a row (so the anonymous signup form works without a session)
+  but only the owning user to read or update their rows. Anonymous rows
+  therefore persist in the database but are not readable back by the
+  visitor who inserted them.
 
 ## Supabase usage
 
-- Target: Supabase Auth handles email sign-up, sign-in, and session
-  management. The prototype currently stubs this in `localStorage` (see
-  "User" under Data model) and migrates to Supabase Auth in a later
-  task.
-- Tables mirror the data model above. Use Row Level Security so users can
-  only read their own tickets and newsletter subscriptions, but can read
-  shared venue and event content without authentication.
+- Supabase Auth handles email sign-up, sign-in, and session management.
+  Simulated Google and Microsoft sign-in ride on anonymous Supabase
+  sessions so every signed-in user — real or simulated — has a stable
+  `auth.uid()` (see "User" under Data model).
+- Tables mirror the data model above. Row Level Security enforces that
+  a user can read and write only their own tickets and newsletter
+  subscriptions, while shared venue and event content is readable
+  without authentication.
 - Migrations live in `supabase/migrations/`. Seed data lives in
   `supabase/seed/` and may be a mix of SQL and JSON.
 - The frontend talks to Supabase directly using the anon key. There is no
   separate API layer in the prototype.
+- Email confirmation in Supabase Auth is left disabled for the shared
+  prototype project so a fresh `signUp` produces a usable session
+  immediately. The UI still handles the "no session returned" case
+  defensively so that enabling confirmation later does not break the
+  flow.
 
 Supabase is a hard dependency for catalog loading — see the
 "Catalog loading" section above. There is no runtime JSON fallback.
@@ -295,9 +319,11 @@ models Stockholmsmassan. When `seed.sql` changes, update
 
 All simulations must be centralized and easy to replace:
 
-- `simulatedSocialSignIn(provider)` — returns a fake session for Google
-  or Microsoft without calling the provider. It sets
-  `session.auth_provider = provider` and `session.simulated = true`.
+- `simulatedSocialSignIn(provider)` — creates a Supabase anonymous
+  session via `supabase.auth.signInAnonymously` and stamps the user's
+  metadata with `auth_provider = provider` and `simulated = true`. No
+  real OAuth request is made. The resulting `session.auth_provider` and
+  `session.simulated` flags drive the visible "simulated" label.
 - `simulatedPayment(order)` — returns a Promise that resolves after a
   short delay with `{ ok: true, transaction_ref }`. The reference is a
   plausible-looking string (e.g. `SIM-XXXXXXXX`) but no payment service
@@ -306,9 +332,9 @@ All simulations must be centralized and easy to replace:
   hosting; in development it logs the would-be email to the console.
   Known `kind` values: `newsletter_confirmation` (sent on newsletter
   signup, including the venue-wide toggle) and `ticket_confirmation`
-  (sent when a simulated ticket purchase completes). An
-  `auth_confirmation` kind is reserved for when email registration
-  moves off `localStorage`.
+  (sent when a simulated ticket purchase completes). Email-registration
+  confirmation mail is handled by Supabase Auth itself and is therefore
+  not produced through `simulatedEmail`.
 - `generateTicketQr(ticket)` — produces a QR payload string from the
   ticket id and a salted event id, and renders a QR-like SVG matrix
   deterministically derived from that payload. The matrix has the
@@ -365,9 +391,10 @@ that no real service is being hit.
   repository carries migrations, seed data, and the publishable (anon)
   key via `web/assets/env.js`; the service-role key is never committed.
 - Running the frontend requires network access to the shared Supabase
-  project for catalog loading. Auth, ticket purchase, and newsletter
-  signup remain simulated in `localStorage` regardless of Supabase
-  state, so those flows are demoable independently.
+  project for catalog loading, authentication, ticket purchase, and
+  newsletter signup. There is no `localStorage` fallback for these
+  flows: without Supabase the calendar errors out and auth, tickets,
+  and newsletter all fail.
 
 ## Change control
 
