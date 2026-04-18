@@ -55,6 +55,7 @@ export function ticketsStore() {
     async add(ticket) {
       const db = supabaseClient();
       const row = {
+        ...(ticket.id ? { id: ticket.id } : {}),
         user_id: ticket.user_id,
         event_id: ticket.event_id,
         ticket_type: ticket.ticket_type,

@@ -101,7 +101,11 @@ export function purchaseView() {
           ticket_type: type.id,
           attendee_email: email,
         });
+        // Assign the id client-side so the QR payload embeds it
+        // without a second round trip; otherwise every ticket for a
+        // given event hashes to the same visual QR.
         const draft = {
+          id: crypto.randomUUID(),
           user_id: user.id,
           event_id: ev.id,
           ticket_type: type.id,
@@ -113,9 +117,6 @@ export function purchaseView() {
         };
         draft.qr_payload = ticketQrPayload(draft);
         const ticket = await Alpine.store("tickets").add(draft);
-        // If the returned row did not include a persisted qr_payload,
-        // fall back to the draft so the confirmation screen still has one.
-        if (!ticket.qr_payload) ticket.qr_payload = draft.qr_payload;
         simulatedEmail("ticket_confirmation", {
           to: email,
           user_id: user.id,
