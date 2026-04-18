@@ -335,13 +335,16 @@ All simulations must be centralized and easy to replace:
   (sent when a simulated ticket purchase completes). Email-registration
   confirmation mail is handled by Supabase Auth itself and is therefore
   not produced through `simulatedEmail`.
-- `generateTicketQr(ticket)` — produces a QR payload string from the
-  ticket id and a salted event id, and renders a QR-like SVG matrix
-  deterministically derived from that payload. The matrix has the
-  three finder patterns in the corners and a body fill driven by a
-  hash of the payload. It is visually recognizable as a QR code but is
-  not a real QR-encoded credential, so it does not validate at a real
-  venue.
+- `ticketQrPayload(ticket)` and `ticketQrSvgFor(ticket)` — together
+  simulate a ticket QR. `ticketQrPayload` returns a payload string of
+  the form `massan:<ticket-id>:<event-id>:<salt>` (so two tickets with
+  the same id across events still produce distinct payloads).
+  `ticketQrSvgFor` renders a QR-like SVG matrix deterministically
+  derived from that payload — three finder patterns in the corners and
+  a body fill driven by a hash of the payload — by calling the
+  internal `ticketQrMatrix` and `ticketQrSvg` helpers. The result is
+  visually recognizable as a QR code but is not a real QR-encoded
+  credential, so it does not validate at a real venue.
 
 Simulations must be clearly labeled in the UI during development and
 testing, for example with a small "simulated" chip, so reviewers can see

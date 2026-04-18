@@ -356,10 +356,22 @@ test.describe("Ticket purchase (simulated)", () => {
     await expect(nordbyggTicket.first()).toBeVisible();
     await expect(nordbyggTicket.first().locator(".ticket-card__qr svg")).toBeVisible();
 
-    // 20. Event home shows "View ticket" alongside "Get tickets".
+    // 20. Event home shows "View ticket" alongside "Get tickets",
+    //     and "View ticket" opens My Tickets with the ticket visible.
     await openEventByName(page, "Nordbygg 2026");
     await expect(
-      page.locator(".event-hero__cta", { hasText: "View ticket" }),
+      page.locator(".event-hero__cta", { hasText: "Get tickets" }),
+    ).toBeVisible();
+    const viewTicketCta = page.locator(".event-hero__cta", {
+      hasText: "View ticket",
+    });
+    await expect(viewTicketCta).toBeVisible();
+    await viewTicketCta.click();
+    await expect(page).toHaveURL(/#\/tickets/);
+    await expect(
+      page
+        .locator(".tickets__list .ticket-card", { hasText: "Nordbygg 2026" })
+        .first(),
     ).toBeVisible();
 
     // 21. Register as delegate on ESTRO.

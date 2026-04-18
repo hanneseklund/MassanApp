@@ -250,7 +250,9 @@ section above for the caveats.
     `Nordbygg 2026` appears with ticket type label, attendee name,
     attendee email, a purchase date, and an SVG QR code.
 20. Return to `Nordbygg 2026`. Assert: the event home now shows both
-    "Get tickets" and "View ticket" CTAs.
+    "Get tickets" and "View ticket" CTAs. Tap "View ticket" and
+    assert: the app navigates to My Tickets (hash `#/tickets`) and the
+    Nordbygg ticket is visible.
 21. Open `ESTRO 2026`, tap "Register as delegate", and complete the
     flow. Assert: the delegate ticket appears in My Tickets alongside
     the Nordbygg ticket.
