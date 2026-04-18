@@ -246,6 +246,12 @@ test.describe("Congress archetype", () => {
     }
 
     await openSubview(page, "practical", "Practical info");
+    // Shared-venue-data regression check: the congress practical info
+    // must render the same transport copy ("Alvsjo") as Nordbygg, not
+    // just the section headings. This enforces the rule in
+    // docs/installation-testing-specification.md under "Regression
+    // checks for shared venue data".
+    await expect(page.locator(".practical")).toContainText("Alvsjo");
     for (const heading of [
       "Getting here",
       "Parking",
