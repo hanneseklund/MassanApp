@@ -147,6 +147,539 @@ on conflict (id) do update set
   branding = excluded.branding,
   overrides = excluded.overrides;
 
+-- Additional upcoming events from the Stockholmsmassan public calendar
+-- (https://stockholmsmassan.se/en/calendar/, scraped 2026-04-18 per
+-- issue #9). Event names, dates, types, and categories come from that
+-- public listing. Subtitles, summaries, branding colors, and `overrides`
+-- copy are simulated prototype content. These events do not carry
+-- per-event news, articles, program items, or exhibitors; they exist so
+-- the calendar view shows the full upcoming schedule rather than a
+-- small subset.
+insert into public.events (
+  id, venue_id, name, subtitle, type, category, audience_rule, ticket_model,
+  start_date, end_date, summary, branding, overrides
+) values
+  (
+    'yrkes-sm-2026', 'stockholmsmassan', 'Yrkes-SM 2026',
+    'Swedish national championship for vocational skills',
+    'Event', 'Education and training', 'public', 'none',
+    date '2026-05-04', date '2026-05-06',
+    'Yrkes-SM is the Swedish national championship for vocational skills. The 2026 edition is hosted at Stockholmsmassan for the first time, with young professionals competing across trades and visitors exploring career paths.',
+    jsonb_build_object('primary_color', '#00549a', 'accent_color', '#ffc72c', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer, where the organizer operates information and registration desks.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Admission is free for visitors. Competitor and jury access is managed by the organizer.'
+    )
+  ),
+  (
+    'ung-foretagsamhet-2026', 'stockholmsmassan', 'Ung Foretagsamhet 2026',
+    'Annual meeting for young entrepreneurs, schools, and policymakers',
+    'Event', 'Education and training', 'public', 'registration',
+    date '2026-05-26', date '2026-05-27',
+    'Ung Foretagsamhet brings together young entrepreneurs, schools, and policymakers to celebrate student-run companies and exchange ideas across Sweden.',
+    jsonb_build_object('primary_color', '#f26522', 'accent_color', '#003a5d', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Participants and school groups enter via the East Foyer following event signage.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Admission is managed through organizer registration for school groups and UF members.'
+    )
+  ),
+  (
+    'samhallsbyggararenan-2026', 'stockholmsmassan', 'Samhallsbyggararenan 2026',
+    'Community builders meeting on Swedish urban development',
+    'Event', 'Other', 'professional', 'registration',
+    date '2026-06-23', date '2026-06-25',
+    'Samhallsbyggararenan brings together public and private actors in Swedish urban development to discuss housing, infrastructure, and climate-adaptation challenges.',
+    jsonb_build_object('primary_color', '#004e42', 'accent_color', '#c2d57e', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates enter via the North Foyer. Badge pickup opens one hour before the first session each day.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is limited to registered delegates.'
+    )
+  ),
+  (
+    'formex-aug-2026', 'stockholmsmassan', 'Formex August 2026',
+    'Nordic interior design trade fair, autumn edition',
+    'Trade fair', 'Interior design', 'professional', 'registration',
+    date '2026-08-25', date '2026-08-27',
+    'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.',
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'european-dog-show-2026', 'stockholmsmassan', 'European Dog Show and Swedish Winner Show 2026',
+    'International canine exhibition and Swedish Winner show',
+    'Public fair', 'Entertainment', 'public', 'public_ticket',
+    date '2026-09-04', date '2026-09-06',
+    'A multi-day international dog show drawing tens of thousands of dog enthusiasts and their dogs, with breed competitions, handling, and family-friendly programming.',
+    jsonb_build_object('primary_color', '#5c2a2a', 'accent_color', '#d3c29c', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Dog-show participants use the dedicated South Entrance for dogs and handlers. Visitors enter through the Main Foyer.',
+      'bag_rules', 'Simulated. Pet carriers are allowed in the show halls. Oversize luggage should be checked at the cloakroom.',
+      'access_notes', 'Simulated. A visitor ticket grants access to the show halls; handler and participant access is managed by the organizer.'
+    )
+  ),
+  (
+    'european-congress-of-pathology-2026', 'stockholmsmassan', '38th European Congress of Pathology 2026',
+    'European Society of Pathology annual congress',
+    'Congress', 'Health & Medicine', 'professional', 'registration',
+    date '2026-09-12', date '2026-09-16',
+    'The European Congress of Pathology is the leading European gathering for pathologists, bringing together clinicians and researchers for a multi-track scientific program and industry exhibition.',
+    jsonb_build_object('primary_color', '#1c4d8f', 'accent_color', '#9d2235', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates enter via the East Foyer. Congress badges and photo ID are required at the door.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.',
+      'access_notes', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.'
+    )
+  ),
+  (
+    'sweden-water-expo-2026', 'stockholmsmassan', 'Sweden Water Expo 2026',
+    'Water infrastructure and sustainability trade fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2026-09-16', date '2026-09-17',
+    'Sweden Water Expo gathers the water, wastewater, and stormwater sector around infrastructure, sustainability, and digital solutions for the Swedish market.',
+    jsonb_build_object('primary_color', '#006eb6', 'accent_color', '#5fc4ef', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'llb-expo-2026', 'stockholmsmassan', 'LLB Expo 2026',
+    'Logistics and material handling trade fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2026-10-06', date '2026-10-08',
+    'LLB Expo is an industry gathering for logistics, warehousing, and material handling with exhibitor demonstrations, networking, and seminars.',
+    jsonb_build_object('primary_color', '#f58220', 'accent_color', '#0a4a80', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'hem-villamassan-2026', 'stockholmsmassan', 'Hem & Villamassan 2026',
+    'Consumer fair for home renovation and villa ownership',
+    'Public fair', 'Leisure and consumer', 'public', 'public_ticket',
+    date '2026-10-09', date '2026-10-11',
+    'Hem & Villamassan is a consumer fair covering home renovation, villa maintenance, and interior inspiration, combining exhibitors, lectures, and practical demonstrations.',
+    jsonb_build_object('primary_color', '#6bae3e', 'accent_color', '#44494e', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer.',
+      'bag_rules', 'Simulated. Work bags and small backpacks are allowed. Oversize items should be checked at the cloakroom.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls in the fair.'
+    )
+  ),
+  (
+    'tradgardsmassan-host-2026', 'stockholmsmassan', 'Tradgardsmassan Host 2026',
+    'Autumn edition of the Swedish gardening fair',
+    'Public fair', 'Leisure and consumer', 'public', 'public_ticket',
+    date '2026-10-09', date '2026-10-11',
+    'Tradgardsmassan Host is the autumn edition of the Swedish gardening fair, with exhibitors, talks, and demonstrations covering year-round gardening themes.',
+    jsonb_build_object('primary_color', '#b35b1c', 'accent_color', '#7e9b2c', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer.',
+      'bag_rules', 'Simulated. Gardening equipment and plants bought on site are allowed on the fair floor.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls in the fair.'
+    )
+  ),
+  (
+    'ecarexpo-2026', 'stockholmsmassan', 'eCarExpo 2026',
+    'Nordic electric car and charging trade fair',
+    'Trade fair', 'Industry', 'public', 'public_ticket',
+    date '2026-10-09', date '2026-10-11',
+    'eCarExpo is the leading Nordic event for electric cars and charging, combining consumer demonstrations and industry exhibitions across car brands, charging operators, and accessories.',
+    jsonb_build_object('primary_color', '#00a651', 'accent_color', '#1b365d', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer. Test-drive check-in is handled at a dedicated desk in the foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls; trade-only sessions are badge-controlled.'
+    )
+  ),
+  (
+    'underbara-children-2026', 'stockholmsmassan', 'UnderBARA CHILDREN 2026',
+    'Family entertainment fair for kids and families',
+    'Public fair', 'Entertainment', 'public', 'public_ticket',
+    date '2026-10-16', date '2026-10-18',
+    'UnderBARA CHILDREN is a large family-and-kids fair with entertainment, activities, exhibitors, and shows for Swedish families.',
+    jsonb_build_object('primary_color', '#e6007e', 'accent_color', '#ffe600', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Families enter through the main foyer. Strollers are welcome on the fair floor.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply. Strollers are allowed.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls; some activities have on-site queuing.'
+    )
+  ),
+  (
+    'skydd-2026', 'stockholmsmassan', 'Skydd 2026',
+    'Nordic security, fire-safety, and protection trade fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2026-10-20', date '2026-10-22',
+    'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals, with exhibitors, demonstrations, and a conference program.',
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'totalforsvarsmassan-2026', 'stockholmsmassan', 'Totalforsvarsmassan 2026',
+    'Swedish total-defense industry fair, co-located with Skydd',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2026-10-20', date '2026-10-22',
+    'Totalforsvarsmassan is the Swedish total-defense industry fair and runs alongside Skydd, covering civil protection, defense, and emergency preparedness.',
+    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'persontrafik-2026', 'stockholmsmassan', 'Persontrafik 2026',
+    'European meeting place for public transport',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2026-10-20', date '2026-10-22',
+    'Persontrafik is one of Europes most important meeting places for public transport, with exhibitors, a conference program, and networking for operators, authorities, and suppliers.',
+    jsonb_build_object('primary_color', '#0073cf', 'accent_color', '#ffd100', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates and trade visitors enter via the West Foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to registered trade visitors and delegates.'
+    )
+  ),
+  (
+    'larkraft-2026', 'stockholmsmassan', 'Larkraft 2026',
+    'Teacher professional-development conference',
+    'Conference', 'Education and training', 'professional', 'registration',
+    date '2026-10-27', date '2026-10-27',
+    'Larkraft is a one-day professional-development conference for teachers and school leaders in Sweden, focused on classroom practice and educational policy.',
+    jsonb_build_object('primary_color', '#4a5d7e', 'accent_color', '#e8a33d', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates enter through the main foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to registered delegates.'
+    )
+  ),
+  (
+    'comic-con-stockholm-winter-2026', 'stockholmsmassan', 'Comic Con Stockholm Winter 2026',
+    'Sweden''s largest popular culture meeting place',
+    'Event', 'Entertainment', 'public', 'public_ticket',
+    date '2026-10-30', date '2026-11-01',
+    'Comic Con Stockholm Winter gathers fans of popular culture, gaming, anime, and comics for signings, panels, cosplay events, and an exhibitor floor.',
+    jsonb_build_object('primary_color', '#231f20', 'accent_color', '#f8b614', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer. Cosplay check-in and prop check are handled near the entrance.',
+      'bag_rules', 'Simulated. Prop weapons are subject to the organizers prop policy; sharp or real weapons are not allowed.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls; some panels and signings have separate queues or additional tickets.'
+    )
+  ),
+  (
+    'allt-for-halsan-2026', 'stockholmsmassan', 'Allt for Halsan 2026',
+    'Consumer fair for health and wellness',
+    'Public fair', 'Health & Medicine', 'public', 'public_ticket',
+    date '2026-11-06', date '2026-11-08',
+    'Allt for Halsan is a consumer fair for health, wellness, and lifestyle, with exhibitors, product demonstrations, lectures, and activities.',
+    jsonb_build_object('primary_color', '#7db249', 'accent_color', '#f58220', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls in the fair.'
+    )
+  ),
+  (
+    'sthlm-food-wine-2026', 'stockholmsmassan', 'Sthlm Food & Wine 2026',
+    'Culinary consumer event with tastings and demonstrations',
+    'Event', 'Food & drink', 'public', 'public_ticket',
+    date '2026-11-06', date '2026-11-08',
+    'Sthlm Food & Wine is a culinary event combining exhibitors, tastings, cooking demonstrations, and wine pairings.',
+    jsonb_build_object('primary_color', '#8b1a1a', 'accent_color', '#c9a227', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer.',
+      'bag_rules', 'Simulated. Open-container and tasting rules follow organizer policy.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls; some tastings require additional tokens or tickets.'
+    )
+  ),
+  (
+    'socionomdagarna-2026', 'stockholmsmassan', 'Socionomdagarna 2026',
+    'Professional development conference for Swedish social workers',
+    'Conference', 'Education and training', 'professional', 'registration',
+    date '2026-11-10', date '2026-11-11',
+    'Socionomdagarna is a professional development conference for Swedish social workers, in its 22nd edition, with keynotes, seminars, and an exhibition.',
+    jsonb_build_object('primary_color', '#1d4e89', 'accent_color', '#e87a45', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates enter via the North Foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to registered delegates.'
+    )
+  ),
+  (
+    'battery-innovations-days-2026', 'stockholmsmassan', 'Battery Innovations Days 2026',
+    'European conference on battery research and innovation',
+    'Congress', 'Industry', 'professional', 'registration',
+    date '2026-11-11', date '2026-11-12',
+    'Battery Innovations Days is a European conference covering battery research, materials, manufacturing, and innovation, with scientific and industry tracks.',
+    jsonb_build_object('primary_color', '#00a398', 'accent_color', '#262626', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates enter via the West Foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to registered delegates.'
+    )
+  ),
+  (
+    'gymnasiemassan-2026', 'stockholmsmassan', 'Gymnasiemassan 2026',
+    'Upper secondary school selection fair',
+    'Public fair', 'Education and training', 'public', 'public_ticket',
+    date '2026-11-17', date '2026-11-19',
+    'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.',
+    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Students and families enter through the main foyer. School groups have a dedicated check-in.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.'
+    )
+  ),
+  (
+    'formex-jan-2027', 'stockholmsmassan', 'Formex January 2027',
+    'Nordic interior design trade fair, spring edition',
+    'Trade fair', 'Interior design', 'professional', 'registration',
+    date '2027-01-19', date '2027-01-21',
+    'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The January edition focuses on the spring-summer season.',
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'stockholm-design-week-2027', 'stockholmsmassan', 'Stockholm Design Week 2027',
+    'City-wide design week with venue events at Stockholmsmassan',
+    'Event', 'Interior design', 'public', 'none',
+    date '2027-02-08', date '2027-02-14',
+    'Stockholm Design Week is a city-wide design program with showrooms, exhibitions, and events across Stockholm, anchored by activity at Stockholmsmassan during the Stockholm Furniture Fair week.',
+    jsonb_build_object('primary_color', '#111111', 'accent_color', '#e4d9c5', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Venue events at Stockholmsmassan share the main foyer entrance with the Stockholm Furniture Fair.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Most city-wide programming is open; venue sessions inside Stockholmsmassan follow the Stockholm Furniture Fair access rules.'
+    )
+  ),
+  (
+    'stockholm-furniture-fair-2027', 'stockholmsmassan', 'Stockholm Furniture Fair 2027',
+    'Leading platform for Scandinavian design',
+    'Trade fair', 'Interior design', 'professional', 'registration',
+    date '2027-02-09', date '2027-02-12',
+    'Stockholm Furniture Fair is the leading platform for Scandinavian design, with exhibitors, Greenhouse emerging-designer spaces, and a curated program. The 2027 edition is the next biennial edition.',
+    jsonb_build_object('primary_color', '#1a1a1a', 'accent_color', '#bfb8a5', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors and accredited media registered through the organizer.'
+    )
+  ),
+  (
+    'sportfiskemassan-2027', 'stockholmsmassan', 'Sportfiskemassan 2027',
+    'Swedish sport fishing consumer expo',
+    'Public fair', 'Leisure and consumer', 'public', 'public_ticket',
+    date '2027-03-19', date '2027-03-21',
+    'Sportfiskemassan is the Swedish sport-fishing consumer expo with exhibitors, demonstrations, and an expanded program for the 2027 edition.',
+    jsonb_build_object('primary_color', '#1b5e96', 'accent_color', '#86bc40', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Visitors enter through the main foyer.',
+      'bag_rules', 'Simulated. Fishing rods and related equipment are allowed on the fair floor.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all halls.'
+    )
+  ),
+  (
+    'escmid-global-2027', 'stockholmsmassan', 'ESCMID Global 2027',
+    'European congress on infectious diseases and clinical microbiology',
+    'Congress', 'Health & Medicine', 'professional', 'registration',
+    date '2027-04-09', date '2027-04-13',
+    'ESCMID Global is the leading European congress on infectious diseases and clinical microbiology, with a multi-track scientific program and large industry exhibition.',
+    jsonb_build_object('primary_color', '#004a94', 'accent_color', '#c8102e', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates enter via the East Foyer. Badges and photo ID are required at the door.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.',
+      'access_notes', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.'
+    )
+  ),
+  (
+    'cired-2027', 'stockholmsmassan', 'CIRED 2027',
+    'International conference and exhibition on electricity distribution',
+    'Congress', 'Industry', 'professional', 'registration',
+    date '2027-06-14', date '2027-06-17',
+    'CIRED is the leading forum for the global electricity distribution community, with technical sessions, poster presentations, and a large industry exhibition.',
+    jsonb_build_object('primary_color', '#002147', 'accent_color', '#e6a22a', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Delegates enter via the North Foyer. Badges are required at the door.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to registered delegates and exhibitors.'
+    )
+  ),
+  (
+    'formex-aug-2027', 'stockholmsmassan', 'Formex August 2027',
+    'Nordic interior design trade fair, autumn edition',
+    'Trade fair', 'Interior design', 'professional', 'registration',
+    date '2027-08-24', date '2027-08-26',
+    'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.',
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'totalforsvarsmassan-2027', 'stockholmsmassan', 'Totalforsvarsmassan 2027',
+    'Swedish total-defense industry fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2027-10-26', date '2027-10-28',
+    'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.',
+    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'gymnasiemassan-2027', 'stockholmsmassan', 'Gymnasiemassan 2027',
+    'Upper secondary school selection fair',
+    'Public fair', 'Education and training', 'public', 'public_ticket',
+    date '2027-11-23', date '2027-11-25',
+    'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.',
+    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Students and families enter through the main foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.'
+    )
+  ),
+  (
+    'formex-jan-2028', 'stockholmsmassan', 'Formex January 2028',
+    'Nordic interior design trade fair, spring edition',
+    'Trade fair', 'Interior design', 'professional', 'registration',
+    date '2028-01-18', date '2028-01-20',
+    'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.',
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Work bags are allowed.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'nordbygg-2028', 'stockholmsmassan', 'Nordbygg 2028',
+    'Nordic construction trade fair',
+    'Trade fair', 'Construction and real estate', 'public', 'public_ticket',
+    date '2028-04-04', date '2028-04-07',
+    'Nordbygg returns to Stockholmsmassan as the leading Nordic meeting place for the construction and real-estate industry.',
+    jsonb_build_object('primary_color', '#0b3d91', 'accent_color', '#f4b400', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration.',
+      'bag_rules', 'Simulated. Work bags and smaller backpacks are allowed on the fair floor.',
+      'access_notes', 'Simulated. A visitor ticket grants access to all exhibition halls and seminar rooms.'
+    )
+  ),
+  (
+    'formex-aug-2028', 'stockholmsmassan', 'Formex August 2028',
+    'Nordic interior design trade fair, autumn edition',
+    'Trade fair', 'Interior design', 'professional', 'registration',
+    date '2028-08-29', date '2028-08-31',
+    'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.',
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.',
+      'bag_rules', 'Simulated. Work bags are allowed.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'skydd-2028', 'stockholmsmassan', 'Skydd 2028',
+    'Nordic security, fire-safety, and protection trade fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2028-10-24', date '2028-10-26',
+    'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.',
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'gymnasiemassan-2028', 'stockholmsmassan', 'Gymnasiemassan 2028',
+    'Upper secondary school selection fair',
+    'Public fair', 'Education and training', 'public', 'public_ticket',
+    date '2028-11-21', date '2028-11-23',
+    'Gymnasiemassan is the Swedish upper-secondary school selection fair.',
+    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Students and families enter through the main foyer.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.'
+    )
+  ),
+  (
+    'skydd-2030', 'stockholmsmassan', 'Skydd 2030',
+    'Nordic security, fire-safety, and protection trade fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2030-10-22', date '2030-10-24',
+    'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.',
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'totalforsvarsmassan-2030', 'stockholmsmassan', 'Totalforsvarsmassan 2030',
+    'Swedish total-defense industry fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2030-10-22', date '2030-10-24',
+    'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.',
+    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  ),
+  (
+    'skydd-2032', 'stockholmsmassan', 'Skydd 2032',
+    'Nordic security, fire-safety, and protection trade fair',
+    'Trade fair', 'Industry', 'professional', 'registration',
+    date '2032-10-19', date '2032-10-21',
+    'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.',
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', null, 'hero_image_credit', null),
+    jsonb_build_object(
+      'entrance', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.',
+      'bag_rules', 'Simulated. Standard venue bag rules apply.',
+      'access_notes', 'Simulated. Access is restricted to trade visitors registered through the organizer.'
+    )
+  )
+on conflict (id) do update set
+  venue_id = excluded.venue_id,
+  name = excluded.name,
+  subtitle = excluded.subtitle,
+  type = excluded.type,
+  category = excluded.category,
+  audience_rule = excluded.audience_rule,
+  ticket_model = excluded.ticket_model,
+  start_date = excluded.start_date,
+  end_date = excluded.end_date,
+  summary = excluded.summary,
+  branding = excluded.branding,
+  overrides = excluded.overrides;
+
 insert into public.news_items (id, event_id, published_at, title, body) values
   ('nordbygg-2026-news-exhibitors-crossed', 'nordbygg-2026', timestamptz '2026-03-02T09:00:00Z',
    'Nordbygg 2026 exhibitor registrations cross 700',

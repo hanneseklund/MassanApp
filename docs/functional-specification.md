@@ -201,7 +201,8 @@ The prototype must support this end-to-end path without gaps:
 
 ## Event archetype coverage
 
-The prototype must model two distinct archetypes:
+The prototype must model two distinct archetypes in depth, with full
+per-event news, articles, program items, and exhibitors:
 
 - Trade-fair archetype, seeded with `Nordbygg 2026`. This exercises public
   ticketing, an exhibitor index with exhibitor pages, a seminar program,
@@ -210,6 +211,14 @@ The prototype must model two distinct archetypes:
   exercises richer program content and the idea of a professional or
   gated audience, even if the prototype's UI does not yet enforce strict
   audience gating.
+
+The calendar additionally seeds every upcoming Stockholmsmassan event
+published on the official calendar as lightweight entries (name, dates,
+type, category, audience rule, ticket model, branding, and an
+event-level overrides block) so the calendar reflects the real upcoming
+schedule rather than a small subset. These lightweight entries do not
+carry per-event news, articles, program items, or exhibitors; opening
+one shows the hero, practical information, and a newsletter hook.
 
 The data model must leave room for additional archetypes (annual member
 meetings, shareholder meetings, high-security international meetings) by
