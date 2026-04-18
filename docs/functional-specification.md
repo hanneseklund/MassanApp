@@ -250,8 +250,22 @@ that reviewers understand they are not real integrations.
 
 - Interactive elements must have accessible names and sufficient tap size
   on a phone screen.
-- Text content is English in the prototype. The data model does not
-  preclude adding Swedish later.
+- The app chrome supports English and Swedish. A compact language
+  toggle in the top chrome switches between the two and the chosen
+  language is remembered across reloads. English is the default on
+  first load.
+- "Chrome" in this context means everything the app itself produces:
+  titles, buttons, tab labels, placeholders, hints, error copy, step
+  labels, and both simulated-payment and simulated-email UI. Event
+  content sourced from outside the app — event names, summaries, news,
+  articles, program items, exhibitors, practical-info venue copy —
+  stays in the language it was seeded in. If a future task seeds
+  translated content for events, the UI is already wired to render it
+  through the same switch.
+- Dates render in the active language (weekday and month names use the
+  UI language's locale). Saved ticket labels remain in English so a
+  wallet entry does not change wording based on whoever later opens
+  My Tickets.
 
 ## Out of scope for the prototype
 

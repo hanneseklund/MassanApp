@@ -10,10 +10,10 @@ import {
 } from "../util/dates.js";
 import { SECTION_LABELS, ticketCtaLabel } from "../util/sections.js";
 
-const OVERRIDE_LABELS = {
-  entrance: "Entrance",
-  bag_rules: "Bag rules",
-  access_notes: "Access notes",
+const OVERRIDE_KEYS = {
+  entrance: "overrides.entrance",
+  bag_rules: "overrides.bag_rules",
+  access_notes: "overrides.access_notes",
 };
 
 export function eventView() {
@@ -91,7 +91,9 @@ export function eventView() {
       return Object.keys(this.overrides()).length > 0;
     },
     overrideLabel(key) {
-      return OVERRIDE_LABELS[key] ?? key.replace(/_/g, " ");
+      const translationKey = OVERRIDE_KEYS[key];
+      if (translationKey) return Alpine.store("lang").t(translationKey);
+      return key.replace(/_/g, " ");
     },
   };
 }

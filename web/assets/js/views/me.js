@@ -2,15 +2,17 @@
 // to My Tickets, and the newsletter preferences component. Visitors
 // who arrive at #/me without a session see a sign-in prompt.
 
-const PROVIDER_LABELS = {
-  email: "Email",
-  google: "Google",
-  microsoft: "Microsoft",
-  anonymous: "Guest",
+const PROVIDER_KEYS = {
+  email: "providers.email",
+  google: "providers.google",
+  microsoft: "providers.microsoft",
+  anonymous: "providers.anonymous",
 };
 
 function providerLabel(provider) {
-  return PROVIDER_LABELS[provider] ?? provider;
+  const key = PROVIDER_KEYS[provider];
+  if (key) return Alpine.store("lang").t(key);
+  return provider;
 }
 
 export function meView() {
@@ -37,8 +39,11 @@ export function meView() {
       const user = this.user();
       if (!user) return "";
       const count = Alpine.store("tickets").forUser(user.id).length;
-      if (!count) return "No tickets yet";
-      return count === 1 ? "1 ticket" : `${count} tickets`;
+      const t = Alpine.store("lang").t.bind(Alpine.store("lang"));
+      if (!count) return t("me.no_tickets_hint");
+      return count === 1
+        ? t("me.one_ticket_hint")
+        : t("me.n_tickets_hint", { count });
     },
   };
 }

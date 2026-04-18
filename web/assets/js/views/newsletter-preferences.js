@@ -77,7 +77,9 @@ export function newsletterPreferences() {
           to: record.email,
           user_id: record.user_id,
           event_id: null,
-          event_name: "All Stockholmsmassan events",
+          event_name: Alpine.store("lang").t(
+            "newsletter.venue_wide_event_name",
+          ),
           preferences: record.preferences,
         });
       } catch (err) {

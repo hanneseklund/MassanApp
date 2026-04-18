@@ -78,7 +78,8 @@ export function newsletterSignup() {
         });
         this.submitted = true;
       } catch (err) {
-        this.error = err.message || "Could not sign up.";
+        this.error =
+          err.message || Alpine.store("lang").t("newsletter.err_signup");
       } finally {
         this.processing = false;
       }

@@ -132,7 +132,8 @@ a {
 }
 
 .chrome__back,
-.chrome__me {
+.chrome__me,
+.chrome__lang {
   appearance: none;
   background: none;
   border: none;
@@ -146,8 +147,10 @@ a {
 
 .chrome__back:hover,
 .chrome__me:hover,
+.chrome__lang:hover,
 .chrome__back:focus-visible,
-.chrome__me:focus-visible {
+.chrome__me:focus-visible,
+.chrome__lang:focus-visible {
   color: var(--accent);
 }
 
@@ -155,8 +158,18 @@ a {
   justify-self: start;
 }
 
-.chrome__me {
+.chrome__actions {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chrome__lang {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 10px 6px;
+  min-width: 32px;
 }
 
 .view {

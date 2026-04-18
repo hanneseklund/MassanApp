@@ -2,40 +2,92 @@
 // catalog keyed by event.ticket_model. Ticket types live in the
 // frontend so the catalog stays stable regardless of how the event was
 // loaded (see docs/implementation-specification.md under "Ticket").
+//
+// All user-visible strings are looked up from the `lang` store so the
+// same catalog renders in both supported UI languages. Persisted
+// fields (e.g. `ticket_type_label` on a saved ticket) use the
+// canonical English copy so the wallet entry does not flip language
+// based on whoever happens to view it later.
 
-export const SECTION_LABELS = [
-  { id: "news", label: "News" },
-  { id: "articles", label: "Articles" },
-  { id: "program", label: "Program" },
-  { id: "exhibitors", label: "Exhibitors" },
-  { id: "practical", label: "Practical info" },
-  { id: "newsletter", label: "Newsletter" },
+import { translate } from "../i18n.js";
+
+const FALLBACK_LANG = "en";
+
+function t(key, params) {
+  const store = globalThis.Alpine?.store?.("lang");
+  if (store) return store.t(key, params);
+  return translate(key, FALLBACK_LANG, params);
+}
+
+// English-only lookup for values that persist to the database and
+// therefore must not change with the active UI language.
+function tCanonical(key) {
+  return translate(key, FALLBACK_LANG);
+}
+
+// `label` is a getter so switching language immediately updates every
+// template that iterates over `SECTION_LABELS` — the Alpine effect
+// backing `x-text="section.label"` tracks `$store.lang.current` via
+// `t()` and re-runs on change.
+const SECTION_ENTRIES = [
+  { id: "news", key: "sections.news" },
+  { id: "articles", key: "sections.articles" },
+  { id: "program", key: "sections.program" },
+  { id: "exhibitors", key: "sections.exhibitors" },
+  { id: "practical", key: "sections.practical" },
+  { id: "newsletter", key: "sections.newsletter" },
 ];
 
-export const TICKET_TYPES = {
+export const SECTION_LABELS = SECTION_ENTRIES.map((entry) => ({
+  id: entry.id,
+  get label() {
+    return t(entry.key);
+  },
+}));
+
+const TICKET_TYPE_ENTRIES = {
   public_ticket: [
     {
       id: "day_pass",
-      label: "Day pass",
-      description: "Entry for one day of the event.",
+      label_key: "ticket_types.day_pass.label",
+      description_key: "ticket_types.day_pass.description",
       price: "SEK 295",
     },
     {
       id: "full_event",
-      label: "Full event pass",
-      description: "Entry for every day of the event.",
+      label_key: "ticket_types.full_event.label",
+      description_key: "ticket_types.full_event.description",
       price: "SEK 595",
     },
   ],
   registration: [
     {
       id: "delegate",
-      label: "Delegate registration",
-      description: "Full congress access for all program days.",
+      label_key: "ticket_types.delegate.label",
+      description_key: "ticket_types.delegate.description",
       price: "EUR 450",
     },
   ],
 };
+
+// Kept for back-compat with anything that still imports `TICKET_TYPES`
+// directly. The `label` / `description` getters resolve against the
+// active UI language on access.
+export const TICKET_TYPES = Object.fromEntries(
+  Object.entries(TICKET_TYPE_ENTRIES).map(([model, entries]) => [
+    model,
+    entries.map((entry) => ({
+      id: entry.id,
+      price: entry.price,
+      get label() {
+        return t(entry.label_key);
+      },
+      get description() {
+        return t(entry.description_key);
+      },
+    })),
+  ]),
+);
 
 export function ticketTypesFor(event) {
   if (!event) return [];
@@ -44,7 +96,20 @@ export function ticketTypesFor(event) {
 
 export function ticketCtaLabel(event) {
   if (!event) return "";
-  if (event.ticket_model === "public_ticket") return "Get tickets";
-  if (event.ticket_model === "registration") return "Register as delegate";
+  if (event.ticket_model === "public_ticket") return t("ticket_cta.public");
+  if (event.ticket_model === "registration")
+    return t("ticket_cta.registration");
   return "";
+}
+
+// Canonical English label for a given ticket-type id. Used by the
+// purchase flow when persisting the chosen ticket type — the stored
+// label must stay stable independent of the UI language at checkout
+// time.
+export function canonicalTicketTypeLabel(ticketTypeId) {
+  for (const entries of Object.values(TICKET_TYPE_ENTRIES)) {
+    const entry = entries.find((e) => e.id === ticketTypeId);
+    if (entry) return tCanonical(entry.label_key);
+  }
+  return ticketTypeId;
 }

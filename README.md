@@ -25,6 +25,9 @@ The prototype is the starting point for the work requested in
   preferences.
 - Reuses shared Stockholmsmassan venue data (transport, parking,
   restaurants, security) across every seeded event.
+- Supports English and Swedish app chrome. A compact toggle in the
+  top chrome switches between the two languages and the choice is
+  persisted across reloads.
 
 The first fully seeded event is `Nordbygg 2026`. A congress-style reference
 event (`ESTRO 2026` or `EHA2026 Congress`) is included so the data model

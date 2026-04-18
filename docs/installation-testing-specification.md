@@ -278,6 +278,19 @@ section above for the caveats.
     venue-wide toggle stays on. Toggle it off and reload. Assert: the
     toggle stays off.
 
+### Language toggle
+
+29. From any view, tap the compact language toggle in the top chrome
+    (it shows `SV` when English is active and `EN` when Swedish is
+    active). Assert: the chrome title, primary nav labels, and hint
+    copy switch language. Reload the page. Assert: the choice is
+    preserved.
+30. Tap the toggle again to return to English. Assert: the chrome
+    re-renders in English without requiring a reload. Event content
+    (event names, summaries, news, articles, exhibitor copy,
+    practical-info venue copy) stays in the language it was seeded in
+    regardless of the toggle.
+
 ## Automated smoke suite
 
 The automated counterpart to the checklist lives at

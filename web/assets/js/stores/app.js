@@ -175,19 +175,22 @@ export function appStore() {
     },
 
     chromeTitle() {
-      if (this.view === "calendar") return "Events";
-      if (this.view === "auth") return "Sign in";
-      if (this.view === "me") return "My Pages";
-      if (this.view === "tickets") return "My Tickets";
+      const t = (key, params) => Alpine.store("lang").t(key, params);
+      if (this.view === "calendar") return t("title.events");
+      if (this.view === "auth") return t("title.sign_in");
+      if (this.view === "me") return t("title.my_pages");
+      if (this.view === "tickets") return t("title.my_tickets");
       if (this.view === "purchase") {
         const ev = Alpine.store("catalog").eventById(this.eventId);
-        return ev ? `Get tickets · ${ev.name}` : "Get tickets";
+        return ev
+          ? t("title.get_tickets_for", { name: ev.name })
+          : t("title.get_tickets");
       }
       if (this.view === "event") {
         const ev = Alpine.store("catalog").eventById(this.eventId);
-        return ev ? ev.name : "Event";
+        return ev ? ev.name : t("title.event_default");
       }
-      return "MassanApp";
+      return t("title.app_default");
     },
   };
 }

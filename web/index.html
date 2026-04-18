@@ -28,31 +28,43 @@
   </head>
   <body x-data x-cloak>
     <!-- Simulated-mode banner so reviewers see this is a prototype. -->
-    <div class="sim-banner" x-show="$store.app.isSimulated">
-      Prototype · simulated data and integrations
-    </div>
+    <div
+      class="sim-banner"
+      x-show="$store.app.isSimulated"
+      x-text="$store.lang.t('sim.banner')"
+    ></div>
 
     <!-- Top chrome. "Back to events" appears only when an event is selected,
-         per the one-event-at-a-time navigation rule. -->
+         per the one-event-at-a-time navigation rule. The right-hand
+         cluster holds the language toggle and the "Me" link. -->
     <header class="chrome">
       <button
         class="chrome__back"
         type="button"
         x-show="$store.app.view !== 'calendar'"
         @click="$store.app.goCalendar()"
-        aria-label="Back to events"
+        :aria-label="$store.lang.t('chrome.back_events_aria')"
       >
-        <span aria-hidden="true">&larr;</span> Events
+        <span aria-hidden="true">&larr;</span>
+        <span x-text="$store.lang.t('chrome.events')"></span>
       </button>
       <h1 class="chrome__title" x-text="$store.app.chromeTitle()"></h1>
-      <button
-        class="chrome__me"
-        type="button"
-        @click="$store.app.goMe()"
-        aria-label="My Pages"
-      >
-        Me
-      </button>
+      <div class="chrome__actions">
+        <button
+          class="chrome__lang"
+          type="button"
+          @click="$store.lang.toggle()"
+          :aria-label="$store.lang.t('chrome.lang_aria')"
+          x-text="$store.lang.current === 'en' ? 'SV' : 'EN'"
+        ></button>
+        <button
+          class="chrome__me"
+          type="button"
+          @click="$store.app.goMe()"
+          :aria-label="$store.lang.t('chrome.me_aria')"
+          x-text="$store.lang.t('chrome.me')"
+        ></button>
+      </div>
     </header>
 
     <main class="view">
@@ -64,37 +76,37 @@
       >
         <div class="filters">
           <label class="filters__search">
-            <span class="sr-only">Search events</span>
+            <span class="sr-only" x-text="$store.lang.t('calendar.search_label')"></span>
             <input
               type="search"
-              placeholder="Search events"
+              :placeholder="$store.lang.t('calendar.search_placeholder')"
               x-model.debounce.150ms="$store.filters.query"
               autocomplete="off"
             />
           </label>
           <div class="filters__row">
             <label>
-              <span class="sr-only">Type</span>
+              <span class="sr-only" x-text="$store.lang.t('calendar.type_label')"></span>
               <select x-model="$store.filters.type">
-                <option value="">All types</option>
+                <option value="" x-text="$store.lang.t('calendar.all_types')"></option>
                 <template x-for="t in types" :key="t">
                   <option :value="t" x-text="t"></option>
                 </template>
               </select>
             </label>
             <label>
-              <span class="sr-only">Category</span>
+              <span class="sr-only" x-text="$store.lang.t('calendar.category_label')"></span>
               <select x-model="$store.filters.category">
-                <option value="">All categories</option>
+                <option value="" x-text="$store.lang.t('calendar.all_categories')"></option>
                 <template x-for="c in categories" :key="c">
                   <option :value="c" x-text="c"></option>
                 </template>
               </select>
             </label>
             <label>
-              <span class="sr-only">Month</span>
+              <span class="sr-only" x-text="$store.lang.t('calendar.month_label')"></span>
               <select x-model="$store.filters.month">
-                <option value="">All months</option>
+                <option value="" x-text="$store.lang.t('calendar.all_months')"></option>
                 <template x-for="m in months" :key="m">
                   <option :value="m" x-text="m"></option>
                 </template>
@@ -107,21 +119,19 @@
           class="hint"
           x-show="$store.catalog.loading"
           aria-live="polite"
-        >
-          Loading events…
-        </p>
+          x-text="$store.lang.t('calendar.loading')"
+        ></p>
         <p
           class="hint hint--error"
           x-show="!$store.catalog.loading && $store.catalog.error"
           role="alert"
-          x-text="'Could not load events: ' + $store.catalog.error"
+          x-text="$store.lang.t('calendar.load_error', { error: $store.catalog.error })"
         ></p>
         <p
           class="hint"
           x-show="!$store.catalog.loading && !$store.catalog.error && filtered().length === 0"
-        >
-          No events match the current filters.
-        </p>
+          x-text="$store.lang.t('calendar.no_match')"
+        ></p>
 
         <ul
           class="events"
@@ -138,7 +148,7 @@
                   <img
                     class="events__image"
                     :src="event.branding.hero_image"
-                    :alt="event.name + ' hero image'"
+                    :alt="$store.lang.t('event.hero_image_alt', { name: event.name })"
                     loading="lazy"
                     decoding="async"
                   />
@@ -167,14 +177,14 @@
                   <img
                     class="event-hero__image"
                     :src="event().branding.hero_image"
-                    :alt="event().name + ' hero image'"
+                    :alt="$store.lang.t('event.hero_image_alt', { name: event().name })"
                     loading="lazy"
                     decoding="async"
                   />
                   <figcaption
                     class="event-hero__image-credit"
                     x-show="event().branding?.hero_image_credit"
-                    x-text="'Image: ' + event().branding.hero_image_credit"
+                    x-text="$store.lang.t('event.image_credit_prefix') + event().branding.hero_image_credit"
                   ></figcaption>
                 </figure>
               </template>
@@ -197,9 +207,8 @@
                   type="button"
                   x-show="hasTicket()"
                   @click="$store.app.goTickets()"
-                >
-                  View ticket
-                </button>
+                  x-text="$store.lang.t('event.view_ticket')"
+                ></button>
               </div>
             </header>
 
@@ -217,16 +226,16 @@
 
             <div class="event-subview">
               <template x-if="$store.app.eventSubview === 'home'">
-                <p class="placeholder">
-                  Pick a section above to explore this event.
-                </p>
+                <p class="placeholder" x-text="$store.lang.t('event.pick_section')"></p>
               </template>
 
               <template x-if="$store.app.eventSubview === 'news'">
                 <div>
-                  <p class="placeholder" x-show="news().length === 0">
-                    No news yet for this event.
-                  </p>
+                  <p
+                    class="placeholder"
+                    x-show="news().length === 0"
+                    x-text="$store.lang.t('event.no_news')"
+                  ></p>
                   <ul class="news-list" x-show="news().length > 0">
                     <template x-for="item in news()" :key="item.id">
                       <li class="news-item">
@@ -247,9 +256,11 @@
 
               <template x-if="$store.app.eventSubview === 'articles'">
                 <div>
-                  <p class="placeholder" x-show="articles().length === 0">
-                    No articles yet for this event.
-                  </p>
+                  <p
+                    class="placeholder"
+                    x-show="articles().length === 0"
+                    x-text="$store.lang.t('event.no_articles')"
+                  ></p>
                   <ul class="articles-list" x-show="articles().length > 0">
                     <template x-for="a in articles()" :key="a.id">
                       <li class="article">
@@ -263,9 +274,11 @@
 
               <template x-if="$store.app.eventSubview === 'program'">
                 <div>
-                  <p class="placeholder" x-show="programByDay().length === 0">
-                    No program published yet for this event.
-                  </p>
+                  <p
+                    class="placeholder"
+                    x-show="programByDay().length === 0"
+                    x-text="$store.lang.t('event.no_program')"
+                  ></p>
                   <template x-for="group in programByDay()" :key="group.day">
                     <section class="program-day">
                       <h3
@@ -293,7 +306,7 @@
                             <p
                               class="session__speakers"
                               x-show="speakerNames(session).length > 0"
-                              x-text="'Speakers: ' + speakerNames(session).join(', ')"
+                              x-text="$store.lang.t('event.speakers_prefix') + speakerNames(session).join(', ')"
                             ></p>
                             <p
                               class="session__description"
@@ -312,10 +325,13 @@
               >
                 <div>
                   <label class="filters__search">
-                    <span class="sr-only">Search exhibitors</span>
+                    <span
+                      class="sr-only"
+                      x-text="$store.lang.t('event.search_exhibitors_label')"
+                    ></span>
                     <input
                       type="search"
-                      placeholder="Search exhibitors"
+                      :placeholder="$store.lang.t('event.search_exhibitors_placeholder')"
                       x-model.debounce.150ms="exhibitorQuery"
                       autocomplete="off"
                     />
@@ -323,9 +339,8 @@
                   <p
                     class="placeholder"
                     x-show="filteredExhibitors().length === 0"
-                  >
-                    No exhibitors match your search.
-                  </p>
+                    x-text="$store.lang.t('event.no_exhibitor_match')"
+                  ></p>
                   <ul
                     class="exhibitor-list"
                     x-show="filteredExhibitors().length > 0"
@@ -346,7 +361,7 @@
                           ></span>
                           <span
                             class="exhibitor-card__booth"
-                            x-text="'Booth ' + e.booth"
+                            x-text="$store.lang.t('event.booth_prefix') + e.booth"
                           ></span>
                           <span
                             class="exhibitor-card__desc"
@@ -368,7 +383,8 @@
                     class="back-link"
                     @click="$store.app.backToExhibitors()"
                   >
-                    <span aria-hidden="true">&larr;</span> Back to exhibitors
+                    <span aria-hidden="true">&larr;</span>
+                    <span x-text="$store.lang.t('event.back_exhibitors')"></span>
                   </button>
                   <template x-if="exhibitor()">
                     <article class="exhibitor-detail">
@@ -378,7 +394,7 @@
                       ></h3>
                       <p
                         class="exhibitor-detail__booth"
-                        x-text="'Booth ' + exhibitor().booth"
+                        x-text="$store.lang.t('event.booth_prefix') + exhibitor().booth"
                       ></p>
                       <p
                         class="exhibitor-detail__desc"
@@ -395,16 +411,18 @@
                       </p>
                     </article>
                   </template>
-                  <p class="hint" x-show="!exhibitor()">
-                    Exhibitor not found.
-                  </p>
+                  <p
+                    class="hint"
+                    x-show="!exhibitor()"
+                    x-text="$store.lang.t('event.exhibitor_not_found')"
+                  ></p>
                 </div>
               </template>
 
               <template x-if="$store.app.eventSubview === 'practical'">
                 <div class="practical">
                   <section class="practical__section">
-                    <h3>Getting here</h3>
+                    <h3 x-text="$store.lang.t('practical.getting_here')"></h3>
                     <p x-text="venue().transport?.summary"></p>
                     <ul>
                       <template
@@ -419,7 +437,7 @@
                     </ul>
                   </section>
                   <section class="practical__section">
-                    <h3>Parking</h3>
+                    <h3 x-text="$store.lang.t('practical.parking')"></h3>
                     <p x-text="venue().parking?.summary"></p>
                     <p
                       class="practical__note"
@@ -427,7 +445,7 @@
                     ></p>
                   </section>
                   <section class="practical__section">
-                    <h3>Restaurants and cafes</h3>
+                    <h3 x-text="$store.lang.t('practical.restaurants')"></h3>
                     <ul>
                       <template
                         x-for="r in venue().restaurants ?? []"
@@ -441,7 +459,7 @@
                     </ul>
                   </section>
                   <section class="practical__section">
-                    <h3>Security and entry</h3>
+                    <h3 x-text="$store.lang.t('practical.security')"></h3>
                     <p x-text="venue().security?.summary"></p>
                     <ul>
                       <template
@@ -456,7 +474,7 @@
                     class="practical__section practical__section--maps"
                     x-show="(venue().maps ?? []).length > 0"
                   >
-                    <h3>Venue maps</h3>
+                    <h3 x-text="$store.lang.t('practical.maps')"></h3>
                     <ul>
                       <template
                         x-for="m in venue().maps ?? []"
@@ -473,7 +491,7 @@
                     class="practical__section practical__section--overrides"
                     x-show="hasOverrides()"
                   >
-                    <h3>Notes for this event</h3>
+                    <h3 x-text="$store.lang.t('practical.overrides')"></h3>
                     <dl class="overrides">
                       <template
                         x-for="entry in Object.entries(overrides())"
@@ -494,14 +512,12 @@
                   <template x-if="!submitted">
                     <form class="newsletter-form" @submit.prevent="submit()">
                       <p class="newsletter-form__intro">
-                        Get updates about
-                        <strong x-text="event().name"></strong> by email.
-                        Your subscription is saved to the shared prototype
-                        database. The confirmation email is simulated — no
-                        mail is actually sent.
+                        <span x-text="$store.lang.t('newsletter.signup_intro_prefix')"></span>
+                        <strong x-text="event().name"></strong>
+                        <span x-text="$store.lang.t('newsletter.signup_intro_suffix')"></span>
                       </p>
                       <label class="auth-form__field">
-                        <span class="auth-form__label">Email</span>
+                        <span class="auth-form__label" x-text="$store.lang.t('auth.email')"></span>
                         <input
                           type="email"
                           autocomplete="email"
@@ -510,9 +526,7 @@
                         />
                       </label>
                       <fieldset class="newsletter-form__topics">
-                        <legend class="auth-form__label">
-                          I want to hear about
-                        </legend>
+                        <legend class="auth-form__label" x-text="$store.lang.t('newsletter.topics_legend')"></legend>
                         <template x-for="topic in topics" :key="topic.key">
                           <label class="newsletter-form__topic">
                             <input
@@ -529,27 +543,25 @@
                         x-show="error"
                         x-text="error"
                       ></p>
-                      <button type="submit" class="auth-form__submit">
-                        Sign up for updates
-                      </button>
+                      <button type="submit" class="auth-form__submit" x-text="$store.lang.t('newsletter.signup_submit')"></button>
                     </form>
                   </template>
                   <template x-if="submitted">
                     <div class="newsletter-success">
-                      <p class="newsletter-success__title">You're signed up.</p>
+                      <p class="newsletter-success__title" x-text="$store.lang.t('newsletter.success_title')"></p>
                       <p class="newsletter-success__body">
-                        We'll send updates to
-                        <strong x-text="email"></strong> about
+                        <span x-text="$store.lang.t('newsletter.success_prefix')"></span>
+                        <strong x-text="email"></strong>
+                        <span x-text="$store.lang.t('newsletter.success_about')"></span>
                         <strong x-text="event().name"></strong>.
-                        <span class="sim-chip">simulated</span>
+                        <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
                       </p>
                       <button
                         type="button"
                         class="newsletter-success__edit"
                         @click="editAgain()"
-                      >
-                        Edit preferences
-                      </button>
+                        x-text="$store.lang.t('newsletter.edit')"
+                      ></button>
                     </div>
                   </template>
                 </div>
@@ -558,9 +570,11 @@
           </div>
         </template>
 
-        <p class="hint" x-show="!event()">
-          Event not found. Return to the calendar.
-        </p>
+        <p
+          class="hint"
+          x-show="!event()"
+          x-text="$store.lang.t('event.not_found')"
+        ></p>
       </section>
 
       <!-- Auth view: register, sign-in, and simulated social providers.
@@ -581,9 +595,8 @@
               :class="mode === 'signin' && 'auth-tabs__tab--active'"
               :aria-selected="mode === 'signin'"
               @click="setMode('signin')"
-            >
-              Sign in
-            </button>
+              x-text="$store.lang.t('auth.tab_signin')"
+            ></button>
             <button
               type="button"
               role="tab"
@@ -591,14 +604,13 @@
               :class="mode === 'register' && 'auth-tabs__tab--active'"
               :aria-selected="mode === 'register'"
               @click="setMode('register')"
-            >
-              Register
-            </button>
+              x-text="$store.lang.t('auth.tab_register')"
+            ></button>
           </div>
 
           <form class="auth-form" @submit.prevent="submit()">
             <label class="auth-form__field">
-              <span class="auth-form__label">Email</span>
+              <span class="auth-form__label" x-text="$store.lang.t('auth.email')"></span>
               <input
                 type="email"
                 autocomplete="email"
@@ -607,7 +619,7 @@
               />
             </label>
             <label class="auth-form__field" x-show="mode === 'register'">
-              <span class="auth-form__label">Display name</span>
+              <span class="auth-form__label" x-text="$store.lang.t('auth.display_name')"></span>
               <input
                 type="text"
                 autocomplete="name"
@@ -615,7 +627,7 @@
               />
             </label>
             <label class="auth-form__field">
-              <span class="auth-form__label">Password</span>
+              <span class="auth-form__label" x-text="$store.lang.t('auth.password')"></span>
               <input
                 type="password"
                 autocomplete="current-password"
@@ -629,14 +641,14 @@
               class="auth-form__submit"
               :disabled="processing"
             >
-              <span x-show="!processing && mode === 'signin'">Sign in</span>
-              <span x-show="!processing && mode === 'register'">Create account</span>
-              <span x-show="processing">Working…</span>
+              <span x-show="!processing && mode === 'signin'" x-text="$store.lang.t('auth.submit_signin')"></span>
+              <span x-show="!processing && mode === 'register'" x-text="$store.lang.t('auth.submit_register')"></span>
+              <span x-show="processing" x-text="$store.lang.t('auth.working')"></span>
             </button>
           </form>
 
           <div class="auth-divider" aria-hidden="true">
-            <span>or</span>
+            <span x-text="$store.lang.t('auth.or')"></span>
           </div>
 
           <div class="auth-social">
@@ -646,8 +658,8 @@
               :disabled="processing"
               @click="socialSignIn('google')"
             >
-              Continue with Google
-              <span class="sim-chip">simulated</span>
+              <span x-text="$store.lang.t('auth.continue_google')"></span>
+              <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
             </button>
             <button
               type="button"
@@ -655,8 +667,8 @@
               :disabled="processing"
               @click="socialSignIn('microsoft')"
             >
-              Continue with Microsoft
-              <span class="sim-chip">simulated</span>
+              <span x-text="$store.lang.t('auth.continue_microsoft')"></span>
+              <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
             </button>
           </div>
         </div>
@@ -675,39 +687,36 @@
               <p class="me__name" x-text="user().display_name"></p>
               <p class="me__email" x-text="user().email"></p>
               <p class="me__provider">
-                Signed in with
+                <span x-text="$store.lang.t('me.signed_in_with')"></span>
                 <span x-text="providerLabel(user().auth_provider)"></span>
                 <span
                   class="sim-chip"
                   x-show="isSimulated()"
-                >simulated</span>
+                  x-text="$store.lang.t('sim.chip')"
+                ></span>
               </p>
             </header>
             <ul class="me__links">
               <li>
                 <button type="button" class="me__link" @click="openTickets()">
-                  My Tickets
+                  <span x-text="$store.lang.t('me.my_tickets_link')"></span>
                   <span class="me__link-hint" x-text="ticketCountHint()"></span>
                 </button>
               </li>
             </ul>
 
             <section class="me__section" x-data="newsletterPreferences()">
-              <h2 class="me__section-title">Newsletter preferences</h2>
+              <h2 class="me__section-title" x-text="$store.lang.t('newsletter.prefs_title')"></h2>
               <p
                 class="placeholder"
                 x-show="subscriptions().length === 0 && !venueWide()"
-              >
-                No newsletter subscriptions yet. Visit an event and open
-                its Newsletter tab to sign up.
-              </p>
+                x-text="$store.lang.t('newsletter.prefs_empty')"
+              ></p>
 
               <label class="newsletter-prefs__venue-row">
                 <span class="newsletter-prefs__venue-label">
-                  All Stockholmsmassan events
-                  <span class="newsletter-prefs__venue-hint">
-                    Receive venue-wide announcements.
-                  </span>
+                  <span x-text="$store.lang.t('newsletter.venue_wide')"></span>
+                  <span class="newsletter-prefs__venue-hint" x-text="$store.lang.t('newsletter.venue_wide_hint')"></span>
                 </span>
                 <input
                   type="checkbox"
@@ -731,9 +740,8 @@
                         type="button"
                         class="newsletter-prefs__unsubscribe"
                         @click="unsubscribe(sub.id)"
-                      >
-                        Unsubscribe
-                      </button>
+                        x-text="$store.lang.t('newsletter.unsubscribe')"
+                      ></button>
                     </div>
                     <ul class="newsletter-prefs__topics">
                       <template x-for="topic in topics" :key="topic.key">
@@ -758,23 +766,19 @@
               type="button"
               class="me__signout"
               @click="signOut()"
-            >
-              Sign out
-            </button>
+              x-text="$store.lang.t('me.signout')"
+            ></button>
           </div>
         </template>
         <template x-if="!user()">
           <div class="me me--signed-out">
-            <p class="placeholder">
-              Sign in to see your tickets and newsletter preferences.
-            </p>
+            <p class="placeholder" x-text="$store.lang.t('me.signed_out_hint')"></p>
             <button
               type="button"
               class="auth-form__submit"
               @click="$store.app.goAuth({ view: 'me' })"
-            >
-              Sign in or register
-            </button>
+              x-text="$store.lang.t('me.signin_or_register')"
+            ></button>
           </div>
         </template>
       </section>
@@ -795,20 +799,23 @@
             </header>
 
             <ol class="purchase__steps" aria-label="Purchase progress">
-              <li :class="step >= 1 && 'purchase__step--active'">
-                1. Ticket
-              </li>
-              <li :class="step >= 2 && 'purchase__step--active'">
-                2. Details
-              </li>
-              <li :class="step >= 3 && 'purchase__step--active'">
-                3. Confirm
-              </li>
+              <li
+                :class="step >= 1 && 'purchase__step--active'"
+                x-text="$store.lang.t('purchase.step_ticket')"
+              ></li>
+              <li
+                :class="step >= 2 && 'purchase__step--active'"
+                x-text="$store.lang.t('purchase.step_details')"
+              ></li>
+              <li
+                :class="step >= 3 && 'purchase__step--active'"
+                x-text="$store.lang.t('purchase.step_confirm')"
+              ></li>
             </ol>
 
             <template x-if="step === 1">
               <div class="purchase__body">
-                <h3 class="purchase__step-title">Pick a ticket</h3>
+                <h3 class="purchase__step-title" x-text="$store.lang.t('purchase.pick_ticket')"></h3>
                 <ul class="ticket-types">
                   <template x-for="t in ticketTypes()" :key="t.id">
                     <li>
@@ -838,17 +845,16 @@
                   type="button"
                   :disabled="!ticketTypeId"
                   @click="continueToDetails()"
-                >
-                  Continue
-                </button>
+                  x-text="$store.lang.t('purchase.continue')"
+                ></button>
               </div>
             </template>
 
             <template x-if="step === 2">
               <form class="purchase__body" @submit.prevent="confirm()">
-                <h3 class="purchase__step-title">Attendee details</h3>
+                <h3 class="purchase__step-title" x-text="$store.lang.t('purchase.attendee_details')"></h3>
                 <label class="auth-form__field">
-                  <span class="auth-form__label">Attendee name</span>
+                  <span class="auth-form__label" x-text="$store.lang.t('purchase.attendee_name')"></span>
                   <input
                     type="text"
                     autocomplete="name"
@@ -857,7 +863,7 @@
                   />
                 </label>
                 <label class="auth-form__field">
-                  <span class="auth-form__label">Attendee email</span>
+                  <span class="auth-form__label" x-text="$store.lang.t('purchase.attendee_email')"></span>
                   <input
                     type="email"
                     autocomplete="email"
@@ -866,28 +872,29 @@
                   />
                 </label>
                 <section class="purchase__summary">
-                  <h4 class="purchase__summary-title">Order summary</h4>
+                  <h4 class="purchase__summary-title" x-text="$store.lang.t('purchase.summary_title')"></h4>
                   <dl class="purchase__summary-list">
                     <div class="purchase__summary-row">
-                      <dt>Event</dt>
+                      <dt x-text="$store.lang.t('purchase.summary_event')"></dt>
                       <dd x-text="event().name"></dd>
                     </div>
                     <div class="purchase__summary-row">
-                      <dt>Dates</dt>
+                      <dt x-text="$store.lang.t('purchase.summary_dates')"></dt>
                       <dd x-text="formatDates(event())"></dd>
                     </div>
                     <div class="purchase__summary-row">
-                      <dt>Ticket</dt>
+                      <dt x-text="$store.lang.t('purchase.summary_ticket')"></dt>
                       <dd x-text="selectedTicketType()?.label ?? ''"></dd>
                     </div>
                     <div class="purchase__summary-row">
-                      <dt>Price</dt>
+                      <dt x-text="$store.lang.t('purchase.summary_price')"></dt>
                       <dd x-text="selectedTicketType()?.price ?? ''"></dd>
                     </div>
                   </dl>
                   <p class="purchase__sim-note">
-                    Payment is <span class="sim-chip">simulated</span> — no
-                    real charge is made.
+                    <span x-text="$store.lang.t('purchase.sim_note_prefix')"></span>
+                    <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                    <span x-text="$store.lang.t('purchase.sim_note_suffix')"></span>
                   </p>
                 </section>
                 <p class="auth-form__error" x-show="error" x-text="error"></p>
@@ -896,28 +903,27 @@
                   type="submit"
                   :disabled="processing"
                 >
-                  <span x-show="!processing">Confirm purchase</span>
-                  <span x-show="processing">Processing…</span>
+                  <span x-show="!processing" x-text="$store.lang.t('purchase.confirm')"></span>
+                  <span x-show="processing" x-text="$store.lang.t('purchase.processing')"></span>
                 </button>
                 <button
                   class="purchase__secondary"
                   type="button"
                   :disabled="processing"
                   @click="goToStep(1)"
-                >
-                  Back
-                </button>
+                  x-text="$store.lang.t('purchase.back')"
+                ></button>
               </form>
             </template>
 
             <template x-if="step === 3 && confirmedTicket">
               <div class="purchase__body">
                 <h3 class="purchase__step-title">
-                  Ticket confirmed
-                  <span class="sim-chip">simulated</span>
+                  <span x-text="$store.lang.t('purchase.ticket_confirmed')"></span>
+                  <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
                 </h3>
                 <p class="purchase__ref">
-                  Transaction reference:
+                  <span x-text="$store.lang.t('purchase.transaction_ref')"></span>
                   <code x-text="confirmedTicket.transaction_ref"></code>
                 </p>
                 <article class="ticket-card">
@@ -934,11 +940,11 @@
                   ></div>
                   <dl class="ticket-card__meta">
                     <div class="ticket-card__meta-row">
-                      <dt>Ticket</dt>
+                      <dt x-text="$store.lang.t('purchase.ticket_field_ticket')"></dt>
                       <dd x-text="confirmedTicket.ticket_type_label"></dd>
                     </div>
                     <div class="ticket-card__meta-row">
-                      <dt>Attendee</dt>
+                      <dt x-text="$store.lang.t('purchase.ticket_field_attendee')"></dt>
                       <dd x-text="confirmedTicket.attendee_name"></dd>
                     </div>
                   </dl>
@@ -947,23 +953,23 @@
                   class="purchase__primary"
                   type="button"
                   @click="$store.app.goTickets()"
-                >
-                  View in My Tickets
-                </button>
+                  x-text="$store.lang.t('purchase.view_in_my_tickets')"
+                ></button>
                 <button
                   class="purchase__secondary"
                   type="button"
                   @click="$store.app.selectEvent(event().id)"
-                >
-                  Back to event
-                </button>
+                  x-text="$store.lang.t('purchase.back_to_event')"
+                ></button>
               </div>
             </template>
           </div>
         </template>
-        <p class="hint" x-show="!event()">
-          Event not found. Return to the calendar.
-        </p>
+        <p
+          class="hint"
+          x-show="!event()"
+          x-text="$store.lang.t('event.not_found')"
+        ></p>
       </section>
 
       <!-- My Tickets view: list of purchased tickets for the signed-in
@@ -975,22 +981,22 @@
       >
         <template x-if="!signedIn()">
           <div class="me me--signed-out">
-            <p class="placeholder">Sign in to see your tickets.</p>
+            <p class="placeholder" x-text="$store.lang.t('tickets.signed_out_hint')"></p>
             <button
               type="button"
               class="auth-form__submit"
               @click="$store.app.goAuth({ view: 'tickets' })"
-            >
-              Sign in or register
-            </button>
+              x-text="$store.lang.t('me.signin_or_register')"
+            ></button>
           </div>
         </template>
         <template x-if="signedIn()">
           <div class="tickets">
-            <p class="placeholder" x-show="tickets().length === 0">
-              You don't have any tickets yet. Pick an event from the
-              calendar to buy one.
-            </p>
+            <p
+              class="placeholder"
+              x-show="tickets().length === 0"
+              x-text="$store.lang.t('tickets.empty')"
+            ></p>
             <ul class="tickets__list" x-show="tickets().length > 0">
               <template x-for="ticket in tickets()" :key="ticket.id">
                 <li>
@@ -1011,27 +1017,28 @@
                     ></div>
                     <dl class="ticket-card__meta">
                       <div class="ticket-card__meta-row">
-                        <dt>Ticket</dt>
+                        <dt x-text="$store.lang.t('tickets.field_ticket')"></dt>
                         <dd x-text="ticket.ticket_type_label"></dd>
                       </div>
                       <div class="ticket-card__meta-row">
-                        <dt>Attendee</dt>
+                        <dt x-text="$store.lang.t('tickets.field_attendee')"></dt>
                         <dd x-text="ticket.attendee_name"></dd>
                       </div>
                       <div class="ticket-card__meta-row">
-                        <dt>Email</dt>
+                        <dt x-text="$store.lang.t('tickets.field_email')"></dt>
                         <dd x-text="ticket.attendee_email"></dd>
                       </div>
                       <div class="ticket-card__meta-row">
-                        <dt>Purchased</dt>
+                        <dt x-text="$store.lang.t('tickets.field_purchased')"></dt>
                         <dd
                           x-text="formatShortDate(ticket.purchased_at)"
                         ></dd>
                       </div>
                     </dl>
                     <p class="ticket-card__sim">
-                      Venue entry is
-                      <span class="sim-chip">simulated</span>.
+                      <span x-text="$store.lang.t('tickets.sim_entry_prefix')"></span>
+                      <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                      <span x-text="$store.lang.t('tickets.sim_entry_suffix')"></span>
                     </p>
                   </article>
                 </li>

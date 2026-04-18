@@ -554,3 +554,35 @@ test.describe("Newsletter", () => {
     ).not.toBeChecked();
   });
 });
+
+test.describe("Language toggle", () => {
+  test("29-30: chrome switches between English and Swedish and persists across reload", async ({
+    page,
+  }) => {
+    // Start on a view whose chrome copy differs clearly between the
+    // two supported languages — the calendar title is "Events" in
+    // English and "Evenemang" in Swedish.
+    await gotoHome(page);
+    await expect(page.locator(".chrome__title")).toHaveText("Events");
+    const toggle = page.locator(".chrome__lang");
+    await expect(toggle).toHaveText("SV");
+
+    await toggle.click();
+    await expect(page.locator(".chrome__title")).toHaveText("Evenemang");
+    await expect(toggle).toHaveText("EN");
+    // Calendar placeholder copy should also swap.
+    await expect(
+      page.locator('input[type="search"]').first(),
+    ).toHaveAttribute("placeholder", "Sök evenemang");
+
+    // Persistence across reload.
+    await page.reload();
+    await expect(page.locator(".chrome__title")).toHaveText("Evenemang");
+    await expect(page.locator(".chrome__lang")).toHaveText("EN");
+
+    // Toggle back to English and confirm it re-renders live.
+    await page.locator(".chrome__lang").click();
+    await expect(page.locator(".chrome__title")).toHaveText("Events");
+    await expect(page.locator(".chrome__lang")).toHaveText("SV");
+  });
+});

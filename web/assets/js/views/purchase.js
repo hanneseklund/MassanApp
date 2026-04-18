@@ -4,7 +4,7 @@
 // payment succeeds.
 
 import { formatDates } from "../util/dates.js";
-import { ticketTypesFor } from "../util/sections.js";
+import { ticketTypesFor, canonicalTicketTypeLabel } from "../util/sections.js";
 import { simulatedPayment } from "../simulations/payment.js";
 import { simulatedEmail } from "../simulations/email.js";
 import { ticketQrPayload, ticketQrSvgFor } from "../simulations/qr.js";
@@ -66,29 +66,30 @@ export function purchaseView() {
 
     continueToDetails() {
       if (!this.ticketTypeId) {
-        this.error = "Pick a ticket type to continue.";
+        this.error = Alpine.store("lang").t("purchase.err_pick_type");
         return;
       }
       this.goToStep(2);
     },
 
     async confirm() {
+      const tStore = Alpine.store("lang");
       const ev = this.event();
       const type = this.selectedTicketType();
       if (!ev || !type) {
-        this.error = "Pick a ticket type first.";
+        this.error = tStore.t("purchase.err_pick_first");
         this.step = 1;
         return;
       }
       const user = Alpine.store("session").user;
       if (!user) {
-        this.error = "Sign in to complete the purchase.";
+        this.error = tStore.t("purchase.err_sign_in");
         return;
       }
       const name = String(this.attendeeName || "").trim();
       const email = String(this.attendeeEmail || "").trim();
       if (!name || !email) {
-        this.error = "Attendee name and email are required.";
+        this.error = tStore.t("purchase.err_attendee_required");
         return;
       }
       this.error = "";
@@ -104,7 +105,7 @@ export function purchaseView() {
           user_id: user.id,
           event_id: ev.id,
           ticket_type: type.id,
-          ticket_type_label: type.label,
+          ticket_type_label: canonicalTicketTypeLabel(type.id),
           attendee_name: name,
           attendee_email: email,
           transaction_ref: payment.transaction_ref,
@@ -127,7 +128,8 @@ export function purchaseView() {
         this.confirmedTicket = ticket;
         this.step = 3;
       } catch (err) {
-        this.error = err.message || "Could not complete the purchase.";
+        this.error =
+          err.message || Alpine.store("lang").t("purchase.err_generic");
       } finally {
         this.processing = false;
       }

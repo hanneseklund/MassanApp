@@ -38,7 +38,8 @@ export function authView() {
         this.password = "";
         Alpine.store("app").afterAuth();
       } catch (err) {
-        this.error = err.message || "Something went wrong.";
+        this.error =
+          err.message || Alpine.store("lang").t("auth.generic_error");
       } finally {
         this.processing = false;
       }
@@ -51,7 +52,8 @@ export function authView() {
         await Alpine.store("session").simulatedSocialSignIn(provider);
         Alpine.store("app").afterAuth();
       } catch (err) {
-        this.error = err.message || "Something went wrong.";
+        this.error =
+          err.message || Alpine.store("lang").t("auth.generic_error");
       } finally {
         this.processing = false;
       }

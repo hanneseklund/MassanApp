@@ -99,12 +99,15 @@ template. The layout is:
 web/assets/js/
   app.js                       entrypoint; registers stores and view
                                factories on alpine:init
+  i18n.js                      UI translation table (en, sv) +
+                               translate(), dateLocaleFor() helpers
   supabase.js                  singleton Supabase JS client
   util/
     dates.js                   formatDates, formatShortDate,
                                formatDayHeading, monthLabel, uniqueSorted
     sections.js                SECTION_LABELS, ticketCtaLabel,
-                               ticketTypesFor, TICKET_TYPES
+                               ticketTypesFor, TICKET_TYPES,
+                               canonicalTicketTypeLabel
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -116,6 +119,9 @@ web/assets/js/
   stores/
     app.js                     Alpine.store("app", ...) (navigation,
                                hash routing, post-auth return target)
+    lang.js                    Alpine.store("lang", ...) (active UI
+                               language, localStorage persistence,
+                               t(key) translator)
     session.js                 Alpine.store("session", ...) (Supabase
                                Auth mapping)
     catalog.js                 Alpine.store("catalog", ...) (venue,
@@ -153,6 +159,14 @@ Alpine.js stores and components own the following state:
 
 - `app`: current view, selected event, selected event subview, selected
   exhibitor, simulated-mode flag, and post-auth return target.
+- `lang`: active UI language (`en` or `sv`), the list of supported
+  languages, and a `t(key, params)` translator backed by
+  `web/assets/js/i18n.js`. The chosen language is persisted to
+  `localStorage` under `massanapp_lang` so it survives reloads; the
+  default on first load is English. `dateLocale()` returns the Intl
+  locale used by the date formatters in `util/dates.js`. Templates
+  read translations as `$store.lang.t('key')` so a switch re-renders
+  every bound label reactively.
 - `session`: the Supabase Auth user mapped into a flat record with `id`,
   `email`, `display_name`, `auth_provider`, and `simulated` flags. The
   store subscribes to `supabase.auth.onAuthStateChange` so that sign-in,
@@ -243,6 +257,32 @@ instead of silently falling back to stale data.
   accent color against a 2px offset.
 - Per-event `branding.primary_color` values in the seed remain as data
   for future per-event theming and do not override the global tokens.
+
+### Internationalization
+
+- All user-visible app chrome is looked up through `$store.lang.t(key)`
+  against the dictionaries in `web/assets/js/i18n.js`. Currently
+  supported languages are `en` and `sv`. English is the canonical
+  source; missing keys in another language fall back to the English
+  value.
+- Event content (event names, summaries, news, articles, program
+  items, exhibitor copy, and the shared venue's practical-info fields)
+  is not translated by the app. The data model does not preclude
+  per-language content; a later task can seed translated columns and
+  extend the selectors without changing the i18n infrastructure.
+- Date helpers in `util/dates.js` read the active language's Intl
+  locale from `$store.lang.dateLocale()` so weekday and month names
+  render in the active language.
+- Persisted display fields must stay canonical to avoid flipping when
+  a later viewer has a different language. The purchase flow uses
+  `canonicalTicketTypeLabel(ticket_type)` (English) for
+  `ticket_type_label`. Newer features that persist display strings
+  should follow the same rule.
+- Adding a new translation key: add it to both `en` and `sv` entries in
+  `i18n.js`. Adding a new language: extend `SUPPORTED_LANGUAGES`,
+  `LANGUAGE_LABELS`, `DATE_LOCALES`, and the `TRANSLATIONS` object,
+  then update the chrome toggle if the two-language toggle no longer
+  fits.
 
 ## Data model
 

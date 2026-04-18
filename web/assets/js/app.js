@@ -9,6 +9,7 @@ import { catalogStore } from "./stores/catalog.js";
 import { ticketsStore } from "./stores/tickets.js";
 import { newsletterStore } from "./stores/newsletter.js";
 import { filtersStore } from "./stores/filters.js";
+import { langStore } from "./stores/lang.js";
 
 import { calendarView } from "./views/calendar.js";
 import { eventView } from "./views/event.js";
@@ -20,6 +21,10 @@ import { newsletterSignup } from "./views/newsletter-signup.js";
 import { newsletterPreferences } from "./views/newsletter-preferences.js";
 
 document.addEventListener("alpine:init", () => {
+  // `lang` must register before the others so `init` hooks that may
+  // read the active locale (date formatters, titles) see the right
+  // value on first render.
+  Alpine.store("lang", langStore());
   Alpine.store("app", appStore());
   Alpine.store("session", sessionStore());
   Alpine.store("catalog", catalogStore());
