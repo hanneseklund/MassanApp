@@ -5,8 +5,10 @@
 //   #/event/<slug>                                   -> event home
 //   #/event/<slug>/<subview>                         -> event subview
 //   #/event/<slug>/exhibitors/<exhibitor-id>         -> exhibitor detail
+//   #/event/<slug>/purchase                          -> simulated ticket purchase
 //   #/auth                                           -> registration / sign-in
 //   #/me                                             -> signed-in My Pages
+//   #/tickets                                        -> My Tickets wallet
 //
 // Catalog data, authentication, tickets, and newsletter subscriptions
 // all run against the shared Supabase prototype project. The URL and
@@ -926,7 +928,7 @@ function eventView() {
     sections: SECTION_LABELS,
     exhibitorQuery: "",
     formatDates,
-    formatNewsDate,
+    formatShortDate,
     formatDayHeading,
     ticketCtaLabel,
     event() {
@@ -1001,7 +1003,10 @@ function eventView() {
   };
 }
 
-function formatNewsDate(iso) {
+// Short-form single-date formatter used for news items, ticket
+// purchase dates, and similar single-point dates. `formatDates`
+// handles event date ranges separately.
+function formatShortDate(iso) {
   if (!iso) return "";
   return new Date(iso).toLocaleDateString("en-GB", {
     day: "numeric",
@@ -1257,6 +1262,7 @@ function purchaseView() {
 function myTicketsView() {
   return {
     formatDates,
+    formatShortDate,
     signedIn() {
       return !!Alpine.store("session").user;
     },
@@ -1278,14 +1284,6 @@ function myTicketsView() {
     },
     eventForTicket(ticket) {
       return Alpine.store("catalog").eventById(ticket.event_id);
-    },
-    formatPurchaseDate(iso) {
-      if (!iso) return "";
-      return new Date(iso).toLocaleDateString("en-GB", {
-        day: "numeric",
-        month: "short",
-        year: "numeric",
-      });
     },
     qrSvgFor: ticketQrSvgFor,
   };

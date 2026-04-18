@@ -158,18 +158,24 @@ test.describe("Event content", () => {
   }) => {
     await openEventByName(page, "Nordbygg 2026");
 
-    for (const [id, label] of [
-      ["news", "News"],
-      ["articles", "Articles"],
-      ["program", "Program"],
-      ["exhibitors", "Exhibitors"],
-      ["practical", "Practical info"],
-      ["newsletter", "Newsletter"],
+    // Each subview must render real content (the spec allows a documented
+    // empty-state placeholder, but Nordbygg is seeded with content for every
+    // subview so we check the primary content selector directly — an empty
+    // render would signal a template regression). Newsletter shows the form
+    // because this test runs signed out with no prior subscription.
+    for (const [id, label, contentSel] of [
+      ["news", "News", ".news-item"],
+      ["articles", "Articles", ".article"],
+      ["program", "Program", ".program-day"],
+      ["exhibitors", "Exhibitors", ".exhibitor-card"],
+      ["practical", "Practical info", ".practical__section"],
+      ["newsletter", "Newsletter", ".newsletter-form"],
     ]) {
       await openSubview(page, id, label);
       await expect(page.locator(".event-nav__tab--active")).toContainText(
         label,
       );
+      await expect(page.locator(contentSel).first()).toBeVisible();
     }
 
     // Exhibitor detail: pick the first exhibitor card and verify

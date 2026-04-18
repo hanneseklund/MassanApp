@@ -199,7 +199,7 @@
                       <li class="news-item">
                         <p
                           class="news-item__date"
-                          x-text="formatNewsDate(item.published_at)"
+                          x-text="formatShortDate(item.published_at)"
                         ></p>
                         <h3
                           class="news-item__title"
@@ -992,7 +992,7 @@
                       <div class="ticket-card__meta-row">
                         <dt>Purchased</dt>
                         <dd
-                          x-text="formatPurchaseDate(ticket.purchased_at)"
+                          x-text="formatShortDate(ticket.purchased_at)"
                         ></dd>
                       </div>
                     </dl>
