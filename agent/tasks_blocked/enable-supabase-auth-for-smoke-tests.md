@@ -1,6 +1,18 @@
 # Enable Supabase auth config so the smoke suite can cover auth flows
 
+Status: blocked — waiting on the user to flip two toggles in the
+Supabase dashboard for project `esvyrbsypfgpdhijyywz`. Tracked on
+GitHub issue #5
+(https://github.com/hanneseklund/MassanApp/issues/5). Rechecked on
+2026-04-18: `POST /auth/v1/signup` still returns
+`over_email_send_rate_limit` (confirm-email still ON) and
+`signInAnonymously` still returns `anonymous_provider_disabled`. The
+available Supabase MCP exposes SQL / migrations / branches but not the
+auth-config update endpoint, so this remains a one-time manual step.
+
 References:
+- GitHub issue #5 — `Flip Supabase auth toggles so the smoke suite can
+  cover auth flows`.
 - `agent/tasks_completed/add-automated-smoke-tests.md` — introduced
   the suite and gated auth-dependent tests behind `SMOKE_AUTH=1`.
 - `docs/installation-testing-specification.md` — "Smoke testing
