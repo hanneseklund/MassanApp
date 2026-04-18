@@ -584,5 +584,33 @@ test.describe("Language toggle", () => {
     await page.locator(".chrome__lang").click();
     await expect(page.locator(".chrome__title")).toHaveText("Events");
     await expect(page.locator(".chrome__lang")).toHaveText("SV");
+
+    // Event content stays in its seeded language regardless of toggle
+    // (see docs/functional-specification.md, "Accessibility and
+    // internationalization"). Open Nordbygg, capture the seeded English
+    // summary, switch to Swedish, and assert the summary is unchanged
+    // while the section-nav chrome did swap.
+    await openEventByName(page, "Nordbygg 2026");
+    const summarySelector = ".event-hero__summary";
+    const seededSummary = await page
+      .locator(summarySelector)
+      .first()
+      .textContent();
+    expect(seededSummary).toMatch(/Nordbygg is the leading Nordic/);
+
+    await page.locator(".chrome__lang").click();
+    await expect(
+      page.locator(".event-nav__tab", { hasText: "Nyheter" }).first(),
+    ).toBeVisible();
+    await expect(page.locator(summarySelector).first()).toHaveText(
+      seededSummary,
+    );
+
+    // Practical-info venue copy (seeded English) also stays stable.
+    await page.locator(".event-nav__tab", { hasText: "Praktisk info" }).first().click();
+    await expect(page.locator(".practical")).toContainText("Alvsjo station");
+
+    // Restore English for later independent runs.
+    await page.locator(".chrome__lang").click();
   });
 });
