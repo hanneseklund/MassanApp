@@ -511,8 +511,9 @@ that no real service is being hit.
 
 - The `event` view is the root of its own navigation tree once an event is
   selected.
-- Every event subview (News, Program, Exhibitors, Practical info,
-  Newsletter) exposes a "Back to events" affordance in the top chrome.
+- Every event subview (News, Articles, Program, Exhibitors, Practical
+  info, Newsletter) exposes a "Back to events" affordance in the top
+  chrome.
 - Switching events always routes through the calendar view so the
   "one event at a time" invariant stays visible.
 
@@ -540,9 +541,11 @@ that no real service is being hit.
 - Treat email addresses as personal data even in the prototype: store
   only what the flows use; never log emails to the browser console in a
   non-development build.
-- Do not commit real Supabase service keys. Only the anon key is used at
-  runtime, supplied via a Cloudflare Pages environment variable or a
-  local `.env.local`-style file that is gitignored.
+- Do not commit real Supabase service keys. Only the publishable (anon)
+  key is used at runtime and is committed to `web/assets/env.js` for the
+  shared prototype project; a gitignored `web/assets/env.local.js` can
+  override it for local dev against a different project. RLS in
+  `supabase/migrations/` is what enforces access, not key secrecy.
 
 ## Deployability
 
