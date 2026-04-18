@@ -76,10 +76,29 @@ views:
   currently selected event. A visitor who lands here while signed
   out is routed through `auth` and returned afterwards.
 
-View switching is handled in Alpine.js state. The prototype may also use
-hash-based routing (for example `#/event/nordbygg-2026/program`) to make
-views linkable, but stateful client-side routing is sufficient for the
-prototype.
+View switching is driven by hash-based routing: the URL hash is the
+canonical route and Alpine.js state mirrors it. `stores/app.js` parses
+the hash on load, subscribes to `hashchange`, and exposes navigation
+verbs (`goCalendar`, `selectEvent`, `goEventSubview`, `goAuth`,
+`goMe`, `goTickets`, `startPurchase`) that write
+`window.location.hash`; the parsed state in turn drives which view
+renders. The supported routes are:
+
+```
+#/                                           calendar
+#/event/<slug>                               event home
+#/event/<slug>/<subview>                     event subview
+#/event/<slug>/exhibitors/<exhibitor-id>     exhibitor detail
+#/event/<slug>/purchase                      simulated ticket purchase
+#/auth                                       registration / sign-in
+#/me                                         signed-in My Pages
+#/tickets                                    My Tickets wallet
+```
+
+`<subview>` is one of `home`, `news`, `articles`, `program`,
+`exhibitors`, `practical`, or `newsletter`. An unknown or missing
+subview resolves to `home` so a stale or hand-edited link still lands
+on the event's main page.
 
 ### Frontend app structure
 
