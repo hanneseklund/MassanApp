@@ -220,6 +220,29 @@ instead of silently falling back to stale data.
 - Layouts assume a narrow viewport (roughly 360-430 CSS pixels wide).
 - No heavy CSS frameworks. Tailwind CDN is acceptable if it stays
   buildless.
+- Visual language mirrors the Stockholmsmässan venue site
+  (<https://stockholmsmassan.se/>). Design tokens live at the top of
+  `web/assets/css/app.css` as CSS custom properties:
+  - Ink (primary text, headings, chrome): `#002e77` — the SM deep navy.
+  - Accent (primary CTAs, focus ring): `#0646fb` — the SM electric
+    blue. Hover: `#0335c9`.
+  - Link (inline hyperlinks, subtle affordances): `#066aab`.
+  - Surface: `#ffffff`. App background: `#f4f5f7`. Border: `#d8dde8`
+    (strong variant `#b4bdd1`).
+  - Corner radius: `4px` for controls and cards, `999px` for pill tabs
+    and chips. This matches SM's flat, slightly-rounded style.
+  - Typography: `Inter` from Google Fonts as an open-source stand-in
+    for the proprietary LabGrotesque used on the venue site, with a
+    `"Helvetica Neue", Helvetica, Arial, sans-serif` fallback chain.
+    Headings are set in the same family with slightly tighter letter
+    spacing (`-0.01em`).
+- Buttons expose a primary style (filled electric blue), a secondary
+  style (white with an accent outline), and a tertiary/ghost style
+  (text-only, ink color). Hover and `:focus-visible` states are defined
+  for every interactive control and the default focus outline uses the
+  accent color against a 2px offset.
+- Per-event `branding.primary_color` values in the seed remain as data
+  for future per-event theming and do not override the global tokens.
 
 ## Data model
 

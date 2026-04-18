@@ -33,6 +33,12 @@ time.
 - Simulate real integrations cleanly. Where the prototype does not talk to
   real payment, social sign-in, or ticketing systems, it fakes them with
   obvious but realistic placeholders instead of leaving dead UI.
+- Visual consistency with Stockholmsmässan. The app uses the venue
+  site's palette (deep navy ink, electric-blue accent, white surfaces,
+  tight 3-4px corners) and a LabGrotesque-compatible grotesque
+  typeface so that a visitor who has seen the venue website
+  recognizes the app as the same brand. See
+  `docs/implementation-specification.md` for the token values.
 
 ## Primary personas
 
