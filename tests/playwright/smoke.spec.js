@@ -437,6 +437,36 @@ test.describe("Ticket purchase (simulated)", () => {
         .locator(".tickets__list .ticket-card", { hasText: "Nordbygg 2026" })
         .first(),
     ).toBeVisible();
+
+    // Points system sub-task 03: the purchase(s) above awarded at least
+    // 100 points per ticket. My Pages must show a non-zero balance and
+    // list the ticket earn in the recent-transactions block.
+    await page.goto("/#/me");
+    await expect(
+      page.locator(".me__section--points .me__section-title"),
+    ).toContainText("Points");
+    await expect(
+      page.locator(".me__section--points .me__section-title .sim-chip"),
+    ).toBeVisible();
+    const balanceValue = page.locator(".points__balance-value");
+    await expect(balanceValue).toBeVisible({ timeout: 10_000 });
+    await expect
+      .poll(async () => {
+        const text = (await balanceValue.textContent()) || "";
+        const match = text.match(/(\d+)/);
+        return match ? parseInt(match[1], 10) : 0;
+      }, { timeout: 10_000 })
+      .toBeGreaterThan(0);
+    await expect(
+      page
+        .locator(".points__item", { hasText: "Ticket purchase" })
+        .first(),
+    ).toBeVisible();
+    await expect(
+      page
+        .locator(".points__item", { hasText: "Nordbygg 2026" })
+        .first(),
+    ).toBeVisible();
   });
 });
 

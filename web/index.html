@@ -1061,6 +1061,56 @@
               </li>
             </ul>
 
+            <section class="me__section me__section--points">
+              <h2 class="me__section-title">
+                <span x-text="$store.lang.t('points.section_title')"></span>
+                <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+              </h2>
+              <p
+                class="placeholder placeholder--error"
+                x-show="pointsError()"
+                role="alert"
+                x-text="$store.lang.t('points.load_error', { error: pointsError() })"
+              ></p>
+              <template x-if="!pointsError()">
+                <div class="points">
+                  <div class="points__balance">
+                    <span class="points__balance-label" x-text="$store.lang.t('points.balance_label')"></span>
+                    <span class="points__balance-value" x-text="pointsBalanceLabel()"></span>
+                  </div>
+                  <p class="points__blurb" x-text="$store.lang.t('points.earn_blurb')"></p>
+                  <button
+                    type="button"
+                    class="me__link points__shop-link"
+                    @click="openPointsShop()"
+                    x-text="$store.lang.t('points.shop_link')"
+                  ></button>
+                  <h3 class="points__recent-title" x-text="$store.lang.t('points.recent_title')"></h3>
+                  <p
+                    class="placeholder points__empty"
+                    x-show="recentTransactions().length === 0"
+                    x-text="$store.lang.t('points.empty')"
+                  ></p>
+                  <ul
+                    class="points__list"
+                    x-show="recentTransactions().length > 0"
+                  >
+                    <template x-for="tx in recentTransactions()" :key="tx.id">
+                      <li class="points__item">
+                        <span class="points__item-source" x-text="transactionSourceLabel(tx.source)"></span>
+                        <span class="points__item-event" x-text="transactionEventLabel(tx.event_id)"></span>
+                        <span
+                          class="points__item-delta"
+                          :class="tx.delta >= 0 ? 'points__item-delta--positive' : 'points__item-delta--negative'"
+                          x-text="transactionDeltaLabel(tx.delta)"
+                        ></span>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
+              </template>
+            </section>
+
             <section class="me__section" x-data="newsletterPreferences()">
               <h2 class="me__section-title" x-text="$store.lang.t('newsletter.prefs_title')"></h2>
               <p
