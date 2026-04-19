@@ -363,11 +363,16 @@ shape in `newsletter/preferences.js`, the QR payload builder in
 `simulations/qr.js`, the UI translation lookup in `i18n.js`, the
 deterministic exhibitor/speaker placeholder SVGs in
 `util/placeholders.js`, the catalog-store selectors in
-`stores/catalog.js` that fan per-event rows into views, and the
-Supabase-user mapping in `stores/session.js` that resolves the
-signed-in provider, display name, and simulated flag) have a
-fast unit suite under `tests/unit/` that does not require a
-browser or Supabase.
+`stores/catalog.js` that fan per-event rows into views, the
+ticket-ownership selectors in `stores/tickets.js`
+(`forUser`, `forUserAndEvent`, `hasForEvent`) that back the
+"View ticket" CTA and the My Tickets list, the newsletter-store
+lookup in `stores/newsletter.js` (`forUser`, `findForEvent`)
+that resolves the per-event / venue-wide subscription a signup
+form should update vs. insert, and the Supabase-user mapping in
+`stores/session.js` that resolves the signed-in provider,
+display name, and simulated flag) have a fast unit suite under
+`tests/unit/` that does not require a browser or Supabase.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a

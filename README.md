@@ -86,9 +86,10 @@ Pure-function helpers (hash routing, date formatting, calendar
 filter/sort, QR payload, newsletter preferences, ticket-type
 catalog and event-nav section order, UI translation lookup,
 exhibitor and speaker placeholder SVGs, catalog-store
-selectors, and the Supabase-user mapping that backs the session
-store) also have a fast unit suite that does not need a browser
-or Supabase:
+selectors, tickets-store ownership selectors,
+newsletter-store event/venue-wide lookup, and the
+Supabase-user mapping that backs the session store) also have
+a fast unit suite that does not need a browser or Supabase:
 
 ```
 npm run test:unit
