@@ -6,6 +6,7 @@
 
 import { supabaseClient } from "../supabase.js";
 import { activeTranslate } from "../i18n.js";
+import { notifySessionStores } from "../util/session-sync.js";
 
 // Map a Supabase auth user into the flat shape the UI consumes. Works
 // for email-backed users and for anonymous users carrying simulated
@@ -48,15 +49,9 @@ export function sessionStore() {
       this.loading = false;
       db.auth.onAuthStateChange((_event, session) => {
         this.user = mapSupabaseUser(session?.user);
-        Alpine.store("tickets")?._onSessionChange?.();
-        Alpine.store("newsletter")?._onSessionChange?.();
-        Alpine.store("foodOrders")?._onSessionChange?.();
-        Alpine.store("points")?._onSessionChange?.();
+        notifySessionStores();
       });
-      Alpine.store("tickets")?._onSessionChange?.();
-      Alpine.store("newsletter")?._onSessionChange?.();
-      Alpine.store("foodOrders")?._onSessionChange?.();
-      Alpine.store("points")?._onSessionChange?.();
+      notifySessionStores();
     },
 
     get isSignedIn() {

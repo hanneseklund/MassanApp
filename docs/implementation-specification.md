@@ -148,6 +148,12 @@ web/assets/js/
                                pointsForFoodOrder(order),
                                parseSekPrice (private) — earning-rate
                                calculators used by the points store
+    session-sync.js            SESSION_SYNC_STORE_IDS,
+                               notifySessionStores(),
+                               loadUserRows(store, options) — shared
+                               by the user-scoped stores so the
+                               clear-on-signed-out, select-plus-error
+                               contract is written once
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -290,6 +296,19 @@ My Tickets view and the My Pages newsletter-preferences section each
 show a load-error message keyed off the store's `error` state, so a
 signed-in visitor is not misled into thinking the empty state means
 they own no tickets or have no subscriptions.
+
+The user-scoped stores (`tickets`, `newsletter`, `foodOrders`,
+`points`) share their sign-in / sign-out fetch contract through
+`util/session-sync.js`. `stores/session.js` calls
+`notifySessionStores()` from its `onAuthStateChange` callback and
+once after the initial `getSession` resolves; each target store's
+`_onSessionChange` delegates to `loadUserRows(this, { table, field,
+orderBy, logLabel, normalize })`, so the clear-on-signed-out, set
+loading/error, `select *`, `console.warn`-plus-`store.error`-on-
+failure sequence is written once rather than duplicated per store.
+When adding a new user-scoped store, register its id in
+`SESSION_SYNC_STORE_IDS` and route its `_onSessionChange` through
+`loadUserRows`.
 
 ### Alpine.js usage rules
 

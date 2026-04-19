@@ -4,6 +4,7 @@
 // signed-in user's tickets. Inserts go through the Supabase client.
 
 import { supabaseClient } from "../supabase.js";
+import { loadUserRows } from "../util/session-sync.js";
 
 export function ticketsStore() {
   return {
@@ -14,26 +15,11 @@ export function ticketsStore() {
     init() {},
 
     async _onSessionChange() {
-      const user = Alpine.store("session").user;
-      if (!user) {
-        this.tickets = [];
-        return;
-      }
-      this.loading = true;
-      this.error = null;
-      const db = supabaseClient();
-      const { data, error } = await db
-        .from("tickets")
-        .select("*")
-        .order("purchased_at", { ascending: false });
-      this.loading = false;
-      if (error) {
-        console.warn("Could not load tickets:", error.message);
-        this.error = error.message;
-        this.tickets = [];
-        return;
-      }
-      this.tickets = data || [];
+      await loadUserRows(this, {
+        table: "tickets",
+        field: "tickets",
+        orderBy: "purchased_at",
+      });
     },
 
     forUser(userId) {

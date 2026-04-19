@@ -7,6 +7,7 @@
 import { supabaseClient } from "../supabase.js";
 import { normalizeNewsletterPreferences } from "../newsletter/preferences.js";
 import { activeTranslate } from "../i18n.js";
+import { loadUserRows } from "../util/session-sync.js";
 
 export function newsletterStore() {
   return {
@@ -17,28 +18,15 @@ export function newsletterStore() {
     init() {},
 
     async _onSessionChange() {
-      const user = Alpine.store("session").user;
-      if (!user) {
-        this.subscriptions = [];
-        return;
-      }
-      this.loading = true;
-      this.error = null;
-      const db = supabaseClient();
-      const { data, error } = await db
-        .from("newsletter_subscriptions")
-        .select("*");
-      this.loading = false;
-      if (error) {
-        console.warn("Could not load newsletter subscriptions:", error.message);
-        this.error = error.message;
-        this.subscriptions = [];
-        return;
-      }
-      this.subscriptions = (data || []).map((s) => ({
-        ...s,
-        preferences: normalizeNewsletterPreferences(s.preferences),
-      }));
+      await loadUserRows(this, {
+        table: "newsletter_subscriptions",
+        field: "subscriptions",
+        logLabel: "newsletter subscriptions",
+        normalize: (s) => ({
+          ...s,
+          preferences: normalizeNewsletterPreferences(s.preferences),
+        }),
+      });
     },
 
     findForEvent({ email, userId, eventId }) {

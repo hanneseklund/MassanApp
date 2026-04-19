@@ -3,6 +3,7 @@
 // auth.uid() = user_id, same pattern as the tickets store.
 
 import { supabaseClient } from "../supabase.js";
+import { loadUserRows } from "../util/session-sync.js";
 
 export function foodOrdersStore() {
   return {
@@ -13,26 +14,12 @@ export function foodOrdersStore() {
     init() {},
 
     async _onSessionChange() {
-      const user = Alpine.store("session").user;
-      if (!user) {
-        this.orders = [];
-        return;
-      }
-      this.loading = true;
-      this.error = null;
-      const db = supabaseClient();
-      const { data, error } = await db
-        .from("food_orders")
-        .select("*")
-        .order("ordered_at", { ascending: false });
-      this.loading = false;
-      if (error) {
-        console.warn("Could not load food orders:", error.message);
-        this.error = error.message;
-        this.orders = [];
-        return;
-      }
-      this.orders = data || [];
+      await loadUserRows(this, {
+        table: "food_orders",
+        field: "orders",
+        orderBy: "ordered_at",
+        logLabel: "food orders",
+      });
     },
 
     forUser(userId) {

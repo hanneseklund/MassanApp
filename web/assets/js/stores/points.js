@@ -11,6 +11,7 @@
 // screen for venue-wide merchandise.
 
 import { supabaseClient } from "../supabase.js";
+import { loadUserRows } from "../util/session-sync.js";
 
 export function pointsStore() {
   return {
@@ -21,27 +22,12 @@ export function pointsStore() {
     init() {},
 
     async _onSessionChange() {
-      const user = Alpine.store("session").user;
-      if (!user) {
-        this.transactions = [];
-        this.error = null;
-        return;
-      }
-      this.loading = true;
-      this.error = null;
-      const db = supabaseClient();
-      const { data, error } = await db
-        .from("point_transactions")
-        .select("*")
-        .order("created_at", { ascending: false });
-      this.loading = false;
-      if (error) {
-        console.warn("Could not load point transactions:", error.message);
-        this.error = error.message;
-        this.transactions = [];
-        return;
-      }
-      this.transactions = data || [];
+      await loadUserRows(this, {
+        table: "point_transactions",
+        field: "transactions",
+        orderBy: "created_at",
+        logLabel: "point transactions",
+      });
     },
 
     get balance() {
