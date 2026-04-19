@@ -194,9 +194,11 @@ section above for the caveats.
 ### Event content
 
 5. From `Nordbygg 2026`, open each of News, Articles, Program,
-   Exhibitors, Practical info, and Newsletter in turn. Assert: each
-   subview either renders content or a documented empty-state
-   placeholder, and the active tab indicator tracks the selection.
+   Exhibitors, Practical info, Food, and Newsletter in turn. Assert:
+   each subview either renders content or a documented empty-state
+   placeholder, and the active tab indicator tracks the selection. The
+   Food tab renders the ten-menu picker even while signed out — it
+   only requires sign-in to confirm an order.
 6. From the Exhibitors index, open one exhibitor. Assert: the
    exhibitor detail view renders and a "Back to exhibitors" button is
    visible.
@@ -409,7 +411,12 @@ When editing venue-shared content:
 
 These are expected in the prototype and are not bugs:
 
-- Payments succeed without real charges.
+- Payments succeed without real charges. The same `simulatedPayment`
+  helper backs both ticket purchase and food ordering, so a food order
+  also resolves with a `SIM-` transaction reference.
+- Food orders persist to `public.food_orders` but no kitchen, pickup
+  point, or restaurant system is contacted; the resulting confirmation
+  screen is the only delivery surface.
 - Google and Microsoft sign-in do not contact real providers; they
   create a Supabase anonymous session and tag it with the chosen
   provider name.

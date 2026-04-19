@@ -25,6 +25,10 @@ The prototype is the starting point for the work requested in
   preferences.
 - Reuses shared Stockholmsmassan venue data (transport, parking,
   restaurants, security) across every seeded event.
+- Lets a signed-in visitor order food for the selected event from a
+  fixed catalog of ten typical fast-food menus, with either an on-site
+  pickup location or a 30-minute timeslot at one of the venue
+  restaurants. Payment is run through the simulated payment flow.
 - Supports English and Swedish app chrome. A compact toggle in the
   top chrome switches between the two languages and the choice is
   persisted across reloads.
@@ -63,11 +67,12 @@ proposed as a specification change before it is implemented.
 The end-to-end prototype flow in
 [docs/functional-specification.md](docs/functional-specification.md) is
 implemented: calendar with filtering, event mini-homepages (news,
-articles, program, exhibitors, practical info, newsletter), email
-registration and sign-in, simulated social sign-in, simulated ticket
-purchase, and My Tickets. The catalog, authentication, tickets, and
-newsletter subscriptions are all served from the shared Supabase
-project. Payments and Google / Microsoft sign-in remain simulated.
+articles, program, exhibitors, practical info, food, newsletter),
+email registration and sign-in, simulated social sign-in, simulated
+ticket purchase, simulated food ordering, and My Tickets. The
+catalog, authentication, tickets, food orders, and newsletter
+subscriptions are all served from the shared Supabase project.
+Payments and Google / Microsoft sign-in remain simulated.
 
 ## Reviewing a change
 

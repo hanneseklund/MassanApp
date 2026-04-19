@@ -62,7 +62,7 @@ views:
   section navigation render for every event subview. The event view
   has a default `home` subview (the landing state when an event is
   first opened) and named subviews for News, Articles, Program,
-  Exhibitor index, Exhibitor detail, Practical information, and
+  Exhibitor index, Exhibitor detail, Practical information, Food, and
   Newsletter. Hash routes that target an event without a subview
   (for example `#/event/nordbygg-2026`) resolve to `home`.
 - `auth` — registration and sign-in.
@@ -96,9 +96,9 @@ renders. The supported routes are:
 ```
 
 `<subview>` is one of `home`, `news`, `articles`, `program`,
-`exhibitors`, `practical`, or `newsletter`. An unknown or missing
-subview resolves to `home` so a stale or hand-edited link still lands
-on the event's main page.
+`exhibitors`, `practical`, `food`, or `newsletter`. An unknown or
+missing subview resolves to `home` so a stale or hand-edited link
+still lands on the event's main page.
 
 ### Frontend app structure
 
@@ -133,6 +133,11 @@ web/assets/js/
                                the calendar view)
     placeholders.js            logoDataUri, avatarDataUri (deterministic
                                SVG fallbacks for exhibitors and speakers)
+    food.js                    FOOD_MENUS, PICKUP_LOCATIONS,
+                               RESTAURANTS, menuById, pickupById,
+                               restaurantById, canonical*Label,
+                               upcomingTimeslots (food ordering catalog
+                               and 30-minute timeslot generator)
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -157,6 +162,8 @@ web/assets/js/
                                exhibitors, speakers)
     tickets.js                 Alpine.store("tickets", ...)
     newsletter.js              Alpine.store("newsletter", ...)
+    food-orders.js             Alpine.store("foodOrders", ...) (signed-in
+                               user's rows from public.food_orders)
     filters.js                 Alpine.store("filters", ...) (calendar
                                free-text, type, category, month)
   views/
@@ -168,14 +175,16 @@ web/assets/js/
     my-tickets.js              myTicketsView()
     newsletter-signup.js       newsletterSignup()
     newsletter-preferences.js  newsletterPreferences()
+    food.js                    foodView()
 ```
 
 The view factory names (`calendarView`, `eventView`, `authView`,
 `meView`, `purchaseView`, `myTicketsView`, `newsletterSignup`,
-`newsletterPreferences`) are exposed on `window` inside the
-`alpine:init` handler so the `x-data="<factory>()"` bindings in
+`newsletterPreferences`, `foodView`) are exposed on `window` inside
+the `alpine:init` handler so the `x-data="<factory>()"` bindings in
 `index.html` continue to resolve. Stores keep their existing ids
-(`app`, `session`, `catalog`, `tickets`, `newsletter`, `filters`).
+(`app`, `session`, `catalog`, `tickets`, `newsletter`, `foodOrders`,
+`filters`).
 
 When adding a new view or store, place it in its own module under
 `views/` or `stores/` and import it from `app.js`. Do not inline new
@@ -213,10 +222,16 @@ Alpine.js stores and components own the following state:
   anonymous visitors the store holds only the in-session success state —
   the row exists in Supabase but cannot be read back through RLS until
   the visitor signs in.
+- `foodOrders`: the signed-in user's food order rows loaded from
+  `public.food_orders` through RLS. Inserts go through the Supabase
+  client so RLS enforces ownership. Anonymous visitors are routed to
+  the auth view before an order can be placed; there is no anonymous
+  food order path.
 
-In-progress ticket purchase state lives in the local Alpine component
-behind the `purchase` view rather than in a store, because nothing
-outside that view needs to read it.
+In-progress ticket purchase and food ordering state both live in the
+local Alpine component behind their respective views (`purchase` and
+the `food` event subview) rather than in a store, because nothing
+outside those views needs to read it.
 
 Data is loaded from the shared Supabase prototype project. Supabase is
 a hard dependency of the frontend: the calendar, event views, and
@@ -430,6 +445,25 @@ Exactly one venue record is expected in the prototype.
   Ticket-type catalogs live in the frontend (not in seed JSON) so the
   same simulated catalog applies regardless of how an event was loaded.
 
+### Food order
+
+- `id`, `user_id`, `event_id`, `menu_id`, `menu_label`, `price`,
+  `delivery_mode` (`pickup` or `timeslot`), `delivery_id`,
+  `delivery_label`, `timeslot_from`, `timeslot_to`, `transaction_ref`,
+  `ordered_at`.
+- Rows live in `public.food_orders` (see
+  `supabase/migrations/0004_food_orders.sql`) with Row Level Security
+  scoped to `auth.uid() = user_id` for both read and insert. Only
+  signed-in visitors can place an order; the food view routes through
+  auth first if there is no session.
+- The menu catalog (10 menus), pickup locations, and restaurant list
+  are static data in `web/assets/js/util/food.js` and do not have
+  database tables. A persisted order references them by id.
+- Persisted display fields (`menu_label`, `delivery_label`) use the
+  canonical English copy via the `canonical*Label` helpers, same rule
+  as `ticket_type_label` on tickets — the wallet entry must not flip
+  language depending on who later views it.
+
 ### Newsletter subscription
 
 - `id`, `user_id` (nullable for anonymous signup), `email`, `event_id`
@@ -513,7 +547,8 @@ All simulations must be centralized and easy to replace:
 - `simulatedPayment(order)` — returns a Promise that resolves after a
   short delay with `{ ok: true, transaction_ref }`. The reference is a
   plausible-looking string (e.g. `SIM-XXXXXXXX`) but no payment service
-  is contacted. The delay lets the UI show a "processing" state.
+  is contacted. The delay lets the UI show a "processing" state. Used
+  by both the ticket purchase flow and the food ordering flow.
 - `simulatedEmail(kind, payload)` — logs the would-be email to the
   browser console on prototype hosts (local dev and the Cloudflare
   Pages preview at `*.pages.dev`) so reviewers and the smoke suite can

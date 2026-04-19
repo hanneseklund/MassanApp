@@ -171,6 +171,7 @@ test.describe("Event content", () => {
       ["program", "Program", ".program-day"],
       ["exhibitors", "Exhibitors", ".exhibitor-card"],
       ["practical", "Practical info", ".practical__section"],
+      ["food", "Food", ".menu-card"],
       ["newsletter", "Newsletter", ".newsletter-form"],
     ]) {
       await openSubview(page, id, label);

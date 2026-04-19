@@ -73,8 +73,11 @@ The prototype must support this end-to-end path without gaps:
    presentation for venue entry.
 8. The visitor can sign up for the event newsletter and adjust newsletter
    preferences.
-9. At any step after selecting an event, the visitor can return to the
-   broader event list and pick a different event.
+9. The visitor can order food for the selected event, choosing either an
+   on-site pickup location or a 30-minute timeslot at one of the venue
+   restaurants, and pay through the simulated payment flow.
+10. At any step after selecting an event, the visitor can return to the
+    broader event list and pick a different event.
 
 ## Navigation model
 
@@ -110,7 +113,7 @@ The prototype must support this end-to-end path without gaps:
   text-only without an empty frame.
 - Summarizes what the event is and when it runs.
 - Surfaces the core event sections: News, Articles, Program, Exhibitor
-  index, Practical information, Newsletter.
+  index, Practical information, Food, Newsletter.
 - Provides a clear ticket call-to-action when the event has ticketing.
 - Provides a persistent "Back to events" route.
 
@@ -143,6 +146,32 @@ The prototype must support this end-to-end path without gaps:
   rules.
 - Allows event-specific overrides such as bag rules, special entrances,
   and event-specific safety notices.
+
+### Food
+
+- Reachable from the event nav as the "Food" tab. The flow is scoped to
+  the selected event but the menu catalog and venue locations are shared
+  across every event because Stockholmsmassan has one set of on-site
+  food vendors.
+- The flow has three steps:
+  1. Pick a menu. The prototype offers ten typical fast-food menus
+     (burgers, pizza, hot dog, chicken nuggets, fries, salad, wrap,
+     sushi box, ice cream) with name, short description, price, and an
+     illustrative image.
+  2. Pick delivery. The visitor chooses either a pickup location at one
+     of a small set of points within the venue, or a 30-minute timeslot
+     at one of the on-site restaurants. The shown timeslots start on
+     the next half hour from the visitor's local clock.
+  3. Confirm. A simulated payment runs and the order is persisted. A
+     visitor who is not signed in is sent to the auth view first and
+     returned to the food flow after sign-in.
+- On success the visitor sees a confirmation screen with the
+  transaction reference and either the pickup location or the
+  restaurant + timeslot to expect, marked with the same `simulated`
+  chip used elsewhere.
+- Persisted orders live with the visitor and are scoped to their
+  user id. Cross-event ordering history is not currently surfaced in
+  the UI.
 
 ### Newsletter
 
@@ -243,7 +272,7 @@ Events can override or extend these facts with event-specific notices.
 
 The prototype explicitly simulates:
 
-- Payment processing during ticket purchase.
+- Payment processing during ticket purchase and food ordering.
 - Google and Microsoft social sign-in.
 - Email delivery for ticket-purchase confirmation and newsletter-signup
   confirmation. Registration email is handled by Supabase Auth directly
@@ -251,6 +280,8 @@ The prototype explicitly simulates:
   no email is actually sent during sign-up).
 - Any congress-platform or on-demand-content integrations that real
   events expose but the prototype does not wire up.
+- Food fulfilment: the order is persisted but no kitchen, restaurant,
+  or pickup-location system is contacted.
 
 Simulations must be visibly labeled in development and test contexts so
 that reviewers understand they are not real integrations.
@@ -288,7 +319,6 @@ be implemented without a specification change:
 - Lead capture and networking features for exhibitors.
 - Hybrid or on-demand congress content playback.
 - Secure document centers, voting, or Q&A for governance meetings.
-- Food pre-ordering.
 - Real email delivery or real push notifications.
 
 ## Acceptance criteria
