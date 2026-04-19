@@ -1626,5 +1626,105 @@
       "affiliation": "Uppsala University Hospital",
       "avatar": "assets/images/speakers/estro-2026-bergstrom.svg"
     }
+  ],
+  "point_addons": [
+    {
+      "id": "nordbygg-2026-addon-gift-bag",
+      "event_id": "nordbygg-2026",
+      "name": "Exhibitor gift bag",
+      "description": "Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin.",
+      "points_cost": 80,
+      "image": "assets/images/events/nordbygg-2026.jpg",
+      "stock": 50,
+      "active": true
+    },
+    {
+      "id": "nordbygg-2026-addon-sustainability-stage",
+      "event_id": "nordbygg-2026",
+      "name": "Sustainability Stage seat reservation",
+      "description": "Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one.",
+      "points_cost": 150,
+      "image": "assets/images/events/nordbygg-2026.jpg",
+      "stock": 20,
+      "active": true
+    },
+    {
+      "id": "nordbygg-2026-addon-catalog",
+      "event_id": "nordbygg-2026",
+      "name": "Event catalog hardcover",
+      "description": "Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan.",
+      "points_cost": 120,
+      "image": "assets/images/events/nordbygg-2026.jpg",
+      "stock": null,
+      "active": true
+    },
+    {
+      "id": "estro-2026-addon-gift-bag",
+      "event_id": "estro-2026",
+      "name": "Delegate gift bag",
+      "description": "Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples.",
+      "points_cost": 80,
+      "image": "assets/images/events/estro-2026.webp",
+      "stock": 50,
+      "active": true
+    },
+    {
+      "id": "estro-2026-addon-vip-keynote",
+      "event_id": "estro-2026",
+      "name": "VIP access to keynote",
+      "description": "Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote.",
+      "points_cost": 200,
+      "image": "assets/images/events/estro-2026.webp",
+      "stock": 10,
+      "active": true
+    },
+    {
+      "id": "estro-2026-addon-proceedings",
+      "event_id": "estro-2026",
+      "name": "Proceedings hardcover",
+      "description": "Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings.",
+      "points_cost": 150,
+      "image": "assets/images/events/estro-2026.webp",
+      "stock": null,
+      "active": true
+    }
+  ],
+  "merchandise": [
+    {
+      "id": "merch-tote-bag",
+      "name": "Stockholmsmassan tote bag",
+      "description": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark.",
+      "points_cost": 120,
+      "image": null,
+      "stock": null,
+      "active": true
+    },
+    {
+      "id": "merch-cap",
+      "name": "Stockholmsmassan cap",
+      "description": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo.",
+      "points_cost": 150,
+      "image": null,
+      "stock": 100,
+      "active": true
+    },
+    {
+      "id": "merch-notebook",
+      "name": "Notebook",
+      "description": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker.",
+      "points_cost": 90,
+      "image": null,
+      "stock": null,
+      "active": true
+    },
+    {
+      "id": "merch-enamel-pin",
+      "name": "Enamel pin",
+      "description": "Simulated item. Enamel pin with the Stockholmsmassan roundel.",
+      "points_cost": 60,
+      "image": null,
+      "stock": 200,
+      "active": true
+    }
   ]
 }

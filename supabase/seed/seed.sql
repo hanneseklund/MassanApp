@@ -935,4 +935,75 @@ on conflict (id) do update set
   website = excluded.website,
   logo = excluded.logo;
 
+-- Points system: event-specific add-ons. ~3 rows per fully-seeded event
+-- (Nordbygg 2026 and ESTRO 2026). Redeemable with points only; the
+-- UI shows `stock` as advisory and does not decrement it in the
+-- prototype. Images reuse each event's hero image as a stand-in —
+-- same pattern used by news_items and articles — so the prototype
+-- does not need new binary assets to render a card.
+insert into public.point_addons (
+  id, event_id, name, description, points_cost, image, stock, active
+) values
+  ('nordbygg-2026-addon-gift-bag', 'nordbygg-2026',
+   'Exhibitor gift bag',
+   'Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin.',
+   80, 'assets/images/events/nordbygg-2026.jpg', 50, true),
+  ('nordbygg-2026-addon-sustainability-stage', 'nordbygg-2026',
+   'Sustainability Stage seat reservation',
+   'Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one.',
+   150, 'assets/images/events/nordbygg-2026.jpg', 20, true),
+  ('nordbygg-2026-addon-catalog', 'nordbygg-2026',
+   'Event catalog hardcover',
+   'Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan.',
+   120, 'assets/images/events/nordbygg-2026.jpg', null, true),
+  ('estro-2026-addon-gift-bag', 'estro-2026',
+   'Delegate gift bag',
+   'Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples.',
+   80, 'assets/images/events/estro-2026.webp', 50, true),
+  ('estro-2026-addon-vip-keynote', 'estro-2026',
+   'VIP access to keynote',
+   'Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote.',
+   200, 'assets/images/events/estro-2026.webp', 10, true),
+  ('estro-2026-addon-proceedings', 'estro-2026',
+   'Proceedings hardcover',
+   'Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings.',
+   150, 'assets/images/events/estro-2026.webp', null, true)
+on conflict (id) do update set
+  event_id = excluded.event_id,
+  name = excluded.name,
+  description = excluded.description,
+  points_cost = excluded.points_cost,
+  image = excluded.image,
+  stock = excluded.stock,
+  active = excluded.active;
+
+-- Points system: venue-wide merchandise catalog. Independent of any
+-- event (no `event_id`); reachable from `#/points` at any time.
+insert into public.merchandise (
+  id, name, description, points_cost, image, stock, active
+) values
+  ('merch-tote-bag',
+   'Stockholmsmassan tote bag',
+   'Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark.',
+   120, null, null, true),
+  ('merch-cap',
+   'Stockholmsmassan cap',
+   'Simulated item. Six-panel cap with embroidered Stockholmsmassan logo.',
+   150, null, 100, true),
+  ('merch-notebook',
+   'Notebook',
+   'Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker.',
+   90, null, null, true),
+  ('merch-enamel-pin',
+   'Enamel pin',
+   'Simulated item. Enamel pin with the Stockholmsmassan roundel.',
+   60, null, 200, true)
+on conflict (id) do update set
+  name = excluded.name,
+  description = excluded.description,
+  points_cost = excluded.points_cost,
+  image = excluded.image,
+  stock = excluded.stock,
+  active = excluded.active;
+
 commit;

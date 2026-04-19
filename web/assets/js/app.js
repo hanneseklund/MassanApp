@@ -11,6 +11,7 @@ import { newsletterStore } from "./stores/newsletter.js";
 import { filtersStore } from "./stores/filters.js";
 import { langStore } from "./stores/lang.js";
 import { foodOrdersStore } from "./stores/food-orders.js";
+import { pointsStore } from "./stores/points.js";
 
 import { calendarView } from "./views/calendar.js";
 import { eventView } from "./views/event.js";
@@ -34,6 +35,7 @@ document.addEventListener("alpine:init", () => {
   Alpine.store("newsletter", newsletterStore());
   Alpine.store("filters", filtersStore());
   Alpine.store("foodOrders", foodOrdersStore());
+  Alpine.store("points", pointsStore());
 
   // View factories are referenced from `index.html` as
   // `x-data="calendarView()"` etc., so they must be resolvable in the

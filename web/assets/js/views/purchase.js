@@ -8,6 +8,7 @@ import { ticketTypesFor, canonicalTicketTypeLabel } from "../util/sections.js";
 import { simulatedPayment } from "../simulations/payment.js";
 import { simulatedEmail } from "../simulations/email.js";
 import { ticketQrPayload, ticketQrSvgFor } from "../simulations/qr.js";
+import { pointsForTicket } from "../util/points.js";
 
 export function purchaseView() {
   return {
@@ -117,6 +118,19 @@ export function purchaseView() {
         };
         draft.qr_payload = ticketQrPayload(draft);
         const ticket = await Alpine.store("tickets").add(draft);
+        // Award points for the simulated purchase. A failed insert
+        // must not fail the purchase itself — surface to the points
+        // store's `error` state and keep the happy path visible.
+        try {
+          await Alpine.store("points").earn({
+            source: "ticket",
+            source_ref: ticket.id,
+            amount: pointsForTicket(ticket),
+            event_id: ticket.event_id,
+          });
+        } catch (pointsErr) {
+          console.warn("Points earn failed:", pointsErr.message);
+        }
         simulatedEmail("ticket_confirmation", {
           to: email,
           user_id: user.id,
