@@ -89,7 +89,14 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  max-width: var(--max-w);
+  /* Match the visible width of content cards inside .view. The .view
+     container is var(--max-w) wide with var(--pad) horizontal padding,
+     so its inner content (and cards inside it) occupy
+     max-w - 2 * pad on wide viewports and 100% - 2 * pad on narrow
+     ones. Mirror that here so the chrome's outer box lines up
+     exactly with the cards below. */
+  width: calc(100% - 2 * var(--pad));
+  max-width: calc(var(--max-w) - 2 * var(--pad));
   margin: 0 auto;
   height: var(--chrome-h);
   padding: 0 var(--pad);
