@@ -51,6 +51,7 @@ export function sessionStore() {
         Alpine.store("tickets")?._onSessionChange?.();
         Alpine.store("newsletter")?._onSessionChange?.();
         Alpine.store("foodOrders")?._onSessionChange?.();
+        Alpine.store("points")?._onSessionChange?.();
       });
       Alpine.store("tickets")?._onSessionChange?.();
       Alpine.store("newsletter")?._onSessionChange?.();
