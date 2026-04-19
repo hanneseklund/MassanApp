@@ -360,9 +360,10 @@ Pure-function helpers in the frontend (hash routing in
 catalog in `util/sections.js`, calendar filter/sort in
 `util/calendar.js`, newsletter-preference shape in
 `newsletter/preferences.js`, the QR payload builder in
-`simulations/qr.js`, and the UI translation lookup in `i18n.js`)
-have a fast unit suite under `tests/unit/` that does not require a
-browser or Supabase.
+`simulations/qr.js`, the UI translation lookup in `i18n.js`, and
+the deterministic exhibitor/speaker placeholder SVGs in
+`util/placeholders.js`) have a fast unit suite under `tests/unit/`
+that does not require a browser or Supabase.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a

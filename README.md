@@ -84,8 +84,9 @@ npm run smoke
 
 Pure-function helpers (hash routing, date formatting, calendar
 filter/sort, QR payload, newsletter preferences, ticket-type
-catalog) also have a fast unit suite that does not need a browser
-or Supabase:
+catalog, UI translation lookup, exhibitor and speaker placeholder
+SVGs) also have a fast unit suite that does not need a browser or
+Supabase:
 
 ```
 npm run test:unit
