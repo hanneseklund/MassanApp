@@ -93,9 +93,9 @@ Providers / Sign In.
 
 Because every local run, every `agent` deploy, and every `main` deploy
 shares one Supabase project, a smoke-test run leaves rows behind in
-`auth.users`, `public.tickets`, and `public.newsletter_subscriptions`.
-The prototype does not reset the database between runs. When running
-the checklist:
+`auth.users`, `public.tickets`, `public.newsletter_subscriptions`, and
+`public.food_orders`. The prototype does not reset the database between
+runs. When running the checklist:
 
 - Prefer a deterministic `@example.com` email address per tester (for
   example `smoke+your-initials@example.com`). Reusing the same address
@@ -280,15 +280,40 @@ section above for the caveats.
     venue-wide toggle stays on. Toggle it off and reload. Assert: the
     toggle stays off.
 
+### Food ordering (simulated)
+
+29. Sign in with the step-12 account. Open `Nordbygg 2026` → Food.
+    Assert: the menu picker renders at least one menu card.
+30. Pick the first menu card (`Classic Burger`) and tap Continue. Keep
+    the "Pick up in the venue" delivery mode, pick the first pickup
+    location (`North Entrance kiosk`), and tap "Pay and order".
+    Assert: the confirmation title reads "Order confirmed" alongside a
+    `simulated` chip, the transaction reference starts with `SIM-`,
+    the confirmed ticket card shows the menu label `Classic Burger`,
+    and the pickup instructions name `North Entrance kiosk`.
+31. With the confirmation still on screen, tap the Swedish flag in the
+    top chrome. Assert: the chrome copy and the confirmation's
+    template prose switch to Swedish, but the persisted menu label
+    (`Classic Burger`) and pickup location (`North Entrance kiosk`)
+    in the confirmed ticket card stay in English — `menu_label` and
+    `delivery_label` in `public.food_orders` are canonical English,
+    same rule as `ticket_type_label` in `public.tickets`. Tap the
+    English flag to restore English for the next step.
+32. Tap "Order another". Pick the first menu, Continue, switch
+    delivery to "Book a restaurant slot", pick `Smakverket`, pick the
+    first timeslot, and tap "Pay and order". Assert: the confirmation
+    references both the chosen restaurant (`Smakverket`) and the
+    timeslot in the instructions paragraph.
+
 ### Language toggle
 
-29. From any view, tap the flag icon in the top chrome for the other
+33. From any view, tap the flag icon in the top chrome for the other
     language (UK flag for English, Swedish flag for Swedish — the
     active language's flag is fully opaque, the inactive one is
     dimmed). Assert: the chrome title, primary nav labels, and hint
     copy switch language. Reload the page. Assert: the choice is
     preserved.
-30. Tap the English (UK) flag to return to English. Assert: the chrome
+34. Tap the English (UK) flag to return to English. Assert: the chrome
     re-renders in English without requiring a reload. Event content
     (event names, summaries, news, articles, exhibitor copy,
     practical-info venue copy) stays in the language it was seeded in
@@ -296,7 +321,7 @@ section above for the caveats.
 
 ### Chrome layout
 
-31. Open the start page (calendar of events) — the back button is
+35. Open the start page (calendar of events) — the back button is
     hidden here. Assert: the language flag pair and the "me" silhouette
     icon sit flush against the right edge of the chrome (within the
     chrome's right padding), matching their position on event subviews
@@ -341,10 +366,11 @@ suite uses a deterministic email and password per repo checkout:
 The first run registers the account; subsequent runs sign in instead
 (`signUp` returns a "User already registered" error, which the suite
 treats as a pass signal and falls back to `signIn`). Simulated Google
-sign-in and anonymous newsletter signups leave additional
-`auth.users` and `public.newsletter_subscriptions` rows behind on every
-run; this is accepted prototype behavior and noisy rows can be cleaned
-up from the Supabase dashboard.
+sign-in, anonymous newsletter signups, and simulated food orders leave
+additional `auth.users`, `public.newsletter_subscriptions`, and
+`public.food_orders` rows behind on every run; this is accepted
+prototype behavior and noisy rows can be cleaned up from the Supabase
+dashboard.
 
 The suite does not truncate any Supabase tables. A cleaner teardown
 would require a service-role key, which this repository does not ship.

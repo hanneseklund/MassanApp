@@ -556,8 +556,106 @@ test.describe("Newsletter", () => {
   });
 });
 
+test.describe("Food ordering (simulated)", () => {
+  test("29-32: pickup order, language toggle keeps canonical labels, timeslot order", async ({
+    page,
+  }) => {
+    // 29. Sign in with the smoke account, open Nordbygg → Food, and
+    //     confirm the menu picker renders.
+    await signOutIfSignedIn(page);
+    await page.goto("/#/auth");
+    await page.locator('.auth-tabs__tab', { hasText: "Sign in" }).click();
+    await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+    await page
+      .locator('input[autocomplete="current-password"]')
+      .fill(TEST_PASSWORD);
+    await page.locator(".auth-form .auth-form__submit").click();
+    await waitForSignedIn(page);
+
+    await openEventByName(page, "Nordbygg 2026");
+    await openSubview(page, "food", "Food");
+    await expect(page.locator(".menu-card").first()).toBeVisible();
+
+    // 30. Pickup order: first menu (Classic Burger), first pickup
+    //     location (North Entrance kiosk), confirm.
+    await page.locator(".menu-card").first().click();
+    await page
+      .locator(".food .purchase__primary", { hasText: "Continue" })
+      .click();
+    await page.locator('input[name="food-pickup"]').first().check();
+    await page
+      .locator(".food .purchase__primary", { hasText: "Pay and order" })
+      .click();
+    await expect(
+      page.locator(".food .purchase__step-title", { hasText: "Order confirmed" }),
+    ).toBeVisible({ timeout: 15_000 });
+    await expect(
+      page.locator(".food .purchase__step-title .sim-chip", { hasText: "simulated" }),
+    ).toBeVisible();
+    await expect(page.locator(".food .purchase__ref code")).toContainText(
+      /^SIM-/,
+    );
+    const pickupCard = page.locator(".food .ticket-card");
+    await expect(pickupCard.locator(".ticket-card__event")).toHaveText(
+      "Classic Burger",
+    );
+    await expect(pickupCard).toContainText("North Entrance kiosk");
+
+    // 31. Toggle language to Swedish — the persisted canonical labels
+    //     stay in English even though the template prose switches.
+    await page.locator('.chrome__lang[data-lang="sv"]').click();
+    await expect(
+      page.locator(".food .purchase__step-title", {
+        hasText: "Beställning bekräftad",
+      }),
+    ).toBeVisible();
+    await expect(pickupCard.locator(".ticket-card__event")).toHaveText(
+      "Classic Burger",
+    );
+    await expect(pickupCard).toContainText("North Entrance kiosk");
+    await page.locator('.chrome__lang[data-lang="en"]').click();
+    await expect(
+      page.locator(".food .purchase__step-title", { hasText: "Order confirmed" }),
+    ).toBeVisible();
+
+    // 32. Timeslot order: reset the form, switch delivery mode, pick
+    //     Smakverket + the first timeslot, confirm.
+    await page
+      .locator(".food .purchase__primary", { hasText: "Order another" })
+      .click();
+    await page.locator(".menu-card").first().click();
+    await page
+      .locator(".food .purchase__primary", { hasText: "Continue" })
+      .click();
+    await page
+      .locator('input[name="food-delivery-mode"][value="timeslot"]')
+      .check();
+    await page.locator('input[name="food-restaurant"]').first().check();
+    const firstSlotLabel = page.locator(".food-timeslot").first();
+    await expect(firstSlotLabel).toBeVisible();
+    await firstSlotLabel.locator('input[name="food-timeslot"]').check();
+    // Capture the slot label from the adjacent <span> so we can assert
+    // it shows up in the confirmation instructions.
+    const slotLabel = (await firstSlotLabel.locator("span").textContent())
+      ?.trim();
+    expect(slotLabel).toMatch(/^\d{2}:\d{2}[–-]\d{2}:\d{2}$/);
+    await page
+      .locator(".food .purchase__primary", { hasText: "Pay and order" })
+      .click();
+    await expect(
+      page.locator(".food .purchase__step-title", { hasText: "Order confirmed" }),
+    ).toBeVisible({ timeout: 15_000 });
+    await expect(page.locator(".food .purchase__ref code")).toContainText(
+      /^SIM-/,
+    );
+    const timeslotCard = page.locator(".food .ticket-card");
+    await expect(timeslotCard).toContainText("Smakverket");
+    await expect(timeslotCard).toContainText(slotLabel);
+  });
+});
+
 test.describe("Language toggle", () => {
-  test("29-30: chrome switches between English and Swedish and persists across reload", async ({
+  test("33-34: chrome switches between English and Swedish and persists across reload", async ({
     page,
   }) => {
     // Start on a view whose chrome copy differs clearly between the
@@ -624,7 +722,7 @@ test.describe("Language toggle", () => {
 });
 
 test.describe("Chrome layout", () => {
-  test("31: language flags and me icon are right-justified on the start page", async ({
+  test("35: language flags and me icon are right-justified on the start page", async ({
     page,
   }) => {
     // Regression for issue #10: on the calendar (start) page the back
