@@ -357,13 +357,15 @@ in the same pull request.
 
 Pure-function helpers in the frontend (hash routing in
 `stores/app.js`, date formatting in `util/dates.js`, ticket-type
-catalog in `util/sections.js`, calendar filter/sort in
-`util/calendar.js`, newsletter-preference shape in
-`newsletter/preferences.js`, the QR payload builder in
-`simulations/qr.js`, the UI translation lookup in `i18n.js`, and
-the deterministic exhibitor/speaker placeholder SVGs in
-`util/placeholders.js`) have a fast unit suite under `tests/unit/`
-that does not require a browser or Supabase.
+catalog and event-nav section order in `util/sections.js`,
+calendar filter/sort in `util/calendar.js`, newsletter-preference
+shape in `newsletter/preferences.js`, the QR payload builder in
+`simulations/qr.js`, the UI translation lookup in `i18n.js`, the
+deterministic exhibitor/speaker placeholder SVGs in
+`util/placeholders.js`, and the catalog-store selectors in
+`stores/catalog.js` that fan per-event rows into views) have a
+fast unit suite under `tests/unit/` that does not require a
+browser or Supabase.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a

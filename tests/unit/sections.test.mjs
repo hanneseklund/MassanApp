@@ -7,6 +7,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  SECTION_LABELS,
   ticketTypesFor,
   ticketCtaLabel,
   canonicalTicketTypeLabel,
@@ -54,4 +55,26 @@ test("canonicalTicketTypeLabel: known ids resolve to English labels", () => {
 
 test("canonicalTicketTypeLabel: unknown id falls back to the id itself", () => {
   assert.equal(canonicalTicketTypeLabel("not-a-real-type"), "not-a-real-type");
+});
+
+test("SECTION_LABELS: ids match the event-nav subview order", () => {
+  // The event nav tabs render in this order in index.html. Reordering
+  // would change the visible tab order; a mismatch with the hash-route
+  // subview list in stores/app.js would break deep-linking.
+  assert.deepEqual(
+    SECTION_LABELS.map((s) => s.id),
+    ["news", "articles", "program", "exhibitors", "practical", "newsletter"],
+  );
+});
+
+test("SECTION_LABELS: labels resolve against the default language", () => {
+  // Labels are getters that read the active UI language. In Node
+  // without Alpine, activeTranslate falls back to English.
+  const byId = Object.fromEntries(SECTION_LABELS.map((s) => [s.id, s.label]));
+  assert.equal(byId.news, "News");
+  assert.equal(byId.articles, "Articles");
+  assert.equal(byId.program, "Program");
+  assert.equal(byId.exhibitors, "Exhibitors");
+  assert.equal(byId.practical, "Practical info");
+  assert.equal(byId.newsletter, "Newsletter");
 });
