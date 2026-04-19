@@ -119,6 +119,7 @@ a {
 }
 
 .chrome__title {
+  grid-column: 2;
   font-family: var(--font-heading);
   font-size: 17px;
   font-weight: 700;
@@ -155,10 +156,12 @@ a {
 }
 
 .chrome__back {
+  grid-column: 1;
   justify-self: start;
 }
 
 .chrome__actions {
+  grid-column: 3;
   justify-self: end;
   display: flex;
   align-items: center;

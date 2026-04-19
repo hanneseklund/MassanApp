@@ -292,6 +292,14 @@ section above for the caveats.
     practical-info venue copy) stays in the language it was seeded in
     regardless of the toggle.
 
+### Chrome layout
+
+31. Open the start page (calendar of events) — the back button is
+    hidden here. Assert: the language flag pair and the "me" silhouette
+    icon sit flush against the right edge of the chrome (within the
+    chrome's right padding), matching their position on event subviews
+    where the back button is visible.
+
 ## Automated smoke suite
 
 The automated counterpart to the checklist lives at

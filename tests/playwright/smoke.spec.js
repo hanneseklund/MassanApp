@@ -621,3 +621,28 @@ test.describe("Language toggle", () => {
     await page.locator('.chrome__lang[data-lang="en"]').click();
   });
 });
+
+test.describe("Chrome layout", () => {
+  test("31: language flags and me icon are right-justified on the start page", async ({
+    page,
+  }) => {
+    // Regression for issue #10: on the calendar (start) page the back
+    // button is hidden, and CSS Grid auto-placement used to pull the
+    // actions cluster toward the centre. Pin the cluster's right edge
+    // to the chrome's right edge (within the page padding).
+    await gotoHome(page);
+    const chromeBox = await page.locator(".chrome").boundingBox();
+    const actionsBox = await page.locator(".chrome__actions").boundingBox();
+    expect(chromeBox).not.toBeNull();
+    expect(actionsBox).not.toBeNull();
+    const padding = parseFloat(
+      await page.evaluate(
+        () => getComputedStyle(document.querySelector(".chrome")).paddingRight,
+      ),
+    );
+    const rightGap = chromeBox.x + chromeBox.width - (actionsBox.x + actionsBox.width);
+    // Allow 1px slack for sub-pixel rounding on top of the chrome's own
+    // right padding.
+    expect(Math.abs(rightGap - padding)).toBeLessThanOrEqual(1);
+  });
+});
