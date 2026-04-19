@@ -349,7 +349,20 @@ Exactly one venue record is expected in the prototype.
 - `branding` (optional colors/logo; also carries `hero_image` as a
   relative path into `web/assets/images/events/` and `hero_image_credit`
   for attribution of scraped event imagery)
-- `overrides` (JSON of event-specific practical-info overrides)
+- `overrides` (JSON of event-specific practical-info overrides). The
+  prototype recognises the following optional string keys; each is
+  rendered under the event's Practical info section below the shared
+  venue data, with a translated label resolved from the `overrides.*`
+  i18n keys:
+  - `entrance` — event-specific entrance or badge-pickup copy.
+  - `bag_rules` — bag, luggage, or cloakroom copy for this event.
+  - `access_notes` — access or seating notes for this event.
+  Additional keys in the JSON render with a fallback label derived from
+  the key (underscores replaced with spaces), so the catalog can carry
+  forward-looking keys without breaking the view — but new keys should
+  be added to `OVERRIDE_KEYS` in `web/assets/js/views/event.js` and to
+  both language entries in `web/assets/js/i18n.js` so the label
+  translates correctly.
 
 ### News item
 
