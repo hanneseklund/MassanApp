@@ -55,14 +55,6 @@ export function langStore() {
       }
     },
 
-    // Toggle between the two supported languages. Kept as a distinct
-    // verb because the header uses a single button rather than a
-    // dropdown.
-    toggle() {
-      const next = this.current === "en" ? "sv" : "en";
-      this.set(next);
-    },
-
     t(key, params) {
       return translate(key, this.current, params);
     },
