@@ -388,7 +388,11 @@ Pure-function helpers in the frontend (hash routing in
 catalog and event-nav section order in `util/sections.js`,
 calendar filter/sort in `util/calendar.js`, newsletter-preference
 shape in `newsletter/preferences.js`, the QR payload builder in
-`simulations/qr.js`, the UI translation lookup in `i18n.js`, the
+`simulations/qr.js`, the transaction-ref format of
+`simulations/payment.js` that both the ticket and food flows
+resolve against, the prototype-host allowlist in
+`simulations/email.js` that gates the `[simulatedEmail]` console
+log, the UI translation lookup in `i18n.js`, the
 deterministic exhibitor/speaker placeholder SVGs in
 `util/placeholders.js`, the food-ordering catalog and the
 `upcomingTimeslots` next-half-hour generator in `util/food.js`

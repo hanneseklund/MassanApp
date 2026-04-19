@@ -88,10 +88,11 @@ npm run smoke
 ```
 
 Pure-function helpers (hash routing, date formatting, calendar
-filter/sort, QR payload, newsletter preferences, ticket-type
-catalog and event-nav section order, UI translation lookup,
-exhibitor and speaker placeholder SVGs, food-ordering catalog
-and next-half-hour timeslot generator, catalog-store
+filter/sort, QR payload, simulated payment transaction-ref
+format, simulated email host allowlist, newsletter preferences,
+ticket-type catalog and event-nav section order, UI translation
+lookup, exhibitor and speaker placeholder SVGs, food-ordering
+catalog and next-half-hour timeslot generator, catalog-store
 selectors, tickets-store ownership selectors, food-orders
 store user selector, newsletter-store event/venue-wide lookup,
 the lang-store persistence and translator wiring, and the
