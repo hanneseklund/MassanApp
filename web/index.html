@@ -1558,6 +1558,119 @@
           </div>
         </template>
       </section>
+
+      <!-- Points shop view: venue-wide Stockholmsmassan merchandise
+           reachable at #/points. Signed-out visitors are routed through
+           the auth view and returned afterwards, matching the purchase
+           and food flows. -->
+      <section
+        class="view__body"
+        x-show="$store.app.view === 'points'"
+        x-data="pointsShopView()"
+      >
+        <template x-if="!$store.session.isSignedIn">
+          <div class="me me--signed-out">
+            <p class="placeholder" x-text="$store.lang.t('shop.signed_out_hint')"></p>
+            <button
+              type="button"
+              class="auth-form__submit"
+              @click="$store.app.goAuth({ view: 'points' })"
+              x-text="$store.lang.t('me.signin_or_register')"
+            ></button>
+          </div>
+        </template>
+        <template x-if="$store.session.isSignedIn">
+          <section class="points-shop">
+            <header class="points-shop__header">
+              <h2 class="points-shop__title">
+                <span x-text="$store.lang.t('shop.title')"></span>
+                <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+              </h2>
+              <p class="points-shop__intro" x-text="$store.lang.t('shop.intro')"></p>
+              <p class="points-shop__balance">
+                <span class="points-shop__balance-label" x-text="$store.lang.t('points.balance_label')"></span>
+                <span class="points-shop__balance-value" x-text="balanceLabel()"></span>
+              </p>
+            </header>
+
+            <div
+              class="event-addons__banner points-shop__banner"
+              x-show="lastRedemption"
+              role="status"
+              aria-live="polite"
+            >
+              <p class="event-addons__banner-title">
+                <span x-text="$store.lang.t('shop.confirmed')"></span>
+                <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+              </p>
+              <p
+                class="event-addons__banner-body"
+                x-show="lastRedemption"
+                x-text="$store.lang.t('shop.confirmed_body', { name: lastRedemption?.name ?? '', cost: lastRedemption?.cost ?? 0 })"
+              ></p>
+              <button
+                type="button"
+                class="event-addons__banner-dismiss"
+                @click="dismissLastRedemption()"
+                x-text="$store.lang.t('shop.dismiss')"
+              ></button>
+            </div>
+
+            <p
+              class="auth-form__error"
+              x-show="shopError"
+              role="alert"
+              x-text="shopError"
+            ></p>
+
+            <p
+              class="placeholder"
+              x-show="items().length === 0"
+              x-text="$store.lang.t('shop.empty')"
+            ></p>
+
+            <ul class="event-addons__list points-shop__list" x-show="items().length > 0">
+              <template x-for="item in items()" :key="item.id">
+                <li class="event-addons__card points-shop__card">
+                  <template x-if="merchImage(item)">
+                    <img
+                      class="event-addons__image"
+                      :src="merchImage(item)"
+                      :alt="$store.lang.t('shop.image_alt', { name: item.name })"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </template>
+                  <div class="event-addons__body">
+                    <p class="event-addons__name" x-text="item.name"></p>
+                    <p class="event-addons__desc" x-text="item.description"></p>
+                    <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: item.points_cost })"></p>
+                    <p
+                      class="event-addons__stock"
+                      x-show="remainingStock(item) !== null"
+                      x-text="$store.lang.t('event.addons_stock', { count: remainingStock(item) })"
+                    ></p>
+                    <p
+                      class="event-addons__disabled-reason"
+                      x-show="!canRedeem(item) && !merchRedeemPending[item.id]"
+                      x-text="disabledReason(item)"
+                    ></p>
+                    <button
+                      type="button"
+                      class="event-addons__redeem points-shop__redeem"
+                      :disabled="!canRedeem(item)"
+                      @click="redeem(item)"
+                    >
+                      <span x-show="!merchRedeemPending[item.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
+                      <span x-show="merchRedeemPending[item.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
+                    </button>
+                  </div>
+                </li>
+              </template>
+            </ul>
+          </section>
+        </template>
+      </section>
     </main>
   </body>
 </html>

@@ -46,10 +46,7 @@ export function meView() {
       Alpine.store("app").goTickets();
     },
     openPointsShop() {
-      // Sub-task 05 will add the `#/points` route. Navigate directly
-      // so the link works as soon as that lands, and degrades to a
-      // no-op hash change until then.
-      window.location.hash = "#/points";
+      Alpine.store("app").goPoints();
     },
     ticketCountHint() {
       const user = this.user();

@@ -22,6 +22,7 @@ import { myTicketsView } from "./views/my-tickets.js";
 import { newsletterSignup } from "./views/newsletter-signup.js";
 import { newsletterPreferences } from "./views/newsletter-preferences.js";
 import { foodView } from "./views/food.js";
+import { pointsShopView } from "./views/points-shop.js";
 
 document.addEventListener("alpine:init", () => {
   // `lang` must register before the others so `init` hooks that may
@@ -50,4 +51,5 @@ document.addEventListener("alpine:init", () => {
   window.newsletterSignup = newsletterSignup;
   window.newsletterPreferences = newsletterPreferences;
   window.foodView = foodView;
+  window.pointsShopView = pointsShopView;
 });

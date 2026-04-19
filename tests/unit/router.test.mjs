@@ -20,6 +20,7 @@ test("parseHash: top-level chrome routes", () => {
   assert.deepEqual(parseHash("#/auth"), { view: "auth" });
   assert.deepEqual(parseHash("#/me"), { view: "me" });
   assert.deepEqual(parseHash("#/tickets"), { view: "tickets" });
+  assert.deepEqual(parseHash("#/points"), { view: "points" });
 });
 
 test("parseHash: unknown top-level route falls back to calendar", () => {
@@ -88,6 +89,7 @@ test("buildHash: top-level chrome routes", () => {
   assert.equal(buildHash({ view: "auth" }), "#/auth");
   assert.equal(buildHash({ view: "me" }), "#/me");
   assert.equal(buildHash({ view: "tickets" }), "#/tickets");
+  assert.equal(buildHash({ view: "points" }), "#/points");
 });
 
 test("buildHash: event home suppresses the 'home' segment", () => {
@@ -150,6 +152,7 @@ test("parseHash / buildHash round-trip", () => {
     "#/auth",
     "#/me",
     "#/tickets",
+    "#/points",
     "#/event/nordbygg-2026",
     "#/event/nordbygg-2026/program",
     "#/event/nordbygg-2026/exhibitors",

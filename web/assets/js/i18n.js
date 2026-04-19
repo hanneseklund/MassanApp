@@ -37,6 +37,7 @@ const TRANSLATIONS = {
     "title.my_tickets": "My Tickets",
     "title.get_tickets": "Get tickets",
     "title.get_tickets_for": "Get tickets · {name}",
+    "title.points_shop": "Points shop",
     "title.event_default": "Event",
     "title.app_default": "MassanApp",
 
@@ -178,6 +179,20 @@ const TRANSLATIONS = {
     "points.tx_source.addon_redemption": "Add-on redemption",
     "points.tx_source.merch_redemption": "Merchandise redemption",
     "points.tx_source.other": "Points activity",
+
+    "shop.title": "Points shop",
+    "shop.intro":
+      "Venue-wide Stockholmsmassan merchandise, redeemed with points. Simulated — no physical item is produced or shipped.",
+    "shop.image_alt": "{name}",
+    "shop.empty": "The points shop is empty right now.",
+    "shop.signed_out_hint":
+      "Sign in to see your points balance and redeem merchandise.",
+    "shop.insufficient_balance": "You need {cost} points to redeem this.",
+    "shop.sold_out": "Sold out for this session.",
+    "shop.confirmed": "Merchandise redeemed",
+    "shop.confirmed_body": "You redeemed {name} for {cost} points.",
+    "shop.dismiss": "Dismiss",
+    "shop.err_generic": "Could not redeem this item.",
 
     "providers.email": "Email",
     "providers.google": "Google",
@@ -342,6 +357,7 @@ const TRANSLATIONS = {
     "title.my_tickets": "Mina biljetter",
     "title.get_tickets": "Köp biljetter",
     "title.get_tickets_for": "Köp biljetter · {name}",
+    "title.points_shop": "Poängbutik",
     "title.event_default": "Evenemang",
     "title.app_default": "MassanApp",
 
@@ -487,6 +503,21 @@ const TRANSLATIONS = {
     "points.tx_source.addon_redemption": "Inlöst tillägg",
     "points.tx_source.merch_redemption": "Inlöst souvenir",
     "points.tx_source.other": "Poängaktivitet",
+
+    "shop.title": "Poängbutik",
+    "shop.intro":
+      "Souvenirer från Stockholmsmässan som du löser in med poäng. Simulerat — inget fysiskt föremål produceras eller levereras.",
+    "shop.image_alt": "{name}",
+    "shop.empty": "Poängbutiken är tom just nu.",
+    "shop.signed_out_hint":
+      "Logga in för att se ditt poängsaldo och lösa in souvenirer.",
+    "shop.insufficient_balance":
+      "Du behöver {cost} poäng för att lösa in det här.",
+    "shop.sold_out": "Slut för den här sessionen.",
+    "shop.confirmed": "Souvenir inlöst",
+    "shop.confirmed_body": "Du löste in {name} för {cost} poäng.",
+    "shop.dismiss": "Stäng",
+    "shop.err_generic": "Kunde inte lösa in det här objektet.",
 
     "providers.email": "E-post",
     "providers.google": "Google",

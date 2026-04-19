@@ -1257,6 +1257,55 @@ a {
   cursor: not-allowed;
 }
 
+.points-shop {
+  display: grid;
+  gap: 16px;
+}
+
+.points-shop__header {
+  display: grid;
+  gap: 8px;
+}
+
+.points-shop__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.points-shop__intro {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.points-shop__balance {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.points-shop__balance-label {
+  font-size: 13px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.points-shop__balance-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .newsletter {
   display: grid;
   gap: 12px;

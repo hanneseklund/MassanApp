@@ -781,6 +781,104 @@ test.describe("Points add-on redemption (simulated)", () => {
   });
 });
 
+test.describe("Points merchandise shop (simulated)", () => {
+  test("33e-33f: #/points is reachable from My Pages and a merch item can be redeemed", async ({
+    page,
+  }) => {
+    // Sign in so the smoke account's balance (from earlier ticket and
+    // food purchases) is available to redeem against.
+    await signOutIfSignedIn(page);
+    await page.goto("/#/auth");
+    await page.locator('.auth-tabs__tab', { hasText: "Sign in" }).click();
+    await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+    await page
+      .locator('input[autocomplete="current-password"]')
+      .fill(TEST_PASSWORD);
+    await page.locator(".auth-form .auth-form__submit").click();
+    await waitForSignedIn(page);
+
+    // 33e. Capture balance on My Pages, then tap the Points-shop link
+    //      and assert the venue-wide catalog renders.
+    await page.goto("/#/me");
+    const balanceLocator = page.locator(".points__balance-value");
+    await expect(balanceLocator).toBeVisible({ timeout: 10_000 });
+    await expect
+      .poll(
+        async () => {
+          const text = (await balanceLocator.textContent()) || "";
+          return parseInt(text.match(/(\d+)/)?.[1] ?? "0", 10);
+        },
+        { timeout: 10_000 },
+      )
+      .toBeGreaterThan(0);
+    const balanceBefore = parseInt(
+      ((await balanceLocator.textContent()) || "").match(/(\d+)/)?.[1] ?? "0",
+      10,
+    );
+
+    await page.locator(".points__shop-link").click();
+    await expect(page).toHaveURL(/#\/points$/);
+    await expect(page.locator(".points-shop__title")).toBeVisible();
+    await expect(
+      page.locator(".points-shop__title .sim-chip"),
+    ).toBeVisible();
+    const shopCards = page.locator(".points-shop__card");
+    await expect(shopCards.first()).toBeVisible({ timeout: 10_000 });
+    const shopCardCount = await shopCards.count();
+    expect(shopCardCount).toBeGreaterThan(0);
+
+    // 33f. Pick the cheapest redeemable item — the list is sorted by
+    //      points_cost ascending in catalogStore.activeMerchandise(),
+    //      so the first card is the cheapest option.
+    const firstCard = shopCards.first();
+    const cost = parseInt(
+      ((await firstCard.locator(".event-addons__cost").textContent()) || "")
+        .match(/(\d+)/)?.[1] ?? "0",
+      10,
+    );
+    expect(cost).toBeGreaterThan(0);
+    expect(balanceBefore).toBeGreaterThanOrEqual(cost);
+    const itemName = (
+      await firstCard.locator(".event-addons__name").textContent()
+    )?.trim();
+    expect(itemName).toBeTruthy();
+
+    const redeemButton = firstCard.locator(".points-shop__redeem");
+    await expect(redeemButton).toBeEnabled();
+    await redeemButton.click();
+
+    // Confirmation banner appears in the shop with the simulated chip.
+    const banner = page.locator(".points-shop__banner");
+    await expect(banner).toBeVisible({ timeout: 10_000 });
+    await expect(banner.locator(".sim-chip")).toBeVisible();
+    await expect(banner).toContainText(itemName);
+
+    // My Pages balance dropped by exactly `cost`, and the recent
+    // transactions list shows the venue-wide merch redemption.
+    await page.goto("/#/me");
+    await expect(balanceLocator).toBeVisible({ timeout: 10_000 });
+    await expect
+      .poll(
+        async () => {
+          const text = (await balanceLocator.textContent()) || "";
+          return parseInt(text.match(/(\d+)/)?.[1] ?? "0", 10);
+        },
+        { timeout: 10_000 },
+      )
+      .toBe(balanceBefore - cost);
+    await expect(
+      page
+        .locator(".points__item", { hasText: "Merchandise redemption" })
+        .first(),
+    ).toBeVisible();
+    await expect(
+      page
+        .locator(".points__item", { hasText: "Venue-wide" })
+        .first(),
+    ).toBeVisible();
+  });
+});
+
 test.describe("Language toggle", () => {
   test("33-34: chrome switches between English and Swedish and persists across reload", async ({
     page,

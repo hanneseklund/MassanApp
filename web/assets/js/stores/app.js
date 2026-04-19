@@ -8,6 +8,7 @@
 //   #/auth                                           -> registration / sign-in
 //   #/me                                             -> signed-in My Pages
 //   #/tickets                                        -> My Tickets wallet
+//   #/points                                         -> venue-wide points shop
 
 const EVENT_SUBVIEWS = [
   "home",
@@ -27,6 +28,7 @@ export function parseHash(hash) {
   if (parts[0] === "auth") return { view: "auth" };
   if (parts[0] === "me") return { view: "me" };
   if (parts[0] === "tickets") return { view: "tickets" };
+  if (parts[0] === "points") return { view: "points" };
   if (parts[0] === "event" && parts[1]) {
     if (parts[2] === "purchase") {
       return { view: "purchase", eventId: parts[1] };
@@ -50,6 +52,7 @@ export function buildHash(state) {
   if (state.view === "auth") return "#/auth";
   if (state.view === "me") return "#/me";
   if (state.view === "tickets") return "#/tickets";
+  if (state.view === "points") return "#/points";
   if (state.view === "purchase" && state.eventId) {
     return `#/event/${state.eventId}/purchase`;
   }
@@ -118,6 +121,14 @@ export function appStore() {
         this._navigate({ view: "auth" });
       }
     },
+    goPoints() {
+      if (Alpine.store("session").isSignedIn) {
+        this._navigate({ view: "points" });
+      } else {
+        this._preAuth = { view: "points" };
+        this._navigate({ view: "auth" });
+      }
+    },
     startPurchase(eventId) {
       if (!eventId) return;
       if (Alpine.store("session").isSignedIn) {
@@ -142,6 +153,7 @@ export function appStore() {
       this._preAuth = { view: "calendar" };
       if (target.view === "me") this._navigate({ view: "me" });
       else if (target.view === "tickets") this._navigate({ view: "tickets" });
+      else if (target.view === "points") this._navigate({ view: "points" });
       else if (target.view === "purchase" && target.eventId) {
         this._navigate({ view: "purchase", eventId: target.eventId });
       } else this._navigate({ view: "calendar" });
@@ -181,6 +193,7 @@ export function appStore() {
       if (this.view === "auth") return t("title.sign_in");
       if (this.view === "me") return t("title.my_pages");
       if (this.view === "tickets") return t("title.my_tickets");
+      if (this.view === "points") return t("title.points_shop");
       if (this.view === "purchase") {
         const ev = Alpine.store("catalog").eventById(this.eventId);
         return ev

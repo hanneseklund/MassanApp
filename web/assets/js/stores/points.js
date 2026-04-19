@@ -6,8 +6,9 @@
 // history.
 //
 // Earning is wired into the purchase and food flows via `earn(...)`;
-// redemption (add-ons, merchandise) will land in sub-tasks 04 / 05
-// through `redeem(...)`.
+// redemption goes through `redeem(...)` from the event-add-ons
+// section on `views/event.js` and the `views/points-shop.js`
+// screen for venue-wide merchandise.
 
 import { supabaseClient } from "../supabase.js";
 
