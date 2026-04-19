@@ -390,11 +390,16 @@ calendar filter/sort in `util/calendar.js`, newsletter-preference
 shape in `newsletter/preferences.js`, the QR payload builder in
 `simulations/qr.js`, the UI translation lookup in `i18n.js`, the
 deterministic exhibitor/speaker placeholder SVGs in
-`util/placeholders.js`, the catalog-store selectors in
+`util/placeholders.js`, the food-ordering catalog and the
+`upcomingTimeslots` next-half-hour generator in `util/food.js`
+that back the Food subview's menu picker and restaurant
+timeslots, the catalog-store selectors in
 `stores/catalog.js` that fan per-event rows into views, the
 ticket-ownership selectors in `stores/tickets.js`
 (`forUser`, `forUserAndEvent`, `hasForEvent`) that back the
-"View ticket" CTA and the My Tickets list, the newsletter-store
+"View ticket" CTA and the My Tickets list, the food-orders
+store `forUser` selector in `stores/food-orders.js` that scopes
+persisted orders to the signed-in user, the newsletter-store
 lookup in `stores/newsletter.js` (`forUser`, `findForEvent`)
 that resolves the per-event / venue-wide subscription a signup
 form should update vs. insert, the lang-store wiring in

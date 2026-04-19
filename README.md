@@ -90,12 +90,13 @@ npm run smoke
 Pure-function helpers (hash routing, date formatting, calendar
 filter/sort, QR payload, newsletter preferences, ticket-type
 catalog and event-nav section order, UI translation lookup,
-exhibitor and speaker placeholder SVGs, catalog-store
-selectors, tickets-store ownership selectors,
-newsletter-store event/venue-wide lookup, the lang-store
-persistence and translator wiring, and the Supabase-user
-mapping that backs the session store) also have a fast unit
-suite that does not need a browser or Supabase:
+exhibitor and speaker placeholder SVGs, food-ordering catalog
+and next-half-hour timeslot generator, catalog-store
+selectors, tickets-store ownership selectors, food-orders
+store user selector, newsletter-store event/venue-wide lookup,
+the lang-store persistence and translator wiring, and the
+Supabase-user mapping that backs the session store) also have
+a fast unit suite that does not need a browser or Supabase:
 
 ```
 npm run test:unit
