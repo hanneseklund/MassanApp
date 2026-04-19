@@ -75,6 +75,10 @@ views:
 - `purchase` — three-step simulated ticket purchase scoped to the
   currently selected event. A visitor who lands here while signed
   out is routed through `auth` and returned afterwards.
+- `points-shop` — the venue-wide Stockholmsmässan merchandise shop
+  at `#/points`. Independent of any event selection. A visitor who
+  lands here while signed out is routed through `auth` and returned
+  afterwards, same pattern as `purchase` and the food flow.
 
 View switching is driven by hash-based routing: the URL hash is the
 canonical route and Alpine.js state mirrors it. `stores/app.js` parses
@@ -93,6 +97,7 @@ renders. The supported routes are:
 #/auth                                       registration / sign-in
 #/me                                         signed-in My Pages
 #/tickets                                    My Tickets wallet
+#/points                                     venue-wide points shop
 ```
 
 `<subview>` is one of `home`, `news`, `articles`, `program`,
@@ -138,6 +143,11 @@ web/assets/js/
                                restaurantById, canonical*Label,
                                upcomingTimeslots (food ordering catalog
                                and 30-minute timeslot generator)
+    points.js                  POINTS_PER_TICKET (=100),
+                               pointsForTicket(ticket),
+                               pointsForFoodOrder(order),
+                               parseSekPrice (private) — earning-rate
+                               calculators used by the points store
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -164,6 +174,9 @@ web/assets/js/
     newsletter.js              Alpine.store("newsletter", ...)
     food-orders.js             Alpine.store("foodOrders", ...) (signed-in
                                user's rows from public.food_orders)
+    points.js                  Alpine.store("points", ...) (signed-in
+                               user's point_transactions, balance
+                               getter, earn/redeem methods)
     filters.js                 Alpine.store("filters", ...) (calendar
                                free-text, type, category, month)
   views/
@@ -176,15 +189,16 @@ web/assets/js/
     newsletter-signup.js       newsletterSignup()
     newsletter-preferences.js  newsletterPreferences()
     food.js                    foodView()
+    points-shop.js             pointsShopView()
 ```
 
 The view factory names (`calendarView`, `eventView`, `authView`,
 `meView`, `purchaseView`, `myTicketsView`, `newsletterSignup`,
-`newsletterPreferences`, `foodView`) are exposed on `window` inside
-the `alpine:init` handler so the `x-data="<factory>()"` bindings in
-`index.html` continue to resolve. Stores keep their existing ids
-(`app`, `session`, `catalog`, `tickets`, `newsletter`, `foodOrders`,
-`filters`).
+`newsletterPreferences`, `foodView`, `pointsShopView`) are exposed on
+`window` inside the `alpine:init` handler so the
+`x-data="<factory>()"` bindings in `index.html` continue to resolve.
+Stores keep their existing ids (`app`, `session`, `catalog`,
+`tickets`, `newsletter`, `foodOrders`, `points`, `filters`).
 
 When adding a new view or store, place it in its own module under
 `views/` or `stores/` and import it from `app.js`. Do not inline new
@@ -227,11 +241,26 @@ Alpine.js stores and components own the following state:
   client so RLS enforces ownership. Anonymous visitors are routed to
   the auth view before an order can be placed; there is no anonymous
   food order path.
+- `points`: the signed-in user's `point_transactions` rows loaded
+  from `public.point_transactions` through RLS. Exposes `balance`
+  (`sum(delta)` over the loaded rows), a `transactions` list sorted
+  by `created_at desc`, `loading` / `error` flags, an `earn({ source,
+  source_ref, amount, event_id })` method that inserts a positive
+  transaction, and a `redeem({ source, source_ref, amount, event_id })`
+  method that inserts a negative transaction and locally updates the
+  balance. Subscribes to `supabase.auth.onAuthStateChange` the same
+  way `tickets`, `newsletter`, and `foodOrders` do; clears its state
+  on sign-out so a newly signed-in user never inherits another
+  session's balance.
 
 In-progress ticket purchase and food ordering state both live in the
 local Alpine component behind their respective views (`purchase` and
 the `food` event subview) rather than in a store, because nothing
-outside those views needs to read it.
+outside those views needs to read it. The points shop and the event
+add-ons section follow the same rule: the redemption-in-progress
+state (selected item, pending confirmation screen) lives in the
+local component; only the persistent balance and transaction list
+live in the `points` store.
 
 Data is loaded from the shared Supabase prototype project. Supabase is
 a hard dependency of the frontend: the calendar, event views, and
@@ -469,6 +498,57 @@ Exactly one venue record is expected in the prototype.
   as `ticket_type_label` on tickets — the wallet entry must not flip
   language depending on who later views it.
 
+### Point transaction
+
+- `id`, `user_id`, `event_id` (nullable), `source`, `source_ref`,
+  `delta` (integer, positive for earns, negative for redemptions),
+  `created_at`.
+- `source` is one of `ticket`, `food`, `addon_redemption`,
+  `merch_redemption`. `source_ref` stores the id of the row the
+  transaction relates to: a ticket id or food-order id for earns, a
+  `point_addons.id` or `merchandise.id` for redemptions. No
+  `source_ref` type enforcement is added in the prototype — the
+  source column alone is enough to disambiguate.
+- The user's current balance is `sum(delta)` over their rows. A
+  denormalised balance column is deliberately avoided so the balance
+  cannot drift from the history.
+- Rows live in `public.point_transactions` with Row Level Security
+  scoped to `auth.uid() = user_id` for both read and insert. Because
+  the prototype's simulated-payment flow runs entirely in the
+  frontend, the insert policy accepts any `delta` a signed-in user
+  sends — a malicious prototype client could in principle insert
+  arbitrary positive deltas. This matches the existing
+  simulated-payment trust model (tickets and food orders insert
+  client-side too) and is called out in the functional spec.
+- Redemption records are point-transaction rows with a negative
+  `delta` and `source_ref` pointing at the redeemed
+  `point_addons.id` or `merchandise.id`. Redemption detail (name,
+  description, image) lives in those catalog tables; no separate
+  redemption table is introduced in the prototype.
+
+### Point add-on
+
+- `id`, `event_id`, `name`, `description`, `points_cost`,
+  `image` (optional), `stock` (nullable integer — advisory only in
+  the prototype), `active` (bool), `created_at`.
+- Rows live in `public.point_addons`. Row Level Security allows
+  public read on `active = true` rows; no client writes.
+- Seeded ~3 rows per fully-seeded event (Nordbygg 2026 and the
+  congress event) in `supabase/seed/seed.sql`, mirrored in
+  `web/data/catalog.json`.
+
+### Merchandise item
+
+- `id`, `name`, `description`, `points_cost`, `image` (optional),
+  `stock` (nullable integer — advisory only in the prototype),
+  `active` (bool), `created_at`.
+- Venue-wide catalog: no `event_id`. Rows live in
+  `public.merchandise`. Row Level Security allows public read on
+  `active = true` rows; no client writes.
+- Seeded as ~4 venue-wide rows (examples: tote bag, cap, notebook,
+  enamel pin) in `supabase/seed/seed.sql`, mirrored in
+  `web/data/catalog.json`.
+
 ### Newsletter subscription
 
 - `id`, `user_id` (nullable for anonymous signup), `email`, `event_id`
@@ -497,9 +577,10 @@ Exactly one venue record is expected in the prototype.
   sessions so every signed-in user — real or simulated — has a stable
   `auth.uid()` (see "User" under Data model).
 - Tables mirror the data model above. Row Level Security enforces that
-  a user can read and write only their own tickets and newsletter
-  subscriptions, while shared venue and event content is readable
-  without authentication.
+  a user can read and write only their own tickets, newsletter
+  subscriptions, food orders, and point transactions, while shared
+  venue and event content (including `point_addons` and
+  `merchandise`) is readable without authentication.
 - Migrations live in `supabase/migrations/`. Seed data lives in
   `supabase/seed/` and may be a mix of SQL and JSON.
 - The frontend talks to Supabase directly using the anon key. There is no
@@ -525,13 +606,15 @@ without querying Supabase:
 
 ```
 {
-  "venue":      { ... one shared venue record ... },
-  "events":     [ ... event records with venue_id and overrides ... ],
-  "news":       [ ... news items keyed by event_id ... ],
-  "articles":   [ ... articles keyed by event_id ... ],
-  "program":    [ ... program items keyed by event_id ... ],
-  "exhibitors": [ ... exhibitors keyed by event_id ... ],
-  "speakers":   [ ... optional speakers for congress events ... ]
+  "venue":         { ... one shared venue record ... },
+  "events":        [ ... event records with venue_id and overrides ... ],
+  "news":          [ ... news items keyed by event_id ... ],
+  "articles":      [ ... articles keyed by event_id ... ],
+  "program":       [ ... program items keyed by event_id ... ],
+  "exhibitors":    [ ... exhibitors keyed by event_id ... ],
+  "speakers":      [ ... optional speakers for congress events ... ],
+  "point_addons":  [ ... per-event points-redeemable add-ons ... ],
+  "merchandise":   [ ... venue-wide points shop catalog ... ]
 }
 ```
 
@@ -578,6 +661,32 @@ All simulations must be centralized and easy to replace:
 Simulations must be clearly labeled in the UI during development and
 testing, for example with a small "simulated" chip, so reviewers can see
 that no real service is being hit.
+
+### Points earning and redemption
+
+- Earning-rate logic lives in `web/assets/js/util/points.js` as pure
+  functions (`pointsForTicket`, `pointsForFoodOrder`,
+  `POINTS_PER_TICKET`). `pointsForFoodOrder` parses the SEK amount
+  out of the food menu's `price` string. These functions are unit
+  tested the same way the rest of `util/` is.
+- Earning is wired into the existing purchase flows after the
+  simulated payment resolves and the `ticket` or `food_order` row is
+  inserted:
+  - `views/purchase.js` calls
+    `points.earn({ source: 'ticket', source_ref: ticket.id, amount:
+    pointsForTicket(ticket), event_id: ticket.event_id })`.
+  - `views/food.js` calls
+    `points.earn({ source: 'food', source_ref: order.id, amount:
+    pointsForFoodOrder(order), event_id: order.event_id })`.
+- An earning insert that fails (Supabase outage, RLS misconfig) must
+  not fail the parent purchase — the user-visible "ticket purchased"
+  or "order placed" outcome stands. The error is surfaced through
+  the `points` store's `error` state and logged to the console.
+- Redemption is performed via `points.redeem(...)` which inserts a
+  negative-delta `point_transactions` row. The event-add-ons section
+  on `views/event.js` and the `views/points-shop.js` screen both
+  call through the store; no view talks to the `point_transactions`
+  table directly.
 
 ## Event-first navigation implementation
 

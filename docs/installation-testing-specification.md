@@ -93,9 +93,9 @@ Providers / Sign In.
 
 Because every local run, every `agent` deploy, and every `main` deploy
 shares one Supabase project, a smoke-test run leaves rows behind in
-`auth.users`, `public.tickets`, `public.newsletter_subscriptions`, and
-`public.food_orders`. The prototype does not reset the database between
-runs. When running the checklist:
+`auth.users`, `public.tickets`, `public.newsletter_subscriptions`,
+`public.food_orders`, and `public.point_transactions`. The prototype
+does not reset the database between runs. When running the checklist:
 
 - Prefer a deterministic `@example.com` email address per tester (for
   example `smoke+your-initials@example.com`). Reusing the same address
@@ -305,6 +305,41 @@ section above for the caveats.
     references both the chosen restaurant (`Smakverket`) and the
     timeslot in the instructions paragraph.
 
+### Points (simulated)
+
+These steps assume the step-12 account has just completed the ticket
+purchase (step 18) and the food order (step 30) earlier in the run,
+so the balance is non-zero before the first check here.
+
+33a. Open My Pages. Assert: a "Points" section is visible showing a
+    non-zero balance (at least 100 from the Nordbygg ticket plus the
+    food-order earns), a "how you earn points" blurb, a link to the
+    points shop, and a recent-transactions list containing at least
+    a ticket-source entry for Nordbygg 2026 and a food-source entry.
+    The section carries the `simulated` chip used elsewhere.
+33b. Sign out. Assert: the Points section is no longer visible — a
+    signed-out visitor never sees a balance.
+33c. Sign back in with the step-12 account. Open `Nordbygg 2026`.
+    Assert: an "Event add-ons" section is visible on the event home
+    view alongside "View ticket", and lists at least one add-on
+    card for Nordbygg with name, description, points cost, image,
+    and a Redeem button. The `simulated` chip is present.
+33d. Tap Redeem on an add-on whose points cost is at or below the
+    current balance. Assert: a confirmation screen renders with the
+    `simulated` chip and the add-on name, the My Pages balance
+    decreases by the cost when revisited, and a negative
+    `addon_redemption` transaction is listed in the recent
+    transactions.
+33e. Open `#/points` from the Points section on My Pages. Assert:
+    the venue-wide merchandise shop renders with at least the
+    seeded items (for example tote bag, cap, notebook, enamel pin).
+    Cards whose cost exceeds the current balance render the Redeem
+    button disabled with an explanatory message.
+33f. Redeem a merchandise item the balance covers. Assert: a
+    confirmation screen renders, the shop returns afterwards, and
+    My Pages shows the new negative `merch_redemption` transaction
+    and a reduced balance.
+
 ### Language toggle
 
 33. From any view, tap the flag icon in the top chrome for the other
@@ -403,7 +438,11 @@ ticket-ownership selectors in `stores/tickets.js`
 (`forUser`, `forUserAndEvent`, `hasForEvent`) that back the
 "View ticket" CTA and the My Tickets list, the food-orders
 store `forUser` selector in `stores/food-orders.js` that scopes
-persisted orders to the signed-in user, the newsletter-store
+persisted orders to the signed-in user, the earning-rate
+calculators in `util/points.js`
+(`pointsForTicket`, `pointsForFoodOrder`) and the points-store
+balance selector in `stores/points.js` that sums `delta` across a
+user's rows, the newsletter-store
 lookup in `stores/newsletter.js` (`forUser`, `findForEvent`)
 that resolves the per-event / venue-wide subscription a signup
 form should update vs. insert, the lang-store wiring in
@@ -452,6 +491,15 @@ These are expected in the prototype and are not bugs:
 - Food orders persist to `public.food_orders` but no kitchen, pickup
   point, or restaurant system is contacted; the resulting confirmation
   screen is the only delivery surface.
+- Loyalty-point balances are computed as `sum(delta)` over a user's
+  `public.point_transactions` rows. Earning rows are inserted
+  client-side as part of the simulated-payment flow under an
+  `auth.uid() = user_id` RLS policy. A malicious prototype client
+  could in principle insert arbitrary positive deltas — this matches
+  the simulated-payment trust model already used by tickets and food
+  orders. Point add-on and merchandise "stock" values are advisory
+  in the UI; the database row is not decremented on redemption.
+  Redemption does not produce a shippable artefact.
 - Google and Microsoft sign-in do not contact real providers; they
   create a Supabase anonymous session and tag it with the chosen
   provider name.

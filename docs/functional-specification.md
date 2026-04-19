@@ -169,9 +169,79 @@ The prototype must support this end-to-end path without gaps:
   transaction reference and either the pickup location or the
   restaurant + timeslot to expect, marked with the same `simulated`
   chip used elsewhere.
+- A signed-in visitor is awarded points for the order (see "Points"
+  below). A failed or cancelled order awards nothing.
 - Persisted orders live with the visitor and are scoped to their
   user id. Cross-event ordering history is not currently surfaced in
   the UI.
+
+### Points
+
+The prototype includes a simulated loyalty-points feature so visitors
+can see how MassanApp would recognise engagement across events at
+Stockholmsmässan. Everything on this screen carries the same
+`simulated` chip used by tickets and food orders.
+
+Earning
+- Only signed-in visitors earn points. Anonymous visitors never
+  accrue a balance.
+- Rules:
+  - A successful simulated ticket purchase awards **100 points**, one
+    award per ticket, regardless of ticket type or event.
+  - A successful simulated food order awards **1 point per SEK of the
+    menu price** (for example `Classic Burger` at `SEK 129` awards
+    129 points).
+- Points are awarded as part of the simulated-payment confirmation
+  step, alongside the ticket row or food-order row. A failed or
+  cancelled payment awards nothing.
+- Points do not expire in the prototype.
+
+Visibility
+- The current balance and a short list of recent transactions are
+  shown on My Pages (see above). The balance never appears for
+  signed-out visitors.
+- Recent transactions list the source (ticket, food order,
+  add-on redemption, merch redemption), the event if any, and the
+  signed delta.
+
+Spending — event add-ons
+- Each fully-seeded event carries a small catalog of
+  points-redeemable add-ons (for example "Exhibitor gift bag" or
+  "VIP access to keynote"). Add-ons are points-only and cannot be
+  purchased with currency.
+- Add-ons appear as a clearly-marked "Event add-ons" section on the
+  event home view, visible only once the signed-in visitor owns a
+  ticket for that event. The purchase flow itself stays at three
+  steps.
+- Each add-on card shows an image, name, description, points cost,
+  and a "Redeem" button. The button is disabled with an explanatory
+  message when the visitor's balance is below the cost. Signed-out
+  or ticketless visitors follow the same auth/purchase routing the
+  food flow uses before reaching the Redeem button.
+- A successful redemption deducts the cost atomically, creates a
+  negative point transaction visible on My Pages, and shows a
+  confirmation reusing the `simulated` chip pattern.
+- Stock is advisory in the prototype: if an add-on carries a stock
+  number, it displays but the prototype does not decrement the
+  database row. This is called out as a simulation.
+- Redemption does not produce a shippable artefact; the
+  confirmation screen is the entire user-visible result.
+
+Spending — venue-wide merchandise shop
+- A dedicated points shop at `#/points` lists venue-wide
+  Stockholmsmässan merchandise (examples: tote bag, cap, notebook,
+  enamel pin). The shop is independent of event selection — no
+  event is required to browse or redeem.
+- The shop is reachable from the Points section on My Pages. A
+  signed-out visitor who lands on `#/points` is routed through the
+  auth view first and returned afterwards, matching the food and
+  purchase flows.
+- Cards show image, name, description, points cost, and a Redeem
+  button with the same disabled-with-message behaviour as event
+  add-ons.
+- A successful redemption deducts the cost, creates a negative
+  point transaction, and shows a confirmation reusing the
+  `simulated` chip before returning the visitor to the shop.
 
 ### Newsletter
 
@@ -196,7 +266,15 @@ The prototype must support this end-to-end path without gaps:
 
 - Shows profile basics (name, email).
 - Links to My Tickets and newsletter preferences.
+- Shows the signed-in visitor's current points balance, a one-line
+  "how you earn points" blurb, a link to the venue-wide points shop
+  (`#/points`), and a short list of the ~5 most recent point
+  transactions (each with an earn/redeem label, the event name if
+  any, and the signed delta).
 - Provides sign-out.
+
+Anonymous / signed-out visitors never see a points balance on this
+screen and never earn points from any flow.
 
 ### Ticket purchase (simulated)
 
@@ -215,8 +293,12 @@ The prototype must support this end-to-end path without gaps:
      step always succeeds and is visibly marked as simulated.
 - On success the visitor sees a confirmation screen with a link to My
   Tickets, and the new ticket appears there.
+- On a successful purchase, the signed-in visitor is awarded points
+  (see "Points" below). A failed or cancelled purchase awards nothing.
 - Once a visitor owns a ticket for an event, the event home view also
-  shows a "View ticket" affordance that opens My Tickets.
+  shows a "View ticket" affordance that opens My Tickets, and an
+  "Event add-ons" section that lists any points-redeemable add-ons
+  configured for that event (see "Points" below).
 
 ### My Tickets
 
@@ -287,6 +369,10 @@ The prototype explicitly simulates:
   events expose but the prototype does not wire up.
 - Food fulfilment: the order is persisted but no kitchen, restaurant,
   or pickup-location system is contacted.
+- Loyalty-points awarding, balance, and redemption. Points are
+  persisted to Supabase but no external loyalty programme is
+  contacted. Merchandise and event-add-on redemptions do not produce
+  a shippable artefact.
 
 Simulations must be visibly labeled in development and test contexts so
 that reviewers understand they are not real integrations.
@@ -345,3 +431,9 @@ The prototype satisfies this specification when:
 - Newsletter signup and preferences persist to the shared Supabase
   project's `newsletter_subscriptions` table. The confirmation email for
   the signup is simulated.
+- A signed-in visitor who simulates a ticket purchase and a food order
+  sees their points balance rise on My Pages, can redeem an event
+  add-on from the corresponding event home view, can redeem a
+  merchandise item from `#/points`, and sees each redemption as a
+  negative transaction on My Pages. Signed-out visitors never see a
+  balance.
