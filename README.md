@@ -87,9 +87,10 @@ filter/sort, QR payload, newsletter preferences, ticket-type
 catalog and event-nav section order, UI translation lookup,
 exhibitor and speaker placeholder SVGs, catalog-store
 selectors, tickets-store ownership selectors,
-newsletter-store event/venue-wide lookup, and the
-Supabase-user mapping that backs the session store) also have
-a fast unit suite that does not need a browser or Supabase:
+newsletter-store event/venue-wide lookup, the lang-store
+persistence and translator wiring, and the Supabase-user
+mapping that backs the session store) also have a fast unit
+suite that does not need a browser or Supabase:
 
 ```
 npm run test:unit

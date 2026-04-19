@@ -369,9 +369,13 @@ ticket-ownership selectors in `stores/tickets.js`
 "View ticket" CTA and the My Tickets list, the newsletter-store
 lookup in `stores/newsletter.js` (`forUser`, `findForEvent`)
 that resolves the per-event / venue-wide subscription a signup
-form should update vs. insert, and the Supabase-user mapping in
-`stores/session.js` that resolves the signed-in provider,
-display name, and simulated flag) have a fast unit suite under
+form should update vs. insert, the lang-store wiring in
+`stores/lang.js` (persisted-language validation, `set()`'s
+same-language guard, storage / `<html lang>` side effects, and
+the `t()` / `dateLocale()` delegation to the i18n helpers), and
+the Supabase-user mapping in `stores/session.js` that resolves
+the signed-in provider, display name, and simulated flag) have
+a fast unit suite under
 `tests/unit/` that does not require a browser or Supabase.
 
 The suite runs against the same source files the browser loads —
