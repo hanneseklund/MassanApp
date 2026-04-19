@@ -685,7 +685,7 @@ test.describe("Food ordering (simulated)", () => {
 });
 
 test.describe("Points add-on redemption (simulated)", () => {
-  test("33c-33d: event add-ons redeem for points, banner and balance reflect it", async ({
+  test("35-36: event add-ons redeem for points, banner and balance reflect it", async ({
     page,
   }) => {
     // Depends on the ticket-purchase test having already awarded
@@ -782,7 +782,7 @@ test.describe("Points add-on redemption (simulated)", () => {
 });
 
 test.describe("Points merchandise shop (simulated)", () => {
-  test("33e-33f: #/points is reachable from My Pages and a merch item can be redeemed", async ({
+  test("37-38: #/points is reachable from My Pages and a merch item can be redeemed", async ({
     page,
   }) => {
     // Sign in so the smoke account's balance (from earlier ticket and
@@ -880,7 +880,7 @@ test.describe("Points merchandise shop (simulated)", () => {
 });
 
 test.describe("Language toggle", () => {
-  test("33-34: chrome switches between English and Swedish and persists across reload", async ({
+  test("39-40: chrome switches between English and Swedish and persists across reload", async ({
     page,
   }) => {
     // Start on a view whose chrome copy differs clearly between the
@@ -947,7 +947,7 @@ test.describe("Language toggle", () => {
 });
 
 test.describe("Chrome layout", () => {
-  test("35: language flags and me icon are right-justified on the start page", async ({
+  test("41: language flags and me icon are right-justified on the start page", async ({
     page,
   }) => {
     // Regression for issue #10: on the calendar (start) page the back

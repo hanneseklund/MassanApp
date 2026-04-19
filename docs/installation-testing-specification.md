@@ -311,44 +311,44 @@ These steps assume the step-12 account has just completed the ticket
 purchase (step 18) and the food order (step 30) earlier in the run,
 so the balance is non-zero before the first check here.
 
-33a. Open My Pages. Assert: a "Points" section is visible showing a
+33. Open My Pages. Assert: a "Points" section is visible showing a
     non-zero balance (at least 100 from the Nordbygg ticket plus the
     food-order earns), a "how you earn points" blurb, a link to the
     points shop, and a recent-transactions list containing at least
     a ticket-source entry for Nordbygg 2026 and a food-source entry.
     The section carries the `simulated` chip used elsewhere.
-33b. Sign out. Assert: the Points section is no longer visible — a
+34. Sign out. Assert: the Points section is no longer visible — a
     signed-out visitor never sees a balance.
-33c. Sign back in with the step-12 account. Open `Nordbygg 2026`.
+35. Sign back in with the step-12 account. Open `Nordbygg 2026`.
     Assert: an "Event add-ons" section is visible on the event home
     view alongside "View ticket", and lists at least one add-on
     card for Nordbygg with name, description, points cost, image,
     and a Redeem button. The `simulated` chip is present.
-33d. Tap Redeem on an add-on whose points cost is at or below the
+36. Tap Redeem on an add-on whose points cost is at or below the
     current balance. Assert: a confirmation screen renders with the
     `simulated` chip and the add-on name, the My Pages balance
     decreases by the cost when revisited, and a negative
     `addon_redemption` transaction is listed in the recent
     transactions.
-33e. Open `#/points` from the Points section on My Pages. Assert:
+37. Open `#/points` from the Points section on My Pages. Assert:
     the venue-wide merchandise shop renders with at least the
     seeded items (for example tote bag, cap, notebook, enamel pin).
     Cards whose cost exceeds the current balance render the Redeem
     button disabled with an explanatory message.
-33f. Redeem a merchandise item the balance covers. Assert: a
+38. Redeem a merchandise item the balance covers. Assert: a
     confirmation screen renders, the shop returns afterwards, and
     My Pages shows the new negative `merch_redemption` transaction
     and a reduced balance.
 
 ### Language toggle
 
-33. From any view, tap the flag icon in the top chrome for the other
+39. From any view, tap the flag icon in the top chrome for the other
     language (UK flag for English, Swedish flag for Swedish — the
     active language's flag is fully opaque, the inactive one is
     dimmed). Assert: the chrome title, primary nav labels, and hint
     copy switch language. Reload the page. Assert: the choice is
     preserved.
-34. Tap the English (UK) flag to return to English. Assert: the chrome
+40. Tap the English (UK) flag to return to English. Assert: the chrome
     re-renders in English without requiring a reload. Event content
     (event names, summaries, news, articles, exhibitor copy,
     practical-info venue copy) stays in the language it was seeded in
@@ -356,7 +356,7 @@ so the balance is non-zero before the first check here.
 
 ### Chrome layout
 
-35. Open the start page (calendar of events) — the back button is
+41. Open the start page (calendar of events) — the back button is
     hidden here. Assert: the language flag pair and the "me" silhouette
     icon sit flush against the right edge of the chrome (within the
     chrome's right padding), matching their position on event subviews
