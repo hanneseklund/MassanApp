@@ -486,13 +486,16 @@ All simulations must be centralized and easy to replace:
   short delay with `{ ok: true, transaction_ref }`. The reference is a
   plausible-looking string (e.g. `SIM-XXXXXXXX`) but no payment service
   is contacted. The delay lets the UI show a "processing" state.
-- `simulatedEmail(kind, payload)` — no-op in production prototype
-  hosting; in development it logs the would-be email to the console.
-  Known `kind` values: `newsletter_confirmation` (sent on newsletter
-  signup, including the venue-wide toggle) and `ticket_confirmation`
-  (sent when a simulated ticket purchase completes). Email-registration
-  confirmation mail is handled by Supabase Auth itself and is therefore
-  not produced through `simulatedEmail`.
+- `simulatedEmail(kind, payload)` — logs the would-be email to the
+  browser console on prototype hosts (local dev and the Cloudflare
+  Pages preview at `*.pages.dev`) so reviewers and the smoke suite can
+  see the event. Silent on any other host so a future non-prototype
+  deployment does not leak the payload. Known `kind` values:
+  `newsletter_confirmation` (sent on newsletter signup, including the
+  venue-wide toggle) and `ticket_confirmation` (sent when a simulated
+  ticket purchase completes). Email-registration confirmation mail is
+  handled by Supabase Auth itself and is therefore not produced
+  through `simulatedEmail`.
 - `ticketQrPayload(ticket)` and `ticketQrSvgFor(ticket)` — together
   simulate a ticket QR. `ticketQrPayload` returns a payload string of
   the form `massan:<ticket-id>:<event-id>:<salt>` (so two tickets with

@@ -363,10 +363,13 @@ These are expected in the prototype and are not bugs:
   create a Supabase anonymous session and tag it with the chosen
   provider name.
 - `simulatedEmail` entries (`ticket_confirmation`,
-  `newsletter_confirmation`) are logged to the browser console in
-  development and do not leave the browser. Supabase Auth may still
-  send real account emails (password reset, etc.) if a feature that
-  triggers one is exercised.
+  `newsletter_confirmation`) are logged to the browser console on
+  prototype hosts — local dev servers and the Cloudflare Pages
+  preview at `*.pages.dev` — and do not leave the browser. Any other
+  host suppresses the log so a future non-prototype deployment does
+  not leak the payload. Supabase Auth may still send real account
+  emails (password reset, etc.) if a feature that triggers one is
+  exercised.
 - QR codes generated for tickets are not valid credentials at the real
   venue.
 
