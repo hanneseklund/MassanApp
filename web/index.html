@@ -285,15 +285,26 @@
                   <ul class="news-list" x-show="news().length > 0">
                     <template x-for="item in news()" :key="item.id">
                       <li class="news-item">
-                        <p
-                          class="news-item__date"
-                          x-text="formatShortDate(item.published_at)"
-                        ></p>
-                        <h3
-                          class="news-item__title"
-                          x-text="item.title"
-                        ></h3>
-                        <p class="news-item__body" x-text="item.body"></p>
+                        <template x-if="newsImage()">
+                          <img
+                            class="news-item__image"
+                            :src="newsImage()"
+                            :alt="$store.lang.t('event.news_image_alt', { name: event().name })"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </template>
+                        <div class="news-item__body-wrap">
+                          <p
+                            class="news-item__date"
+                            x-text="formatShortDate(item.published_at)"
+                          ></p>
+                          <h3
+                            class="news-item__title"
+                            x-text="item.title"
+                          ></h3>
+                          <p class="news-item__body" x-text="item.body"></p>
+                        </div>
                       </li>
                     </template>
                   </ul>
@@ -310,6 +321,15 @@
                   <ul class="articles-list" x-show="articles().length > 0">
                     <template x-for="a in articles()" :key="a.id">
                       <li class="article">
+                        <template x-if="articleImage(a)">
+                          <img
+                            class="article__image"
+                            :src="articleImage(a)"
+                            :alt="$store.lang.t('event.article_image_alt', { title: a.title })"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </template>
                         <h3 class="article__title" x-text="a.title"></h3>
                         <p class="article__body" x-text="a.body"></p>
                       </li>
@@ -349,11 +369,33 @@
                               class="session__meta"
                               x-text="session.location + (session.track ? ' · ' + session.track : '')"
                             ></p>
-                            <p
+                            <div
                               class="session__speakers"
-                              x-show="speakerNames(session).length > 0"
-                              x-text="$store.lang.t('event.speakers_prefix') + speakerNames(session).join(', ')"
-                            ></p>
+                              x-show="sessionSpeakers(session).length > 0"
+                            >
+                              <span
+                                class="session__speakers-label"
+                                x-text="$store.lang.t('event.speakers_prefix')"
+                              ></span>
+                              <template
+                                x-for="sp in sessionSpeakers(session)"
+                                :key="sp.id"
+                              >
+                                <span class="session__speaker">
+                                  <img
+                                    class="session__speaker-avatar"
+                                    :src="speakerAvatar(sp)"
+                                    :alt="$store.lang.t('event.speaker_avatar_alt', { name: sp.name })"
+                                    loading="lazy"
+                                    decoding="async"
+                                  />
+                                  <span
+                                    class="session__speaker-name"
+                                    x-text="sp.name"
+                                  ></span>
+                                </span>
+                              </template>
+                            </div>
                             <p
                               class="session__description"
                               x-text="session.description"
@@ -401,18 +443,27 @@
                           class="exhibitor-card__link"
                           @click="$store.app.selectExhibitor(e.id)"
                         >
-                          <span
-                            class="exhibitor-card__name"
-                            x-text="e.name"
-                          ></span>
-                          <span
-                            class="exhibitor-card__booth"
-                            x-text="$store.lang.t('event.booth_prefix') + e.booth"
-                          ></span>
-                          <span
-                            class="exhibitor-card__desc"
-                            x-text="e.description"
-                          ></span>
+                          <img
+                            class="exhibitor-card__logo"
+                            :src="exhibitorLogo(e)"
+                            :alt="$store.lang.t('event.exhibitor_logo_alt', { name: e.name })"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <span class="exhibitor-card__text">
+                            <span
+                              class="exhibitor-card__name"
+                              x-text="e.name"
+                            ></span>
+                            <span
+                              class="exhibitor-card__booth"
+                              x-text="$store.lang.t('event.booth_prefix') + e.booth"
+                            ></span>
+                            <span
+                              class="exhibitor-card__desc"
+                              x-text="e.description"
+                            ></span>
+                          </span>
                         </button>
                       </li>
                     </template>
@@ -434,6 +485,13 @@
                   </button>
                   <template x-if="exhibitor()">
                     <article class="exhibitor-detail">
+                      <img
+                        class="exhibitor-detail__logo"
+                        :src="exhibitorLogo(exhibitor())"
+                        :alt="$store.lang.t('event.exhibitor_logo_alt', { name: exhibitor().name })"
+                        loading="lazy"
+                        decoding="async"
+                      />
                       <h3
                         class="exhibitor-detail__name"
                         x-text="exhibitor().name"

@@ -16,6 +16,14 @@
 -- web/assets/images/events/ that were downloaded from the public
 -- Stockholmsmassan calendar event pages on 2026-04-18 and are used here
 -- with attribution (branding.hero_image_credit).
+--
+-- News items and articles reuse their parent event's hero image so
+-- each item renders with a visually connected thumbnail. Exhibitor
+-- logos (exhibitors.logo) and speaker avatars (speakers.avatar)
+-- reference auto-generated initial-based SVGs committed under
+-- web/assets/images/exhibitors/ and web/assets/images/speakers/ —
+-- these stand in for real brand assets since the per-event exhibitor
+-- and speaker listings in this prototype are simulated content.
 
 begin;
 
@@ -680,46 +688,54 @@ on conflict (id) do update set
   branding = excluded.branding,
   overrides = excluded.overrides;
 
-insert into public.news_items (id, event_id, published_at, title, body) values
+insert into public.news_items (id, event_id, published_at, title, body, hero_image) values
   ('nordbygg-2026-news-exhibitors-crossed', 'nordbygg-2026', timestamptz '2026-03-02T09:00:00Z',
    'Nordbygg 2026 exhibitor registrations cross 700',
-   'Simulated. Nordbygg reports that more than 700 exhibitors have confirmed attendance, spanning sustainable materials, prefabrication, building services, and digital tools for the construction industry.'),
+   'Simulated. Nordbygg reports that more than 700 exhibitors have confirmed attendance, spanning sustainable materials, prefabrication, building services, and digital tools for the construction industry.',
+   'assets/images/events/nordbygg-2026.jpg'),
   ('nordbygg-2026-news-sustainability-stage', 'nordbygg-2026', timestamptz '2026-03-18T09:00:00Z',
    'Sustainability stage program finalized',
-   'Simulated. The Sustainability Stage program for Nordbygg 2026 covers circular construction, low-carbon concrete, and energy retrofits. All sessions are open to fair visitors without extra registration.'),
+   'Simulated. The Sustainability Stage program for Nordbygg 2026 covers circular construction, low-carbon concrete, and energy retrofits. All sessions are open to fair visitors without extra registration.',
+   'assets/images/events/nordbygg-2026.jpg'),
   ('nordbygg-2026-news-safety-workshop', 'nordbygg-2026', timestamptz '2026-04-01T09:00:00Z',
    'Site-safety workshops added to day three',
-   'Simulated. Day three of the fair adds hands-on workshops on site-safety equipment, PPE, and fall-protection. Capacity is limited and managed at the workshop entrance.'),
+   'Simulated. Day three of the fair adds hands-on workshops on site-safety equipment, PPE, and fall-protection. Capacity is limited and managed at the workshop entrance.',
+   'assets/images/events/nordbygg-2026.jpg'),
   ('nordbygg-2026-news-ticket-pickup', 'nordbygg-2026', timestamptz '2026-04-14T09:00:00Z',
    'Ticket pickup and visitor tips for opening day',
-   'Simulated. Visitors are encouraged to pre-register and use mobile tickets to skip the queues at opening. Coffee will be available in the main foyer from 8:00.'),
+   'Simulated. Visitors are encouraged to pre-register and use mobile tickets to skip the queues at opening. Coffee will be available in the main foyer from 8:00.',
+   'assets/images/events/nordbygg-2026.jpg'),
   ('estro-2026-news-late-breaking', 'estro-2026', timestamptz '2026-04-05T09:00:00Z',
    'Late-breaking abstract window closes',
-   'Simulated. The late-breaking abstract submission window for ESTRO 2026 has closed. Accepted late-breakers will be added to the searchable program next week.'),
+   'Simulated. The late-breaking abstract submission window for ESTRO 2026 has closed. Accepted late-breakers will be added to the searchable program next week.',
+   'assets/images/events/estro-2026.webp'),
   ('estro-2026-news-industry-symposia', 'estro-2026', timestamptz '2026-04-20T09:00:00Z',
    'Industry symposia and hands-on demos announced',
-   'Simulated. Industry symposia and hands-on demos for ESTRO 2026 have been published in the congress program. Delegates can filter their personal agenda to include or exclude industry content.'),
+   'Simulated. Industry symposia and hands-on demos for ESTRO 2026 have been published in the congress program. Delegates can filter their personal agenda to include or exclude industry content.',
+   'assets/images/events/estro-2026.webp'),
   ('eha-2026-news-platform-open', 'eha-2026', timestamptz '2026-05-05T09:00:00Z',
    'EHA2026 congress platform opens to registered delegates',
-   'Simulated. The EHA2026 congress platform is now available to registered delegates, with networking, profile setup, and the full searchable program.')
+   'Simulated. The EHA2026 congress platform is now available to registered delegates, with networking, profile setup, and the full searchable program.',
+   'assets/images/events/eha-2026.jpg')
 on conflict (id) do update set
   title = excluded.title,
   body = excluded.body,
-  published_at = excluded.published_at;
+  published_at = excluded.published_at,
+  hero_image = excluded.hero_image;
 
 insert into public.articles (id, event_id, title, body, hero_image) values
   ('nordbygg-2026-article-why-attend', 'nordbygg-2026',
    'Why Nordbygg 2026 is the Nordic construction meeting point',
    'Simulated. Nordbygg collects the Nordic construction and real-estate industry under one roof at Stockholmsmassan: manufacturers, consultants, architects, developers, and public-sector procurement teams. The fair combines an exhibitor floor, a seminar program, and dedicated stages for sustainability and digital tools. Visitors use the fair to benchmark products, meet suppliers in person, and get an overview of emerging regulation.',
-   null),
+   'assets/images/events/nordbygg-2026.jpg'),
   ('nordbygg-2026-article-what-to-see', 'nordbygg-2026',
    'What to see on a one-day visit',
    'Simulated. If you only have one day at Nordbygg 2026, focus on the Sustainability Stage in the morning, spend midday on the exhibitor floor around the prefabrication and building-services areas, and close the day with a site-safety workshop or a digital-tools demo. The event-first app view lets you save a short list of exhibitors to visit on the floor.',
-   null),
+   'assets/images/events/nordbygg-2026.jpg'),
   ('estro-2026-article-program-highlights', 'estro-2026',
    'ESTRO 2026 program highlights',
    'Simulated. The ESTRO 2026 program covers clinical radiation oncology, medical physics, radiobiology, brachytherapy, and technology and innovation tracks. Plenary sessions open and close each day, with parallel tracks and poster sessions filling the rest of the schedule. Delegates are encouraged to build a personal agenda before the congress opens.',
-   null)
+   'assets/images/events/estro-2026.webp')
 on conflict (id) do update set
   title = excluded.title,
   body = excluded.body,
@@ -728,17 +744,21 @@ on conflict (id) do update set
 insert into public.speakers (id, name, bio, affiliation, avatar) values
   ('estro-2026-speaker-lindqvist', 'Dr. Eva Lindqvist',
    'Simulated speaker profile. Radiation oncologist focused on adaptive radiotherapy.',
-   'Karolinska University Hospital', null),
+   'Karolinska University Hospital',
+   'assets/images/speakers/estro-2026-lindqvist.svg'),
   ('estro-2026-speaker-morales', 'Dr. Luis Morales',
    'Simulated speaker profile. Clinical researcher in head-and-neck radiation oncology.',
-   'Hospital Clinic de Barcelona', null),
+   'Hospital Clinic de Barcelona',
+   'assets/images/speakers/estro-2026-morales.svg'),
   ('estro-2026-speaker-bergstrom', 'Dr. Anna Bergstrom',
    'Simulated speaker profile. Medical physicist focused on dose calculation and QA.',
-   'Uppsala University Hospital', null)
+   'Uppsala University Hospital',
+   'assets/images/speakers/estro-2026-bergstrom.svg')
 on conflict (id) do update set
   name = excluded.name,
   bio = excluded.bio,
-  affiliation = excluded.affiliation;
+  affiliation = excluded.affiliation,
+  avatar = excluded.avatar;
 
 insert into public.program_items (
   id, event_id, day, start_time, end_time, title, description, location, track, speaker_ids
@@ -846,49 +866,64 @@ on conflict (id) do update set
 insert into public.exhibitors (id, event_id, name, booth, description, website, logo) values
   ('nordbygg-2026-exhibitor-nordicpanel', 'nordbygg-2026', 'NordicPanel Systems', 'A12',
    'Simulated exhibitor. Prefabricated wall and roof systems for Nordic residential and commercial projects.',
-   'https://example.com/nordicpanel', null),
+   'https://example.com/nordicpanel',
+   'assets/images/exhibitors/nordbygg-2026-nordicpanel.svg'),
   ('nordbygg-2026-exhibitor-betoncircular', 'nordbygg-2026', 'BetonCircular', 'A14',
    'Simulated exhibitor. Low-carbon and recycled-content concrete for infrastructure and residential projects.',
-   'https://example.com/betoncircular', null),
+   'https://example.com/betoncircular',
+   'assets/images/exhibitors/nordbygg-2026-betoncircular.svg'),
   ('nordbygg-2026-exhibitor-bytetools', 'nordbygg-2026', 'ByteTools Site', 'C22',
    'Simulated exhibitor. Field-reporting and BIM coordination tools for construction sites.',
-   'https://example.com/bytetools', null),
+   'https://example.com/bytetools',
+   'assets/images/exhibitors/nordbygg-2026-bytetools.svg'),
   ('nordbygg-2026-exhibitor-fjordwin', 'nordbygg-2026', 'FjordWin Windows', 'B08',
    'Simulated exhibitor. Triple-glazed windows designed for Nordic climates.',
-   'https://example.com/fjordwin', null),
+   'https://example.com/fjordwin',
+   'assets/images/exhibitors/nordbygg-2026-fjordwin.svg'),
   ('nordbygg-2026-exhibitor-kalmarpipe', 'nordbygg-2026', 'KalmarPipe', 'B10',
    'Simulated exhibitor. Plumbing and building-services solutions for large residential projects.',
-   'https://example.com/kalmarpipe', null),
+   'https://example.com/kalmarpipe',
+   'assets/images/exhibitors/nordbygg-2026-kalmarpipe.svg'),
   ('nordbygg-2026-exhibitor-greenroofsnordic', 'nordbygg-2026', 'GreenRoofs Nordic', 'B24',
    'Simulated exhibitor. Green-roof and stormwater retention systems for urban projects.',
-   'https://example.com/greenroofsnordic', null),
+   'https://example.com/greenroofsnordic',
+   'assets/images/exhibitors/nordbygg-2026-greenroofsnordic.svg'),
   ('nordbygg-2026-exhibitor-safeliftnordic', 'nordbygg-2026', 'SafeLift Nordic', 'C12',
    'Simulated exhibitor. Fall-protection, site-safety PPE, and training services.',
-   'https://example.com/safeliftnordic', null),
+   'https://example.com/safeliftnordic',
+   'assets/images/exhibitors/nordbygg-2026-safeliftnordic.svg'),
   ('nordbygg-2026-exhibitor-boreasinsulation', 'nordbygg-2026', 'Boreas Insulation', 'A22',
    'Simulated exhibitor. High-performance insulation for passive-house and retrofit projects.',
-   'https://example.com/boreasinsulation', null),
+   'https://example.com/boreasinsulation',
+   'assets/images/exhibitors/nordbygg-2026-boreasinsulation.svg'),
   ('nordbygg-2026-exhibitor-voltagridhvac', 'nordbygg-2026', 'VoltaGrid HVAC', 'B30',
    'Simulated exhibitor. Electrified heating, ventilation, and air-conditioning systems.',
-   'https://example.com/voltagridhvac', null),
+   'https://example.com/voltagridhvac',
+   'assets/images/exhibitors/nordbygg-2026-voltagridhvac.svg'),
   ('nordbygg-2026-exhibitor-sagasurveys', 'nordbygg-2026', 'Saga Surveys', 'C30',
    'Simulated exhibitor. Drone-based site surveys and as-built 3D scanning.',
-   'https://example.com/sagasurveys', null),
+   'https://example.com/sagasurveys',
+   'assets/images/exhibitors/nordbygg-2026-sagasurveys.svg'),
   ('nordbygg-2026-exhibitor-lundwoodworks', 'nordbygg-2026', 'Lund Woodworks', 'A30',
    'Simulated exhibitor. Engineered timber and cross-laminated timber components.',
-   'https://example.com/lundwoodworks', null),
+   'https://example.com/lundwoodworks',
+   'assets/images/exhibitors/nordbygg-2026-lundwoodworks.svg'),
   ('nordbygg-2026-exhibitor-gridlinepower', 'nordbygg-2026', 'GridLine Power', 'C14',
    'Simulated exhibitor. Site power distribution, temporary grid solutions, and EV charging for construction sites.',
-   'https://example.com/gridlinepower', null),
+   'https://example.com/gridlinepower',
+   'assets/images/exhibitors/nordbygg-2026-gridlinepower.svg'),
   ('estro-2026-exhibitor-radonicsolutions', 'estro-2026', 'Radonic Solutions', 'Stand 12',
    'Simulated exhibitor. Treatment planning systems and adaptive radiotherapy tools.',
-   'https://example.com/radonicsolutions', null),
+   'https://example.com/radonicsolutions',
+   'assets/images/exhibitors/estro-2026-radonicsolutions.svg'),
   ('estro-2026-exhibitor-northimaging', 'estro-2026', 'North Imaging', 'Stand 18',
    'Simulated exhibitor. On-treatment imaging and image guidance for radiation oncology.',
-   'https://example.com/northimaging', null),
+   'https://example.com/northimaging',
+   'assets/images/exhibitors/estro-2026-northimaging.svg'),
   ('eha-2026-exhibitor-hematechnordic', 'eha-2026', 'Hematech Nordic', 'Stand 22',
    'Simulated exhibitor. Hematology diagnostics and laboratory instruments.',
-   'https://example.com/hematechnordic', null)
+   'https://example.com/hematechnordic',
+   'assets/images/exhibitors/eha-2026-hematechnordic.svg')
 on conflict (id) do update set
   name = excluded.name,
   booth = excluded.booth,

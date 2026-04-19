@@ -9,6 +9,7 @@ import {
   formatDayHeading,
 } from "../util/dates.js";
 import { SECTION_LABELS, ticketCtaLabel } from "../util/sections.js";
+import { logoDataUri, avatarDataUri } from "../util/placeholders.js";
 
 const OVERRIDE_KEYS = {
   entrance: "overrides.entrance",
@@ -57,12 +58,26 @@ export function eventView() {
       }
       return [...groups.entries()].map(([day, list]) => ({ day, sessions: list }));
     },
-    speakerNames(session) {
+    sessionSpeakers(session) {
       if (!session.speaker_ids?.length) return [];
       return session.speaker_ids
         .map((id) => Alpine.store("catalog").speakerById(id))
-        .filter(Boolean)
-        .map((s) => s.name);
+        .filter(Boolean);
+    },
+    newsImage() {
+      const ev = this.event();
+      return ev?.branding?.hero_image ?? null;
+    },
+    articleImage(article) {
+      if (article?.hero_image) return article.hero_image;
+      const ev = this.event();
+      return ev?.branding?.hero_image ?? null;
+    },
+    exhibitorLogo(exhibitor) {
+      return exhibitor?.logo || logoDataUri(exhibitor?.name ?? "");
+    },
+    speakerAvatar(speaker) {
+      return speaker?.avatar || avatarDataUri(speaker?.name ?? "");
     },
     filteredExhibitors() {
       const ev = this.event();

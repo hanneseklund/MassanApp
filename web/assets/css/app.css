@@ -455,10 +455,42 @@ a {
   gap: 14px;
 }
 
-.news-item,
-.article {
+.news-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.news-item__image {
+  flex: 0 0 84px;
+  width: 84px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+  background: var(--surface-muted);
+}
+
+.news-item__body-wrap {
+  flex: 1;
   display: grid;
   gap: 4px;
+  min-width: 0;
+}
+
+.article {
+  display: grid;
+  gap: 6px;
+}
+
+.article__image {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+  margin-bottom: 2px;
+  background: var(--surface-muted);
 }
 
 .news-item + .news-item,
@@ -534,11 +566,41 @@ a {
   font-weight: 600;
 }
 
-.session__meta,
-.session__speakers {
+.session__meta {
   margin: 0;
   font-size: 13px;
   color: var(--ink-muted);
+}
+
+.session__speakers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.session__speakers-label {
+  font-weight: 600;
+}
+
+.session__speaker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.session__speaker-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: block;
+  background: var(--surface-muted);
+}
+
+.session__speaker-name {
+  color: var(--ink);
 }
 
 .session__description {
@@ -556,7 +618,9 @@ a {
 
 .exhibitor-card__link {
   display: grid;
-  gap: 4px;
+  grid-template-columns: 48px 1fr;
+  gap: 12px;
+  align-items: center;
   width: 100%;
   padding: 12px 14px;
   text-align: left;
@@ -565,6 +629,20 @@ a {
   color: inherit;
   cursor: pointer;
   min-height: 44px;
+}
+
+.exhibitor-card__logo {
+  width: 48px;
+  height: 48px;
+  display: block;
+  border-radius: var(--radius);
+  background: var(--surface-muted);
+}
+
+.exhibitor-card__text {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
 }
 
 .exhibitor-card__name {
@@ -610,6 +688,15 @@ a {
 .exhibitor-detail {
   display: grid;
   gap: 8px;
+}
+
+.exhibitor-detail__logo {
+  width: 96px;
+  height: 96px;
+  display: block;
+  border-radius: var(--radius-lg);
+  background: var(--surface-muted);
+  margin-bottom: 4px;
 }
 
 .exhibitor-detail__name {
