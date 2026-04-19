@@ -13,3 +13,18 @@ Summary of requirements from the issue:
   always available and independent of any event.
 
 Refer to the issue for authoritative details before implementing.
+
+## Outcome
+
+This task was split into five runnable sub-tasks on 2026-04-19 because
+a single session cannot responsibly land the schema, earning wiring,
+My Pages surface, event add-on flow, and venue merchandise shop at
+once. The sub-tasks live in `agent/tasks/`:
+
+1. `points-system-01-spec.md`
+2. `points-system-02-schema-and-earning.md`
+3. `points-system-03-balance-on-my-pages.md`
+4. `points-system-04-event-addons.md`
+5. `points-system-05-merchandise-shop.md`
+
+Issue #16 remains open until sub-task 05 lands.
