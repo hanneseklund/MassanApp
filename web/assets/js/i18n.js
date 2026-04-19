@@ -78,6 +78,7 @@ const TRANSLATIONS = {
     "sections.program": "Program",
     "sections.exhibitors": "Exhibitors",
     "sections.practical": "Practical info",
+    "sections.food": "Food",
     "sections.newsletter": "Newsletter",
 
     "practical.getting_here": "Getting here",
@@ -202,6 +203,91 @@ const TRANSLATIONS = {
     "newsletter.venue_wide_event_name": "All Stockholmsmassan events",
     "newsletter.err_signup": "Could not sign up.",
     "newsletter.err_email_required": "Enter an email address.",
+
+    "food.intro":
+      "Order food from the venue and pick it up nearby, or book a table slot at one of the restaurants. Payment is simulated — no real charge is made.",
+    "food.step_menu": "1. Menu",
+    "food.step_delivery": "2. Delivery",
+    "food.step_confirm": "3. Confirm",
+    "food.steps_aria": "Order progress",
+    "food.pick_menu": "Pick a menu",
+    "food.pick_delivery": "Pick delivery",
+    "food.menu_image_alt": "{name}",
+    "food.continue": "Continue",
+    "food.back": "Back",
+    "food.delivery_pickup": "Pick up in the venue",
+    "food.delivery_timeslot": "Book a restaurant slot",
+    "food.pickup_legend": "Pickup location",
+    "food.restaurant_legend": "Restaurant",
+    "food.timeslot_legend": "Timeslot",
+    "food.summary_title": "Order summary",
+    "food.summary_menu": "Menu",
+    "food.summary_price": "Price",
+    "food.summary_delivery": "Delivery",
+    "food.confirm": "Pay and order",
+    "food.processing": "Processing…",
+    "food.confirmed": "Order confirmed",
+    "food.transaction_ref": "Transaction reference:",
+    "food.pickup_instructions":
+      "Pick up your order at {location} within 20 minutes.",
+    "food.timeslot_instructions":
+      "Your table is reserved at {restaurant} · {slot}.",
+    "food.order_another": "Order another",
+    "food.back_to_event": "Back to event",
+    "food.err_pick_menu": "Pick a menu to continue.",
+    "food.err_pick_menu_first": "Pick a menu first.",
+    "food.err_pick_pickup": "Pick a pickup location.",
+    "food.err_pick_slot": "Pick a restaurant and a timeslot.",
+    "food.err_pick_delivery": "Pick a delivery option.",
+    "food.err_generic": "Could not place the order.",
+
+    "food.menus.burger_classic.name": "Classic Burger",
+    "food.menus.burger_classic.desc":
+      "Beef patty, lettuce, tomato, pickles, house sauce in a brioche bun.",
+    "food.menus.cheeseburger_double.name": "Double Cheeseburger",
+    "food.menus.cheeseburger_double.desc":
+      "Two patties, double cheddar, caramelised onion, smoked mayo.",
+    "food.menus.pizza_margherita.name": "Pizza Margherita",
+    "food.menus.pizza_margherita.desc":
+      "Stone-baked pizza with tomato, mozzarella, and fresh basil.",
+    "food.menus.hotdog_classic.name": "Classic Hot Dog",
+    "food.menus.hotdog_classic.desc":
+      "Grilled sausage in a soft bun with mustard, ketchup, and crispy onion.",
+    "food.menus.chicken_nuggets.name": "Chicken Nuggets (8)",
+    "food.menus.chicken_nuggets.desc":
+      "Eight breaded chicken pieces with your choice of dip.",
+    "food.menus.fries_large.name": "Large Fries",
+    "food.menus.fries_large.desc":
+      "Crispy golden fries, lightly salted. Serves two as a side.",
+    "food.menus.caesar_salad.name": "Caesar Salad",
+    "food.menus.caesar_salad.desc":
+      "Romaine, grilled chicken, parmesan, croutons, Caesar dressing.",
+    "food.menus.wrap_chicken.name": "Chicken Wrap",
+    "food.menus.wrap_chicken.desc":
+      "Soft tortilla, grilled chicken, lettuce, tomato, chipotle mayo.",
+    "food.menus.sushi_box.name": "Sushi Box",
+    "food.menus.sushi_box.desc":
+      "Eight pieces of salmon and tuna nigiri plus four maki rolls.",
+    "food.menus.ice_cream.name": "Ice Cream Scoop",
+    "food.menus.ice_cream.desc":
+      "A single scoop of vanilla or chocolate, topped with sprinkles.",
+
+    "food.pickup.entrance_north.name": "North Entrance kiosk",
+    "food.pickup.entrance_north.desc":
+      "Main north entrance, to the right of the turnstiles.",
+    "food.pickup.hall_b_lobby.name": "Hall B lobby counter",
+    "food.pickup.hall_b_lobby.desc":
+      "Inside Hall B, opposite the coat check.",
+    "food.pickup.central_plaza.name": "Central Plaza pickup",
+    "food.pickup.central_plaza.desc":
+      "Central plaza, between Halls A and C.",
+
+    "food.restaurants.smakverket.name": "Smakverket",
+    "food.restaurants.smakverket.desc":
+      "Bistro-style seating with a Nordic seasonal menu.",
+    "food.restaurants.torget_bistro.name": "Torget Bistro",
+    "food.restaurants.torget_bistro.desc":
+      "Casual canteen at the venue square, family friendly.",
   },
 
   sv: {
@@ -262,6 +348,7 @@ const TRANSLATIONS = {
     "sections.program": "Program",
     "sections.exhibitors": "Utställare",
     "sections.practical": "Praktisk info",
+    "sections.food": "Mat",
     "sections.newsletter": "Nyhetsbrev",
 
     "practical.getting_here": "Hitta hit",
@@ -388,6 +475,91 @@ const TRANSLATIONS = {
     "newsletter.venue_wide_event_name": "Alla Stockholmsmässan-evenemang",
     "newsletter.err_signup": "Kunde inte prenumerera.",
     "newsletter.err_email_required": "Ange en e-postadress.",
+
+    "food.intro":
+      "Beställ mat i mässan och hämta i närheten, eller boka en plats på en av restaurangerna. Betalningen är simulerad — ingen riktig debitering görs.",
+    "food.step_menu": "1. Meny",
+    "food.step_delivery": "2. Leverans",
+    "food.step_confirm": "3. Bekräfta",
+    "food.steps_aria": "Beställningsförlopp",
+    "food.pick_menu": "Välj en meny",
+    "food.pick_delivery": "Välj leverans",
+    "food.menu_image_alt": "{name}",
+    "food.continue": "Fortsätt",
+    "food.back": "Tillbaka",
+    "food.delivery_pickup": "Hämta inom mässan",
+    "food.delivery_timeslot": "Boka bord på restaurang",
+    "food.pickup_legend": "Hämtställe",
+    "food.restaurant_legend": "Restaurang",
+    "food.timeslot_legend": "Tidslucka",
+    "food.summary_title": "Sammanfattning",
+    "food.summary_menu": "Meny",
+    "food.summary_price": "Pris",
+    "food.summary_delivery": "Leverans",
+    "food.confirm": "Betala och beställ",
+    "food.processing": "Bearbetar…",
+    "food.confirmed": "Beställning bekräftad",
+    "food.transaction_ref": "Transaktionsreferens:",
+    "food.pickup_instructions":
+      "Hämta din beställning vid {location} inom 20 minuter.",
+    "food.timeslot_instructions":
+      "Ditt bord är reserverat på {restaurant} · {slot}.",
+    "food.order_another": "Beställ igen",
+    "food.back_to_event": "Tillbaka till evenemanget",
+    "food.err_pick_menu": "Välj en meny för att fortsätta.",
+    "food.err_pick_menu_first": "Välj en meny först.",
+    "food.err_pick_pickup": "Välj ett hämtställe.",
+    "food.err_pick_slot": "Välj restaurang och tidslucka.",
+    "food.err_pick_delivery": "Välj ett leveranssätt.",
+    "food.err_generic": "Kunde inte slutföra beställningen.",
+
+    "food.menus.burger_classic.name": "Klassisk burgare",
+    "food.menus.burger_classic.desc":
+      "Nötfärs, sallad, tomat, pickles och husets sås i briochebröd.",
+    "food.menus.cheeseburger_double.name": "Dubbel cheeseburger",
+    "food.menus.cheeseburger_double.desc":
+      "Två färsbiffar, dubbel cheddar, karamelliserad lök och rökt majonnäs.",
+    "food.menus.pizza_margherita.name": "Pizza Margherita",
+    "food.menus.pizza_margherita.desc":
+      "Stenugnsbakad pizza med tomat, mozzarella och färsk basilika.",
+    "food.menus.hotdog_classic.name": "Klassisk varmkorv",
+    "food.menus.hotdog_classic.desc":
+      "Grillad korv i mjukt bröd med senap, ketchup och rostad lök.",
+    "food.menus.chicken_nuggets.name": "Kycklingnuggets (8)",
+    "food.menus.chicken_nuggets.desc":
+      "Åtta panerade kycklingbitar med valfri dipp.",
+    "food.menus.fries_large.name": "Stor pommes",
+    "food.menus.fries_large.desc":
+      "Knapriga pommes, lätt saltade. Räcker till två som tillbehör.",
+    "food.menus.caesar_salad.name": "Caesarsallad",
+    "food.menus.caesar_salad.desc":
+      "Romansallad, grillad kyckling, parmesan, krutonger och caesardressing.",
+    "food.menus.wrap_chicken.name": "Kycklingwrap",
+    "food.menus.wrap_chicken.desc":
+      "Mjuk tortilla med grillad kyckling, sallad, tomat och chipotlemajonnäs.",
+    "food.menus.sushi_box.name": "Sushibox",
+    "food.menus.sushi_box.desc":
+      "Åtta nigiri med lax och tonfisk plus fyra makirullar.",
+    "food.menus.ice_cream.name": "Glasskula",
+    "food.menus.ice_cream.desc":
+      "En kula vanilj eller choklad med strössel.",
+
+    "food.pickup.entrance_north.name": "Norra entrén",
+    "food.pickup.entrance_north.desc":
+      "Vid norra huvudentrén, höger om spärrarna.",
+    "food.pickup.hall_b_lobby.name": "Hall B-foajén",
+    "food.pickup.hall_b_lobby.desc":
+      "I Hall B, mitt emot garderoben.",
+    "food.pickup.central_plaza.name": "Centrala torget",
+    "food.pickup.central_plaza.desc":
+      "Mellan Hall A och Hall C på centrala torget.",
+
+    "food.restaurants.smakverket.name": "Smakverket",
+    "food.restaurants.smakverket.desc":
+      "Bistrokänsla med nordisk säsongsmeny.",
+    "food.restaurants.torget_bistro.name": "Torget Bistro",
+    "food.restaurants.torget_bistro.desc":
+      "Avslappnad matsal vid torget, familjevänlig.",
   },
 };
 

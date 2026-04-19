@@ -10,6 +10,7 @@ import { ticketsStore } from "./stores/tickets.js";
 import { newsletterStore } from "./stores/newsletter.js";
 import { filtersStore } from "./stores/filters.js";
 import { langStore } from "./stores/lang.js";
+import { foodOrdersStore } from "./stores/food-orders.js";
 
 import { calendarView } from "./views/calendar.js";
 import { eventView } from "./views/event.js";
@@ -19,6 +20,7 @@ import { purchaseView } from "./views/purchase.js";
 import { myTicketsView } from "./views/my-tickets.js";
 import { newsletterSignup } from "./views/newsletter-signup.js";
 import { newsletterPreferences } from "./views/newsletter-preferences.js";
+import { foodView } from "./views/food.js";
 
 document.addEventListener("alpine:init", () => {
   // `lang` must register before the others so `init` hooks that may
@@ -31,6 +33,7 @@ document.addEventListener("alpine:init", () => {
   Alpine.store("tickets", ticketsStore());
   Alpine.store("newsletter", newsletterStore());
   Alpine.store("filters", filtersStore());
+  Alpine.store("foodOrders", foodOrdersStore());
 
   // View factories are referenced from `index.html` as
   // `x-data="calendarView()"` etc., so they must be resolvable in the
@@ -44,4 +47,5 @@ document.addEventListener("alpine:init", () => {
   window.myTicketsView = myTicketsView;
   window.newsletterSignup = newsletterSignup;
   window.newsletterPreferences = newsletterPreferences;
+  window.foodView = foodView;
 });

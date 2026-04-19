@@ -1560,3 +1560,168 @@ a {
     padding: 18px 20px;
   }
 }
+
+/* Food ordering tab: reuses purchase body / summary / steps styles,
+   adds a grid of menu cards and a radio-style delivery picker. */
+.food {
+  display: grid;
+  gap: 12px;
+}
+
+.food__intro {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.menu-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.menu-card {
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  display: grid;
+  gap: 0;
+}
+
+.menu-card--selected {
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 2px rgba(6, 70, 251, 0.16);
+}
+
+.menu-card__image {
+  width: 100%;
+  aspect-ratio: 10 / 7;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card__body {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px 12px;
+}
+
+.menu-card__name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menu-card__desc {
+  font-size: 12px;
+  color: var(--ink-muted);
+  line-height: 1.35;
+}
+
+.menu-card__price {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.food-delivery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.food-delivery__mode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.food-fieldset {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px 12px;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.food-fieldset legend {
+  padding: 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}
+
+.food-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.food-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 8px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.food-option__body {
+  display: grid;
+  gap: 2px;
+}
+
+.food-option__name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.food-option__desc {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.food-timeslots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.food-timeslot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}

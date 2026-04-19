@@ -611,6 +611,254 @@
                 </div>
               </template>
 
+              <template x-if="$store.app.eventSubview === 'food'">
+                <div class="food" x-data="foodView()">
+                  <p class="food__intro" x-text="$store.lang.t('food.intro')"></p>
+
+                  <ol
+                    class="purchase__steps"
+                    :aria-label="$store.lang.t('food.steps_aria')"
+                  >
+                    <li
+                      :class="step >= 1 && 'purchase__step--active'"
+                      x-text="$store.lang.t('food.step_menu')"
+                    ></li>
+                    <li
+                      :class="step >= 2 && 'purchase__step--active'"
+                      x-text="$store.lang.t('food.step_delivery')"
+                    ></li>
+                    <li
+                      :class="step >= 3 && 'purchase__step--active'"
+                      x-text="$store.lang.t('food.step_confirm')"
+                    ></li>
+                  </ol>
+
+                  <template x-if="step === 1">
+                    <div class="purchase__body">
+                      <h3 class="purchase__step-title" x-text="$store.lang.t('food.pick_menu')"></h3>
+                      <ul class="menu-grid">
+                        <template x-for="m in menus" :key="m.id">
+                          <li>
+                            <button
+                              type="button"
+                              class="menu-card"
+                              :class="menuId === m.id && 'menu-card--selected'"
+                              :aria-pressed="menuId === m.id"
+                              @click="menuId = m.id"
+                            >
+                              <img
+                                class="menu-card__image"
+                                :src="m.image"
+                                :alt="$store.lang.t('food.menu_image_alt', { name: m.label })"
+                                loading="lazy"
+                                decoding="async"
+                              />
+                              <span class="menu-card__body">
+                                <span class="menu-card__name" x-text="m.label"></span>
+                                <span class="menu-card__desc" x-text="m.description"></span>
+                                <span class="menu-card__price" x-text="m.price"></span>
+                              </span>
+                            </button>
+                          </li>
+                        </template>
+                      </ul>
+                      <p class="auth-form__error" x-show="error" x-text="error"></p>
+                      <button
+                        class="purchase__primary"
+                        type="button"
+                        :disabled="!menuId"
+                        @click="continueToDelivery()"
+                        x-text="$store.lang.t('food.continue')"
+                      ></button>
+                    </div>
+                  </template>
+
+                  <template x-if="step === 2">
+                    <form class="purchase__body" @submit.prevent="confirm()">
+                      <h3 class="purchase__step-title" x-text="$store.lang.t('food.pick_delivery')"></h3>
+
+                      <div class="food-delivery">
+                        <label class="food-delivery__mode">
+                          <input
+                            type="radio"
+                            name="food-delivery-mode"
+                            value="pickup"
+                            :checked="deliveryMode === 'pickup'"
+                            @change="setDeliveryMode('pickup')"
+                          />
+                          <span x-text="$store.lang.t('food.delivery_pickup')"></span>
+                        </label>
+                        <label class="food-delivery__mode">
+                          <input
+                            type="radio"
+                            name="food-delivery-mode"
+                            value="timeslot"
+                            :checked="deliveryMode === 'timeslot'"
+                            @change="setDeliveryMode('timeslot')"
+                          />
+                          <span x-text="$store.lang.t('food.delivery_timeslot')"></span>
+                        </label>
+                      </div>
+
+                      <fieldset class="food-fieldset" x-show="deliveryMode === 'pickup'">
+                        <legend x-text="$store.lang.t('food.pickup_legend')"></legend>
+                        <ul class="food-options">
+                          <template x-for="p in pickupLocations" :key="p.id">
+                            <li>
+                              <label class="food-option">
+                                <input
+                                  type="radio"
+                                  name="food-pickup"
+                                  :value="p.id"
+                                  :checked="pickupId === p.id"
+                                  @change="pickupId = p.id"
+                                />
+                                <span class="food-option__body">
+                                  <span class="food-option__name" x-text="p.label"></span>
+                                  <span class="food-option__desc" x-text="p.description"></span>
+                                </span>
+                              </label>
+                            </li>
+                          </template>
+                        </ul>
+                      </fieldset>
+
+                      <fieldset class="food-fieldset" x-show="deliveryMode === 'timeslot'">
+                        <legend x-text="$store.lang.t('food.restaurant_legend')"></legend>
+                        <ul class="food-options">
+                          <template x-for="r in restaurants" :key="r.id">
+                            <li>
+                              <label class="food-option">
+                                <input
+                                  type="radio"
+                                  name="food-restaurant"
+                                  :value="r.id"
+                                  :checked="restaurantId === r.id"
+                                  @change="restaurantId = r.id"
+                                />
+                                <span class="food-option__body">
+                                  <span class="food-option__name" x-text="r.label"></span>
+                                  <span class="food-option__desc" x-text="r.description"></span>
+                                </span>
+                              </label>
+                            </li>
+                          </template>
+                        </ul>
+                      </fieldset>
+
+                      <fieldset
+                        class="food-fieldset"
+                        x-show="deliveryMode === 'timeslot' && restaurantId"
+                      >
+                        <legend x-text="$store.lang.t('food.timeslot_legend')"></legend>
+                        <ul class="food-timeslots">
+                          <template x-for="s in timeslots" :key="s.id">
+                            <li>
+                              <label class="food-timeslot">
+                                <input
+                                  type="radio"
+                                  name="food-timeslot"
+                                  :value="s.id"
+                                  :checked="timeslotId === s.id"
+                                  @change="timeslotId = s.id"
+                                />
+                                <span x-text="s.label"></span>
+                              </label>
+                            </li>
+                          </template>
+                        </ul>
+                      </fieldset>
+
+                      <section class="purchase__summary">
+                        <h4 class="purchase__summary-title" x-text="$store.lang.t('food.summary_title')"></h4>
+                        <dl class="purchase__summary-list">
+                          <div class="purchase__summary-row">
+                            <dt x-text="$store.lang.t('food.summary_menu')"></dt>
+                            <dd x-text="selectedMenu()?.label ?? ''"></dd>
+                          </div>
+                          <div class="purchase__summary-row">
+                            <dt x-text="$store.lang.t('food.summary_price')"></dt>
+                            <dd x-text="selectedMenu()?.price ?? ''"></dd>
+                          </div>
+                          <div class="purchase__summary-row" x-show="deliveryMode === 'pickup' && selectedPickup()">
+                            <dt x-text="$store.lang.t('food.summary_delivery')"></dt>
+                            <dd x-text="selectedPickup()?.label ?? ''"></dd>
+                          </div>
+                          <div class="purchase__summary-row" x-show="deliveryMode === 'timeslot' && selectedRestaurant() && selectedTimeslot()">
+                            <dt x-text="$store.lang.t('food.summary_delivery')"></dt>
+                            <dd>
+                              <span x-text="selectedRestaurant()?.label ?? ''"></span>
+                              <span> · </span>
+                              <span x-text="selectedTimeslot()?.label ?? ''"></span>
+                            </dd>
+                          </div>
+                        </dl>
+                        <p class="purchase__sim-note">
+                          <span x-text="$store.lang.t('purchase.sim_note_prefix')"></span>
+                          <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                          <span x-text="$store.lang.t('purchase.sim_note_suffix')"></span>
+                        </p>
+                      </section>
+                      <p class="auth-form__error" x-show="error" x-text="error"></p>
+                      <button
+                        class="purchase__primary"
+                        type="submit"
+                        :disabled="processing"
+                      >
+                        <span x-show="!processing" x-text="$store.lang.t('food.confirm')"></span>
+                        <span x-show="processing" x-text="$store.lang.t('food.processing')"></span>
+                      </button>
+                      <button
+                        class="purchase__secondary"
+                        type="button"
+                        :disabled="processing"
+                        @click="goToStep(1)"
+                        x-text="$store.lang.t('food.back')"
+                      ></button>
+                    </form>
+                  </template>
+
+                  <template x-if="step === 3 && confirmedOrder">
+                    <div class="purchase__body">
+                      <h3 class="purchase__step-title">
+                        <span x-text="$store.lang.t('food.confirmed')"></span>
+                        <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                      </h3>
+                      <p class="purchase__ref">
+                        <span x-text="$store.lang.t('food.transaction_ref')"></span>
+                        <code x-text="confirmedOrder.transaction_ref"></code>
+                      </p>
+                      <article class="ticket-card">
+                        <header class="ticket-card__header">
+                          <p class="ticket-card__event" x-text="confirmedOrder.menu_label"></p>
+                          <p class="ticket-card__dates" x-text="confirmedOrder.price"></p>
+                        </header>
+                        <p
+                          x-show="confirmedOrder.delivery_mode === 'pickup'"
+                          x-text="$store.lang.t('food.pickup_instructions', { location: confirmedOrder.delivery_label })"
+                        ></p>
+                        <p
+                          x-show="confirmedOrder.delivery_mode === 'timeslot'"
+                          x-text="$store.lang.t('food.timeslot_instructions', { restaurant: confirmedOrder.delivery_label.split(' · ')[0], slot: confirmedOrder.delivery_label.split(' · ')[1] || '' })"
+                        ></p>
+                      </article>
+                      <button
+                        class="purchase__primary"
+                        type="button"
+                        @click="_hydrate()"
+                        x-text="$store.lang.t('food.order_another')"
+                      ></button>
+                      <button
+                        class="purchase__secondary"
+                        type="button"
+                        @click="$store.app.goEventSubview('home')"
+                        x-text="$store.lang.t('food.back_to_event')"
+                      ></button>
+                    </div>
+                  </template>
+                </div>
+              </template>
+
               <template x-if="$store.app.eventSubview === 'newsletter'">
                 <div class="newsletter" x-data="newsletterSignup()">
                   <template x-if="!submitted">

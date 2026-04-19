@@ -29,6 +29,7 @@ const SECTION_ENTRIES = [
   { id: "program", key: "sections.program" },
   { id: "exhibitors", key: "sections.exhibitors" },
   { id: "practical", key: "sections.practical" },
+  { id: "food", key: "sections.food" },
   { id: "newsletter", key: "sections.newsletter" },
 ];
 

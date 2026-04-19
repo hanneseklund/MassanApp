@@ -16,6 +16,7 @@ const EVENT_SUBVIEWS = [
   "program",
   "exhibitors",
   "practical",
+  "food",
   "newsletter",
 ];
 

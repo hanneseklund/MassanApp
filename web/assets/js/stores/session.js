@@ -50,9 +50,11 @@ export function sessionStore() {
         this.user = mapSupabaseUser(session?.user);
         Alpine.store("tickets")?._onSessionChange?.();
         Alpine.store("newsletter")?._onSessionChange?.();
+        Alpine.store("foodOrders")?._onSessionChange?.();
       });
       Alpine.store("tickets")?._onSessionChange?.();
       Alpine.store("newsletter")?._onSessionChange?.();
+      Alpine.store("foodOrders")?._onSessionChange?.();
     },
 
     get isSignedIn() {

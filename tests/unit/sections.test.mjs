@@ -63,7 +63,7 @@ test("SECTION_LABELS: ids match the event-nav subview order", () => {
   // subview list in stores/app.js would break deep-linking.
   assert.deepEqual(
     SECTION_LABELS.map((s) => s.id),
-    ["news", "articles", "program", "exhibitors", "practical", "newsletter"],
+    ["news", "articles", "program", "exhibitors", "practical", "food", "newsletter"],
   );
 });
 
@@ -76,5 +76,6 @@ test("SECTION_LABELS: labels resolve against the default language", () => {
   assert.equal(byId.program, "Program");
   assert.equal(byId.exhibitors, "Exhibitors");
   assert.equal(byId.practical, "Practical info");
+  assert.equal(byId.food, "Food");
   assert.equal(byId.newsletter, "Newsletter");
 });

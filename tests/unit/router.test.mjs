@@ -43,6 +43,7 @@ test("parseHash: recognized event subviews round-trip", () => {
     "program",
     "exhibitors",
     "practical",
+    "food",
     "newsletter",
   ]) {
     assert.deepEqual(parseHash(`#/event/nordbygg-2026/${sub}`), {
