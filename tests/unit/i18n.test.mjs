@@ -15,6 +15,7 @@ import {
   translate,
   dateLocaleFor,
   activeTranslate,
+  availableKeys,
 } from "../../web/assets/js/i18n.js";
 
 test("SUPPORTED_LANGUAGES: includes en and sv", () => {
@@ -95,4 +96,34 @@ test("activeTranslate: interpolates params on the fallback path", () => {
     activeTranslate("title.get_tickets_for", { name: "ESTRO 2026" }),
     "Get tickets · ESTRO 2026",
   );
+});
+
+test("availableKeys: every supported language has the same key set", () => {
+  // The per-key English fallback in `translate` means a missing
+  // Swedish key renders silently in English instead of failing.
+  // Assert parity here so dropped translations fail a fast unit check
+  // before they reach a reviewer. When adding a new language, extend
+  // SUPPORTED_LANGUAGES and translate every key into it rather than
+  // relying on the fallback.
+  const reference = new Set(availableKeys(DEFAULT_LANGUAGE));
+  for (const lang of SUPPORTED_LANGUAGES) {
+    const keys = new Set(availableKeys(lang));
+    const missing = [...reference].filter((k) => !keys.has(k));
+    const extra = [...keys].filter((k) => !reference.has(k));
+    assert.deepEqual(
+      missing,
+      [],
+      `${lang} is missing keys present in ${DEFAULT_LANGUAGE}: ${missing.join(", ")}`,
+    );
+    assert.deepEqual(
+      extra,
+      [],
+      `${lang} has keys that do not exist in ${DEFAULT_LANGUAGE}: ${extra.join(", ")}`,
+    );
+  }
+});
+
+test("availableKeys: unknown language returns an empty list", () => {
+  assert.deepEqual(availableKeys("de"), []);
+  assert.deepEqual(availableKeys(undefined), []);
 });

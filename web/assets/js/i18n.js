@@ -414,6 +414,15 @@ export function dateLocaleFor(lang) {
   return DATE_LOCALES[lang] ?? DATE_LOCALES[DEFAULT_LANGUAGE];
 }
 
+// Keys defined for `lang`. Used by the unit suite to assert that every
+// language carries the same set of keys, so a new key that forgets its
+// non-English counterpart fails tests instead of silently rendering in
+// the English fallback.
+export function availableKeys(lang) {
+  const dict = TRANSLATIONS[lang];
+  return dict ? Object.keys(dict) : [];
+}
+
 // Translate against the active UI language when Alpine's `lang` store
 // is available, otherwise fall back to the default-language entry.
 // Use this from modules that initialize before Alpine or from error

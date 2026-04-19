@@ -307,7 +307,10 @@ instead of silently falling back to stale data.
   `ticket_type_label`. Newer features that persist display strings
   should follow the same rule.
 - Adding a new translation key: add it to both `en` and `sv` entries in
-  `i18n.js`. Adding a new language: extend `SUPPORTED_LANGUAGES`,
+  `i18n.js`. The `tests/unit/i18n.test.mjs` suite asserts every key
+  exists in every supported language via the `availableKeys(lang)`
+  helper, so a one-sided key fails the unit run before it ships.
+  Adding a new language: extend `SUPPORTED_LANGUAGES`,
   `LANGUAGE_LABELS`, `DATE_LOCALES`, and the `TRANSLATIONS` object,
   then update the chrome toggle if the two-language toggle no longer
   fits.
