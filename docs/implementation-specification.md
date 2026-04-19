@@ -137,7 +137,10 @@ web/assets/js/
                                NEWSLETTER_PREF_KEYS, NEWSLETTER_TOPICS
   stores/
     app.js                     Alpine.store("app", ...) (navigation,
-                               hash routing, post-auth return target)
+                               hash routing, post-auth return target).
+                               Exports `parseHash` and `buildHash` as
+                               named exports so the unit suite can test
+                               the routing table without Alpine.
     lang.js                    Alpine.store("lang", ...) (active UI
                                language, localStorage persistence,
                                t(key) translator)

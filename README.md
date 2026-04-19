@@ -82,8 +82,16 @@ npx playwright install chromium
 npm run smoke
 ```
 
+Pure-function helpers (hash routing, date formatting, QR payload,
+newsletter preferences, ticket-type catalog) also have a fast unit
+suite that does not need a browser or Supabase:
+
+```
+npm run test:unit
+```
+
 The frontend in `web/` stays buildless; `package.json` exists only to
-host the smoke-test harness.
+host the smoke-test harness and the unit runner.
 
 Agent-driven tasks live under `agent/tasks/`, with completed tasks
 moved to `agent/tasks_completed/` and tasks waiting on user input

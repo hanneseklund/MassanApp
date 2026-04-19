@@ -345,6 +345,33 @@ Every numbered item in the checklist above maps to at least one
 assertion in the suite. When the checklist changes, update the suite
 in the same pull request.
 
+## Unit tests
+
+Pure-function helpers in the frontend (hash routing in
+`stores/app.js`, date formatting in `util/dates.js`, ticket-type
+catalog in `util/sections.js`, newsletter-preference shape in
+`newsletter/preferences.js`, and the QR payload builder in
+`simulations/qr.js`) have a fast unit suite under `tests/unit/`
+that does not require a browser or Supabase.
+
+The suite runs against the same source files the browser loads —
+tests import the ES modules under `web/assets/js/` directly, so a
+behavior drift in a helper fails unit tests before the slower smoke
+suite runs. Tests are `.mjs` files driven by Node's built-in
+`node:test` runner, so no extra dependency is needed beyond Node
+itself.
+
+Run them from the repo root:
+
+```
+npm run test:unit
+```
+
+When the smoke suite changes to rely on a new pure helper, add a
+unit test for that helper in the same pull request. The unit suite
+is orthogonal to the Supabase-backed smoke suite — both must pass
+before a change ships.
+
 ## Regression checks for shared venue data
 
 When editing venue-shared content:

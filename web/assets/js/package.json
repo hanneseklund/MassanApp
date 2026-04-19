@@ -1,0 +1,4 @@
+{
+  "_comment": "Marks this subtree as ES modules so Node's test runner (used by tests/unit/*.test.mjs) does not warn about the frontend's module type. The frontend is still buildless — browsers load these files via <script type=\"module\"> and ignore package.json.",
+  "type": "module"
+}

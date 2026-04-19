@@ -19,7 +19,7 @@ const EVENT_SUBVIEWS = [
   "newsletter",
 ];
 
-function parseHash(hash) {
+export function parseHash(hash) {
   const clean = hash.replace(/^#\/?/, "");
   if (!clean) return { view: "calendar" };
   const parts = clean.split("/").filter(Boolean);
@@ -44,7 +44,7 @@ function parseHash(hash) {
   return { view: "calendar" };
 }
 
-function buildHash(state) {
+export function buildHash(state) {
   if (state.view === "calendar") return "#/";
   if (state.view === "auth") return "#/auth";
   if (state.view === "me") return "#/me";
