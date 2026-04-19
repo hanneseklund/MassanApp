@@ -684,6 +684,103 @@ test.describe("Food ordering (simulated)", () => {
   });
 });
 
+test.describe("Points add-on redemption (simulated)", () => {
+  test("33c-33d: event add-ons redeem for points, banner and balance reflect it", async ({
+    page,
+  }) => {
+    // Depends on the ticket-purchase test having already awarded
+    // points for the smoke account. Sign in and open Nordbygg.
+    await signOutIfSignedIn(page);
+    await page.goto("/#/auth");
+    await page.locator('.auth-tabs__tab', { hasText: "Sign in" }).click();
+    await page.locator('input[autocomplete="email"]').fill(TEST_EMAIL);
+    await page
+      .locator('input[autocomplete="current-password"]')
+      .fill(TEST_PASSWORD);
+    await page.locator(".auth-form .auth-form__submit").click();
+    await waitForSignedIn(page);
+
+    // Capture the current balance from My Pages before redemption.
+    await page.goto("/#/me");
+    const balanceLocator = page.locator(".points__balance-value");
+    await expect(balanceLocator).toBeVisible({ timeout: 10_000 });
+    await expect
+      .poll(
+        async () => {
+          const text = (await balanceLocator.textContent()) || "";
+          const match = text.match(/(\d+)/);
+          return match ? parseInt(match[1], 10) : 0;
+        },
+        { timeout: 10_000 },
+      )
+      .toBeGreaterThan(0);
+    const balanceBeforeText = (await balanceLocator.textContent()) || "";
+    const balanceBefore = parseInt(
+      balanceBeforeText.match(/(\d+)/)?.[1] ?? "0",
+      10,
+    );
+
+    await openEventByName(page, "Nordbygg 2026");
+    // The add-ons section is only visible on the event home subview
+    // for ticket holders.
+    const addonsSection = page.locator(".event-addons");
+    await expect(addonsSection).toBeVisible({ timeout: 10_000 });
+    await expect(
+      addonsSection.locator(".event-addons__title .sim-chip"),
+    ).toBeVisible();
+
+    // Pick the cheapest add-on whose cost is at or below the current
+    // balance. The add-ons list is sorted by cost ascending, so the
+    // first enabled Redeem button is the cheapest option.
+    const firstCard = addonsSection.locator(".event-addons__card").first();
+    await expect(firstCard).toBeVisible();
+    const cost = await firstCard
+      .locator(".event-addons__cost")
+      .textContent()
+      .then((t) => parseInt(t?.match(/(\d+)/)?.[1] ?? "0", 10));
+    expect(cost).toBeGreaterThan(0);
+    const addonName = (
+      await firstCard.locator(".event-addons__name").textContent()
+    )?.trim();
+    expect(addonName).toBeTruthy();
+
+    const redeemButton = firstCard.locator(".event-addons__redeem");
+    await expect(redeemButton).toBeEnabled();
+    await redeemButton.click();
+
+    // Confirmation banner renders with the simulated chip and the
+    // redeemed add-on name/cost.
+    const banner = addonsSection.locator(".event-addons__banner");
+    await expect(banner).toBeVisible({ timeout: 10_000 });
+    await expect(banner.locator(".sim-chip")).toBeVisible();
+    await expect(banner).toContainText(addonName);
+
+    // My Pages balance dropped by exactly `cost`, and the recent
+    // transactions list now shows the add-on redemption for Nordbygg.
+    await page.goto("/#/me");
+    await expect(balanceLocator).toBeVisible({ timeout: 10_000 });
+    await expect
+      .poll(
+        async () => {
+          const text = (await balanceLocator.textContent()) || "";
+          return parseInt(text.match(/(\d+)/)?.[1] ?? "0", 10);
+        },
+        { timeout: 10_000 },
+      )
+      .toBe(balanceBefore - cost);
+    await expect(
+      page
+        .locator(".points__item", { hasText: "Add-on redemption" })
+        .first(),
+    ).toBeVisible();
+    await expect(
+      page
+        .locator(".points__item", { hasText: "Nordbygg 2026" })
+        .first(),
+    ).toBeVisible();
+  });
+});
+
 test.describe("Language toggle", () => {
   test("33-34: chrome switches between English and Swedish and persists across reload", async ({
     page,

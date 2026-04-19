@@ -21,10 +21,35 @@ export function eventView() {
   return {
     sections: SECTION_LABELS,
     exhibitorQuery: "",
+    // Per-session local stock adjustments for add-ons. The prototype
+    // does not decrement the database row (see the functional spec's
+    // "Stock is advisory" note); redeemed items are counted here only
+    // so the card's "X left" label reflects what the current session
+    // redeemed. Keyed by addon id.
+    addonStockConsumed: {},
+    // Redeeming in progress for a given addon id, so the button can
+    // show a "Redeeming…" state and we debounce double-taps.
+    addonRedeemPending: {},
+    // Last successful redemption, surfaced as a banner above the list
+    // with the `simulated` chip. Cleared on event change or when the
+    // user dismisses it.
+    lastRedemption: null,
+    addonError: "",
     formatDates,
     formatShortDate,
     formatDayHeading,
     ticketCtaLabel,
+    init() {
+      this.$watch(
+        () => Alpine.store("app").eventId,
+        () => {
+          this.addonStockConsumed = {};
+          this.addonRedeemPending = {};
+          this.lastRedemption = null;
+          this.addonError = "";
+        },
+      );
+    },
     event() {
       const id = Alpine.store("app").eventId;
       return id ? Alpine.store("catalog").eventById(id) : null;
@@ -38,6 +63,75 @@ export function eventView() {
     startPurchase() {
       const ev = this.event();
       if (ev) Alpine.store("app").startPurchase(ev.id);
+    },
+    addons() {
+      const ev = this.event();
+      return ev ? Alpine.store("catalog").addonsForEvent(ev.id) : [];
+    },
+    addonsVisible() {
+      return this.hasTicket() && this.addons().length > 0;
+    },
+    addonImage(addon) {
+      if (addon?.image) return addon.image;
+      return this.event()?.branding?.hero_image ?? null;
+    },
+    addonRemainingStock(addon) {
+      if (addon.stock == null) return null;
+      const consumed = this.addonStockConsumed[addon.id] || 0;
+      return Math.max(0, addon.stock - consumed);
+    },
+    addonCanRedeem(addon) {
+      if (this.addonRedeemPending[addon.id]) return false;
+      if (Alpine.store("points").balance < (addon.points_cost || 0)) {
+        return false;
+      }
+      const remaining = this.addonRemainingStock(addon);
+      if (remaining !== null && remaining <= 0) return false;
+      return true;
+    },
+    addonDisabledReason(addon) {
+      const lang = Alpine.store("lang");
+      if (Alpine.store("points").balance < (addon.points_cost || 0)) {
+        return lang.t("event.addons_insufficient_balance", {
+          cost: addon.points_cost,
+        });
+      }
+      const remaining = this.addonRemainingStock(addon);
+      if (remaining !== null && remaining <= 0) {
+        return lang.t("event.addons_sold_out");
+      }
+      return "";
+    },
+    async redeemAddon(addon) {
+      if (!addon || !this.addonCanRedeem(addon)) return;
+      const ev = this.event();
+      if (!ev) return;
+      this.addonError = "";
+      this.addonRedeemPending[addon.id] = true;
+      try {
+        await Alpine.store("points").redeem({
+          source: "addon_redemption",
+          source_ref: addon.id,
+          amount: addon.points_cost,
+          event_id: ev.id,
+        });
+        this.addonStockConsumed[addon.id] =
+          (this.addonStockConsumed[addon.id] || 0) + 1;
+        this.lastRedemption = {
+          addon_id: addon.id,
+          name: addon.name,
+          cost: addon.points_cost,
+          at: new Date().toISOString(),
+        };
+      } catch (err) {
+        this.addonError =
+          err.message || Alpine.store("lang").t("event.addons_err_generic");
+      } finally {
+        this.addonRedeemPending[addon.id] = false;
+      }
+    },
+    dismissLastRedemption() {
+      this.lastRedemption = null;
     },
     news() {
       const ev = this.event();

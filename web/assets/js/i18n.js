@@ -73,6 +73,23 @@ const TRANSLATIONS = {
     "event.not_found": "Event not found. Return to the calendar.",
     "event.sections_nav_aria": "Event sections",
 
+    "event.addons_title": "Event add-ons",
+    "event.addons_intro":
+      "Points-only extras for ticket holders. Simulated — no physical item is produced.",
+    "event.addons_image_alt": "{name}",
+    "event.addons_cost": "{cost} points",
+    "event.addons_stock": "{count} left",
+    "event.addons_redeem": "Redeem",
+    "event.addons_redeeming": "Redeeming…",
+    "event.addons_insufficient_balance":
+      "You need {cost} points to redeem this.",
+    "event.addons_sold_out": "Sold out for this session.",
+    "event.addons_confirmed": "Add-on redeemed",
+    "event.addons_confirmed_body":
+      "You redeemed {name} for {cost} points.",
+    "event.addons_dismiss": "Dismiss",
+    "event.addons_err_generic": "Could not redeem this add-on.",
+
     "sections.news": "News",
     "sections.articles": "Articles",
     "sections.program": "Program",
@@ -363,6 +380,23 @@ const TRANSLATIONS = {
     "event.view_ticket": "Visa biljett",
     "event.not_found": "Evenemanget hittades inte. Återvänd till kalendern.",
     "event.sections_nav_aria": "Evenemangssektioner",
+
+    "event.addons_title": "Evenemangstillägg",
+    "event.addons_intro":
+      "Extratillval bara för poäng, för dig som har biljett. Simulerat — inget fysiskt föremål produceras.",
+    "event.addons_image_alt": "{name}",
+    "event.addons_cost": "{cost} poäng",
+    "event.addons_stock": "{count} kvar",
+    "event.addons_redeem": "Lös in",
+    "event.addons_redeeming": "Löser in…",
+    "event.addons_insufficient_balance":
+      "Du behöver {cost} poäng för att lösa in det här.",
+    "event.addons_sold_out": "Slut för den här sessionen.",
+    "event.addons_confirmed": "Tillägg inlöst",
+    "event.addons_confirmed_body":
+      "Du löste in {name} för {cost} poäng.",
+    "event.addons_dismiss": "Stäng",
+    "event.addons_err_generic": "Kunde inte lösa in det här tillägget.",
 
     "sections.news": "Nyheter",
     "sections.articles": "Artiklar",

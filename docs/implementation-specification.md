@@ -223,8 +223,9 @@ Alpine.js stores and components own the following state:
   store subscribes to `supabase.auth.onAuthStateChange` so that sign-in,
   sign-out, and token refresh propagate to the UI.
 - `catalog`: venue, events, news, articles, program items, exhibitors,
-  and speakers loaded from the shared Supabase project, plus
-  `loading` / `error` flags for the initial fetch.
+  speakers, point add-ons, and merchandise loaded from the shared
+  Supabase project, plus `loading` / `error` flags for the initial
+  fetch.
 - `filters`: free-text query, type, category, and month filters for the
   calendar view.
 - `tickets`: the signed-in user's ticket rows, loaded from
@@ -271,14 +272,15 @@ runtime.
 
 ### Catalog loading
 
-On first app load the `catalog` store issues seven parallel `select *`
+On first app load the `catalog` store issues nine parallel `select *`
 queries against the shared project: `venues` (single row),
 `events`, `news_items`, `articles`, `program_items`, `exhibitors`,
-and `speakers`. The rows are kept in memory for the life of the
-session and filtered per event in view components. The Supabase URL
-and publishable (anon) key are read from `window.MASSANAPP_ENV`, set
-by `web/assets/env.js` (committed) with optional override from
-`web/assets/env.local.js` (gitignored).
+`speakers`, `point_addons` (filtered to `active = true`), and
+`merchandise` (filtered to `active = true`). The rows are kept in
+memory for the life of the session and filtered per event in view
+components. The Supabase URL and publishable (anon) key are read
+from `window.MASSANAPP_ENV`, set by `web/assets/env.js` (committed)
+with optional override from `web/assets/env.local.js` (gitignored).
 
 If the Supabase queries fail, the app surfaces the error through the
 `catalog.error` state and the calendar view shows a failure message

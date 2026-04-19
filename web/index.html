@@ -272,7 +272,97 @@
 
             <div class="event-subview">
               <template x-if="$store.app.eventSubview === 'home'">
-                <p class="placeholder" x-text="$store.lang.t('event.pick_section')"></p>
+                <div>
+                  <p
+                    class="placeholder"
+                    x-show="!addonsVisible()"
+                    x-text="$store.lang.t('event.pick_section')"
+                  ></p>
+
+                  <!-- Event add-ons: points-only redemption section,
+                       visible on the event home view only when the
+                       signed-in visitor owns a ticket for the event
+                       and the catalog has active add-ons for it.
+                       See docs/functional-specification.md under
+                       "Spending — event add-ons". -->
+                  <section class="event-addons" x-show="addonsVisible()">
+                    <h3 class="event-addons__title">
+                      <span x-text="$store.lang.t('event.addons_title')"></span>
+                      <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                    </h3>
+                    <p class="event-addons__intro" x-text="$store.lang.t('event.addons_intro')"></p>
+
+                    <div
+                      class="event-addons__banner"
+                      x-show="lastRedemption"
+                      role="status"
+                      aria-live="polite"
+                    >
+                      <p class="event-addons__banner-title">
+                        <span x-text="$store.lang.t('event.addons_confirmed')"></span>
+                        <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                      </p>
+                      <p
+                        class="event-addons__banner-body"
+                        x-show="lastRedemption"
+                        x-text="$store.lang.t('event.addons_confirmed_body', { name: lastRedemption?.name ?? '', cost: lastRedemption?.cost ?? 0 })"
+                      ></p>
+                      <button
+                        type="button"
+                        class="event-addons__banner-dismiss"
+                        @click="dismissLastRedemption()"
+                        x-text="$store.lang.t('event.addons_dismiss')"
+                      ></button>
+                    </div>
+
+                    <p
+                      class="auth-form__error"
+                      x-show="addonError"
+                      role="alert"
+                      x-text="addonError"
+                    ></p>
+
+                    <ul class="event-addons__list">
+                      <template x-for="addon in addons()" :key="addon.id">
+                        <li class="event-addons__card">
+                          <template x-if="addonImage(addon)">
+                            <img
+                              class="event-addons__image"
+                              :src="addonImage(addon)"
+                              :alt="$store.lang.t('event.addons_image_alt', { name: addon.name })"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </template>
+                          <div class="event-addons__body">
+                            <p class="event-addons__name" x-text="addon.name"></p>
+                            <p class="event-addons__desc" x-text="addon.description"></p>
+                            <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: addon.points_cost })"></p>
+                            <p
+                              class="event-addons__stock"
+                              x-show="addonRemainingStock(addon) !== null"
+                              x-text="$store.lang.t('event.addons_stock', { count: addonRemainingStock(addon) })"
+                            ></p>
+                            <p
+                              class="event-addons__disabled-reason"
+                              x-show="!addonCanRedeem(addon) && !addonRedeemPending[addon.id]"
+                              x-text="addonDisabledReason(addon)"
+                            ></p>
+                            <button
+                              type="button"
+                              class="event-addons__redeem"
+                              :disabled="!addonCanRedeem(addon)"
+                              @click="redeemAddon(addon)"
+                            >
+                              <span x-show="!addonRedeemPending[addon.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
+                              <span x-show="addonRedeemPending[addon.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
+                            </button>
+                          </div>
+                        </li>
+                      </template>
+                    </ul>
+                  </section>
+                </div>
               </template>
 
               <template x-if="$store.app.eventSubview === 'news'">

@@ -145,3 +145,57 @@ test("exhibitorById / speakerById: look up by id across events", () => {
   assert.equal(store.speakerById("s1").name, "Jane Doe");
   assert.equal(store.speakerById("missing"), null);
 });
+
+test("addonsForEvent: filters by event_id and sorts by points_cost ascending", () => {
+  const store = withRows({
+    addons: [
+      { id: "a", event_id: "e1", points_cost: 150, active: true },
+      { id: "b", event_id: "e1", points_cost: 80, active: true },
+      { id: "c", event_id: "e2", points_cost: 50, active: true },
+      { id: "d", event_id: "e1", points_cost: 120, active: true },
+    ],
+  });
+  assert.deepEqual(
+    store.addonsForEvent("e1").map((a) => a.id),
+    ["b", "d", "a"],
+  );
+  assert.deepEqual(store.addonsForEvent("missing"), []);
+});
+
+test("addonsForEvent: hides inactive rows", () => {
+  const store = withRows({
+    addons: [
+      { id: "a", event_id: "e1", points_cost: 80, active: true },
+      { id: "b", event_id: "e1", points_cost: 50, active: false },
+    ],
+  });
+  assert.deepEqual(
+    store.addonsForEvent("e1").map((a) => a.id),
+    ["a"],
+  );
+});
+
+test("addonById: looks up across events", () => {
+  const store = withRows({
+    addons: [
+      { id: "a", event_id: "e1", points_cost: 80 },
+      { id: "b", event_id: "e2", points_cost: 50 },
+    ],
+  });
+  assert.equal(store.addonById("b").event_id, "e2");
+  assert.equal(store.addonById("missing"), null);
+});
+
+test("activeMerchandise: filters inactive rows and sorts by points_cost", () => {
+  const store = withRows({
+    merchandise: [
+      { id: "x", points_cost: 120, active: true },
+      { id: "y", points_cost: 60, active: true },
+      { id: "z", points_cost: 30, active: false },
+    ],
+  });
+  assert.deepEqual(
+    store.activeMerchandise().map((m) => m.id),
+    ["y", "x"],
+  );
+});
