@@ -127,6 +127,10 @@ web/assets/js/
                                formatDayHeading, monthLabel, uniqueSorted
     sections.js                SECTION_LABELS, ticketCtaLabel,
                                ticketTypesFor, canonicalTicketTypeLabel
+    calendar.js                todayLocalIso, isUpcoming,
+                               upcomingEvents, eventMatchesQuery,
+                               filterEvents (pure filter/sort behind
+                               the calendar view)
     placeholders.js            logoDataUri, avatarDataUri (deterministic
                                SVG fallbacks for exhibitors and speakers)
   simulations/

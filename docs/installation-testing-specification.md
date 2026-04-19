@@ -357,7 +357,8 @@ in the same pull request.
 
 Pure-function helpers in the frontend (hash routing in
 `stores/app.js`, date formatting in `util/dates.js`, ticket-type
-catalog in `util/sections.js`, newsletter-preference shape in
+catalog in `util/sections.js`, calendar filter/sort in
+`util/calendar.js`, newsletter-preference shape in
 `newsletter/preferences.js`, the QR payload builder in
 `simulations/qr.js`, and the UI translation lookup in `i18n.js`)
 have a fast unit suite under `tests/unit/` that does not require a
