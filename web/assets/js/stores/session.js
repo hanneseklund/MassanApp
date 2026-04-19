@@ -9,8 +9,9 @@ import { activeTranslate } from "../i18n.js";
 
 // Map a Supabase auth user into the flat shape the UI consumes. Works
 // for email-backed users and for anonymous users carrying simulated
-// social-sign-in metadata.
-function mapSupabaseUser(supabaseUser) {
+// social-sign-in metadata. Exported so the unit suite can exercise the
+// provider-detection branches without a live Supabase session.
+export function mapSupabaseUser(supabaseUser) {
   if (!supabaseUser) return null;
   const metadata = supabaseUser.user_metadata || {};
   const isAnonymous =

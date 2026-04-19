@@ -391,7 +391,8 @@ Exactly one venue record is expected in the prototype.
 ### User
 
 - `id`, `email`, `display_name`, `auth_provider` (`email`, `google`,
-  `microsoft`), `simulated` (bool).
+  `microsoft`, or `anonymous` as a defensive fallback when a session
+  exposes no provider metadata), `simulated` (bool).
 - Users are Supabase Auth accounts in `auth.users`. Email sign-up and
   sign-in use `supabase.auth.signUp` and
   `supabase.auth.signInWithPassword`; no password material is stored in

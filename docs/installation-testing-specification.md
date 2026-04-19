@@ -362,8 +362,10 @@ calendar filter/sort in `util/calendar.js`, newsletter-preference
 shape in `newsletter/preferences.js`, the QR payload builder in
 `simulations/qr.js`, the UI translation lookup in `i18n.js`, the
 deterministic exhibitor/speaker placeholder SVGs in
-`util/placeholders.js`, and the catalog-store selectors in
-`stores/catalog.js` that fan per-event rows into views) have a
+`util/placeholders.js`, the catalog-store selectors in
+`stores/catalog.js` that fan per-event rows into views, and the
+Supabase-user mapping in `stores/session.js` that resolves the
+signed-in provider, display name, and simulated flag) have a
 fast unit suite under `tests/unit/` that does not require a
 browser or Supabase.
 
