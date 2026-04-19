@@ -105,6 +105,8 @@ const TRANSLATIONS = {
     "newsletter.prefs_title": "Newsletter preferences",
     "newsletter.prefs_empty":
       "No newsletter subscriptions yet. Visit an event and open its Newsletter tab to sign up.",
+    "newsletter.prefs_load_error":
+      "Could not load your newsletter preferences: {error}",
     "newsletter.venue_wide": "All Stockholmsmassan events",
     "newsletter.venue_wide_hint": "Receive venue-wide announcements.",
     "newsletter.unsubscribe": "Unsubscribe",
@@ -193,6 +195,7 @@ const TRANSLATIONS = {
     "tickets.signed_out_hint": "Sign in to see your tickets.",
     "tickets.empty":
       "You don't have any tickets yet. Pick an event from the calendar to buy one.",
+    "tickets.load_error": "Could not load your tickets: {error}",
     "tickets.field_ticket": "Ticket",
     "tickets.field_attendee": "Attendee",
     "tickets.field_email": "Email",
@@ -375,6 +378,8 @@ const TRANSLATIONS = {
     "newsletter.prefs_title": "Inställningar för nyhetsbrev",
     "newsletter.prefs_empty":
       "Inga prenumerationer än. Besök ett evenemang och öppna dess Nyhetsbrev-flik för att anmäla dig.",
+    "newsletter.prefs_load_error":
+      "Kunde inte ladda dina nyhetsbrevsinställningar: {error}",
     "newsletter.venue_wide": "Alla Stockholmsmässan-evenemang",
     "newsletter.venue_wide_hint": "Få meddelanden från hela mässan.",
     "newsletter.unsubscribe": "Avprenumerera",
@@ -465,6 +470,7 @@ const TRANSLATIONS = {
     "tickets.signed_out_hint": "Logga in för att se dina biljetter.",
     "tickets.empty":
       "Du har inga biljetter än. Välj ett evenemang i kalendern och köp en.",
+    "tickets.load_error": "Kunde inte ladda dina biljetter: {error}",
     "tickets.field_ticket": "Biljett",
     "tickets.field_attendee": "Deltagare",
     "tickets.field_email": "E-post",

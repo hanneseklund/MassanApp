@@ -444,6 +444,10 @@ a {
   font-size: 15px;
 }
 
+.placeholder--error {
+  color: var(--danger);
+}
+
 /* Subview shared: lists spaced inside the event-subview card. */
 .news-list,
 .articles-list,

@@ -227,6 +227,11 @@ The prototype must support this end-to-end path without gaps:
   from ticket metadata and does not need to be a valid venue-access
   credential.
 - Tickets persist across page reloads.
+- If the ticket fetch fails (for example a Supabase outage), the view
+  surfaces the load error rather than silently rendering the empty
+  state, so a signed-in visitor is not misled into thinking they own
+  no tickets. The same rule applies to the newsletter preferences
+  section in My Pages.
 
 ## Event archetype coverage
 

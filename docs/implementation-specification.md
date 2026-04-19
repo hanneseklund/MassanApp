@@ -253,7 +253,12 @@ by `web/assets/env.js` (committed) with optional override from
 
 If the Supabase queries fail, the app surfaces the error through the
 `catalog.error` state and the calendar view shows a failure message
-instead of silently falling back to stale data.
+instead of silently falling back to stale data. The `tickets` and
+`newsletter` stores follow the same pattern: on a failed fetch the
+My Tickets view and the My Pages newsletter-preferences section each
+show a load-error message keyed off the store's `error` state, so a
+signed-in visitor is not misled into thinking the empty state means
+they own no tickets or have no subscriptions.
 
 ### Alpine.js usage rules
 

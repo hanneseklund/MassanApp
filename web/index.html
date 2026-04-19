@@ -1064,8 +1064,14 @@
             <section class="me__section" x-data="newsletterPreferences()">
               <h2 class="me__section-title" x-text="$store.lang.t('newsletter.prefs_title')"></h2>
               <p
+                class="placeholder placeholder--error"
+                x-show="$store.newsletter.error"
+                role="alert"
+                x-text="$store.lang.t('newsletter.prefs_load_error', { error: $store.newsletter.error })"
+              ></p>
+              <p
                 class="placeholder"
-                x-show="subscriptions().length === 0 && !venueWide()"
+                x-show="!$store.newsletter.error && subscriptions().length === 0 && !venueWide()"
                 x-text="$store.lang.t('newsletter.prefs_empty')"
               ></p>
 
@@ -1352,11 +1358,17 @@
         <template x-if="$store.session.isSignedIn">
           <div class="tickets">
             <p
+              class="placeholder placeholder--error"
+              x-show="$store.tickets.error"
+              role="alert"
+              x-text="$store.lang.t('tickets.load_error', { error: $store.tickets.error })"
+            ></p>
+            <p
               class="placeholder"
-              x-show="tickets().length === 0"
+              x-show="!$store.tickets.error && tickets().length === 0"
               x-text="$store.lang.t('tickets.empty')"
             ></p>
-            <ul class="tickets__list" x-show="tickets().length > 0">
+            <ul class="tickets__list" x-show="!$store.tickets.error && tickets().length > 0">
               <template x-for="ticket in tickets()" :key="ticket.id">
                 <li>
                   <article class="ticket-card">
