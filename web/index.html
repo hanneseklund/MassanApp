@@ -285,10 +285,10 @@
                   <ul class="news-list" x-show="news().length > 0">
                     <template x-for="item in news()" :key="item.id">
                       <li class="news-item">
-                        <template x-if="newsImage()">
+                        <template x-if="newsImage(item)">
                           <img
                             class="news-item__image"
-                            :src="newsImage()"
+                            :src="newsImage(item)"
                             :alt="$store.lang.t('event.news_image_alt', { name: event().name })"
                             loading="lazy"
                             decoding="async"

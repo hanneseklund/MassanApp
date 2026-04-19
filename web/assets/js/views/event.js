@@ -64,7 +64,8 @@ export function eventView() {
         .map((id) => Alpine.store("catalog").speakerById(id))
         .filter(Boolean);
     },
-    newsImage() {
+    newsImage(item) {
+      if (item?.hero_image) return item.hero_image;
       const ev = this.event();
       return ev?.branding?.hero_image ?? null;
     },

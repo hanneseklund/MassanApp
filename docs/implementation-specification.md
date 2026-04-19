@@ -127,6 +127,8 @@ web/assets/js/
                                formatDayHeading, monthLabel, uniqueSorted
     sections.js                SECTION_LABELS, ticketCtaLabel,
                                ticketTypesFor, canonicalTicketTypeLabel
+    placeholders.js            logoDataUri, avatarDataUri (deterministic
+                               SVG fallbacks for exhibitors and speakers)
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -347,7 +349,9 @@ Exactly one venue record is expected in the prototype.
 
 ### News item
 
-- `id`, `event_id`, `published_at`, `title`, `body`
+- `id`, `event_id`, `published_at`, `title`, `body`, `hero_image`
+  (optional). When set, the news card renders that image; otherwise the
+  card falls back to the parent event's `branding.hero_image`.
 
 ### Article
 
