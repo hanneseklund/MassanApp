@@ -27,13 +27,6 @@
     <script defer src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"></script>
   </head>
   <body x-data x-cloak>
-    <!-- Simulated-mode banner so reviewers see this is a prototype. -->
-    <div
-      class="sim-banner"
-      x-show="$store.app.isSimulated"
-      x-text="$store.lang.t('sim.banner')"
-    ></div>
-
     <!-- Top chrome. "Back to events" appears only when an event is selected,
          per the one-event-at-a-time navigation rule. The right-hand
          cluster holds two flag buttons for the language toggle (English

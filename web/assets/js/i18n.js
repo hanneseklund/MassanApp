@@ -24,7 +24,6 @@ export const DATE_LOCALES = {
 
 const TRANSLATIONS = {
   en: {
-    "sim.banner": "Prototype · simulated data and integrations",
     "sim.chip": "simulated",
 
     "chrome.events": "Events",
@@ -202,7 +201,6 @@ const TRANSLATIONS = {
   },
 
   sv: {
-    "sim.banner": "Prototyp · simulerad data och integrationer",
     "sim.chip": "simulerad",
 
     "chrome.events": "Evenemang",

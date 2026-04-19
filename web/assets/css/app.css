@@ -23,7 +23,6 @@
   --radius-lg: 8px;
   --pad: 16px;
   --chrome-h: 56px;
-  --sim-h: 28px;
   --max-w: 560px;
   --font: "Inter", "Helvetica Neue", Helvetica, Arial, "Liberation Sans",
     sans-serif;
@@ -85,26 +84,9 @@ a {
   border: 0;
 }
 
-.sim-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--sim-h);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fde68a;
-  color: #78350f;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  z-index: 20;
-}
-
 .chrome {
   position: fixed;
-  top: var(--sim-h);
+  top: 0;
   left: 0;
   right: 0;
   height: var(--chrome-h);
@@ -206,7 +188,7 @@ a {
 }
 
 .view {
-  padding-top: calc(var(--sim-h) + var(--chrome-h) + var(--pad));
+  padding-top: calc(var(--chrome-h) + var(--pad));
   padding-left: var(--pad);
   padding-right: var(--pad);
   padding-bottom: 48px;
