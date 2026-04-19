@@ -49,14 +49,7 @@ export function eventView() {
     },
     programByDay() {
       const ev = this.event();
-      if (!ev) return [];
-      const sessions = Alpine.store("catalog").programForEvent(ev.id);
-      const groups = new Map();
-      for (const s of sessions) {
-        if (!groups.has(s.day)) groups.set(s.day, []);
-        groups.get(s.day).push(s);
-      }
-      return [...groups.entries()].map(([day, list]) => ({ day, sessions: list }));
+      return ev ? Alpine.store("catalog").programByDayForEvent(ev.id) : [];
     },
     sessionSpeakers(session) {
       if (!session.speaker_ids?.length) return [];

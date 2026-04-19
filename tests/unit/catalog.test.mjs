@@ -86,6 +86,37 @@ test("programForEvent: sorts by day ascending then start_time ascending", () => 
   );
 });
 
+test("programByDayForEvent: groups sessions per day in chronological order", () => {
+  const store = withRows({
+    program: [
+      { id: "p3", event_id: "e1", day: "2026-04-22", start_time: "09:00" },
+      { id: "p1", event_id: "e1", day: "2026-04-21", start_time: "10:30" },
+      { id: "p2", event_id: "e1", day: "2026-04-21", start_time: "14:00" },
+      { id: "other", event_id: "e2", day: "2026-04-21", start_time: "09:00" },
+    ],
+  });
+  const groups = store.programByDayForEvent("e1");
+  assert.deepEqual(
+    groups.map((g) => g.day),
+    ["2026-04-21", "2026-04-22"],
+  );
+  assert.deepEqual(
+    groups[0].sessions.map((s) => s.id),
+    ["p1", "p2"],
+  );
+  assert.deepEqual(
+    groups[1].sessions.map((s) => s.id),
+    ["p3"],
+  );
+});
+
+test("programByDayForEvent: returns [] for an event with no sessions", () => {
+  const store = withRows({
+    program: [{ id: "p1", event_id: "e1", day: "2026-04-21", start_time: "09:00" }],
+  });
+  assert.deepEqual(store.programByDayForEvent("missing"), []);
+});
+
 test("exhibitorsForEvent: filters by event_id and sorts by name", () => {
   const store = withRows({
     exhibitors: [

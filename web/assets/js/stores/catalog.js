@@ -82,6 +82,15 @@ export function catalogStore() {
           return d !== 0 ? d : (a.start_time || "").localeCompare(b.start_time || "");
         });
     },
+    programByDayForEvent(eventId) {
+      const sessions = this.programForEvent(eventId);
+      const groups = new Map();
+      for (const s of sessions) {
+        if (!groups.has(s.day)) groups.set(s.day, []);
+        groups.get(s.day).push(s);
+      }
+      return [...groups.entries()].map(([day, list]) => ({ day, sessions: list }));
+    },
     exhibitorsForEvent(eventId) {
       return this.exhibitors
         .filter((e) => e.event_id === eventId)
