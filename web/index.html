@@ -271,166 +271,148 @@
       >
         <template x-if="event()">
           <div>
-            <header class="event-hero">
-              <template x-if="event().branding?.hero_image">
-                <figure class="event-hero__image-wrap">
-                  <img
-                    class="event-hero__image"
-                    :src="event().branding.hero_image"
-                    :alt="$store.lang.t('event.hero_image_alt', { name: event().name })"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption
-                    class="event-hero__image-credit"
-                    x-show="event().branding?.hero_image_credit"
-                    x-text="$store.lang.t('event.image_credit_prefix') + event().branding.hero_image_credit"
-                  ></figcaption>
-                </figure>
-              </template>
-              <p class="event-hero__type" x-text="event().type"></p>
-              <h2 class="event-hero__name" x-text="event().name"></h2>
-              <p class="event-hero__dates" x-text="formatDates(event())"></p>
-              <p class="event-hero__summary" x-text="event().summary"></p>
-              <div
-                class="event-hero__actions"
-                x-show="event().ticket_model !== 'none'"
-              >
-                <button
-                  class="event-hero__cta"
-                  type="button"
-                  @click="startPurchase()"
-                  x-text="ticketCtaLabel(event())"
-                ></button>
-                <button
-                  class="event-hero__cta event-hero__cta--alt"
-                  type="button"
-                  x-show="hasTicket()"
-                  @click="$store.app.goTickets()"
-                  x-text="$store.lang.t('event.view_ticket')"
-                ></button>
-              </div>
-            </header>
-
-            <nav
-              class="event-nav"
-              :aria-label="$store.lang.t('event.sections_nav_aria')"
-            >
-              <template x-for="section in sections" :key="section.id">
-                <button
-                  type="button"
-                  class="event-nav__tab"
-                  :class="$store.app.eventSubview === section.id && 'event-nav__tab--active'"
-                  @click="$store.app.goEventSubview(section.id)"
-                  x-text="section.label"
-                ></button>
-              </template>
-            </nav>
-
-            <div class="event-subview">
-              <template x-if="$store.app.eventSubview === 'home'">
-                <div>
-                  <p
-                    class="placeholder"
-                    x-show="!addonsVisible()"
-                    x-text="$store.lang.t('event.pick_section')"
-                  ></p>
-
-                  <!-- Event add-ons: points-only redemption section,
-                       visible on the event home view only when the
-                       signed-in visitor owns a ticket for the event
-                       and the catalog has active add-ons for it.
-                       See docs/functional-specification.md under
-                       "Spending — event add-ons". -->
-                  <section class="event-addons" x-show="addonsVisible()">
-                    <h3 class="event-addons__title">
-                      <span x-text="$store.lang.t('event.addons_title')"></span>
-                      <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
-                    </h3>
-                    <p class="event-addons__intro" x-text="$store.lang.t('event.addons_intro')"></p>
-
-                    <div
-                      class="event-addons__banner"
-                      x-show="redemption.lastRedemption"
-                      role="status"
-                      aria-live="polite"
-                    >
-                      <p class="event-addons__banner-title">
-                        <span x-text="$store.lang.t('event.addons_confirmed')"></span>
-                        <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
-                      </p>
-                      <p
-                        class="event-addons__banner-body"
-                        x-show="redemption.lastRedemption"
-                        x-text="$store.lang.t('event.addons_confirmed_body', { name: redemption.lastRedemption?.name ?? '', cost: redemption.lastRedemption?.cost ?? 0 })"
-                      ></p>
-                      <button
-                        type="button"
-                        class="event-addons__banner-dismiss"
-                        @click="redemption.dismissLastRedemption()"
-                        x-text="$store.lang.t('event.addons_dismiss')"
-                      ></button>
-                    </div>
-
-                    <p
-                      class="auth-form__error"
-                      x-show="redemption.error"
-                      role="alert"
-                      x-text="redemption.error"
-                    ></p>
-
-                    <ul class="event-addons__list">
-                      <template x-for="addon in addons()" :key="addon.id">
-                        <li class="event-addons__card">
-                          <template x-if="addonImage(addon)">
-                            <img
-                              class="event-addons__image"
-                              :src="addonImage(addon)"
-                              :alt="$store.lang.t('event.addons_image_alt', { name: addon.name })"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </template>
-                          <div class="event-addons__body">
-                            <p class="event-addons__name" x-text="addon.name"></p>
-                            <p class="event-addons__desc" x-text="addon.description"></p>
-                            <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: addon.points_cost })"></p>
-                            <p
-                              class="event-addons__stock"
-                              x-show="redemption.remainingStock(addon) !== null"
-                              x-text="$store.lang.t('event.addons_stock', { count: redemption.remainingStock(addon) })"
-                            ></p>
-                            <p
-                              class="event-addons__disabled-reason"
-                              x-show="!redemption.canRedeem(addon) && !redemption.pending[addon.id]"
-                              x-text="redemption.disabledReason(addon)"
-                            ></p>
-                            <button
-                              type="button"
-                              class="event-addons__redeem"
-                              :disabled="!redemption.canRedeem(addon)"
-                              @click="redemption.redeem(addon)"
-                            >
-                              <span x-show="!redemption.pending[addon.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
-                              <span x-show="redemption.pending[addon.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
-                            </button>
-                          </div>
-                        </li>
-                      </template>
-                    </ul>
-                  </section>
+            <!-- Stacked landing layout: hero plus every section, one
+                 below the other. Lists truncate to INLINE_LIMIT items
+                 with a "see all" link to a dedicated full-list page;
+                 Practical info and Newsletter render in full inline.
+                 The dedicated `#/event/<id>/<section>` routes mount
+                 their own block below. -->
+            <div x-show="$store.app.eventSubview === 'home'">
+              <header class="event-hero">
+                <template x-if="event().branding?.hero_image">
+                  <figure class="event-hero__image-wrap">
+                    <img
+                      class="event-hero__image"
+                      :src="event().branding.hero_image"
+                      :alt="$store.lang.t('event.hero_image_alt', { name: event().name })"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <figcaption
+                      class="event-hero__image-credit"
+                      x-show="event().branding?.hero_image_credit"
+                      x-text="$store.lang.t('event.image_credit_prefix') + event().branding.hero_image_credit"
+                    ></figcaption>
+                  </figure>
+                </template>
+                <p class="event-hero__type" x-text="event().type"></p>
+                <h2 class="event-hero__name" x-text="event().name"></h2>
+                <p class="event-hero__dates" x-text="formatDates(event())"></p>
+                <p class="event-hero__summary" x-text="event().summary"></p>
+                <div
+                  class="event-hero__actions"
+                  x-show="event().ticket_model !== 'none'"
+                >
+                  <button
+                    class="event-hero__cta"
+                    type="button"
+                    @click="startPurchase()"
+                    x-text="ticketCtaLabel(event())"
+                  ></button>
+                  <button
+                    class="event-hero__cta event-hero__cta--alt"
+                    type="button"
+                    x-show="hasTicket()"
+                    @click="$store.app.goTickets()"
+                    x-text="$store.lang.t('event.view_ticket')"
+                  ></button>
                 </div>
-              </template>
+              </header>
 
-              <template x-if="$store.app.eventSubview === 'news'">
-                <div>
+              <div class="event-stacked">
+                <!-- Event add-ons: points-only redemption section,
+                     visible on the event landing view only when the
+                     signed-in visitor owns a ticket for the event and
+                     the catalog has active add-ons for it. See
+                     docs/functional-specification.md under "Spending —
+                     event add-ons". -->
+                <section class="event-addons" x-show="addonsVisible()">
+                  <h3 class="event-addons__title">
+                    <span x-text="$store.lang.t('event.addons_title')"></span>
+                    <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                  </h3>
+                  <p class="event-addons__intro" x-text="$store.lang.t('event.addons_intro')"></p>
+
+                  <div
+                    class="event-addons__banner"
+                    x-show="redemption.lastRedemption"
+                    role="status"
+                    aria-live="polite"
+                  >
+                    <p class="event-addons__banner-title">
+                      <span x-text="$store.lang.t('event.addons_confirmed')"></span>
+                      <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                    </p>
+                    <p
+                      class="event-addons__banner-body"
+                      x-show="redemption.lastRedemption"
+                      x-text="$store.lang.t('event.addons_confirmed_body', { name: redemption.lastRedemption?.name ?? '', cost: redemption.lastRedemption?.cost ?? 0 })"
+                    ></p>
+                    <button
+                      type="button"
+                      class="event-addons__banner-dismiss"
+                      @click="redemption.dismissLastRedemption()"
+                      x-text="$store.lang.t('event.addons_dismiss')"
+                    ></button>
+                  </div>
+
                   <p
-                    class="placeholder"
-                    x-show="news().length === 0"
-                    x-text="$store.lang.t('event.no_news')"
+                    class="auth-form__error"
+                    x-show="redemption.error"
+                    role="alert"
+                    x-text="redemption.error"
                   ></p>
-                  <ul class="news-list" x-show="news().length > 0">
-                    <template x-for="item in news()" :key="item.id">
+
+                  <ul class="event-addons__list">
+                    <template x-for="addon in addons()" :key="addon.id">
+                      <li class="event-addons__card">
+                        <template x-if="addonImage(addon)">
+                          <img
+                            class="event-addons__image"
+                            :src="addonImage(addon)"
+                            :alt="$store.lang.t('event.addons_image_alt', { name: addon.name })"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </template>
+                        <div class="event-addons__body">
+                          <p class="event-addons__name" x-text="addon.name"></p>
+                          <p class="event-addons__desc" x-text="addon.description"></p>
+                          <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: addon.points_cost })"></p>
+                          <p
+                            class="event-addons__stock"
+                            x-show="redemption.remainingStock(addon) !== null"
+                            x-text="$store.lang.t('event.addons_stock', { count: redemption.remainingStock(addon) })"
+                          ></p>
+                          <p
+                            class="event-addons__disabled-reason"
+                            x-show="!redemption.canRedeem(addon) && !redemption.pending[addon.id]"
+                            x-text="redemption.disabledReason(addon)"
+                          ></p>
+                          <button
+                            type="button"
+                            class="event-addons__redeem"
+                            :disabled="!redemption.canRedeem(addon)"
+                            @click="redemption.redeem(addon)"
+                          >
+                            <span x-show="!redemption.pending[addon.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
+                            <span x-show="redemption.pending[addon.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
+                          </button>
+                        </div>
+                      </li>
+                    </template>
+                  </ul>
+                </section>
+
+                <!-- News section (truncated to INLINE_LIMIT). -->
+                <section
+                  class="event-section"
+                  id="event-section-news"
+                  x-show="news().length > 0"
+                >
+                  <h3 class="event-section__title" x-text="$store.lang.t('sections.news')"></h3>
+                  <ul class="news-list">
+                    <template x-for="item in inlineNews()" :key="item.id">
                       <li class="news-item">
                         <template x-if="newsImage(item)">
                           <img
@@ -446,27 +428,33 @@
                             class="news-item__date"
                             x-text="formatShortDate(item.published_at)"
                           ></p>
-                          <h3
+                          <h4
                             class="news-item__title"
                             x-text="item.title"
-                          ></h3>
+                          ></h4>
                           <p class="news-item__body" x-text="item.body"></p>
                         </div>
                       </li>
                     </template>
                   </ul>
-                </div>
-              </template>
+                  <button
+                    type="button"
+                    class="event-section__see-all"
+                    x-show="hasMoreNews()"
+                    @click="$store.app.goEventSubview('news')"
+                    x-text="$store.lang.t('event.see_all_news', { count: news().length })"
+                  ></button>
+                </section>
 
-              <template x-if="$store.app.eventSubview === 'articles'">
-                <div>
-                  <p
-                    class="placeholder"
-                    x-show="articles().length === 0"
-                    x-text="$store.lang.t('event.no_articles')"
-                  ></p>
-                  <ul class="articles-list" x-show="articles().length > 0">
-                    <template x-for="a in articles()" :key="a.id">
+                <!-- Articles section (truncated). -->
+                <section
+                  class="event-section"
+                  id="event-section-articles"
+                  x-show="articles().length > 0"
+                >
+                  <h3 class="event-section__title" x-text="$store.lang.t('sections.articles')"></h3>
+                  <ul class="articles-list">
+                    <template x-for="a in inlineArticles()" :key="a.id">
                       <li class="article">
                         <template x-if="articleImage(a)">
                           <img
@@ -477,27 +465,34 @@
                             decoding="async"
                           />
                         </template>
-                        <h3 class="article__title" x-text="a.title"></h3>
+                        <h4 class="article__title" x-text="a.title"></h4>
                         <p class="article__body" x-text="a.body"></p>
                       </li>
                     </template>
                   </ul>
-                </div>
-              </template>
+                  <button
+                    type="button"
+                    class="event-section__see-all"
+                    x-show="hasMoreArticles()"
+                    @click="$store.app.goEventSubview('articles')"
+                    x-text="$store.lang.t('event.see_all_articles', { count: articles().length })"
+                  ></button>
+                </section>
 
-              <template x-if="$store.app.eventSubview === 'program'">
-                <div>
-                  <p
-                    class="placeholder"
-                    x-show="programByDay().length === 0"
-                    x-text="$store.lang.t('event.no_program')"
-                  ></p>
-                  <template x-for="group in programByDay()" :key="group.day">
+                <!-- Program section (truncated to INLINE_LIMIT sessions
+                     across days; full page keeps the by-day grouping). -->
+                <section
+                  class="event-section"
+                  id="event-section-program"
+                  x-show="programByDay().length > 0"
+                >
+                  <h3 class="event-section__title" x-text="$store.lang.t('sections.program')"></h3>
+                  <template x-for="group in inlineProgramByDay()" :key="group.day">
                     <section class="program-day">
-                      <h3
+                      <h4
                         class="program-day__heading"
                         x-text="formatDayHeading(group.day)"
-                      ></h3>
+                      ></h4>
                       <ul class="program-day__list">
                         <template
                           x-for="session in group.sessions"
@@ -508,41 +503,14 @@
                               class="session__time"
                               x-text="session.start_time + '–' + session.end_time"
                             ></p>
-                            <h4
+                            <h5
                               class="session__title"
                               x-text="session.title"
-                            ></h4>
+                            ></h5>
                             <p
                               class="session__meta"
                               x-text="session.location + (session.track ? ' · ' + session.track : '')"
                             ></p>
-                            <div
-                              class="session__speakers"
-                              x-show="sessionSpeakers(session).length > 0"
-                            >
-                              <span
-                                class="session__speakers-label"
-                                x-text="$store.lang.t('event.speakers_prefix')"
-                              ></span>
-                              <template
-                                x-for="sp in sessionSpeakers(session)"
-                                :key="sp.id"
-                              >
-                                <span class="session__speaker">
-                                  <img
-                                    class="session__speaker-avatar"
-                                    :src="speakerAvatar(sp)"
-                                    :alt="$store.lang.t('event.speaker_avatar_alt', { name: sp.name })"
-                                    loading="lazy"
-                                    decoding="async"
-                                  />
-                                  <span
-                                    class="session__speaker-name"
-                                    x-text="sp.name"
-                                  ></span>
-                                </span>
-                              </template>
-                            </div>
                             <p
                               class="session__description"
                               x-text="session.description"
@@ -552,38 +520,24 @@
                       </ul>
                     </section>
                   </template>
-                </div>
-              </template>
+                  <button
+                    type="button"
+                    class="event-section__see-all"
+                    x-show="hasMoreProgram()"
+                    @click="$store.app.goEventSubview('program')"
+                    x-text="$store.lang.t('event.see_all_program', { count: programSessionCount() })"
+                  ></button>
+                </section>
 
-              <template
-                x-if="$store.app.eventSubview === 'exhibitors' && !$store.app.exhibitorId"
-              >
-                <div>
-                  <label class="filters__search">
-                    <span
-                      class="sr-only"
-                      x-text="$store.lang.t('event.search_exhibitors_label')"
-                    ></span>
-                    <input
-                      type="search"
-                      :placeholder="$store.lang.t('event.search_exhibitors_placeholder')"
-                      x-model.debounce.150ms="exhibitorQuery"
-                      autocomplete="off"
-                    />
-                  </label>
-                  <p
-                    class="placeholder"
-                    x-show="filteredExhibitors().length === 0"
-                    x-text="$store.lang.t('event.no_exhibitor_match')"
-                  ></p>
-                  <ul
-                    class="exhibitor-list"
-                    x-show="filteredExhibitors().length > 0"
-                  >
-                    <template
-                      x-for="e in filteredExhibitors()"
-                      :key="e.id"
-                    >
+                <!-- Exhibitors section (truncated). -->
+                <section
+                  class="event-section"
+                  id="event-section-exhibitors"
+                  x-show="exhibitorsForEvent().length > 0"
+                >
+                  <h3 class="event-section__title" x-text="$store.lang.t('sections.exhibitors')"></h3>
+                  <ul class="exhibitor-list">
+                    <template x-for="e in inlineExhibitors()" :key="e.id">
                       <li class="exhibitor-card">
                         <button
                           type="button"
@@ -598,474 +552,758 @@
                             decoding="async"
                           />
                           <span class="exhibitor-card__text">
-                            <span
-                              class="exhibitor-card__name"
-                              x-text="e.name"
-                            ></span>
-                            <span
-                              class="exhibitor-card__booth"
-                              x-text="$store.lang.t('event.booth_prefix') + e.booth"
-                            ></span>
-                            <span
-                              class="exhibitor-card__desc"
-                              x-text="e.description"
-                            ></span>
+                            <span class="exhibitor-card__name" x-text="e.name"></span>
+                            <span class="exhibitor-card__booth" x-text="$store.lang.t('event.booth_prefix') + e.booth"></span>
+                            <span class="exhibitor-card__desc" x-text="e.description"></span>
                           </span>
                         </button>
                       </li>
                     </template>
                   </ul>
-                </div>
-              </template>
-
-              <template
-                x-if="$store.app.eventSubview === 'exhibitors' && $store.app.exhibitorId"
-              >
-                <div>
                   <button
                     type="button"
-                    class="back-link"
-                    @click="$store.app.backToExhibitors()"
-                  >
-                    <span aria-hidden="true">&larr;</span>
-                    <span x-text="$store.lang.t('event.back_exhibitors')"></span>
-                  </button>
-                  <template x-if="exhibitor()">
-                    <article class="exhibitor-detail">
-                      <img
-                        class="exhibitor-detail__logo"
-                        :src="exhibitorLogo(exhibitor())"
-                        :alt="$store.lang.t('event.exhibitor_logo_alt', { name: exhibitor().name })"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <h3
-                        class="exhibitor-detail__name"
-                        x-text="exhibitor().name"
-                      ></h3>
-                      <p
-                        class="exhibitor-detail__booth"
-                        x-text="$store.lang.t('event.booth_prefix') + exhibitor().booth"
-                      ></p>
-                      <p
-                        class="exhibitor-detail__desc"
-                        x-text="exhibitor().description"
-                      ></p>
-                      <p x-show="exhibitor().website">
-                        <a
-                          class="exhibitor-detail__link"
-                          :href="exhibitor().website"
-                          target="_blank"
-                          rel="noopener"
-                          x-text="exhibitor().website"
-                        ></a>
-                      </p>
-                    </article>
-                  </template>
-                  <p
-                    class="hint"
-                    x-show="!exhibitor()"
-                    x-text="$store.lang.t('event.exhibitor_not_found')"
-                  ></p>
-                </div>
-              </template>
+                    class="event-section__see-all"
+                    x-show="hasMoreExhibitors()"
+                    @click="$store.app.goEventSubview('exhibitors')"
+                    x-text="$store.lang.t('event.see_all_exhibitors', { count: exhibitorsForEvent().length })"
+                  ></button>
+                </section>
 
-              <template x-if="$store.app.eventSubview === 'practical'">
-                <div class="practical">
-                  <section class="practical__section">
-                    <h3 x-text="$store.lang.t('practical.getting_here')"></h3>
-                    <p x-text="venue().transport?.summary"></p>
-                    <ul>
-                      <template
-                        x-for="mode in venue().transport?.modes ?? []"
-                        :key="mode.mode"
-                      >
-                        <li>
-                          <strong x-text="mode.mode"></strong>:
-                          <span x-text="mode.detail"></span>
-                        </li>
-                      </template>
-                    </ul>
-                  </section>
-                  <section class="practical__section">
-                    <h3 x-text="$store.lang.t('practical.parking')"></h3>
-                    <p x-text="venue().parking?.summary"></p>
-                    <p
-                      class="practical__note"
-                      x-text="venue().parking?.notes"
-                    ></p>
-                  </section>
-                  <section class="practical__section">
-                    <h3 x-text="$store.lang.t('practical.restaurants')"></h3>
-                    <ul>
-                      <template
-                        x-for="r in venue().restaurants ?? []"
-                        :key="r.name"
-                      >
-                        <li>
-                          <strong x-text="r.name"></strong>:
-                          <span x-text="r.description"></span>
-                        </li>
-                      </template>
-                    </ul>
-                  </section>
-                  <section class="practical__section">
-                    <h3 x-text="$store.lang.t('practical.security')"></h3>
-                    <p x-text="venue().security?.summary"></p>
-                    <ul>
-                      <template
-                        x-for="rule in venue().security?.general_rules ?? []"
-                        :key="rule"
-                      >
-                        <li x-text="rule"></li>
-                      </template>
-                    </ul>
-                  </section>
-                  <section
-                    class="practical__section practical__section--maps"
-                    x-show="(venue().maps ?? []).length > 0"
-                  >
-                    <h3 x-text="$store.lang.t('practical.maps')"></h3>
-                    <ul>
-                      <template
-                        x-for="m in venue().maps ?? []"
-                        :key="m.id"
-                      >
-                        <li>
-                          <strong x-text="m.name"></strong>:
-                          <span x-text="m.description"></span>
-                        </li>
-                      </template>
-                    </ul>
-                  </section>
-                  <section
-                    class="practical__section practical__section--overrides"
-                    x-show="hasOverrides()"
-                  >
-                    <h3 x-text="$store.lang.t('practical.overrides')"></h3>
-                    <dl class="overrides">
-                      <template
-                        x-for="entry in Object.entries(overrides())"
-                        :key="entry[0]"
-                      >
-                        <div class="overrides__item">
-                          <dt x-text="overrideLabel(entry[0])"></dt>
-                          <dd x-text="entry[1]"></dd>
-                        </div>
-                      </template>
-                    </dl>
-                  </section>
-                </div>
-              </template>
-
-              <template x-if="$store.app.eventSubview === 'food'">
-                <div class="food" x-data="foodView()">
-                  <p class="food__intro" x-text="$store.lang.t('food.intro')"></p>
-
-                  <ol
-                    class="purchase__steps"
-                    :aria-label="$store.lang.t('food.steps_aria')"
-                  >
-                    <li
-                      :class="step >= 1 && 'purchase__step--active'"
-                      x-text="$store.lang.t('food.step_menu')"
-                    ></li>
-                    <li
-                      :class="step >= 2 && 'purchase__step--active'"
-                      x-text="$store.lang.t('food.step_delivery')"
-                    ></li>
-                    <li
-                      :class="step >= 3 && 'purchase__step--active'"
-                      x-text="$store.lang.t('food.step_confirm')"
-                    ></li>
-                  </ol>
-
-                  <template x-if="step === 1">
-                    <div class="purchase__body">
-                      <h3 class="purchase__step-title" x-text="$store.lang.t('food.pick_menu')"></h3>
-                      <ul class="menu-grid">
-                        <template x-for="m in menus" :key="m.id">
+                <!-- Practical info: full content inline, no see-all. -->
+                <section
+                  class="event-section"
+                  id="event-section-practical"
+                >
+                  <h3 class="event-section__title" x-text="$store.lang.t('sections.practical')"></h3>
+                  <div class="practical">
+                    <section class="practical__section">
+                      <h3 x-text="$store.lang.t('practical.getting_here')"></h3>
+                      <p x-text="venue().transport?.summary"></p>
+                      <ul>
+                        <template
+                          x-for="mode in venue().transport?.modes ?? []"
+                          :key="mode.mode"
+                        >
                           <li>
-                            <button
-                              type="button"
-                              class="menu-card"
-                              :class="menuId === m.id && 'menu-card--selected'"
-                              :aria-pressed="menuId === m.id"
-                              @click="menuId = m.id"
-                            >
-                              <img
-                                class="menu-card__image"
-                                :src="m.image"
-                                :alt="$store.lang.t('food.menu_image_alt', { name: m.label })"
-                                loading="lazy"
-                                decoding="async"
-                              />
-                              <span class="menu-card__body">
-                                <span class="menu-card__name" x-text="m.label"></span>
-                                <span class="menu-card__desc" x-text="m.description"></span>
-                                <span class="menu-card__price" x-text="m.price"></span>
-                              </span>
-                            </button>
+                            <strong x-text="mode.mode"></strong>:
+                            <span x-text="mode.detail"></span>
                           </li>
                         </template>
                       </ul>
-                      <p class="auth-form__error" x-show="error" x-text="error"></p>
-                      <button
-                        class="purchase__primary"
-                        type="button"
-                        :disabled="!menuId"
-                        @click="continueToDelivery()"
-                        x-text="$store.lang.t('food.continue')"
-                      ></button>
-                    </div>
-                  </template>
-
-                  <template x-if="step === 2">
-                    <form class="purchase__body" @submit.prevent="confirm()">
-                      <h3 class="purchase__step-title" x-text="$store.lang.t('food.pick_delivery')"></h3>
-
-                      <div class="food-delivery">
-                        <label class="food-delivery__mode">
-                          <input
-                            type="radio"
-                            name="food-delivery-mode"
-                            value="pickup"
-                            :checked="deliveryMode === 'pickup'"
-                            @change="setDeliveryMode('pickup')"
-                          />
-                          <span x-text="$store.lang.t('food.delivery_pickup')"></span>
-                        </label>
-                        <label class="food-delivery__mode">
-                          <input
-                            type="radio"
-                            name="food-delivery-mode"
-                            value="timeslot"
-                            :checked="deliveryMode === 'timeslot'"
-                            @change="setDeliveryMode('timeslot')"
-                          />
-                          <span x-text="$store.lang.t('food.delivery_timeslot')"></span>
-                        </label>
-                      </div>
-
-                      <fieldset class="food-fieldset" x-show="deliveryMode === 'pickup'">
-                        <legend x-text="$store.lang.t('food.pickup_legend')"></legend>
-                        <ul class="food-options">
-                          <template x-for="p in pickupLocations" :key="p.id">
-                            <li>
-                              <label class="food-option">
-                                <input
-                                  type="radio"
-                                  name="food-pickup"
-                                  :value="p.id"
-                                  :checked="pickupId === p.id"
-                                  @change="pickupId = p.id"
-                                />
-                                <span class="food-option__body">
-                                  <span class="food-option__name" x-text="p.label"></span>
-                                  <span class="food-option__desc" x-text="p.description"></span>
-                                </span>
-                              </label>
-                            </li>
-                          </template>
-                        </ul>
-                      </fieldset>
-
-                      <fieldset class="food-fieldset" x-show="deliveryMode === 'timeslot'">
-                        <legend x-text="$store.lang.t('food.restaurant_legend')"></legend>
-                        <ul class="food-options">
-                          <template x-for="r in restaurants" :key="r.id">
-                            <li>
-                              <label class="food-option">
-                                <input
-                                  type="radio"
-                                  name="food-restaurant"
-                                  :value="r.id"
-                                  :checked="restaurantId === r.id"
-                                  @change="restaurantId = r.id"
-                                />
-                                <span class="food-option__body">
-                                  <span class="food-option__name" x-text="r.label"></span>
-                                  <span class="food-option__desc" x-text="r.description"></span>
-                                </span>
-                              </label>
-                            </li>
-                          </template>
-                        </ul>
-                      </fieldset>
-
-                      <fieldset
-                        class="food-fieldset"
-                        x-show="deliveryMode === 'timeslot' && restaurantId"
-                      >
-                        <legend x-text="$store.lang.t('food.timeslot_legend')"></legend>
-                        <ul class="food-timeslots">
-                          <template x-for="s in timeslots" :key="s.id">
-                            <li>
-                              <label class="food-timeslot">
-                                <input
-                                  type="radio"
-                                  name="food-timeslot"
-                                  :value="s.id"
-                                  :checked="timeslotId === s.id"
-                                  @change="timeslotId = s.id"
-                                />
-                                <span x-text="s.label"></span>
-                              </label>
-                            </li>
-                          </template>
-                        </ul>
-                      </fieldset>
-
-                      <section class="purchase__summary">
-                        <h4 class="purchase__summary-title" x-text="$store.lang.t('food.summary_title')"></h4>
-                        <dl class="purchase__summary-list">
-                          <div class="purchase__summary-row">
-                            <dt x-text="$store.lang.t('food.summary_menu')"></dt>
-                            <dd x-text="selectedMenu()?.label ?? ''"></dd>
-                          </div>
-                          <div class="purchase__summary-row">
-                            <dt x-text="$store.lang.t('food.summary_price')"></dt>
-                            <dd x-text="selectedMenu()?.price ?? ''"></dd>
-                          </div>
-                          <div class="purchase__summary-row" x-show="deliveryMode === 'pickup' && selectedPickup()">
-                            <dt x-text="$store.lang.t('food.summary_delivery')"></dt>
-                            <dd x-text="selectedPickup()?.label ?? ''"></dd>
-                          </div>
-                          <div class="purchase__summary-row" x-show="deliveryMode === 'timeslot' && selectedRestaurant() && selectedTimeslot()">
-                            <dt x-text="$store.lang.t('food.summary_delivery')"></dt>
-                            <dd>
-                              <span x-text="selectedRestaurant()?.label ?? ''"></span>
-                              <span> · </span>
-                              <span x-text="selectedTimeslot()?.label ?? ''"></span>
-                            </dd>
-                          </div>
-                        </dl>
-                        <p class="purchase__sim-note">
-                          <span x-text="$store.lang.t('purchase.sim_note_prefix')"></span>
-                          <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
-                          <span x-text="$store.lang.t('purchase.sim_note_suffix')"></span>
-                        </p>
-                      </section>
-                      <p class="auth-form__error" x-show="error" x-text="error"></p>
-                      <button
-                        class="purchase__primary"
-                        type="submit"
-                        :disabled="processing"
-                      >
-                        <span x-show="!processing" x-text="$store.lang.t('food.confirm')"></span>
-                        <span x-show="processing" x-text="$store.lang.t('food.processing')"></span>
-                      </button>
-                      <button
-                        class="purchase__secondary"
-                        type="button"
-                        :disabled="processing"
-                        @click="goToStep(1)"
-                        x-text="$store.lang.t('food.back')"
-                      ></button>
-                    </form>
-                  </template>
-
-                  <template x-if="step === 3 && confirmedOrder">
-                    <div class="purchase__body">
-                      <h3 class="purchase__step-title">
-                        <span x-text="$store.lang.t('food.confirmed')"></span>
-                        <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
-                      </h3>
-                      <p class="purchase__ref">
-                        <span x-text="$store.lang.t('food.transaction_ref')"></span>
-                        <code x-text="confirmedOrder.transaction_ref"></code>
-                      </p>
-                      <article class="ticket-card">
-                        <header class="ticket-card__header">
-                          <p class="ticket-card__event" x-text="confirmedOrder.menu_label"></p>
-                          <p class="ticket-card__dates" x-text="confirmedOrder.price"></p>
-                        </header>
-                        <p
-                          x-show="confirmedOrder.delivery_mode === 'pickup'"
-                          x-text="$store.lang.t('food.pickup_instructions', { location: confirmedOrder.delivery_label })"
-                        ></p>
-                        <p
-                          x-show="confirmedOrder.delivery_mode === 'timeslot'"
-                          x-text="$store.lang.t('food.timeslot_instructions', { restaurant: confirmedOrder.delivery_label.split(' · ')[0], slot: confirmedOrder.delivery_label.split(' · ')[1] || '' })"
-                        ></p>
-                      </article>
-                      <button
-                        class="purchase__primary"
-                        type="button"
-                        @click="_hydrate()"
-                        x-text="$store.lang.t('food.order_another')"
-                      ></button>
-                      <button
-                        class="purchase__secondary"
-                        type="button"
-                        @click="$store.app.goEventSubview('home')"
-                        x-text="$store.lang.t('food.back_to_event')"
-                      ></button>
-                    </div>
-                  </template>
-                </div>
-              </template>
-
-              <template x-if="$store.app.eventSubview === 'newsletter'">
-                <div class="newsletter" x-data="newsletterSignup()">
-                  <template x-if="!submitted">
-                    <form class="newsletter-form" @submit.prevent="submit()">
-                      <p class="newsletter-form__intro">
-                        <span x-text="$store.lang.t('newsletter.signup_intro_prefix')"></span>
-                        <strong x-text="event().name"></strong>
-                        <span x-text="$store.lang.t('newsletter.signup_intro_suffix')"></span>
-                      </p>
-                      <label class="auth-form__field">
-                        <span class="auth-form__label" x-text="$store.lang.t('auth.email')"></span>
-                        <input
-                          type="email"
-                          autocomplete="email"
-                          required
-                          x-model="email"
-                        />
-                      </label>
-                      <fieldset class="newsletter-form__topics">
-                        <legend class="auth-form__label" x-text="$store.lang.t('newsletter.topics_legend')"></legend>
-                        <template x-for="topic in topics" :key="topic.key">
-                          <label class="newsletter-form__topic">
-                            <input
-                              type="checkbox"
-                              :checked="preferences[topic.key]"
-                              @change="preferences[topic.key] = $event.target.checked"
-                            />
-                            <span x-text="topic.label"></span>
-                          </label>
-                        </template>
-                      </fieldset>
+                    </section>
+                    <section class="practical__section">
+                      <h3 x-text="$store.lang.t('practical.parking')"></h3>
+                      <p x-text="venue().parking?.summary"></p>
                       <p
-                        class="auth-form__error"
-                        x-show="error"
-                        x-text="error"
+                        class="practical__note"
+                        x-text="venue().parking?.notes"
                       ></p>
-                      <button type="submit" class="auth-form__submit" x-text="$store.lang.t('newsletter.signup_submit')"></button>
-                    </form>
+                    </section>
+                    <section class="practical__section">
+                      <h3 x-text="$store.lang.t('practical.restaurants')"></h3>
+                      <ul>
+                        <template
+                          x-for="r in venue().restaurants ?? []"
+                          :key="r.name"
+                        >
+                          <li>
+                            <strong x-text="r.name"></strong>:
+                            <span x-text="r.description"></span>
+                          </li>
+                        </template>
+                      </ul>
+                    </section>
+                    <section class="practical__section">
+                      <h3 x-text="$store.lang.t('practical.security')"></h3>
+                      <p x-text="venue().security?.summary"></p>
+                      <ul>
+                        <template
+                          x-for="rule in venue().security?.general_rules ?? []"
+                          :key="rule"
+                        >
+                          <li x-text="rule"></li>
+                        </template>
+                      </ul>
+                    </section>
+                    <section
+                      class="practical__section practical__section--maps"
+                      x-show="(venue().maps ?? []).length > 0"
+                    >
+                      <h3 x-text="$store.lang.t('practical.maps')"></h3>
+                      <ul>
+                        <template
+                          x-for="m in venue().maps ?? []"
+                          :key="m.id"
+                        >
+                          <li>
+                            <strong x-text="m.name"></strong>:
+                            <span x-text="m.description"></span>
+                          </li>
+                        </template>
+                      </ul>
+                    </section>
+                    <section
+                      class="practical__section practical__section--overrides"
+                      x-show="hasOverrides()"
+                    >
+                      <h3 x-text="$store.lang.t('practical.overrides')"></h3>
+                      <dl class="overrides">
+                        <template
+                          x-for="entry in Object.entries(overrides())"
+                          :key="entry[0]"
+                        >
+                          <div class="overrides__item">
+                            <dt x-text="overrideLabel(entry[0])"></dt>
+                            <dd x-text="entry[1]"></dd>
+                          </div>
+                        </template>
+                      </dl>
+                    </section>
+                  </div>
+                </section>
+
+                <!-- Food section (preview tiles + see-all into the
+                     full 3-step ordering flow). -->
+                <section
+                  class="event-section"
+                  id="event-section-food"
+                >
+                  <h3 class="event-section__title" x-text="$store.lang.t('sections.food')"></h3>
+                  <ul class="menu-grid menu-grid--preview">
+                    <template x-for="m in inlineFoodMenus()" :key="m.id">
+                      <li>
+                        <div class="menu-card menu-card--preview">
+                          <img
+                            class="menu-card__image"
+                            :src="m.image"
+                            :alt="$store.lang.t('food.menu_image_alt', { name: m.label })"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <span class="menu-card__body">
+                            <span class="menu-card__name" x-text="m.label"></span>
+                            <span class="menu-card__price" x-text="m.price"></span>
+                          </span>
+                        </div>
+                      </li>
+                    </template>
+                  </ul>
+                  <button
+                    type="button"
+                    class="event-section__see-all"
+                    x-show="hasMoreFoodMenus()"
+                    @click="$store.app.goEventSubview('food')"
+                    x-text="$store.lang.t('event.see_all_food')"
+                  ></button>
+                </section>
+
+                <!-- Newsletter signup: full form inline, no see-all. -->
+                <section
+                  class="event-section"
+                  id="event-section-newsletter"
+                >
+                  <h3 class="event-section__title" x-text="$store.lang.t('sections.newsletter')"></h3>
+                  <div class="newsletter" x-data="newsletterSignup()">
+                    <template x-if="!submitted">
+                      <form class="newsletter-form" @submit.prevent="submit()">
+                        <p class="newsletter-form__intro">
+                          <span x-text="$store.lang.t('newsletter.signup_intro_prefix')"></span>
+                          <strong x-text="event().name"></strong>
+                          <span x-text="$store.lang.t('newsletter.signup_intro_suffix')"></span>
+                        </p>
+                        <label class="auth-form__field">
+                          <span class="auth-form__label" x-text="$store.lang.t('auth.email')"></span>
+                          <input
+                            type="email"
+                            autocomplete="email"
+                            required
+                            x-model="email"
+                          />
+                        </label>
+                        <fieldset class="newsletter-form__topics">
+                          <legend class="auth-form__label" x-text="$store.lang.t('newsletter.topics_legend')"></legend>
+                          <template x-for="topic in topics" :key="topic.key">
+                            <label class="newsletter-form__topic">
+                              <input
+                                type="checkbox"
+                                :checked="preferences[topic.key]"
+                                @change="preferences[topic.key] = $event.target.checked"
+                              />
+                              <span x-text="topic.label"></span>
+                            </label>
+                          </template>
+                        </fieldset>
+                        <p
+                          class="auth-form__error"
+                          x-show="error"
+                          x-text="error"
+                        ></p>
+                        <button type="submit" class="auth-form__submit" x-text="$store.lang.t('newsletter.signup_submit')"></button>
+                      </form>
+                    </template>
+                    <template x-if="submitted">
+                      <div class="newsletter-success">
+                        <p class="newsletter-success__title" x-text="$store.lang.t('newsletter.success_title')"></p>
+                        <p class="newsletter-success__body">
+                          <span x-text="$store.lang.t('newsletter.success_prefix')"></span>
+                          <strong x-text="email"></strong>
+                          <span x-text="$store.lang.t('newsletter.success_about')"></span>
+                          <strong x-text="event().name"></strong>.
+                          <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                        </p>
+                        <button
+                          type="button"
+                          class="newsletter-success__edit"
+                          @click="editAgain()"
+                          x-text="$store.lang.t('newsletter.edit')"
+                        ></button>
+                      </div>
+                    </template>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <!-- Dedicated full-list pages. Each renders only the
+                 section's full list plus a back link to the stacked
+                 event landing. The exhibitor detail route keeps its
+                 existing back-to-exhibitors behavior. -->
+            <template x-if="$store.app.eventSubview === 'news'">
+              <div class="event-dedicated">
+                <button
+                  type="button"
+                  class="back-link"
+                  @click="$store.app.goEventSubview('home')"
+                >
+                  <span aria-hidden="true">&larr;</span>
+                  <span x-text="$store.lang.t('event.back_to_event')"></span>
+                </button>
+                <h2 class="event-dedicated__title" x-text="$store.lang.t('sections.news')"></h2>
+                <p
+                  class="placeholder"
+                  x-show="news().length === 0"
+                  x-text="$store.lang.t('event.no_news')"
+                ></p>
+                <ul class="news-list" x-show="news().length > 0">
+                  <template x-for="item in news()" :key="item.id">
+                    <li class="news-item">
+                      <template x-if="newsImage(item)">
+                        <img
+                          class="news-item__image"
+                          :src="newsImage(item)"
+                          :alt="$store.lang.t('event.news_image_alt', { name: event().name })"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </template>
+                      <div class="news-item__body-wrap">
+                        <p
+                          class="news-item__date"
+                          x-text="formatShortDate(item.published_at)"
+                        ></p>
+                        <h3 class="news-item__title" x-text="item.title"></h3>
+                        <p class="news-item__body" x-text="item.body"></p>
+                      </div>
+                    </li>
                   </template>
-                  <template x-if="submitted">
-                    <div class="newsletter-success">
-                      <p class="newsletter-success__title" x-text="$store.lang.t('newsletter.success_title')"></p>
-                      <p class="newsletter-success__body">
-                        <span x-text="$store.lang.t('newsletter.success_prefix')"></span>
-                        <strong x-text="email"></strong>
-                        <span x-text="$store.lang.t('newsletter.success_about')"></span>
-                        <strong x-text="event().name"></strong>.
-                        <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
-                      </p>
+                </ul>
+              </div>
+            </template>
+
+            <template x-if="$store.app.eventSubview === 'articles'">
+              <div class="event-dedicated">
+                <button
+                  type="button"
+                  class="back-link"
+                  @click="$store.app.goEventSubview('home')"
+                >
+                  <span aria-hidden="true">&larr;</span>
+                  <span x-text="$store.lang.t('event.back_to_event')"></span>
+                </button>
+                <h2 class="event-dedicated__title" x-text="$store.lang.t('sections.articles')"></h2>
+                <p
+                  class="placeholder"
+                  x-show="articles().length === 0"
+                  x-text="$store.lang.t('event.no_articles')"
+                ></p>
+                <ul class="articles-list" x-show="articles().length > 0">
+                  <template x-for="a in articles()" :key="a.id">
+                    <li class="article">
+                      <template x-if="articleImage(a)">
+                        <img
+                          class="article__image"
+                          :src="articleImage(a)"
+                          :alt="$store.lang.t('event.article_image_alt', { title: a.title })"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </template>
+                      <h3 class="article__title" x-text="a.title"></h3>
+                      <p class="article__body" x-text="a.body"></p>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </template>
+
+            <template x-if="$store.app.eventSubview === 'program'">
+              <div class="event-dedicated">
+                <button
+                  type="button"
+                  class="back-link"
+                  @click="$store.app.goEventSubview('home')"
+                >
+                  <span aria-hidden="true">&larr;</span>
+                  <span x-text="$store.lang.t('event.back_to_event')"></span>
+                </button>
+                <h2 class="event-dedicated__title" x-text="$store.lang.t('sections.program')"></h2>
+                <p
+                  class="placeholder"
+                  x-show="programByDay().length === 0"
+                  x-text="$store.lang.t('event.no_program')"
+                ></p>
+                <template x-for="group in programByDay()" :key="group.day">
+                  <section class="program-day">
+                    <h3
+                      class="program-day__heading"
+                      x-text="formatDayHeading(group.day)"
+                    ></h3>
+                    <ul class="program-day__list">
+                      <template
+                        x-for="session in group.sessions"
+                        :key="session.id"
+                      >
+                        <li class="session">
+                          <p
+                            class="session__time"
+                            x-text="session.start_time + '–' + session.end_time"
+                          ></p>
+                          <h4
+                            class="session__title"
+                            x-text="session.title"
+                          ></h4>
+                          <p
+                            class="session__meta"
+                            x-text="session.location + (session.track ? ' · ' + session.track : '')"
+                          ></p>
+                          <div
+                            class="session__speakers"
+                            x-show="sessionSpeakers(session).length > 0"
+                          >
+                            <span
+                              class="session__speakers-label"
+                              x-text="$store.lang.t('event.speakers_prefix')"
+                            ></span>
+                            <template
+                              x-for="sp in sessionSpeakers(session)"
+                              :key="sp.id"
+                            >
+                              <span class="session__speaker">
+                                <img
+                                  class="session__speaker-avatar"
+                                  :src="speakerAvatar(sp)"
+                                  :alt="$store.lang.t('event.speaker_avatar_alt', { name: sp.name })"
+                                  loading="lazy"
+                                  decoding="async"
+                                />
+                                <span
+                                  class="session__speaker-name"
+                                  x-text="sp.name"
+                                ></span>
+                              </span>
+                            </template>
+                          </div>
+                          <p
+                            class="session__description"
+                            x-text="session.description"
+                          ></p>
+                        </li>
+                      </template>
+                    </ul>
+                  </section>
+                </template>
+              </div>
+            </template>
+
+            <template
+              x-if="$store.app.eventSubview === 'exhibitors' && !$store.app.exhibitorId"
+            >
+              <div class="event-dedicated">
+                <button
+                  type="button"
+                  class="back-link"
+                  @click="$store.app.goEventSubview('home')"
+                >
+                  <span aria-hidden="true">&larr;</span>
+                  <span x-text="$store.lang.t('event.back_to_event')"></span>
+                </button>
+                <h2 class="event-dedicated__title" x-text="$store.lang.t('sections.exhibitors')"></h2>
+                <label class="filters__search">
+                  <span
+                    class="sr-only"
+                    x-text="$store.lang.t('event.search_exhibitors_label')"
+                  ></span>
+                  <input
+                    type="search"
+                    :placeholder="$store.lang.t('event.search_exhibitors_placeholder')"
+                    x-model.debounce.150ms="exhibitorQuery"
+                    autocomplete="off"
+                  />
+                </label>
+                <p
+                  class="placeholder"
+                  x-show="filteredExhibitors().length === 0"
+                  x-text="$store.lang.t('event.no_exhibitor_match')"
+                ></p>
+                <ul
+                  class="exhibitor-list"
+                  x-show="filteredExhibitors().length > 0"
+                >
+                  <template
+                    x-for="e in filteredExhibitors()"
+                    :key="e.id"
+                  >
+                    <li class="exhibitor-card">
                       <button
                         type="button"
-                        class="newsletter-success__edit"
-                        @click="editAgain()"
-                        x-text="$store.lang.t('newsletter.edit')"
-                      ></button>
-                    </div>
+                        class="exhibitor-card__link"
+                        @click="$store.app.selectExhibitor(e.id)"
+                      >
+                        <img
+                          class="exhibitor-card__logo"
+                          :src="exhibitorLogo(e)"
+                          :alt="$store.lang.t('event.exhibitor_logo_alt', { name: e.name })"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span class="exhibitor-card__text">
+                          <span
+                            class="exhibitor-card__name"
+                            x-text="e.name"
+                          ></span>
+                          <span
+                            class="exhibitor-card__booth"
+                            x-text="$store.lang.t('event.booth_prefix') + e.booth"
+                          ></span>
+                          <span
+                            class="exhibitor-card__desc"
+                            x-text="e.description"
+                          ></span>
+                        </span>
+                      </button>
+                    </li>
                   </template>
-                </div>
-              </template>
-            </div>
+                </ul>
+              </div>
+            </template>
+
+            <template
+              x-if="$store.app.eventSubview === 'exhibitors' && $store.app.exhibitorId"
+            >
+              <div class="event-dedicated">
+                <button
+                  type="button"
+                  class="back-link"
+                  @click="$store.app.backToExhibitors()"
+                >
+                  <span aria-hidden="true">&larr;</span>
+                  <span x-text="$store.lang.t('event.back_exhibitors')"></span>
+                </button>
+                <template x-if="exhibitor()">
+                  <article class="exhibitor-detail">
+                    <img
+                      class="exhibitor-detail__logo"
+                      :src="exhibitorLogo(exhibitor())"
+                      :alt="$store.lang.t('event.exhibitor_logo_alt', { name: exhibitor().name })"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <h3
+                      class="exhibitor-detail__name"
+                      x-text="exhibitor().name"
+                    ></h3>
+                    <p
+                      class="exhibitor-detail__booth"
+                      x-text="$store.lang.t('event.booth_prefix') + exhibitor().booth"
+                    ></p>
+                    <p
+                      class="exhibitor-detail__desc"
+                      x-text="exhibitor().description"
+                    ></p>
+                    <p x-show="exhibitor().website">
+                      <a
+                        class="exhibitor-detail__link"
+                        :href="exhibitor().website"
+                        target="_blank"
+                        rel="noopener"
+                        x-text="exhibitor().website"
+                      ></a>
+                    </p>
+                  </article>
+                </template>
+                <p
+                  class="hint"
+                  x-show="!exhibitor()"
+                  x-text="$store.lang.t('event.exhibitor_not_found')"
+                ></p>
+              </div>
+            </template>
+
+            <template x-if="$store.app.eventSubview === 'food'">
+              <div class="event-dedicated food" x-data="foodView()">
+                <button
+                  type="button"
+                  class="back-link"
+                  @click="$store.app.goEventSubview('home')"
+                >
+                  <span aria-hidden="true">&larr;</span>
+                  <span x-text="$store.lang.t('event.back_to_event')"></span>
+                </button>
+                <p class="food__intro" x-text="$store.lang.t('food.intro')"></p>
+
+                <ol
+                  class="purchase__steps"
+                  :aria-label="$store.lang.t('food.steps_aria')"
+                >
+                  <li
+                    :class="step >= 1 && 'purchase__step--active'"
+                    x-text="$store.lang.t('food.step_menu')"
+                  ></li>
+                  <li
+                    :class="step >= 2 && 'purchase__step--active'"
+                    x-text="$store.lang.t('food.step_delivery')"
+                  ></li>
+                  <li
+                    :class="step >= 3 && 'purchase__step--active'"
+                    x-text="$store.lang.t('food.step_confirm')"
+                  ></li>
+                </ol>
+
+                <template x-if="step === 1">
+                  <div class="purchase__body">
+                    <h3 class="purchase__step-title" x-text="$store.lang.t('food.pick_menu')"></h3>
+                    <ul class="menu-grid">
+                      <template x-for="m in menus" :key="m.id">
+                        <li>
+                          <button
+                            type="button"
+                            class="menu-card"
+                            :class="menuId === m.id && 'menu-card--selected'"
+                            :aria-pressed="menuId === m.id"
+                            @click="menuId = m.id"
+                          >
+                            <img
+                              class="menu-card__image"
+                              :src="m.image"
+                              :alt="$store.lang.t('food.menu_image_alt', { name: m.label })"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                            <span class="menu-card__body">
+                              <span class="menu-card__name" x-text="m.label"></span>
+                              <span class="menu-card__desc" x-text="m.description"></span>
+                              <span class="menu-card__price" x-text="m.price"></span>
+                            </span>
+                          </button>
+                        </li>
+                      </template>
+                    </ul>
+                    <p class="auth-form__error" x-show="error" x-text="error"></p>
+                    <button
+                      class="purchase__primary"
+                      type="button"
+                      :disabled="!menuId"
+                      @click="continueToDelivery()"
+                      x-text="$store.lang.t('food.continue')"
+                    ></button>
+                  </div>
+                </template>
+
+                <template x-if="step === 2">
+                  <form class="purchase__body" @submit.prevent="confirm()">
+                    <h3 class="purchase__step-title" x-text="$store.lang.t('food.pick_delivery')"></h3>
+
+                    <div class="food-delivery">
+                      <label class="food-delivery__mode">
+                        <input
+                          type="radio"
+                          name="food-delivery-mode"
+                          value="pickup"
+                          :checked="deliveryMode === 'pickup'"
+                          @change="setDeliveryMode('pickup')"
+                        />
+                        <span x-text="$store.lang.t('food.delivery_pickup')"></span>
+                      </label>
+                      <label class="food-delivery__mode">
+                        <input
+                          type="radio"
+                          name="food-delivery-mode"
+                          value="timeslot"
+                          :checked="deliveryMode === 'timeslot'"
+                          @change="setDeliveryMode('timeslot')"
+                        />
+                        <span x-text="$store.lang.t('food.delivery_timeslot')"></span>
+                      </label>
+                    </div>
+
+                    <fieldset class="food-fieldset" x-show="deliveryMode === 'pickup'">
+                      <legend x-text="$store.lang.t('food.pickup_legend')"></legend>
+                      <ul class="food-options">
+                        <template x-for="p in pickupLocations" :key="p.id">
+                          <li>
+                            <label class="food-option">
+                              <input
+                                type="radio"
+                                name="food-pickup"
+                                :value="p.id"
+                                :checked="pickupId === p.id"
+                                @change="pickupId = p.id"
+                              />
+                              <span class="food-option__body">
+                                <span class="food-option__name" x-text="p.label"></span>
+                                <span class="food-option__desc" x-text="p.description"></span>
+                              </span>
+                            </label>
+                          </li>
+                        </template>
+                      </ul>
+                    </fieldset>
+
+                    <fieldset class="food-fieldset" x-show="deliveryMode === 'timeslot'">
+                      <legend x-text="$store.lang.t('food.restaurant_legend')"></legend>
+                      <ul class="food-options">
+                        <template x-for="r in restaurants" :key="r.id">
+                          <li>
+                            <label class="food-option">
+                              <input
+                                type="radio"
+                                name="food-restaurant"
+                                :value="r.id"
+                                :checked="restaurantId === r.id"
+                                @change="restaurantId = r.id"
+                              />
+                              <span class="food-option__body">
+                                <span class="food-option__name" x-text="r.label"></span>
+                                <span class="food-option__desc" x-text="r.description"></span>
+                              </span>
+                            </label>
+                          </li>
+                        </template>
+                      </ul>
+                    </fieldset>
+
+                    <fieldset
+                      class="food-fieldset"
+                      x-show="deliveryMode === 'timeslot' && restaurantId"
+                    >
+                      <legend x-text="$store.lang.t('food.timeslot_legend')"></legend>
+                      <ul class="food-timeslots">
+                        <template x-for="s in timeslots" :key="s.id">
+                          <li>
+                            <label class="food-timeslot">
+                              <input
+                                type="radio"
+                                name="food-timeslot"
+                                :value="s.id"
+                                :checked="timeslotId === s.id"
+                                @change="timeslotId = s.id"
+                              />
+                              <span x-text="s.label"></span>
+                            </label>
+                          </li>
+                        </template>
+                      </ul>
+                    </fieldset>
+
+                    <section class="purchase__summary">
+                      <h4 class="purchase__summary-title" x-text="$store.lang.t('food.summary_title')"></h4>
+                      <dl class="purchase__summary-list">
+                        <div class="purchase__summary-row">
+                          <dt x-text="$store.lang.t('food.summary_menu')"></dt>
+                          <dd x-text="selectedMenu()?.label ?? ''"></dd>
+                        </div>
+                        <div class="purchase__summary-row">
+                          <dt x-text="$store.lang.t('food.summary_price')"></dt>
+                          <dd x-text="selectedMenu()?.price ?? ''"></dd>
+                        </div>
+                        <div class="purchase__summary-row" x-show="deliveryMode === 'pickup' && selectedPickup()">
+                          <dt x-text="$store.lang.t('food.summary_delivery')"></dt>
+                          <dd x-text="selectedPickup()?.label ?? ''"></dd>
+                        </div>
+                        <div class="purchase__summary-row" x-show="deliveryMode === 'timeslot' && selectedRestaurant() && selectedTimeslot()">
+                          <dt x-text="$store.lang.t('food.summary_delivery')"></dt>
+                          <dd>
+                            <span x-text="selectedRestaurant()?.label ?? ''"></span>
+                            <span> · </span>
+                            <span x-text="selectedTimeslot()?.label ?? ''"></span>
+                          </dd>
+                        </div>
+                      </dl>
+                      <p class="purchase__sim-note">
+                        <span x-text="$store.lang.t('purchase.sim_note_prefix')"></span>
+                        <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                        <span x-text="$store.lang.t('purchase.sim_note_suffix')"></span>
+                      </p>
+                    </section>
+                    <p class="auth-form__error" x-show="error" x-text="error"></p>
+                    <button
+                      class="purchase__primary"
+                      type="submit"
+                      :disabled="processing"
+                    >
+                      <span x-show="!processing" x-text="$store.lang.t('food.confirm')"></span>
+                      <span x-show="processing" x-text="$store.lang.t('food.processing')"></span>
+                    </button>
+                    <button
+                      class="purchase__secondary"
+                      type="button"
+                      :disabled="processing"
+                      @click="goToStep(1)"
+                      x-text="$store.lang.t('food.back')"
+                    ></button>
+                  </form>
+                </template>
+
+                <template x-if="step === 3 && confirmedOrder">
+                  <div class="purchase__body">
+                    <h3 class="purchase__step-title">
+                      <span x-text="$store.lang.t('food.confirmed')"></span>
+                      <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
+                    </h3>
+                    <p class="purchase__ref">
+                      <span x-text="$store.lang.t('food.transaction_ref')"></span>
+                      <code x-text="confirmedOrder.transaction_ref"></code>
+                    </p>
+                    <article class="ticket-card">
+                      <header class="ticket-card__header">
+                        <p class="ticket-card__event" x-text="confirmedOrder.menu_label"></p>
+                        <p class="ticket-card__dates" x-text="confirmedOrder.price"></p>
+                      </header>
+                      <p
+                        x-show="confirmedOrder.delivery_mode === 'pickup'"
+                        x-text="$store.lang.t('food.pickup_instructions', { location: confirmedOrder.delivery_label })"
+                      ></p>
+                      <p
+                        x-show="confirmedOrder.delivery_mode === 'timeslot'"
+                        x-text="$store.lang.t('food.timeslot_instructions', { restaurant: confirmedOrder.delivery_label.split(' · ')[0], slot: confirmedOrder.delivery_label.split(' · ')[1] || '' })"
+                      ></p>
+                    </article>
+                    <button
+                      class="purchase__primary"
+                      type="button"
+                      @click="_hydrate()"
+                      x-text="$store.lang.t('food.order_another')"
+                    ></button>
+                    <button
+                      class="purchase__secondary"
+                      type="button"
+                      @click="$store.app.goEventSubview('home')"
+                      x-text="$store.lang.t('food.back_to_event')"
+                    ></button>
+                  </div>
+                </template>
+              </div>
+            </template>
           </div>
         </template>
 

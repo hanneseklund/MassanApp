@@ -57,10 +57,11 @@ test("canonicalTicketTypeLabel: unknown id falls back to the id itself", () => {
   assert.equal(canonicalTicketTypeLabel("not-a-real-type"), "not-a-real-type");
 });
 
-test("SECTION_LABELS: ids match the event-nav subview order", () => {
-  // The event nav tabs render in this order in index.html. Reordering
-  // would change the visible tab order; a mismatch with the hash-route
-  // subview list in stores/app.js would break deep-linking.
+test("SECTION_LABELS: ids match the stacked-layout section order", () => {
+  // The stacked event landing renders sections in this order in
+  // index.html. A mismatch with the hash-route subview list in
+  // stores/app.js would break deep-linking to the dedicated section
+  // pages.
   assert.deepEqual(
     SECTION_LABELS.map((s) => s.id),
     ["news", "articles", "program", "exhibitors", "practical", "food", "newsletter"],

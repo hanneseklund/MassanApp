@@ -1,9 +1,11 @@
 // App-wide navigation and simulation state. The prototype uses
 // hash-based routing so views are linkable:
 //   #/                                               -> calendar
-//   #/event/<slug>                                   -> event home
-//   #/event/<slug>/<subview>                         -> event subview
+//   #/event/<slug>                                   -> event landing (stacked layout)
+//   #/event/<slug>/news|articles|program|food        -> dedicated full-list page
+//   #/event/<slug>/exhibitors                        -> dedicated exhibitor index
 //   #/event/<slug>/exhibitors/<exhibitor-id>         -> exhibitor detail
+//   #/event/<slug>/practical|newsletter              -> stacked landing + scroll to section
 //   #/event/<slug>/purchase                          -> simulated ticket purchase
 //   #/auth                                           -> registration / sign-in
 //   #/me                                             -> signed-in My Pages
@@ -20,6 +22,11 @@ const EVENT_SUBVIEWS = [
   "food",
   "newsletter",
 ];
+
+// Subviews that no longer have a dedicated full-list page in the
+// stacked layout. Visiting either route collapses to the landing view
+// and asks the event view to scroll to the section anchor instead.
+const SCROLL_ONLY_SUBVIEWS = new Set(["practical", "newsletter"]);
 
 export function parseHash(hash) {
   const clean = hash.replace(/^#\/?/, "");
@@ -74,6 +81,10 @@ export function appStore() {
     eventId: null,
     eventSubview: "home",
     exhibitorId: null,
+    // Set when a route lands on a section that no longer has a
+    // dedicated page (practical, newsletter); the event view watches
+    // this and scrolls the matching section anchor into view.
+    pendingScrollSection: null,
     // Where to go after an auth flow completes. Stored as a route-like
     // object so that deep targets (e.g. the purchase flow for a given
     // event) can be resumed after sign-in.
@@ -88,8 +99,29 @@ export function appStore() {
       const parsed = parseHash(window.location.hash);
       this.view = parsed.view;
       this.eventId = parsed.eventId ?? null;
-      this.eventSubview = parsed.eventSubview ?? "home";
       this.exhibitorId = parsed.exhibitorId ?? null;
+      const subview = parsed.eventSubview ?? "home";
+      if (
+        this.view === "event" &&
+        SCROLL_ONLY_SUBVIEWS.has(subview) &&
+        this.eventId
+      ) {
+        // Collapse to the stacked landing view and ask the event view
+        // to scroll to the section anchor. replaceState avoids creating
+        // a back-button entry for the redirect.
+        this.eventSubview = "home";
+        this.pendingScrollSection = subview;
+        const target = buildHash({
+          view: "event",
+          eventId: this.eventId,
+          eventSubview: "home",
+        });
+        if (window.location.hash !== target) {
+          window.history.replaceState(null, "", target);
+        }
+      } else {
+        this.eventSubview = subview;
+      }
     },
 
     _navigate(next) {

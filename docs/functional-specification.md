@@ -112,10 +112,36 @@ The prototype must support this end-to-end path without gaps:
   with a small image credit below it. Events without an image degrade to
   text-only without an empty frame.
 - Summarizes what the event is and when it runs.
-- Surfaces the core event sections: News, Articles, Program, Exhibitor
-  index, Practical information, Food, Newsletter.
+- Renders every event section as a stacked, scrollable layout below the
+  hero. The order is fixed: News, Articles, Program, Exhibitor index,
+  Practical information, Food, Newsletter. There is no tab bar; the
+  visitor scrolls the page rather than switching views.
+- Lists that can grow long (News, Articles, Program, Exhibitors, Food)
+  truncate to the first 5 items inline. When the underlying list has
+  more than 5 items, a single "see all" link below the list opens a
+  dedicated full-list page for that section.
+- Practical information renders inline in full and the Newsletter
+  signup form renders inline in full. Neither has a "see all" page.
 - Provides a clear ticket call-to-action when the event has ticketing.
 - Provides a persistent "Back to events" route.
+
+### Section full-list pages
+
+- Each truncated section's "see all" link navigates to a dedicated
+  page that shows only that section's full list plus a "back to event"
+  link. The hero, other sections, and the section nav are not shown
+  on these pages.
+- The Program full-list page keeps the by-day grouping; the inline
+  preview on the event landing collapses across days to fit the
+  5-item limit.
+- The Exhibitor full-list page keeps the search box; the inline
+  preview does not.
+- The Food full-list page is the full 3-step ordering flow; the inline
+  preview shows up to 5 menu thumbnails as a teaser.
+- Practical information and Newsletter do not have full-list pages.
+  Visiting `#/event/<id>/practical` or `#/event/<id>/newsletter`
+  collapses to the stacked landing view and scrolls to the matching
+  section anchor.
 
 ### News and Articles
 

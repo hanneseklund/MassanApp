@@ -73,6 +73,12 @@ const TRANSLATIONS = {
     "event.view_ticket": "View ticket",
     "event.not_found": "Event not found. Return to the calendar.",
     "event.sections_nav_aria": "Event sections",
+    "event.see_all_news": "All news ({count})",
+    "event.see_all_articles": "All articles ({count})",
+    "event.see_all_program": "Full program ({count})",
+    "event.see_all_exhibitors": "All exhibitors ({count})",
+    "event.see_all_food": "Order food",
+    "event.back_to_event": "Back to event",
 
     "event.addons_title": "Event add-ons",
     "event.addons_intro":
@@ -418,6 +424,12 @@ const TRANSLATIONS = {
     "event.view_ticket": "Visa biljett",
     "event.not_found": "Evenemanget hittades inte. Återvänd till kalendern.",
     "event.sections_nav_aria": "Evenemangssektioner",
+    "event.see_all_news": "Alla nyheter ({count})",
+    "event.see_all_articles": "Alla artiklar ({count})",
+    "event.see_all_program": "Hela programmet ({count})",
+    "event.see_all_exhibitors": "Alla utställare ({count})",
+    "event.see_all_food": "Beställ mat",
+    "event.back_to_event": "Tillbaka till evenemanget",
 
     "event.addons_title": "Evenemangstillägg",
     "event.addons_intro":

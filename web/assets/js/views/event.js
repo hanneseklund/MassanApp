@@ -1,16 +1,21 @@
 // Event view: mini-homepage scoped to the currently selected event.
-// Renders the event hero and fans out to the News, Articles, Program,
-// Exhibitors (index and detail), Practical info, and Newsletter
-// subviews via `$store.app.eventSubview`.
+// Renders the event hero and a stacked layout where every section
+// (News, Articles, Program, Exhibitors, Practical info, Food,
+// Newsletter) appears one below the other. Lists that can grow long
+// truncate to `INLINE_LIMIT` items inline with a "see all" link to a
+// dedicated full-list page; Practical info and Newsletter render in
+// full inline. Dedicated `#/event/<id>/<section>` routes render only
+// the full list plus a back link, driven off `$store.app.eventSubview`.
 
 import {
   formatDates,
   formatShortDate,
   formatDayHeading,
 } from "../util/dates.js";
-import { SECTION_LABELS, ticketCtaLabel } from "../util/sections.js";
+import { ticketCtaLabel } from "../util/sections.js";
 import { logoDataUri, avatarDataUri } from "../util/placeholders.js";
 import { createRedemptionController } from "../util/redemption.js";
+import { FOOD_MENUS } from "../util/food.js";
 
 const OVERRIDE_KEYS = {
   entrance: "overrides.entrance",
@@ -18,9 +23,12 @@ const OVERRIDE_KEYS = {
   access_notes: "overrides.access_notes",
 };
 
+const INLINE_LIMIT = 5;
+
 export function eventView() {
   return {
-    sections: SECTION_LABELS,
+    INLINE_LIMIT,
+    foodMenus: FOOD_MENUS,
     exhibitorQuery: "",
     // Shared redemption controller: per-session stock adjustments,
     // pending indicator, last-success banner, and error. See
@@ -44,6 +52,27 @@ export function eventView() {
           this.redemption.reset();
         },
       );
+      // The `practical` and `newsletter` subview routes redirect to the
+      // stacked landing view and request a scroll to the matching
+      // section anchor (see stores/app.js). Consume any pending request
+      // once the event view is mounted, and again whenever the field
+      // changes.
+      this.$nextTick(() => this._consumePendingScroll());
+      this.$watch(
+        () => Alpine.store("app").pendingScrollSection,
+        () => this._consumePendingScroll(),
+      );
+    },
+    _consumePendingScroll() {
+      const app = Alpine.store("app");
+      const target = app.pendingScrollSection;
+      if (!target) return;
+      app.pendingScrollSection = null;
+      // Wait one more frame so the section template has rendered.
+      requestAnimationFrame(() => {
+        const el = document.getElementById(`event-section-${target}`);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
     },
     event() {
       const id = Alpine.store("app").eventId;
@@ -81,6 +110,60 @@ export function eventView() {
     programByDay() {
       const ev = this.event();
       return ev ? Alpine.store("catalog").programByDayForEvent(ev.id) : [];
+    },
+    inlineNews() {
+      return this.news().slice(0, INLINE_LIMIT);
+    },
+    hasMoreNews() {
+      return this.news().length > INLINE_LIMIT;
+    },
+    inlineArticles() {
+      return this.articles().slice(0, INLINE_LIMIT);
+    },
+    hasMoreArticles() {
+      return this.articles().length > INLINE_LIMIT;
+    },
+    // Truncate the program to `INLINE_LIMIT` sessions in total across
+    // all days, keeping the by-day grouping. The dedicated program page
+    // shows every day with every session.
+    inlineProgramByDay() {
+      const groups = this.programByDay();
+      const result = [];
+      let remaining = INLINE_LIMIT;
+      for (const group of groups) {
+        if (remaining <= 0) break;
+        const sessions = group.sessions.slice(0, remaining);
+        if (sessions.length === 0) continue;
+        result.push({ day: group.day, sessions });
+        remaining -= sessions.length;
+      }
+      return result;
+    },
+    programSessionCount() {
+      return this.programByDay().reduce(
+        (sum, group) => sum + group.sessions.length,
+        0,
+      );
+    },
+    hasMoreProgram() {
+      return this.programSessionCount() > INLINE_LIMIT;
+    },
+    exhibitorsForEvent() {
+      const ev = this.event();
+      if (!ev) return [];
+      return Alpine.store("catalog").exhibitorsForEvent(ev.id);
+    },
+    inlineExhibitors() {
+      return this.exhibitorsForEvent().slice(0, INLINE_LIMIT);
+    },
+    hasMoreExhibitors() {
+      return this.exhibitorsForEvent().length > INLINE_LIMIT;
+    },
+    inlineFoodMenus() {
+      return this.foodMenus.slice(0, INLINE_LIMIT);
+    },
+    hasMoreFoodMenus() {
+      return this.foodMenus.length > INLINE_LIMIT;
     },
     sessionSpeakers(session) {
       if (!session.speaker_ids?.length) return [];

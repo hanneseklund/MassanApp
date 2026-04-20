@@ -49,9 +49,23 @@ async function openEventByName(page, name) {
   await expect(page.locator(".chrome__title")).toHaveText(name);
 }
 
-async function openSubview(page, id, label) {
-  await page.locator(`.event-nav__tab`, { hasText: label }).first().click();
-  await expect(page).toHaveURL(new RegExp(`#/event/[^/]+/${id}($|/)`));
+// Navigate the current event to a section's dedicated full-list page.
+// The stacked layout removed the tab bar; sections are reached by
+// hash route. The `label` arg stays in the signature for readability
+// at call sites but is no longer needed to find a UI element.
+async function openSubview(page, id, _label) {
+  const url = new URL(page.url());
+  const match = url.hash.match(/#\/event\/([^/]+)/);
+  const eventId = match?.[1];
+  if (!eventId) throw new Error("openSubview: no event in current URL");
+  await page.goto(`/#/event/${eventId}/${id}`);
+  // Practical and newsletter no longer have dedicated pages; the
+  // app collapses them to the landing route via history.replaceState.
+  if (id === "practical" || id === "newsletter") {
+    await expect(page).toHaveURL(new RegExp(`#/event/${eventId}$`));
+  } else {
+    await expect(page).toHaveURL(new RegExp(`#/event/${eventId}/${id}($|/)`));
+  }
 }
 
 // Open the language dropdown and click the option for `lang`. The
@@ -164,35 +178,56 @@ test.describe("Calendar and event selection", () => {
 });
 
 test.describe("Event content", () => {
-  test("5-8: subviews render, practical shows shared venue facts, back returns to calendar", async ({
+  test("5-8: stacked layout renders every section, dedicated pages render full lists, practical shows shared venue facts", async ({
     page,
   }) => {
     await openEventByName(page, "Nordbygg 2026");
 
-    // Each subview must render real content (the spec allows a documented
-    // empty-state placeholder, but Nordbygg is seeded with content for every
-    // subview so we check the primary content selector directly — an empty
-    // render would signal a template regression). Newsletter shows the form
-    // because this test runs signed out with no prior subscription.
-    for (const [id, label, contentSel] of [
-      ["news", "News", ".news-item"],
-      ["articles", "Articles", ".article"],
-      ["program", "Program", ".program-day"],
-      ["exhibitors", "Exhibitors", ".exhibitor-card"],
-      ["practical", "Practical info", ".practical__section"],
-      ["food", "Food", ".menu-card"],
-      ["newsletter", "Newsletter", ".newsletter-form"],
+    // Stacked landing: every section anchor is rendered, including the
+    // inline previews and the in-place Practical info and Newsletter
+    // blocks. (Sections that grow long truncate to 5 items; we just
+    // assert the section is present here, not the truncation count.)
+    for (const sectionId of [
+      "news",
+      "articles",
+      "program",
+      "exhibitors",
+      "practical",
+      "food",
+      "newsletter",
     ]) {
-      await openSubview(page, id, label);
-      await expect(page.locator(".event-nav__tab--active")).toContainText(
-        label,
-      );
-      await expect(page.locator(contentSel).first()).toBeVisible();
+      await expect(
+        page.locator(`#event-section-${sectionId}`),
+      ).toBeAttached();
+    }
+    await expect(page.locator(".practical").first()).toContainText("Alvsjo");
+    await expect(page.locator(".newsletter-form").first()).toBeVisible();
+
+    // Dedicated section pages: navigating directly to the route shows
+    // only that section's full content plus a back link. The stacked
+    // landing wrapper is x-show=false (hidden) on these routes, so we
+    // scope content assertions to `.event-dedicated`. Newsletter is
+    // covered by its own test below; we check the five list-style
+    // sections here.
+    for (const [id, contentSel] of [
+      ["news", ".news-item"],
+      ["articles", ".article"],
+      ["program", ".program-day"],
+      ["exhibitors", ".exhibitor-card"],
+      ["food", ".menu-card"],
+    ]) {
+      await openSubview(page, id);
+      const dedicated = page.locator(".event-dedicated");
+      await expect(dedicated).toBeVisible();
+      await expect(dedicated.locator(contentSel).first()).toBeVisible();
+      // The stacked landing wrapper is hidden on dedicated routes.
+      await expect(page.locator(".event-stacked")).toBeHidden();
     }
 
-    // Exhibitor detail: pick the first exhibitor card and verify
-    // the detail view shows a "Back to exhibitors" link.
-    await openSubview(page, "exhibitors", "Exhibitors");
+    // Exhibitor detail: pick the first exhibitor card on the dedicated
+    // exhibitors page and verify the detail view shows a "Back to
+    // exhibitors" link.
+    await openSubview(page, "exhibitors");
     const firstExhibitor = page.locator(".exhibitor-card__link").first();
     if (await firstExhibitor.isVisible().catch(() => false)) {
       await firstExhibitor.click();
@@ -200,9 +235,12 @@ test.describe("Event content", () => {
       await page.locator(".back-link").click();
     }
 
-    // Practical info: shared Stockholmsmassan facts.
-    await openSubview(page, "practical", "Practical info");
-    await expect(page.locator(".practical")).toContainText("Alvsjo");
+    // Practical info: shared Stockholmsmassan facts render inline on
+    // the stacked landing — the practical/newsletter routes redirect
+    // there and scroll, so we navigate via openSubview and assert the
+    // landing-page section content.
+    await openSubview(page, "practical");
+    await expect(page.locator(".practical").first()).toContainText("Alvsjo");
     for (const heading of [
       "Getting here",
       "Parking",
@@ -210,8 +248,8 @@ test.describe("Event content", () => {
       "Security and entry",
     ]) {
       await expect(
-        page.locator(".practical__section h3", { hasText: heading }),
-      ).toHaveCount(1);
+        page.locator(".practical__section h3", { hasText: heading }).first(),
+      ).toBeVisible();
     }
 
     await page.locator(".chrome__back").click();
@@ -243,25 +281,26 @@ test.describe("Congress archetype", () => {
       "Register as delegate",
     );
 
-    await openSubview(page, "program", "Program");
-    const programCount = await page.locator(".program-day").count();
-    const placeholderCount = await page
+    await openSubview(page, "program");
+    const dedicatedProgram = page.locator(".event-dedicated");
+    const programCount = await dedicatedProgram.locator(".program-day").count();
+    const placeholderCount = await dedicatedProgram
       .locator(".placeholder", { hasText: "No program published" })
       .count();
     // Either a seeded program day renders, or we show the empty-state
     // placeholder — both are documented behavior.
     expect(programCount + placeholderCount).toBeGreaterThan(0);
     if (programCount > 0) {
-      await expect(page.locator(".session").first()).toBeVisible();
+      await expect(dedicatedProgram.locator(".session").first()).toBeVisible();
     }
 
-    await openSubview(page, "practical", "Practical info");
+    await openSubview(page, "practical");
     // Shared-venue-data regression check: the congress practical info
     // must render the same transport copy ("Alvsjo") as Nordbygg, not
     // just the section headings. This enforces the rule in
     // docs/installation-testing-specification.md under "Regression
     // checks for shared venue data".
-    await expect(page.locator(".practical")).toContainText("Alvsjo");
+    await expect(page.locator(".practical").first()).toContainText("Alvsjo");
     for (const heading of [
       "Getting here",
       "Parking",
@@ -269,8 +308,8 @@ test.describe("Congress archetype", () => {
       "Security and entry",
     ]) {
       await expect(
-        page.locator(".practical__section h3", { hasText: heading }),
-      ).toHaveCount(1);
+        page.locator(".practical__section h3", { hasText: heading }).first(),
+      ).toBeVisible();
     }
   });
 });
@@ -514,10 +553,14 @@ test.describe("Newsletter", () => {
   }) => {
     const messages = attachConsoleCapture(page);
     await signOutIfSignedIn(page);
+    // Navigate via the newsletter route; the stacked layout collapses
+    // it to the landing route and scrolls to the inline newsletter
+    // section. The form is rendered inline on the event landing page.
     await page.goto("/#/event/nordbygg-2026/newsletter");
-    await expect(page.locator(".event-nav__tab--active")).toContainText(
-      "Newsletter",
-    );
+    await expect(page).toHaveURL(/#\/event\/nordbygg-2026$/);
+    await expect(
+      page.locator("#event-section-newsletter .newsletter-form").first(),
+    ).toBeVisible();
 
     const anonEmail = `smoke-anon+${Date.now()}@example.com`;
     await page
@@ -641,12 +684,16 @@ test.describe("Food ordering (simulated)", () => {
     await waitForSignedIn(page);
 
     await openEventByName(page, "Nordbygg 2026");
-    await openSubview(page, "food", "Food");
-    await expect(page.locator(".menu-card").first()).toBeVisible();
+    await openSubview(page, "food");
+    // Scope menu-card lookups to the dedicated food page; the stacked
+    // landing also renders preview tiles with the same class but they
+    // are hidden under the parent x-show toggle.
+    const foodPage = page.locator(".event-dedicated.food");
+    await expect(foodPage.locator(".menu-card").first()).toBeVisible();
 
     // 30. Pickup order: first menu (Classic Burger), first pickup
     //     location (North Entrance kiosk), confirm.
-    await page.locator(".menu-card").first().click();
+    await foodPage.locator(".menu-card").first().click();
     await page
       .locator(".food .purchase__primary", { hasText: "Continue" })
       .click();
@@ -691,7 +738,7 @@ test.describe("Food ordering (simulated)", () => {
     await page
       .locator(".food .purchase__primary", { hasText: "Order another" })
       .click();
-    await page.locator(".menu-card").first().click();
+    await foodPage.locator(".menu-card").first().click();
     await page
       .locator(".food .purchase__primary", { hasText: "Continue" })
       .click();
@@ -985,16 +1032,21 @@ test.describe("Language toggle", () => {
     expect(seededSummary).toMatch(/Nordbygg is the leading Nordic/);
 
     await setLanguage(page, "sv");
+    // Section heading on the stacked layout switches to Swedish copy.
     await expect(
-      page.locator(".event-nav__tab", { hasText: "Nyheter" }).first(),
+      page
+        .locator(".event-section__title", { hasText: "Nyheter" })
+        .first(),
     ).toBeVisible();
     await expect(page.locator(summarySelector).first()).toHaveText(
       seededSummary,
     );
 
-    // Practical-info venue copy (seeded English) also stays stable.
-    await page.locator(".event-nav__tab", { hasText: "Praktisk info" }).first().click();
-    await expect(page.locator(".practical")).toContainText("Alvsjo station");
+    // Practical-info venue copy (seeded English) also stays stable —
+    // the section is rendered inline on the stacked landing.
+    await expect(page.locator(".practical").first()).toContainText(
+      "Alvsjo station",
+    );
 
     // Restore English for later independent runs.
     await setLanguage(page, "en");

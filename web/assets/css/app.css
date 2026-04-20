@@ -497,6 +497,82 @@ a {
   min-height: 160px;
 }
 
+/* Stacked-layout container: each section sits one below the other,
+   separated by a card-style block. The "see all" link below a
+   truncated list opens the dedicated full-list page. */
+.event-stacked {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.event-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  scroll-margin-top: 16px;
+}
+
+.event-section__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.event-section__see-all {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 6px 0 0 0;
+  align-self: start;
+  color: var(--link);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.event-section__see-all:hover,
+.event-section__see-all:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Dedicated full-list page: only the section's content plus the
+   "back to event" link, no hero or other sections. */
+.event-dedicated {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.event-dedicated__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Food preview tile: shown on the stacked landing as a presentational
+   thumbnail for one of the first INLINE_LIMIT menus. The full
+   3-step ordering flow lives behind the "see all" link on the
+   dedicated #/event/<id>/food page. */
+.menu-card--preview {
+  cursor: default;
+}
+
+.menu-grid--preview .menu-card__body {
+  padding: 8px 10px 10px;
+  gap: 2px;
+}
+
 .placeholder {
   margin: 0;
   color: var(--ink-muted);

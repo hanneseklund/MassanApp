@@ -97,9 +97,11 @@ The supported routes are:
 
 ```
 #/                                           calendar
-#/event/<slug>                               event home
-#/event/<slug>/<subview>                     event subview
+#/event/<slug>                               event landing (stacked layout)
+#/event/<slug>/news|articles|program|food    dedicated full-list page
+#/event/<slug>/exhibitors                    dedicated exhibitor index
 #/event/<slug>/exhibitors/<exhibitor-id>     exhibitor detail
+#/event/<slug>/practical|newsletter          stacked landing + scroll to section
 #/event/<slug>/purchase                      simulated ticket purchase
 #/auth                                       registration / sign-in
 #/me                                         signed-in My Pages
@@ -111,6 +113,23 @@ The supported routes are:
 `exhibitors`, `practical`, `food`, or `newsletter`. An unknown or
 missing subview resolves to `home` so a stale or hand-edited link
 still lands on the event's main page.
+
+The event landing route (`home`) renders the hero followed by every
+section in a stacked, scrollable layout. Each section that can grow
+long (News, Articles, Program, Exhibitors, Food) shows up to the
+first 5 items inline with a "see all" link to its dedicated
+`#/event/<slug>/<section>` page; the dedicated page renders only the
+full list plus a back link to the landing route. Practical info and
+Newsletter render in full inline and have no dedicated page —
+landing on `#/event/<slug>/practical` or
+`#/event/<slug>/newsletter` is rewritten via `history.replaceState`
+to the landing route, with a `pendingScrollSection` field on the
+`app` store telling the event view to scroll the matching section
+anchor (`event-section-practical` / `event-section-newsletter`) into
+view. The `eventSubview` field stays in the app store because the
+dedicated section routes still drive what the event view renders;
+only the practical/newsletter routes are collapsed to the landing
+view.
 
 ### Frontend app structure
 
