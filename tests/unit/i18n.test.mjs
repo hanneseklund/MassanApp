@@ -15,6 +15,7 @@ import {
   translate,
   dateLocaleFor,
   activeTranslate,
+  canonicalTranslate,
   availableKeys,
 } from "../../web/assets/js/i18n.js";
 
@@ -95,6 +96,20 @@ test("activeTranslate: interpolates params on the fallback path", () => {
   assert.equal(
     activeTranslate("title.get_tickets_for", { name: "ESTRO 2026" }),
     "Get tickets · ESTRO 2026",
+  );
+});
+
+test("canonicalTranslate: always resolves against the default language", () => {
+  // Used by sections.js and food.js when persisting display labels
+  // (ticket_type_label, menu_label, delivery_label) so the stored
+  // copy stays stable independent of whoever views the row later.
+  assert.equal(canonicalTranslate("chrome.events"), "Events");
+});
+
+test("canonicalTranslate: interpolates params on the canonical entry", () => {
+  assert.equal(
+    canonicalTranslate("title.get_tickets_for", { name: "Nordbygg 2026" }),
+    "Get tickets · Nordbygg 2026",
   );
 });
 

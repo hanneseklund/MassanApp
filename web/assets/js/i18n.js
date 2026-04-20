@@ -756,3 +756,13 @@ export function activeTranslate(key, params) {
   if (store) return store.t(key, params);
   return translate(key, DEFAULT_LANGUAGE, params);
 }
+
+// Resolve `key` against the canonical (English) dictionary regardless
+// of the active UI language. Used when a label is about to be
+// persisted (e.g. `ticket_type_label` on `public.tickets`,
+// `menu_label` / `delivery_label` on `public.food_orders`) so the
+// stored copy does not flip language depending on whoever views it
+// later.
+export function canonicalTranslate(key, params) {
+  return translate(key, DEFAULT_LANGUAGE, params);
+}

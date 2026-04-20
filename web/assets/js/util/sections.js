@@ -9,15 +9,9 @@
 // canonical English copy so the wallet entry does not flip language
 // based on whoever happens to view it later.
 
-import { activeTranslate, translate, DEFAULT_LANGUAGE } from "../i18n.js";
+import { activeTranslate, canonicalTranslate } from "../i18n.js";
 
 const t = activeTranslate;
-
-// English-only lookup for values that persist to the database and
-// therefore must not change with the active UI language.
-function tCanonical(key) {
-  return translate(key, DEFAULT_LANGUAGE);
-}
 
 // `label` is a getter so switching language immediately updates every
 // template that iterates over `SECTION_LABELS` — the Alpine effect
@@ -103,7 +97,7 @@ export function ticketCtaLabel(event) {
 export function canonicalTicketTypeLabel(ticketTypeId) {
   for (const entries of Object.values(TICKET_TYPE_ENTRIES)) {
     const entry = entries.find((e) => e.id === ticketTypeId);
-    if (entry) return tCanonical(entry.label_key);
+    if (entry) return canonicalTranslate(entry.label_key);
   }
   return ticketTypeId;
 }

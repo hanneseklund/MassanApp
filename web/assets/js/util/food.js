@@ -10,13 +10,9 @@
 // the canonical English copy so saved orders stay stable across
 // language switches — same pattern as ticket_type_label in sections.js.
 
-import { activeTranslate, translate, DEFAULT_LANGUAGE } from "../i18n.js";
+import { activeTranslate, canonicalTranslate } from "../i18n.js";
 
 const t = activeTranslate;
-
-function tCanonical(key) {
-  return translate(key, DEFAULT_LANGUAGE);
-}
 
 // Ten typical fast-food menus. Each entry carries a stable id, the
 // translation keys for the user-facing name + description, a price in
@@ -66,7 +62,7 @@ export function menuById(id) {
 // order so the wallet entry does not flip language later.
 export function canonicalMenuLabel(id) {
   const entry = MENU_ENTRIES.find((e) => e.id === id);
-  return entry ? tCanonical(entry.name_key) : id;
+  return entry ? canonicalTranslate(entry.name_key) : id;
 }
 
 // Pickup locations within the venue. Static data — the prototype has a
@@ -94,7 +90,7 @@ export function pickupById(id) {
 
 export function canonicalPickupLabel(id) {
   const entry = PICKUP_ENTRIES.find((e) => e.id === id);
-  return entry ? tCanonical(entry.name_key) : id;
+  return entry ? canonicalTranslate(entry.name_key) : id;
 }
 
 // Restaurants that serve a 30-minute timeslot. The slot list is
@@ -121,7 +117,7 @@ export function restaurantById(id) {
 
 export function canonicalRestaurantLabel(id) {
   const entry = RESTAURANT_ENTRIES.find((e) => e.id === id);
-  return entry ? tCanonical(entry.name_key) : id;
+  return entry ? canonicalTranslate(entry.name_key) : id;
 }
 
 // Build a list of five upcoming 30-minute timeslots starting on the

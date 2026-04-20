@@ -132,7 +132,8 @@ web/assets/js/
                                factories on alpine:init
   i18n.js                      UI translation table (en, sv) +
                                translate(), activeTranslate(),
-                               dateLocaleFor() helpers
+                               canonicalTranslate(), dateLocaleFor()
+                               helpers
   supabase.js                  singleton Supabase JS client
   util/
     dates.js                   formatDates, formatShortDate,
