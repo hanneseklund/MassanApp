@@ -1733,6 +1733,45 @@ a {
   background: var(--surface-muted);
 }
 
+.purchase__questionnaire-intro {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.questionnaire__field {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.questionnaire__field legend {
+  padding: 0;
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.questionnaire__required {
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.questionnaire__radio,
+.questionnaire__checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--ink);
+  min-height: 32px;
+}
+
 .purchase__ref {
   margin: 0;
   font-size: 13px;

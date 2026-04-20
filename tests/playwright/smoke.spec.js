@@ -337,10 +337,23 @@ test.describe("Ticket purchase (simulated)", () => {
       timeout: 10_000,
     });
 
-    // 18. Step 1 → 2 → 3. Pick Day pass, confirm.
+    // 18. Step 1 → 2 → 3 → 4. Pick Day pass, fill the questionnaire,
+    //     confirm.
     await page
       .locator(".ticket-type", { hasText: "Day pass" })
       .click();
+    await page
+      .locator(".purchase__primary", { hasText: "Continue" })
+      .click();
+    // Questionnaire: visit type is required, other fields are optional.
+    // Pick "professional" so the company/role row opens and is exercised.
+    await page
+      .locator('input[name="q-visit-type"][value="professional"]')
+      .check();
+    await page
+      .locator(".questionnaire__checkbox", { hasText: "Sustainable construction" })
+      .locator('input[type="checkbox"]')
+      .check();
     await page
       .locator(".purchase__primary", { hasText: "Continue" })
       .click();
@@ -395,7 +408,9 @@ test.describe("Ticket purchase (simulated)", () => {
         .first(),
     ).toBeVisible();
 
-    // 21. Register as delegate on ESTRO.
+    // 21. Register as delegate on ESTRO. Assert the general-profile
+    //     fields are pre-filled from the Nordbygg purchase (visit_type
+    //     stuck as "professional"), then pick a subject and confirm.
     await gotoHome(page);
     const estroCard = page.locator(".events__card", { hasText: "ESTRO 2026" });
     if ((await estroCard.count()) > 0) {
@@ -408,6 +423,20 @@ test.describe("Ticket purchase (simulated)", () => {
       await page
         .locator(".ticket-type", { hasText: "Delegate registration" })
         .click();
+      await page
+        .locator(".purchase__primary", { hasText: "Continue" })
+        .click();
+      // Acceptance criterion: returning purchase pre-fills visit_type
+      // from the user's saved profile.
+      await expect(
+        page.locator('input[name="q-visit-type"][value="professional"]'),
+      ).toBeChecked();
+      await page
+        .locator(".questionnaire__checkbox", {
+          hasText: "Clinical radiation oncology",
+        })
+        .locator('input[type="checkbox"]')
+        .check();
       await page
         .locator(".purchase__primary", { hasText: "Continue" })
         .click();

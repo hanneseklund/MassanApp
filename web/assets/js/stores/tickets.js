@@ -51,6 +51,9 @@ export function ticketsStore() {
         qr_payload: ticket.qr_payload,
         transaction_ref: ticket.transaction_ref,
         purchased_at: ticket.purchased_at,
+        ...(ticket.questionnaire !== undefined
+          ? { questionnaire: ticket.questionnaire }
+          : {}),
       };
       const { data, error } = await db
         .from("tickets")

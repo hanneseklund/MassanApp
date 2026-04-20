@@ -32,6 +32,14 @@ test("mapSupabaseUser: email-backed user resolves display_name from metadata", (
     display_name: "Jane Doe",
     auth_provider: "email",
     simulated: false,
+    profile: {
+      gender: "",
+      country: "",
+      region: "",
+      visit_type: "",
+      company: "",
+      role: "",
+    },
   });
 });
 
@@ -144,4 +152,66 @@ test("mapSupabaseUser: simulated flag is coerced to a plain boolean", () => {
   });
   assert.equal(out.simulated, true);
   assert.equal(typeof out.simulated, "boolean");
+});
+
+test("mapSupabaseUser: exposes user_metadata.profile with empty defaults", () => {
+  // A fresh user with no saved profile still gets a fully-populated
+  // profile object so the purchase view can read `user.profile.gender`
+  // without guarding against undefined. Missing fields are empty
+  // strings rather than null to match buildQuestionnairePayload's
+  // round-trip contract.
+  const out = mapSupabaseUser({
+    id: "u-10",
+    email: "noprofile@example.com",
+    user_metadata: {},
+  });
+  assert.deepEqual(out.profile, {
+    gender: "",
+    country: "",
+    region: "",
+    visit_type: "",
+    company: "",
+    role: "",
+  });
+});
+
+test("mapSupabaseUser: surfaces a saved profile for purchase pre-fill", () => {
+  // Once a visitor completes a ticket purchase, the general-profile
+  // answers are persisted to `user_metadata.profile` (see the Ticket
+  // entity in docs/implementation-specification.md). The session
+  // mapping must expose those fields so the next purchase pre-fills.
+  const out = mapSupabaseUser({
+    id: "u-11",
+    email: "returning@example.com",
+    user_metadata: {
+      profile: {
+        gender: "female",
+        country: "Sweden",
+        region: "Stockholm",
+        visit_type: "professional",
+        company: "Acme Construction",
+        role: "Architect",
+      },
+    },
+  });
+  assert.equal(out.profile.gender, "female");
+  assert.equal(out.profile.country, "Sweden");
+  assert.equal(out.profile.region, "Stockholm");
+  assert.equal(out.profile.visit_type, "professional");
+  assert.equal(out.profile.company, "Acme Construction");
+  assert.equal(out.profile.role, "Architect");
+});
+
+test("mapSupabaseUser: ignores a non-object profile and falls back to empty strings", () => {
+  // Defensive: if Supabase somehow stores an unexpected shape (null,
+  // a string, an array), the mapper must not crash the UI.
+  for (const bogus of [null, "hello", 42, []]) {
+    const out = mapSupabaseUser({
+      id: "u-bogus",
+      email: "bogus@example.com",
+      user_metadata: { profile: bogus },
+    });
+    assert.equal(out.profile.visit_type, "");
+    assert.equal(out.profile.company, "");
+  }
 });

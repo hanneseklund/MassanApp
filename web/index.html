@@ -1310,10 +1310,14 @@
               ></li>
               <li
                 :class="step >= 2 && 'purchase__step--active'"
-                x-text="$store.lang.t('purchase.step_details')"
+                x-text="$store.lang.t('purchase.step_questionnaire')"
               ></li>
               <li
                 :class="step >= 3 && 'purchase__step--active'"
+                x-text="$store.lang.t('purchase.step_details')"
+              ></li>
+              <li
+                :class="step >= 4 && 'purchase__step--active'"
                 x-text="$store.lang.t('purchase.step_confirm')"
               ></li>
             </ol>
@@ -1349,13 +1353,120 @@
                   class="purchase__primary"
                   type="button"
                   :disabled="!ticketTypeId"
-                  @click="continueToDetails()"
+                  @click="continueToQuestionnaire()"
                   x-text="$store.lang.t('purchase.continue')"
                 ></button>
               </div>
             </template>
 
             <template x-if="step === 2">
+              <form class="purchase__body" @submit.prevent="continueToDetails()">
+                <h3 class="purchase__step-title" x-text="$store.lang.t('purchase.questionnaire_title')"></h3>
+                <p class="purchase__questionnaire-intro" x-text="$store.lang.t('purchase.questionnaire_intro')"></p>
+
+                <fieldset class="questionnaire__field">
+                  <legend class="auth-form__label">
+                    <span x-text="$store.lang.t('purchase.q_visit_type')"></span>
+                    <span class="questionnaire__required" x-text="$store.lang.t('purchase.q_required')"></span>
+                  </legend>
+                  <label class="questionnaire__radio">
+                    <input
+                      type="radio"
+                      name="q-visit-type"
+                      value="professional"
+                      :checked="questionnaire.profile.visit_type === 'professional'"
+                      @change="questionnaire.profile.visit_type = 'professional'"
+                    />
+                    <span x-text="$store.lang.t('purchase.q_visit_professional')"></span>
+                  </label>
+                  <label class="questionnaire__radio">
+                    <input
+                      type="radio"
+                      name="q-visit-type"
+                      value="private"
+                      :checked="questionnaire.profile.visit_type === 'private'"
+                      @change="questionnaire.profile.visit_type = 'private'"
+                    />
+                    <span x-text="$store.lang.t('purchase.q_visit_private')"></span>
+                  </label>
+                </fieldset>
+
+                <label class="auth-form__field questionnaire__field" x-show="isProfessional()">
+                  <span class="auth-form__label" x-text="$store.lang.t('purchase.q_company')"></span>
+                  <input
+                    type="text"
+                    autocomplete="organization"
+                    x-model="questionnaire.profile.company"
+                  />
+                </label>
+                <label class="auth-form__field questionnaire__field" x-show="isProfessional()">
+                  <span class="auth-form__label" x-text="$store.lang.t('purchase.q_role')"></span>
+                  <input
+                    type="text"
+                    autocomplete="organization-title"
+                    x-model="questionnaire.profile.role"
+                  />
+                </label>
+
+                <label class="auth-form__field questionnaire__field">
+                  <span class="auth-form__label" x-text="$store.lang.t('purchase.q_gender')"></span>
+                  <select x-model="questionnaire.profile.gender">
+                    <option value="" x-text="$store.lang.t('purchase.q_choose')"></option>
+                    <option value="female" x-text="$store.lang.t('purchase.q_gender_female')"></option>
+                    <option value="male" x-text="$store.lang.t('purchase.q_gender_male')"></option>
+                    <option value="non_binary" x-text="$store.lang.t('purchase.q_gender_non_binary')"></option>
+                    <option value="prefer_not_to_say" x-text="$store.lang.t('purchase.q_gender_prefer_not')"></option>
+                  </select>
+                </label>
+                <label class="auth-form__field questionnaire__field">
+                  <span class="auth-form__label" x-text="$store.lang.t('purchase.q_country')"></span>
+                  <input
+                    type="text"
+                    autocomplete="country-name"
+                    x-model="questionnaire.profile.country"
+                  />
+                </label>
+                <label class="auth-form__field questionnaire__field">
+                  <span class="auth-form__label" x-text="$store.lang.t('purchase.q_region')"></span>
+                  <input
+                    type="text"
+                    autocomplete="address-level1"
+                    x-model="questionnaire.profile.region"
+                  />
+                </label>
+
+                <fieldset class="questionnaire__field" x-show="hasSubjects()">
+                  <legend class="auth-form__label" x-text="$store.lang.t('purchase.q_subjects')"></legend>
+                  <p class="purchase__questionnaire-intro" x-text="$store.lang.t('purchase.q_subjects_hint')"></p>
+                  <template x-for="subject in subjects()" :key="subject">
+                    <label class="questionnaire__checkbox">
+                      <input
+                        type="checkbox"
+                        :value="subject"
+                        :checked="isSubjectSelected(subject)"
+                        @change="toggleSubject(subject)"
+                      />
+                      <span x-text="subject"></span>
+                    </label>
+                  </template>
+                </fieldset>
+
+                <p class="auth-form__error" x-show="error" x-text="error"></p>
+                <button
+                  class="purchase__primary"
+                  type="submit"
+                  x-text="$store.lang.t('purchase.continue')"
+                ></button>
+                <button
+                  class="purchase__secondary"
+                  type="button"
+                  @click="goToStep(1)"
+                  x-text="$store.lang.t('purchase.back')"
+                ></button>
+              </form>
+            </template>
+
+            <template x-if="step === 3">
               <form class="purchase__body" @submit.prevent="confirm()">
                 <h3 class="purchase__step-title" x-text="$store.lang.t('purchase.attendee_details')"></h3>
                 <label class="auth-form__field">
@@ -1415,13 +1526,13 @@
                   class="purchase__secondary"
                   type="button"
                   :disabled="processing"
-                  @click="goToStep(1)"
+                  @click="goToStep(2)"
                   x-text="$store.lang.t('purchase.back')"
                 ></button>
               </form>
             </template>
 
-            <template x-if="step === 3 && confirmedTicket">
+            <template x-if="step === 4 && confirmedTicket">
               <div class="purchase__body">
                 <h3 class="purchase__step-title">
                   <span x-text="$store.lang.t('purchase.ticket_confirmed')"></span>

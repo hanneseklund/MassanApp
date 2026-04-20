@@ -162,6 +162,13 @@ web/assets/js/
                                add-ons section on views/event.js and
                                the venue-wide points shop on
                                views/points-shop.js
+    questionnaire.js           defaultQuestionnaire(event, profile),
+                               subjectsFor(event),
+                               buildQuestionnairePayload(form),
+                               buildProfileUpdate(form),
+                               PROFILE_FIELDS — ticket-purchase
+                               questionnaire form state + JSONB
+                               serialization used by views/purchase.js
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -540,11 +547,15 @@ Exactly one venue record is expected in the prototype.
   }
   ```
 
-  Unanswered optional fields are empty string or null; `visit_type` is
+  Unanswered optional fields are serialized as empty strings so the
+  persisted shape is predictable across purchases; `visit_type` is
   always present because it is required. When the event has no
   `questionnaire_subjects`, the `subjects` array is an empty array.
-  Tickets created before this column existed stay null, which the UI
-  treats the same as "no answers captured".
+  For non-professional purchases `company` and `role` are always
+  written as empty strings, even if the visitor typed into those
+  fields before switching visit types. Tickets created before this
+  column existed stay null, which the UI treats the same as "no
+  answers captured".
 - The general-profile block is also persisted to the Supabase user's
   `user_metadata.profile` (via `supabase.auth.updateUser`) so
   subsequent ticket purchases can pre-fill the general-profile form

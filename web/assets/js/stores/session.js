@@ -25,12 +25,27 @@ export function mapSupabaseUser(supabaseUser) {
   const email = supabaseUser.email || metadata.email || "";
   const displayName =
     metadata.display_name || supabaseUser.email || "Guest";
+  // Saved ticket-purchase general-profile answers. The purchase view
+  // pre-fills the questionnaire from this blob on the next visit.
+  const rawProfile =
+    metadata.profile && typeof metadata.profile === "object"
+      ? metadata.profile
+      : {};
+  const profile = {
+    gender: rawProfile.gender ?? "",
+    country: rawProfile.country ?? "",
+    region: rawProfile.region ?? "",
+    visit_type: rawProfile.visit_type ?? "",
+    company: rawProfile.company ?? "",
+    role: rawProfile.role ?? "",
+  };
   return {
     id: supabaseUser.id,
     email,
     display_name: displayName,
     auth_provider: provider,
     simulated: !!metadata.simulated,
+    profile,
   };
 }
 
