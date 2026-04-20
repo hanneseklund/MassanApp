@@ -65,6 +65,10 @@ export function pointsStore() {
       if (!user) {
         throw new Error("Cannot record points: no signed-in user.");
       }
+      // Clear any error from a prior write so a successful earn/redeem
+      // does not leave a stale "Could not load your points" banner on
+      // My Pages. loadUserRows follows the same pattern on reload.
+      this.error = null;
       const db = supabaseClient();
       const { data, error } = await db
         .from("point_transactions")

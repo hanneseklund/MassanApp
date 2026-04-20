@@ -322,10 +322,11 @@ When adding a new user-scoped store, register its id in
 
 - One view per file. Every Alpine view component (`calendarView`,
   `eventView`, `authView`, `meView`, `purchaseView`, `myTicketsView`,
-  `newsletterSignup`, `newsletterPreferences`, and any future
-  component) lives in its own module under `web/assets/js/views/`, and
-  every Alpine store lives in its own module under
-  `web/assets/js/stores/`. See "Frontend app structure" above.
+  `newsletterSignup`, `newsletterPreferences`, `foodView`,
+  `pointsShopView`, and any future component) lives in its own module
+  under `web/assets/js/views/`, and every Alpine store lives in its
+  own module under `web/assets/js/stores/`. See "Frontend app
+  structure" above.
 - Use Alpine `$store` for cross-view state (session, cart, selected
   event).
 - Derived values go in Alpine `x-data` getters, not duplicated in the
