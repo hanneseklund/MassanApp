@@ -185,19 +185,16 @@ export function purchaseView() {
             profileErr.message,
           );
         }
-        // Award points for the simulated purchase. A failed insert
-        // must not fail the purchase itself — surface to the points
-        // store's `error` state and keep the happy path visible.
-        try {
-          await Alpine.store("points").earn({
-            source: "ticket",
-            source_ref: ticket.id,
-            amount: pointsForTicket(ticket),
-            event_id: ticket.event_id,
-          });
-        } catch (pointsErr) {
-          console.warn("Points earn failed:", pointsErr.message);
-        }
+        // Award points for the simulated purchase. `tryEarn` swallows
+        // a failed insert so the user-visible "ticket purchased"
+        // outcome stands; the failure surfaces through the points
+        // store's `error` state instead.
+        await Alpine.store("points").tryEarn({
+          source: "ticket",
+          source_ref: ticket.id,
+          amount: pointsForTicket(ticket),
+          event_id: ticket.event_id,
+        });
         simulatedEmail("ticket_confirmation", {
           to: email,
           user_id: user.id,

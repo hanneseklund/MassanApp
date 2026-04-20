@@ -51,6 +51,21 @@ export function pointsStore() {
       });
     },
 
+    // Error-tolerant wrapper around `earn` for the simulated purchase
+    // flows. A failed insert must not fail the parent purchase (see
+    // docs/implementation-specification.md, "Points earning and
+    // redemption"), so `tryEarn` swallows the error, logs it, and
+    // resolves to `null`. The underlying failure is still visible on
+    // `this.error`, which drives the My Pages points banner.
+    async tryEarn({ source, source_ref, amount, event_id }) {
+      try {
+        return await this.earn({ source, source_ref, amount, event_id });
+      } catch (err) {
+        console.warn("Points earn failed:", err.message);
+        return null;
+      }
+    },
+
     async redeem({ source, source_ref, amount, event_id }) {
       return this._insert({
         source,

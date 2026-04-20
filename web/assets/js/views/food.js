@@ -183,19 +183,16 @@ export function foodView() {
           ordered_at: new Date().toISOString(),
         };
         const saved = await Alpine.store("foodOrders").add(draft);
-        // Award points for the simulated order. A failed insert must
-        // not fail the order itself — surface to the points store's
-        // `error` state and keep the happy path visible.
-        try {
-          await Alpine.store("points").earn({
-            source: "food",
-            source_ref: saved.id,
-            amount: pointsForFoodOrder(saved),
-            event_id: saved.event_id,
-          });
-        } catch (pointsErr) {
-          console.warn("Points earn failed:", pointsErr.message);
-        }
+        // Award points for the simulated order. `tryEarn` swallows a
+        // failed insert so the user-visible "order placed" outcome
+        // stands; the failure surfaces through the points store's
+        // `error` state instead.
+        await Alpine.store("points").tryEarn({
+          source: "food",
+          source_ref: saved.id,
+          amount: pointsForFoodOrder(saved),
+          event_id: saved.event_id,
+        });
         this.confirmedOrder = saved;
         this.step = 3;
       } catch (err) {

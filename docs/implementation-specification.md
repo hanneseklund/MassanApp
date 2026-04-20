@@ -763,15 +763,20 @@ that no real service is being hit.
   simulated payment resolves and the `ticket` or `food_order` row is
   inserted:
   - `views/purchase.js` calls
-    `points.earn({ source: 'ticket', source_ref: ticket.id, amount:
+    `points.tryEarn({ source: 'ticket', source_ref: ticket.id, amount:
     pointsForTicket(ticket), event_id: ticket.event_id })`.
   - `views/food.js` calls
-    `points.earn({ source: 'food', source_ref: order.id, amount:
+    `points.tryEarn({ source: 'food', source_ref: order.id, amount:
     pointsForFoodOrder(order), event_id: order.event_id })`.
-- An earning insert that fails (Supabase outage, RLS misconfig) must
+- `tryEarn` is the caller-facing method for the purchase flows because
+  an earning insert that fails (Supabase outage, RLS misconfig) must
   not fail the parent purchase — the user-visible "ticket purchased"
   or "order placed" outcome stands. The error is surfaced through
-  the `points` store's `error` state and logged to the console.
+  the `points` store's `error` state (set by the underlying `earn`
+  call) and logged to the console by `tryEarn` itself, so the view
+  code does not need to repeat the try/catch contract in two places.
+  `earn` remains available as the throwing primitive for any future
+  caller that needs to react to a failure.
 - Redemption is performed via `points.redeem(...)` which inserts a
   negative-delta `point_transactions` row. The event-add-ons section
   on `views/event.js` and the `views/points-shop.js` screen both

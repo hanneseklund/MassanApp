@@ -223,3 +223,51 @@ test("earn: throws a clear error when no session user is present", async () => {
     /no signed-in user/,
   );
 });
+
+test("tryEarn: resolves to the inserted row on success", async () => {
+  setupInsertSuite();
+  const row = {
+    id: "p-4",
+    user_id: "u-1",
+    event_id: "nordbygg-2026",
+    source: "ticket",
+    source_ref: "t-1",
+    delta: 100,
+  };
+  fakeDb._nextResult = { data: row, error: null };
+  const store = pointsStore();
+  const out = await store.tryEarn({
+    source: "ticket",
+    source_ref: "t-1",
+    amount: 100,
+    event_id: "nordbygg-2026",
+  });
+  assert.deepEqual(out, row);
+  assert.deepEqual(store.transactions[0], row);
+});
+
+test("tryEarn: swallows an insert failure, logs, and resolves to null", async () => {
+  setupInsertSuite();
+  fakeDb._nextResult = { data: null, error: { message: "rls denied" } };
+  const originalWarn = console.warn;
+  const warnings = [];
+  console.warn = (...args) => warnings.push(args);
+  try {
+    const store = pointsStore();
+    const out = await store.tryEarn({
+      source: "food",
+      source_ref: "o-1",
+      amount: 129,
+      event_id: "nordbygg-2026",
+    });
+    assert.equal(out, null);
+    // The underlying failure is still visible on `store.error` so the
+    // My Pages points banner can surface it.
+    assert.equal(store.error, "rls denied");
+    assert.deepEqual(store.transactions, []);
+    assert.equal(warnings.length, 1);
+    assert.match(warnings[0].join(" "), /Points earn failed.*rls denied/);
+  } finally {
+    console.warn = originalWarn;
+  }
+});
