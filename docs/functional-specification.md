@@ -401,9 +401,12 @@ that reviewers understand they are not real integrations.
 - Interactive elements must have accessible names and sufficient tap size
   on a phone screen.
 - The app chrome supports English and Swedish. A compact language
-  toggle in the top chrome switches between the two and the chosen
+  dropdown in the top chrome switches between the two and the chosen
   language is remembered across reloads. English is the default on
-  first load.
+  first load. The dropdown collapses to a single button that shows
+  the active flag; tapping it expands a panel listing the other
+  language(s), and picking a language swaps the chrome and collapses
+  the panel. The panel also closes on outside click and on Escape.
 - "Chrome" in this context means everything the app itself produces:
   titles, buttons, tab labels, placeholders, hints, error copy, step
   labels, accessible names (aria labels) for chrome regions, and both

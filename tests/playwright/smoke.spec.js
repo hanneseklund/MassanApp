@@ -54,6 +54,15 @@ async function openSubview(page, id, label) {
   await expect(page).toHaveURL(new RegExp(`#/event/[^/]+/${id}($|/)`));
 }
 
+// Open the language dropdown and click the option for `lang`. The
+// chrome compresses both flags into a single dropdown; the toggle
+// button is `.chrome__lang-toggle` and option items expose
+// `data-lang` so tests can target them.
+async function setLanguage(page, lang) {
+  await page.locator(".chrome__lang-toggle").click();
+  await page.locator(`.chrome__lang-option[data-lang="${lang}"]`).click();
+}
+
 async function signOutIfSignedIn(page) {
   await page.goto("/#/me");
   const signout = page.locator("button.me__signout");
@@ -662,7 +671,7 @@ test.describe("Food ordering (simulated)", () => {
 
     // 31. Toggle language to Swedish — the persisted canonical labels
     //     stay in English even though the template prose switches.
-    await page.locator('.chrome__lang[data-lang="sv"]').click();
+    await setLanguage(page, "sv");
     await expect(
       page.locator(".food .purchase__step-title", {
         hasText: "Beställning bekräftad",
@@ -672,7 +681,7 @@ test.describe("Food ordering (simulated)", () => {
       "Classic Burger",
     );
     await expect(pickupCard).toContainText("North Entrance kiosk");
-    await page.locator('.chrome__lang[data-lang="en"]').click();
+    await setLanguage(page, "en");
     await expect(
       page.locator(".food .purchase__step-title", { hasText: "Order confirmed" }),
     ).toBeVisible();
@@ -917,15 +926,24 @@ test.describe("Language toggle", () => {
     // English and "Evenemang" in Swedish.
     await gotoHome(page);
     await expect(page.locator(".chrome__title")).toHaveText("Events");
-    const enButton = page.locator('.chrome__lang[data-lang="en"]');
-    const svButton = page.locator('.chrome__lang[data-lang="sv"]');
-    await expect(enButton).toHaveAttribute("aria-pressed", "true");
-    await expect(svButton).toHaveAttribute("aria-pressed", "false");
 
-    await svButton.click();
+    // The chrome shows a single dropdown toggle for the active flag.
+    // Open it and assert the listbox marks the current language.
+    const toggle = page.locator(".chrome__lang-toggle");
+    await expect(toggle).toHaveAttribute("aria-expanded", "false");
+    await toggle.click();
+    await expect(toggle).toHaveAttribute("aria-expanded", "true");
+    await expect(
+      page.locator('.chrome__lang-option[data-lang="en"]'),
+    ).toHaveAttribute("aria-selected", "true");
+    await expect(
+      page.locator('.chrome__lang-option[data-lang="sv"]'),
+    ).toHaveAttribute("aria-selected", "false");
+
+    // Picking Swedish closes the dropdown and re-renders the chrome.
+    await page.locator('.chrome__lang-option[data-lang="sv"]').click();
+    await expect(toggle).toHaveAttribute("aria-expanded", "false");
     await expect(page.locator(".chrome__title")).toHaveText("Evenemang");
-    await expect(svButton).toHaveAttribute("aria-pressed", "true");
-    await expect(enButton).toHaveAttribute("aria-pressed", "false");
     // Calendar placeholder copy should also swap.
     await expect(
       page.locator('input[type="search"]').first(),
@@ -934,16 +952,24 @@ test.describe("Language toggle", () => {
     // Persistence across reload.
     await page.reload();
     await expect(page.locator(".chrome__title")).toHaveText("Evenemang");
+    await page.locator(".chrome__lang-toggle").click();
     await expect(
-      page.locator('.chrome__lang[data-lang="sv"]'),
-    ).toHaveAttribute("aria-pressed", "true");
+      page.locator('.chrome__lang-option[data-lang="sv"]'),
+    ).toHaveAttribute("aria-selected", "true");
 
     // Toggle back to English and confirm it re-renders live.
-    await page.locator('.chrome__lang[data-lang="en"]').click();
+    await page.locator('.chrome__lang-option[data-lang="en"]').click();
     await expect(page.locator(".chrome__title")).toHaveText("Events");
+    await page.locator(".chrome__lang-toggle").click();
     await expect(
-      page.locator('.chrome__lang[data-lang="en"]'),
-    ).toHaveAttribute("aria-pressed", "true");
+      page.locator('.chrome__lang-option[data-lang="en"]'),
+    ).toHaveAttribute("aria-selected", "true");
+    // Escape closes the dropdown.
+    await page.keyboard.press("Escape");
+    await expect(page.locator(".chrome__lang-toggle")).toHaveAttribute(
+      "aria-expanded",
+      "false",
+    );
 
     // Event content stays in its seeded language regardless of toggle
     // (see docs/functional-specification.md, "Accessibility and
@@ -958,7 +984,7 @@ test.describe("Language toggle", () => {
       .textContent();
     expect(seededSummary).toMatch(/Nordbygg is the leading Nordic/);
 
-    await page.locator('.chrome__lang[data-lang="sv"]').click();
+    await setLanguage(page, "sv");
     await expect(
       page.locator(".event-nav__tab", { hasText: "Nyheter" }).first(),
     ).toBeVisible();
@@ -971,7 +997,7 @@ test.describe("Language toggle", () => {
     await expect(page.locator(".practical")).toContainText("Alvsjo station");
 
     // Restore English for later independent runs.
-    await page.locator('.chrome__lang[data-lang="en"]').click();
+    await setLanguage(page, "en");
   });
 });
 
