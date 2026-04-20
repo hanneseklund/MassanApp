@@ -84,10 +84,16 @@ views:
 View switching is driven by hash-based routing: the URL hash is the
 canonical route and Alpine.js state mirrors it. `stores/app.js` parses
 the hash on load, subscribes to `hashchange`, and exposes navigation
-verbs (`goCalendar`, `selectEvent`, `goEventSubview`, `goAuth`,
-`goMe`, `goTickets`, `startPurchase`) that write
+verbs (`goCalendar`, `selectEvent`, `goEventSubview`,
+`selectExhibitor`, `backToExhibitors`, `goAuth`, `goMe`, `goTickets`,
+`goPoints`, `startPurchase`, `afterAuth`) that write
 `window.location.hash`; the parsed state in turn drives which view
-renders. The supported routes are:
+renders. `goMe`, `goTickets`, `goPoints`, and `startPurchase` route
+through the internal `_requireAuth` guard: if the session is signed
+in they navigate directly, otherwise they stash the intended target
+on `_preAuth` and redirect to `#/auth`. The auth view calls
+`afterAuth()` once sign-in resolves to replay the stashed target.
+The supported routes are:
 
 ```
 #/                                           calendar
@@ -234,7 +240,7 @@ view or store definitions into `app.js` or into another view's file.
 Alpine.js stores and components own the following state:
 
 - `app`: current view, selected event, selected event subview, selected
-  exhibitor, simulated-mode flag, and post-auth return target.
+  exhibitor, and post-auth return target.
 - `lang`: active UI language (`en` or `sv`), the list of supported
   languages, and a `t(key, params)` translator backed by
   `web/assets/js/i18n.js`. The chosen language is persisted to

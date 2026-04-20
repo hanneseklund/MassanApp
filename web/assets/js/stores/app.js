@@ -74,7 +74,6 @@ export function appStore() {
     eventId: null,
     eventSubview: "home",
     exhibitorId: null,
-    isSimulated: true,
     // Where to go after an auth flow completes. Stored as a route-like
     // object so that deep targets (e.g. the purchase flow for a given
     // event) can be resumed after sign-in.
