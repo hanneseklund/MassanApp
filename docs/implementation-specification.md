@@ -445,6 +445,14 @@ Exactly one venue record is expected in the prototype.
   be added to `OVERRIDE_KEYS` in `web/assets/js/views/event.js` and to
   both language entries in `web/assets/js/i18n.js` so the label
   translates correctly.
+- `questionnaire_subjects` (JSONB array of strings, optional) — the
+  event-relevant subject list offered to the visitor during the
+  ticket-purchase questionnaire (see the "Ticket" entity below).
+  Null or missing means no subject list is configured for this event
+  and the subjects step is skipped. Fully seeded events carry a
+  short, event-archetype-appropriate list (for example construction
+  topics on `Nordbygg 2026` and oncology topics on `ESTRO 2026`);
+  lightweight calendar-only events leave the field null.
 
 ### News item
 
@@ -480,6 +488,12 @@ Exactly one venue record is expected in the prototype.
   `supabase.auth.signInWithPassword`; no password material is stored in
   the browser. `display_name` is carried in the Supabase user
   `user_metadata` so it survives across sessions.
+- `user_metadata.profile` stores the visitor's saved ticket-purchase
+  general-profile answers (`gender`, `country`, `region`,
+  `visit_type`, `company`, `role`) so the ticket-purchase
+  questionnaire can pre-fill those fields on the next purchase. The
+  profile is written at the end of a successful purchase; a failure
+  to persist it does not fail the purchase.
 - Simulated Google and Microsoft sign-in reuse Supabase's anonymous
   authentication (`supabase.auth.signInAnonymously`) and stamp
   `user_metadata` with `auth_provider = 'google' | 'microsoft'`,
@@ -495,7 +509,7 @@ Exactly one venue record is expected in the prototype.
 
 - `id`, `user_id`, `event_id`, `ticket_type`, `ticket_type_label`,
   `attendee_name`, `attendee_email`, `qr_payload`, `transaction_ref`,
-  `purchased_at`
+  `purchased_at`, `questionnaire`
 - Tickets live in `public.tickets` with Row Level Security so a user can
   read and insert only rows where `auth.uid() = user_id`. The frontend
   inserts a new row at the end of the simulated purchase flow and reads
@@ -508,6 +522,37 @@ Exactly one venue record is expected in the prototype.
     registration") type.
   Ticket-type catalogs live in the frontend (not in seed JSON) so the
   same simulated catalog applies regardless of how an event was loaded.
+- `questionnaire` is a nullable JSONB column that captures the
+  answers to the purchase questionnaire (see "Ticket purchase
+  (simulated)" in the functional specification). Expected shape:
+
+  ```json
+  {
+    "profile": {
+      "gender": "...",
+      "country": "...",
+      "region": "...",
+      "visit_type": "professional" | "private",
+      "company": "...",
+      "role": "..."
+    },
+    "subjects": ["subject", "..."]
+  }
+  ```
+
+  Unanswered optional fields are empty string or null; `visit_type` is
+  always present because it is required. When the event has no
+  `questionnaire_subjects`, the `subjects` array is an empty array.
+  Tickets created before this column existed stay null, which the UI
+  treats the same as "no answers captured".
+- The general-profile block is also persisted to the Supabase user's
+  `user_metadata.profile` (via `supabase.auth.updateUser`) so
+  subsequent ticket purchases can pre-fill the general-profile form
+  from the signed-in user. The session store surfaces this profile on
+  the mapped session user so the purchase view can read it without
+  calling Supabase directly. Failure to persist to `user_metadata`
+  never fails the purchase; the same error-tolerance rule as the
+  points-earn path applies.
 
 ### Food order
 

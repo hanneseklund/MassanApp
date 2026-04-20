@@ -283,13 +283,28 @@ screen and never earn points from any flow.
   congress-style events that use registration.
 - A visitor who is not signed in is sent to the auth view first and
   returned to the purchase flow after sign-in.
-- The flow has three steps:
+- The flow has four steps:
   1. Pick a ticket type. Public-ticketing events offer at least two
      simulated types (for example "Day pass" and "Full event pass").
      Congress events offer a single "Delegate registration" type.
-  2. Confirm attendee details (name and email, defaulted from the
+  2. Answer a short questionnaire before payment:
+     - General profile: gender, country, region of residence, visit
+       type (professional or private). If the visit type is
+       professional, company and role are also collected. Visit type
+       is required; the remaining general-profile fields are
+       optional.
+     - Event-relevant subjects: if the event has a configured subject
+       list (`events.questionnaire_subjects`), the visitor picks the
+       subjects they are interested in from that list. Events without
+       a configured list skip this block entirely.
+     General-profile fields are pre-filled from the visitor's saved
+     profile so that a returning purchaser does not have to re-enter
+     them. Answers are stored with the ticket, and the general-profile
+     fields are saved back to the visitor's account so subsequent
+     purchases keep them pre-filled.
+  3. Confirm attendee details (name and email, defaulted from the
      signed-in profile) and review an order summary.
-  3. Confirm the purchase. No real payment is taken; the confirmation
+  4. Confirm the purchase. No real payment is taken; the confirmation
      step always succeeds and is visibly marked as simulated.
 - On success the visitor sees a confirmation screen with a link to My
   Tickets, and the new ticket appears there.
@@ -314,6 +329,10 @@ screen and never earn points from any flow.
   state, so a signed-in visitor is not misled into thinking they own
   no tickets. The same rule applies to the newsletter preferences
   section in My Pages.
+- Questionnaire answers captured at purchase are stored on the ticket
+  record. Whether My Tickets surfaces those answers in the UI is an
+  implementation choice for the UI subtask; the data is always
+  captured whether or not it is shown here.
 
 ## Event archetype coverage
 

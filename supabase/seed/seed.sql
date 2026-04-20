@@ -95,7 +95,7 @@ on conflict (id) do update set
 
 insert into public.events (
   id, venue_id, name, subtitle, type, category, audience_rule, ticket_model,
-  start_date, end_date, summary, branding, overrides
+  start_date, end_date, summary, branding, overrides, questionnaire_subjects
 ) values
   (
     'nordbygg-2026', 'stockholmsmassan', 'Nordbygg 2026', 'Nordic construction trade fair',
@@ -111,6 +111,14 @@ insert into public.events (
       'entrance', 'Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.',
       'bag_rules', 'Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.',
       'access_notes', 'A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis.'
+    ),
+    jsonb_build_array(
+      'Sustainable construction',
+      'BIM and digital tools',
+      'Renovation',
+      'Heating and ventilation',
+      'Smart buildings',
+      'Building safety'
     )
   ),
   (
@@ -127,6 +135,14 @@ insert into public.events (
       'entrance', 'Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.',
       'bag_rules', 'Standard venue bag rules apply; congress materials are distributed at the registration desk.',
       'access_notes', 'Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes.'
+    ),
+    jsonb_build_array(
+      'Clinical radiation oncology',
+      'Medical physics',
+      'Radiobiology',
+      'Brachytherapy',
+      'Imaging and treatment planning',
+      'Technology and innovation'
     )
   ),
   (
@@ -143,7 +159,8 @@ insert into public.events (
       'entrance', 'EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.',
       'bag_rules', 'Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom.',
       'access_notes', 'On-demand session recordings are available to registered delegates on the EHA congress platform after the congress.'
-    )
+    ),
+    null
   )
 on conflict (id) do update set
   venue_id = excluded.venue_id,
@@ -157,7 +174,8 @@ on conflict (id) do update set
   end_date = excluded.end_date,
   summary = excluded.summary,
   branding = excluded.branding,
-  overrides = excluded.overrides;
+  overrides = excluded.overrides,
+  questionnaire_subjects = excluded.questionnaire_subjects;
 
 -- Additional upcoming events from the Stockholmsmassan public calendar
 -- (https://stockholmsmassan.se/en/calendar/, scraped 2026-04-18 per

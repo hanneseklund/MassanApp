@@ -76,6 +76,22 @@ Scope (do not):
 - No analytics or aggregation features over the answers. Storing them
   is enough for the prototype.
 
+Follow-up from subtask 1:
+- Subtask 1 (`add-ticket-purchase-questionnaire-01-schema-and-spec.md`)
+  landed the schema and the spec language. When starting this task,
+  the following are already in place:
+  - `tickets.questionnaire` (JSONB, nullable) and
+    `events.questionnaire_subjects` (JSONB array, nullable) exist in
+    the shared Supabase project and in `supabase/migrations/0006_ticket_questionnaire.sql`.
+  - `supabase/seed/seed.sql` and `web/data/catalog.json` set
+    `questionnaire_subjects` on `nordbygg-2026` and `estro-2026`;
+    `eha-2026` and the lightweight calendar events have no subjects
+    configured, which means the subjects step is skipped for them.
+  - Both spec docs describe the questionnaire step, the `questionnaire`
+    JSONB shape on tickets, the `questionnaire_subjects` field on
+    events, and the `user_metadata.profile` pre-fill rule. Re-read
+    them before implementing and fix any drift once the UI lands.
+
 Acceptance criteria:
 - A signed-in visitor cannot complete a Nordbygg ticket purchase
   without answering the questionnaire's required questions.

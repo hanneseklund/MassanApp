@@ -105,7 +105,15 @@
         "entrance": "Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.",
         "bag_rules": "Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.",
         "access_notes": "A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis."
-      }
+      },
+      "questionnaire_subjects": [
+        "Sustainable construction",
+        "BIM and digital tools",
+        "Renovation",
+        "Heating and ventilation",
+        "Smart buildings",
+        "Building safety"
+      ]
     },
     {
       "id": "estro-2026",
@@ -130,7 +138,15 @@
         "entrance": "Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.",
         "bag_rules": "Standard venue bag rules apply; congress materials are distributed at the registration desk.",
         "access_notes": "Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes."
-      }
+      },
+      "questionnaire_subjects": [
+        "Clinical radiation oncology",
+        "Medical physics",
+        "Radiobiology",
+        "Brachytherapy",
+        "Imaging and treatment planning",
+        "Technology and innovation"
+      ]
     },
     {
       "id": "eha-2026",
