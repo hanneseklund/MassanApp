@@ -985,19 +985,19 @@ insert into public.merchandise (
   ('merch-tote-bag',
    'Stockholmsmassan tote bag',
    'Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark.',
-   120, null, null, true),
+   120, 'assets/images/merchandise/tote-bag.svg', null, true),
   ('merch-cap',
    'Stockholmsmassan cap',
    'Simulated item. Six-panel cap with embroidered Stockholmsmassan logo.',
-   150, null, 100, true),
+   150, 'assets/images/merchandise/cap.svg', 100, true),
   ('merch-notebook',
    'Notebook',
    'Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker.',
-   90, null, null, true),
+   90, 'assets/images/merchandise/notebook.svg', null, true),
   ('merch-enamel-pin',
    'Enamel pin',
    'Simulated item. Enamel pin with the Stockholmsmassan roundel.',
-   60, null, 200, true)
+   60, 'assets/images/merchandise/enamel-pin.svg', 200, true)
 on conflict (id) do update set
   name = excluded.name,
   description = excluded.description,

@@ -1695,7 +1695,7 @@
       "name": "Stockholmsmassan tote bag",
       "description": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark.",
       "points_cost": 120,
-      "image": null,
+      "image": "assets/images/merchandise/tote-bag.svg",
       "stock": null,
       "active": true
     },
@@ -1704,7 +1704,7 @@
       "name": "Stockholmsmassan cap",
       "description": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo.",
       "points_cost": 150,
-      "image": null,
+      "image": "assets/images/merchandise/cap.svg",
       "stock": 100,
       "active": true
     },
@@ -1713,7 +1713,7 @@
       "name": "Notebook",
       "description": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker.",
       "points_cost": 90,
-      "image": null,
+      "image": "assets/images/merchandise/notebook.svg",
       "stock": null,
       "active": true
     },
@@ -1722,7 +1722,7 @@
       "name": "Enamel pin",
       "description": "Simulated item. Enamel pin with the Stockholmsmassan roundel.",
       "points_cost": 60,
-      "image": null,
+      "image": "assets/images/merchandise/enamel-pin.svg",
       "stock": 200,
       "active": true
     }
