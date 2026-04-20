@@ -151,10 +151,13 @@ web/assets/js/
                                calculators used by the points store
     session-sync.js            SESSION_SYNC_STORE_IDS,
                                notifySessionStores(),
-                               loadUserRows(store, options) — shared
+                               loadUserRows(store, options),
+                               insertOwnedRow(store, options) — shared
                                by the user-scoped stores so the
                                clear-on-signed-out, select-plus-error
-                               contract is written once
+                               fetch contract and the
+                               insert-plus-unshift write contract are
+                               each written once
     redemption.js              createRedemptionController(config) —
                                shared per-session redemption state
                                (stockConsumed, pending, lastRedemption,
@@ -325,6 +328,21 @@ failure sequence is written once rather than duplicated per store.
 When adding a new user-scoped store, register its id in
 `SESSION_SYNC_STORE_IDS` and route its `_onSessionChange` through
 `loadUserRows`.
+
+The matching insert half is `insertOwnedRow(this, { table, field,
+row })` from the same module: it runs
+`insert(row).select("*").single()` and, on success, prepends the
+returned row to `store[field]` so the in-memory list stays
+consistent with the database without a refetch.
+`stores/tickets.js` (`add`), `stores/food-orders.js` (`add`), and
+`stores/points.js` (`_insert`) all delegate to it. Supabase errors
+are rethrown so callers can show an inline error; `points._insert`
+additionally records the failure on `this.error` before rethrowing,
+because `tryEarn` swallows the rethrow and the error has to reach
+the My Pages points banner through the store instead. The newsletter
+store keeps its own insert path because anonymous signups have to
+skip the `.select()` return — see the comment in
+`stores/newsletter.js`.
 
 ### Alpine.js usage rules
 

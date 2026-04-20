@@ -5,6 +5,10 @@
 // `notifySessionStores`; each store's `_onSessionChange` delegates to
 // `loadUserRows` so the clear-on-signed-out, set-loading, select,
 // console.warn-plus-store.error-on-failure contract is written once.
+// `insertOwnedRow` covers the matching insert half: `tickets.add`,
+// `foodOrders.add`, and `points._insert` all follow the same
+// `insert → select("*").single() → throw on error → unshift to field`
+// shape and delegate here so the three paths cannot drift.
 
 import { supabaseClient } from "../supabase.js";
 
@@ -51,4 +55,22 @@ export async function loadUserRows(
   }
   const rows = data || [];
   store[field] = normalize ? rows.map(normalize) : rows;
+}
+
+// Insert a user-owned row through the Supabase client and prepend the
+// returned row to `store[field]` so the in-memory list stays consistent
+// with the database without a refetch. Throws on Supabase errors so
+// callers can show an inline error; a caller that needs the row to
+// land in `store.error` too (like the points store, which is read
+// error-tolerantly by `tryEarn`) can wrap the call.
+export async function insertOwnedRow(store, { table, field, row }) {
+  const db = supabaseClient();
+  const { data, error } = await db
+    .from(table)
+    .insert(row)
+    .select("*")
+    .single();
+  if (error) throw new Error(error.message);
+  store[field].unshift(data);
+  return data;
 }

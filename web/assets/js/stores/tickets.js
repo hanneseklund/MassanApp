@@ -3,8 +3,7 @@
 // auth.uid() = user_id, so a plain `select` returns only the
 // signed-in user's tickets. Inserts go through the Supabase client.
 
-import { supabaseClient } from "../supabase.js";
-import { loadUserRows } from "../util/session-sync.js";
+import { insertOwnedRow, loadUserRows } from "../util/session-sync.js";
 
 export function ticketsStore() {
   return {
@@ -39,7 +38,6 @@ export function ticketsStore() {
     },
 
     async add(ticket) {
-      const db = supabaseClient();
       const row = {
         ...(ticket.id ? { id: ticket.id } : {}),
         user_id: ticket.user_id,
@@ -55,14 +53,11 @@ export function ticketsStore() {
           ? { questionnaire: ticket.questionnaire }
           : {}),
       };
-      const { data, error } = await db
-        .from("tickets")
-        .insert(row)
-        .select("*")
-        .single();
-      if (error) throw new Error(error.message);
-      this.tickets.unshift(data);
-      return data;
+      return insertOwnedRow(this, {
+        table: "tickets",
+        field: "tickets",
+        row,
+      });
     },
   };
 }

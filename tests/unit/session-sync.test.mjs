@@ -32,6 +32,14 @@ const fakeDb = {
     this._calls.push({ op: "order", col, opts });
     return this;
   },
+  insert(row) {
+    this._calls.push({ op: "insert", row });
+    return this;
+  },
+  single() {
+    this._calls.push({ op: "single" });
+    return this;
+  },
   then(onFulfilled, onRejected) {
     return Promise.resolve(this._nextResult).then(onFulfilled, onRejected);
   },
@@ -52,8 +60,12 @@ globalThis.Alpine = {
   },
 };
 
-const { loadUserRows, notifySessionStores, SESSION_SYNC_STORE_IDS } =
-  await import("../../web/assets/js/util/session-sync.js");
+const {
+  insertOwnedRow,
+  loadUserRows,
+  notifySessionStores,
+  SESSION_SYNC_STORE_IDS,
+} = await import("../../web/assets/js/util/session-sync.js");
 
 function resetSuite() {
   fakeDb._reset();
@@ -228,4 +240,48 @@ test("loadUserRows: coerces a null data response to an empty array", async () =>
   await loadUserRows(store, { table: "tickets", field: "items" });
   assert.deepEqual(store.items, []);
   assert.equal(store.error, null);
+});
+
+test("insertOwnedRow: inserts with select().single() and prepends to store[field]", async () => {
+  resetSuite();
+  fakeDb._nextResult = {
+    data: { id: "t-new", user_id: "u-1", event_id: "e-1" },
+    error: null,
+  };
+  const store = { items: [{ id: "t-existing" }] };
+  const result = await insertOwnedRow(store, {
+    table: "tickets",
+    field: "items",
+    row: { user_id: "u-1", event_id: "e-1" },
+  });
+  assert.deepEqual(result, { id: "t-new", user_id: "u-1", event_id: "e-1" });
+  assert.deepEqual(
+    store.items.map((r) => r.id),
+    ["t-new", "t-existing"],
+  );
+  assert.deepEqual(fakeDb._calls, [
+    { op: "from", table: "tickets" },
+    { op: "insert", row: { user_id: "u-1", event_id: "e-1" } },
+    { op: "select", cols: "*" },
+    { op: "single" },
+  ]);
+});
+
+test("insertOwnedRow: throws on Supabase error and leaves store[field] untouched", async () => {
+  resetSuite();
+  fakeDb._nextResult = { data: null, error: { message: "rls denied" } };
+  const store = { items: [{ id: "t-existing" }] };
+  await assert.rejects(
+    () =>
+      insertOwnedRow(store, {
+        table: "tickets",
+        field: "items",
+        row: { user_id: "u-1" },
+      }),
+    /rls denied/,
+  );
+  assert.deepEqual(
+    store.items.map((r) => r.id),
+    ["t-existing"],
+  );
 });

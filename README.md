@@ -103,8 +103,9 @@ catalog and next-half-hour timeslot generator, catalog-store
 selectors, tickets-store ownership selectors, food-orders
 store user selector, newsletter-store event/venue-wide lookup,
 the points earning rates and points-store balance / per-user
-selectors, the shared sign-in / sign-out fetch contract that the
-four user-scoped stores delegate to, the lang-store persistence
+selectors, the shared sign-in / sign-out fetch contract and the shared
+user-owned-row insert contract that the four user-scoped stores
+delegate to, the lang-store persistence
 and translator wiring, the Supabase-user mapping that backs
 the session store, the shared redemption controller that
 backs both the event add-ons section and the venue-wide points

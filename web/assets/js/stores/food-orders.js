@@ -2,8 +2,7 @@
 // public.food_orders. Row Level Security scopes selects to
 // auth.uid() = user_id, same pattern as the tickets store.
 
-import { supabaseClient } from "../supabase.js";
-import { loadUserRows } from "../util/session-sync.js";
+import { insertOwnedRow, loadUserRows } from "../util/session-sync.js";
 
 export function foodOrdersStore() {
   return {
@@ -28,7 +27,6 @@ export function foodOrdersStore() {
     },
 
     async add(order) {
-      const db = supabaseClient();
       const row = {
         ...(order.id ? { id: order.id } : {}),
         user_id: order.user_id,
@@ -44,14 +42,11 @@ export function foodOrdersStore() {
         transaction_ref: order.transaction_ref,
         ordered_at: order.ordered_at,
       };
-      const { data, error } = await db
-        .from("food_orders")
-        .insert(row)
-        .select("*")
-        .single();
-      if (error) throw new Error(error.message);
-      this.orders.unshift(data);
-      return data;
+      return insertOwnedRow(this, {
+        table: "food_orders",
+        field: "orders",
+        row,
+      });
     },
   };
 }

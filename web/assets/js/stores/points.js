@@ -10,8 +10,7 @@
 // section on `views/event.js` and the `views/points-shop.js`
 // screen for venue-wide merchandise.
 
-import { supabaseClient } from "../supabase.js";
-import { loadUserRows } from "../util/session-sync.js";
+import { insertOwnedRow, loadUserRows } from "../util/session-sync.js";
 
 export function pointsStore() {
   return {
@@ -84,24 +83,25 @@ export function pointsStore() {
       // does not leave a stale "Could not load your points" banner on
       // My Pages. loadUserRows follows the same pattern on reload.
       this.error = null;
-      const db = supabaseClient();
-      const { data, error } = await db
-        .from("point_transactions")
-        .insert({
-          user_id: user.id,
-          event_id,
-          source,
-          source_ref: source_ref ?? null,
-          delta,
-        })
-        .select("*")
-        .single();
-      if (error) {
-        this.error = error.message;
-        throw new Error(error.message);
+      try {
+        return await insertOwnedRow(this, {
+          table: "point_transactions",
+          field: "transactions",
+          row: {
+            user_id: user.id,
+            event_id,
+            source,
+            source_ref: source_ref ?? null,
+            delta,
+          },
+        });
+      } catch (err) {
+        // Surface the failure on the store so My Pages can render a
+        // "Could not record points" banner even when the caller
+        // (`tryEarn`) swallows the throw.
+        this.error = err.message;
+        throw err;
       }
-      this.transactions.unshift(data);
-      return data;
     },
   };
 }
