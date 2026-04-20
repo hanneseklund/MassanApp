@@ -242,12 +242,15 @@ section above for the caveats.
     Assert: the app navigates to the auth view.
 17. Sign in with the step-12 account. Assert: the app returns to the
     purchase view (hash `#/event/nordbygg-2026/purchase`).
-18. Step 1: pick "Day pass". Step 2: keep the defaulted attendee name
-    and email, confirm the order summary shows event name, dates, and
-    price. Step 3: confirm. Assert: the confirmation screen shows a
-    `simulated` chip, a transaction reference, and a rendered QR SVG.
-    Assert: a `[simulatedEmail] ticket_confirmation` entry is logged
-    to the browser console.
+18. Step 1: pick "Day pass". Step 2: fill the questionnaire — pick a
+    visit type ("Professional" exposes optional company/role rows) and,
+    if the event has a subjects block, tick at least one subject.
+    Step 3: keep the defaulted attendee name and email, confirm the
+    order summary shows event name, dates, and price. Step 4: confirm.
+    Assert: the confirmation screen shows a `simulated` chip, a
+    transaction reference, and a rendered QR SVG. Assert: a
+    `[simulatedEmail] ticket_confirmation` entry is logged to the
+    browser console.
 19. From the confirmation, open My Tickets. Assert: a ticket for
     `Nordbygg 2026` appears with ticket type label, attendee name,
     attendee email, a purchase date, and an SVG QR code.
@@ -256,8 +259,10 @@ section above for the caveats.
     assert: the app navigates to My Tickets (hash `#/tickets`) and the
     Nordbygg ticket is visible.
 21. Open `ESTRO 2026`, tap "Register as delegate", and complete the
-    flow. Assert: the delegate ticket appears in My Tickets alongside
-    the Nordbygg ticket.
+    flow. Assert: the questionnaire step pre-fills the visit type
+    saved during step 18 (no manual re-entry of the general profile).
+    Pick at least one subject and confirm. Assert: the delegate
+    ticket appears in My Tickets alongside the Nordbygg ticket.
 22. Reload the page. Assert: the session is restored and both tickets
     still appear in My Tickets.
 

@@ -211,8 +211,8 @@ Spending — event add-ons
   purchased with currency.
 - Add-ons appear as a clearly-marked "Event add-ons" section on the
   event home view, visible only once the signed-in visitor owns a
-  ticket for that event. The purchase flow itself stays at three
-  steps.
+  ticket for that event. Add-on redemption is a separate flow from
+  ticket purchase and does not change the ticket-purchase step count.
 - Each add-on card shows an image, name, description, points cost,
   and a "Redeem" button. The button is disabled with an explanatory
   message when the visitor's balance is below the cost. Signed-out

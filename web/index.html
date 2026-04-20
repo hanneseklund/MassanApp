@@ -1285,9 +1285,10 @@
         </template>
       </section>
 
-      <!-- Purchase view: three-step simulated ticket flow scoped to one
-           event. A visitor who lands here while signed out is routed
-           through the auth view and returned afterwards. -->
+      <!-- Purchase view: four-step simulated ticket flow scoped to one
+           event (pick type, questionnaire, attendee details, confirm).
+           A visitor who lands here while signed out is routed through
+           the auth view and returned afterwards. -->
       <section
         class="view__body"
         x-show="$store.app.view === 'purchase'"

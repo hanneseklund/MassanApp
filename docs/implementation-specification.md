@@ -72,11 +72,12 @@ views:
 - `tickets` — the signed-in user's My Tickets wallet. Reached from
   `me`, from the purchase confirmation screen, and from the
   "View ticket" affordance on an event home view.
-- `purchase` — three-step simulated ticket purchase scoped to the
-  currently selected event. A visitor who lands here while signed
+- `purchase` — four-step simulated ticket purchase scoped to the
+  currently selected event (pick ticket type, fill questionnaire,
+  attendee details, confirm). A visitor who lands here while signed
   out is routed through `auth` and returned afterwards.
-- `points-shop` — the venue-wide Stockholmsmässan merchandise shop
-  at `#/points`. Independent of any event selection. A visitor who
+- `points` — the venue-wide Stockholmsmässan merchandise shop at
+  `#/points`. Independent of any event selection. A visitor who
   lands here while signed out is routed through `auth` and returned
   afterwards, same pattern as `purchase` and the food flow.
 
