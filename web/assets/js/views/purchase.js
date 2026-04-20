@@ -37,11 +37,28 @@ export function purchaseView() {
           Alpine.store("app").view,
           Alpine.store("app").eventId,
           Alpine.store("session").user?.id,
+          Alpine.store("session").loading,
         ],
-        () => {
-          if (Alpine.store("app").view === "purchase") this._hydrate();
-        }
+        () => this._applyAuthGuardAndHydrate(),
       );
+      this._applyAuthGuardAndHydrate();
+    },
+
+    // A visitor who lands on the purchase route while signed out is
+    // routed through auth and returned afterwards (see "Ticket purchase
+    // (simulated)" in docs/functional-specification.md). The CTA path
+    // handles this via app._requireAuth; this guard covers direct URL
+    // navigation. Waits for session.loading to finish so a still-loading
+    // Supabase session is never mistaken for "signed out".
+    _applyAuthGuardAndHydrate() {
+      const app = Alpine.store("app");
+      if (app.view !== "purchase") return;
+      const session = Alpine.store("session");
+      if (session.loading) return;
+      if (!session.user) {
+        app.goAuth({ view: "purchase", eventId: app.eventId });
+        return;
+      }
       this._hydrate();
     },
 
