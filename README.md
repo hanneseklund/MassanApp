@@ -105,8 +105,10 @@ store user selector, newsletter-store event/venue-wide lookup,
 the points earning rates and points-store balance / per-user
 selectors, the shared sign-in / sign-out fetch contract that the
 four user-scoped stores delegate to, the lang-store persistence
-and translator wiring, and the Supabase-user mapping that backs
-the session store) also have a fast unit suite that does not need
+and translator wiring, the Supabase-user mapping that backs
+the session store, and the shared redemption controller that
+backs both the event add-ons section and the venue-wide points
+shop) also have a fast unit suite that does not need
 a browser or Supabase:
 
 ```

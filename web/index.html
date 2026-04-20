@@ -294,7 +294,7 @@
 
                     <div
                       class="event-addons__banner"
-                      x-show="lastRedemption"
+                      x-show="redemption.lastRedemption"
                       role="status"
                       aria-live="polite"
                     >
@@ -304,22 +304,22 @@
                       </p>
                       <p
                         class="event-addons__banner-body"
-                        x-show="lastRedemption"
-                        x-text="$store.lang.t('event.addons_confirmed_body', { name: lastRedemption?.name ?? '', cost: lastRedemption?.cost ?? 0 })"
+                        x-show="redemption.lastRedemption"
+                        x-text="$store.lang.t('event.addons_confirmed_body', { name: redemption.lastRedemption?.name ?? '', cost: redemption.lastRedemption?.cost ?? 0 })"
                       ></p>
                       <button
                         type="button"
                         class="event-addons__banner-dismiss"
-                        @click="dismissLastRedemption()"
+                        @click="redemption.dismissLastRedemption()"
                         x-text="$store.lang.t('event.addons_dismiss')"
                       ></button>
                     </div>
 
                     <p
                       class="auth-form__error"
-                      x-show="addonError"
+                      x-show="redemption.error"
                       role="alert"
-                      x-text="addonError"
+                      x-text="redemption.error"
                     ></p>
 
                     <ul class="event-addons__list">
@@ -340,22 +340,22 @@
                             <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: addon.points_cost })"></p>
                             <p
                               class="event-addons__stock"
-                              x-show="addonRemainingStock(addon) !== null"
-                              x-text="$store.lang.t('event.addons_stock', { count: addonRemainingStock(addon) })"
+                              x-show="redemption.remainingStock(addon) !== null"
+                              x-text="$store.lang.t('event.addons_stock', { count: redemption.remainingStock(addon) })"
                             ></p>
                             <p
                               class="event-addons__disabled-reason"
-                              x-show="!addonCanRedeem(addon) && !addonRedeemPending[addon.id]"
-                              x-text="addonDisabledReason(addon)"
+                              x-show="!redemption.canRedeem(addon) && !redemption.pending[addon.id]"
+                              x-text="redemption.disabledReason(addon)"
                             ></p>
                             <button
                               type="button"
                               class="event-addons__redeem"
-                              :disabled="!addonCanRedeem(addon)"
-                              @click="redeemAddon(addon)"
+                              :disabled="!redemption.canRedeem(addon)"
+                              @click="redemption.redeem(addon)"
                             >
-                              <span x-show="!addonRedeemPending[addon.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
-                              <span x-show="addonRedeemPending[addon.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
+                              <span x-show="!redemption.pending[addon.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
+                              <span x-show="redemption.pending[addon.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
                             </button>
                           </div>
                         </li>
@@ -1595,7 +1595,7 @@
 
             <div
               class="event-addons__banner points-shop__banner"
-              x-show="lastRedemption"
+              x-show="redemption.lastRedemption"
               role="status"
               aria-live="polite"
             >
@@ -1605,22 +1605,22 @@
               </p>
               <p
                 class="event-addons__banner-body"
-                x-show="lastRedemption"
-                x-text="$store.lang.t('shop.confirmed_body', { name: lastRedemption?.name ?? '', cost: lastRedemption?.cost ?? 0 })"
+                x-show="redemption.lastRedemption"
+                x-text="$store.lang.t('shop.confirmed_body', { name: redemption.lastRedemption?.name ?? '', cost: redemption.lastRedemption?.cost ?? 0 })"
               ></p>
               <button
                 type="button"
                 class="event-addons__banner-dismiss"
-                @click="dismissLastRedemption()"
+                @click="redemption.dismissLastRedemption()"
                 x-text="$store.lang.t('shop.dismiss')"
               ></button>
             </div>
 
             <p
               class="auth-form__error"
-              x-show="shopError"
+              x-show="redemption.error"
               role="alert"
-              x-text="shopError"
+              x-text="redemption.error"
             ></p>
 
             <p
@@ -1647,22 +1647,22 @@
                     <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: item.points_cost })"></p>
                     <p
                       class="event-addons__stock"
-                      x-show="remainingStock(item) !== null"
-                      x-text="$store.lang.t('event.addons_stock', { count: remainingStock(item) })"
+                      x-show="redemption.remainingStock(item) !== null"
+                      x-text="$store.lang.t('event.addons_stock', { count: redemption.remainingStock(item) })"
                     ></p>
                     <p
                       class="event-addons__disabled-reason"
-                      x-show="!canRedeem(item) && !merchRedeemPending[item.id]"
-                      x-text="disabledReason(item)"
+                      x-show="!redemption.canRedeem(item) && !redemption.pending[item.id]"
+                      x-text="redemption.disabledReason(item)"
                     ></p>
                     <button
                       type="button"
                       class="event-addons__redeem points-shop__redeem"
-                      :disabled="!canRedeem(item)"
-                      @click="redeem(item)"
+                      :disabled="!redemption.canRedeem(item)"
+                      @click="redemption.redeem(item)"
                     >
-                      <span x-show="!merchRedeemPending[item.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
-                      <span x-show="merchRedeemPending[item.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
+                      <span x-show="!redemption.pending[item.id]" x-text="$store.lang.t('event.addons_redeem')"></span>
+                      <span x-show="redemption.pending[item.id]" x-text="$store.lang.t('event.addons_redeeming')"></span>
                     </button>
                   </div>
                 </li>

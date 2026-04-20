@@ -451,10 +451,14 @@ fetch contract in `util/session-sync.js` (`loadUserRows` and
 delegate their `_onSessionChange` to, the lang-store wiring in
 `stores/lang.js` (persisted-language validation, `set()`'s
 same-language guard, storage / `<html lang>` side effects, and
-the `t()` / `dateLocale()` delegation to the i18n helpers), and
+the `t()` / `dateLocale()` delegation to the i18n helpers),
 the Supabase-user mapping in `stores/session.js` that resolves
-the signed-in provider, display name, and simulated flag) have
-a fast unit suite under
+the signed-in provider, display name, and simulated flag, and
+the shared redemption controller in `util/redemption.js`
+(`createRedemptionController`) that backs the event add-ons
+section and the venue-wide points shop — `remainingStock`,
+`canRedeem`, `disabledReason`, and the `redeem` writer that
+delegates to the `points` store) have a fast unit suite under
 `tests/unit/` that does not require a browser or Supabase.
 
 The suite runs against the same source files the browser loads —

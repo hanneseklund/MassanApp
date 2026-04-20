@@ -105,38 +105,26 @@ export function appStore() {
     goCalendar() {
       this._navigate({ view: "calendar" });
     },
-    goMe() {
+    _requireAuth(target) {
       if (Alpine.store("session").isSignedIn) {
-        this._navigate({ view: "me" });
+        this._navigate(target);
       } else {
-        this._preAuth = { view: "me" };
+        this._preAuth = { ...target };
         this._navigate({ view: "auth" });
       }
+    },
+    goMe() {
+      this._requireAuth({ view: "me" });
     },
     goTickets() {
-      if (Alpine.store("session").isSignedIn) {
-        this._navigate({ view: "tickets" });
-      } else {
-        this._preAuth = { view: "tickets" };
-        this._navigate({ view: "auth" });
-      }
+      this._requireAuth({ view: "tickets" });
     },
     goPoints() {
-      if (Alpine.store("session").isSignedIn) {
-        this._navigate({ view: "points" });
-      } else {
-        this._preAuth = { view: "points" };
-        this._navigate({ view: "auth" });
-      }
+      this._requireAuth({ view: "points" });
     },
     startPurchase(eventId) {
       if (!eventId) return;
-      if (Alpine.store("session").isSignedIn) {
-        this._navigate({ view: "purchase", eventId });
-      } else {
-        this._preAuth = { view: "purchase", eventId };
-        this._navigate({ view: "auth" });
-      }
+      this._requireAuth({ view: "purchase", eventId });
     },
     goAuth(target) {
       if (typeof target === "string") {
@@ -151,12 +139,7 @@ export function appStore() {
     afterAuth() {
       const target = this._preAuth || { view: "calendar" };
       this._preAuth = { view: "calendar" };
-      if (target.view === "me") this._navigate({ view: "me" });
-      else if (target.view === "tickets") this._navigate({ view: "tickets" });
-      else if (target.view === "points") this._navigate({ view: "points" });
-      else if (target.view === "purchase" && target.eventId) {
-        this._navigate({ view: "purchase", eventId: target.eventId });
-      } else this._navigate({ view: "calendar" });
+      this._navigate(target);
     },
     selectEvent(eventId) {
       this._navigate({ view: "event", eventId, eventSubview: "home" });

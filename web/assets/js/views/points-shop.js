@@ -9,36 +9,36 @@
 // confirmation banner with the `simulated` chip.
 
 import { logoDataUri } from "../util/placeholders.js";
+import { createRedemptionController } from "../util/redemption.js";
 
 export function pointsShopView() {
   return {
-    // Per-session local stock adjustments. Prototype does not
-    // decrement the database row (see the functional spec's
-    // "Stock is advisory" note); the value here only reflects what
-    // the current session redeemed so the "X left" label changes
-    // after a redemption.
-    merchStockConsumed: {},
-    merchRedeemPending: {},
-    lastRedemption: null,
-    shopError: "",
+    // Shared redemption controller: per-session stock adjustments,
+    // pending indicator, last-success banner, and error. See
+    // util/redemption.js. The event add-ons section on views/event.js
+    // uses the same factory so the two surfaces stay in sync.
+    redemption: createRedemptionController({
+      source: "merch_redemption",
+      insufficientKey: "shop.insufficient_balance",
+      soldOutKey: "shop.sold_out",
+      genericErrorKey: "shop.err_generic",
+      requireSignIn: () => Alpine.store("app").goAuth({ view: "points" }),
+    }),
 
     init() {
       this.$watch(
         () => Alpine.store("app").view,
         (view) => {
           if (view !== "points") {
-            this.lastRedemption = null;
-            this.shopError = "";
+            this.redemption.lastRedemption = null;
+            this.redemption.error = "";
           }
         },
       );
       this.$watch(
         () => Alpine.store("session").user?.id,
         () => {
-          this.merchStockConsumed = {};
-          this.merchRedeemPending = {};
-          this.lastRedemption = null;
-          this.shopError = "";
+          this.redemption.reset();
         },
       );
     },
@@ -50,71 +50,6 @@ export function pointsShopView() {
     merchImage(item) {
       if (item?.image) return item.image;
       return logoDataUri(item?.name ?? "");
-    },
-
-    remainingStock(item) {
-      if (item.stock == null) return null;
-      const consumed = this.merchStockConsumed[item.id] || 0;
-      return Math.max(0, item.stock - consumed);
-    },
-
-    canRedeem(item) {
-      if (this.merchRedeemPending[item.id]) return false;
-      if (Alpine.store("points").balance < (item.points_cost || 0)) {
-        return false;
-      }
-      const remaining = this.remainingStock(item);
-      if (remaining !== null && remaining <= 0) return false;
-      return true;
-    },
-
-    disabledReason(item) {
-      const lang = Alpine.store("lang");
-      if (Alpine.store("points").balance < (item.points_cost || 0)) {
-        return lang.t("shop.insufficient_balance", {
-          cost: item.points_cost,
-        });
-      }
-      const remaining = this.remainingStock(item);
-      if (remaining !== null && remaining <= 0) {
-        return lang.t("shop.sold_out");
-      }
-      return "";
-    },
-
-    async redeem(item) {
-      if (!item || !this.canRedeem(item)) return;
-      if (!Alpine.store("session").isSignedIn) {
-        Alpine.store("app").goAuth({ view: "points" });
-        return;
-      }
-      this.shopError = "";
-      this.merchRedeemPending[item.id] = true;
-      try {
-        await Alpine.store("points").redeem({
-          source: "merch_redemption",
-          source_ref: item.id,
-          amount: item.points_cost,
-          event_id: null,
-        });
-        this.merchStockConsumed[item.id] =
-          (this.merchStockConsumed[item.id] || 0) + 1;
-        this.lastRedemption = {
-          merch_id: item.id,
-          name: item.name,
-          cost: item.points_cost,
-          at: new Date().toISOString(),
-        };
-      } catch (err) {
-        this.shopError =
-          err.message || Alpine.store("lang").t("shop.err_generic");
-      } finally {
-        this.merchRedeemPending[item.id] = false;
-      }
-    },
-
-    dismissLastRedemption() {
-      this.lastRedemption = null;
     },
 
     balanceLabel() {

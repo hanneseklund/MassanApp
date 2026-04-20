@@ -154,6 +154,14 @@ web/assets/js/
                                by the user-scoped stores so the
                                clear-on-signed-out, select-plus-error
                                contract is written once
+    redemption.js              createRedemptionController(config) —
+                               shared per-session redemption state
+                               (stockConsumed, pending, lastRedemption,
+                               error) + canRedeem / disabledReason /
+                               redeem behaviour used by the event
+                               add-ons section on views/event.js and
+                               the venue-wide points shop on
+                               views/points-shop.js
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -710,7 +718,11 @@ that no real service is being hit.
   negative-delta `point_transactions` row. The event-add-ons section
   on `views/event.js` and the `views/points-shop.js` screen both
   call through the store; no view talks to the `point_transactions`
-  table directly.
+  table directly. Both views share the local per-session redemption
+  state (stock-consumed counters, pending indicator, last-success
+  banner, and error) through `createRedemptionController(...)` in
+  `util/redemption.js`, so the two surfaces cannot drift on guard
+  logic (`canRedeem`, `disabledReason`) or translation-key plumbing.
 
 ## Event-first navigation implementation
 
