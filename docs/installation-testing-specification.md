@@ -458,13 +458,20 @@ delegate their `_onSessionChange` to, the lang-store wiring in
 same-language guard, storage / `<html lang>` side effects, and
 the `t()` / `dateLocale()` delegation to the i18n helpers),
 the Supabase-user mapping in `stores/session.js` that resolves
-the signed-in provider, display name, and simulated flag, and
+the signed-in provider, display name, and simulated flag,
 the shared redemption controller in `util/redemption.js`
 (`createRedemptionController`) that backs the event add-ons
 section and the venue-wide points shop — `remainingStock`,
 `canRedeem`, `disabledReason`, and the `redeem` writer that
-delegates to the `points` store) have a fast unit suite under
-`tests/unit/` that does not require a browser or Supabase.
+delegates to the `points` store, and the ticket-purchase
+questionnaire helpers in `util/questionnaire.js`
+(`defaultQuestionnaire`, `subjectsFor`,
+`buildQuestionnairePayload`, `buildProfileUpdate`,
+`PROFILE_FIELDS`) that seed the form state from a saved
+profile and serialize it back into the JSONB shape written
+to `public.tickets.questionnaire`) have a fast unit suite
+under `tests/unit/` that does not require a browser or
+Supabase.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
