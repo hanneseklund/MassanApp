@@ -98,7 +98,7 @@ Pure-function helpers (hash routing plus the app-store navigation
 verbs that drive it, date formatting, calendar
 filter/sort, QR payload, simulated payment transaction-ref
 format, simulated email host allowlist, newsletter preferences,
-ticket-type catalog and event-nav section order, UI translation
+ticket-type catalog and stacked-layout section order, UI translation
 lookup, exhibitor and speaker placeholder SVGs, food-ordering
 catalog and next-half-hour timeslot generator, catalog-store
 selectors, tickets-store ownership selectors, food-orders

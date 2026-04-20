@@ -1062,10 +1062,10 @@ test.describe("Chrome layout", () => {
   test("41: language flags and me icon are right-justified on the start page", async ({
     page,
   }) => {
-    // Regression for issue #10: on the calendar (start) page the back
-    // button is hidden, and CSS Grid auto-placement used to pull the
-    // actions cluster toward the centre. Pin the cluster's right edge
-    // to the chrome's right edge (within the page padding).
+    // Regression for issue #10: on the calendar (start) page CSS Grid
+    // auto-placement used to pull the actions cluster toward the
+    // centre. Pin the cluster's right edge to the chrome's right edge
+    // (within the page padding).
     await gotoHome(page);
     const chromeBox = await page.locator(".chrome").boundingBox();
     const actionsBox = await page.locator(".chrome__actions").boundingBox();

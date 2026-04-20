@@ -211,10 +211,11 @@ The prototype must support this end-to-end path without gaps:
 
 ### Food
 
-- Reachable from the event nav as the "Food" tab. The flow is scoped to
-  the selected event but the menu catalog and venue locations are shared
-  across every event because Stockholmsmassan has one set of on-site
-  food vendors.
+- Reachable from the event landing's Food section (via its "see all"
+  link) and from the hamburger-menu "Food" entry while an event is
+  selected. The flow is scoped to the selected event but the menu
+  catalog and venue locations are shared across every event because
+  Stockholmsmassan has one set of on-site food vendors.
 - The flow has three steps:
   1. Pick a menu. The prototype offers ten typical fast-food menus
      (burgers, pizza, hot dog, chicken nuggets, fries, salad, wrap,

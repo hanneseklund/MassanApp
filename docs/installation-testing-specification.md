@@ -194,11 +194,13 @@ section above for the caveats.
 ### Event content
 
 5. From `Nordbygg 2026`, open each of News, Articles, Program,
-   Exhibitors, Practical info, Food, and Newsletter in turn. Assert:
+   Exhibitors, Practical info, Food, and Newsletter in turn by
+   scrolling the stacked landing and following each section's
+   "see all" link (or the matching hamburger-menu entry). Assert:
    each subview either renders content or a documented empty-state
-   placeholder, and the active tab indicator tracks the selection. The
-   Food tab renders the ten-menu picker even while signed out — it
-   only requires sign-in to confirm an order.
+   placeholder. The Food dedicated page renders the ten-menu picker
+   even while signed out — it only requires sign-in to confirm an
+   order.
 6. From the Exhibitors index, open one exhibitor. Assert: the
    exhibitor detail view renders and a "Back to exhibitors" button is
    visible.
@@ -206,8 +208,9 @@ section above for the caveats.
    present — at minimum the word `Alvsjo` appears in transport copy,
    and "Parking", "Restaurants and cafes", and "Security and entry"
    sections render.
-8. Use the "Events" back button in the top chrome. Assert: the URL
-   hash returns to `#/` and the calendar is visible again.
+8. Open the hamburger menu in the top-left chrome and pick the
+   "Other events" entry. Assert: the URL hash returns to `#/` and
+   the calendar is visible again.
 
 ### Congress archetype
 
@@ -361,11 +364,10 @@ so the balance is non-zero before the first check here.
 
 ### Chrome layout
 
-41. Open the start page (calendar of events) — the back button is
-    hidden here. Assert: the language flag pair and the "me" silhouette
-    icon sit flush against the right edge of the chrome (within the
-    chrome's right padding), matching their position on event subviews
-    where the back button is visible.
+41. Open the start page (calendar of events). Assert: the language
+    flag pair and the "me" silhouette icon sit flush against the
+    right edge of the chrome (within the chrome's right padding),
+    matching their position on event subviews.
 
 ## Automated smoke suite
 
@@ -429,7 +431,7 @@ Pure-function helpers in the frontend (hash routing in
 `backToExhibitors`, `goAuth`, `goMe`, `goTickets`, `goPoints`,
 `startPurchase`, `afterAuth` — and its `_applyHash` redirect for
 scroll-only subviews, date formatting in `util/dates.js`, ticket-type
-catalog and event-nav section order in `util/sections.js`,
+catalog and stacked-layout section order in `util/sections.js`,
 calendar filter/sort in `util/calendar.js`, newsletter-preference
 shape in `newsletter/preferences.js`, the QR payload builder in
 `simulations/qr.js`, the transaction-ref format of
