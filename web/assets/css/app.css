@@ -123,7 +123,7 @@ a {
   white-space: nowrap;
 }
 
-.chrome__back,
+.chrome__nav-toggle,
 .chrome__me,
 .chrome__lang {
   appearance: none;
@@ -137,18 +137,77 @@ a {
   cursor: pointer;
 }
 
-.chrome__back:hover,
+.chrome__nav-toggle:hover,
 .chrome__me:hover,
 .chrome__lang:hover,
-.chrome__back:focus-visible,
+.chrome__nav-toggle:focus-visible,
 .chrome__me:focus-visible,
 .chrome__lang:focus-visible {
   color: var(--accent);
 }
 
-.chrome__back {
+.chrome__nav {
   grid-column: 1;
   justify-self: start;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chrome__nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 10px 8px;
+}
+
+.chrome__nav-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+}
+
+.chrome__nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 4px 0 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 46, 119, 0.12);
+  z-index: 11;
+  min-width: 220px;
+}
+
+.chrome__nav-item {
+  margin: 0;
+}
+
+.chrome__nav-link {
+  appearance: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  min-height: 44px;
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chrome__nav-link:hover,
+.chrome__nav-link:focus-visible {
+  background: var(--surface-muted);
+  color: var(--accent);
 }
 
 .chrome__actions {

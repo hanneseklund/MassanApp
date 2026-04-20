@@ -83,12 +83,46 @@ The prototype must support this end-to-end path without gaps:
 
 - Top-level screen: Event calendar.
 - Event-selected mode: All navigation is scoped to the selected event
-  until the visitor explicitly leaves it. "Back to events" is always
-  reachable from the event's primary chrome.
-- Account: "My Pages" is reachable from the app chrome. It exposes the
-  profile, "My Tickets", and newsletter preferences.
+  until the visitor explicitly leaves it. Returning to the calendar is
+  reachable through the hamburger menu's "Other events" entry (see
+  below).
+- Account: "My Pages" is reachable from the app chrome (user-silhouette
+  icon on the right and the always-visible "My pages" entry in the
+  hamburger menu). It exposes the profile, "My Tickets", and newsletter
+  preferences.
 - Shared venue information: Reachable from within each event's practical
   information section so it reads as part of that event's content.
+
+### Chrome hamburger menu
+
+- A hamburger button in the upper-left of the chrome opens a
+  navigation panel. The panel is a dropdown anchored under the
+  button; it closes on outside click, the Escape key, and after an
+  entry is picked.
+- The menu entries, in order, are:
+  1. **My tickets** — only shown when an event is selected. Routes
+     to `#/tickets` via the usual auth detour.
+  2. **Food** — only shown when an event is selected. Opens the
+     event's dedicated food page.
+  3. **Program** — only shown when an event is selected. Opens the
+     event's dedicated program page.
+  4. **Exhibitors** — only shown when an event is selected. Opens
+     the event's dedicated exhibitors page.
+  5. **Practical information** — only shown when an event is
+     selected. Navigates to the `#/event/<id>/practical` route,
+     which collapses back to the stacked landing view and scrolls
+     the practical-info section anchor into view.
+  6. **Other events** — only shown when an event is selected.
+     Navigates to the calendar (`#/`).
+  7. **My pages** — always shown. Same destination as the
+     user-silhouette icon; routes through auth when necessary.
+- "An event is selected" means the app's `eventId` is set. That
+  remains true on an event's stacked landing view, its dedicated
+  section pages, its exhibitor detail pages, and the purchase flow,
+  so the event-gated entries stay visible throughout event context.
+- The menu button exposes `aria-expanded`, `aria-controls`, and a
+  translated `aria-label`. The panel uses `role="menu"` with each
+  entry as `role="menuitem"`.
 
 ## Screen-by-screen behavior
 
@@ -123,7 +157,9 @@ The prototype must support this end-to-end path without gaps:
 - Practical information renders inline in full and the Newsletter
   signup form renders inline in full. Neither has a "see all" page.
 - Provides a clear ticket call-to-action when the event has ticketing.
-- Provides a persistent "Back to events" route.
+- Returning to the broader event list is reached through the chrome
+  hamburger menu's "Other events" entry (see "Chrome hamburger menu"
+  above).
 
 ### Section full-list pages
 

@@ -252,7 +252,12 @@ test.describe("Event content", () => {
       ).toBeVisible();
     }
 
-    await page.locator(".chrome__back").click();
+    // The top-left back button was replaced by a hamburger menu. Open
+    // it and use the "Other events" entry to return to the calendar.
+    await page.locator(".chrome__nav-toggle").click();
+    await page
+      .locator(".chrome__nav-link", { hasText: "Other events" })
+      .click();
     await expect(page).toHaveURL(/#\/$|#\/?$/);
     await expect(page.locator(".chrome__title")).toHaveText("Events");
   });

@@ -27,22 +27,114 @@
     <script defer src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"></script>
   </head>
   <body x-data x-cloak>
-    <!-- Top chrome. "Back to events" appears only when an event is selected,
-         per the one-event-at-a-time navigation rule. The right-hand
-         cluster holds two flag buttons for the language toggle (English
-         active first, then Swedish) and a user-silhouette icon button
-         that routes to "My Pages". -->
+    <!-- Top chrome. The upper-left holds a hamburger menu that opens
+         a navigation panel; event-gated entries are visible only when
+         an event is selected (`$store.app.eventId`). The right-hand
+         cluster holds a compact language dropdown with the active flag
+         and a user-silhouette icon button that routes to "My Pages". -->
     <header class="chrome">
-      <button
-        class="chrome__back"
-        type="button"
-        x-show="$store.app.view !== 'calendar'"
-        @click="$store.app.goCalendar()"
-        :aria-label="$store.lang.t('chrome.back_events_aria')"
+      <div
+        class="chrome__nav"
+        x-data="{ navOpen: false }"
+        @keydown.escape.window="navOpen = false"
+        @click.outside="navOpen = false"
       >
-        <span aria-hidden="true">&larr;</span>
-        <span x-text="$store.lang.t('chrome.events')"></span>
-      </button>
+        <button
+          class="chrome__nav-toggle"
+          type="button"
+          aria-haspopup="menu"
+          :aria-expanded="navOpen"
+          aria-controls="chrome-nav-menu"
+          :aria-label="$store.lang.t('chrome.nav_aria')"
+          @click="navOpen = !navOpen"
+        >
+          <svg
+            class="chrome__nav-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M3 7h18M3 12h18M3 17h18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <ul
+          id="chrome-nav-menu"
+          class="chrome__nav-menu"
+          role="menu"
+          :aria-label="$store.lang.t('chrome.nav_aria')"
+          x-show="navOpen"
+          x-cloak
+        >
+          <li class="chrome__nav-item" x-show="$store.app.eventId">
+            <button
+              type="button"
+              class="chrome__nav-link"
+              role="menuitem"
+              @click="navOpen = false; $store.app.goTickets()"
+              x-text="$store.lang.t('chrome.nav.my_tickets')"
+            ></button>
+          </li>
+          <li class="chrome__nav-item" x-show="$store.app.eventId">
+            <button
+              type="button"
+              class="chrome__nav-link"
+              role="menuitem"
+              @click="navOpen = false; $store.app.goEventSubview('food')"
+              x-text="$store.lang.t('chrome.nav.food')"
+            ></button>
+          </li>
+          <li class="chrome__nav-item" x-show="$store.app.eventId">
+            <button
+              type="button"
+              class="chrome__nav-link"
+              role="menuitem"
+              @click="navOpen = false; $store.app.goEventSubview('program')"
+              x-text="$store.lang.t('chrome.nav.program')"
+            ></button>
+          </li>
+          <li class="chrome__nav-item" x-show="$store.app.eventId">
+            <button
+              type="button"
+              class="chrome__nav-link"
+              role="menuitem"
+              @click="navOpen = false; $store.app.goEventSubview('exhibitors')"
+              x-text="$store.lang.t('chrome.nav.exhibitors')"
+            ></button>
+          </li>
+          <li class="chrome__nav-item" x-show="$store.app.eventId">
+            <button
+              type="button"
+              class="chrome__nav-link"
+              role="menuitem"
+              @click="navOpen = false; $store.app.goEventSubview('practical')"
+              x-text="$store.lang.t('chrome.nav.practical')"
+            ></button>
+          </li>
+          <li class="chrome__nav-item" x-show="$store.app.eventId">
+            <button
+              type="button"
+              class="chrome__nav-link"
+              role="menuitem"
+              @click="navOpen = false; $store.app.goCalendar()"
+              x-text="$store.lang.t('chrome.nav.other_events')"
+            ></button>
+          </li>
+          <li class="chrome__nav-item">
+            <button
+              type="button"
+              class="chrome__nav-link"
+              role="menuitem"
+              @click="navOpen = false; $store.app.goMe()"
+              x-text="$store.lang.t('chrome.nav.my_pages')"
+            ></button>
+          </li>
+        </ul>
+      </div>
       <h1 class="chrome__title" x-text="$store.app.chromeTitle()"></h1>
       <div
         class="chrome__actions"

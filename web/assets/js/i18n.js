@@ -28,8 +28,15 @@ const TRANSLATIONS = {
 
     "chrome.events": "Events",
     "chrome.lang_aria": "Language",
-    "chrome.back_events_aria": "Back to events",
     "chrome.me_aria": "My Pages",
+    "chrome.nav_aria": "Menu",
+    "chrome.nav.my_tickets": "My tickets",
+    "chrome.nav.food": "Food",
+    "chrome.nav.program": "Program",
+    "chrome.nav.exhibitors": "Exhibitors",
+    "chrome.nav.practical": "Practical information",
+    "chrome.nav.other_events": "Other events",
+    "chrome.nav.my_pages": "My pages",
 
     "title.events": "Events",
     "title.sign_in": "Sign in",
@@ -376,8 +383,15 @@ const TRANSLATIONS = {
 
     "chrome.events": "Evenemang",
     "chrome.lang_aria": "Språk",
-    "chrome.back_events_aria": "Tillbaka till evenemang",
     "chrome.me_aria": "Mina sidor",
+    "chrome.nav_aria": "Meny",
+    "chrome.nav.my_tickets": "Mina biljetter",
+    "chrome.nav.food": "Mat",
+    "chrome.nav.program": "Program",
+    "chrome.nav.exhibitors": "Utställare",
+    "chrome.nav.practical": "Praktisk info",
+    "chrome.nav.other_events": "Andra evenemang",
+    "chrome.nav.my_pages": "Mina sidor",
 
     "title.events": "Evenemang",
     "title.sign_in": "Logga in",
