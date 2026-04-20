@@ -32,6 +32,10 @@ The prototype is the starting point for the work requested in
 - Supports English and Swedish app chrome. A compact toggle in the
   top chrome switches between the two languages and the choice is
   persisted across reloads.
+- Tracks a simulated loyalty points balance that earns on every
+  ticket purchase and food order and can be redeemed against
+  per-event add-ons or a venue-wide merchandise shop, all visible
+  from My Pages.
 
 The first fully seeded event is `Nordbygg 2026`. A congress-style reference
 event (`ESTRO 2026` or `EHA2026 Congress`) is included so the data model
@@ -69,10 +73,13 @@ The end-to-end prototype flow in
 implemented: calendar with filtering, event mini-homepages (news,
 articles, program, exhibitors, practical info, food, newsletter),
 email registration and sign-in, simulated social sign-in, simulated
-ticket purchase, simulated food ordering, and My Tickets. The
-catalog, authentication, tickets, food orders, and newsletter
-subscriptions are all served from the shared Supabase project.
-Payments and Google / Microsoft sign-in remain simulated.
+ticket purchase, simulated food ordering, My Tickets, a simulated
+loyalty points balance earned on ticket purchases and food orders,
+per-event points add-ons, and a venue-wide points merchandise shop.
+The catalog, authentication, tickets, food orders, newsletter
+subscriptions, and point transactions are all served from the shared
+Supabase project. Payments and Google / Microsoft sign-in remain
+simulated.
 
 ## Reviewing a change
 
@@ -95,11 +102,12 @@ lookup, exhibitor and speaker placeholder SVGs, food-ordering
 catalog and next-half-hour timeslot generator, catalog-store
 selectors, tickets-store ownership selectors, food-orders
 store user selector, newsletter-store event/venue-wide lookup,
-the shared sign-in / sign-out fetch contract that the four
-user-scoped stores delegate to, the lang-store persistence and
-translator wiring, and the Supabase-user mapping that backs the
-session store) also have a fast unit suite that does not need a
-browser or Supabase:
+the points earning rates and points-store balance / per-user
+selectors, the shared sign-in / sign-out fetch contract that the
+four user-scoped stores delegate to, the lang-store persistence
+and translator wiring, and the Supabase-user mapping that backs
+the session store) also have a fast unit suite that does not need
+a browser or Supabase:
 
 ```
 npm run test:unit

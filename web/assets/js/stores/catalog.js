@@ -1,5 +1,5 @@
 // Catalog store: venue, events, and per-event content. Loaded from
-// the shared Supabase prototype project on first app load with seven
+// the shared Supabase prototype project on first app load with nine
 // parallel select queries. Rows are kept in memory for the life of
 // the session and filtered per event in view components.
 

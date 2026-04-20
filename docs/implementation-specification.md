@@ -533,8 +533,11 @@ Exactly one venue record is expected in the prototype.
 - The user's current balance is `sum(delta)` over their rows. A
   denormalised balance column is deliberately avoided so the balance
   cannot drift from the history.
-- Rows live in `public.point_transactions` with Row Level Security
-  scoped to `auth.uid() = user_id` for both read and insert. Because
+- Rows live in `public.point_transactions` (see
+  `supabase/migrations/0005_points_system.sql`, which also defines
+  `public.point_addons` and `public.merchandise`) with Row Level
+  Security scoped to `auth.uid() = user_id` for both read and insert.
+  Because
   the prototype's simulated-payment flow runs entirely in the
   frontend, the insert policy accepts any `delta` a signed-in user
   sends — a malicious prototype client could in principle insert
