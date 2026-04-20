@@ -390,10 +390,11 @@ that reviewers understand they are not real integrations.
   labels, accessible names (aria labels) for chrome regions, and both
   simulated-payment and simulated-email UI. Event content sourced from
   outside the app — event names, summaries, news, articles, program
-  items, exhibitors, practical-info venue copy — stays in the language
-  it was seeded in. If a future task seeds translated content for
-  events, the UI is already wired to render it through the same
-  switch.
+  items, exhibitors, practical-info venue copy, event add-on names and
+  descriptions, and venue-wide merchandise names and descriptions —
+  stays in the language it was seeded in. If a future task seeds
+  translated content for events, the UI is already wired to render it
+  through the same switch.
 - Dates render in the active language (weekday and month names use the
   UI language's locale). Saved ticket labels remain in English so a
   wallet entry does not change wording based on whoever later opens
