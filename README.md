@@ -95,9 +95,11 @@ lookup, exhibitor and speaker placeholder SVGs, food-ordering
 catalog and next-half-hour timeslot generator, catalog-store
 selectors, tickets-store ownership selectors, food-orders
 store user selector, newsletter-store event/venue-wide lookup,
-the lang-store persistence and translator wiring, and the
-Supabase-user mapping that backs the session store) also have
-a fast unit suite that does not need a browser or Supabase:
+the shared sign-in / sign-out fetch contract that the four
+user-scoped stores delegate to, the lang-store persistence and
+translator wiring, and the Supabase-user mapping that backs the
+session store) also have a fast unit suite that does not need a
+browser or Supabase:
 
 ```
 npm run test:unit

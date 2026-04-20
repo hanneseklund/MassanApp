@@ -445,7 +445,10 @@ balance selector in `stores/points.js` that sums `delta` across a
 user's rows, the newsletter-store
 lookup in `stores/newsletter.js` (`forUser`, `findForEvent`)
 that resolves the per-event / venue-wide subscription a signup
-form should update vs. insert, the lang-store wiring in
+form should update vs. insert, the shared sign-in / sign-out
+fetch contract in `util/session-sync.js` (`loadUserRows` and
+`notifySessionStores`) that the four user-scoped stores
+delegate their `_onSessionChange` to, the lang-store wiring in
 `stores/lang.js` (persisted-language validation, `set()`'s
 same-language guard, storage / `<html lang>` side effects, and
 the `t()` / `dateLocale()` delegation to the i18n helpers), and
