@@ -94,7 +94,8 @@ npx playwright install chromium
 npm run smoke
 ```
 
-Pure-function helpers (hash routing, date formatting, calendar
+Pure-function helpers (hash routing plus the app-store navigation
+verbs that drive it, date formatting, calendar
 filter/sort, QR payload, simulated payment transaction-ref
 format, simulated email host allowlist, newsletter preferences,
 ticket-type catalog and event-nav section order, UI translation

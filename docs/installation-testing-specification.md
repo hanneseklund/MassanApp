@@ -424,7 +424,11 @@ in the same pull request.
 ## Unit tests
 
 Pure-function helpers in the frontend (hash routing in
-`stores/app.js`, date formatting in `util/dates.js`, ticket-type
+`stores/app.js` plus the store's stateful navigation verbs —
+`goCalendar`, `selectEvent`, `goEventSubview`, `selectExhibitor`,
+`backToExhibitors`, `goAuth`, `goMe`, `goTickets`, `goPoints`,
+`startPurchase`, `afterAuth` — and its `_applyHash` redirect for
+scroll-only subviews, date formatting in `util/dates.js`, ticket-type
 catalog and event-nav section order in `util/sections.js`,
 calendar filter/sort in `util/calendar.js`, newsletter-preference
 shape in `newsletter/preferences.js`, the QR payload builder in
