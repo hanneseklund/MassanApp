@@ -168,11 +168,12 @@ web/assets/js/
     redemption.js              createRedemptionController(config) —
                                shared per-session redemption state
                                (stockConsumed, pending, lastRedemption,
-                               error) + canRedeem / disabledReason /
-                               redeem behaviour used by the event
-                               add-ons section on views/event.js and
-                               the venue-wide points shop on
-                               views/points-shop.js
+                               error) + remainingStock / canRedeem /
+                               disabledReason / redeem /
+                               dismissLastRedemption / reset behaviour
+                               used by the event add-ons section on
+                               views/event.js and the venue-wide points
+                               shop on views/points-shop.js
     questionnaire.js           defaultQuestionnaire(event, profile),
                                subjectsFor(event),
                                buildQuestionnairePayload(form),
@@ -251,9 +252,16 @@ Alpine.js stores and components own the following state:
   read translations as `$store.lang.t('key')` so a switch re-renders
   every bound label reactively.
 - `session`: the Supabase Auth user mapped into a flat record with `id`,
-  `email`, `display_name`, `auth_provider`, and `simulated` flags. The
-  store subscribes to `supabase.auth.onAuthStateChange` so that sign-in,
-  sign-out, and token refresh propagate to the UI.
+  `email`, `display_name`, `auth_provider`, `simulated`, and a
+  `profile` block holding the saved ticket-purchase general-profile
+  answers (`gender`, `country`, `region`, `visit_type`, `company`,
+  `role`) that the purchase view reads to pre-fill the questionnaire.
+  The store exposes `loading` while the initial session restore is in
+  flight, an `isSignedIn` getter, and `register`, `signIn`, `signOut`,
+  and `simulatedSocialSignIn(provider)` methods that wrap the
+  Supabase JS client. The store subscribes to
+  `supabase.auth.onAuthStateChange` so that sign-in, sign-out, and
+  token refresh propagate to the UI.
 - `catalog`: venue, events, news, articles, program items, exhibitors,
   speakers, point add-ons, and merchandise loaded from the shared
   Supabase project, plus `loading` / `error` flags for the initial
