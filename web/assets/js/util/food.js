@@ -14,6 +14,37 @@ import { activeTranslate, canonicalTranslate } from "../i18n.js";
 
 const t = activeTranslate;
 
+// Build a translated catalog from a list of entries shaped
+// `{ id, name_key, desc_key, ...extras }`. Returns the public-facing
+// `list` of items (with `label` / `description` getters that re-read
+// the active language on access), an `byId` lookup, and a
+// `canonicalLabel` that resolves against English regardless of the
+// current UI language. The three food catalogs below share this shape;
+// the ticket-type catalog in util/sections.js differs enough (grouped
+// by event.ticket_model) that it is not built through this helper.
+function buildCatalog(entries) {
+  const list = entries.map((entry) => ({
+    id: entry.id,
+    ...(entry.extra ?? {}),
+    get label() {
+      return t(entry.name_key);
+    },
+    get description() {
+      return t(entry.desc_key);
+    },
+  }));
+  return {
+    list,
+    byId(id) {
+      return list.find((item) => item.id === id) ?? null;
+    },
+    canonicalLabel(id) {
+      const entry = entries.find((e) => e.id === id);
+      return entry ? canonicalTranslate(entry.name_key) : id;
+    },
+  };
+}
+
 // Ten typical fast-food menus. Each entry carries a stable id, the
 // translation keys for the user-facing name + description, a price in
 // SEK, and an emoji used by the view to generate an inline SVG image
@@ -29,7 +60,15 @@ const MENU_ENTRIES = [
   { id: "wrap_chicken", name_key: "food.menus.wrap_chicken.name", desc_key: "food.menus.wrap_chicken.desc", price: "SEK 109", emoji: "🥙", bg: "#6b5226" },
   { id: "sushi_box", name_key: "food.menus.sushi_box.name", desc_key: "food.menus.sushi_box.desc", price: "SEK 149", emoji: "🍣", bg: "#005a6b" },
   { id: "ice_cream", name_key: "food.menus.ice_cream.name", desc_key: "food.menus.ice_cream.desc", price: "SEK 39", emoji: "🍦", bg: "#8b5cb6" },
-];
+].map((entry) => ({
+  id: entry.id,
+  name_key: entry.name_key,
+  desc_key: entry.desc_key,
+  extra: {
+    price: entry.price,
+    image: menuImageDataUri(entry.emoji, entry.bg),
+  },
+}));
 
 function menuImageDataUri(emoji, bg) {
   const svg =
@@ -40,30 +79,10 @@ function menuImageDataUri(emoji, bg) {
   return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
 }
 
-// Each menu's label / description are getters so switching language
-// re-renders bound templates (same pattern as SECTION_LABELS).
-export const FOOD_MENUS = MENU_ENTRIES.map((entry) => ({
-  id: entry.id,
-  price: entry.price,
-  image: menuImageDataUri(entry.emoji, entry.bg),
-  get label() {
-    return t(entry.name_key);
-  },
-  get description() {
-    return t(entry.desc_key);
-  },
-}));
-
-export function menuById(id) {
-  return FOOD_MENUS.find((m) => m.id === id) ?? null;
-}
-
-// Canonical English label for a menu id. Used when persisting a food
-// order so the wallet entry does not flip language later.
-export function canonicalMenuLabel(id) {
-  const entry = MENU_ENTRIES.find((e) => e.id === id);
-  return entry ? canonicalTranslate(entry.name_key) : id;
-}
+const menus = buildCatalog(MENU_ENTRIES);
+export const FOOD_MENUS = menus.list;
+export const menuById = menus.byId;
+export const canonicalMenuLabel = menus.canonicalLabel;
 
 // Pickup locations within the venue. Static data — the prototype has a
 // single venue (Stockholmsmassan) so locations are shared across all
@@ -74,24 +93,10 @@ const PICKUP_ENTRIES = [
   { id: "central_plaza", name_key: "food.pickup.central_plaza.name", desc_key: "food.pickup.central_plaza.desc" },
 ];
 
-export const PICKUP_LOCATIONS = PICKUP_ENTRIES.map((entry) => ({
-  id: entry.id,
-  get label() {
-    return t(entry.name_key);
-  },
-  get description() {
-    return t(entry.desc_key);
-  },
-}));
-
-export function pickupById(id) {
-  return PICKUP_LOCATIONS.find((p) => p.id === id) ?? null;
-}
-
-export function canonicalPickupLabel(id) {
-  const entry = PICKUP_ENTRIES.find((e) => e.id === id);
-  return entry ? canonicalTranslate(entry.name_key) : id;
-}
+const pickups = buildCatalog(PICKUP_ENTRIES);
+export const PICKUP_LOCATIONS = pickups.list;
+export const pickupById = pickups.byId;
+export const canonicalPickupLabel = pickups.canonicalLabel;
 
 // Restaurants that serve a 30-minute timeslot. The slot list is
 // generated once per session from the current clock so demo users
@@ -101,24 +106,10 @@ const RESTAURANT_ENTRIES = [
   { id: "torget_bistro", name_key: "food.restaurants.torget_bistro.name", desc_key: "food.restaurants.torget_bistro.desc" },
 ];
 
-export const RESTAURANTS = RESTAURANT_ENTRIES.map((entry) => ({
-  id: entry.id,
-  get label() {
-    return t(entry.name_key);
-  },
-  get description() {
-    return t(entry.desc_key);
-  },
-}));
-
-export function restaurantById(id) {
-  return RESTAURANTS.find((r) => r.id === id) ?? null;
-}
-
-export function canonicalRestaurantLabel(id) {
-  const entry = RESTAURANT_ENTRIES.find((e) => e.id === id);
-  return entry ? canonicalTranslate(entry.name_key) : id;
-}
+const restaurants = buildCatalog(RESTAURANT_ENTRIES);
+export const RESTAURANTS = restaurants.list;
+export const restaurantById = restaurants.byId;
+export const canonicalRestaurantLabel = restaurants.canonicalLabel;
 
 // Build a list of five upcoming 30-minute timeslots starting on the
 // next half hour. Pure function so it stays easy to unit test; callers
