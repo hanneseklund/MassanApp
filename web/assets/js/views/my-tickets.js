@@ -12,12 +12,18 @@ export function myTicketsView() {
     tickets() {
       const user = Alpine.store("session").user;
       if (!user) return [];
+      const selectedEventId = Alpine.store("app").eventId;
       return Alpine.store("tickets")
         .forUser(user.id)
         .slice()
-        .sort((a, b) =>
-          (b.purchased_at || "").localeCompare(a.purchased_at || "")
-        );
+        .sort((a, b) => {
+          if (selectedEventId) {
+            const aMatch = a.event_id === selectedEventId ? 0 : 1;
+            const bMatch = b.event_id === selectedEventId ? 0 : 1;
+            if (aMatch !== bMatch) return aMatch - bMatch;
+          }
+          return (b.purchased_at || "").localeCompare(a.purchased_at || "");
+        });
     },
     eventName(ticket) {
       return (

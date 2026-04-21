@@ -28,6 +28,39 @@ const EVENT_SUBVIEWS = [
 // and asks the event view to scroll to the section anchor instead.
 const SCROLL_ONLY_SUBVIEWS = new Set(["practical", "newsletter"]);
 
+// Views that live outside the event URL space but should still inherit
+// the currently selected event in memory. Keeping `eventId` populated
+// there lets the hamburger menu keep showing event-scoped entries and
+// lets My Tickets prioritize tickets for the current event.
+const EVENT_CONTEXT_PRESERVING_VIEWS = new Set([
+  "me",
+  "tickets",
+  "auth",
+  "points",
+]);
+
+const SELECTED_EVENT_STORAGE_KEY = "massanapp.selected_event_id";
+
+function readStoredEventId() {
+  try {
+    return window.localStorage?.getItem(SELECTED_EVENT_STORAGE_KEY) || null;
+  } catch {
+    return null;
+  }
+}
+
+function writeStoredEventId(eventId) {
+  try {
+    if (eventId) {
+      window.localStorage?.setItem(SELECTED_EVENT_STORAGE_KEY, eventId);
+    } else {
+      window.localStorage?.removeItem(SELECTED_EVENT_STORAGE_KEY);
+    }
+  } catch {
+    // Ignore persistence failures — in-memory context still applies.
+  }
+}
+
 export function parseHash(hash) {
   const clean = hash.replace(/^#\/?/, "");
   if (!clean) return { view: "calendar" };
@@ -98,9 +131,27 @@ export function appStore() {
     _applyHash() {
       const parsed = parseHash(window.location.hash);
       this.view = parsed.view;
-      this.eventId = parsed.eventId ?? null;
       this.exhibitorId = parsed.exhibitorId ?? null;
       const subview = parsed.eventSubview ?? "home";
+
+      if (parsed.eventId) {
+        // URL carries an event (event / purchase views). It becomes
+        // the selected event and is persisted so sibling chrome routes
+        // inherit the context after reload.
+        this.eventId = parsed.eventId;
+        writeStoredEventId(this.eventId);
+      } else if (this.view === "calendar") {
+        // Browsing the calendar explicitly leaves any event context.
+        this.eventId = null;
+        writeStoredEventId(null);
+      } else if (EVENT_CONTEXT_PRESERVING_VIEWS.has(this.view)) {
+        // Keep the currently selected event in memory; hydrate from
+        // localStorage on the first call so a direct visit to #/me
+        // after reload still remembers the last event.
+        if (!this.eventId) this.eventId = readStoredEventId();
+      } else {
+        this.eventId = null;
+      }
       if (
         this.view === "event" &&
         SCROLL_ONLY_SUBVIEWS.has(subview) &&

@@ -31,11 +31,30 @@ function makeFakeHistory() {
 // whenever the hash actually changes, matching real-browser behavior.
 // Without that, `_applyHash` would never run after `_navigate` wrote
 // the new hash and store state would stay behind.
+function makeFakeLocalStorage(initial = {}) {
+  const store = { ...initial };
+  return {
+    _store: store,
+    getItem(key) {
+      return Object.prototype.hasOwnProperty.call(store, key)
+        ? store[key]
+        : null;
+    },
+    setItem(key, value) {
+      store[key] = String(value);
+    },
+    removeItem(key) {
+      delete store[key];
+    },
+  };
+}
+
 function withStubbedGlobals(
   {
     initialHash = "",
     signedIn = false,
     events = [],
+    storedEventId = null,
     translate = (key, params) =>
       params ? `${key}:${JSON.stringify(params)}` : key,
   } = {},
@@ -59,9 +78,15 @@ function withStubbedGlobals(
       hash = value;
     },
   };
+  const localStorage = makeFakeLocalStorage(
+    storedEventId
+      ? { "massanapp.selected_event_id": storedEventId }
+      : {},
+  );
   globalThis.window = {
     location,
     history,
+    localStorage,
     addEventListener(event, handler) {
       listeners[event] = handler;
     },
@@ -81,7 +106,7 @@ function withStubbedGlobals(
     },
   };
   try {
-    return body({ location, history, listeners, stores });
+    return body({ location, history, listeners, stores, localStorage });
   } finally {
     globalThis.window = prevWindow;
     globalThis.Alpine = prevAlpine;
@@ -414,4 +439,92 @@ test("chromeTitle: event view uses the event name or a default", () => {
       assert.equal(store.chromeTitle(), "title.event_default");
     },
   );
+});
+
+test("_applyHash: navigating from an event to #/me preserves eventId", () => {
+  // Bug #22: clicking My Pages from an event cleared the selected
+  // event, hiding event-scoped nav links and losing the context
+  // My Tickets uses to prioritize the current event's tickets.
+  withStubbedGlobals(
+    { initialHash: "#/event/nordbygg-2026", signedIn: true },
+    ({ location, listeners }) => {
+      const store = appStore();
+      store.init();
+      assert.equal(store.eventId, "nordbygg-2026");
+      location._set("#/me");
+      listeners.hashchange();
+      assert.equal(store.view, "me");
+      assert.equal(store.eventId, "nordbygg-2026");
+    },
+  );
+});
+
+test("_applyHash: auth and tickets routes also preserve the event context", () => {
+  withStubbedGlobals(
+    { initialHash: "#/event/nordbygg-2026" },
+    ({ location, listeners }) => {
+      const store = appStore();
+      store.init();
+      for (const hash of ["#/auth", "#/tickets", "#/points"]) {
+        location._set(hash);
+        listeners.hashchange();
+        assert.equal(
+          store.eventId,
+          "nordbygg-2026",
+          `eventId preserved for ${hash}`,
+        );
+      }
+    },
+  );
+});
+
+test("_applyHash: visiting the calendar clears the event context", () => {
+  withStubbedGlobals(
+    { initialHash: "#/event/nordbygg-2026" },
+    ({ location, listeners, localStorage }) => {
+      const store = appStore();
+      store.init();
+      assert.equal(
+        localStorage.getItem("massanapp.selected_event_id"),
+        "nordbygg-2026",
+      );
+      location._set("#/");
+      listeners.hashchange();
+      assert.equal(store.view, "calendar");
+      assert.equal(store.eventId, null);
+      assert.equal(
+        localStorage.getItem("massanapp.selected_event_id"),
+        null,
+      );
+    },
+  );
+});
+
+test("_applyHash: #/me hydrates eventId from localStorage on first apply", () => {
+  // A direct visit to #/me after a reload should still remember the
+  // last selected event so chrome nav and ticket sorting stay scoped.
+  withStubbedGlobals(
+    {
+      initialHash: "#/me",
+      storedEventId: "nordbygg-2026",
+    },
+    () => {
+      const store = appStore();
+      store.init();
+      assert.equal(store.view, "me");
+      assert.equal(store.eventId, "nordbygg-2026");
+    },
+  );
+});
+
+test("selectEvent: persists the selected event id to localStorage", () => {
+  withStubbedGlobals({}, ({ localStorage }) => {
+    const store = appStore();
+    store.init();
+    store.selectEvent("nordbygg-2026");
+    assert.equal(
+      localStorage.getItem("massanapp.selected_event_id"),
+      "nordbygg-2026",
+    );
+  });
 });

@@ -93,6 +93,15 @@ through the internal `_requireAuth` guard: if the session is signed
 in they navigate directly, otherwise they stash the intended target
 on `_preAuth` and redirect to `#/auth`. The auth view calls
 `afterAuth()` once sign-in resolves to replay the stashed target.
+
+The `me`, `tickets`, `auth`, and `points` routes have no event
+segment in their URL but inherit the currently selected event in
+memory. `stores/app.js` keeps `eventId` populated across those
+views and persists the last selected event to `localStorage` under
+`massanapp.selected_event_id`, so the hamburger menu keeps showing
+event-scoped entries and My Tickets can prioritize tickets for the
+current event. The calendar route is the one that explicitly clears
+the selection.
 The supported routes are:
 
 ```
