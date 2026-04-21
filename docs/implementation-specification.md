@@ -210,14 +210,17 @@ web/assets/js/
                                PROFILE_FIELDS — ticket-purchase
                                questionnaire form state + JSONB
                                serialization used by views/purchase.js
+    newsletter.js              defaultNewsletterPreferences,
+                               normalizeNewsletterPreferences,
+                               NEWSLETTER_PREF_KEYS, NEWSLETTER_TOPICS —
+                               newsletter-preference shape shared by the
+                               newsletter store and the signup /
+                               preferences views
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
     payment.js                 simulatedPayment
     email.js                   simulatedEmail
-  newsletter/
-    preferences.js             default/normalize preferences,
-                               NEWSLETTER_PREF_KEYS, NEWSLETTER_TOPICS
   stores/
     app.js                     Alpine.store("app", ...) (navigation,
                                hash routing, post-auth return target).

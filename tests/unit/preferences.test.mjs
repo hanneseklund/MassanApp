@@ -9,7 +9,7 @@ import {
   NEWSLETTER_PREF_KEYS,
   defaultNewsletterPreferences,
   normalizeNewsletterPreferences,
-} from "../../web/assets/js/newsletter/preferences.js";
+} from "../../web/assets/js/util/newsletter.js";
 
 test("defaultNewsletterPreferences: every key defaults to true", () => {
   const out = defaultNewsletterPreferences();

@@ -5,7 +5,7 @@
 import {
   defaultNewsletterPreferences,
   NEWSLETTER_TOPICS,
-} from "../newsletter/preferences.js";
+} from "../util/newsletter.js";
 import { simulatedEmail } from "../simulations/email.js";
 
 export function newsletterPreferences() {

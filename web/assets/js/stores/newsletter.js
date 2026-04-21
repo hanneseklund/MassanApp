@@ -5,7 +5,7 @@
 // so the store only carries in-session state for those.
 
 import { supabaseClient } from "../supabase.js";
-import { normalizeNewsletterPreferences } from "../newsletter/preferences.js";
+import { normalizeNewsletterPreferences } from "../util/newsletter.js";
 import { activeTranslate } from "../i18n.js";
 import { loadUserRows } from "../util/session-sync.js";
 

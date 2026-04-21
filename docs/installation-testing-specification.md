@@ -436,7 +436,7 @@ Pure-function helpers in the frontend (hash routing in
 scroll-only subviews, date formatting in `util/dates.js`, ticket-type
 catalog and stacked-layout section order in `util/sections.js`,
 calendar filter/sort in `util/calendar.js`, newsletter-preference
-shape in `newsletter/preferences.js`, the QR payload builder in
+shape in `util/newsletter.js`, the QR payload builder in
 `simulations/qr.js`, the transaction-ref format of
 `simulations/payment.js` that both the ticket and food flows
 resolve against, the prototype-host allowlist in
