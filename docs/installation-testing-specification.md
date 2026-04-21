@@ -485,12 +485,19 @@ questionnaire helpers in `util/questionnaire.js`
 profile and serialize it back into the JSONB shape written
 to `public.tickets.questionnaire`, the My Tickets sort
 rules in `views/my-tickets.js` (`myTicketsView`) that keep
-the currently-selected event's tickets on top, and the
+the currently-selected event's tickets on top, the
 My Pages helpers in `views/me.js` (`meView`) that format
 the points balance, ticket-count hint, recent-transactions
-slice, and per-transaction source / event / delta labels)
-have a fast unit suite under `tests/unit/` that does not
-require a browser or Supabase.
+slice, and per-transaction source / event / delta labels,
+and the event-home helpers in `views/event.js` (`eventView`)
+that drive the inline 5-item truncation for news, articles,
+exhibitors, and the program (keeping the by-day grouping),
+the themed-first food-menu preview, the ticket-gated
+"Event add-ons" visibility, the news / article / addon
+image fallback to the event hero, and the override-label
+translation lookup with a humanized fallback for
+forward-looking keys) have a fast unit suite under
+`tests/unit/` that does not require a browser or Supabase.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
