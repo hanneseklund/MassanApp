@@ -334,7 +334,10 @@ Spending — venue-wide merchandise shop
 
 - Visitors can sign up for the event newsletter with an email.
 - Logged-in visitors can manage their newsletter preferences per event
-  and at the account level.
+  and at the account level. Each per-event subscription exposes an
+  "Unsubscribe" control that removes the subscription outright; the
+  venue-wide "All Stockholmsmassan events" subscription is managed
+  with an on/off toggle that unsubscribes when switched off.
 
 ### Registration and sign-in
 

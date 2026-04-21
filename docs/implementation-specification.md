@@ -311,7 +311,12 @@ Alpine.js stores and components own the following state:
   (including the venue-wide subscription where `event_id IS NULL`). For
   anonymous visitors the store holds only the in-session success state —
   the row exists in Supabase but cannot be read back through RLS until
-  the visitor signs in.
+  the visitor signs in. Exposes `subscribe`, `updatePreferences`, and
+  `unsubscribe(id)` methods. `unsubscribe(id)` deletes the row via the
+  owner-scoped DELETE policy added in migration 0002 and drops it from
+  the in-memory `subscriptions` list; the newsletter-preferences view
+  calls it both for the per-event "Unsubscribe" button and when the
+  venue-wide toggle is switched off.
 - `foodOrders`: the signed-in user's food order rows loaded from
   `public.food_orders` through RLS. Inserts go through the Supabase
   client so RLS enforces ownership. Anonymous visitors are routed to
@@ -770,7 +775,28 @@ Exactly one venue record is expected in the prototype.
   venue and event content (including `point_addons` and
   `merchandise`) is readable without authentication.
 - Migrations live in `supabase/migrations/`. Seed data lives in
-  `supabase/seed/` and may be a mix of SQL and JSON.
+  `supabase/seed/` and may be a mix of SQL and JSON. The numbered
+  migrations to date are:
+  - `0001_init.sql` — initial schema: venue, events, news_items,
+    articles, program_items, exhibitors, speakers, tickets, and
+    newsletter_subscriptions, with owner-scoped RLS on the
+    user-owned tables.
+  - `0002_newsletter_delete_policy.sql` — adds an owner-scoped
+    DELETE policy on `public.newsletter_subscriptions` so the
+    `unsubscribe(id)` method on the newsletter store can remove a
+    signed-in user's row.
+  - `0003_news_items_hero_image.sql` — adds `news_items.hero_image`
+    so news cards can carry their own image, falling back to the
+    parent event's hero when unset.
+  - `0004_food_orders.sql` — adds `public.food_orders` with
+    owner-scoped RLS for the simulated food-ordering flow.
+  - `0005_points_system.sql` — adds `public.point_transactions`,
+    `public.point_addons`, and `public.merchandise` for the
+    simulated loyalty-points feature.
+  - `0006_ticket_questionnaire.sql` — adds
+    `tickets.questionnaire` (JSONB) and
+    `events.questionnaire_subjects` (JSONB) for the
+    ticket-purchase questionnaire.
 - The frontend talks to Supabase directly using the anon key. There is no
   separate API layer in the prototype.
 - Email confirmation in Supabase Auth is left disabled for the shared
