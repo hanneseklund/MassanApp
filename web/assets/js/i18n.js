@@ -361,6 +361,80 @@ const TRANSLATIONS = {
     "food.menus.ice_cream.desc":
       "A single scoop of vanilla or chocolate, topped with sprinkles.",
 
+    "food.themes.label_prefix": "Event special · ",
+    "food.themes.construction.label": "Builder's specials",
+    "food.themes.health.label": "Wellness specials",
+    "food.themes.education.label": "Study-break specials",
+    "food.themes.design.label": "Designer specials",
+    "food.themes.entertainment.label": "Showtime specials",
+    "food.themes.industry.label": "Workshop specials",
+    "food.themes.food_drink.label": "Tasting specials",
+    "food.themes.leisure.label": "Weekend specials",
+    "food.themes.default.label": "Event specials",
+
+    "food.menus.theme_construction_foreman_burger.name": "Foreman's Burger",
+    "food.menus.theme_construction_foreman_burger.desc":
+      "Double beef patty with smoked cheddar, crispy onion, and steak sauce — named for the site foreman's appetite.",
+    "food.menus.theme_construction_scaffold_hotdog.name": "Scaffold Hot Dog",
+    "food.menus.theme_construction_scaffold_hotdog.desc":
+      "Grilled sausage stacked high with mustard, ketchup, pickles, and crispy onion — built like a scaffold.",
+
+    "food.menus.theme_health_recovery_bowl.name": "Green Recovery Bowl",
+    "food.menus.theme_health_recovery_bowl.desc":
+      "Mixed greens, grilled chicken, avocado, and a light vinaigrette — a clean bowl between sessions.",
+    "food.menus.theme_health_vitality_wrap.name": "Vitality Wrap",
+    "food.menus.theme_health_vitality_wrap.desc":
+      "Lean chicken, spinach, and hummus in a whole-grain tortilla — fuel for back-to-back talks.",
+
+    "food.menus.theme_education_study_snack.name": "Study-Break Snack Box",
+    "food.menus.theme_education_study_snack.desc":
+      "Breaded chicken pieces with a mild dip and fries — easy to share between sessions.",
+    "food.menus.theme_education_campus_caesar.name": "Campus Caesar",
+    "food.menus.theme_education_campus_caesar.desc":
+      "Classic Caesar salad with grilled chicken and garlic croutons — the canteen favourite.",
+
+    "food.menus.theme_design_curated_sushi.name": "Curated Sushi Set",
+    "food.menus.theme_design_curated_sushi.desc":
+      "A composed tray of salmon nigiri, tuna nigiri, and maki — as measured as a Scandinavian interior.",
+    "food.menus.theme_design_minimalist_margherita.name": "Minimalist Margherita",
+    "food.menus.theme_design_minimalist_margherita.desc":
+      "Stone-baked pizza with San Marzano tomato, fresh mozzarella, and basil — a three-ingredient composition.",
+
+    "food.menus.theme_entertainment_headliner_burger.name": "Headliner Burger",
+    "food.menus.theme_entertainment_headliner_burger.desc":
+      "Double cheeseburger with smoked mayo and crisp lettuce — the stadium-sized opener.",
+    "food.menus.theme_entertainment_backstage_nuggets.name": "Backstage Nuggets",
+    "food.menus.theme_entertainment_backstage_nuggets.desc":
+      "Breaded chicken pieces and dip with fries — a backstage staple between shows.",
+
+    "food.menus.theme_industry_engineers_lunch.name": "Engineer's Lunch",
+    "food.menus.theme_industry_engineers_lunch.desc":
+      "Beef patty burger built for a practical break between stand demos and floor walks.",
+    "food.menus.theme_industry_workshop_fries.name": "Workshop Fries",
+    "food.menus.theme_industry_workshop_fries.desc":
+      "A generous portion of golden fries with dip and a drink — shareable on the show floor.",
+
+    "food.menus.theme_food_drink_chefs_tasting.name": "Chef's Tasting Box",
+    "food.menus.theme_food_drink_chefs_tasting.desc":
+      "A short tasting flight of salmon nigiri, tuna nigiri, and maki — the event's in-house pick.",
+    "food.menus.theme_food_drink_sommelier_pairing.name": "Sommelier Pairing Plate",
+    "food.menus.theme_food_drink_sommelier_pairing.desc":
+      "Margherita slices and garlic bread — designed to pair with the day's featured wine.",
+
+    "food.menus.theme_leisure_weekend_burger.name": "Weekend Burger",
+    "food.menus.theme_leisure_weekend_burger.desc":
+      "A relaxed take on the classic burger — perfect between hall walks on a leisure visit.",
+    "food.menus.theme_leisure_family_wrap.name": "Family Wrap Combo",
+    "food.menus.theme_leisure_family_wrap.desc":
+      "Grilled chicken wrap with fries and a drink — easy to share with the whole family.",
+
+    "food.menus.theme_default_visitors_burger.name": "Visitor's Burger",
+    "food.menus.theme_default_visitors_burger.desc":
+      "The event-day classic: a flame-grilled patty burger built for a busy visit.",
+    "food.menus.theme_default_event_day_wrap.name": "Event Day Wrap",
+    "food.menus.theme_default_event_day_wrap.desc":
+      "Grilled chicken wrap with crisp greens — light enough to carry between sessions.",
+
     "food.pickup.entrance_north.name": "North Entrance kiosk",
     "food.pickup.entrance_north.desc":
       "Main north entrance, to the right of the turnstiles.",
@@ -734,6 +808,80 @@ const TRANSLATIONS = {
     "food.menus.ice_cream.name": "Glasskula",
     "food.menus.ice_cream.desc":
       "En kula vanilj eller choklad med strössel.",
+
+    "food.themes.label_prefix": "Evenemangsspecial · ",
+    "food.themes.construction.label": "Byggspecial",
+    "food.themes.health.label": "Hälsospecial",
+    "food.themes.education.label": "Pausspecial",
+    "food.themes.design.label": "Designspecial",
+    "food.themes.entertainment.label": "Scenspecial",
+    "food.themes.industry.label": "Industrispecial",
+    "food.themes.food_drink.label": "Smakspecial",
+    "food.themes.leisure.label": "Helgspecial",
+    "food.themes.default.label": "Evenemangsspecial",
+
+    "food.menus.theme_construction_foreman_burger.name": "Förmannens burgare",
+    "food.menus.theme_construction_foreman_burger.desc":
+      "Dubbel nötfärsburgare med rökt cheddar, rostad lök och steaksås — uppkallad efter förmannens matlust på bygget.",
+    "food.menus.theme_construction_scaffold_hotdog.name": "Ställningsvarmkorv",
+    "food.menus.theme_construction_scaffold_hotdog.desc":
+      "Grillad korv toppad med senap, ketchup, pickles och rostad lök — staplad som en byggställning.",
+
+    "food.menus.theme_health_recovery_bowl.name": "Återhämtningsbowl",
+    "food.menus.theme_health_recovery_bowl.desc":
+      "Blandad sallad, grillad kyckling, avokado och lätt vinägrett — en ren skål mellan passen.",
+    "food.menus.theme_health_vitality_wrap.name": "Vitalitetswrap",
+    "food.menus.theme_health_vitality_wrap.desc":
+      "Mager kyckling, spenat och hummus i en fullkornstortilla — bränsle för föredrag i rad.",
+
+    "food.menus.theme_education_study_snack.name": "Rastbox",
+    "food.menus.theme_education_study_snack.desc":
+      "Panerade kycklingbitar med mild dipp och pommes — enkel att dela mellan lektioner.",
+    "food.menus.theme_education_campus_caesar.name": "Campus-Caesar",
+    "food.menus.theme_education_campus_caesar.desc":
+      "Klassisk caesarsallad med grillad kyckling och vitlökskrutonger — matsalens favorit.",
+
+    "food.menus.theme_design_curated_sushi.name": "Kurerad sushi",
+    "food.menus.theme_design_curated_sushi.desc":
+      "Komponerad bricka med lax-nigiri, tonfisk-nigiri och maki — lika avskalat som en skandinavisk inredning.",
+    "food.menus.theme_design_minimalist_margherita.name": "Minimalistisk Margherita",
+    "food.menus.theme_design_minimalist_margherita.desc":
+      "Stenugnsbakad pizza med San Marzano-tomat, färsk mozzarella och basilika — en komposition med tre ingredienser.",
+
+    "food.menus.theme_entertainment_headliner_burger.name": "Huvudnumret",
+    "food.menus.theme_entertainment_headliner_burger.desc":
+      "Dubbel cheeseburgare med rökt majonnäs och frasig sallad — arenans öppningsnummer.",
+    "food.menus.theme_entertainment_backstage_nuggets.name": "Backstage-nuggets",
+    "food.menus.theme_entertainment_backstage_nuggets.desc":
+      "Panerade kycklingbitar med dipp och pommes — en klassisk paus mellan föreställningar.",
+
+    "food.menus.theme_industry_engineers_lunch.name": "Ingenjörslunch",
+    "food.menus.theme_industry_engineers_lunch.desc":
+      "Nötfärsburgare byggd för en praktisk paus mellan monterbesök och hallvandringar.",
+    "food.menus.theme_industry_workshop_fries.name": "Verkstadspommes",
+    "food.menus.theme_industry_workshop_fries.desc":
+      "Generös portion gyllene pommes med dipp och dryck — lätt att dela på mässgolvet.",
+
+    "food.menus.theme_food_drink_chefs_tasting.name": "Kockens provsmakning",
+    "food.menus.theme_food_drink_chefs_tasting.desc":
+      "En kort provsmakning med lax-nigiri, tonfisk-nigiri och maki — evenemangets eget val.",
+    "food.menus.theme_food_drink_sommelier_pairing.name": "Sommelierens tallrik",
+    "food.menus.theme_food_drink_sommelier_pairing.desc":
+      "Margheritabitar och vitlöksbröd — avsedda att paras med dagens utvalda vin.",
+
+    "food.menus.theme_leisure_weekend_burger.name": "Helgburgare",
+    "food.menus.theme_leisure_weekend_burger.desc":
+      "Avslappnad version av den klassiska burgaren — perfekt mellan hallvandringar på ett lugnt besök.",
+    "food.menus.theme_leisure_family_wrap.name": "Familjewrap",
+    "food.menus.theme_leisure_family_wrap.desc":
+      "Grillad kycklingwrap med pommes och dryck — enkel att dela med hela familjen.",
+
+    "food.menus.theme_default_visitors_burger.name": "Besökarens burgare",
+    "food.menus.theme_default_visitors_burger.desc":
+      "Evenemangsklassikern: en flamgrillad burgare byggd för en späckad dag.",
+    "food.menus.theme_default_event_day_wrap.name": "Mässdagens wrap",
+    "food.menus.theme_default_event_day_wrap.desc":
+      "Grillad kycklingwrap med frasig sallad — lätt att ta med mellan pass.",
 
     "food.pickup.entrance_north.name": "Norra entrén",
     "food.pickup.entrance_north.desc":

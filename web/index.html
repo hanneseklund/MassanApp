@@ -1188,6 +1188,46 @@
                 <template x-if="step === 1">
                   <div class="purchase__body">
                     <h3 class="purchase__step-title" x-text="$store.lang.t('food.pick_menu')"></h3>
+                    <template x-if="themedMenu()">
+                      <section class="menu-themed" aria-labelledby="food-themed-title">
+                        <h4
+                          id="food-themed-title"
+                          class="menu-themed__title"
+                          x-text="$store.lang.t('food.themes.label_prefix') + themedMenu().label"
+                        ></h4>
+                        <ul class="menu-grid menu-grid--themed">
+                          <template x-for="m in themedMenu().items" :key="m.id">
+                            <li>
+                              <button
+                                type="button"
+                                class="menu-card menu-card--themed"
+                                :class="menuId === m.id && 'menu-card--selected'"
+                                :aria-pressed="menuId === m.id"
+                                @click="menuId = m.id"
+                              >
+                                <img
+                                  class="menu-card__image"
+                                  :src="m.image"
+                                  :alt="$store.lang.t('food.menu_image_alt', { name: m.label })"
+                                  loading="lazy"
+                                  decoding="async"
+                                />
+                                <span class="menu-card__body">
+                                  <span class="menu-card__name" x-text="m.label"></span>
+                                  <span class="menu-card__desc" x-text="m.description"></span>
+                                  <span
+                                    class="menu-card__extras"
+                                    x-show="m.extras.length"
+                                    x-text="$store.lang.t('food.includes_label') + ': ' + m.extras.join(', ')"
+                                  ></span>
+                                  <span class="menu-card__price" x-text="m.price"></span>
+                                </span>
+                              </button>
+                            </li>
+                          </template>
+                        </ul>
+                      </section>
+                    </template>
                     <ul class="menu-grid">
                       <template x-for="m in menus" :key="m.id">
                         <li>

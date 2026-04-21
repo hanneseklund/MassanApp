@@ -653,6 +653,17 @@ Exactly one venue record is expected in the prototype.
 - The menu catalog (10 menus), pickup locations, and restaurant list
   are static data in `web/assets/js/util/food.js` and do not have
   database tables. A persisted order references them by id.
+- Event-specific themed menus also live in `util/food.js` as static
+  per-theme definitions (`THEMED_MENU_DEFS`) and a `CATEGORY_TO_THEME`
+  map from `event.category` to a theme id. Unmapped categories fall
+  through to the `default` theme. `themedMenuForEvent(event)` returns
+  a `{ id, label, items }` object consumed by `views/food.js` (step 1
+  in the ordering flow) and `views/event.js` (the event landing food
+  preview). Themed entries share the combined `buildCatalog` output
+  with the regular 10 items, so `menuById` / `canonicalMenuLabel`
+  round-trip a persisted themed `menu_id` without a separate branch.
+  Themed entries reuse existing photography under
+  `web/assets/images/food/` — only copy and ids are new.
 - Each menu carries an `extras` list (sides and drinks bundled with
   the main, e.g. `["food.extras.small_fries", "food.extras.soft_drink"]`)
   resolved against the active language at access time. The bundle is

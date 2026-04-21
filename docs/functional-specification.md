@@ -233,7 +233,18 @@ The prototype must support this end-to-end path without gaps:
      Cream Scoop carry a smaller bundle (a dipping sauce, a waffle
      cone with sprinkles) but no drink. The full bundle is shown on
      the menu card, repeated in the order summary on step 2, and
-     repeated on the confirmation card on step 3.
+     repeated on the confirmation card on step 3. Above the
+     always-available grid, each event surfaces a short "Event
+     special" band (e.g. "Builder's specials" for Nordbygg, "Wellness
+     specials" for a health congress). The themed band carries two
+     themed items, derived from the event's category; events whose
+     category has no specific theme fall back to a generic "Event
+     specials" band. Themed items are selectable and are persisted
+     just like any other menu, so a themed order shows up in the
+     visitor's order history under its themed name. The themed band
+     also leads the food preview on the event's landing section so a
+     visitor sees the event-specific options before scrolling into
+     the ordering flow.
   2. Pick delivery. The visitor chooses either a pickup location at one
      of a small set of points within the venue, or a 30-minute timeslot
      at one of the on-site restaurants. The shown timeslots start on

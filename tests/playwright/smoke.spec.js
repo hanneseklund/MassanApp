@@ -716,8 +716,12 @@ test.describe("Food ordering (simulated)", () => {
       /^SIM-/,
     );
     const pickupCard = page.locator(".food .ticket-card");
+    // Themed section ("Builder's specials" for Nordbygg) renders above
+    // the regular menu grid, so the first menu-card is the event-themed
+    // Foreman's Burger — not the always-available Classic Burger (see
+    // issue #25).
     await expect(pickupCard.locator(".ticket-card__event")).toHaveText(
-      "Classic Burger",
+      "Foreman's Burger",
     );
     await expect(pickupCard).toContainText("North Entrance kiosk");
 
@@ -730,7 +734,7 @@ test.describe("Food ordering (simulated)", () => {
       }),
     ).toBeVisible();
     await expect(pickupCard.locator(".ticket-card__event")).toHaveText(
-      "Classic Burger",
+      "Foreman's Burger",
     );
     await expect(pickupCard).toContainText("North Entrance kiosk");
     await setLanguage(page, "en");

@@ -15,7 +15,7 @@ import {
 import { ticketCtaLabel } from "../util/sections.js";
 import { logoDataUri, avatarDataUri } from "../util/placeholders.js";
 import { createRedemptionController } from "../util/redemption.js";
-import { FOOD_MENUS } from "../util/food.js";
+import { FOOD_MENUS, themedMenuForEvent } from "../util/food.js";
 
 const OVERRIDE_KEYS = {
   entrance: "overrides.entrance",
@@ -159,11 +159,21 @@ export function eventView() {
     hasMoreExhibitors() {
       return this.exhibitorsForEvent().length > INLINE_LIMIT;
     },
+    themedFoodMenu() {
+      return themedMenuForEvent(this.event());
+    },
+    themedFoodMenuItems() {
+      return this.themedFoodMenu()?.items ?? [];
+    },
     inlineFoodMenus() {
-      return this.foodMenus.slice(0, INLINE_LIMIT);
+      // Show event-themed items at the top of the preview, then fill
+      // the remaining slots with regular menu items.
+      const themed = this.themedFoodMenuItems();
+      return [...themed, ...this.foodMenus].slice(0, INLINE_LIMIT);
     },
     hasMoreFoodMenus() {
-      return this.foodMenus.length > INLINE_LIMIT;
+      const total = this.themedFoodMenuItems().length + this.foodMenus.length;
+      return total > INLINE_LIMIT;
     },
     sessionSpeakers(session) {
       if (!session.speaker_ids?.length) return [];

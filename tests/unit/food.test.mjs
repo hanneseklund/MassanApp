@@ -18,6 +18,8 @@ import {
   canonicalMenuLabel,
   canonicalPickupLabel,
   canonicalRestaurantLabel,
+  themedMenuForEvent,
+  themeIdForEvent,
   upcomingTimeslots,
 } from "../../web/assets/js/util/food.js";
 
@@ -121,4 +123,75 @@ test("upcomingTimeslots: when current minute is exactly on the half hour, starts
   const first = new Date(slots[0].from);
   assert.equal(first.getHours(), 13);
   assert.equal(first.getMinutes(), 0);
+});
+
+test("themeIdForEvent: maps known categories to theme ids", () => {
+  assert.equal(
+    themeIdForEvent({ category: "Construction and real estate" }),
+    "construction",
+  );
+  assert.equal(themeIdForEvent({ category: "Health & Medicine" }), "health");
+  assert.equal(themeIdForEvent({ category: "Food & drink" }), "food_drink");
+});
+
+test("themeIdForEvent: unmapped categories (incl. 'Other') fall back to the default theme", () => {
+  assert.equal(themeIdForEvent({ category: "Other" }), "default");
+  assert.equal(themeIdForEvent({ category: "Something exotic" }), "default");
+});
+
+test("themeIdForEvent: missing event returns null", () => {
+  assert.equal(themeIdForEvent(null), null);
+  assert.equal(themeIdForEvent(undefined), null);
+});
+
+test("themedMenuForEvent: surfaces the themed section for every seeded category", () => {
+  // Every seeded category — including fall-back 'Other' — must render
+  // a themed section so the food menu always has an "Event special"
+  // band on top (issue #25).
+  const categories = [
+    "Construction and real estate",
+    "Health & Medicine",
+    "Education and training",
+    "Interior design",
+    "Entertainment",
+    "Industry",
+    "Food & drink",
+    "Leisure and consumer",
+    "Other",
+  ];
+  for (const category of categories) {
+    const themed = themedMenuForEvent({ category });
+    assert.ok(themed, `themed section missing for category ${category}`);
+    assert.ok(
+      Array.isArray(themed.items) && themed.items.length >= 2,
+      `themed section for ${category} should have >= 2 items`,
+    );
+    assert.equal(typeof themed.label, "string");
+    assert.notEqual(themed.label.length, 0);
+  }
+});
+
+test("themedMenuForEvent: themed items participate in menuById and carry English labels", () => {
+  // A persisted food_orders.menu_id for a themed item must still
+  // round-trip through menuById / canonicalMenuLabel — themed entries
+  // share the combined catalog with the regular 10 menus.
+  const themed = themedMenuForEvent({ category: "Construction and real estate" });
+  const first = themed.items[0];
+  assert.equal(menuById(first.id), first);
+  assert.match(canonicalMenuLabel(first.id), /[A-Za-z]/);
+  assert.match(first.price, /^SEK \d+$/);
+  assert.match(first.image, /^\/assets\/images\/food\/[\w-]+\.(jpe?g|png|webp)$/);
+});
+
+test("themedMenuForEvent: null event returns null", () => {
+  assert.equal(themedMenuForEvent(null), null);
+});
+
+test("FOOD_MENUS: still exposes exactly the 10 regular items after themed items are added", () => {
+  // Themed entries flow through the same combined catalog as the 10
+  // regular items, but FOOD_MENUS (used by the regular menu grid) must
+  // not include them — the themed section has its own grid above.
+  assert.equal(FOOD_MENUS.length, 10);
+  const ids = new Set(FOOD_MENUS.map((m) => m.id));
+  assert.ok(!ids.has("theme_construction_foreman_burger"));
 });

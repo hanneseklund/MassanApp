@@ -19,6 +19,7 @@ import {
   canonicalMenuLabel,
   canonicalPickupLabel,
   canonicalRestaurantLabel,
+  themedMenuForEvent,
   upcomingTimeslots,
 } from "../util/food.js";
 import { simulatedPayment } from "../simulations/payment.js";
@@ -76,6 +77,10 @@ export function foodView() {
     event() {
       const id = Alpine.store("app").eventId;
       return id ? Alpine.store("catalog").eventById(id) : null;
+    },
+
+    themedMenu() {
+      return themedMenuForEvent(this.event());
     },
 
     selectedMenu() {

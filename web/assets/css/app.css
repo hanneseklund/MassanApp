@@ -2104,6 +2104,33 @@ a {
   font-weight: 600;
 }
 
+/* Themed menu section at the top of the food flow. The event's
+   category maps to a theme that surfaces 2 themed items above the
+   always-available menu grid. Visually a tinted band so the themed
+   section reads as "Event special" without pulling focus from the
+   main selection. */
+.menu-themed {
+  display: grid;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  margin: 0 0 4px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.menu-themed__title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: var(--heading-tracking);
+}
+
+.menu-card--themed {
+  background: var(--surface);
+}
+
 .food-delivery {
   display: grid;
   grid-template-columns: 1fr 1fr;
