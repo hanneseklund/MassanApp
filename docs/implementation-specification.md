@@ -151,8 +151,8 @@ web/assets/js/
                                factories on alpine:init
   i18n.js                      UI translation table (en, sv) +
                                translate(), activeTranslate(),
-                               canonicalTranslate(), dateLocaleFor()
-                               helpers
+                               canonicalTranslate(), dateLocaleFor(),
+                               availableKeys() helpers
   supabase.js                  singleton Supabase JS client
   util/
     dates.js                   formatDates, formatShortDate,
@@ -163,8 +163,9 @@ web/assets/js/
                                upcomingEvents, eventMatchesQuery,
                                filterEvents (pure filter/sort behind
                                the calendar view)
-    placeholders.js            logoDataUri, avatarDataUri (deterministic
-                               SVG fallbacks for exhibitors and speakers)
+    placeholders.js            initialsFromName, logoDataUri,
+                               avatarDataUri (deterministic SVG
+                               fallbacks for exhibitors and speakers)
     food.js                    FOOD_MENUS, PICKUP_LOCATIONS,
                                RESTAURANTS, menuById, pickupById,
                                restaurantById, canonical*Label,
@@ -218,7 +219,10 @@ web/assets/js/
                                language, localStorage persistence,
                                t(key) translator)
     session.js                 Alpine.store("session", ...) (Supabase
-                               Auth mapping)
+                               Auth mapping). Exports `mapSupabaseUser`
+                               as a named export so the unit suite can
+                               exercise the provider-detection branches
+                               without a live Supabase session.
     catalog.js                 Alpine.store("catalog", ...) (venue,
                                events, news, articles, program,
                                exhibitors, speakers)
