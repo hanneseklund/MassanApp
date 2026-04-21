@@ -115,12 +115,14 @@ JSONB-payload helpers, the My Tickets sort rules that keep
 the currently-selected event's tickets on top, the My Pages
 helpers that format the points balance, ticket-count hint,
 recent-transactions slice, and per-transaction source / event /
-delta labels, and the event-home helpers that drive the inline
+delta labels, the event-home helpers that drive the inline
 5-item truncation for news, articles, exhibitors, and the
 program, the themed-first food-menu preview, the ticket-gated
 event add-ons visibility, and the override-label translation
-lookup) also have a fast unit suite that does not need a
-browser or Supabase:
+lookup, and the My Pages newsletter-preferences helpers
+that build the per-event subscription list and resolve the
+venue-wide row) also have a fast unit suite that does not
+need a browser or Supabase:
 
 ```
 npm run test:unit

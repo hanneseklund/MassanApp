@@ -489,14 +489,20 @@ the currently-selected event's tickets on top, the
 My Pages helpers in `views/me.js` (`meView`) that format
 the points balance, ticket-count hint, recent-transactions
 slice, and per-transaction source / event / delta labels,
-and the event-home helpers in `views/event.js` (`eventView`)
+the event-home helpers in `views/event.js` (`eventView`)
 that drive the inline 5-item truncation for news, articles,
 exhibitors, and the program (keeping the by-day grouping),
 the themed-first food-menu preview, the ticket-gated
 "Event add-ons" visibility, the news / article / addon
 image fallback to the event hero, and the override-label
 translation lookup with a humanized fallback for
-forward-looking keys) have a fast unit suite under
+forward-looking keys, and the My Pages newsletter
+helpers in `views/newsletter-preferences.js`
+(`newsletterPreferences`) that build the per-event
+subscription list (filtered to `event_id IS NOT NULL`,
+joined to the catalog event name, sorted by event name)
+and resolve the venue-wide row through the newsletter
+store) have a fast unit suite under
 `tests/unit/` that does not require a browser or Supabase.
 
 The suite runs against the same source files the browser loads —
