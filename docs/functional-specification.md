@@ -224,8 +224,16 @@ The prototype must support this end-to-end path without gaps:
 - The flow has three steps:
   1. Pick a menu. The prototype offers ten typical fast-food menus
      (burgers, pizza, hot dog, chicken nuggets, fries, salad, wrap,
-     sushi box, ice cream) with name, short description, price, and an
-     illustrative image.
+     sushi box, ice cream) with name, short description, price, and a
+     photograph of the dish. Most menus are presented as a complete
+     offering rather than a bare main: each card lists the included
+     sides and drinks (e.g. the Classic Burger comes with small fries
+     and a soft drink, the Sushi Box with edamame, miso soup, and
+     bottled water). Stand-alone items such as the Large Fries and Ice
+     Cream Scoop carry a smaller bundle (a dipping sauce, a waffle
+     cone with sprinkles) but no drink. The full bundle is shown on
+     the menu card, repeated in the order summary on step 2, and
+     repeated on the confirmation card on step 3.
   2. Pick delivery. The visitor chooses either a pickup location at one
      of a small set of points within the venue, or a 30-minute timeslot
      at one of the on-site restaurants. The shown timeslots start on
@@ -234,9 +242,9 @@ The prototype must support this end-to-end path without gaps:
      visitor who is not signed in is sent to the auth view first and
      returned to the food flow after sign-in.
 - On success the visitor sees a confirmation screen with the
-  transaction reference and either the pickup location or the
-  restaurant + timeslot to expect, marked with the same `simulated`
-  chip used elsewhere.
+  transaction reference, the included sides and drinks, and either the
+  pickup location or the restaurant + timeslot to expect, marked with
+  the same `simulated` chip used elsewhere.
 - A signed-in visitor is awarded points for the order (see "Points"
   below). A failed or cancelled order awards nothing.
 - Persisted orders live with the visitor and are scoped to their

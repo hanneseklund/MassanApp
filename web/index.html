@@ -783,6 +783,11 @@
                           />
                           <span class="menu-card__body">
                             <span class="menu-card__name" x-text="m.label"></span>
+                            <span
+                              class="menu-card__extras"
+                              x-show="m.extras.length"
+                              x-text="$store.lang.t('food.includes_label') + ': ' + m.extras.join(', ')"
+                            ></span>
                             <span class="menu-card__price" x-text="m.price"></span>
                           </span>
                         </div>
@@ -1203,6 +1208,11 @@
                             <span class="menu-card__body">
                               <span class="menu-card__name" x-text="m.label"></span>
                               <span class="menu-card__desc" x-text="m.description"></span>
+                              <span
+                                class="menu-card__extras"
+                                x-show="m.extras.length"
+                                x-text="$store.lang.t('food.includes_label') + ': ' + m.extras.join(', ')"
+                              ></span>
                               <span class="menu-card__price" x-text="m.price"></span>
                             </span>
                           </button>
@@ -1323,6 +1333,10 @@
                           <dt x-text="$store.lang.t('food.summary_menu')"></dt>
                           <dd x-text="selectedMenu()?.label ?? ''"></dd>
                         </div>
+                        <div class="purchase__summary-row" x-show="(selectedMenu()?.extras?.length ?? 0) > 0">
+                          <dt x-text="$store.lang.t('food.includes_label')"></dt>
+                          <dd x-text="(selectedMenu()?.extras ?? []).join(', ')"></dd>
+                        </div>
                         <div class="purchase__summary-row">
                           <dt x-text="$store.lang.t('food.summary_price')"></dt>
                           <dd x-text="selectedMenu()?.price ?? ''"></dd>
@@ -1380,6 +1394,11 @@
                         <p class="ticket-card__event" x-text="confirmedOrder.menu_label"></p>
                         <p class="ticket-card__dates" x-text="confirmedOrder.price"></p>
                       </header>
+                      <p
+                        class="ticket-card__extras"
+                        x-show="confirmedExtras().length"
+                        x-text="$store.lang.t('food.includes_label') + ': ' + confirmedExtras().join(', ')"
+                      ></p>
                       <p
                         x-show="confirmedOrder.delivery_mode === 'pickup'"
                         x-text="$store.lang.t('food.pickup_instructions', { location: confirmedOrder.delivery_label })"

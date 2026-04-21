@@ -27,10 +27,27 @@ test("FOOD_MENUS: exposes exactly 10 menus with unique ids", () => {
   assert.equal(new Set(ids).size, ids.length);
 });
 
-test("FOOD_MENUS: every entry has an SVG data URI image", () => {
+test("FOOD_MENUS: every entry has a bundled image path under /assets/images/food/", () => {
   for (const menu of FOOD_MENUS) {
-    assert.match(menu.image, /^data:image\/svg\+xml/);
+    assert.match(menu.image, /^\/assets\/images\/food\/[\w-]+\.(jpe?g|png|webp)$/);
   }
+});
+
+test("FOOD_MENUS: every entry exposes an extras list (may be empty)", () => {
+  for (const menu of FOOD_MENUS) {
+    assert.ok(Array.isArray(menu.extras), `${menu.id} should expose extras`);
+  }
+});
+
+test("FOOD_MENUS: combo menus include resolved side/drink labels in English", () => {
+  const burger = menuById("burger_classic");
+  assert.deepEqual(burger.extras, ["Small fries", "Soft drink (33 cl)"]);
+  const sushi = menuById("sushi_box");
+  assert.deepEqual(sushi.extras, [
+    "Edamame",
+    "Miso soup",
+    "Bottled water (33 cl)",
+  ]);
 });
 
 test("FOOD_MENUS: labels and descriptions resolve to English by default", () => {

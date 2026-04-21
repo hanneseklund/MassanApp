@@ -15,13 +15,16 @@ import { activeTranslate, canonicalTranslate } from "../i18n.js";
 const t = activeTranslate;
 
 // Build a translated catalog from a list of entries shaped
-// `{ id, name_key, desc_key, ...extras }`. Returns the public-facing
-// `list` of items (with `label` / `description` getters that re-read
-// the active language on access), an `byId` lookup, and a
-// `canonicalLabel` that resolves against English regardless of the
-// current UI language. The three food catalogs below share this shape;
-// the ticket-type catalog in util/sections.js differs enough (grouped
-// by event.ticket_model) that it is not built through this helper.
+// `{ id, name_key, desc_key, extra?, extra_keys? }`. Returns the
+// public-facing `list` of items (with `label` / `description` /
+// `extras` getters that re-read the active language on access), an
+// `byId` lookup, and a `canonicalLabel` that resolves against English
+// regardless of the current UI language. `extra_keys` is an array of
+// translation keys for bundled sides/drinks shown under the menu name
+// — empty/missing means no included items. The three food catalogs
+// below share this shape; the ticket-type catalog in util/sections.js
+// differs enough (grouped by event.ticket_model) that it is not built
+// through this helper.
 function buildCatalog(entries) {
   const list = entries.map((entry) => ({
     id: entry.id,
@@ -31,6 +34,9 @@ function buildCatalog(entries) {
     },
     get description() {
       return t(entry.desc_key);
+    },
+    get extras() {
+      return (entry.extra_keys ?? []).map((key) => t(key));
     },
   }));
   return {
@@ -47,37 +53,30 @@ function buildCatalog(entries) {
 
 // Ten typical fast-food menus. Each entry carries a stable id, the
 // translation keys for the user-facing name + description, a price in
-// SEK, and an emoji used by the view to generate an inline SVG image
-// (keeps the prototype buildless; no binary assets required).
+// SEK, the path to a bundled photo, and a list of translation keys for
+// the bundled sides/drinks that come with the menu (resolved at
+// access time via the `extras` getter).
 const MENU_ENTRIES = [
-  { id: "burger_classic", name_key: "food.menus.burger_classic.name", desc_key: "food.menus.burger_classic.desc", price: "SEK 129", emoji: "🍔", bg: "#c14a1a" },
-  { id: "cheeseburger_double", name_key: "food.menus.cheeseburger_double.name", desc_key: "food.menus.cheeseburger_double.desc", price: "SEK 159", emoji: "🍔", bg: "#8a1f57" },
-  { id: "pizza_margherita", name_key: "food.menus.pizza_margherita.name", desc_key: "food.menus.pizza_margherita.desc", price: "SEK 139", emoji: "🍕", bg: "#b35b1c" },
-  { id: "hotdog_classic", name_key: "food.menus.hotdog_classic.name", desc_key: "food.menus.hotdog_classic.desc", price: "SEK 79", emoji: "🌭", bg: "#c41e3a" },
-  { id: "chicken_nuggets", name_key: "food.menus.chicken_nuggets.name", desc_key: "food.menus.chicken_nuggets.desc", price: "SEK 99", emoji: "🍗", bg: "#b38018" },
-  { id: "fries_large", name_key: "food.menus.fries_large.name", desc_key: "food.menus.fries_large.desc", price: "SEK 49", emoji: "🍟", bg: "#c49a14" },
-  { id: "caesar_salad", name_key: "food.menus.caesar_salad.name", desc_key: "food.menus.caesar_salad.desc", price: "SEK 119", emoji: "🥗", bg: "#3b7a2a" },
-  { id: "wrap_chicken", name_key: "food.menus.wrap_chicken.name", desc_key: "food.menus.wrap_chicken.desc", price: "SEK 109", emoji: "🥙", bg: "#6b5226" },
-  { id: "sushi_box", name_key: "food.menus.sushi_box.name", desc_key: "food.menus.sushi_box.desc", price: "SEK 149", emoji: "🍣", bg: "#005a6b" },
-  { id: "ice_cream", name_key: "food.menus.ice_cream.name", desc_key: "food.menus.ice_cream.desc", price: "SEK 39", emoji: "🍦", bg: "#8b5cb6" },
+  { id: "burger_classic",      name_key: "food.menus.burger_classic.name",      desc_key: "food.menus.burger_classic.desc",      price: "SEK 129", image: "/assets/images/food/burger_classic.jpg",      extra_keys: ["food.extras.small_fries", "food.extras.soft_drink"] },
+  { id: "cheeseburger_double", name_key: "food.menus.cheeseburger_double.name", desc_key: "food.menus.cheeseburger_double.desc", price: "SEK 159", image: "/assets/images/food/cheeseburger_double.jpg", extra_keys: ["food.extras.small_fries", "food.extras.soft_drink"] },
+  { id: "pizza_margherita",    name_key: "food.menus.pizza_margherita.name",    desc_key: "food.menus.pizza_margherita.desc",    price: "SEK 139", image: "/assets/images/food/pizza_margherita.jpg",    extra_keys: ["food.extras.garlic_bread", "food.extras.soft_drink"] },
+  { id: "hotdog_classic",      name_key: "food.menus.hotdog_classic.name",      desc_key: "food.menus.hotdog_classic.desc",      price: "SEK 79",  image: "/assets/images/food/hotdog_classic.png",      extra_keys: ["food.extras.small_fries", "food.extras.soft_drink"] },
+  { id: "chicken_nuggets",     name_key: "food.menus.chicken_nuggets.name",     desc_key: "food.menus.chicken_nuggets.desc",     price: "SEK 99",  image: "/assets/images/food/chicken_nuggets.jpg",     extra_keys: ["food.extras.small_fries", "food.extras.dip", "food.extras.soft_drink"] },
+  { id: "fries_large",         name_key: "food.menus.fries_large.name",         desc_key: "food.menus.fries_large.desc",         price: "SEK 49",  image: "/assets/images/food/fries_large.jpg",         extra_keys: ["food.extras.dip"] },
+  { id: "caesar_salad",        name_key: "food.menus.caesar_salad.name",        desc_key: "food.menus.caesar_salad.desc",        price: "SEK 119", image: "/assets/images/food/caesar_salad.jpg",        extra_keys: ["food.extras.garlic_bread", "food.extras.bottled_water"] },
+  { id: "wrap_chicken",        name_key: "food.menus.wrap_chicken.name",        desc_key: "food.menus.wrap_chicken.desc",        price: "SEK 109", image: "/assets/images/food/wrap_chicken.jpg",        extra_keys: ["food.extras.small_fries", "food.extras.soft_drink"] },
+  { id: "sushi_box",           name_key: "food.menus.sushi_box.name",           desc_key: "food.menus.sushi_box.desc",           price: "SEK 149", image: "/assets/images/food/sushi_box.jpg",           extra_keys: ["food.extras.edamame", "food.extras.miso_soup", "food.extras.bottled_water"] },
+  { id: "ice_cream",           name_key: "food.menus.ice_cream.name",           desc_key: "food.menus.ice_cream.desc",           price: "SEK 39",  image: "/assets/images/food/ice_cream.jpg",           extra_keys: ["food.extras.waffle_cone", "food.extras.toppings"] },
 ].map((entry) => ({
   id: entry.id,
   name_key: entry.name_key,
   desc_key: entry.desc_key,
+  extra_keys: entry.extra_keys,
   extra: {
     price: entry.price,
-    image: menuImageDataUri(entry.emoji, entry.bg),
+    image: entry.image,
   },
 }));
-
-function menuImageDataUri(emoji, bg) {
-  const svg =
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140">` +
-    `<rect width="200" height="140" fill="${bg}"/>` +
-    `<text x="50%" y="54%" font-size="80" text-anchor="middle" dominant-baseline="middle">${emoji}</text>` +
-    `</svg>`;
-  return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
-}
 
 const menus = buildCatalog(MENU_ENTRIES);
 export const FOOD_MENUS = menus.list;

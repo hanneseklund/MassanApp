@@ -645,6 +645,17 @@ Exactly one venue record is expected in the prototype.
 - The menu catalog (10 menus), pickup locations, and restaurant list
   are static data in `web/assets/js/util/food.js` and do not have
   database tables. A persisted order references them by id.
+- Each menu carries an `extras` list (sides and drinks bundled with
+  the main, e.g. `["food.extras.small_fries", "food.extras.soft_drink"]`)
+  resolved against the active language at access time. The bundle is
+  presentational only — it is shown on the menu card, the order
+  summary, and the confirmation card, but is not stored on the
+  `food_orders` row. Re-resolving the bundle on confirmation is done
+  by looking up the saved `menu_id` against the static catalog.
+- Menu photographs live as bundled binary assets in
+  `web/assets/images/food/<menu_id>.<jpg|png>`. They were sourced from
+  Wikimedia Commons (public domain, CC0, and CC BY) — see
+  `web/assets/images/food/CREDITS.md` for per-file attribution.
 - Persisted display fields (`menu_label`, `delivery_label`) use the
   canonical English copy via the `canonical*Label` helpers, same rule
   as `ticket_type_label` on tickets — the wallet entry must not flip

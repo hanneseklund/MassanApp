@@ -2091,6 +2091,13 @@ a {
   line-height: 1.35;
 }
 
+.menu-card__extras {
+  font-size: 11px;
+  color: var(--ink-muted);
+  line-height: 1.35;
+  font-style: italic;
+}
+
 .menu-card__price {
   font-size: 13px;
   color: var(--accent);

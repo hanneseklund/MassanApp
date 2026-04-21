@@ -94,6 +94,12 @@ export function foodView() {
       return this.timeslots.find((s) => s.id === this.timeslotId) ?? null;
     },
 
+    confirmedExtras() {
+      const id = this.confirmedOrder?.menu_id;
+      if (!id) return [];
+      return menuById(id)?.extras ?? [];
+    },
+
     setDeliveryMode(mode) {
       this.deliveryMode = mode;
       this.error = "";

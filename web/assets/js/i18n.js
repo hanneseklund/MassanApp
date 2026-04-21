@@ -377,6 +377,17 @@ const TRANSLATIONS = {
     "food.restaurants.torget_bistro.name": "Torget Bistro",
     "food.restaurants.torget_bistro.desc":
       "Casual canteen at the venue square, family friendly.",
+
+    "food.includes_label": "Includes",
+    "food.extras.small_fries": "Small fries",
+    "food.extras.soft_drink": "Soft drink (33 cl)",
+    "food.extras.garlic_bread": "Garlic bread",
+    "food.extras.dip": "Dipping sauce",
+    "food.extras.bottled_water": "Bottled water (33 cl)",
+    "food.extras.edamame": "Edamame",
+    "food.extras.miso_soup": "Miso soup",
+    "food.extras.waffle_cone": "Waffle cone",
+    "food.extras.toppings": "Sprinkles",
   },
 
   sv: {
@@ -740,6 +751,17 @@ const TRANSLATIONS = {
     "food.restaurants.torget_bistro.name": "Torget Bistro",
     "food.restaurants.torget_bistro.desc":
       "Avslappnad matsal vid torget, familjevänlig.",
+
+    "food.includes_label": "Ingår",
+    "food.extras.small_fries": "Liten pommes",
+    "food.extras.soft_drink": "Läsk (33 cl)",
+    "food.extras.garlic_bread": "Vitlöksbröd",
+    "food.extras.dip": "Dippsås",
+    "food.extras.bottled_water": "Vatten på flaska (33 cl)",
+    "food.extras.edamame": "Edamame",
+    "food.extras.miso_soup": "Misosoppa",
+    "food.extras.waffle_cone": "Våffelstrut",
+    "food.extras.toppings": "Strössel",
   },
 };
 
