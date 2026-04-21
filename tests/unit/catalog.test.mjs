@@ -175,17 +175,6 @@ test("addonsForEvent: hides inactive rows", () => {
   );
 });
 
-test("addonById: looks up across events", () => {
-  const store = withRows({
-    addons: [
-      { id: "a", event_id: "e1", points_cost: 80 },
-      { id: "b", event_id: "e2", points_cost: 50 },
-    ],
-  });
-  assert.equal(store.addonById("b").event_id, "e2");
-  assert.equal(store.addonById("missing"), null);
-});
-
 test("activeMerchandise: filters inactive rows and sorts by points_cost", () => {
   const store = withRows({
     merchandise: [
@@ -198,15 +187,4 @@ test("activeMerchandise: filters inactive rows and sorts by points_cost", () => 
     store.activeMerchandise().map((m) => m.id),
     ["y", "x"],
   );
-});
-
-test("merchandiseById: looks up across the venue-wide catalog", () => {
-  const store = withRows({
-    merchandise: [
-      { id: "tote", points_cost: 80 },
-      { id: "cap", points_cost: 120 },
-    ],
-  });
-  assert.equal(store.merchandiseById("cap").points_cost, 120);
-  assert.equal(store.merchandiseById("missing"), null);
 });

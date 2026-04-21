@@ -134,16 +134,10 @@ export function catalogStore() {
         .filter((a) => a.event_id === eventId && a.active !== false)
         .sort((a, b) => (a.points_cost || 0) - (b.points_cost || 0));
     },
-    addonById(id) {
-      return this.addons.find((a) => a.id === id) ?? null;
-    },
     activeMerchandise() {
       return this.merchandise
         .filter((m) => m.active !== false)
         .sort((a, b) => (a.points_cost || 0) - (b.points_cost || 0));
-    },
-    merchandiseById(id) {
-      return this.merchandise.find((m) => m.id === id) ?? null;
     },
   };
 }
