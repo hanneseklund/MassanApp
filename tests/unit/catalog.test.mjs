@@ -199,3 +199,14 @@ test("activeMerchandise: filters inactive rows and sorts by points_cost", () => 
     ["y", "x"],
   );
 });
+
+test("merchandiseById: looks up across the venue-wide catalog", () => {
+  const store = withRows({
+    merchandise: [
+      { id: "tote", points_cost: 80 },
+      { id: "cap", points_cost: 120 },
+    ],
+  });
+  assert.equal(store.merchandiseById("cap").points_cost, 120);
+  assert.equal(store.merchandiseById("missing"), null);
+});
