@@ -299,14 +299,15 @@ section above for the caveats.
     `simulated` chip, the transaction reference starts with `SIM-`,
     the confirmed ticket card shows the menu label `Classic Burger`,
     and the pickup instructions name `North Entrance kiosk`.
-31. With the confirmation still on screen, tap the Swedish flag in the
-    top chrome. Assert: the chrome copy and the confirmation's
-    template prose switch to Swedish, but the persisted menu label
-    (`Classic Burger`) and pickup location (`North Entrance kiosk`)
-    in the confirmed ticket card stay in English — `menu_label` and
-    `delivery_label` in `public.food_orders` are canonical English,
-    same rule as `ticket_type_label` in `public.tickets`. Tap the
-    English flag to restore English for the next step.
+31. With the confirmation still on screen, open the language dropdown
+    in the top chrome and pick Swedish. Assert: the chrome copy and
+    the confirmation's template prose switch to Swedish, but the
+    persisted menu label (`Classic Burger`) and pickup location
+    (`North Entrance kiosk`) in the confirmed ticket card stay in
+    English — `menu_label` and `delivery_label` in
+    `public.food_orders` are canonical English, same rule as
+    `ticket_type_label` in `public.tickets`. Open the dropdown again
+    and pick English to restore English for the next step.
 32. Tap "Order another". Pick the first menu, Continue, switch
     delivery to "Book a restaurant slot", pick `Smakverket`, pick the
     first timeslot, and tap "Pay and order". Assert: the confirmation
@@ -350,14 +351,16 @@ so the balance is non-zero before the first check here.
 
 ### Language toggle
 
-39. From any view, tap the flag icon in the top chrome for the other
-    language (UK flag for English, Swedish flag for Swedish — the
-    active language's flag is fully opaque, the inactive one is
-    dimmed). Assert: the chrome title, primary nav labels, and hint
-    copy switch language. Reload the page. Assert: the choice is
-    preserved.
-40. Tap the English (UK) flag to return to English. Assert: the chrome
-    re-renders in English without requiring a reload. Event content
+39. From any view, open the language dropdown in the top chrome (the
+    single button shows the active language's flag and a chevron;
+    `aria-expanded` flips to `true` on open) and pick the other
+    language from the listbox. Assert: the chrome title, primary nav
+    labels, and hint copy switch language, and the dropdown collapses
+    (`aria-expanded` returns to `false`). Reload the page. Assert: the
+    choice is preserved.
+40. Open the dropdown again and pick English. Assert: the chrome
+    re-renders in English without requiring a reload, and the
+    dropdown closes on outside click or the Escape key. Event content
     (event names, summaries, news, articles, exhibitor copy,
     practical-info venue copy) stays in the language it was seeded in
     regardless of the toggle.
@@ -365,8 +368,8 @@ so the balance is non-zero before the first check here.
 ### Chrome layout
 
 41. Open the start page (calendar of events). Assert: the language
-    flag pair and the "me" silhouette icon sit flush against the
-    right edge of the chrome (within the chrome's right padding),
+    dropdown toggle and the "me" silhouette icon sit flush against
+    the right edge of the chrome (within the chrome's right padding),
     matching their position on event subviews.
 
 ## Automated smoke suite
