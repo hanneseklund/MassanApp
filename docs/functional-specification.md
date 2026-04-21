@@ -100,22 +100,27 @@ The prototype must support this end-to-end path without gaps:
   button; it closes on outside click, the Escape key, and after an
   entry is picked.
 - The menu entries, in order, are:
-  1. **My tickets** — only shown when an event is selected. Routes
+  1. **Home entry** — always shown as the first item. When an event
+     is selected the label is that event's name and the entry opens
+     the event's home page (`#/event/<id>`). When no event is
+     selected the label is "Start" and the entry navigates to the
+     calendar (`#/`), mirroring the "Other events" destination.
+  2. **My tickets** — only shown when an event is selected. Routes
      to `#/tickets` via the usual auth detour.
-  2. **Food** — only shown when an event is selected. Opens the
+  3. **Food** — only shown when an event is selected. Opens the
      event's dedicated food page.
-  3. **Program** — only shown when an event is selected. Opens the
+  4. **Program** — only shown when an event is selected. Opens the
      event's dedicated program page.
-  4. **Exhibitors** — only shown when an event is selected. Opens
+  5. **Exhibitors** — only shown when an event is selected. Opens
      the event's dedicated exhibitors page.
-  5. **Practical information** — only shown when an event is
+  6. **Practical information** — only shown when an event is
      selected. Navigates to the `#/event/<id>/practical` route,
      which collapses back to the stacked landing view and scrolls
      the practical-info section anchor into view.
-  6. **Other events** — only shown when an event is selected.
-     Navigates to the calendar (`#/`).
   7. **My pages** — always shown. Same destination as the
      user-silhouette icon; routes through auth when necessary.
+  8. **Other events** — only shown when an event is selected, and
+     rendered last in the panel. Navigates to the calendar (`#/`).
 - "An event is selected" means the app's `eventId` is set. That
   remains true on an event's stacked landing view, its dedicated
   section pages, its exhibitor detail pages, and the purchase flow,
