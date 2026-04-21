@@ -110,9 +110,13 @@ delegate to, the lang-store persistence
 and translator wiring, the Supabase-user mapping that backs
 the session store, the shared redemption controller that
 backs both the event add-ons section and the venue-wide points
-shop, and the ticket-purchase questionnaire form-state and
-JSONB-payload helpers) also have a fast unit suite that does
-not need a browser or Supabase:
+shop, the ticket-purchase questionnaire form-state and
+JSONB-payload helpers, the My Tickets sort rules that keep
+the currently-selected event's tickets on top, and the My Pages
+helpers that format the points balance, ticket-count hint,
+recent-transactions slice, and per-transaction source / event /
+delta labels) also have a fast unit suite that does not need a
+browser or Supabase:
 
 ```
 npm run test:unit

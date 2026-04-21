@@ -477,15 +477,20 @@ the shared redemption controller in `util/redemption.js`
 (`createRedemptionController`) that backs the event add-ons
 section and the venue-wide points shop — `remainingStock`,
 `canRedeem`, `disabledReason`, and the `redeem` writer that
-delegates to the `points` store, and the ticket-purchase
+delegates to the `points` store, the ticket-purchase
 questionnaire helpers in `util/questionnaire.js`
 (`defaultQuestionnaire`, `subjectsFor`,
 `buildQuestionnairePayload`, `buildProfileUpdate`,
 `PROFILE_FIELDS`) that seed the form state from a saved
 profile and serialize it back into the JSONB shape written
-to `public.tickets.questionnaire`) have a fast unit suite
-under `tests/unit/` that does not require a browser or
-Supabase.
+to `public.tickets.questionnaire`, the My Tickets sort
+rules in `views/my-tickets.js` (`myTicketsView`) that keep
+the currently-selected event's tickets on top, and the
+My Pages helpers in `views/me.js` (`meView`) that format
+the points balance, ticket-count hint, recent-transactions
+slice, and per-transaction source / event / delta labels)
+have a fast unit suite under `tests/unit/` that does not
+require a browser or Supabase.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
