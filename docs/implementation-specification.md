@@ -462,6 +462,14 @@ skip the `.select()` return — see the comment in
   `i18n.js`. The `tests/unit/i18n.test.mjs` suite asserts every key
   exists in every supported language via the `availableKeys(lang)`
   helper, so a one-sided key fails the unit run before it ships.
+  The same suite also walks `web/` for literal `t('...')` /
+  `activeTranslate('...')` / `canonicalTranslate('...')` callsites and
+  fails if any references a key that is not in the dictionary, so a
+  template referencing a missing key fails the unit run too. (Keys
+  built from variables — for example the per-menu `name_key` /
+  `desc_key` lookups in `util/food.js` — are not literal and so are
+  not scanned; those modules carry the originating literal references
+  in their entry tables.)
   Adding a new language: extend `SUPPORTED_LANGUAGES`,
   `LANGUAGE_LABELS`, `DATE_LOCALES`, and the `TRANSLATIONS` object,
   then update the chrome toggle if the two-language toggle no longer

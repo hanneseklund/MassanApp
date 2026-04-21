@@ -441,7 +441,9 @@ shape in `newsletter/preferences.js`, the QR payload builder in
 `simulations/payment.js` that both the ticket and food flows
 resolve against, the prototype-host allowlist in
 `simulations/email.js` that gates the `[simulatedEmail]` console
-log, the UI translation lookup in `i18n.js`, the
+log, the UI translation lookup in `i18n.js` plus a meta-check
+that walks `web/` for literal `t('...')` callsites and asserts
+each referenced key is in the dictionary, the
 deterministic exhibitor/speaker placeholder SVGs in
 `util/placeholders.js`, the food-ordering catalog and the
 `upcomingTimeslots` next-half-hour generator in `util/food.js`

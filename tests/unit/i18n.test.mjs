@@ -8,6 +8,9 @@
 
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readdirSync, readFileSync } from "node:fs";
+import { join, dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 import {
   SUPPORTED_LANGUAGES,
@@ -18,6 +21,8 @@ import {
   canonicalTranslate,
   availableKeys,
 } from "../../web/assets/js/i18n.js";
+
+const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
 
 test("SUPPORTED_LANGUAGES: includes en and sv", () => {
   assert.ok(SUPPORTED_LANGUAGES.includes("en"));
@@ -141,4 +146,104 @@ test("availableKeys: every supported language has the same key set", () => {
 test("availableKeys: unknown language returns an empty list", () => {
   assert.deepEqual(availableKeys("de"), []);
   assert.deepEqual(availableKeys(undefined), []);
+});
+
+// Walk web/ and collect literal translation-key references so the test
+// below can assert each one resolves. Catches three call shapes:
+//   $store.lang.t('key')      method-call form (any object)
+//   activeTranslate('key')    direct helper from i18n.js
+//   canonicalTranslate('key') direct helper from i18n.js
+//   translate('key', ...)     direct helper from i18n.js
+//   t('key')                  bare local alias (`const t = activeTranslate`
+//                             or a wrapper closing over Alpine.store('lang'))
+// Keys built from variables (e.g. food's per-menu lookups via name_key)
+// are not literal so they do not appear here, which is fine — those
+// callsites delegate to dictionary entries that *are* present as
+// literals in the originating modules and so are covered transitively.
+function collectKeyReferences() {
+  const refs = []; // { file, line, key }
+  const lookups = [
+    // .t('key') — method call on any receiver (Alpine store, alias, etc.).
+    /\.t\(\s*["']([\w.]+)["']/g,
+    // activeTranslate / canonicalTranslate / translate — direct helper calls.
+    /\b(?:active|canonical)?Translate\(\s*["']([\w.]+)["']/g,
+    // Bare `t('key')` — local alias, e.g. `const t = activeTranslate;`.
+    // The leading boundary excludes `.t(` (already covered) and tokens
+    // like `mt(` that happen to end in `t`.
+    /(?:^|[^A-Za-z0-9_.])t\(\s*["']([\w.]+)["']/g,
+  ];
+  function scan(filePath) {
+    const content = readFileSync(filePath, "utf8");
+    const lineStarts = [0];
+    for (let i = 0; i < content.length; i++) {
+      if (content[i] === "\n") lineStarts.push(i + 1);
+    }
+    function lineFor(offset) {
+      let lo = 0;
+      let hi = lineStarts.length - 1;
+      while (lo < hi) {
+        const mid = (lo + hi + 1) >> 1;
+        if (lineStarts[mid] <= offset) lo = mid;
+        else hi = mid - 1;
+      }
+      return lo + 1;
+    }
+    for (const re of lookups) {
+      re.lastIndex = 0;
+      let m;
+      while ((m = re.exec(content)) !== null) {
+        const key = m[1];
+        // Translation keys are dotted namespaces of letter-led segments
+        // (e.g. `food.menus.burger_classic.name`). Restrict matches to
+        // that shape so non-key strings that happen to be dotted (file
+        // paths, version triples, ellipses inside comments) do not get
+        // picked up by the bare-`t(` regex below.
+        if (!/^[a-z][\w]*(?:\.[a-z][\w]*)+$/i.test(key)) continue;
+        refs.push({ file: filePath, line: lineFor(m.index), key });
+      }
+    }
+  }
+  function walk(dir) {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+      } else if (/\.(js|html)$/.test(entry.name)) {
+        scan(full);
+      }
+    }
+  }
+  walk(join(REPO_ROOT, "web"));
+  return refs;
+}
+
+test("every literal translation key referenced in web/ exists in the dictionary", () => {
+  // The `availableKeys` parity check above protects against half-translated
+  // keys, but it cannot catch the inverse failure mode: a `lang.t('foo.bar')`
+  // call whose dictionary entry was never added (or was renamed). Such a
+  // call falls through `translate`'s "key as fallback" path and renders
+  // the raw key into the UI — invisible to the parity test and easy to
+  // miss in review.
+  //
+  // Walk web/ for literal-key callsites and assert each resolves against
+  // the English dictionary. English is canonical: every supported language
+  // mirrors it (enforced by the parity test above), so a key found in `en`
+  // is by construction available in every other supported language too.
+  const dictionary = new Set(availableKeys(DEFAULT_LANGUAGE));
+  const refs = collectKeyReferences();
+  // Sanity check that the scanner is actually finding callsites — if a
+  // future refactor breaks the regexes, this guard fails fast instead
+  // of silently passing an empty assertion.
+  assert.ok(
+    refs.length > 50,
+    `expected to find many translation references; collected ${refs.length}`,
+  );
+  const missing = refs.filter((r) => !dictionary.has(r.key));
+  assert.deepEqual(
+    missing,
+    [],
+    `Translation keys referenced in code but not defined in i18n.js:\n${missing
+      .map((r) => `  ${r.file}:${r.line} -> ${r.key}`)
+      .join("\n")}`,
+  );
 });
