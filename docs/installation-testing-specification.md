@@ -519,7 +519,15 @@ stay in lockstep. Grouped by module area:
   fallback + balance label in `views/points-shop.js` and pins
   down the venue-wide `point_transactions` shape (`event_id:
   null`) written on redemption, plus the signed-out redirect
-  to `#/points`.
+  to `#/points`. `newsletter-signup.test.mjs` covers the
+  event-scoped signup form in `views/newsletter-signup.js` —
+  `_hydrate` pre-filling email and re-hydrating an existing
+  (user, event) subscription, the anonymous vs. signed-in
+  dispatch to `newsletter.subscribe`, the
+  `simulatedEmail("newsletter_confirmation")` payload shape,
+  the error-message fallback to `newsletter.err_signup`, the
+  concurrent-submit guard, and `editAgain()` flipping back to
+  the editable state.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
