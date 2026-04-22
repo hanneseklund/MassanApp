@@ -12,20 +12,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import { newsletterPreferences } from "../../web/assets/js/views/newsletter-preferences.js";
-
-function withAlpine(stores, body) {
-  const prev = globalThis.Alpine;
-  globalThis.Alpine = {
-    store(id) {
-      return stores[id];
-    },
-  };
-  try {
-    return body();
-  } finally {
-    globalThis.Alpine = prev;
-  }
-}
+import { withAlpine } from "./_alpine.mjs";
 
 function makeStores({ user = null, subscriptions = [], events = {} } = {}) {
   return {

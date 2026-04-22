@@ -20,20 +20,7 @@ import {
   RESTAURANTS,
   menuById,
 } from "../../web/assets/js/util/food.js";
-
-async function withAlpine(stores, body) {
-  const prev = globalThis.Alpine;
-  globalThis.Alpine = {
-    store(id) {
-      return stores[id];
-    },
-  };
-  try {
-    return await body();
-  } finally {
-    globalThis.Alpine = prev;
-  }
-}
+import { withAlpine } from "./_alpine.mjs";
 
 // Returns `key` verbatim so tests assert which i18n key the view
 // picked without depending on the English copy in i18n.js.

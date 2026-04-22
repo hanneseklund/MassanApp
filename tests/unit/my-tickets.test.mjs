@@ -7,20 +7,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import { myTicketsView } from "../../web/assets/js/views/my-tickets.js";
-
-function withAlpine(stores, body) {
-  const prev = globalThis.Alpine;
-  globalThis.Alpine = {
-    store(id) {
-      return stores[id];
-    },
-  };
-  try {
-    return body();
-  } finally {
-    globalThis.Alpine = prev;
-  }
-}
+import { withAlpine } from "./_alpine.mjs";
 
 function makeStores({ user, tickets, selectedEventId = null }) {
   return {

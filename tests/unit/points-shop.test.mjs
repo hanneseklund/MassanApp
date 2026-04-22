@@ -15,20 +15,7 @@ import assert from "node:assert/strict";
 
 import { pointsShopView } from "../../web/assets/js/views/points-shop.js";
 import { logoDataUri } from "../../web/assets/js/util/placeholders.js";
-
-async function withAlpine(stores, body) {
-  const prev = globalThis.Alpine;
-  globalThis.Alpine = {
-    store(id) {
-      return stores[id];
-    },
-  };
-  try {
-    return await body();
-  } finally {
-    globalThis.Alpine = prev;
-  }
-}
+import { withAlpine } from "./_alpine.mjs";
 
 function makeStores({
   merch = [],

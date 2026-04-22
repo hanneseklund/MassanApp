@@ -12,20 +12,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import { purchaseView } from "../../web/assets/js/views/purchase.js";
-
-async function withAlpine(stores, body) {
-  const prev = globalThis.Alpine;
-  globalThis.Alpine = {
-    store(id) {
-      return stores[id];
-    },
-  };
-  try {
-    return await body();
-  } finally {
-    globalThis.Alpine = prev;
-  }
-}
+import { withAlpine } from "./_alpine.mjs";
 
 // Minimal lang stub. Returns `key` verbatim so tests assert which key
 // was picked without depending on i18n.js copy.

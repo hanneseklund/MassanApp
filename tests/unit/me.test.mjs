@@ -12,20 +12,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import { meView } from "../../web/assets/js/views/me.js";
-
-function withAlpine(stores, body) {
-  const prev = globalThis.Alpine;
-  globalThis.Alpine = {
-    store(id) {
-      return stores[id];
-    },
-  };
-  try {
-    return body();
-  } finally {
-    globalThis.Alpine = prev;
-  }
-}
+import { withAlpine } from "./_alpine.mjs";
 
 // Minimal lang stub. Returns `key` verbatim for lookups without params,
 // or `key|k=v&...` when params are supplied, so tests can assert both

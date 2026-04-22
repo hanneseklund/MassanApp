@@ -534,7 +534,12 @@ tests import the ES modules under `web/assets/js/` directly, so a
 behavior drift in a helper fails unit tests before the slower smoke
 suite runs. Tests are `.mjs` files driven by Node's built-in
 `node:test` runner, so no extra dependency is needed beyond Node
-itself.
+itself. View-level tests share a single `withAlpine(stores, body)`
+helper from `tests/unit/_alpine.mjs` that installs a minimal
+`globalThis.Alpine.store(id)` stub for the duration of `body` and
+restores the previous value afterwards; the underscore-prefixed
+filename is deliberately outside the `tests/unit/*.test.mjs` glob
+so the runner ignores it.
 
 Run them from the repo root:
 
