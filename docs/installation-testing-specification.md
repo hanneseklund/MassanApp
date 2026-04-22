@@ -434,13 +434,14 @@ authoritative list is the set of files in `tests/unit/` itself;
 each test file imports the module under test directly, so the two
 stay in lockstep. Grouped by module area:
 
-- **Routing and navigation** — `app-store.test.mjs` and
-  `router.test.mjs` cover hash parsing and building in
-  `stores/app.js`, the stateful navigation verbs (`goCalendar`,
-  `selectEvent`, `goEventSubview`, `selectExhibitor`,
-  `backToExhibitors`, `goAuth`, `goMe`, `goTickets`, `goPoints`,
-  `startPurchase`, `afterAuth`), and the `_applyHash` redirect
-  for scroll-only subviews.
+- **Routing and navigation** — `router.test.mjs` covers the pure
+  `parseHash` / `buildHash` functions exported from
+  `stores/app.js`. `app-store.test.mjs` covers the stateful
+  navigation verbs (`goCalendar`, `selectEvent`, `goEventSubview`,
+  `selectExhibitor`, `backToExhibitors`, `goAuth`, `goMe`,
+  `goTickets`, `goPoints`, `startPurchase`, `afterAuth`), the
+  `_applyHash` redirect for scroll-only subviews, and the
+  `chromeTitle` label lookup for each top-level view.
 - **i18n and language** — `i18n.test.mjs` asserts every key
   exists in every supported language and walks `web/` for literal
   `t('...')` / `activeTranslate('...')` / `canonicalTranslate('...')`
@@ -473,7 +474,8 @@ stay in lockstep. Grouped by module area:
   `stores/points.js` balance selector.
   `redemption.test.mjs` covers
   `createRedemptionController` in `util/redemption.js`
-  (`remainingStock`, `canRedeem`, `disabledReason`, `redeem`).
+  (`remainingStock`, `canRedeem`, `disabledReason`, `redeem`,
+  `dismissLastRedemption`, `reset`).
 - **Ticket purchase** — `questionnaire.test.mjs` covers
   `util/questionnaire.js` (`defaultQuestionnaire`, `subjectsFor`,
   `buildQuestionnairePayload`, `buildProfileUpdate`,
@@ -483,10 +485,9 @@ stay in lockstep. Grouped by module area:
   `util/sections.js`.
 - **Food and newsletter shape** — `food.test.mjs` covers the
   ordering catalog and `upcomingTimeslots` next-half-hour
-  generator in `util/food.js`. `preferences.test.mjs` and
-  `newsletter-preferences.test.mjs` cover the newsletter
-  preference shape in `util/newsletter.js` and the My Pages
-  helpers in `views/newsletter-preferences.js`.
+  generator in `util/food.js`. `preferences.test.mjs` covers the
+  newsletter preference shape in `util/newsletter.js`
+  (`defaultNewsletterPreferences`, `normalizeNewsletterPreferences`).
 - **Simulations** — `qr.test.mjs` covers the QR payload builder
   in `simulations/qr.js`; `payment.test.mjs` covers the
   transaction-ref format in `simulations/payment.js`;
@@ -527,7 +528,13 @@ stay in lockstep. Grouped by module area:
   `simulatedEmail("newsletter_confirmation")` payload shape,
   the error-message fallback to `newsletter.err_signup`, the
   concurrent-submit guard, and `editAgain()` flipping back to
-  the editable state.
+  the editable state. `newsletter-preferences.test.mjs` covers
+  the My Pages preferences list in
+  `views/newsletter-preferences.js` — the `subscriptions()`
+  selector that filters to the signed-in user's per-event rows,
+  enriches them with the catalog event name, and sorts them;
+  and the `venueWide()` selector that resolves the optional
+  `event_id IS NULL` row.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
