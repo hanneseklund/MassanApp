@@ -509,11 +509,17 @@ stay in lockstep. Grouped by module area:
   `views/purchase.js` — the signed-out auth guard, the
   hydrate-from-profile pre-fill, subject toggling, and each
   validation branch of `continueToQuestionnaire` /
-  `continueToDetails` / `confirm`. `points-shop.test.mjs`
-  covers the merch list + logo fallback + balance label in
-  `views/points-shop.js` and pins down the venue-wide
-  `point_transactions` shape (`event_id: null`) written on
-  redemption, plus the signed-out redirect to `#/points`.
+  `continueToDetails` / `confirm`. `food-view.test.mjs` covers
+  the food-ordering flow in `views/food.js` — `_hydrate`
+  resetting state, themed-menu lookup through
+  `themedMenuForEvent`, each validation branch of
+  `continueToDelivery` / `confirm`, and the signed-out auth
+  guard that routes back to the event's food subview.
+  `points-shop.test.mjs` covers the merch list + logo
+  fallback + balance label in `views/points-shop.js` and pins
+  down the venue-wide `point_transactions` shape (`event_id:
+  null`) written on redemption, plus the signed-out redirect
+  to `#/points`.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
