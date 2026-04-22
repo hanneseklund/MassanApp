@@ -265,8 +265,11 @@ The view factory names (`calendarView`, `eventView`, `authView`,
 `newsletterPreferences`, `foodView`, `pointsShopView`) are exposed on
 `window` inside the `alpine:init` handler so the
 `x-data="<factory>()"` bindings in `index.html` continue to resolve.
-Stores keep their existing ids (`app`, `session`, `catalog`,
-`tickets`, `newsletter`, `foodOrders`, `points`, `filters`).
+Stores keep their existing ids (`lang`, `app`, `session`, `catalog`,
+`tickets`, `newsletter`, `foodOrders`, `points`, `filters`). `lang` is
+registered first in `alpine:init` so store `init()` hooks that read
+the active locale (date formatters, titles) see the right value on
+first render.
 
 When adding a new view or store, place it in its own module under
 `views/` or `stores/` and import it from `app.js`. Do not inline new
