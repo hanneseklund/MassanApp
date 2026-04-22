@@ -501,6 +501,19 @@ stay in lockstep. Grouped by module area:
   event's tickets on top. `me.test.mjs` covers the My Pages
   formatters for the points balance, ticket-count hint,
   recent-transactions slice, and per-transaction labels.
+  `auth.test.mjs` covers the register / sign-in / simulated
+  social-provider flow in `views/auth.js` — mode switching,
+  form clearing on success, concurrent-submit guard, and the
+  delegation to the session store plus `app.afterAuth()`.
+  `purchase.test.mjs` covers the four-step flow in
+  `views/purchase.js` — the signed-out auth guard, the
+  hydrate-from-profile pre-fill, subject toggling, and each
+  validation branch of `continueToQuestionnaire` /
+  `continueToDetails` / `confirm`. `points-shop.test.mjs`
+  covers the merch list + logo fallback + balance label in
+  `views/points-shop.js` and pins down the venue-wide
+  `point_transactions` shape (`event_id: null`) written on
+  redemption, plus the signed-out redirect to `#/points`.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
