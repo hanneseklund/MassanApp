@@ -94,39 +94,20 @@ npx playwright install chromium
 npm run smoke
 ```
 
-Pure-function helpers (hash routing plus the app-store navigation
-verbs that drive it, date formatting, calendar
-filter/sort, QR payload, simulated payment transaction-ref
-format, simulated email host allowlist, newsletter preferences,
-ticket-type catalog and stacked-layout section order, UI translation
-lookup, exhibitor and speaker placeholder SVGs, food-ordering
-catalog and next-half-hour timeslot generator, catalog-store
-selectors, tickets-store ownership selectors, food-orders
-store user selector, newsletter-store event/venue-wide lookup,
-the points earning rates and points-store balance / per-user
-selectors, the shared sign-in / sign-out fetch contract and the shared
-user-owned-row insert contract that the four user-scoped stores
-delegate to, the lang-store persistence
-and translator wiring, the Supabase-user mapping that backs
-the session store, the shared redemption controller that
-backs both the event add-ons section and the venue-wide points
-shop, the ticket-purchase questionnaire form-state and
-JSONB-payload helpers, the My Tickets sort rules that keep
-the currently-selected event's tickets on top, the My Pages
-helpers that format the points balance, ticket-count hint,
-recent-transactions slice, and per-transaction source / event /
-delta labels, the event-home helpers that drive the inline
-5-item truncation for news, articles, exhibitors, and the
-program, the themed-first food-menu preview, the ticket-gated
-event add-ons visibility, and the override-label translation
-lookup, and the My Pages newsletter-preferences helpers
-that build the per-event subscription list and resolve the
-venue-wide row) also have a fast unit suite that does not
-need a browser or Supabase:
+Pure-function helpers under `web/assets/js/` — hash routing and
+navigation verbs, store selectors, the i18n lookup and dictionary
+coverage check, calendar filtering, date formatting, the QR and
+simulated payment / email helpers, the food and points catalogs,
+the shared redemption controller, the ticket-purchase
+questionnaire, and the view-level format/sort helpers — have a
+fast unit suite that does not need a browser or Supabase:
 
 ```
 npm run test:unit
 ```
+
+See `docs/installation-testing-specification.md` under "Unit
+tests" for the authoritative module-by-module coverage list.
 
 The frontend in `web/` stays buildless; `package.json` exists only to
 host the smoke-test harness and the unit runner.

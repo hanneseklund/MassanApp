@@ -428,82 +428,79 @@ in the same pull request.
 
 ## Unit tests
 
-Pure-function helpers in the frontend (hash routing in
-`stores/app.js` plus the store's stateful navigation verbs —
-`goCalendar`, `selectEvent`, `goEventSubview`, `selectExhibitor`,
-`backToExhibitors`, `goAuth`, `goMe`, `goTickets`, `goPoints`,
-`startPurchase`, `afterAuth` — and its `_applyHash` redirect for
-scroll-only subviews, date formatting in `util/dates.js`, ticket-type
-catalog and stacked-layout section order in `util/sections.js`,
-calendar filter/sort in `util/calendar.js`, newsletter-preference
-shape in `util/newsletter.js`, the QR payload builder in
-`simulations/qr.js`, the transaction-ref format of
-`simulations/payment.js` that both the ticket and food flows
-resolve against, the prototype-host allowlist in
-`simulations/email.js` that gates the `[simulatedEmail]` console
-log, the UI translation lookup in `i18n.js` plus a meta-check
-that walks `web/` for literal `t('...')` callsites and asserts
-each referenced key is in the dictionary, the
-deterministic exhibitor/speaker placeholder SVGs in
-`util/placeholders.js`, the food-ordering catalog and the
-`upcomingTimeslots` next-half-hour generator in `util/food.js`
-that back the Food subview's menu picker and restaurant
-timeslots, the catalog-store selectors in
-`stores/catalog.js` that fan per-event rows into views, the
-ticket-ownership selectors in `stores/tickets.js`
-(`forUser`, `forUserAndEvent`, `hasForEvent`) that back the
-"View ticket" CTA and the My Tickets list, the food-orders
-store `forUser` selector in `stores/food-orders.js` that scopes
-persisted orders to the signed-in user, the earning-rate
-calculators in `util/points.js`
-(`pointsForTicket`, `pointsForFoodOrder`) and the points-store
-balance selector in `stores/points.js` that sums `delta` across a
-user's rows, the newsletter-store
-lookup in `stores/newsletter.js` (`forUser`, `findForEvent`)
-that resolves the per-event / venue-wide subscription a signup
-form should update vs. insert, the shared sign-in / sign-out
-fetch contract and the shared user-owned-row insert contract in
-`util/session-sync.js` (`loadUserRows`, `insertOwnedRow`, and
-`notifySessionStores`) that the four user-scoped stores
-delegate their `_onSessionChange` to and that the tickets, food
-orders, and points inserts delegate through, the lang-store
-wiring in
-`stores/lang.js` (persisted-language validation, `set()`'s
-same-language guard, storage / `<html lang>` side effects, and
-the `t()` / `dateLocale()` delegation to the i18n helpers),
-the Supabase-user mapping in `stores/session.js` that resolves
-the signed-in provider, display name, and simulated flag,
-the shared redemption controller in `util/redemption.js`
-(`createRedemptionController`) that backs the event add-ons
-section and the venue-wide points shop — `remainingStock`,
-`canRedeem`, `disabledReason`, and the `redeem` writer that
-delegates to the `points` store, the ticket-purchase
-questionnaire helpers in `util/questionnaire.js`
-(`defaultQuestionnaire`, `subjectsFor`,
-`buildQuestionnairePayload`, `buildProfileUpdate`,
-`PROFILE_FIELDS`) that seed the form state from a saved
-profile and serialize it back into the JSONB shape written
-to `public.tickets.questionnaire`, the My Tickets sort
-rules in `views/my-tickets.js` (`myTicketsView`) that keep
-the currently-selected event's tickets on top, the
-My Pages helpers in `views/me.js` (`meView`) that format
-the points balance, ticket-count hint, recent-transactions
-slice, and per-transaction source / event / delta labels,
-the event-home helpers in `views/event.js` (`eventView`)
-that drive the inline 5-item truncation for news, articles,
-exhibitors, and the program (keeping the by-day grouping),
-the themed-first food-menu preview, the ticket-gated
-"Event add-ons" visibility, the news / article / addon
-image fallback to the event hero, and the override-label
-translation lookup with a humanized fallback for
-forward-looking keys, and the My Pages newsletter
-helpers in `views/newsletter-preferences.js`
-(`newsletterPreferences`) that build the per-event
-subscription list (filtered to `event_id IS NOT NULL`,
-joined to the catalog event name, sorted by event name)
-and resolve the venue-wide row through the newsletter
-store) have a fast unit suite under
-`tests/unit/` that does not require a browser or Supabase.
+Pure-function helpers in the frontend have a fast unit suite under
+`tests/unit/` that does not require a browser or Supabase. The
+authoritative list is the set of files in `tests/unit/` itself;
+each test file imports the module under test directly, so the two
+stay in lockstep. Grouped by module area:
+
+- **Routing and navigation** — `app-store.test.mjs` and
+  `router.test.mjs` cover hash parsing and building in
+  `stores/app.js`, the stateful navigation verbs (`goCalendar`,
+  `selectEvent`, `goEventSubview`, `selectExhibitor`,
+  `backToExhibitors`, `goAuth`, `goMe`, `goTickets`, `goPoints`,
+  `startPurchase`, `afterAuth`), and the `_applyHash` redirect
+  for scroll-only subviews.
+- **i18n and language** — `i18n.test.mjs` asserts every key
+  exists in every supported language and walks `web/` for literal
+  `t('...')` / `activeTranslate('...')` / `canonicalTranslate('...')`
+  callsites to fail the run if any references a missing key.
+  `lang.test.mjs` covers the `stores/lang.js` persistence,
+  `set()` same-language guard, storage and `<html lang>` side
+  effects, and delegation to the i18n helpers.
+- **Calendar and dates** — `calendar.test.mjs` covers
+  `util/calendar.js` filter/sort; `dates.test.mjs` covers
+  formatters in `util/dates.js`.
+- **Catalog selectors** — `catalog.test.mjs` covers
+  `stores/catalog.js` selectors that fan per-event rows (news,
+  articles, program, exhibitors, add-ons) into views.
+- **User-scoped stores** — `tickets.test.mjs` covers the
+  `forUser` / `forUserAndEvent` / `hasForEvent` selectors on
+  `stores/tickets.js` that back the "View ticket" CTA and the
+  My Tickets list; `food-orders.test.mjs` covers `forUser` on
+  `stores/food-orders.js`; `newsletter.test.mjs` covers
+  `forUser` / `findForEvent` on `stores/newsletter.js`.
+- **Session mapping and sync** — `session.test.mjs` covers
+  `mapSupabaseUser` in `stores/session.js` (provider detection,
+  simulated flag, `user_metadata.profile` exposure).
+  `session-sync.test.mjs` covers the shared sign-in / sign-out
+  fetch contract and the shared owner-scoped insert contract in
+  `util/session-sync.js` (`loadUserRows`, `insertOwnedRow`,
+  `notifySessionStores`).
+- **Points and redemption** — `points.test.mjs` covers the
+  earning-rate calculators in `util/points.js`
+  (`pointsForTicket`, `pointsForFoodOrder`) and the
+  `stores/points.js` balance selector.
+  `redemption.test.mjs` covers
+  `createRedemptionController` in `util/redemption.js`
+  (`remainingStock`, `canRedeem`, `disabledReason`, `redeem`).
+- **Ticket purchase** — `questionnaire.test.mjs` covers
+  `util/questionnaire.js` (`defaultQuestionnaire`, `subjectsFor`,
+  `buildQuestionnairePayload`, `buildProfileUpdate`,
+  `PROFILE_FIELDS`) that seed the form state and serialize it to
+  `public.tickets.questionnaire`. `sections.test.mjs` covers the
+  ticket-type catalog and stacked-layout section order in
+  `util/sections.js`.
+- **Food and newsletter shape** — `food.test.mjs` covers the
+  ordering catalog and `upcomingTimeslots` next-half-hour
+  generator in `util/food.js`. `preferences.test.mjs` and
+  `newsletter-preferences.test.mjs` cover the newsletter
+  preference shape in `util/newsletter.js` and the My Pages
+  helpers in `views/newsletter-preferences.js`.
+- **Simulations** — `qr.test.mjs` covers the QR payload builder
+  in `simulations/qr.js`; `payment.test.mjs` covers the
+  transaction-ref format in `simulations/payment.js`;
+  `email.test.mjs` covers the prototype-host allowlist in
+  `simulations/email.js`; `placeholders.test.mjs` covers the
+  deterministic exhibitor/speaker SVGs in `util/placeholders.js`.
+- **View-level helpers** — `event.test.mjs` covers the
+  inline 5-item truncation, themed-first food preview,
+  ticket-gated add-ons visibility, and override-label lookup
+  in `views/event.js`. `my-tickets.test.mjs` covers the
+  My Tickets sort rule that keeps the currently-selected
+  event's tickets on top. `me.test.mjs` covers the My Pages
+  formatters for the points balance, ticket-count hint,
+  recent-transactions slice, and per-transaction labels.
 
 The suite runs against the same source files the browser loads —
 tests import the ES modules under `web/assets/js/` directly, so a
