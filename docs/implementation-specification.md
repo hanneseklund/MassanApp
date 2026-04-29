@@ -187,7 +187,13 @@ web/assets/js/
   i18n.js                      UI translation table (en, sv) +
                                translate(), activeTranslate(),
                                canonicalTranslate(), dateLocaleFor(),
-                               availableKeys() helpers
+                               availableKeys(), labelKey(),
+                               translateLabel() helpers
+                               (`labelKey` / `translateLabel` resolve
+                               canonical-English seeded identifiers
+                               like `event.type`, `event.category`,
+                               and `program.track` into display
+                               labels in the active language)
   supabase.js                  singleton Supabase JS client
   util/
     dates.js                   formatDates, formatShortDate,
@@ -268,7 +274,11 @@ web/assets/js/
                                the routing table without Alpine.
     lang.js                    Alpine.store("lang", ...) (active UI
                                language, localStorage persistence,
-                               t(key) translator)
+                               t(key) translator, pick(value) for
+                               dual-language jsonb leaves,
+                               label(prefix, value) for seeded
+                               canonical-English identifiers, and
+                               dateLocale() for the date helpers)
     session.js                 Alpine.store("session", ...) (Supabase
                                Auth mapping). Exports `mapSupabaseUser`
                                as a named export so the unit suite can
@@ -514,6 +524,18 @@ skip the `.select()` return — see the comment in
   `0009_dual_language_exhibitors.sql`, and
   `0010_dual_language_points.sql` — one per table group — so each
   migration could land independently with its matching seed rewrite.
+- A handful of seeded columns stay as canonical English identifiers
+  rather than dual-language jsonb so filter comparisons keep working:
+  `events.type`, `events.category`, and `program_items.track`.
+  Templates render them in the active language by calling
+  `$store.lang.label(prefix, value)` (where `prefix` is `event.type`,
+  `event.category`, or `program.track`). The store delegates to
+  `translateLabel` in `web/assets/js/i18n.js`, which slugifies the
+  value into a `<prefix>.<slug>` lookup key (via `labelKey`) and
+  resolves it in the dictionary. Unmapped values render as the raw
+  string so unknown identifiers stay visible. New seed values added
+  under one of these prefixes need a matching `<prefix>.<slug>` key
+  in both `en` and `sv` entries in `i18n.js`.
 - Date helpers in `util/dates.js` read the active language's Intl
   locale from `$store.lang.dateLocale()` so weekday and month names
   render in the active language.

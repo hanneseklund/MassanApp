@@ -445,10 +445,13 @@ stay in lockstep. Grouped by module area:
 - **i18n and language** — `i18n.test.mjs` asserts every key
   exists in every supported language and walks `web/` for literal
   `t('...')` / `activeTranslate('...')` / `canonicalTranslate('...')`
-  callsites to fail the run if any references a missing key.
-  `lang.test.mjs` covers the `stores/lang.js` persistence,
-  `set()` same-language guard, storage and `<html lang>` side
-  effects, and delegation to the i18n helpers.
+  callsites to fail the run if any references a missing key. It
+  also covers `labelKey` / `translateLabel`, the seeded-identifier
+  resolvers behind `$store.lang.label('event.type' | 'event.category'
+  | 'program.track', value)`. `lang.test.mjs` covers the
+  `stores/lang.js` persistence, `set()` same-language guard,
+  storage and `<html lang>` side effects, and delegation to the
+  i18n helpers (including `label()`).
   `i18n-content.test.mjs` covers `pickLang` / `pickLangArray`
   in `util/i18n-content.js` — the dual-language `{ en, sv }`
   resolver used by views to render seeded catalog leaves,
