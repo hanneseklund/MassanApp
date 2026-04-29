@@ -2367,41 +2367,41 @@ Färdiga integrationer till bland annat Monitor ERP ingår.
 Kom och prata med oss om dina behov så guidar vi dig.
 
 DynaMaker utvecklas av SkyMaker AB med kontor i Linköping.'), 'https://dynamaker.com', 'assets/images/exhibitors/nordbygg-2026-dynamaker.jpg'),
-  ('nordbygg-2026-exhibitor-136560', 'nordbygg-2026', 'E.M.S. Teknik AB', 'A10:06', jsonb_build_object('en', 'Vi är en skandinavisk pumpgrossist som vänder oss till yrkesverksamma installatörer med höga krav på säkerhet och kvalitet. Våra pumpar och tillbehör har utvecklats efter våra egna specifikationer i samarbete med välrenommerade och tillförlitliga tillverkare. Samtliga produkter som säljs av oss är kvalitetssäkrade, testade och uppfyller de höga EU-standarder som krävs. Materialval och funktion är noggrant genomtänkta för att säkerställa lång hållbarhet och hög prestanda.
-Vi säkerställer att vald pumpstorlek motsvarar kundens behov och ger optimala förutsättningar för energieffektivitet och livslängd. Alla våra produkter finns på lager, inklusive nödvändiga tillbehör, vilket innebär att vi snabbt kan tillgodose önskemål om verkningsgrad och kapacitet.
-Som skandinavisk pumpgrossist riktar vi oss till HVAC-installatörer, rörläggare, entreprenörer och företagskunder. Förutom vår verksamhet i Åhus, Sverige, är vi även etablerade i Lohja och Tønsberg.', 'sv', 'Vi är en skandinavisk pumpgrossist som vänder oss till yrkesverksamma installatörer med höga krav på säkerhet och kvalitet. Våra pumpar och tillbehör har utvecklats efter våra egna specifikationer i samarbete med välrenommerade och tillförlitliga tillverkare. Samtliga produkter som säljs av oss är kvalitetssäkrade, testade och uppfyller de höga EU-standarder som krävs. Materialval och funktion är noggrant genomtänkta för att säkerställa lång hållbarhet och hög prestanda.
+  ('nordbygg-2026-exhibitor-136560', 'nordbygg-2026', 'E.M.S. Teknik AB', 'A10:06', jsonb_build_object('en', 'We are a Scandinavian pump wholesaler that serves professional installers with high demands on safety and quality. Our pumps and accessories have been developed to our own specifications, in cooperation with reputable and reliable manufacturers. Every product we sell is quality-assured, tested and meets the strict EU standards required. Material choices and function are carefully considered to ensure a long service life and high performance.
+We make sure the pump size we recommend matches the customer''s needs and gives the best possible conditions for energy efficiency and durability. All of our products are kept in stock, including the necessary accessories, which means we can quickly meet requests around capacity and performance.
+As a Scandinavian pump wholesaler, we serve HVAC installers, plumbers, contractors and corporate customers. In addition to our operations in Åhus, Sweden, we are also established in Lohja and Tønsberg.', 'sv', 'Vi är en skandinavisk pumpgrossist som vänder oss till yrkesverksamma installatörer med höga krav på säkerhet och kvalitet. Våra pumpar och tillbehör har utvecklats efter våra egna specifikationer i samarbete med välrenommerade och tillförlitliga tillverkare. Samtliga produkter som säljs av oss är kvalitetssäkrade, testade och uppfyller de höga EU-standarder som krävs. Materialval och funktion är noggrant genomtänkta för att säkerställa lång hållbarhet och hög prestanda.
 Vi säkerställer att vald pumpstorlek motsvarar kundens behov och ger optimala förutsättningar för energieffektivitet och livslängd. Alla våra produkter finns på lager, inklusive nödvändiga tillbehör, vilket innebär att vi snabbt kan tillgodose önskemål om verkningsgrad och kapacitet.
 Som skandinavisk pumpgrossist riktar vi oss till HVAC-installatörer, rörläggare, entreprenörer och företagskunder. Förutom vår verksamhet i Åhus, Sverige, är vi även etablerade i Lohja och Tønsberg.'), 'https://www.emspump.se', 'assets/images/exhibitors/nordbygg-2026-e-m-s-teknik-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138185', 'nordbygg-2026', 'EAB AB', 'C18:32', jsonb_build_object('en', 'Det håller. För dig. För oss. För framtida generationer.
+  ('nordbygg-2026-exhibitor-138185', 'nordbygg-2026', 'EAB AB', 'C18:32', jsonb_build_object('en', 'Built to last. For you. For us. For future generations.
 
-EAB är ett familjeägt företag i Smålandsstenar, där konstruktion, produktion och utveckling sker under samma tak. Sedan starten 1957 har vi vuxit stadigt, precis som våra lösningar och idag finns EAB representerat över hela världen.
+EAB is a family-owned company in Smålandsstenar, where engineering, production and development all happen under the same roof. Since we were founded in 1957 we have grown steadily — just like our solutions — and today EAB is represented all over the world.
 
-Vi utvecklar och levererar hållbara lösningar där kvalitet, funktion och lång livslängd är avgörande. Med rejäla material, hög kundanpassning och pålitlig konstruktion skapar vi lösningar som håller i generationer. Lite anspråkslöst kallar vi det småländsk hållbarhet.', 'sv', 'Det håller. För dig. För oss. För framtida generationer.
+We develop and deliver durable solutions where quality, function and a long service life are decisive. With sturdy materials, a high degree of customer adaptation and reliable engineering, we create solutions that last for generations. Modestly, we call it Småland-style durability.', 'sv', 'Det håller. För dig. För oss. För framtida generationer.
 
 EAB är ett familjeägt företag i Smålandsstenar, där konstruktion, produktion och utveckling sker under samma tak. Sedan starten 1957 har vi vuxit stadigt, precis som våra lösningar och idag finns EAB representerat över hela världen.
 
 Vi utvecklar och levererar hållbara lösningar där kvalitet, funktion och lång livslängd är avgörande. Med rejäla material, hög kundanpassning och pålitlig konstruktion skapar vi lösningar som håller i generationer. Lite anspråkslöst kallar vi det småländsk hållbarhet.'), 'https://www.eab.se', 'assets/images/exhibitors/nordbygg-2026-eab-ab.jpg'),
   ('nordbygg-2026-exhibitor-139444', 'nordbygg-2026', 'Eagle kreativ Deutschland GmbH', 'C02:51', null, 'https://eaglekreativ.de', null),
-  ('nordbygg-2026-exhibitor-139450', 'nordbygg-2026', 'EandoX', 'C02:11', jsonb_build_object('en', 'EandoX är en mjukvara för miljöprestanda som hjälper varumärken och tillverkare att ta kontroll över sin hållbarhetsdata och uppfylla miljökrav – allt från LCA och EPD till CSRD.', 'sv', 'EandoX är en mjukvara för miljöprestanda som hjälper varumärken och tillverkare att ta kontroll över sin hållbarhetsdata och uppfylla miljökrav – allt från LCA och EPD till CSRD.'), 'https://www.eandox.com/', 'assets/images/exhibitors/nordbygg-2026-eandox.jpg'),
-  ('nordbygg-2026-exhibitor-137372', 'nordbygg-2026', 'ebm-papst AB', 'A20:18', jsonb_build_object('en', 'Din partner för smart och hållbar ventilation
+  ('nordbygg-2026-exhibitor-139450', 'nordbygg-2026', 'EandoX', 'C02:11', jsonb_build_object('en', 'EandoX is environmental-performance software that helps brands and manufacturers take control of their sustainability data and meet environmental requirements — everything from LCA and EPD to CSRD.', 'sv', 'EandoX är en mjukvara för miljöprestanda som hjälper varumärken och tillverkare att ta kontroll över sin hållbarhetsdata och uppfylla miljökrav – allt från LCA och EPD till CSRD.'), 'https://www.eandox.com/', 'assets/images/exhibitors/nordbygg-2026-eandox.jpg'),
+  ('nordbygg-2026-exhibitor-137372', 'nordbygg-2026', 'ebm-papst AB', 'A20:18', jsonb_build_object('en', 'Your partner for smart and sustainable ventilation
 
-I vår monter hittar du många av marknadens mest innovativa lösningar för luft-, kyla- och värmeteknik. Vi hjälper dig att skapa energieffektiva och framtidssäkra system – oavsett om du arbetar med OEM-lösningar eller med energieffektivisering av befintliga byggnader.
+In our stand you will find many of the market''s most innovative solutions for air, cooling and heating technology. We help you build energy-efficient and future-proof systems — whether you work with OEM solutions or with energy upgrades of existing buildings.
 
 Ventilation – Retrofit:
-Vi stöttar ventilationsinstallatörer, tekniker, fastighetsägare och bostadsrättsföreningar som vill uppgradera befintliga system för bättre komfort och lägre energiförbrukning.
+We support ventilation installers, technicians, property owners and housing co-operatives that want to upgrade existing systems for better comfort and lower energy use.
 
-> Upptäck Ventilationslyftet – vårt koncept som gör det enkelt att välja rätt lösning för energieffektivisering och ger stöd genom hela processen.
+> Discover Ventilationslyftet — our concept that makes it easy to choose the right energy-efficiency solution and that supports you through the entire process.
 
-För OEM-tillverkare:
-Vi erbjuder kundanpassade fläkt- och motorlösningar med intelligenta system för optimal drift och styrning – skräddarsytt för dina applikationer.
+For OEM manufacturers:
+We offer customised fan and motor solutions with intelligent systems for optimal operation and control — tailored to your applications.
 
-Vilka är vi?
+Who are we?
 
-ebm-papst är ett familjeägt företag med huvudkontor i Tyskland och världsledande inom fläktar och motorer. Sedan 1963 har vi satt standarden för teknik, aerodynamik och digitalisering.
+ebm-papst is a family-owned company headquartered in Germany and a world leader in fans and motors. Since 1963 we have set the standard for engineering, aerodynamics and digitalisation.
 
-I Sverige har vi funnits sedan 1973 med huvudkontor, produktion och lager i Järfälla samt lokala kontor i Göteborg, Häljarp, Linköping och Sundsvall.
+We have been in Sweden since 1973 with our head office, production and warehouse in Järfälla and local offices in Gothenburg, Häljarp, Linköping and Sundsvall.
 
-Besök oss på Nordbygg och upptäck hur vi kan hjälpa dig att möta framtidens krav på energieffektivitet och hållbarhet!', 'sv', 'Din partner för smart och hållbar ventilation
+Visit us at Nordbygg and discover how we can help you meet the future demands on energy efficiency and sustainability!', 'sv', 'Din partner för smart och hållbar ventilation
 
 I vår monter hittar du många av marknadens mest innovativa lösningar för luft-, kyla- och värmeteknik. Vi hjälper dig att skapa energieffektiva och framtidssäkra system – oavsett om du arbetar med OEM-lösningar eller med energieffektivisering av befintliga byggnader.
 
@@ -2420,61 +2420,61 @@ ebm-papst är ett familjeägt företag med huvudkontor i Tyskland och världsled
 I Sverige har vi funnits sedan 1973 med huvudkontor, produktion och lager i Järfälla samt lokala kontor i Göteborg, Häljarp, Linköping och Sundsvall.
 
 Besök oss på Nordbygg och upptäck hur vi kan hjälpa dig att möta framtidens krav på energieffektivitet och hållbarhet!'), 'https://www.ebmpapst.se', 'assets/images/exhibitors/nordbygg-2026-ebm-papst-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139405', 'nordbygg-2026', 'eBVD', 'EH:15', jsonb_build_object('en', 'Genom en digital tjänst tillhandahåller eBVD-systemet ett verktyg där du som tillverkare av byggprodukter och byggmaterial enkelt kan registrera och hantera din digitala miljöinformation.', 'sv', 'Genom en digital tjänst tillhandahåller eBVD-systemet ett verktyg där du som tillverkare av byggprodukter och byggmaterial enkelt kan registrera och hantera din digitala miljöinformation.'), null, 'assets/images/exhibitors/nordbygg-2026-ebvd.jpg'),
-  ('nordbygg-2026-exhibitor-137482', 'nordbygg-2026', 'Ecoclime Group AB', 'A06:29', jsonb_build_object('en', 'Ecoclime Group är en koncern som erbjuder ledande produkter och tjänster inom cirkulär värmeenergi, innefattande ventilation, bergvärme samt återvinning av värmeenergi i spillvatten och avloppsvatten, i fastigheter och industriella processer. Koncernens lösningar bidrar till energieffektivisering som normalt ökar kundens drift- och räntenetto med mer än 5 procent i avkastning på investeringen.
+  ('nordbygg-2026-exhibitor-139405', 'nordbygg-2026', 'eBVD', 'EH:15', jsonb_build_object('en', 'Through a digital service, the eBVD system provides a tool where you, as a manufacturer of construction products and building materials, can easily register and manage your digital environmental information.', 'sv', 'Genom en digital tjänst tillhandahåller eBVD-systemet ett verktyg där du som tillverkare av byggprodukter och byggmaterial enkelt kan registrera och hantera din digitala miljöinformation.'), null, 'assets/images/exhibitors/nordbygg-2026-ebvd.jpg'),
+  ('nordbygg-2026-exhibitor-137482', 'nordbygg-2026', 'Ecoclime Group AB', 'A06:29', jsonb_build_object('en', 'Ecoclime Group is a group of companies that offers leading products and services within circular thermal energy, including ventilation, geothermal heating and recovery of thermal energy from waste water and sewage, in buildings and industrial processes. The group''s solutions deliver energy efficiency that typically increases the customer''s net operating income by more than 5 percent return on investment.
 
-Bolagets lösningar hjälper fastighetsägare att framtidssäkra sina fastigheter genom att göra dem mer energismarta. Detta sker genom minskat behov av köpt värmeenergi och lägre effektbehov, baserat på optimerad energianvändning och förbättrad komfort för hyresgäster, främst genom recirkulering av återvunnen energi samt minskade energi- och effektbehov. Bolaget hjälper även industriella processer att recirkulera och återbruka energi, exempelvis i VA-verk.
+The company''s solutions help property owners future-proof their properties by making them more energy-smart. This is achieved through a reduced need for purchased thermal energy and lower power demand, based on optimised energy use and improved comfort for tenants — primarily through the recirculation of recovered energy and lower energy and power demand. The company also helps industrial processes recirculate and reuse energy, for example in water and wastewater plants.
 
-Ecoclime Group driver och utvecklar ledande bolag i branschen och verkar i hela värdekedjan, från innovation och tillverkning av produkter, till installation, drift- och servicetjänster.', 'sv', 'Ecoclime Group är en koncern som erbjuder ledande produkter och tjänster inom cirkulär värmeenergi, innefattande ventilation, bergvärme samt återvinning av värmeenergi i spillvatten och avloppsvatten, i fastigheter och industriella processer. Koncernens lösningar bidrar till energieffektivisering som normalt ökar kundens drift- och räntenetto med mer än 5 procent i avkastning på investeringen.
+Ecoclime Group runs and develops leading companies in the industry and operates across the entire value chain, from innovation and production of products through to installation, operation and service.', 'sv', 'Ecoclime Group är en koncern som erbjuder ledande produkter och tjänster inom cirkulär värmeenergi, innefattande ventilation, bergvärme samt återvinning av värmeenergi i spillvatten och avloppsvatten, i fastigheter och industriella processer. Koncernens lösningar bidrar till energieffektivisering som normalt ökar kundens drift- och räntenetto med mer än 5 procent i avkastning på investeringen.
 
 Bolagets lösningar hjälper fastighetsägare att framtidssäkra sina fastigheter genom att göra dem mer energismarta. Detta sker genom minskat behov av köpt värmeenergi och lägre effektbehov, baserat på optimerad energianvändning och förbättrad komfort för hyresgäster, främst genom recirkulering av återvunnen energi samt minskade energi- och effektbehov. Bolaget hjälper även industriella processer att recirkulera och återbruka energi, exempelvis i VA-verk.
 
 Ecoclime Group driver och utvecklar ledande bolag i branschen och verkar i hela värdekedjan, från innovation och tillverkning av produkter, till installation, drift- och servicetjänster.'), 'https://www.ecoclime.se', 'assets/images/exhibitors/nordbygg-2026-ecoclime-group-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139512', 'nordbygg-2026', 'EcoCocon', 'C07:50', jsonb_build_object('en', 'EcoCocon omdefinierar hur vi bygger — genom att omvandla halm till ett högpresterande, industriellt skalbart byggsystem.
+  ('nordbygg-2026-exhibitor-139512', 'nordbygg-2026', 'EcoCocon', 'C07:50', jsonb_build_object('en', 'EcoCocon is redefining how we build — by transforming straw into a high-performance, industrially scalable building system.
 
-Våra prefabricerade trä-halmpaneler integrerar bärande konstruktion, isolering och lufttäthet i en och samma lösning — och möjliggör väggar med negativ klimatpåverkan, tillverkade av 89 % halm och 10 % trä.
+Our prefabricated wood-and-straw panels integrate load-bearing structure, insulation and airtightness into a single solution — and make walls with a negative climate impact possible, manufactured from 89% straw and 10% wood.
 
-Det som började som en nischinnovation har utvecklats till ett industrialiserat system, med över 500 genomförda projekt i 25 länder. Certifierat enligt Cradle to Cradle® (Silver) och Passive House erbjuder EcoCocon ett brandsäkert (REI 120), diffusionsöppet och kostnadseffektivt alternativ till konventionella byggsystem.
+What began as a niche innovation has evolved into an industrialised system, with more than 500 completed projects in 25 countries. Certified to Cradle to Cradle® (Silver) and Passive House standards, EcoCocon offers a fire-safe (REI 120), vapour-open and cost-effective alternative to conventional building systems.
 
-Med lanseringen av vår automatiserade fabrik i Voderady tar vi nästa steg i industriellt byggande med biobaserade material — med målet att göra dem till en självklar del av framtidens byggstandard.', 'sv', 'EcoCocon omdefinierar hur vi bygger — genom att omvandla halm till ett högpresterande, industriellt skalbart byggsystem.
+With the launch of our automated factory in Voderady, we are taking the next step in industrial construction with bio-based materials — with the goal of making them an obvious part of tomorrow''s building standard.', 'sv', 'EcoCocon omdefinierar hur vi bygger — genom att omvandla halm till ett högpresterande, industriellt skalbart byggsystem.
 
 Våra prefabricerade trä-halmpaneler integrerar bärande konstruktion, isolering och lufttäthet i en och samma lösning — och möjliggör väggar med negativ klimatpåverkan, tillverkade av 89 % halm och 10 % trä.
 
 Det som började som en nischinnovation har utvecklats till ett industrialiserat system, med över 500 genomförda projekt i 25 länder. Certifierat enligt Cradle to Cradle® (Silver) och Passive House erbjuder EcoCocon ett brandsäkert (REI 120), diffusionsöppet och kostnadseffektivt alternativ till konventionella byggsystem.
 
 Med lanseringen av vår automatiserade fabrik i Voderady tar vi nästa steg i industriellt byggande med biobaserade material — med målet att göra dem till en självklar del av framtidens byggstandard.'), 'https://www.ecococon.eu', 'assets/images/exhibitors/nordbygg-2026-ecococon.jpg'),
-  ('nordbygg-2026-exhibitor-138242', 'nordbygg-2026', 'Ecoforest Geotermia SL', 'A16:25', jsonb_build_object('en', 'Ecoforest grundades 1959 av Jose Carlos Alonso. Hans vision var att utveckla innovativa produkter som var både ekonomiska och miljövänliga, med målet att göra världen till en bättre plats.
+  ('nordbygg-2026-exhibitor-138242', 'nordbygg-2026', 'Ecoforest Geotermia SL', 'A16:25', jsonb_build_object('en', 'Ecoforest was founded in 1959 by Jose Carlos Alonso. His vision was to develop innovative products that were both economical and environmentally friendly, with the aim of making the world a better place.
 
-Idag, mer än 50 år senare, är Ecoforest den tekniska ledaren inom uppvärmningssektorn, med lösningar som baseras uteslutande på ren och naturlig energi.
+Today, more than 50 years later, Ecoforest is the technology leader in the heating sector, with solutions based exclusively on clean and natural energy.
 
-Ecoforest är en europeisk tillverkare av vatten-till-vatten- och luft-till-vatten-värmepumpar med inverterteknik och som använder det naturliga köldmediet R290. Effekten på 1 till 600 kW hanteras effektivt av Ecoforests egenutvecklade programvara.', 'sv', 'Ecoforest grundades 1959 av Jose Carlos Alonso. Hans vision var att utveckla innovativa produkter som var både ekonomiska och miljövänliga, med målet att göra världen till en bättre plats.
+Ecoforest is a European manufacturer of water-to-water and air-to-water heat pumps with inverter technology, using the natural refrigerant R290. Outputs of 1 to 600 kW are managed efficiently by Ecoforest''s in-house software.', 'sv', 'Ecoforest grundades 1959 av Jose Carlos Alonso. Hans vision var att utveckla innovativa produkter som var både ekonomiska och miljövänliga, med målet att göra världen till en bättre plats.
 
 Idag, mer än 50 år senare, är Ecoforest den tekniska ledaren inom uppvärmningssektorn, med lösningar som baseras uteslutande på ren och naturlig energi.
 
 Ecoforest är en europeisk tillverkare av vatten-till-vatten- och luft-till-vatten-värmepumpar med inverterteknik och som använder det naturliga köldmediet R290. Effekten på 1 till 600 kW hanteras effektivt av Ecoforests egenutvecklade programvara.'), 'https://www.ecoforest.com/en', 'assets/images/exhibitors/nordbygg-2026-ecoforest-geotermia-sl.jpg'),
-  ('nordbygg-2026-exhibitor-134689', 'nordbygg-2026', 'EcoGuard AB', 'A19:11', jsonb_build_object('en', '2004 började vi med att installera 4.500 trådlösa el- och temperaturgivare hos Lindesbergsbostäder. Vi är sedan länge kända för vår trådlösa temperaturmätning med 20 års batterilivslängd och en fantastisk räckvidd genom väggar och tak inne i hus. Det är en produkt som fastighetsägare över hela landet har upptäckt nyttan av. Idag hanterar vi mätinsamling oavsett teknik, kommunikationssätt och fabrikat i en fastighet. Vi har verktygen för insamling av information, men också kunskapen om hur man använder den för att bli en effektivare fastighetsägare. Curves är vår programvara för individuell mätning, oavsett mätteknik.
+  ('nordbygg-2026-exhibitor-134689', 'nordbygg-2026', 'EcoGuard AB', 'A19:11', jsonb_build_object('en', 'In 2004 we started out by installing 4,500 wireless electricity and temperature sensors at Lindesbergsbostäder. We have long been known for our wireless temperature measurement with 20-year battery life and excellent range through the walls and ceilings of a building. It is a product that property owners across the country have discovered the value of. Today we handle metering data collection regardless of technology, communication method and brand within a property. We have the tools to collect the information, but also the knowledge of how to use it to become a more efficient property owner. Curves is our software for individual metering, regardless of metering technology.
 
-Eftersom våra lösningar är öppna och enkla att implementera i både nyproducerade, som befintliga fastigheter så är vi en attraktiv leverantör och kan därmed växa stadigt på en ökande marknad. Idag har vi kontor i Örebro, Stockholm, Göteborg, Malmö och Norrköping. Vi är idag störst inom individuell mätning vad gäller omsättning och personalstyrka. Vi är stolta över att vi finns i fastigheter över hela Sverige.', 'sv', '2004 började vi med att installera 4.500 trådlösa el- och temperaturgivare hos Lindesbergsbostäder. Vi är sedan länge kända för vår trådlösa temperaturmätning med 20 års batterilivslängd och en fantastisk räckvidd genom väggar och tak inne i hus. Det är en produkt som fastighetsägare över hela landet har upptäckt nyttan av. Idag hanterar vi mätinsamling oavsett teknik, kommunikationssätt och fabrikat i en fastighet. Vi har verktygen för insamling av information, men också kunskapen om hur man använder den för att bli en effektivare fastighetsägare. Curves är vår programvara för individuell mätning, oavsett mätteknik.
+Because our solutions are open and easy to implement in both newly built and existing properties, we are an attractive supplier and can therefore grow steadily in a growing market. Today we have offices in Örebro, Stockholm, Gothenburg, Malmö and Norrköping. We are now the largest player in individual metering, both by revenue and by number of employees. We are proud to be present in properties all over Sweden.', 'sv', '2004 började vi med att installera 4.500 trådlösa el- och temperaturgivare hos Lindesbergsbostäder. Vi är sedan länge kända för vår trådlösa temperaturmätning med 20 års batterilivslängd och en fantastisk räckvidd genom väggar och tak inne i hus. Det är en produkt som fastighetsägare över hela landet har upptäckt nyttan av. Idag hanterar vi mätinsamling oavsett teknik, kommunikationssätt och fabrikat i en fastighet. Vi har verktygen för insamling av information, men också kunskapen om hur man använder den för att bli en effektivare fastighetsägare. Curves är vår programvara för individuell mätning, oavsett mätteknik.
 
 Eftersom våra lösningar är öppna och enkla att implementera i både nyproducerade, som befintliga fastigheter så är vi en attraktiv leverantör och kan därmed växa stadigt på en ökande marknad. Idag har vi kontor i Örebro, Stockholm, Göteborg, Malmö och Norrköping. Vi är idag störst inom individuell mätning vad gäller omsättning och personalstyrka. Vi är stolta över att vi finns i fastigheter över hela Sverige.'), 'https://www.ecoguard.se', 'assets/images/exhibitors/nordbygg-2026-ecoguard-ab.jpg'),
   ('nordbygg-2026-exhibitor-135333', 'nordbygg-2026', 'edding', 'BG:11', null, 'https://www.p-klitgaard.se', null),
   ('nordbygg-2026-exhibitor-139961', 'nordbygg-2026', 'Edplit', 'A10:12', null, 'https://edplit.com', null),
-  ('nordbygg-2026-exhibitor-137897', 'nordbygg-2026', 'Edsby Porten', 'C07:33G', jsonb_build_object('en', 'Måttbeställda Garageportar från Edsbyn. Slagportar, Vipportar och Förrådsdörrar i din egen design. Svensk produktion och gärna i kvalitetsvirke från Hälsingland.', 'sv', 'Måttbeställda Garageportar från Edsbyn. Slagportar, Vipportar och Förrådsdörrar i din egen design. Svensk produktion och gärna i kvalitetsvirke från Hälsingland.'), 'https://www.edsbyporten.se', 'assets/images/exhibitors/nordbygg-2026-edsby-porten.jpg'),
-  ('nordbygg-2026-exhibitor-139215', 'nordbygg-2026', 'Einhell Nordic A/S', 'B11:11', jsonb_build_object('en', 'Einhell Germany AG’s har sitt huvudkontor i Landau an der Isar utanför München. I över 50 år har varumärket Einhell stått för smarta lösningar för hemmafixare och hantverkare – för hus, trädgård och fritid.
+  ('nordbygg-2026-exhibitor-137897', 'nordbygg-2026', 'Edsby Porten', 'C07:33G', jsonb_build_object('en', 'Made-to-measure garage doors from Edsbyn. Hinged doors, up-and-over doors and storeroom doors in your own design. Swedish production, preferably in quality timber from Hälsingland.', 'sv', 'Måttbeställda Garageportar från Edsbyn. Slagportar, Vipportar och Förrådsdörrar i din egen design. Svensk produktion och gärna i kvalitetsvirke från Hälsingland.'), 'https://www.edsbyporten.se', 'assets/images/exhibitors/nordbygg-2026-edsby-porten.jpg'),
+  ('nordbygg-2026-exhibitor-139215', 'nordbygg-2026', 'Einhell Nordic A/S', 'B11:11', jsonb_build_object('en', 'Einhell Germany AG has its head office in Landau an der Isar, just outside Munich. For more than 50 years, the Einhell brand has stood for smart solutions for DIYers and tradespeople — for the home, the garden and leisure.
 
-Från skruvdragare till kap- och gersågar utvecklar och säljer Einhell innovativa produkter i mer än 90 länder genom över 41 dotterbolag.
+From cordless drivers to mitre and chop saws, Einhell develops and sells innovative products in more than 90 countries through over 41 subsidiaries.
 
-Sedan Josef Thannhuber startade företaget 1964 har det vuxit till en internationell verksamhet med mer än 1 600 medarbetare världen över.
+Since Josef Thannhuber founded the company in 1964, it has grown into an international business with more than 1,600 employees worldwide.
 
-Vi är de som fortsätter framåt när andra har stannat upp.
+We are the ones who keep going when others have stopped.
 
-Men Einhell står för mycket mer:
+But Einhell stands for much more:
 
-* enkla lösningar
-* kvalitet
-* verklig service till bästa pris-prestanda-förhållande
-* funktionella produkter och innovationer
-* gränslösa möjligheter', 'sv', 'Einhell Germany AG’s har sitt huvudkontor i Landau an der Isar utanför München. I över 50 år har varumärket Einhell stått för smarta lösningar för hemmafixare och hantverkare – för hus, trädgård och fritid.
+* simple solutions
+* quality
+* genuine service at the best price-performance ratio
+* functional products and innovations
+* boundless possibilities', 'sv', 'Einhell Germany AG’s har sitt huvudkontor i Landau an der Isar utanför München. I över 50 år har varumärket Einhell stått för smarta lösningar för hemmafixare och hantverkare – för hus, trädgård och fritid.
 
 Från skruvdragare till kap- och gersågar utvecklar och säljer Einhell innovativa produkter i mer än 90 länder genom över 41 dotterbolag.
 
@@ -2489,63 +2489,63 @@ Men Einhell står för mycket mer:
 * verklig service till bästa pris-prestanda-förhållande
 * funktionella produkter och innovationer
 * gränslösa möjligheter'), 'https://www.einhell.se', 'assets/images/exhibitors/nordbygg-2026-einhell-nordic-a-s.jpg'),
-  ('nordbygg-2026-exhibitor-134769', 'nordbygg-2026', 'EKB Produkter AB', 'A20:34', jsonb_build_object('en', 'VÄLKOMMEN TILL EKB FLÄKTAR i monter A20:34
-Vi har alla typer av FLÄKTAR. Oavsett om du är installatör, konsult eller maskintillverkare så har vi något för dig.
-Vårt mål är att alltid kunna erbjuda fläktlösningar av högsta kvalitet till konkurrenskraftiga priser.', 'sv', 'VÄLKOMMEN TILL EKB FLÄKTAR i monter A20:34
+  ('nordbygg-2026-exhibitor-134769', 'nordbygg-2026', 'EKB Produkter AB', 'A20:34', jsonb_build_object('en', 'WELCOME TO EKB FLÄKTAR in stand A20:34
+We have every type of FAN. Whether you are an installer, a consultant or a machine builder, we have something for you.
+Our goal is always to be able to offer fan solutions of the highest quality at competitive prices.', 'sv', 'VÄLKOMMEN TILL EKB FLÄKTAR i monter A20:34
 Vi har alla typer av FLÄKTAR. Oavsett om du är installatör, konsult eller maskintillverkare så har vi något för dig.
 Vårt mål är att alltid kunna erbjuda fläktlösningar av högsta kvalitet till konkurrenskraftiga priser.'), 'https://www.ekbflaktar.se', 'assets/images/exhibitors/nordbygg-2026-ekb-produkter-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134695', 'nordbygg-2026', 'Ekolution', 'C06:51', jsonb_build_object('en', 'Ekolution producerar isolering av industrihampa som odlas i Skåne och fabriken finns i Staffanstorp. Hampafiberisolering kombinerar god värmeisolering, ljuddämpning och bidrar till en god arbetsmiljö för hantverkare. Isoleringen har den lägsta klimatpåverkan för isolering som finns på marknaden idag och bidrar till ett hållbart byggande.', 'sv', 'Ekolution producerar isolering av industrihampa som odlas i Skåne och fabriken finns i Staffanstorp. Hampafiberisolering kombinerar god värmeisolering, ljuddämpning och bidrar till en god arbetsmiljö för hantverkare. Isoleringen har den lägsta klimatpåverkan för isolering som finns på marknaden idag och bidrar till ett hållbart byggande.'), 'https://www.ekolution.se', 'assets/images/exhibitors/nordbygg-2026-ekolution.jpg'),
-  ('nordbygg-2026-exhibitor-137859', 'nordbygg-2026', 'EKOVILLA', 'C08:50', jsonb_build_object('en', 'Vi är en del av den börsnoterade koncernen EcoUp Oyj som är verksamma inom återvinning och tillverkning av gröna byggmaterial. Det mest kända varumärket i koncernen är EKOVILLA som startade redan 1979. Vi tillverkar biobaserad, klimatneutral Cellulosaisolering baserad på återvunnet material från trä- och pappersindustrin samt returpapper. Tillverkningen sker i 6 egna fabriker och vi äger vårt eget installatörsnätverk i Sverige och Finland. Vi är Nordens största tillverkare och installatör av lösullsisolering. Mer än 85 % av alla nybyggda småhus i Finland isoleras med EKOVILLA Cellulosaisolering.
+  ('nordbygg-2026-exhibitor-134695', 'nordbygg-2026', 'Ekolution', 'C06:51', jsonb_build_object('en', 'Ekolution produces insulation made from industrial hemp grown in Skåne, with the factory located in Staffanstorp. Hemp-fibre insulation combines good thermal insulation, sound damping and a healthy work environment for tradespeople. The insulation has the lowest climate impact of any insulation on the market today and contributes to sustainable construction.', 'sv', 'Ekolution producerar isolering av industrihampa som odlas i Skåne och fabriken finns i Staffanstorp. Hampafiberisolering kombinerar god värmeisolering, ljuddämpning och bidrar till en god arbetsmiljö för hantverkare. Isoleringen har den lägsta klimatpåverkan för isolering som finns på marknaden idag och bidrar till ett hållbart byggande.'), 'https://www.ekolution.se', 'assets/images/exhibitors/nordbygg-2026-ekolution.jpg'),
+  ('nordbygg-2026-exhibitor-137859', 'nordbygg-2026', 'EKOVILLA', 'C08:50', jsonb_build_object('en', 'We are part of the listed group EcoUp Oyj, which is active in recycling and the manufacture of green building materials. The best-known brand in the group is EKOVILLA, which started back in 1979. We manufacture bio-based, climate-neutral cellulose insulation made from recycled material from the wood and paper industries and recycled paper. Production takes place in 6 of our own factories, and we own our own installer network in Sweden and Finland. We are the largest manufacturer and installer of loose-fill insulation in the Nordic region. More than 85% of all newly built single-family homes in Finland are insulated with EKOVILLA cellulose insulation.
 
-Välj en trygg och kunnig leverantör av klimatneutral isolering och energieffektiva byggsystem. Välj EKOVILLA (Isoleringslandslaget), Svenska Landslaget i Lösullsisolering!', 'sv', 'Vi är en del av den börsnoterade koncernen EcoUp Oyj som är verksamma inom återvinning och tillverkning av gröna byggmaterial. Det mest kända varumärket i koncernen är EKOVILLA som startade redan 1979. Vi tillverkar biobaserad, klimatneutral Cellulosaisolering baserad på återvunnet material från trä- och pappersindustrin samt returpapper. Tillverkningen sker i 6 egna fabriker och vi äger vårt eget installatörsnätverk i Sverige och Finland. Vi är Nordens största tillverkare och installatör av lösullsisolering. Mer än 85 % av alla nybyggda småhus i Finland isoleras med EKOVILLA Cellulosaisolering.
+Choose a reliable and knowledgeable supplier of climate-neutral insulation and energy-efficient building systems. Choose EKOVILLA (Isoleringslandslaget), the Swedish national team in loose-fill insulation!', 'sv', 'Vi är en del av den börsnoterade koncernen EcoUp Oyj som är verksamma inom återvinning och tillverkning av gröna byggmaterial. Det mest kända varumärket i koncernen är EKOVILLA som startade redan 1979. Vi tillverkar biobaserad, klimatneutral Cellulosaisolering baserad på återvunnet material från trä- och pappersindustrin samt returpapper. Tillverkningen sker i 6 egna fabriker och vi äger vårt eget installatörsnätverk i Sverige och Finland. Vi är Nordens största tillverkare och installatör av lösullsisolering. Mer än 85 % av alla nybyggda småhus i Finland isoleras med EKOVILLA Cellulosaisolering.
 
 Välj en trygg och kunnig leverantör av klimatneutral isolering och energieffektiva byggsystem. Välj EKOVILLA (Isoleringslandslaget), Svenska Landslaget i Lösullsisolering!'), 'https://www.ekovilla.se', 'assets/images/exhibitors/nordbygg-2026-ekovilla.jpg'),
-  ('nordbygg-2026-exhibitor-137339', 'nordbygg-2026', 'El-Björn AB', 'B09:21', jsonb_build_object('en', 'El-Björn har försett människor och tillfälliga arbetsplatser med rätt kraft, ljus och klimat sedan 1954 och vi fortsätter framåt. Hållbar och resurssnål energi i rätt form, där du behöver och när du behöver den.
+  ('nordbygg-2026-exhibitor-137339', 'nordbygg-2026', 'El-Björn AB', 'B09:21', jsonb_build_object('en', 'El-Björn has supplied people and temporary worksites with the right power, light and climate since 1954, and we keep moving forward. Sustainable, resource-efficient energy in the right form, where you need it and when you need it.
 
-Vi arbetar långsiktigt, uthålligt och hårt för att ni skall veta att ni alltid får det bästa och att våra produkter håller vad de lovar. Vårt småländska ursprung och vår långa erfarenhet är grunden när vi utvecklar framtidens lösningar tillsammans med er.', 'sv', 'El-Björn har försett människor och tillfälliga arbetsplatser med rätt kraft, ljus och klimat sedan 1954 och vi fortsätter framåt. Hållbar och resurssnål energi i rätt form, där du behöver och när du behöver den.
+We work long-term, persistently and hard so that you know you always get the best, and that our products live up to their promises. Our roots in Småland and our long experience are the foundation as we develop tomorrow''s solutions together with you.', 'sv', 'El-Björn har försett människor och tillfälliga arbetsplatser med rätt kraft, ljus och klimat sedan 1954 och vi fortsätter framåt. Hållbar och resurssnål energi i rätt form, där du behöver och när du behöver den.
 
 Vi arbetar långsiktigt, uthålligt och hårt för att ni skall veta att ni alltid får det bästa och att våra produkter håller vad de lovar. Vårt småländska ursprung och vår långa erfarenhet är grunden när vi utvecklar framtidens lösningar tillsammans med er.'), 'https://www.elbjorn.com', 'assets/images/exhibitors/nordbygg-2026-el-bjorn-ab.jpg'),
   ('nordbygg-2026-exhibitor-135354', 'nordbygg-2026', 'Eld & Vatten', 'C05:31', null, 'https://www.eldochvatten.se', null),
-  ('nordbygg-2026-exhibitor-134789', 'nordbygg-2026', 'Elecosoft Consultec AB', 'C03:10', jsonb_build_object('en', 'Ledande leverantör av programvaror för byggbranschen med fokus på att förenkla och effektivisera kunders vardag. I takt med branschens snabba digitalisering erbjuds flexibla och innovativa lösningar som skapar värde. Utvecklingen drivs i nära samarbete med kunder genom support, utbildningar och konsulttjänster.', 'sv', 'Ledande leverantör av programvaror för byggbranschen med fokus på att förenkla och effektivisera kunders vardag. I takt med branschens snabba digitalisering erbjuds flexibla och innovativa lösningar som skapar värde. Utvecklingen drivs i nära samarbete med kunder genom support, utbildningar och konsulttjänster.'), 'https://eleco.com/se/', 'assets/images/exhibitors/nordbygg-2026-elecosoft-consultec-ab.jpg'),
+  ('nordbygg-2026-exhibitor-134789', 'nordbygg-2026', 'Elecosoft Consultec AB', 'C03:10', jsonb_build_object('en', 'Leading supplier of software for the construction industry, with a focus on simplifying and streamlining the day-to-day work of customers. Keeping pace with the rapid digitalisation of the industry, we offer flexible and innovative solutions that create value. Development is driven in close cooperation with customers through support, training and consultancy services.', 'sv', 'Ledande leverantör av programvaror för byggbranschen med fokus på att förenkla och effektivisera kunders vardag. I takt med branschens snabba digitalisering erbjuds flexibla och innovativa lösningar som skapar värde. Utvecklingen drivs i nära samarbete med kunder genom support, utbildningar och konsulttjänster.'), 'https://eleco.com/se/', 'assets/images/exhibitors/nordbygg-2026-elecosoft-consultec-ab.jpg'),
   ('nordbygg-2026-exhibitor-135348', 'nordbygg-2026', 'Electrolux Centrala Bygg', 'C04:31', null, 'https://www.centralabygg.com', null),
-  ('nordbygg-2026-exhibitor-136055', 'nordbygg-2026', 'Electrolux Professional', 'C03:21', jsonb_build_object('en', 'Electrolux Professional Group är en av de ledande globala leverantörerna av tvätt för professionella användare. Vi är marknadsledande och har de mest energisnåla tvätt-och torkmaskinerna inom professionell tvätt. Vår styrka ligger också i att vi är en helhetsleverntör som förser våra kunder, inte bara med tvätt-och torkprodukter, utan även med projekteringshjälp, doseringssystem, tvättmedel, bokningssystem, serviceavtal samt finansiering och hyra av produkter. Hos hos får du en helhetslösning och produkter som ger stor skillnad över hela livstiden.
+  ('nordbygg-2026-exhibitor-136055', 'nordbygg-2026', 'Electrolux Professional', 'C03:21', jsonb_build_object('en', 'Electrolux Professional Group is one of the leading global suppliers of laundry for professional users. We are the market leader and have the most energy-efficient washers and dryers in professional laundry. Our strength also lies in being a complete supplier — providing our customers not only with washers and dryers, but also with project planning support, dosing systems, detergents, booking systems, service contracts, and finance and rental of products. With us, you get a full solution and products that make a real difference over their entire lifetime.
 
-Våra innovativa produkter och världsomspännande servicenätverk gör det dagliga arbetet för våra kunder enklare, mer lönsamt och verkligt hållbart varje dag.', 'sv', 'Electrolux Professional Group är en av de ledande globala leverantörerna av tvätt för professionella användare. Vi är marknadsledande och har de mest energisnåla tvätt-och torkmaskinerna inom professionell tvätt. Vår styrka ligger också i att vi är en helhetsleverntör som förser våra kunder, inte bara med tvätt-och torkprodukter, utan även med projekteringshjälp, doseringssystem, tvättmedel, bokningssystem, serviceavtal samt finansiering och hyra av produkter. Hos hos får du en helhetslösning och produkter som ger stor skillnad över hela livstiden.
+Our innovative products and worldwide service network make our customers'' day-to-day work easier, more profitable and genuinely sustainable, every day.', 'sv', 'Electrolux Professional Group är en av de ledande globala leverantörerna av tvätt för professionella användare. Vi är marknadsledande och har de mest energisnåla tvätt-och torkmaskinerna inom professionell tvätt. Vår styrka ligger också i att vi är en helhetsleverntör som förser våra kunder, inte bara med tvätt-och torkprodukter, utan även med projekteringshjälp, doseringssystem, tvättmedel, bokningssystem, serviceavtal samt finansiering och hyra av produkter. Hos hos får du en helhetslösning och produkter som ger stor skillnad över hela livstiden.
 
 Våra innovativa produkter och världsomspännande servicenätverk gör det dagliga arbetet för våra kunder enklare, mer lönsamt och verkligt hållbart varje dag.'), 'https://www.electroluxprofessional.com/se', 'assets/images/exhibitors/nordbygg-2026-electrolux-professional.jpg'),
-  ('nordbygg-2026-exhibitor-140056', 'nordbygg-2026', 'Elementric', 'A10:33', jsonb_build_object('en', 'Branschregeln 2026:1 som trädde i kraft 1 januari 2026 kräver installation av certifierat vattenlarm i diskbänkskåp och bakom diskmaskin vid nyproduktion eller vid VVS renovering av befintligt kök. Elementric producerar den enda certifierade, typgodkända digitala vattenlarmet i Sverige.  Apassad för central övervakning och larm in i tex ett BMS eller i vår mobila app.', 'sv', 'Branschregeln 2026:1 som trädde i kraft 1 januari 2026 kräver installation av certifierat vattenlarm i diskbänkskåp och bakom diskmaskin vid nyproduktion eller vid VVS renovering av befintligt kök. Elementric producerar den enda certifierade, typgodkända digitala vattenlarmet i Sverige.  Apassad för central övervakning och larm in i tex ett BMS eller i vår mobila app.'), 'https://www.elementric.se', 'assets/images/exhibitors/nordbygg-2026-elementric.jpg'),
-  ('nordbygg-2026-exhibitor-138649', 'nordbygg-2026', 'Elon Group AB/Elon Business - Construction & Property', 'C06:30', jsonb_build_object('en', 'Vi levererar till er som bygger och förvaltar
+  ('nordbygg-2026-exhibitor-140056', 'nordbygg-2026', 'Elementric', 'A10:33', jsonb_build_object('en', 'Industry rule 2026:1, which came into force on 1 January 2026, requires the installation of a certified water alarm in the sink cabinet and behind the dishwasher in new construction or when an existing kitchen is renovated by a plumber. Elementric produces the only certified, type-approved digital water alarm in Sweden. It is designed for central monitoring and alarms feeding into, for example, a BMS or our mobile app.', 'sv', 'Branschregeln 2026:1 som trädde i kraft 1 januari 2026 kräver installation av certifierat vattenlarm i diskbänkskåp och bakom diskmaskin vid nyproduktion eller vid VVS renovering av befintligt kök. Elementric producerar den enda certifierade, typgodkända digitala vattenlarmet i Sverige.  Apassad för central övervakning och larm in i tex ett BMS eller i vår mobila app.'), 'https://www.elementric.se', 'assets/images/exhibitors/nordbygg-2026-elementric.jpg'),
+  ('nordbygg-2026-exhibitor-138649', 'nordbygg-2026', 'Elon Group AB/Elon Business - Construction & Property', 'C06:30', jsonb_build_object('en', 'We deliver to those who build and manage properties
 
-Vi levererar vitvaror och kök till alla er som ritar, bygger och förvaltar fastigheter. Elon Business Construction & Property finns med under hela processen. Från projekteringen, under hela garantitiden och framåt.', 'sv', 'Vi levererar till er som bygger och förvaltar
+We deliver white goods and kitchens to everyone who designs, builds and manages properties. Elon Business Construction & Property is with you throughout the process. From the project planning stage, through the entire warranty period and onwards.', 'sv', 'Vi levererar till er som bygger och förvaltar
 
 Vi levererar vitvaror och kök till alla er som ritar, bygger och förvaltar fastigheter. Elon Business Construction & Property finns med under hela processen. Från projekteringen, under hela garantitiden och framåt.'), 'https://www.elongroup.se', null),
-  ('nordbygg-2026-exhibitor-139627', 'nordbygg-2026', 'ELSYS', 'A14:12', jsonb_build_object('en', 'ELSYS erbjuder trådlösa sensorer för smarta byggnader, städer och industrier, där lösningarna bidrar till bättre inomhusklimat, ökad energieffektivitet och mer dynamiska arbetsplatser, samt många andra användningsområden.
-Huvudkontoret finns i norra Sverige och produkterna är tillverkade inom EU. Med en lång batteritid och sensorer som kan anpassas efter din verksamhets behov har ELSYS ett brett sortiment av högkvalitativa sensorer som innefattar både inomhus och utomhussensorer inom teknologier så som LoRaWAN, Nb-iot och Wmbus.
-Med ett dedikerat team och som stolt del av Bemsiq-koncernen med Investment AB Latour som ägare ligger ELSYS i framkant på marknaden och bidrar med sin expertis världen över.', 'sv', 'ELSYS erbjuder trådlösa sensorer för smarta byggnader, städer och industrier, där lösningarna bidrar till bättre inomhusklimat, ökad energieffektivitet och mer dynamiska arbetsplatser, samt många andra användningsområden.
+  ('nordbygg-2026-exhibitor-139627', 'nordbygg-2026', 'ELSYS', 'A14:12', jsonb_build_object('en', 'ELSYS offers wireless sensors for smart buildings, cities and industries, where the solutions contribute to a better indoor climate, increased energy efficiency and more dynamic workplaces, alongside many other use cases.
+The head office is in northern Sweden and the products are manufactured within the EU. With long battery life and sensors that can be tailored to your business needs, ELSYS offers a broad range of high-quality sensors covering both indoor and outdoor sensors across technologies such as LoRaWAN, NB-IoT and wMBus.
+With a dedicated team and as a proud member of the Bemsiq group, owned by Investment AB Latour, ELSYS is at the forefront of the market and contributes its expertise around the world.', 'sv', 'ELSYS erbjuder trådlösa sensorer för smarta byggnader, städer och industrier, där lösningarna bidrar till bättre inomhusklimat, ökad energieffektivitet och mer dynamiska arbetsplatser, samt många andra användningsområden.
 Huvudkontoret finns i norra Sverige och produkterna är tillverkade inom EU. Med en lång batteritid och sensorer som kan anpassas efter din verksamhets behov har ELSYS ett brett sortiment av högkvalitativa sensorer som innefattar både inomhus och utomhussensorer inom teknologier så som LoRaWAN, Nb-iot och Wmbus.
 Med ett dedikerat team och som stolt del av Bemsiq-koncernen med Investment AB Latour som ägare ligger ELSYS i framkant på marknaden och bidrar med sin expertis världen över.'), 'https://www.elsys.se/en', 'assets/images/exhibitors/nordbygg-2026-elsys.jpg'),
-  ('nordbygg-2026-exhibitor-139612', 'nordbygg-2026', 'Eltrode AB', 'A13:23', jsonb_build_object('en', 'Eltrode är en leverantör av mobila värmepumpar.', 'sv', 'Eltrode är en leverantör av mobila värmepumpar.'), 'https://Eltrode.se', 'assets/images/exhibitors/nordbygg-2026-eltrode-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134728', 'nordbygg-2026', 'Elvaco AB', 'A14:12', jsonb_build_object('en', 'Elvaco erbjuder öppna helhetslösningar för energimätning som hjälper våra kunder att utveckla sin verksamhet på ett hållbart sätt. Vi är specialiserade inom kommunikationslösningar och infrastruktur, allt från mätare och sensorer till molnbaserade system och tjänster. Våra produkter och tjänster används för energieffektivisering, fakturering och statistik av tusentals företag runt om i världen inom fjärrvärme-, vatten-, fastighets- el- och gasbranschen.', 'sv', 'Elvaco erbjuder öppna helhetslösningar för energimätning som hjälper våra kunder att utveckla sin verksamhet på ett hållbart sätt. Vi är specialiserade inom kommunikationslösningar och infrastruktur, allt från mätare och sensorer till molnbaserade system och tjänster. Våra produkter och tjänster används för energieffektivisering, fakturering och statistik av tusentals företag runt om i världen inom fjärrvärme-, vatten-, fastighets- el- och gasbranschen.'), 'https://www.elvaco.se', 'assets/images/exhibitors/nordbygg-2026-elvaco-ab.jpg'),
+  ('nordbygg-2026-exhibitor-139612', 'nordbygg-2026', 'Eltrode AB', 'A13:23', jsonb_build_object('en', 'Eltrode is a supplier of mobile heat pumps.', 'sv', 'Eltrode är en leverantör av mobila värmepumpar.'), 'https://Eltrode.se', 'assets/images/exhibitors/nordbygg-2026-eltrode-ab.jpg'),
+  ('nordbygg-2026-exhibitor-134728', 'nordbygg-2026', 'Elvaco AB', 'A14:12', jsonb_build_object('en', 'Elvaco offers open, end-to-end solutions for energy metering that help our customers grow their business in a sustainable way. We are specialised in communication solutions and infrastructure — everything from meters and sensors to cloud-based systems and services. Our products and services are used for energy efficiency, billing and statistics by thousands of companies around the world in the district-heating, water, property, electricity and gas industries.', 'sv', 'Elvaco erbjuder öppna helhetslösningar för energimätning som hjälper våra kunder att utveckla sin verksamhet på ett hållbart sätt. Vi är specialiserade inom kommunikationslösningar och infrastruktur, allt från mätare och sensorer till molnbaserade system och tjänster. Våra produkter och tjänster används för energieffektivisering, fakturering och statistik av tusentals företag runt om i världen inom fjärrvärme-, vatten-, fastighets- el- och gasbranschen.'), 'https://www.elvaco.se', 'assets/images/exhibitors/nordbygg-2026-elvaco-ab.jpg'),
   ('nordbygg-2026-exhibitor-139825', 'nordbygg-2026', 'Emlid', 'AG:97', jsonb_build_object('en', 'Emlid develops high-precision GNSS receivers and software that make professional-grade positioning accessible to everyone—from surveyors to civil engineers and field teams.
 
 Paired with the Emlid Flow app and Emlid Flow 360 cloud service, Emlid Reach receivers deliver centimeter-accurate results, speed up the entire field-to-office workflow, and integrate seamlessly with CAD software. All without unnecessary complexity.
 
-Founded in 2014, Emlid has grown into a global brand trusted by professionals worldwide. With offices in Lisbon, Portugal, and Budapest, Hungary, Emlid ships Reach receivers worldwide through its online store and network of official dealers.', 'sv', 'Emlid develops high-precision GNSS receivers and software that make professional-grade positioning accessible to everyone—from surveyors to civil engineers and field teams.
+Founded in 2014, Emlid has grown into a global brand trusted by professionals worldwide. With offices in Lisbon, Portugal, and Budapest, Hungary, Emlid ships Reach receivers worldwide through its online store and network of official dealers.', 'sv', 'Emlid utvecklar högprecisa GNSS-mottagare och programvara som gör professionell positionering tillgänglig för alla – från lantmätare till anläggningsingenjörer och fältteam.
 
-Paired with the Emlid Flow app and Emlid Flow 360 cloud service, Emlid Reach receivers deliver centimeter-accurate results, speed up the entire field-to-office workflow, and integrate seamlessly with CAD software. All without unnecessary complexity.
+Tillsammans med appen Emlid Flow och molntjänsten Emlid Flow 360 levererar Emlid Reach-mottagarna resultat med centimeterprecision, snabbar upp hela arbetsflödet från fält till kontor och integrerar sömlöst med CAD-program. Allt utan onödig komplexitet.
 
-Founded in 2014, Emlid has grown into a global brand trusted by professionals worldwide. With offices in Lisbon, Portugal, and Budapest, Hungary, Emlid ships Reach receivers worldwide through its online store and network of official dealers.'), 'https://emlid.com', 'assets/images/exhibitors/nordbygg-2026-emlid.jpg'),
+Emlid grundades 2014 och har vuxit till ett globalt varumärke som proffs världen över förlitar sig på. Med kontor i Lissabon i Portugal och Budapest i Ungern levererar Emlid Reach-mottagare över hela världen via sin webbutik och sitt nätverk av officiella återförsäljare.'), 'https://emlid.com', 'assets/images/exhibitors/nordbygg-2026-emlid.jpg'),
   ('nordbygg-2026-exhibitor-140099', 'nordbygg-2026', 'Emoss Mobile Systems B.V.', 'C03:41', jsonb_build_object('en', 'Emoss Mobile Systems is a leading Dutch manufacturer of fully electric and hybrid drive solutions for on and offroad applications. With over 20 years of experience and 1.000+ vehicles on the road, we design and build complete e-mobility systems, including battery electric drivetrains, retrofit solutions, and tailormade integrations for OEMs and end users. Our proven technologies and engineering expertise enable customers worldwide to transition to efficient, zero emission transportation.
 
-Serving markets across construction, transport, logistics, municipal services, and specialty vehicles, Emoss delivers reliable systems built for demanding real-world operations. At Nordbygg, we showcase how our electric, hybrid, and retrofit platforms help European industries accelerate sustainability, improve performance, and reduce operational costs.', 'sv', 'Emoss Mobile Systems is a leading Dutch manufacturer of fully electric and hybrid drive solutions for on and offroad applications. With over 20 years of experience and 1.000+ vehicles on the road, we design and build complete e-mobility systems, including battery electric drivetrains, retrofit solutions, and tailormade integrations for OEMs and end users. Our proven technologies and engineering expertise enable customers worldwide to transition to efficient, zero emission transportation.
+Serving markets across construction, transport, logistics, municipal services, and specialty vehicles, Emoss delivers reliable systems built for demanding real-world operations. At Nordbygg, we showcase how our electric, hybrid, and retrofit platforms help European industries accelerate sustainability, improve performance, and reduce operational costs.', 'sv', 'Emoss Mobile Systems är en ledande nederländsk tillverkare av helelektriska och hybrida drivlinor för applikationer både on- och offroad. Med över 20 års erfarenhet och fler än 1 000 fordon i drift designar och bygger vi kompletta system för e-mobility, inklusive batterielektriska drivlinor, retrofit-lösningar och skräddarsydda integrationer för OEM-tillverkare och slutanvändare. Vår beprövade teknik och ingenjörskunskap gör det möjligt för kunder världen över att gå över till effektiva och utsläppsfria transporter.
 
-Serving markets across construction, transport, logistics, municipal services, and specialty vehicles, Emoss delivers reliable systems built for demanding real-world operations. At Nordbygg, we showcase how our electric, hybrid, and retrofit platforms help European industries accelerate sustainability, improve performance, and reduce operational costs.'), 'https://www.emoss.nl', 'assets/images/exhibitors/nordbygg-2026-emoss-mobile-systems-b-v.jpg'),
+Emoss betjänar marknader inom bygg, transport, logistik, kommunala tjänster och specialfordon, och levererar tillförlitliga system byggda för krävande verkliga förhållanden. På Nordbygg visar vi hur våra elektriska, hybrida och retrofit-baserade plattformar hjälper europeiska industrier att accelerera sin hållbarhetsresa, förbättra prestanda och sänka driftskostnaderna.'), 'https://www.emoss.nl', 'assets/images/exhibitors/nordbygg-2026-emoss-mobile-systems-b-v.jpg'),
   ('nordbygg-2026-exhibitor-135904', 'nordbygg-2026', 'EMTF/Energi & Miljö', 'AG:06 (+1)', null, 'https://www.emtf.se', null),
   ('nordbygg-2026-exhibitor-137089', 'nordbygg-2026', 'Enduce AB - en ny standard för golvbrunnar', 'A05:04', null, 'https://www.enduce.se', null),
   ('nordbygg-2026-exhibitor-137303', 'nordbygg-2026', 'Energiverket Stockholm AB', 'A10:02', null, 'https://www.energiverket.se', null),
-  ('nordbygg-2026-exhibitor-138196', 'nordbygg-2026', 'Enervent Zehnder Oy', 'A20:23', jsonb_build_object('en', 'Enervent Zehnder är ett finskt företag med passion för inomhusklimat. Vi har utvecklat, tillverkat och marknadsfört energieffektiva lösningar för bättre inomhusklimat sedan 1983.
+  ('nordbygg-2026-exhibitor-138196', 'nordbygg-2026', 'Enervent Zehnder Oy', 'A20:23', jsonb_build_object('en', 'Enervent Zehnder is a Finnish company with a passion for indoor climate. We have developed, manufactured and marketed energy-efficient solutions for a better indoor climate since 1983.
 
-Enervent Zehnder har varit en del av Zehnder-koncernen sedan 2018. Zehnder är en ledande global leverantör av kompletta lösningar för ett hälsosamt inomhusklimat. På Zehnder strävar vi efter att förbättra livskvaliteten genom att tillhandahålla de bästa inomhusklimatlösningarna. Vårt uppdrag är att erbjuda ett hälsosamt inomhusklimat med lösningar av högsta kvalitet. Bostadsutrymmen hålls vid en behaglig temperatur av våra radiatorer och värme- och kyltak, medan våra ventilationslösningar ser till att du kan andas frisk, ren luft 24/7.', 'sv', 'Enervent Zehnder är ett finskt företag med passion för inomhusklimat. Vi har utvecklat, tillverkat och marknadsfört energieffektiva lösningar för bättre inomhusklimat sedan 1983.
+Enervent Zehnder has been part of the Zehnder Group since 2018. Zehnder is a leading global supplier of complete solutions for a healthy indoor climate. At Zehnder we strive to improve quality of life by providing the best indoor climate solutions. Our mission is to offer a healthy indoor climate with solutions of the highest quality. Living spaces are kept at a comfortable temperature by our radiators and heating and cooling ceilings, while our ventilation solutions make sure you can breathe fresh, clean air 24/7.', 'sv', 'Enervent Zehnder är ett finskt företag med passion för inomhusklimat. Vi har utvecklat, tillverkat och marknadsfört energieffektiva lösningar för bättre inomhusklimat sedan 1983.
 
 Enervent Zehnder har varit en del av Zehnder-koncernen sedan 2018. Zehnder är en ledande global leverantör av kompletta lösningar för ett hälsosamt inomhusklimat. På Zehnder strävar vi efter att förbättra livskvaliteten genom att tillhandahålla de bästa inomhusklimatlösningarna. Vårt uppdrag är att erbjuda ett hälsosamt inomhusklimat med lösningar av högsta kvalitet. Bostadsutrymmen hålls vid en behaglig temperatur av våra radiatorer och värme- och kyltak, medan våra ventilationslösningar ser till att du kan andas frisk, ren luft 24/7.'), 'https://www.enervent.com / www.zehndergroup.com', 'assets/images/exhibitors/nordbygg-2026-enervent-zehnder-oy.jpg'),
   ('nordbygg-2026-exhibitor-139319', 'nordbygg-2026', 'Ennergus Innovation', 'AG:69', jsonb_build_object('en', 'ENNERIO cloud-based SaaS platform connects every building automation system and data source into one intelligent, adaptive cloud ecosystem.
@@ -2634,124 +2634,124 @@ GDPR and NIS2 policies
 No Coding Required
 No programming knowledge is required
 UX is tailored to your needs
-Our software is fully customizable.', 'sv', 'ENNERIO cloud-based SaaS platform connects every building automation system and data source into one intelligent, adaptive cloud ecosystem.
-OUR STRENGHTS
-Why choose Ennerio?
-+15 years of experience
-Deep building engineering knowledge for digital solutions driven by real need.
-Efficient Energy Savings
-Up to 15% annual energy savings through continuous optimization.
-Performance & Efficiency
-Data-driven decisions with full ESG and KPI visibility.
-Real Time Risk Reduction
-Early detection of faults and predictive maintenance.
-Flexibility & Control
-Centralized real-time control across multiple sites.
-WE - IN NUMBERS
-Impact you can feel
-Intelligent Cloud Platform for Smart Building Energy & System Control, 18-36 months
-Return of investment (ROI)
-24/7 support
-Remote Monitoring & Control
-Up to 15% Annual Energy Savings
-340 tones Annual CO2 Savings
-ENNERIO enables centralized, remote control of all connected building systems through a secure cloud interface.
-Key Outcomes:
-Fewer on-site interventions
-Faster response times
-Portfolio-wide operational consistency
-ENNERIO provides continuous, real-time visibility into energy consumption across buildings, zones, and systems.
-By continuously analyzing system behavior, ENNERIO detects anomalies and early warning signs of faults.
-Key Outcomes:
-Early fault detection
-Reduced emergency maintenance
-Lower long-term maintenance costs.
-ENNERIO transforms complex operational data into clear, decision-ready ESG insights.
-Key Outcomes:
-Clear ESG performance visibility
-Simplified reporting
-Measurable CO2 reduction.
-Whether managing one building or a distributed portfolio, the platform provides consistent visibility, benchmarking, and control across all assets.
-Key Outcomes:
-Cross-site benchmarking
-Standardized operations
-Solar and other renewable sources integration and monitoring
-Optimized electricity usage according Nordpool data
-Strategic, data-driven decisions.
-Data Security:
-TIER III datacenter
-Our code checked by OWASP framework
-GDPR and NIS2 policies
-One Platform. Total Control
-Energy Monitoring & Optimization
-ENNERIO provides continuous, real-time visibility into energy consumption across buildings, zones, and systems.
-Key Outcomes:
-Up to 15% annual energy savings
-Reduced peak loads
-Transparent energy performance tracking
-Remote System Control
-ENNERIO enables centralized, remote control of all connected building systems through a secure cloud interface.
-Key Outcomes:
-Fewer on-site interventions
-Faster response times
-Portfolio-wide operational consistency
-Predictive Maintenance
-By continuously analyzing system behavior, ENNERIO detects anomalies and early warning signs of faults.
-Key Outcomes:
-Early fault detection
-Reduced emergency maintenance
-Lower long-term maintenance costs
-ESG & Sustainability Reporting
-ENNERIO transforms complex operational data into clear, decision-ready ESG insights.
-Key Outcomes:
-Clear ESG performance visibility
-Simplified reporting
-Measurable CO2 reduction
-Portfolio-Wide Performance Management
-Whether managing one building or a distributed portfolio, the platform provides consistent visibility, benchmarking, and control across all assets.
-Key Outcomes
-Cross-site benchmarking
-Standardized operations
-Strategic, data-driven decisions
-Data Security
-TIER III datacenter
-Our code checked by OWASP framework
-GDPR and NIS2 policies
-No Coding Required
-No programming knowledge is required
-UX is tailored to your needs
-Our software is fully customizable.'), 'https://ennerio.com', 'assets/images/exhibitors/nordbygg-2026-ennergus-innovation.jpg'),
-  ('nordbygg-2026-exhibitor-135570', 'nordbygg-2026', 'Enrad AB', 'A18:23', jsonb_build_object('en', 'Enrad tillverkar framtidens kylaggregat och värmepumpar.
-Vårt uppdrag är att erbjuda och utveckla miljövänliga kylaggregat och värmepumpar som använder det naturliga köldmediet propan, samt sprida kunskap om naturliga köldmedier och energieffektivitet. Att köpa kylaggregat och värmepumpar som är skadliga för klimatet och som inte kommer vara lagliga om några år är varken ekonomiskt eller bra för vår planet. Vi behöver forma en ny och hållbar branschstandard där klimatet alltid är en självklar del av diskussionerna när man installerar nya kyl och värmepumpsanläggningar.
+Our software is fully customizable.', 'sv', 'ENNERIOs molnbaserade SaaS-plattform kopplar samman varje system för fastighetsautomation och varje datakälla till ett intelligent, adaptivt molnekosystem.
+VÅRA STYRKOR
+Varför välja Ennerio?
++15 års erfarenhet
+Djup byggnadsteknisk kunskap för digitala lösningar som drivs av verkliga behov.
+Effektiva energibesparingar
+Upp till 15 % årliga energibesparingar genom kontinuerlig optimering.
+Prestanda och effektivitet
+Datadrivna beslut med full insyn i ESG och KPI:er.
+Riskreduktion i realtid
+Tidig upptäckt av fel och förebyggande underhåll.
+Flexibilitet och kontroll
+Centraliserad realtidsstyrning över flera fastigheter.
+VI – I SIFFROR
+Effekt du kan känna
+Intelligent molnplattform för smart energi- och systemstyrning i fastigheter, 18–36 månader
+Återbetalningstid (ROI)
+Support dygnet runt
+Fjärrövervakning och fjärrstyrning
+Upp till 15 % årliga energibesparingar
+340 ton årliga CO2-besparingar
+ENNERIO möjliggör centraliserad fjärrstyrning av alla anslutna fastighetssystem via ett säkert molngränssnitt.
+Viktiga resultat:
+Färre besök på plats
+Snabbare svarstider
+Enhetlig drift över hela portföljen
+ENNERIO ger kontinuerlig insyn i energiförbrukningen i realtid över fastigheter, zoner och system.
+Genom att kontinuerligt analysera systemens beteende upptäcker ENNERIO avvikelser och tidiga varningstecken på fel.
+Viktiga resultat:
+Tidig feldetektion
+Minskat akut underhåll
+Lägre underhållskostnader på lång sikt.
+ENNERIO omvandlar komplex driftsdata till tydliga, beslutsklara ESG-insikter.
+Viktiga resultat:
+Tydlig insyn i ESG-prestanda
+Förenklad rapportering
+Mätbar CO2-minskning.
+Oavsett om du förvaltar en enskild fastighet eller en distribuerad portfölj ger plattformen konsekvent insyn, benchmarking och kontroll över alla tillgångar.
+Viktiga resultat:
+Benchmarking mellan fastigheter
+Standardiserad drift
+Integration och övervakning av sol och andra förnybara källor
+Optimerad elanvändning enligt data från Nord Pool
+Strategiska, datadrivna beslut.
+Datasäkerhet:
+TIER III-datacenter
+Vår kod granskas enligt OWASP-ramverket
+GDPR- och NIS2-policyer
+En plattform. Full kontroll
+Energiövervakning och optimering
+ENNERIO ger kontinuerlig insyn i energiförbrukningen i realtid över fastigheter, zoner och system.
+Viktiga resultat:
+Upp till 15 % årliga energibesparingar
+Minskade effekttoppar
+Transparent uppföljning av energiprestanda
+Fjärrstyrning av system
+ENNERIO möjliggör centraliserad fjärrstyrning av alla anslutna fastighetssystem via ett säkert molngränssnitt.
+Viktiga resultat:
+Färre besök på plats
+Snabbare svarstider
+Enhetlig drift över hela portföljen
+Förebyggande underhåll
+Genom att kontinuerligt analysera systemens beteende upptäcker ENNERIO avvikelser och tidiga varningstecken på fel.
+Viktiga resultat:
+Tidig feldetektion
+Minskat akut underhåll
+Lägre underhållskostnader på lång sikt
+ESG- och hållbarhetsrapportering
+ENNERIO omvandlar komplex driftsdata till tydliga, beslutsklara ESG-insikter.
+Viktiga resultat:
+Tydlig insyn i ESG-prestanda
+Förenklad rapportering
+Mätbar CO2-minskning
+Prestandahantering över hela portföljen
+Oavsett om du förvaltar en enskild fastighet eller en distribuerad portfölj ger plattformen konsekvent insyn, benchmarking och kontroll över alla tillgångar.
+Viktiga resultat
+Benchmarking mellan fastigheter
+Standardiserad drift
+Strategiska, datadrivna beslut
+Datasäkerhet
+TIER III-datacenter
+Vår kod granskas enligt OWASP-ramverket
+GDPR- och NIS2-policyer
+Ingen kodning krävs
+Ingen programmeringskunskap krävs
+Användarupplevelsen anpassas efter dina behov
+Vår programvara är fullt anpassningsbar.'), 'https://ennerio.com', 'assets/images/exhibitors/nordbygg-2026-ennergus-innovation.jpg'),
+  ('nordbygg-2026-exhibitor-135570', 'nordbygg-2026', 'Enrad AB', 'A18:23', jsonb_build_object('en', 'Enrad manufactures the chillers and heat pumps of the future.
+Our mission is to offer and develop environmentally friendly chillers and heat pumps that use the natural refrigerant propane, and to spread knowledge about natural refrigerants and energy efficiency. Buying chillers and heat pumps that harm the climate, and that will not be legal in a few years, is neither financially sound nor good for our planet. We need to shape a new and sustainable industry standard, in which the climate is always an obvious part of the conversation when new cooling and heat-pump installations are being put in.
 
-Vi kämpar tillsammans med våra kunder för ett bättre klimat genom att erbjuda hållbara och energieffektiva lösningar.', 'sv', 'Enrad tillverkar framtidens kylaggregat och värmepumpar.
+We fight for a better climate, together with our customers, by offering sustainable and energy-efficient solutions.', 'sv', 'Enrad tillverkar framtidens kylaggregat och värmepumpar.
 Vårt uppdrag är att erbjuda och utveckla miljövänliga kylaggregat och värmepumpar som använder det naturliga köldmediet propan, samt sprida kunskap om naturliga köldmedier och energieffektivitet. Att köpa kylaggregat och värmepumpar som är skadliga för klimatet och som inte kommer vara lagliga om några år är varken ekonomiskt eller bra för vår planet. Vi behöver forma en ny och hållbar branschstandard där klimatet alltid är en självklar del av diskussionerna när man installerar nya kyl och värmepumpsanläggningar.
 
 Vi kämpar tillsammans med våra kunder för ett bättre klimat genom att erbjuda hållbara och energieffektiva lösningar.'), 'https://www.enrad.se', 'assets/images/exhibitors/nordbygg-2026-enrad-ab.jpg'),
-  ('nordbygg-2026-exhibitor-133972', 'nordbygg-2026', 'Entral AB', 'B05:10', jsonb_build_object('en', 'Sedan 2015 har Entral hjälpt företag att skapa trygga, säkra och hållbara arbetsplatser samt offentliga miljöer.
-Genom att kombinera smarta passersystem, närvarokontroll och digitala tjänster som Bolagskontroll och en3 connect ger vi dig full kontroll.
+  ('nordbygg-2026-exhibitor-133972', 'nordbygg-2026', 'Entral AB', 'B05:10', jsonb_build_object('en', 'Since 2015, Entral has helped companies create safe, secure and sustainable workplaces and public environments.
+By combining smart access control, attendance monitoring and digital services such as Bolagskontroll and en3 connect, we give you full control.
 
-Vi vet att säkerhet inte står still. Därför har Entral utvecklat lösningar som möter både dina och marknadens behov – idag och imorgon. Säkerställ att du samarbetar med seriösa företag och alltid har rätt person på rätt plats i dina projekt.
+We know that security never stands still. That is why Entral has developed solutions that meet the needs of both you and the market — today and tomorrow. Make sure you work with reputable companies and always have the right person in the right place across your projects.
 
-Entral är mer än en leverantör. Vi är en långsiktig partner inom modern säkerhet.', 'sv', 'Sedan 2015 har Entral hjälpt företag att skapa trygga, säkra och hållbara arbetsplatser samt offentliga miljöer.
+Entral is more than a supplier. We are a long-term partner in modern security.', 'sv', 'Sedan 2015 har Entral hjälpt företag att skapa trygga, säkra och hållbara arbetsplatser samt offentliga miljöer.
 Genom att kombinera smarta passersystem, närvarokontroll och digitala tjänster som Bolagskontroll och en3 connect ger vi dig full kontroll.
 
 Vi vet att säkerhet inte står still. Därför har Entral utvecklat lösningar som möter både dina och marknadens behov – idag och imorgon. Säkerställ att du samarbetar med seriösa företag och alltid har rätt person på rätt plats i dina projekt.
 
 Entral är mer än en leverantör. Vi är en långsiktig partner inom modern säkerhet.'), 'https://entral.se', 'assets/images/exhibitors/nordbygg-2026-entral-ab.jpg'),
   ('nordbygg-2026-exhibitor-139362', 'nordbygg-2026', 'EntRent AB', 'BG:13', null, 'https://www.entrent.se', 'assets/images/exhibitors/nordbygg-2026-entrent-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139408', 'nordbygg-2026', 'EPD - The international EPD system', 'EH:15', jsonb_build_object('en', 'International EPD System är ett globalt program för miljövarudeklarationer. Miljövarudeklarationer (EPD:er) presenterar transparent, verifierad och jämförbar information om produkters och tjänsters miljöpåverkan ur ett livscykelperspektiv.', 'sv', 'International EPD System är ett globalt program för miljövarudeklarationer. Miljövarudeklarationer (EPD:er) presenterar transparent, verifierad och jämförbar information om produkters och tjänsters miljöpåverkan ur ett livscykelperspektiv.'), 'https://www.ivl.se', 'assets/images/exhibitors/nordbygg-2026-epd-the-international-epd-system.jpg'),
-  ('nordbygg-2026-exhibitor-137708', 'nordbygg-2026', 'EPSCEMENT', 'C11:60', jsonb_build_object('en', 'Vi på EPSCEMENT AB jobbar med en enkel idé. Att göra byggandet lättare, smartare och mer effektivt.
+  ('nordbygg-2026-exhibitor-139408', 'nordbygg-2026', 'EPD - The international EPD system', 'EH:15', jsonb_build_object('en', 'The International EPD System is a global programme for environmental product declarations. Environmental product declarations (EPDs) provide transparent, verified and comparable information about the environmental impact of products and services from a life-cycle perspective.', 'sv', 'International EPD System är ett globalt program för miljövarudeklarationer. Miljövarudeklarationer (EPD:er) presenterar transparent, verifierad och jämförbar information om produkters och tjänsters miljöpåverkan ur ett livscykelperspektiv.'), 'https://www.ivl.se', 'assets/images/exhibitors/nordbygg-2026-epd-the-international-epd-system.jpg'),
+  ('nordbygg-2026-exhibitor-137708', 'nordbygg-2026', 'EPSCEMENT', 'C11:60', jsonb_build_object('en', 'We at EPSCEMENT AB work from a simple idea: to make construction lighter, smarter and more efficient.
 
-Genom att kombinera betong med isolerande EPS-kulor har vi tagit fram ett material som väger mindre, isolerar bättre och går snabbare att jobba med än traditionella lösningar.
+By combining concrete with insulating EPS beads we have developed a material that weighs less, insulates better and is faster to work with than traditional alternatives.
 
-Men vi är mer än ett material. Vi jobbar med ett helt system där EPS-cement, armering som Tensobar och tillbehör samverkar för att skapa effektiva och hållbara konstruktioner.
+But we are more than a material. We work with a complete system, in which EPS-cement, reinforcement such as Tensobar and accessories work together to create efficient and durable structures.
 
-Vi är ett svenskt bolag med rötter i innovation och var först i Sverige med EPS-cement. Idag är vi marknadsledande inom vårt segment.
+We are a Swedish company with our roots in innovation, and we were the first in Sweden with EPS-cement. Today we are the market leader in our segment.
 
-Vi levererar inte bara produkter utan hela lösningar, från material och tillbehör till pumpning direkt ute på byggarbetsplatsen. Målet är att förenkla processen, spara tid och skapa bättre förutsättningar i varje projekt.
+We deliver not only products but complete solutions, from material and accessories to pumping directly out on the construction site. The goal is to simplify the process, save time and create better conditions in every project.
 
-Kort sagt, betongkänsla utan vikten och ett smartare sätt att bygga.', 'sv', 'Vi på EPSCEMENT AB jobbar med en enkel idé. Att göra byggandet lättare, smartare och mer effektivt.
+In short: the feel of concrete without the weight, and a smarter way to build.', 'sv', 'Vi på EPSCEMENT AB jobbar med en enkel idé. Att göra byggandet lättare, smartare och mer effektivt.
 
 Genom att kombinera betong med isolerande EPS-kulor har vi tagit fram ett material som väger mindre, isolerar bättre och går snabbare att jobba med än traditionella lösningar.
 
@@ -2762,31 +2762,31 @@ Vi är ett svenskt bolag med rötter i innovation och var först i Sverige med E
 Vi levererar inte bara produkter utan hela lösningar, från material och tillbehör till pumpning direkt ute på byggarbetsplatsen. Målet är att förenkla processen, spara tid och skapa bättre förutsättningar i varje projekt.
 
 Kort sagt, betongkänsla utan vikten och ett smartare sätt att bygga.'), 'https://www.epscement.com', 'assets/images/exhibitors/nordbygg-2026-epscement.jpg'),
-  ('nordbygg-2026-exhibitor-134383', 'nordbygg-2026', 'Ergofast AB', 'B02:31', jsonb_build_object('en', 'Vi har infästningslösningar och verktyg för effektivt byggande, marknadens bästa produkter och varumärken för de verkliga proffsen. Med vår samlade kompetens som infästningsspecialister arbetar vi aktivt för att utveckla bättre, säkrare och mer innovativa lösningar på nya och gamla infästningsproblem. Vi gör det på eget initiativ i vår egen R&D eller utvecklar lösningar tillsammans med våra Premium Partners.', 'sv', 'Vi har infästningslösningar och verktyg för effektivt byggande, marknadens bästa produkter och varumärken för de verkliga proffsen. Med vår samlade kompetens som infästningsspecialister arbetar vi aktivt för att utveckla bättre, säkrare och mer innovativa lösningar på nya och gamla infästningsproblem. Vi gör det på eget initiativ i vår egen R&D eller utvecklar lösningar tillsammans med våra Premium Partners.'), 'https://www.ergofast.se', 'assets/images/exhibitors/nordbygg-2026-ergofast-ab.jpg'),
+  ('nordbygg-2026-exhibitor-134383', 'nordbygg-2026', 'Ergofast AB', 'B02:31', jsonb_build_object('en', 'We have fastening solutions and tools for efficient construction — the market''s best products and brands for true professionals. With our combined expertise as fastening specialists, we work actively to develop better, safer and more innovative solutions to new and old fastening problems. We do this on our own initiative in our R&D department, or together with our Premium Partners.', 'sv', 'Vi har infästningslösningar och verktyg för effektivt byggande, marknadens bästa produkter och varumärken för de verkliga proffsen. Med vår samlade kompetens som infästningsspecialister arbetar vi aktivt för att utveckla bättre, säkrare och mer innovativa lösningar på nya och gamla infästningsproblem. Vi gör det på eget initiativ i vår egen R&D eller utvecklar lösningar tillsammans med våra Premium Partners.'), 'https://www.ergofast.se', 'assets/images/exhibitors/nordbygg-2026-ergofast-ab.jpg'),
   ('nordbygg-2026-exhibitor-138134', 'nordbygg-2026', 'Ergosafe AB', 'C10:50', null, 'https://www.ergosafe.se', 'assets/images/exhibitors/nordbygg-2026-ergosafe-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134569', 'nordbygg-2026', 'ESBE AB', 'A04:16', jsonb_build_object('en', 'De flesta tänker förmodligen inte på det men när man vrider på kranen och dricker ett glas vatten, när man ställer sig under duschens varma strålar eller kanske när man tassar barfota över det uppvärmda golvet – då arbetar förmodligen en av ESBEs produkter i bakgrunden.
+  ('nordbygg-2026-exhibitor-134569', 'nordbygg-2026', 'ESBE AB', 'A04:16', jsonb_build_object('en', 'Most people probably do not give it a thought, but when you turn the tap and drink a glass of water, when you stand under the warm jets of the shower or perhaps when you pad barefoot across the heated floor — odds are that one of ESBE''s products is at work in the background.
 
 
 
-ESBE är en av Europas ledande tillverkare av hydroniska lösningar. Våra ventiler och ställdon utvecklas och konstrueras på huvudkontoret i svenska Reftele för att klara tre högt satta mål; de ska använda mindre energi, ge mer komfort och öka säkerheten i system för uppvärmning, kylning och tappvatten. Trots att produkterna oftast lever en undanskymd tillvaro lägger vi stor vikt vid design, funktion, pålitlighet och miljöhänsyn.', 'sv', 'De flesta tänker förmodligen inte på det men när man vrider på kranen och dricker ett glas vatten, när man ställer sig under duschens varma strålar eller kanske när man tassar barfota över det uppvärmda golvet – då arbetar förmodligen en av ESBEs produkter i bakgrunden.
+ESBE is one of Europe''s leading manufacturers of hydronic solutions. Our valves and actuators are developed and engineered at our head office in Reftele, Sweden, to meet three demanding goals: they should use less energy, deliver more comfort and increase safety in heating, cooling and tap-water systems. Even though our products usually live a discreet existence, we put great emphasis on design, function, reliability and environmental responsibility.', 'sv', 'De flesta tänker förmodligen inte på det men när man vrider på kranen och dricker ett glas vatten, när man ställer sig under duschens varma strålar eller kanske när man tassar barfota över det uppvärmda golvet – då arbetar förmodligen en av ESBEs produkter i bakgrunden.
 
 
 
 ESBE är en av Europas ledande tillverkare av hydroniska lösningar. Våra ventiler och ställdon utvecklas och konstrueras på huvudkontoret i svenska Reftele för att klara tre högt satta mål; de ska använda mindre energi, ge mer komfort och öka säkerheten i system för uppvärmning, kylning och tappvatten. Trots att produkterna oftast lever en undanskymd tillvaro lägger vi stor vikt vid design, funktion, pålitlighet och miljöhänsyn.'), 'https://www.esbe.eu', 'assets/images/exhibitors/nordbygg-2026-esbe-ab.jpg'),
-  ('nordbygg-2026-exhibitor-140088', 'nordbygg-2026', 'ETC Byggentreprenad AB', 'C07:50', jsonb_build_object('en', 'Hållbara lösningar för framtidens byggande
-ETC Byggentreprenad har haft totalentreprenad på alla hyreshus byggda av ETC Bygg: Två hyreshus i Växjö, tre hyreshus i Västerås och ett höghus i Malmö.
+  ('nordbygg-2026-exhibitor-140088', 'nordbygg-2026', 'ETC Byggentreprenad AB', 'C07:50', jsonb_build_object('en', 'Sustainable solutions for tomorrow''s construction
+ETC Byggentreprenad has been the main contractor on every apartment block built by ETC Bygg: two apartment blocks in Växjö, three in Västerås and a high-rise in Malmö.
 
-Husen är klimatpositiva. Tack vare biobaserade material lagras mer koldioxid in i huset än vad som orsakas under byggprocessen.
+The buildings are climate-positive. Thanks to bio-based materials, more carbon dioxide is stored in the building than is emitted during the construction process.
 
-Vi tillverkar färdiga element- och utfackningsväggar i trä och halm (från EcoCocon), i vår ekohusfabrik i Hultsfred, enligt kundens önskemål.
+In our eco-house factory in Hultsfred we manufacture finished element walls and infill walls in wood and straw (from EcoCocon), built to the customer''s specifications.
 
-Vi arbetar i dagsläget med större projekt, inte enstaka villor.
+At present we work with larger projects, not individual single-family homes.
 
-Vi åtar oss även totalentreprenad för byggande av större projekt.
+We also take on full main-contractor responsibility for larger building projects.
 
-Vår personal har expertkunskap på materialen trä och halm.2024 nominerades ETC Bygg till Växjö Träbyggnadspris och Nordiska rådets miljöpris 2024.
+Our staff have expert knowledge of the materials wood and straw. In 2024 ETC Bygg was nominated for the Växjö Wood Architecture Prize and the Nordic Council Environment Prize 2024.
 
-2024 tilldelades ETC Bygg och arkitekterna Kaminsky Arkitektur och Hans Eek det prestigefyllda internationella hållparhetspriset UIA Award 2030 för ETC Byggs hyreshus i Västerås – i konkurrens med 125 projekt från 40 länder. Priset delades ut av International Union of Architects, i samarbete med FN i Kairo.', 'sv', 'Hållbara lösningar för framtidens byggande
+In 2024, ETC Bygg and the architects Kaminsky Arkitektur and Hans Eek were awarded the prestigious international UIA Award 2030 for sustainability for ETC Bygg''s apartment block in Västerås — chosen from a field of 125 projects from 40 countries. The prize was presented by the International Union of Architects, in cooperation with the UN, in Cairo.', 'sv', 'Hållbara lösningar för framtidens byggande
 ETC Byggentreprenad har haft totalentreprenad på alla hyreshus byggda av ETC Bygg: Två hyreshus i Växjö, tre hyreshus i Västerås och ett höghus i Malmö.
 
 Husen är klimatpositiva. Tack vare biobaserade material lagras mer koldioxid in i huset än vad som orsakas under byggprocessen.
@@ -2801,17 +2801,17 @@ Vår personal har expertkunskap på materialen trä och halm.2024 nominerades ET
 
 2024 tilldelades ETC Bygg och arkitekterna Kaminsky Arkitektur och Hans Eek det prestigefyllda internationella hållparhetspriset UIA Award 2030 för ETC Byggs hyreshus i Västerås – i konkurrens med 125 projekt från 40 länder. Priset delades ut av International Union of Architects, i samarbete med FN i Kairo.'), 'https://etcbygg.se', 'assets/images/exhibitors/nordbygg-2026-etc-byggentreprenad-ab.jpg'),
   ('nordbygg-2026-exhibitor-139919', 'nordbygg-2026', 'Eumar Santehnika OÜ', 'C03:51', null, 'https://eumardesign.com', null),
-  ('nordbygg-2026-exhibitor-139060', 'nordbygg-2026', 'European Fire Technology AB', 'C08:70', jsonb_build_object('en', 'Förmodligen världens bästa brandskyddsfärg FIRECOAT
-högsta brandklass: FM-Global. BAL40: B,s1d0
-Endast en strykning
-50 års livslängd
-Målas på alla underlag
-I princip alla vattenbaserade Top Coats färger
-Kan sprutas penslas eller rollas
-Kan målas på shingeltak och papptak
-MED FIRCOAT Membrane bygger man enkelt brandavskiljande väggar på kallvindar, högsta brandklassning
-Med EFT ATTIC skyddar man kallvindar enkelt med transparent medel
-Samtliga produkter giftfria och miljövänliga BASTA reg.', 'sv', 'Förmodligen världens bästa brandskyddsfärg FIRECOAT
+  ('nordbygg-2026-exhibitor-139060', 'nordbygg-2026', 'European Fire Technology AB', 'C08:70', jsonb_build_object('en', 'Probably the world''s best fire-protection paint, FIRECOAT
+Highest fire class: FM-Global. BAL40: B,s1d0
+A single coat
+50-year service life
+Can be painted onto any substrate
+Works with virtually all water-based top-coat paints
+Can be sprayed, brushed or rolled
+Can be painted on shingle and roofing-felt roofs
+With FIRCOAT Membrane you can easily build fire-rated walls in cold attics, with the highest fire classification
+With EFT ATTIC you can easily protect cold attics with a transparent agent
+All products are non-toxic and environmentally friendly, BASTA-registered.', 'sv', 'Förmodligen världens bästa brandskyddsfärg FIRECOAT
 högsta brandklass: FM-Global. BAL40: B,s1d0
 Endast en strykning
 50 års livslängd
@@ -2823,18 +2823,18 @@ MED FIRCOAT Membrane bygger man enkelt brandavskiljande väggar på kallvindar, 
 Med EFT ATTIC skyddar man kallvindar enkelt med transparent medel
 Samtliga produkter giftfria och miljövänliga BASTA reg.'), 'https://www.eurofiretech.com', null),
   ('nordbygg-2026-exhibitor-134998', 'nordbygg-2026', 'EUROPLAST', 'A23:20', null, 'https://europlast.lv/en', 'assets/images/exhibitors/nordbygg-2026-europlast.jpg'),
-  ('nordbygg-2026-exhibitor-139182', 'nordbygg-2026', 'EUROVENT CERTIFICATION', 'A21:11', jsonb_build_object('en', 'Eurovent Certita Certification är globalt erkänd som en pålitlig partner för tredjepartscertifiering av prestanda hos produkter för uppvärmning, ventilation, luftkonditionering och kylning (HVAC-R).
-Vår strikta och rigorösa certifieringsprocess främjar innovation och förbättrar energieffektiviteten, vilket driver tillverkare att kontinuerligt förnya sig och minska koldioxidavtrycket från sina produkter. Denna frivilliga certifiering skapar förtroende bland intressenterna i byggbranschen och minskar investeringsriskerna i samband med HVAC-R-lösningar. Den garanterar tillförlitligheten, effektiviteten och hållbarheten hos certifierade produkter på marknaden.
-På Eurovent Certita Certification tillhandahåller vi en omfattande produktdatabas som är utformad för att möta de olika behoven hos HVAC-proffs, inklusive installatörer, konsulter, arkitekter, tekniska studiekontor och projektledare. Du kan enkelt komma åt denna värdefulla resurs via vår webbplats på www.eurovent-certification.com.', 'sv', 'Eurovent Certita Certification är globalt erkänd som en pålitlig partner för tredjepartscertifiering av prestanda hos produkter för uppvärmning, ventilation, luftkonditionering och kylning (HVAC-R).
+  ('nordbygg-2026-exhibitor-139182', 'nordbygg-2026', 'EUROVENT CERTIFICATION', 'A21:11', jsonb_build_object('en', 'Eurovent Certita Certification is recognised globally as a trusted partner for third-party performance certification of products for heating, ventilation, air conditioning and refrigeration (HVAC-R).
+Our strict and rigorous certification process drives innovation and improves energy efficiency, pushing manufacturers to keep innovating and reduce the carbon footprint of their products. This voluntary certification builds trust among stakeholders in the construction industry and reduces investment risk associated with HVAC-R solutions. It guarantees the reliability, efficiency and sustainability of certified products on the market.
+At Eurovent Certita Certification we provide a comprehensive product database designed to meet the diverse needs of HVAC professionals, including installers, consultants, architects, technical design offices and project managers. You can easily access this valuable resource through our website at www.eurovent-certification.com.', 'sv', 'Eurovent Certita Certification är globalt erkänd som en pålitlig partner för tredjepartscertifiering av prestanda hos produkter för uppvärmning, ventilation, luftkonditionering och kylning (HVAC-R).
 Vår strikta och rigorösa certifieringsprocess främjar innovation och förbättrar energieffektiviteten, vilket driver tillverkare att kontinuerligt förnya sig och minska koldioxidavtrycket från sina produkter. Denna frivilliga certifiering skapar förtroende bland intressenterna i byggbranschen och minskar investeringsriskerna i samband med HVAC-R-lösningar. Den garanterar tillförlitligheten, effektiviteten och hållbarheten hos certifierade produkter på marknaden.
 På Eurovent Certita Certification tillhandahåller vi en omfattande produktdatabas som är utformad för att möta de olika behoven hos HVAC-proffs, inklusive installatörer, konsulter, arkitekter, tekniska studiekontor och projektledare. Du kan enkelt komma åt denna värdefulla resurs via vår webbplats på www.eurovent-certification.com.'), 'https://www.eurovent-certification.com/fr', 'assets/images/exhibitors/nordbygg-2026-eurovent-certification.jpg'),
-  ('nordbygg-2026-exhibitor-135048', 'nordbygg-2026', 'Eveco Handel AB', 'A06:24', jsonb_build_object('en', 'Eveco är leverantör av smarta produkter och system för kyla, värme och luftkomfort. Den främsta inriktningen är kommersiella lokaler. Eveco erbjuder sina kunder anpassade lösningar för bästa möjliga inomhusklimat, samt bidrar med kompetens genom hela processen. Företaget startades 1979 och har idag en lång erfarenhet inom branschen. Kontor och lager ligger i Mölndal, precis utanför Göteborg. Sedan 2023 är Eveco en del i den Göteborgsbaserade industrikoncernen Ernströmgruppen. Tillsammans satsar de långsiktigt framåt.
+  ('nordbygg-2026-exhibitor-135048', 'nordbygg-2026', 'Eveco Handel AB', 'A06:24', jsonb_build_object('en', 'Eveco is a supplier of smart products and systems for cooling, heating and air comfort. The main focus is commercial premises. Eveco offers its customers tailored solutions for the best possible indoor climate, and contributes its expertise throughout the entire process. The company was founded in 1979 and has many years of experience in the industry. Our offices and warehouse are in Mölndal, just outside Gothenburg. Since 2023, Eveco has been part of the Gothenburg-based industrial group Ernströmgruppen. Together they invest for the long term.
 
-Evecos hållbara och prisvärda produkter finns hos grossister över hela Sverige. Kunderna finns främst inom VVS, ventilations- och elbranschen. Där är Eveco en väletablerad samarbetspartner. Många av deras leverantörer är bland de största i Europa, vilket garanterar god prestanda och kvalitet.
+Eveco''s sustainable and competitively priced products are available through wholesalers across Sweden. The customers are primarily found in the HVAC, ventilation and electrical industries. There, Eveco is a well-established partner. Many of our suppliers are among the largest in Europe, which guarantees solid performance and quality.
 
-I det breda sortimentet finns fläktkonvektorer, fläktluftvärmare, luftridåer, strålvärmare, golvkonvektorer och shuntgrupper. Till alla produkter finns tillhörande reglerteknik.
+The broad range covers fan coil units, fan heaters, air curtains, radiant heaters, floor convectors and shunt groups. All products come with matching control technology.
 
-Träffa Eveco i monter A06:24, där finns de på plats under hela Nordbygg-mässan. Lär känna produkterna och hör representanterna berätta mer. Välkommen!', 'sv', 'Eveco är leverantör av smarta produkter och system för kyla, värme och luftkomfort. Den främsta inriktningen är kommersiella lokaler. Eveco erbjuder sina kunder anpassade lösningar för bästa möjliga inomhusklimat, samt bidrar med kompetens genom hela processen. Företaget startades 1979 och har idag en lång erfarenhet inom branschen. Kontor och lager ligger i Mölndal, precis utanför Göteborg. Sedan 2023 är Eveco en del i den Göteborgsbaserade industrikoncernen Ernströmgruppen. Tillsammans satsar de långsiktigt framåt.
+Meet Eveco in stand A06:24 — they are on site throughout Nordbygg. Get to know the products and hear the team tell you more. Welcome!', 'sv', 'Eveco är leverantör av smarta produkter och system för kyla, värme och luftkomfort. Den främsta inriktningen är kommersiella lokaler. Eveco erbjuder sina kunder anpassade lösningar för bästa möjliga inomhusklimat, samt bidrar med kompetens genom hela processen. Företaget startades 1979 och har idag en lång erfarenhet inom branschen. Kontor och lager ligger i Mölndal, precis utanför Göteborg. Sedan 2023 är Eveco en del i den Göteborgsbaserade industrikoncernen Ernströmgruppen. Tillsammans satsar de långsiktigt framåt.
 
 Evecos hållbara och prisvärda produkter finns hos grossister över hela Sverige. Kunderna finns främst inom VVS, ventilations- och elbranschen. Där är Eveco en väletablerad samarbetspartner. Många av deras leverantörer är bland de största i Europa, vilket garanterar god prestanda och kvalitet.
 
@@ -2842,15 +2842,15 @@ I det breda sortimentet finns fläktkonvektorer, fläktluftvärmare, luftridåer
 
 Träffa Eveco i monter A06:24, där finns de på plats under hela Nordbygg-mässan. Lär känna produkterna och hör representanterna berätta mer. Välkommen!'), 'https://www.eveco.se', 'assets/images/exhibitors/nordbygg-2026-eveco-handel-ab.jpg'),
   ('nordbygg-2026-exhibitor-140152', 'nordbygg-2026', 'EVIA', 'C06:51', null, 'https://www.evia.se', null),
-  ('nordbygg-2026-exhibitor-139394', 'nordbygg-2026', 'EWES Sound Fastener/Hiil/EcoCocon/ETC', 'C07:50', jsonb_build_object('en', 'EWES Sound Fastener (SF) är en svensk, patenterad uppfinning. Håkan Werner och Raimo Issal, teamet bakom Akoustos AB, har utvecklat och designat den ljudreducerande träskruven.
+  ('nordbygg-2026-exhibitor-139394', 'nordbygg-2026', 'EWES Sound Fastener/Hiil/EcoCocon/ETC', 'C07:50', jsonb_build_object('en', 'EWES Sound Fastener (SF) is a Swedish patented invention. Håkan Werner and Raimo Issal, the team behind Akoustos AB, developed and designed the sound-reducing wood screw.
 
-Enkelt förklarat kan du byta ut gipsskruvarna mot SF-skruvar och på så sätt nära halvera den upplevda ljudnivån. Utan att du behöver addera mer byggmaterial eller extra arbete. Faktum är att väggar isolerade med SF-skruvar kan vara tunnare än vanliga väggar, så förutom att du reducerar oönskade ljud, så sparar du material och ökar värdefull boyta.
+In simple terms, you can swap your plasterboard screws for SF screws and so cut the perceived noise level by close to half. Without having to add more building materials or extra work. In fact, walls insulated with SF screws can be thinner than ordinary walls, so in addition to reducing unwanted noise you save material and gain valuable living space.
 
-Sound Fastener är noga testad
+Sound Fastener has been thoroughly tested
 
-Förmågan att absorbera ljud har testats vid The Sound Research Laboratories i Storbritannien, vid Tekniska Universitetet i Danmark och vid RISE Research Institutes of Sweden AB. Mekaniska tester av hållfasthet och styvhet har testats vid Lunds universitet, Sverige.
+The ability to absorb sound has been tested at the Sound Research Laboratories in the United Kingdom, the Technical University of Denmark and at RISE Research Institutes of Sweden AB. Mechanical tests of strength and stiffness have been carried out at Lund University, Sweden.
 
-» Sound Fasteners bevisade effekt: 9 dB (vilket motsvarar nära en upplevd halvering av ljudnivån)', 'sv', 'EWES Sound Fastener (SF) är en svensk, patenterad uppfinning. Håkan Werner och Raimo Issal, teamet bakom Akoustos AB, har utvecklat och designat den ljudreducerande träskruven.
+» Sound Fastener''s proven effect: 9 dB (which corresponds to close to a perceived halving of the noise level)', 'sv', 'EWES Sound Fastener (SF) är en svensk, patenterad uppfinning. Håkan Werner och Raimo Issal, teamet bakom Akoustos AB, har utvecklat och designat den ljudreducerande träskruven.
 
 Enkelt förklarat kan du byta ut gipsskruvarna mot SF-skruvar och på så sätt nära halvera den upplevda ljudnivån. Utan att du behöver addera mer byggmaterial eller extra arbete. Faktum är att väggar isolerade med SF-skruvar kan vara tunnare än vanliga väggar, så förutom att du reducerar oönskade ljud, så sparar du material och ökar värdefull boyta.
 
@@ -2859,36 +2859,36 @@ Sound Fastener är noga testad
 Förmågan att absorbera ljud har testats vid The Sound Research Laboratories i Storbritannien, vid Tekniska Universitetet i Danmark och vid RISE Research Institutes of Sweden AB. Mekaniska tester av hållfasthet och styvhet har testats vid Lunds universitet, Sverige.
 
 » Sound Fasteners bevisade effekt: 9 dB (vilket motsvarar nära en upplevd halvering av ljudnivån)'), 'https://www.ewes.se', 'assets/images/exhibitors/nordbygg-2026-ewes-sound-fastener-hiil-ecococon-etc.jpg'),
-  ('nordbygg-2026-exhibitor-139753', 'nordbygg-2026', 'Ewona Finland Oy', 'C08:63', jsonb_build_object('en', 'Våra produkter hjälper dig att skapa ett rent
-inomhusklimat där du hörs bra.
+  ('nordbygg-2026-exhibitor-139753', 'nordbygg-2026', 'Ewona Finland Oy', 'C08:63', jsonb_build_object('en', 'Our products help you create a clean
+indoor climate where you are heard well.
 
-Ewona® Oy är ett finskt företag som arbetar med akustiska lösningar. Vi tillbringar större
-delen av våra liv inomhus, så helt dammfria och allergifria akustik- och isoleringslösningar är en
-hederssak för oss.
+Ewona® Oy is a Finnish company that works with acoustic solutions. We spend most
+of our lives indoors, so completely dust-free and allergy-free acoustic and insulation solutions are a
+point of honour for us.
 
-Vi skapar utrymmen som står emot tidens tand, ljud och liv och som ökar välbefinnandet, vitali
-teten och produktiviteten. Vi producerar lösningar som förstärker fördelaktiga ljud, som tal eller
-musik, och dämpar skadliga ljud, som buller. Våra produkter, som tillverkas av upp till 85 % åter
-vunnet material, skapar framtidens inomhusklimat. Engagemang för hållbarhet, produktsäkerhet
-och bekvämlighet styr allt vi gör.
+We create spaces that stand the test of time, sound and life, and that increase well-being, vitality
+and productivity. We produce solutions that amplify beneficial sounds, such as speech or
+music, and dampen harmful sounds, such as noise. Our products, which are made from up to 85% recycled
+material, create the indoor climate of the future. A commitment to sustainability, product safety
+and comfort guides everything we do.
 
-Återvunnet och säkert
+Recycled and safe
 
-Vi tar ansvar för vår miljö. Vi använder miljövänliga, tillsatsfria och återanvända material i till
-verkningen av våra produkter. Alla våra polyesterfiberprodukter uppfyller allergimärkningen och
-M1-emissions- och renhetsklassificeringen. Råmaterialet som används i slutprodukten är i bästa
-fall upp till 85 % återvunnen fiber. Med ständigt ökande krav på inomhusluftens kvalitet är vi den
-enda helt allergifria tillverkaren av akustiklösningar på marknaden. Vi uppfyller stolt den dagens
-standarder – vi har förbundit oss att göra våra produkter dammfria och allergisäkra.
+We take responsibility for our environment. We use environmentally friendly, additive-free and reused materials in the
+manufacture of our products. All of our polyester-fibre products meet the allergy label and the
+M1 emissions and cleanliness classification. The raw material in the finished product is, at best,
+up to 85% recycled fibre. With ever-increasing demands on indoor air quality, we are the
+only fully allergy-free manufacturer of acoustic solutions on the market. We are proud to meet today''s
+standards — we are committed to making our products dust-free and allergy-safe.
 
-Brett sortiment av produkter
+A broad range of products
 
-Förutom lösningar för akustik- och ljudisolering omfattar vårt produktsortiment även värmeisole
-ring, filtermattor och möbelvadderingar.
-Våra produkter fokuserar på allergisäkerhet, återvinning och återvinningsbarhet – och naturligtvis
-funktionalitet. Vi använder miljövänliga, tillsatsfria och återvunna material vid tillverkningen av
-våra produkter, som alla uppfyller kraven för allergimärkning och M1-klassade för utsläpp och
-renhet. Produkterna är designade och tillverkade i Finland.', 'sv', 'Våra produkter hjälper dig att skapa ett rent
+In addition to acoustic and sound-insulation solutions, our product range also covers thermal
+insulation, filter mats and furniture padding.
+Our products focus on allergy safety, recycling and recyclability — and, of course,
+functionality. We use environmentally friendly, additive-free and recycled materials in the manufacture of
+our products, all of which meet the requirements for the allergy label and are M1-classified for emissions and
+cleanliness. The products are designed and manufactured in Finland.', 'sv', 'Våra produkter hjälper dig att skapa ett rent
 inomhusklimat där du hörs bra.
 
 Ewona® Oy är ett finskt företag som arbetar med akustiska lösningar. Vi tillbringar större
@@ -2918,8 +2918,8 @@ Våra produkter fokuserar på allergisäkerhet, återvinning och återvinningsba
 funktionalitet. Vi använder miljövänliga, tillsatsfria och återvunna material vid tillverkningen av
 våra produkter, som alla uppfyller kraven för allergimärkning och M1-klassade för utsläpp och
 renhet. Produkterna är designade och tillverkade i Finland.'), 'https://ewona.fi/sv/', 'assets/images/exhibitors/nordbygg-2026-ewona-finland-oy.jpg'),
-  ('nordbygg-2026-exhibitor-137322', 'nordbygg-2026', 'Expodul Uterum', 'C11:63', jsonb_build_object('en', 'Expodul Uterum har över 50 års erfarenhet av konstruktion och egen tillverkning av uterum, verandor och glaspartier och har det bredaste sortimentet på marknaden. Vi har varit verksamma sedan år 1975 och vår vision är att skapa måttanpassade uterum för livskvalité, i kontakt med naturen.', 'sv', 'Expodul Uterum har över 50 års erfarenhet av konstruktion och egen tillverkning av uterum, verandor och glaspartier och har det bredaste sortimentet på marknaden. Vi har varit verksamma sedan år 1975 och vår vision är att skapa måttanpassade uterum för livskvalité, i kontakt med naturen.'), 'https://www.expoduluterum.se', 'assets/images/exhibitors/nordbygg-2026-expodul-uterum.jpg'),
-  ('nordbygg-2026-exhibitor-136062', 'nordbygg-2026', 'Exsitec AB', 'C01:10', jsonb_build_object('en', 'Exsitec digitaliserar bygg-, service- och entreprenadföretag med system som gör jobbet. Som Nordens snabbast växande IT-konsultbolag levererar vi lösningar som skapar verklig skillnad – från kontoret till fältet.
+  ('nordbygg-2026-exhibitor-137322', 'nordbygg-2026', 'Expodul Uterum', 'C11:63', jsonb_build_object('en', 'Expodul Uterum has more than 50 years of experience in the design and in-house manufacture of conservatories, verandas and glass facades, and has the broadest product range on the market. We have been in business since 1975, and our vision is to create made-to-measure conservatories that bring quality of life and a closer connection with nature.', 'sv', 'Expodul Uterum har över 50 års erfarenhet av konstruktion och egen tillverkning av uterum, verandor och glaspartier och har det bredaste sortimentet på marknaden. Vi har varit verksamma sedan år 1975 och vår vision är att skapa måttanpassade uterum för livskvalité, i kontakt med naturen.'), 'https://www.expoduluterum.se', 'assets/images/exhibitors/nordbygg-2026-expodul-uterum.jpg'),
+  ('nordbygg-2026-exhibitor-136062', 'nordbygg-2026', 'Exsitec AB', 'C01:10', jsonb_build_object('en', 'Exsitec digitalises construction, service and contracting companies with systems that get the job done. As the Nordic region''s fastest-growing IT consultancy, we deliver solutions that make a real difference — from the office to the field.
 
 www.exsitec.se/nordbygg-2026
 https://www.exsitec.se/bransch/bygg', 'sv', 'Exsitec digitaliserar bygg-, service- och entreprenadföretag med system som gör jobbet. Som Nordens snabbast växande IT-konsultbolag levererar vi lösningar som skapar verklig skillnad – från kontoret till fältet.
