@@ -6188,17 +6188,17 @@ Säker Vatten startades 2005. Den 1 sep 2005 lanserades den första upplagan av 
 Branschreglerna uppdateras var femte år.
 Idag finns det cirka 2200 auktoriserade VVS-företag med utbildade VVS-montörer.'), 'https://www.sakervatten.se', 'assets/images/exhibitors/nordbygg-2026-saker-vatten-ab.jpg'),
   ('nordbygg-2026-exhibitor-139220', 'nordbygg-2026', 'Söderberg & Partners', 'A06:10', null, 'https://www.soderbergpartners.se', null),
-  ('nordbygg-2026-exhibitor-139133', 'nordbygg-2026', 'Tabergkonstruktioner AB', 'C12:70', jsonb_build_object('en', 'Varmt välkomna att besöka oss i monter C12:70!
+  ('nordbygg-2026-exhibitor-139133', 'nordbygg-2026', 'Tabergkonstruktioner AB', 'C12:70', jsonb_build_object('en', 'A warm welcome to visit us at booth C12:70!
 
-Vi på värmländska Tabergkonstruktioner AB presenterar våra egenutvecklade jordskruvar och tillhörande beslag.
-Vi har tagit fram olika alternativ på monteringsmaskiner.  Det finns både batteri-, el- och hydrauliska alternativ från handhållen till entreprenad.
+At Värmland-based Tabergkonstruktioner AB we are presenting our in-house developed ground screws and the matching fittings.
+We have developed a range of installation machines. They come in battery, electric and hydraulic versions, from hand-held units to contractor-grade equipment.
 
-Stor vikt är lagd vid detaljerna för att effektivisera monteringen, så enkel och pålitlig som möjligt – något som sparar både tid och arbete för montörerna.
+Great care has gone into the details to make installation as simple and reliable as possible — saving both time and effort for the installers.
 
-Jordskruv är en modern grundläggningsmetod.
-Den är tidsbesparande, hållfast och lämnar minimalt med spår och påverkan på miljön.
+The ground screw is a modern foundation method.
+It is time-saving, durable and leaves a minimal footprint and environmental impact.
 
-Tabergs tillverkar även ett system för markmonterad solenergi. Det är helt flexibelt gällande konfiguration och layout.', 'sv', 'Varmt välkomna att besöka oss i monter C12:70!
+Tabergs also manufactures a system for ground-mounted solar energy. It is fully flexible in terms of configuration and layout.', 'sv', 'Varmt välkomna att besöka oss i monter C12:70!
 
 Vi på värmländska Tabergkonstruktioner AB presenterar våra egenutvecklade jordskruvar och tillhörande beslag.
 Vi har tagit fram olika alternativ på monteringsmaskiner.  Det finns både batteri-, el- och hydrauliska alternativ från handhållen till entreprenad.
@@ -6210,39 +6210,39 @@ Den är tidsbesparande, hållfast och lämnar minimalt med spår och påverkan p
 
 Tabergs tillverkar även ett system för markmonterad solenergi. Det är helt flexibelt gällande konfiguration och layout.'), 'https://www.tabergs.com', 'assets/images/exhibitors/nordbygg-2026-tabergkonstruktioner-ab.jpg'),
   ('nordbygg-2026-exhibitor-137848', 'nordbygg-2026', 'Tajima Trading', 'B10:31', null, 'https://www.tajima.dk', null),
-  ('nordbygg-2026-exhibitor-135899', 'nordbygg-2026', 'Tantum', 'C07:11', jsonb_build_object('en', 'HÅLLBAR INREDNING
+  ('nordbygg-2026-exhibitor-135899', 'nordbygg-2026', 'Tantum', 'C07:11', jsonb_build_object('en', 'DURABLE INTERIORS
 
-Tantum tillverkar kök och inredning som ska tåla en tuff miljö.
+Tantum manufactures kitchens and interiors built to withstand demanding environments.
 
-I skolor, förskolor, äldreboenden och andra offentliga miljöer är köket en arbetsplats. Det används av många olika personer och ofta under stora delar av dagen och utsätts det för ganska stora påfrestningar. Även annan inredning, som elevskåp och kapprumsskåp, måste klara en omild behandling.
+In schools, pre-schools, care homes and other public settings, the kitchen is a workplace. It is used by many different people, often throughout much of the day, and is exposed to considerable wear. Other furnishings such as student lockers and cloakroom cabinets must also withstand rough handling.
 
-Tantum byggs i plywood, alltså skiktlimmat massivträ – betydligt starkare och tåligare än vanliga spånplatteskåp. Därmed klarar de också att stå emot slitaget.', 'sv', 'HÅLLBAR INREDNING
+Tantum is built in plywood, that is, layer-glued solid wood — significantly stronger and more durable than ordinary chipboard cabinets. As a result they also stand up to the wear and tear.', 'sv', 'HÅLLBAR INREDNING
 
 Tantum tillverkar kök och inredning som ska tåla en tuff miljö.
 
 I skolor, förskolor, äldreboenden och andra offentliga miljöer är köket en arbetsplats. Det används av många olika personer och ofta under stora delar av dagen och utsätts det för ganska stora påfrestningar. Även annan inredning, som elevskåp och kapprumsskåp, måste klara en omild behandling.
 
 Tantum byggs i plywood, alltså skiktlimmat massivträ – betydligt starkare och tåligare än vanliga spånplatteskåp. Därmed klarar de också att stå emot slitaget.'), 'https://www.tantum.se', 'assets/images/exhibitors/nordbygg-2026-tantum.jpg'),
-  ('nordbygg-2026-exhibitor-134011', 'nordbygg-2026', 'TEBO Byggtillbehör AB', 'B07:30', jsonb_build_object('en', 'I över 50 år har vi utvecklat och marknadsfört specialprodukter för professionella hantverkare inom plattsättning, golvavjämning och murning. Tillsammans med egna och utvalda partners varumärken erbjuder vi en unik och innovativ produktportfölj.
+  ('nordbygg-2026-exhibitor-134011', 'nordbygg-2026', 'TEBO Byggtillbehör AB', 'B07:30', jsonb_build_object('en', 'For more than 50 years we have developed and marketed specialist products for professional tradespeople in tiling, floor levelling and bricklaying. Together with our own brands and those of selected partners, we offer a unique and innovative product portfolio.
 
-Under Nordbygg hittar ni oss i monter B07:30, en över 80m² stor monter med fokus på verktyg.
-Här presenterar vi TEBO och våra partners och fyller montern med specialprodukter för professionella hantverkare. Kolla in våra demos, produktnyheter och se till att du får en TEBO-påse.', 'sv', 'I över 50 år har vi utvecklat och marknadsfört specialprodukter för professionella hantverkare inom plattsättning, golvavjämning och murning. Tillsammans med egna och utvalda partners varumärken erbjuder vi en unik och innovativ produktportfölj.
+During Nordbygg you''ll find us at booth B07:30, a tool-focused stand of more than 80 m².
+Here we present TEBO and our partners and fill the booth with specialist products for professional tradespeople. Check out our demos and product news, and be sure to grab a TEBO bag.', 'sv', 'I över 50 år har vi utvecklat och marknadsfört specialprodukter för professionella hantverkare inom plattsättning, golvavjämning och murning. Tillsammans med egna och utvalda partners varumärken erbjuder vi en unik och innovativ produktportfölj.
 
 Under Nordbygg hittar ni oss i monter B07:30, en över 80m² stor monter med fokus på verktyg.
 Här presenterar vi TEBO och våra partners och fyller montern med specialprodukter för professionella hantverkare. Kolla in våra demos, produktnyheter och se till att du får en TEBO-påse.'), 'https://www.tebo.se', 'assets/images/exhibitors/nordbygg-2026-tebo-byggtillbehor-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134020', 'nordbygg-2026', 'TECE Sverige AB', 'A07:10', jsonb_build_object('en', 'TECE Group grundades i Tyskland 1987 och är i dag en internationell koncern med 22 europeiska dotterbolag och samarbetspartners i ytterligare 39 länder. Koncernen har sex egna fabriker och är specialiserad på sanitetssystem, golvvärme samt avlopps- och tappvattensystem.
+  ('nordbygg-2026-exhibitor-134020', 'nordbygg-2026', 'TECE Sverige AB', 'A07:10', jsonb_build_object('en', 'TECE Group was founded in Germany in 1987 and is today an international group with 22 European subsidiaries and partners in a further 39 countries. The group has six wholly owned factories and specialises in sanitary systems, underfloor heating, and drainage and tap-water systems.
 
-TECE har cirka 1 900 medarbetare och huvudkontoret ligger i Emsdetten, Tyskland. I Sverige har TECE lokal närvaro med resurser för produktutveckling, försäljning och distribution.', 'sv', 'TECE Group grundades i Tyskland 1987 och är i dag en internationell koncern med 22 europeiska dotterbolag och samarbetspartners i ytterligare 39 länder. Koncernen har sex egna fabriker och är specialiserad på sanitetssystem, golvvärme samt avlopps- och tappvattensystem.
+TECE has around 1,900 employees and is headquartered in Emsdetten, Germany. In Sweden, TECE has a local presence with resources for product development, sales and distribution.', 'sv', 'TECE Group grundades i Tyskland 1987 och är i dag en internationell koncern med 22 europeiska dotterbolag och samarbetspartners i ytterligare 39 länder. Koncernen har sex egna fabriker och är specialiserad på sanitetssystem, golvvärme samt avlopps- och tappvattensystem.
 
 TECE har cirka 1 900 medarbetare och huvudkontoret ligger i Emsdetten, Tyskland. I Sverige har TECE lokal närvaro med resurser för produktutveckling, försäljning och distribution.'), 'https://www.tece.se', 'assets/images/exhibitors/nordbygg-2026-tece-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-135819', 'nordbygg-2026', 'Techem IMD-system', 'A12:02', jsonb_build_object('en', 'Smart avläsning - Rättvis debitering
+  ('nordbygg-2026-exhibitor-135819', 'nordbygg-2026', 'Techem IMD-system', 'A12:02', jsonb_build_object('en', 'Smart metering — fair billing
 
-Med Individuell Mätning och Debitering (IMD) är det enkelt att debitera de rörliga förbrukningskostnaderna till varje bostad.
+With Individual Metering and Billing (IMD) it is easy to allocate variable consumption costs to each apartment.
 
-Vi erbjuder digitala mätare med automatisk fjärravläsning och har i över 25 år hjälpt föreningar att sänka kostnader och effektivisera energianvändningen med IMD för el, vatten, värme och temperatur.
+We offer digital meters with automatic remote reading and have for more than 25 years helped housing associations cut costs and improve energy efficiency with IMD for electricity, water, heat and temperature.
 
-IMD skapar incitament för de boende att hushålla med sin förbrukning och på så sätt minska fastighetens driftskostnader. Erfarenhet visar att förbrukningen normalt sjunker med 20-30% när man inför IMD.
-Med de senaste årens kraftigt stigande energi- och vattenpriser innebär därmed att en investering i IMD är mer lönsamt än någonsin.', 'sv', 'Smart avläsning - Rättvis debitering
+IMD creates an incentive for residents to manage their own consumption and thereby reduce the property''s running costs. Experience shows that consumption typically falls by 20–30% once IMD is introduced.
+With the dramatic rise in energy and water prices in recent years, an investment in IMD is more profitable than ever.', 'sv', 'Smart avläsning - Rättvis debitering
 
 Med Individuell Mätning och Debitering (IMD) är det enkelt att debitera de rörliga förbrukningskostnaderna till varje bostad.
 
@@ -6250,22 +6250,22 @@ Vi erbjuder digitala mätare med automatisk fjärravläsning och har i över 25 
 
 IMD skapar incitament för de boende att hushålla med sin förbrukning och på så sätt minska fastighetens driftskostnader. Erfarenhet visar att förbrukningen normalt sjunker med 20-30% när man inför IMD.
 Med de senaste årens kraftigt stigande energi- och vattenpriser innebär därmed att en investering i IMD är mer lönsamt än någonsin.'), 'https://www.imd-system.se', 'assets/images/exhibitors/nordbygg-2026-techem-imd-system.jpg'),
-  ('nordbygg-2026-exhibitor-139607', 'nordbygg-2026', 'Telesteps', 'B01:31 (+1)', jsonb_build_object('en', 'För många år sedan skapade vi en ikon i stegvärlden och är idag erkända som världsledande inom teleskopiska arbetsredskap. Vårt varumärke och våra svensktillverkade och svenskutvecklade produkter, som är erkända för sin kvalitet och design av användare över hela världen, försäkrar att vi alltid sätter säkerhet och kvalitet först.', 'sv', 'För många år sedan skapade vi en ikon i stegvärlden och är idag erkända som världsledande inom teleskopiska arbetsredskap. Vårt varumärke och våra svensktillverkade och svenskutvecklade produkter, som är erkända för sin kvalitet och design av användare över hela världen, försäkrar att vi alltid sätter säkerhet och kvalitet först.'), 'https://www.telesteps.se', 'assets/images/exhibitors/nordbygg-2026-telesteps.jpg'),
+  ('nordbygg-2026-exhibitor-139607', 'nordbygg-2026', 'Telesteps', 'B01:31 (+1)', jsonb_build_object('en', 'Many years ago we created an icon in the world of ladders, and we are today recognised as world leaders in telescopic working tools. Our brand and our Swedish-made and Swedish-developed products — recognised for their quality and design by users across the world — guarantee that we always put safety and quality first.', 'sv', 'För många år sedan skapade vi en ikon i stegvärlden och är idag erkända som världsledande inom teleskopiska arbetsredskap. Vårt varumärke och våra svensktillverkade och svenskutvecklade produkter, som är erkända för sin kvalitet och design av användare över hela världen, försäkrar att vi alltid sätter säkerhet och kvalitet först.'), 'https://www.telesteps.se', 'assets/images/exhibitors/nordbygg-2026-telesteps.jpg'),
   ('nordbygg-2026-exhibitor-138131', 'nordbygg-2026', 'Termo-fol sp.  z o.o.', 'A11:24', jsonb_build_object('en', 'Polish heating film factory.
-Electric heating manufacturer.', 'sv', 'Polish heating film factory.
-Electric heating manufacturer.'), 'https://www.termofol.com', 'assets/images/exhibitors/nordbygg-2026-termo-fol-sp-z-o-o.jpg'),
+Electric heating manufacturer.', 'sv', 'Polsk fabrik för värmefilm.
+Tillverkare av elvärme.'), 'https://www.termofol.com', 'assets/images/exhibitors/nordbygg-2026-termo-fol-sp-z-o-o.jpg'),
   ('nordbygg-2026-exhibitor-137710', 'nordbygg-2026', 'tesa', 'C09:51', null, 'https://www.tesa.com', null),
   ('nordbygg-2026-exhibitor-134015', 'nordbygg-2026', 'Thermokon-Danelko Elektronik AB', 'A15:04', null, 'https://www.danelko.se', null),
-  ('nordbygg-2026-exhibitor-134576', 'nordbygg-2026', 'Thermotech Scandinavia AB', 'A07:14', jsonb_build_object('en', 'Thermotech Scandinavia AB utvecklar, tillverkar, projekterar och levererar kundanpassade och hållbara system för värme- och vattendistribution.
+  ('nordbygg-2026-exhibitor-134576', 'nordbygg-2026', 'Thermotech Scandinavia AB', 'A07:14', jsonb_build_object('en', 'Thermotech Scandinavia AB develops, manufactures, designs and supplies customised and sustainable systems for heat and water distribution.
 
-I vår monter A07:14 finns våra kunniga medarbetare redo att berätta om våra prefabricerade systemlösningar. Vi visar smarta och smidiga Prefab-lösningar för vattenburen golvvärme, radiatoranslutningar och tappvatten i både villor och flervåningshus.
+At our booth A07:14 our knowledgeable team is ready to tell you about our prefabricated system solutions. We will be showing smart, easy-to-install prefab solutions for hydronic underfloor heating, radiator connections and tap water in both single-family homes and multi-storey buildings.
 
-I år fyller vi 30 år!
-Sedan 1996 har vi jobbat för att förenkla kundens vardag genom att göra det enkelt att beställa och installera våra produkter och stödja med relevanta tjänster.
+This year we celebrate 30 years!
+Since 1996 we have worked to simplify our customers'' day-to-day by making it easy to order and install our products and by supporting them with relevant services.
 
-Vi erbjuder en trygg och pålitlig leverans, beprövad över tid.
+We offer reliable, dependable delivery, proven over time.
 
-Varmt välkommen till Thermotech i monter A07:14!', 'sv', 'Thermotech Scandinavia AB utvecklar, tillverkar, projekterar och levererar kundanpassade och hållbara system för värme- och vattendistribution.
+A warm welcome to Thermotech at booth A07:14!', 'sv', 'Thermotech Scandinavia AB utvecklar, tillverkar, projekterar och levererar kundanpassade och hållbara system för värme- och vattendistribution.
 
 I vår monter A07:14 finns våra kunniga medarbetare redo att berätta om våra prefabricerade systemlösningar. Vi visar smarta och smidiga Prefab-lösningar för vattenburen golvvärme, radiatoranslutningar och tappvatten i både villor och flervåningshus.
 
@@ -6275,22 +6275,22 @@ Sedan 1996 har vi jobbat för att förenkla kundens vardag genom att göra det e
 Vi erbjuder en trygg och pålitlig leverans, beprövad över tid.
 
 Varmt välkommen till Thermotech i monter A07:14!'), 'https://www.thermotech.se', 'assets/images/exhibitors/nordbygg-2026-thermotech-scandinavia-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137545', 'nordbygg-2026', 'ThermoWhite', 'C07:53', jsonb_build_object('en', 'Thermowhite är ett sömlöst värme- och ljudisolerings- material.
-Tack vare materialets beläggningsegenskaper uppnås ett monolitiskt, skarvlöst värmeisoleringsskikt utan köld- och ljudbryggor. ThermoWhite-systemet är ett miljövänligt system som använder återvunnet material - expanderat polystyrenavfall.
-Bindemedlet som används är ett mineralmaterial som uppfanns och patenterades för 20 år sedan av Alois Edler, ThermoWhites grundare. Den vita färgen på materialet symboliserar innovativ teknik som ger moderna och praktiska lösningar.', 'sv', 'Thermowhite är ett sömlöst värme- och ljudisolerings- material.
+  ('nordbygg-2026-exhibitor-137545', 'nordbygg-2026', 'ThermoWhite', 'C07:53', jsonb_build_object('en', 'Thermowhite is a seamless heat- and sound-insulation material.
+Thanks to the material''s pourable coating properties, a monolithic, joint-free thermal insulation layer is achieved with no thermal or acoustic bridges. The ThermoWhite system is environmentally friendly and uses recycled material — expanded polystyrene waste.
+The binder used is a mineral material invented and patented 20 years ago by Alois Edler, the founder of ThermoWhite. The white colour of the material symbolises innovative technology that delivers modern and practical solutions.', 'sv', 'Thermowhite är ett sömlöst värme- och ljudisolerings- material.
 Tack vare materialets beläggningsegenskaper uppnås ett monolitiskt, skarvlöst värmeisoleringsskikt utan köld- och ljudbryggor. ThermoWhite-systemet är ett miljövänligt system som använder återvunnet material - expanderat polystyrenavfall.
 Bindemedlet som används är ett mineralmaterial som uppfanns och patenterades för 20 år sedan av Alois Edler, ThermoWhites grundare. Den vita färgen på materialet symboliserar innovativ teknik som ger moderna och praktiska lösningar.'), 'https://www.thermowhite.se', 'assets/images/exhibitors/nordbygg-2026-thermowhite.jpg'),
   ('nordbygg-2026-exhibitor-136725', 'nordbygg-2026', 'Thorsbergs Stenhuggeri AB', 'C04:61C', null, 'https://www.thorsberg.se', null),
   ('nordbygg-2026-exhibitor-139109', 'nordbygg-2026', 'Tidab', 'EÖ:24', null, 'https://www.tidab.se', 'assets/images/exhibitors/nordbygg-2026-tidab.jpg'),
-  ('nordbygg-2026-exhibitor-135001', 'nordbygg-2026', 'Timberman Golv AB', 'C03:33', jsonb_build_object('en', 'Golv med stil!
-För de flesta är köpet av ett nytt golv en investering i en konsumtionsvara som ska hålla länge, med en förväntad livslängd på 20–25 år. Därför bör man inte enbart låta priset vara avgörande faktorn för det slutliga valet, utan snarare om kvaliteten på golvet ger valuta för pengarna.
+  ('nordbygg-2026-exhibitor-135001', 'nordbygg-2026', 'Timberman Golv AB', 'C03:33', jsonb_build_object('en', 'Floors with style!
+For most people, buying a new floor is an investment in a consumer product that has to last, with an expected service life of 20–25 years. The price alone should therefore not be the deciding factor in the final choice — far more important is whether the quality of the floor offers value for money.
 
-I detta sammanhang spelar Timberman en viktig roll som golvleverantör. Med vårt sortiment av vinyl-, kork- och trägolv har vi skapat en kollektion av hårda golvbeläggningar vars funktion och estetik spelar i en division för sig och som därmed kan användas i de flesta hem. För oss är det viktigt att golvet matchar livsstilen i den aktuella miljön.
+In that context, Timberman plays an important role as a flooring supplier. With our range of vinyl, cork and wood floors we have built a collection of hard floor coverings whose function and aesthetics are in a class of their own and that can therefore be used in most homes. For us, it is important that the floor matches the lifestyle of the room in question.
 
-Kvalitet och säkerhet
-När du köper ett Novego-, Wicanders- eller Timberman-golv kan du vara säker på att få en stark och hållbar produkt av hög kvalitet. Alla våra golv är lätta att lägga samt omsorgsfullt testade, har vackra ytor och kräver minimalt underhåll. Överensstämmelsen mellan förväntningar och produkt resulterar i nöjda kunder.
+Quality and reliability
+When you buy a Novego, Wicanders or Timberman floor, you can be sure of receiving a strong, durable, high-quality product. All our floors are easy to install, carefully tested, have beautiful surfaces and require minimal maintenance. The match between expectation and product results in satisfied customers.
 
-När du väljer ett Timberman-golv får du också professionell vägledning vid val av golv, läggning och efterföljande skötsel. Vi säkerställer att du får en samlad golvlösning som är bättre i längden.', 'sv', 'Golv med stil!
+When you choose a Timberman floor, you also receive professional guidance on floor selection, installation and subsequent care. We make sure you end up with a complete flooring solution that is better in the long run.', 'sv', 'Golv med stil!
 För de flesta är köpet av ett nytt golv en investering i en konsumtionsvara som ska hålla länge, med en förväntad livslängd på 20–25 år. Därför bör man inte enbart låta priset vara avgörande faktorn för det slutliga valet, utan snarare om kvaliteten på golvet ger valuta för pengarna.
 
 I detta sammanhang spelar Timberman en viktig roll som golvleverantör. Med vårt sortiment av vinyl-, kork- och trägolv har vi skapat en kollektion av hårda golvbeläggningar vars funktion och estetik spelar i en division för sig och som därmed kan användas i de flesta hem. För oss är det viktigt att golvet matchar livsstilen i den aktuella miljön.
@@ -6299,44 +6299,44 @@ Kvalitet och säkerhet
 När du köper ett Novego-, Wicanders- eller Timberman-golv kan du vara säker på att få en stark och hållbar produkt av hög kvalitet. Alla våra golv är lätta att lägga samt omsorgsfullt testade, har vackra ytor och kräver minimalt underhåll. Överensstämmelsen mellan förväntningar och produkt resulterar i nöjda kunder.
 
 När du väljer ett Timberman-golv får du också professionell vägledning vid val av golv, läggning och efterföljande skötsel. Vi säkerställer att du får en samlad golvlösning som är bättre i längden.'), 'https://www.timbermangolv.se', 'assets/images/exhibitors/nordbygg-2026-timberman-golv-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139561', 'nordbygg-2026', 'Tingvalla-Bro Fackförening', 'AG:60', jsonb_build_object('en', 'Tingvalla-Bro Fackförening är en fristående facklig organisation som organiserar alla yrkesgrupper och är partipolitisk obunden där vårt intresse ligger i arbetsrätten och den enskilda medlemmen. Det är viktigt för oss att våra medlemmar ska kunna nå oss lätt och att alla frågor eller problem är lika viktiga. I vårt arbete har vi fokus på våra medlemmar och det är de som avgör vilka frågor som ska drivas.
-Företag kan teckna kollektivavtal med Tingvalla-Bro Fackförening, de flesta avtal om vi har idag är inom byggbranschen. Avtalen tecknas direkt mellan företaget och Tingvalla-Bro.
-Välkomna till vår monter AG:60', 'sv', 'Tingvalla-Bro Fackförening är en fristående facklig organisation som organiserar alla yrkesgrupper och är partipolitisk obunden där vårt intresse ligger i arbetsrätten och den enskilda medlemmen. Det är viktigt för oss att våra medlemmar ska kunna nå oss lätt och att alla frågor eller problem är lika viktiga. I vårt arbete har vi fokus på våra medlemmar och det är de som avgör vilka frågor som ska drivas.
+  ('nordbygg-2026-exhibitor-139561', 'nordbygg-2026', 'Tingvalla-Bro Fackförening', 'AG:60', jsonb_build_object('en', 'Tingvalla-Bro Fackförening is an independent trade union that organises every occupational group and is non-partisan; our focus is on labour law and the individual member. It is important to us that our members can reach us easily and that every question or issue is given equal weight. In our work we focus on our members, and it is they who decide which issues we pursue.
+Companies can sign collective agreements with Tingvalla-Bro Fackförening; most of the agreements we hold today are within the construction industry. The agreements are signed directly between the company and Tingvalla-Bro.
+Welcome to our booth AG:60', 'sv', 'Tingvalla-Bro Fackförening är en fristående facklig organisation som organiserar alla yrkesgrupper och är partipolitisk obunden där vårt intresse ligger i arbetsrätten och den enskilda medlemmen. Det är viktigt för oss att våra medlemmar ska kunna nå oss lätt och att alla frågor eller problem är lika viktiga. I vårt arbete har vi fokus på våra medlemmar och det är de som avgör vilka frågor som ska drivas.
 Företag kan teckna kollektivavtal med Tingvalla-Bro Fackförening, de flesta avtal om vi har idag är inom byggbranschen. Avtalen tecknas direkt mellan företaget och Tingvalla-Bro.
 Välkomna till vår monter AG:60'), 'https://www.tingvallabro.se', 'assets/images/exhibitors/nordbygg-2026-tingvalla-bro-fackforening.jpg'),
-  ('nordbygg-2026-exhibitor-134673', 'nordbygg-2026', 'TJB Försäljning AB', 'C17:31', jsonb_build_object('en', 'TJB tillverkar och säljer takprodukter till bygghandel, grossister och husproduktion. Idag står vi starka med ett brett sortiment av takpapp, taksäkerhet, takavvattning, taktillbehör, samt Solentra, vårt infästningssystem för solpaneler till alla typer av tak.
+  ('nordbygg-2026-exhibitor-134673', 'nordbygg-2026', 'TJB Försäljning AB', 'C17:31', jsonb_build_object('en', 'TJB manufactures and sells roofing products to builders'' merchants, wholesalers and house manufacturers. Today we stand strong with a broad range of roofing felt, roof safety, roof drainage and roofing accessories, plus Solentra — our mounting system for solar panels on every type of roof.
 
-Vi har haft samma drivkraft som vi haft sedan starten för över 25 år sedan, att genom egen tillverkning, brett sortiment, stort tekniskt kunnande och service i världsklass erbjuder våra kunder en bättre takaffär.', 'sv', 'TJB tillverkar och säljer takprodukter till bygghandel, grossister och husproduktion. Idag står vi starka med ett brett sortiment av takpapp, taksäkerhet, takavvattning, taktillbehör, samt Solentra, vårt infästningssystem för solpaneler till alla typer av tak.
+We still have the same drive that we have had since we started more than 25 years ago: through our own manufacturing, a broad range, deep technical know-how and world-class service, to give our customers a better roofing deal.', 'sv', 'TJB tillverkar och säljer takprodukter till bygghandel, grossister och husproduktion. Idag står vi starka med ett brett sortiment av takpapp, taksäkerhet, takavvattning, taktillbehör, samt Solentra, vårt infästningssystem för solpaneler till alla typer av tak.
 
 Vi har haft samma drivkraft som vi haft sedan starten för över 25 år sedan, att genom egen tillverkning, brett sortiment, stort tekniskt kunnande och service i världsklass erbjuder våra kunder en bättre takaffär.'), 'https://www.tjb.se', 'assets/images/exhibitors/nordbygg-2026-tjb-forsaljning-ab.jpg'),
   ('nordbygg-2026-exhibitor-134016', 'nordbygg-2026', 'Tollco AB', 'A10:22', null, 'https://www.tollco.se', 'assets/images/exhibitors/nordbygg-2026-tollco-ab.jpg'),
   ('nordbygg-2026-exhibitor-138951', 'nordbygg-2026', 'Tomoku Hus AB', 'C15:18', null, 'https://www.tomokuhus.se', 'assets/images/exhibitors/nordbygg-2026-tomoku-hus-ab.jpg'),
   ('nordbygg-2026-exhibitor-140005', 'nordbygg-2026', 'Tormek AB', 'B07:51', null, 'https://www.tormek.se', null),
-  ('nordbygg-2026-exhibitor-134324', 'nordbygg-2026', 'ToughBuilt Industries UK Ltd', 'B03:11', jsonb_build_object('en', 'VI SKAPAR INNOVATIVA PRODUKTER SOM HJÄLPER DIG ATT BYGGA SNABBARE, BYGGA STARKARE OCH ARBETA SMARTARE.
+  ('nordbygg-2026-exhibitor-134324', 'nordbygg-2026', 'ToughBuilt Industries UK Ltd', 'B03:11', jsonb_build_object('en', 'WE CREATE INNOVATIVE PRODUCTS THAT HELP YOU BUILD FASTER, BUILD STRONGER AND WORK SMARTER.
 
-Hur gör vi det?
+How do we do it?
 
-Vi lyssnar, vi undersöker hur yrkesverksamma arbetar och skapar sedan verktyg som hjälper dem att spara tid, besvär och pengar. Om det inte är bättre, så tillverkar vi det inte. Så enkelt är det.
+We listen, we study how professionals work and then create tools that help them save time, hassle and money. If it isn''t better, we don''t make it. It''s that simple.
 
 TOUGHBUILT INNOVATION
 
-När du kollar in en ToughBuilt-produkt tänker du förmodligen "Jag önskar att jag hade tänkt på det." På sätt och vis gjorde du det. För innan vi börjar designa spenderar vi timmar på att titta på hårt arbetande yrkesverksamma som du i arbete. Sedan listar vi ut hur vi kan göra ditt liv enklare, bättre och snabbare.
+When you check out a ToughBuilt product you''ll probably think, "I wish I''d thought of that." In a way, you did. Because before we start designing we spend hours watching hard-working professionals like you on the job. Then we figure out how to make your life easier, better and faster.
 
-TOUGHBUILT KVALITET
+TOUGHBUILT QUALITY
 
-Du äger förmodligen ett verktyg som tillhörde din pappa. Det har slipats, oljats, slitits slätt och fungerar fortfarande som den dagen det tillverkades. Det är den typen av verktyg vi tillverkar. Vi designar varje ToughBuilt-produkt för att hålla.
+You probably own a tool that belonged to your dad. It''s been sharpened, oiled, worn smooth and still works just like the day it was made. That''s the kind of tool we make. We design every ToughBuilt product to last.
 
-Vi uppfinner, konstruerar, testar och verifierar varje ToughBuilt-produkt i USA, tillverkar var och en enligt våra strikta kvalitetsstandarder och backar upp dem med generösa garantier.
+We invent, engineer, test and verify every ToughBuilt product in the USA, manufacture each one to our strict quality standards and back them with generous warranties.
 
-TOUGHBUILT VÄRDE
+TOUGHBUILT VALUE
 
-Vissa tror att för att få det bästa av något måste man betala mycket. Det fungerar inte för oss. Vi är hantverkare, designers, ingenjörer och tillverkningsexperter. Vi är stolta över att värdekonstruera varje ToughBuilt-verktyg för att ge dig oöverträffad prestanda. Precis som du arbetar vi hårt för att arbeta smartare. Vi är stolta över att erbjuda byggkvalitet och innovation, till ett pris som är överkomligt för nästan alla. Innovation gjort överkomlig.
+Some people believe that to get the best of something you have to pay a lot. That doesn''t work for us. We are tradespeople, designers, engineers and manufacturing experts. We take pride in value-engineering every ToughBuilt tool to give you unmatched performance. Just like you, we work hard to work smarter. We are proud to deliver build quality and innovation at a price that is affordable for almost everyone. Innovation made affordable.
 
-DIN TOUGHBUILT
+YOUR TOUGHBUILT
 
-ToughBuilt är inspirerad av dig och är designad från starten för att göra ditt arbete enklare och effektivare.
+ToughBuilt is inspired by you and is designed from the ground up to make your work easier and more efficient.
 
-Vi är dedikerade till att leverera "Prisvärd innovation" till dig.', 'sv', 'VI SKAPAR INNOVATIVA PRODUKTER SOM HJÄLPER DIG ATT BYGGA SNABBARE, BYGGA STARKARE OCH ARBETA SMARTARE.
+We are dedicated to delivering "Affordable innovation" to you.', 'sv', 'VI SKAPAR INNOVATIVA PRODUKTER SOM HJÄLPER DIG ATT BYGGA SNABBARE, BYGGA STARKARE OCH ARBETA SMARTARE.
 
 Hur gör vi det?
 
@@ -6365,22 +6365,22 @@ Vi är dedikerade till att leverera "Prisvärd innovation" till dig.'), 'https:/
   ('nordbygg-2026-exhibitor-138754', 'nordbygg-2026', 'Trade Estonia', 'C03:51', null, 'https://eas.se', null),
   ('nordbygg-2026-exhibitor-137896', 'nordbygg-2026', 'Trapparvid', 'C07:33B', null, 'https://www.trapparvid.se', 'assets/images/exhibitors/nordbygg-2026-trapparvid.jpg'),
   ('nordbygg-2026-exhibitor-137808', 'nordbygg-2026', 'Trelleborg Seals & Profiles', 'C09:21', null, 'https://www.trelleborg.com/sealingprofiles', 'assets/images/exhibitors/nordbygg-2026-trelleborg-seals-profiles.jpg'),
-  ('nordbygg-2026-exhibitor-138456', 'nordbygg-2026', 'Trinax Ab', 'C02:41', jsonb_build_object('en', 'Tidrapportering, projekthantering och körjournaler för hantverkare.', 'sv', 'Tidrapportering, projekthantering och körjournaler för hantverkare.'), 'https://www.trinax.se', 'assets/images/exhibitors/nordbygg-2026-trinax-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134669', 'nordbygg-2026', 'Trio Perfekta AB', 'A04:20', jsonb_build_object('en', '- Existerar ni fortfarande?
-I allra högsta grad! Trots att vår fabrik brann ner till grunden i mars 2025 så var vi tillbaka redan efter några månader. Vi har en verksamhet som vi är stolta över och som är värd att bevara.
-I snart 90 år har vi utvecklat funktionella och säkra detaljer för VVS-branschen. Produkter som leder vattnet fram till blandaren, till slangen i trädgården med alla rör, kopplingar och fästen som krävs för en säker och effektiv vattenledning.', 'sv', '- Existerar ni fortfarande?
+  ('nordbygg-2026-exhibitor-138456', 'nordbygg-2026', 'Trinax Ab', 'C02:41', jsonb_build_object('en', 'Time tracking, project management and driver''s logs for tradespeople.', 'sv', 'Tidrapportering, projekthantering och körjournaler för hantverkare.'), 'https://www.trinax.se', 'assets/images/exhibitors/nordbygg-2026-trinax-ab.jpg'),
+  ('nordbygg-2026-exhibitor-134669', 'nordbygg-2026', 'Trio Perfekta AB', 'A04:20', jsonb_build_object('en', '- Are you still around?
+Very much so! Even though our factory burned to the ground in March 2025, we were back up and running just a few months later. We have a business we are proud of and one that is worth preserving.
+For nearly 90 years we have developed functional and safe components for the plumbing industry — products that carry water to the tap and out to the garden hose, together with all the pipes, fittings and brackets needed for a safe and efficient water supply.', 'sv', '- Existerar ni fortfarande?
 I allra högsta grad! Trots att vår fabrik brann ner till grunden i mars 2025 så var vi tillbaka redan efter några månader. Vi har en verksamhet som vi är stolta över och som är värd att bevara.
 I snart 90 år har vi utvecklat funktionella och säkra detaljer för VVS-branschen. Produkter som leder vattnet fram till blandaren, till slangen i trädgården med alla rör, kopplingar och fästen som krävs för en säker och effektiv vattenledning.'), 'https://www.trio-perfekta.se', 'assets/images/exhibitors/nordbygg-2026-trio-perfekta-ab.jpg'),
   ('nordbygg-2026-exhibitor-138994', 'nordbygg-2026', 'TROCELLEN ITALIA S.P.A.', 'A05:35', null, 'https://insulation.trocellen.com', 'assets/images/exhibitors/nordbygg-2026-trocellen-italia-s-p-a.jpg'),
   ('nordbygg-2026-exhibitor-137373', 'nordbygg-2026', 'TROX', 'A12:14', null, 'https://www.trox.se', 'assets/images/exhibitors/nordbygg-2026-trox.jpg'),
-  ('nordbygg-2026-exhibitor-137683', 'nordbygg-2026', 'Trä- och Möbelföretagen, TMF', 'C07:33', jsonb_build_object('en', 'Under Nordbygg samlar Trä och möbelföretagen (TMF) medlemsföretag, experter och branschaktörer i TMF Torget.
+  ('nordbygg-2026-exhibitor-137683', 'nordbygg-2026', 'Trä- och Möbelföretagen, TMF', 'C07:33', jsonb_build_object('en', 'At Nordbygg, the Swedish Federation of Wood and Furniture Industries (TMF) gathers member companies, experts and industry players at TMF Torget.
 
-TMF Torget är en gemensam samlingsmonter där sju medlemsföretag medverkar och där TMFs experter finns på plats under mässan. Här skapar vi en öppen mötesplats för dialog om hållbarhet, branschregler, affärsutveckling och branschens framtidsfrågor.
+TMF Torget is a shared joint stand where seven member companies take part and where TMF''s experts are on site throughout the fair. Here we create an open meeting place for dialogue on sustainability, industry rules, business development and the industry''s future challenges.
 
--  Expertmöten i montern
-Varje dag finns en av TMFs sakkunniga på plats för samtal om aktuella branschfrågor.
+-  Expert meetings at the stand
+Each day, one of TMF''s specialists is on hand for conversations about current industry issues.
 
-- Samlingsmonter med sju medlemsföretag:
+- Joint stand featuring seven member companies:
 Gripp inredning
 Sjöholms Snickeri
 Trapparvid
@@ -6389,11 +6389,11 @@ Edsbyporten
 Rättvikstrappfabrik
 Lingbo kulturfönster
 
-TMFs närvaro på Nordbygg syftar till att stärka samverkan i branschen, bidra med ny kunskap och driva utvecklingen mot en mer hållbar och konkurrenskraftig bransch.
+TMF''s presence at Nordbygg aims to strengthen industry collaboration, contribute new knowledge, and drive development toward a more sustainable and competitive industry.
 
-Presentation av ny rapport om hållbar renovering den 22/4 på stora scenen kl 12.30. Rapporten belyser hur styrning och incitament påverkar materialval och klimatnytta vid renovering av Sveriges bostäder. Presentationen följs av panelsamtal med politiska och branschrepresentanter. Läs mer nedan.
+Presentation of a new report on sustainable renovation on 22 April on the main stage at 12:30. The report highlights how policy and incentives influence material choice and climate impact when renovating Sweden''s housing stock. The presentation is followed by a panel discussion with political and industry representatives. Read more below.
 
-Välkommen till TMF Torget och träffa oss och sju av våra medlemsföretag i C-hallen!', 'sv', 'Under Nordbygg samlar Trä och möbelföretagen (TMF) medlemsföretag, experter och branschaktörer i TMF Torget.
+Welcome to TMF Torget — come and meet us and seven of our member companies in Hall C!', 'sv', 'Under Nordbygg samlar Trä och möbelföretagen (TMF) medlemsföretag, experter och branschaktörer i TMF Torget.
 
 TMF Torget är en gemensam samlingsmonter där sju medlemsföretag medverkar och där TMFs experter finns på plats under mässan. Här skapar vi en öppen mötesplats för dialog om hållbarhet, branschregler, affärsutveckling och branschens framtidsfrågor.
 
@@ -6416,16 +6416,16 @@ Presentation av ny rapport om hållbar renovering den 22/4 på stora scenen kl 1
 Välkommen till TMF Torget och träffa oss och sju av våra medlemsföretag i C-hallen!'), 'https://www.tmf.se', 'assets/images/exhibitors/nordbygg-2026-tra-och-mobelforetagen-tmf.jpg'),
   ('nordbygg-2026-exhibitor-138554', 'nordbygg-2026', 'TS Armatur Aktiebolag', 'A12:22', null, 'https://ts-armatur.se', null),
   ('nordbygg-2026-exhibitor-138287', 'nordbygg-2026', 'TSB Gruppen AB', 'C14:50', null, 'https://www.tsbgruppen.se', 'assets/images/exhibitors/nordbygg-2026-tsb-gruppen-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134024', 'nordbygg-2026', 'TSR-ELSITE', 'B10:11', jsonb_build_object('en', 'Experten för bygg-el, belysning, värme och verktyg för den tillfälliga arbetsplatsen.', 'sv', 'Experten för bygg-el, belysning, värme och verktyg för den tillfälliga arbetsplatsen.'), 'https://tsr-elsite.fi/sv', 'assets/images/exhibitors/nordbygg-2026-tsr-elsite.jpg'),
-  ('nordbygg-2026-exhibitor-134007', 'nordbygg-2026', 'TTM Energiprodukter AB', 'A05:14', jsonb_build_object('en', 'Vi skapar effektiva flöden i värme- och kylsystem.
+  ('nordbygg-2026-exhibitor-134024', 'nordbygg-2026', 'TSR-ELSITE', 'B10:11', jsonb_build_object('en', 'The expert in temporary site electrics, lighting, heating and tools for the construction worksite.', 'sv', 'Experten för bygg-el, belysning, värme och verktyg för den tillfälliga arbetsplatsen.'), 'https://tsr-elsite.fi/sv', 'assets/images/exhibitors/nordbygg-2026-tsr-elsite.jpg'),
+  ('nordbygg-2026-exhibitor-134007', 'nordbygg-2026', 'TTM Energiprodukter AB', 'A05:14', jsonb_build_object('en', 'We create efficient flows in heating and cooling systems.
 
-TTM:s sortiment inom vätskebehandling består av produkter för kontroll, rening, undertrycksavgasning, tryckhållning och påfyllning av systemvätska i VVS-system.
+TTM''s range within fluid treatment consists of products for control, filtration, vacuum degassing, pressure maintenance and refilling of system fluid in HVAC systems.
 
-Är du fastighetsägare, förvaltare, VVS-konsult, professionell inköpare eller installatör? Vi har gedigen kompetens om kvalificerade produkter inom VVS för att underlätta ditt arbete med att planera, specificera och införskaffa produkter som skapar effektiva flöden i VVS-system.
+Are you a property owner, facilities manager, HVAC consultant, professional buyer or installer? We have solid expertise in high-grade HVAC products to make it easier for you to plan, specify and procure products that deliver efficient flows in HVAC systems.
 
-TTM Energiprodukter är efter 50 år Sveriges ledande leverantör av prefabricerade Shuntgrupper och utrustning inom vätskebehandlings för VVS- och Fastighetsbranschen.
+After 50 years, TTM Energiprodukter is Sweden''s leading supplier of prefabricated shunt groups and fluid-treatment equipment for the HVAC and property industry.
 
-Vi drivs av att förse våra kunder med lösningar som förenklar tillvaron och ger effektiva flöden med en säker, långsiktig funktion och bra totalekonomi. I dagsläget är vi verksamma i Sverige, Norge, Danmark, Finland och Holland med huvudkontor och tillverkning i Kalmar.', 'sv', 'Vi skapar effektiva flöden i värme- och kylsystem.
+We are driven to provide our customers with solutions that simplify everyday work and deliver efficient flows with safe, long-term operation and a sound total cost of ownership. We are currently active in Sweden, Norway, Denmark, Finland and the Netherlands, with our headquarters and manufacturing in Kalmar.', 'sv', 'Vi skapar effektiva flöden i värme- och kylsystem.
 
 TTM:s sortiment inom vätskebehandling består av produkter för kontroll, rening, undertrycksavgasning, tryckhållning och påfyllning av systemvätska i VVS-system.
 
@@ -6435,7 +6435,7 @@ TTM Energiprodukter är efter 50 år Sveriges ledande leverantör av prefabricer
 
 Vi drivs av att förse våra kunder med lösningar som förenklar tillvaron och ger effektiva flöden med en säker, långsiktig funktion och bra totalekonomi. I dagsläget är vi verksamma i Sverige, Norge, Danmark, Finland och Holland med huvudkontor och tillverkning i Kalmar.'), 'https://www.ttmenergi.se', 'assets/images/exhibitors/nordbygg-2026-ttm-energiprodukter-ab.jpg'),
   ('nordbygg-2026-exhibitor-139125', 'nordbygg-2026', 'Tubman AB', 'C06:70', null, 'https://www.tubman.se', null),
-  ('nordbygg-2026-exhibitor-140118', 'nordbygg-2026', 'Tulvari Oy', 'A04:02', jsonb_build_object('en', 'Med Tulvaris produkter förhindrar du läckage och gör VVS-monteringen behändig. Samtidigt säkerställer du att slutliga installationen blir både prydligt utförd.', 'sv', 'Med Tulvaris produkter förhindrar du läckage och gör VVS-monteringen behändig. Samtidigt säkerställer du att slutliga installationen blir både prydligt utförd.'), 'https://www.tulvari.fi', 'assets/images/exhibitors/nordbygg-2026-tulvari-oy.jpg'),
+  ('nordbygg-2026-exhibitor-140118', 'nordbygg-2026', 'Tulvari Oy', 'A04:02', jsonb_build_object('en', 'With Tulvari''s products you prevent leaks and make plumbing installation easy. At the same time you ensure that the finished installation is also neatly executed.', 'sv', 'Med Tulvaris produkter förhindrar du läckage och gör VVS-monteringen behändig. Samtidigt säkerställer du att slutliga installationen blir både prydligt utförd.'), 'https://www.tulvari.fi', 'assets/images/exhibitors/nordbygg-2026-tulvari-oy.jpg'),
   ('nordbygg-2026-exhibitor-138453', 'nordbygg-2026', 'Tyrolit  AB', 'B07:20 (+1)', null, 'https://www.tyrolit.se', null),
   ('nordbygg-2026-exhibitor-140135', 'nordbygg-2026', 'UAB ASMODAS', 'C15:20', jsonb_build_object('en', 'Asmodas is a manufacturer specializing in both historical-style and modern doors. The company combines traditional craftsmanship with contemporary engineering to create high-quality, secure, and aesthetically distinctive products.
 
