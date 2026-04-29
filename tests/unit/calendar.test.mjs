@@ -277,15 +277,31 @@ test("filterEvents: missing start_date sorts to the front stably", () => {
   assert.deepEqual(out.map((e) => e.id), ["dateless", "dated"]);
 });
 
-test("filterEvents: recently-ended events come after upcoming ones, most-recent first", () => {
+test("filterEvents: recently-ended events sort alongside upcoming by start_date (issue #26 follow-up)", () => {
   const events = [
     { id: "ended-7d", name: "Ended 7d ago", start_date: "2026-04-13", end_date: "2026-04-14" },
     { id: "future-jun", name: "Future Jun", start_date: "2026-06-01", end_date: "2026-06-02" },
     { id: "ended-3d", name: "Ended 3d ago", start_date: "2026-04-17", end_date: "2026-04-18" },
     { id: "future-may", name: "Future May", start_date: "2026-05-01", end_date: "2026-05-02" },
   ];
-  // Today: 2026-04-21. Both "ended" events are inside the 21-day
-  // window, both "future" events are upcoming.
+  // Today: 2026-04-21. The partition uses today − 21 days = 2026-03-31,
+  // so all four events fall in the upcoming bucket and sort by
+  // `start_date` asc — recently-ended events keep the on-top position
+  // they would have had three weeks ago.
   const out = filterEvents(events, {}, "2026-04-21").map((e) => e.id);
-  assert.deepEqual(out, ["future-may", "future-jun", "ended-3d", "ended-7d"]);
+  assert.deepEqual(out, ["ended-7d", "ended-3d", "future-may", "future-jun"]);
+});
+
+test("filterEvents: events ending more than 21 days ago drop into the ended partition", () => {
+  // `filterEvents` itself does not enforce visibility (the view
+  // composes `calendarVisibleEvents` first). With the shifted partition
+  // today (= today − 21 days), only events that ended >21 days ago
+  // land in the ended bucket, sorted by end_date desc.
+  const events = [
+    { id: "long-past", name: "Long past", start_date: "2026-03-01", end_date: "2026-03-02" },
+    { id: "ended-3d", name: "Ended 3d ago", start_date: "2026-04-17", end_date: "2026-04-18" },
+    { id: "future-may", name: "Future May", start_date: "2026-05-01", end_date: "2026-05-02" },
+  ];
+  const out = filterEvents(events, {}, "2026-04-21").map((e) => e.id);
+  assert.deepEqual(out, ["ended-3d", "future-may", "long-past"]);
 });

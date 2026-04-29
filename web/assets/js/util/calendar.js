@@ -83,11 +83,14 @@ export function eventMatchesQuery(event, query) {
 // the same locale (in practice, both come from `monthLabel` reads on
 // the same render).
 //
-// Sort policy: ongoing/upcoming events first by `start_date` asc, then
-// recently-ended events by `end_date` desc (most recently ended at the
-// top of the past group, nearest the upcoming ones). The optional
-// `today` arg is exposed for tests; production calls let it default to
-// the visitor's local date.
+// Sort policy (issue #26 follow-up): partition as if the current date
+// were `PAST_EVENT_GRACE_DAYS` earlier, so events that ended within
+// the grace window keep the on-top position they would have had three
+// weeks ago — sorted alongside ongoing/upcoming events by `start_date`
+// asc rather than relegated below them. Visibility (`isCalendarVisible`)
+// still uses the real today, so the 21-day window is unchanged. The
+// optional `today` arg is exposed for tests; production calls let it
+// default to the visitor's local date.
 export function filterEvents(events, filters, today = todayLocalIso()) {
   const { query = "", type = "", category = "", month = "" } = filters ?? {};
   const matched = events.filter((e) => {
@@ -96,10 +99,11 @@ export function filterEvents(events, filters, today = todayLocalIso()) {
     if (month && monthLabel(e.start_date) !== month) return false;
     return eventMatchesQuery(e, query);
   });
+  const sortToday = shiftIsoDate(today, -PAST_EVENT_GRACE_DAYS);
   const upcoming = [];
   const ended = [];
   for (const e of matched) {
-    if (isOngoingOrUpcoming(e, today)) upcoming.push(e);
+    if (isOngoingOrUpcoming(e, sortToday)) upcoming.push(e);
     else ended.push(e);
   }
   upcoming.sort((a, b) =>
