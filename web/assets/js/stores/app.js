@@ -265,7 +265,8 @@ export function appStore() {
     },
 
     chromeTitle() {
-      const t = (key, params) => Alpine.store("lang").t(key, params);
+      const lang = Alpine.store("lang");
+      const t = (key, params) => lang.t(key, params);
       if (this.view === "calendar") return t("title.events");
       if (this.view === "auth") return t("title.sign_in");
       if (this.view === "me") return t("title.my_pages");
@@ -274,12 +275,12 @@ export function appStore() {
       if (this.view === "purchase") {
         const ev = Alpine.store("catalog").eventById(this.eventId);
         return ev
-          ? t("title.get_tickets_for", { name: ev.name })
+          ? t("title.get_tickets_for", { name: lang.pick(ev.name) })
           : t("title.get_tickets");
       }
       if (this.view === "event") {
         const ev = Alpine.store("catalog").eventById(this.eventId);
-        return ev ? ev.name : t("title.event_default");
+        return ev ? lang.pick(ev.name) : t("title.event_default");
       }
       return t("title.app_default");
     },

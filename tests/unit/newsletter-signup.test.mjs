@@ -36,7 +36,15 @@ async function captureConsoleInfo(fn) {
 }
 
 function langStub() {
-  return { t: (key) => key };
+  return {
+    current: "en",
+    t: (key) => key,
+    pick(value) {
+      if (value == null) return "";
+      if (typeof value === "string") return value;
+      return value.en ?? "";
+    },
+  };
 }
 
 function makeStores({

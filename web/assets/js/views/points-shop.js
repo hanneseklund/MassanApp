@@ -49,7 +49,7 @@ export function pointsShopView() {
 
     merchImage(item) {
       if (item?.image) return item.image;
-      return logoDataUri(item?.name ?? "");
+      return logoDataUri(Alpine.store("lang").pick(item?.name));
     },
 
     balanceLabel() {

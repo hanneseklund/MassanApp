@@ -15,13 +15,15 @@ export function newsletterPreferences() {
     subscriptions() {
       const user = Alpine.store("session").user;
       if (!user) return [];
+      const lang = Alpine.store("lang");
       return Alpine.store("newsletter")
         .forUser(user.id)
         .filter((s) => s.event_id !== null)
         .map((s) => ({
           ...s,
           event_name:
-            Alpine.store("catalog").eventById(s.event_id)?.name ?? s.event_id,
+            lang.pick(Alpine.store("catalog").eventById(s.event_id)?.name) ||
+            s.event_id,
         }))
         .sort((a, b) => (a.event_name || "").localeCompare(b.event_name || ""));
     },

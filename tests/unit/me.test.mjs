@@ -20,12 +20,18 @@ import { withAlpine } from "./_alpine.mjs";
 // i18n.js copy.
 function langStub() {
   return {
+    current: "en",
     t(key, params) {
       if (!params) return key;
       const parts = Object.entries(params)
         .map(([k, v]) => `${k}=${v}`)
         .join("&");
       return `${key}|${parts}`;
+    },
+    pick(value) {
+      if (value == null) return "";
+      if (typeof value === "string") return value;
+      return value.en ?? "";
     },
   };
 }

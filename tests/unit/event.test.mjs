@@ -20,8 +20,14 @@ import { withAlpine } from "./_alpine.mjs";
 // was picked without depending on i18n.js copy.
 function langStub() {
   return {
+    current: "en",
     t(key) {
       return key;
+    },
+    pick(value) {
+      if (value == null) return "";
+      if (typeof value === "string") return value;
+      return value.en ?? "";
     },
   };
 }

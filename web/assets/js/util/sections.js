@@ -3,11 +3,24 @@
 // frontend so the catalog stays stable regardless of how the event was
 // loaded (see docs/implementation-specification.md under "Ticket").
 //
-// All user-visible strings are looked up from the `lang` store so the
-// same catalog renders in both supported UI languages. Persisted
-// fields (e.g. `ticket_type_label` on a saved ticket) use the
-// canonical English copy so the wallet entry does not flip language
-// based on whoever happens to view it later.
+// User-visible strings here are looked up from the `lang` store so the
+// catalog renders in either supported UI language. Two distinct rules
+// govern multilingual text in the prototype, and this file lives at
+// the boundary:
+//
+//   1. Catalog content (event names, news bodies, exhibitor copy,
+//      venue copy, etc.) is stored in the database as
+//      `jsonb { en, sv }` and resolved at render time via the
+//      `pickLang` helper in util/i18n-content.js (or the ergonomic
+//      `$store.lang.pick(...)` accessor). Switching language re-reads
+//      the same row and re-renders.
+//
+//   2. Persisted display labels — `ticket_type_label` on a saved
+//      ticket, `menu_label` / `delivery_label` on a saved food order —
+//      keep the **canonical-English rule** via `canonicalTranslate`
+//      (and `canonicalTicketTypeLabel` below). The wallet entry must
+//      not flip language depending on whoever views it later, so the
+//      English copy is frozen into the row at write time.
 
 import { activeTranslate, canonicalTranslate } from "../i18n.js";
 

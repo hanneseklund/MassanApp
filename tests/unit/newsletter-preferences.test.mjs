@@ -17,6 +17,15 @@ import { withAlpine } from "./_alpine.mjs";
 function makeStores({ user = null, subscriptions = [], events = {} } = {}) {
   return {
     session: { user },
+    lang: {
+      current: "en",
+      t: (key) => key,
+      pick(value) {
+        if (value == null) return "";
+        if (typeof value === "string") return value;
+        return value.en ?? "";
+      },
+    },
     newsletter: {
       forUser(userId) {
         return subscriptions.filter((s) => s.user_id === userId);

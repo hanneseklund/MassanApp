@@ -203,11 +203,12 @@ export function eventView() {
       const list = Alpine.store("catalog").exhibitorsForEvent(ev.id);
       const q = this.exhibitorQuery.trim().toLowerCase();
       if (!q) return list;
+      const lang = Alpine.store("lang");
       return list.filter(
         (e) =>
           e.name.toLowerCase().includes(q) ||
           (e.booth ?? "").toLowerCase().includes(q) ||
-          (e.description ?? "").toLowerCase().includes(q)
+          lang.pick(e.description).toLowerCase().includes(q)
       );
     },
     exhibitor() {

@@ -40,7 +40,10 @@ export function defaultQuestionnaire(event, profile) {
 
 // Event-relevant subjects sourced from `events.questionnaire_subjects`.
 // A missing or non-array value means "no subjects configured" and the
-// subjects block is omitted from the UI.
+// subjects block is omitted from the UI. Display uses `pickLang` at
+// render time so the dual-language seed shape (sub-task 01c) renders
+// in the active UI language; before 01c the entries are still plain
+// strings and pickLang's transitional fallback returns them as-is.
 export function subjectsFor(event) {
   if (!event || !Array.isArray(event.questionnaire_subjects)) return [];
   return event.questionnaire_subjects.filter(

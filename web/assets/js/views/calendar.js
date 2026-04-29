@@ -20,7 +20,12 @@ export function calendarView() {
     },
     formatDates,
     filtered() {
-      return filterEvents(this.visible(), Alpine.store("filters"));
+      return filterEvents(
+        this.visible(),
+        Alpine.store("filters"),
+        undefined,
+        Alpine.store("lang").current,
+      );
     },
   };
 }

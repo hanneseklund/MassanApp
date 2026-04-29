@@ -17,6 +17,7 @@ import {
   translate,
   dateLocaleFor,
 } from "../i18n.js";
+import { pickLang } from "../util/i18n-content.js";
 
 const STORAGE_KEY = "massanapp_lang";
 
@@ -57,6 +58,15 @@ export function langStore() {
 
     t(key, params) {
       return translate(key, this.current, params);
+    },
+
+    // Resolve a multilingual seeded leaf (`jsonb { en, sv }`) to a
+    // string in the active language. Reading `this.current` here makes
+    // every `$store.lang.pick(...)` binding reactive to a language
+    // switch, just like `t()`. See util/i18n-content.js for the helper
+    // semantics (incl. the transitional plain-string fallback).
+    pick(value) {
+      return pickLang(value, this.current);
     },
 
     dateLocale() {

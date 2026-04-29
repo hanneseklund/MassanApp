@@ -81,11 +81,12 @@ export function meView() {
       return Alpine.store("lang").t(key);
     },
     transactionEventLabel(eventId) {
+      const lang = Alpine.store("lang");
       if (!eventId) {
-        return Alpine.store("lang").t("points.tx_venue_wide");
+        return lang.t("points.tx_venue_wide");
       }
       const event = Alpine.store("catalog").eventById(eventId);
-      return event ? event.name : eventId;
+      return event ? lang.pick(event.name) : eventId;
     },
     transactionDeltaLabel(delta) {
       const t = Alpine.store("lang").t.bind(Alpine.store("lang"));

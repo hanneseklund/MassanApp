@@ -26,10 +26,8 @@ export function myTicketsView() {
         });
     },
     eventName(ticket) {
-      return (
-        Alpine.store("catalog").eventById(ticket.event_id)?.name ??
-        ticket.event_id
-      );
+      const event = Alpine.store("catalog").eventById(ticket.event_id);
+      return Alpine.store("lang").pick(event?.name) || ticket.event_id;
     },
     eventForTicket(ticket) {
       return Alpine.store("catalog").eventById(ticket.event_id);

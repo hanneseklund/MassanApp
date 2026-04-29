@@ -73,7 +73,7 @@ export function newsletterSignup() {
           to: record.email,
           user_id: record.user_id,
           event_id: record.event_id,
-          event_name: event?.name ?? null,
+          event_name: Alpine.store("lang").pick(event?.name) || null,
           preferences: record.preferences,
         });
         this.submitted = true;

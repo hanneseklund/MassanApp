@@ -4,6 +4,8 @@
 // `$store.filters`.
 
 import { monthLabel } from "./dates.js";
+import { pickLang } from "./i18n-content.js";
+import { DEFAULT_LANGUAGE } from "../i18n.js";
 
 // Calendar list policy (issue #26): events stay visible on the
 // calendar while ongoing/upcoming AND for `PAST_EVENT_GRACE_DAYS` days
@@ -67,13 +69,18 @@ export function calendarVisibleEvents(events, today = todayLocalIso()) {
   return events.filter((e) => isCalendarVisible(e, today));
 }
 
-export function eventMatchesQuery(event, query) {
+// `event.name` and `event.summary` are dual-language `{en, sv}` jsonb
+// leaves once sub-task 01c lands; before that they are plain strings.
+// `pickLang` handles both shapes, returning the active-language slot
+// for the new shape and the plain string as-is during the transition.
+// `lang` defaults to English so callers (and the unit suite) can omit
+// it during the transitional window.
+export function eventMatchesQuery(event, query, lang = DEFAULT_LANGUAGE) {
   const q = String(query ?? "").trim().toLowerCase();
   if (!q) return true;
-  return (
-    (event.name ?? "").toLowerCase().includes(q) ||
-    (event.summary ?? "").toLowerCase().includes(q)
-  );
+  const name = pickLang(event.name, lang).toLowerCase();
+  const summary = pickLang(event.summary, lang).toLowerCase();
+  return name.includes(q) || summary.includes(q);
 }
 
 // Apply the calendar's type / category / month / free-text filters and
@@ -91,13 +98,18 @@ export function eventMatchesQuery(event, query) {
 // still uses the real today, so the 21-day window is unchanged. The
 // optional `today` arg is exposed for tests; production calls let it
 // default to the visitor's local date.
-export function filterEvents(events, filters, today = todayLocalIso()) {
+export function filterEvents(
+  events,
+  filters,
+  today = todayLocalIso(),
+  lang = DEFAULT_LANGUAGE,
+) {
   const { query = "", type = "", category = "", month = "" } = filters ?? {};
   const matched = events.filter((e) => {
     if (type && e.type !== type) return false;
     if (category && e.category !== category) return false;
     if (month && monthLabel(e.start_date) !== month) return false;
-    return eventMatchesQuery(e, query);
+    return eventMatchesQuery(e, query, lang);
   });
   const sortToday = shiftIsoDate(today, -PAST_EVENT_GRACE_DAYS);
   const upcoming = [];

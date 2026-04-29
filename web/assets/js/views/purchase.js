@@ -216,7 +216,7 @@ export function purchaseView() {
           to: email,
           user_id: user.id,
           event_id: ev.id,
-          event_name: ev.name,
+          event_name: Alpine.store("lang").pick(ev.name),
           ticket_id: ticket.id,
           ticket_type: ticket.ticket_type,
           transaction_ref: ticket.transaction_ref,

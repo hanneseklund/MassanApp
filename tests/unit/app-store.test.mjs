@@ -98,7 +98,15 @@ function withStubbedGlobals(
         return events.find((e) => e.id === id) ?? null;
       },
     },
-    lang: { t: translate },
+    lang: {
+      current: "en",
+      t: translate,
+      pick(value) {
+        if (value == null) return "";
+        if (typeof value === "string") return value;
+        return value.en ?? "";
+      },
+    },
   };
   globalThis.Alpine = {
     store(id) {

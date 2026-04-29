@@ -73,7 +73,7 @@ export function createRedemptionController({
           (this.stockConsumed[item.id] || 0) + 1;
         this.lastRedemption = {
           id: item.id,
-          name: item.name,
+          name: Alpine.store("lang").pick(item.name),
           cost: item.points_cost,
           at: new Date().toISOString(),
         };

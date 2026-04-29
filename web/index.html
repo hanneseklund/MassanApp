@@ -76,7 +76,7 @@
               class="chrome__nav-link"
               role="menuitem"
               @click="navOpen = false; $store.app.eventId ? $store.app.goEventSubview('home') : $store.app.goCalendar()"
-              x-text="$store.app.eventId ? ($store.catalog.eventById($store.app.eventId)?.name || $store.lang.t('title.event_default')) : $store.lang.t('chrome.nav.start')"
+              x-text="$store.app.eventId ? ($store.lang.pick($store.catalog.eventById($store.app.eventId)?.name) || $store.lang.t('title.event_default')) : $store.lang.t('chrome.nav.start')"
             ></button>
           </li>
           <li class="chrome__nav-item" x-show="$store.app.eventId">
@@ -350,15 +350,15 @@
                   <img
                     class="events__image"
                     :src="event.branding.hero_image"
-                    :alt="$store.lang.t('event.hero_image_alt', { name: event.name })"
+                    :alt="$store.lang.t('event.hero_image_alt', { name: $store.lang.pick(event.name) })"
                     loading="lazy"
                     decoding="async"
                   />
                 </template>
                 <span class="events__type" x-text="event.type"></span>
-                <span class="events__name" x-text="event.name"></span>
+                <span class="events__name" x-text="$store.lang.pick(event.name)"></span>
                 <span class="events__dates" x-text="formatDates(event)"></span>
-                <span class="events__summary" x-text="event.summary"></span>
+                <span class="events__summary" x-text="$store.lang.pick(event.summary)"></span>
               </button>
             </li>
           </template>
@@ -386,21 +386,21 @@
                     <img
                       class="event-hero__image"
                       :src="event().branding.hero_image"
-                      :alt="$store.lang.t('event.hero_image_alt', { name: event().name })"
+                      :alt="$store.lang.t('event.hero_image_alt', { name: $store.lang.pick(event().name) })"
                       loading="lazy"
                       decoding="async"
                     />
                     <figcaption
                       class="event-hero__image-credit"
                       x-show="event().branding?.hero_image_credit"
-                      x-text="$store.lang.t('event.image_credit_prefix') + event().branding.hero_image_credit"
+                      x-text="$store.lang.t('event.image_credit_prefix') + $store.lang.pick(event().branding.hero_image_credit)"
                     ></figcaption>
                   </figure>
                 </template>
                 <p class="event-hero__type" x-text="event().type"></p>
-                <h2 class="event-hero__name" x-text="event().name"></h2>
+                <h2 class="event-hero__name" x-text="$store.lang.pick(event().name)"></h2>
                 <p class="event-hero__dates" x-text="formatDates(event())"></p>
-                <p class="event-hero__summary" x-text="event().summary"></p>
+                <p class="event-hero__summary" x-text="$store.lang.pick(event().summary)"></p>
                 <div
                   class="event-hero__actions"
                   x-show="event().ticket_model !== 'none'"
@@ -472,14 +472,14 @@
                           <img
                             class="event-addons__image"
                             :src="addonImage(addon)"
-                            :alt="$store.lang.t('event.addons_image_alt', { name: addon.name })"
+                            :alt="$store.lang.t('event.addons_image_alt', { name: $store.lang.pick(addon.name) })"
                             loading="lazy"
                             decoding="async"
                           />
                         </template>
                         <div class="event-addons__body">
-                          <p class="event-addons__name" x-text="addon.name"></p>
-                          <p class="event-addons__desc" x-text="addon.description"></p>
+                          <p class="event-addons__name" x-text="$store.lang.pick(addon.name)"></p>
+                          <p class="event-addons__desc" x-text="$store.lang.pick(addon.description)"></p>
                           <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: addon.points_cost })"></p>
                           <p
                             class="event-addons__stock"
@@ -520,7 +520,7 @@
                           <img
                             class="news-item__image"
                             :src="newsImage(item)"
-                            :alt="$store.lang.t('event.news_image_alt', { name: event().name })"
+                            :alt="$store.lang.t('event.news_image_alt', { name: $store.lang.pick(event().name) })"
                             loading="lazy"
                             decoding="async"
                           />
@@ -532,9 +532,9 @@
                           ></p>
                           <h4
                             class="news-item__title"
-                            x-text="item.title"
+                            x-text="$store.lang.pick(item.title)"
                           ></h4>
-                          <p class="news-item__body" x-text="item.body"></p>
+                          <p class="news-item__body" x-text="$store.lang.pick(item.body)"></p>
                         </div>
                       </li>
                     </template>
@@ -562,13 +562,13 @@
                           <img
                             class="article__image"
                             :src="articleImage(a)"
-                            :alt="$store.lang.t('event.article_image_alt', { title: a.title })"
+                            :alt="$store.lang.t('event.article_image_alt', { title: $store.lang.pick(a.title) })"
                             loading="lazy"
                             decoding="async"
                           />
                         </template>
-                        <h4 class="article__title" x-text="a.title"></h4>
-                        <p class="article__body" x-text="a.body"></p>
+                        <h4 class="article__title" x-text="$store.lang.pick(a.title)"></h4>
+                        <p class="article__body" x-text="$store.lang.pick(a.body)"></p>
                       </li>
                     </template>
                   </ul>
@@ -607,15 +607,15 @@
                             ></p>
                             <h5
                               class="session__title"
-                              x-text="session.title"
+                              x-text="$store.lang.pick(session.title)"
                             ></h5>
                             <p
                               class="session__meta"
-                              x-text="session.location + (session.track ? ' · ' + session.track : '')"
+                              x-text="$store.lang.pick(session.location) + (session.track ? ' · ' + session.track : '')"
                             ></p>
                             <p
                               class="session__description"
-                              x-text="session.description"
+                              x-text="$store.lang.pick(session.description)"
                             ></p>
                           </li>
                         </template>
@@ -656,7 +656,7 @@
                           <span class="exhibitor-card__text">
                             <span class="exhibitor-card__name" x-text="e.name"></span>
                             <span class="exhibitor-card__booth" x-text="$store.lang.t('event.booth_prefix') + e.booth"></span>
-                            <span class="exhibitor-card__desc" x-text="e.description"></span>
+                            <span class="exhibitor-card__desc" x-text="$store.lang.pick(e.description)"></span>
                           </span>
                         </button>
                       </li>
@@ -680,50 +680,50 @@
                   <div class="practical">
                     <section class="practical__section">
                       <h3 x-text="$store.lang.t('practical.getting_here')"></h3>
-                      <p x-text="venue().transport?.summary"></p>
+                      <p x-text="$store.lang.pick(venue().transport?.summary)"></p>
                       <ul>
                         <template
-                          x-for="mode in venue().transport?.modes ?? []"
-                          :key="mode.mode"
+                          x-for="(mode, idx) in venue().transport?.modes ?? []"
+                          :key="idx"
                         >
                           <li>
-                            <strong x-text="mode.mode"></strong>:
-                            <span x-text="mode.detail"></span>
+                            <strong x-text="$store.lang.pick(mode.mode)"></strong>:
+                            <span x-text="$store.lang.pick(mode.detail)"></span>
                           </li>
                         </template>
                       </ul>
                     </section>
                     <section class="practical__section">
                       <h3 x-text="$store.lang.t('practical.parking')"></h3>
-                      <p x-text="venue().parking?.summary"></p>
+                      <p x-text="$store.lang.pick(venue().parking?.summary)"></p>
                       <p
                         class="practical__note"
-                        x-text="venue().parking?.notes"
+                        x-text="$store.lang.pick(venue().parking?.notes)"
                       ></p>
                     </section>
                     <section class="practical__section">
                       <h3 x-text="$store.lang.t('practical.restaurants')"></h3>
                       <ul>
                         <template
-                          x-for="r in venue().restaurants ?? []"
-                          :key="r.name"
+                          x-for="(r, idx) in venue().restaurants ?? []"
+                          :key="idx"
                         >
                           <li>
-                            <strong x-text="r.name"></strong>:
-                            <span x-text="r.description"></span>
+                            <strong x-text="$store.lang.pick(r.name)"></strong>:
+                            <span x-text="$store.lang.pick(r.description)"></span>
                           </li>
                         </template>
                       </ul>
                     </section>
                     <section class="practical__section">
                       <h3 x-text="$store.lang.t('practical.security')"></h3>
-                      <p x-text="venue().security?.summary"></p>
+                      <p x-text="$store.lang.pick(venue().security?.summary)"></p>
                       <ul>
                         <template
-                          x-for="rule in venue().security?.general_rules ?? []"
-                          :key="rule"
+                          x-for="(rule, idx) in venue().security?.general_rules ?? []"
+                          :key="idx"
                         >
-                          <li x-text="rule"></li>
+                          <li x-text="$store.lang.pick(rule)"></li>
                         </template>
                       </ul>
                     </section>
@@ -738,8 +738,8 @@
                           :key="m.id"
                         >
                           <li>
-                            <strong x-text="m.name"></strong>:
-                            <span x-text="m.description"></span>
+                            <strong x-text="$store.lang.pick(m.name)"></strong>:
+                            <span x-text="$store.lang.pick(m.description)"></span>
                           </li>
                         </template>
                       </ul>
@@ -756,7 +756,7 @@
                         >
                           <div class="overrides__item">
                             <dt x-text="overrideLabel(entry[0])"></dt>
-                            <dd x-text="entry[1]"></dd>
+                            <dd x-text="$store.lang.pick(entry[1])"></dd>
                           </div>
                         </template>
                       </dl>
@@ -819,7 +819,7 @@
                       <form class="newsletter-form" @submit.prevent="submit()">
                         <p class="newsletter-form__intro">
                           <span x-text="$store.lang.t('newsletter.signup_intro_prefix')"></span>
-                          <strong x-text="event().name"></strong>
+                          <strong x-text="$store.lang.pick(event().name)"></strong>
                           <span x-text="$store.lang.t('newsletter.signup_intro_suffix')"></span>
                         </p>
                         <label class="auth-form__field">
@@ -859,7 +859,7 @@
                           <span x-text="$store.lang.t('newsletter.success_prefix')"></span>
                           <strong x-text="email"></strong>
                           <span x-text="$store.lang.t('newsletter.success_about')"></span>
-                          <strong x-text="event().name"></strong>.
+                          <strong x-text="$store.lang.pick(event().name)"></strong>.
                           <span class="sim-chip" x-text="$store.lang.t('sim.chip')"></span>
                         </p>
                         <button
@@ -902,7 +902,7 @@
                         <img
                           class="news-item__image"
                           :src="newsImage(item)"
-                          :alt="$store.lang.t('event.news_image_alt', { name: event().name })"
+                          :alt="$store.lang.t('event.news_image_alt', { name: $store.lang.pick(event().name) })"
                           loading="lazy"
                           decoding="async"
                         />
@@ -912,8 +912,8 @@
                           class="news-item__date"
                           x-text="formatShortDate(item.published_at)"
                         ></p>
-                        <h3 class="news-item__title" x-text="item.title"></h3>
-                        <p class="news-item__body" x-text="item.body"></p>
+                        <h3 class="news-item__title" x-text="$store.lang.pick(item.title)"></h3>
+                        <p class="news-item__body" x-text="$store.lang.pick(item.body)"></p>
                       </div>
                     </li>
                   </template>
@@ -944,13 +944,13 @@
                         <img
                           class="article__image"
                           :src="articleImage(a)"
-                          :alt="$store.lang.t('event.article_image_alt', { title: a.title })"
+                          :alt="$store.lang.t('event.article_image_alt', { title: $store.lang.pick(a.title) })"
                           loading="lazy"
                           decoding="async"
                         />
                       </template>
-                      <h3 class="article__title" x-text="a.title"></h3>
-                      <p class="article__body" x-text="a.body"></p>
+                      <h3 class="article__title" x-text="$store.lang.pick(a.title)"></h3>
+                      <p class="article__body" x-text="$store.lang.pick(a.body)"></p>
                     </li>
                   </template>
                 </ul>
@@ -991,11 +991,11 @@
                           ></p>
                           <h4
                             class="session__title"
-                            x-text="session.title"
+                            x-text="$store.lang.pick(session.title)"
                           ></h4>
                           <p
                             class="session__meta"
-                            x-text="session.location + (session.track ? ' · ' + session.track : '')"
+                            x-text="$store.lang.pick(session.location) + (session.track ? ' · ' + session.track : '')"
                           ></p>
                           <div
                             class="session__speakers"
@@ -1026,7 +1026,7 @@
                           </div>
                           <p
                             class="session__description"
-                            x-text="session.description"
+                            x-text="$store.lang.pick(session.description)"
                           ></p>
                         </li>
                       </template>
@@ -1098,7 +1098,7 @@
                           ></span>
                           <span
                             class="exhibitor-card__desc"
-                            x-text="e.description"
+                            x-text="$store.lang.pick(e.description)"
                           ></span>
                         </span>
                       </button>
@@ -1139,7 +1139,7 @@
                     ></p>
                     <p
                       class="exhibitor-detail__desc"
-                      x-text="exhibitor().description"
+                      x-text="$store.lang.pick(exhibitor().description)"
                     ></p>
                     <p x-show="exhibitor().website">
                       <a
@@ -1757,7 +1757,7 @@
         <template x-if="event()">
           <div class="purchase">
             <header class="purchase__header">
-              <p class="purchase__event" x-text="event().name"></p>
+              <p class="purchase__event" x-text="$store.lang.pick(event().name)"></p>
               <p class="purchase__dates" x-text="formatDates(event())"></p>
             </header>
 
@@ -1907,7 +1907,7 @@
                         :checked="isSubjectSelected(subject)"
                         @change="toggleSubject(subject)"
                       />
-                      <span x-text="subject"></span>
+                      <span x-text="$store.lang.pick(subject)"></span>
                     </label>
                   </template>
                 </fieldset>
@@ -1953,7 +1953,7 @@
                   <dl class="purchase__summary-list">
                     <div class="purchase__summary-row">
                       <dt x-text="$store.lang.t('purchase.summary_event')"></dt>
-                      <dd x-text="event().name"></dd>
+                      <dd x-text="$store.lang.pick(event().name)"></dd>
                     </div>
                     <div class="purchase__summary-row">
                       <dt x-text="$store.lang.t('purchase.summary_dates')"></dt>
@@ -2005,7 +2005,7 @@
                 </p>
                 <article class="ticket-card">
                   <header class="ticket-card__header">
-                    <p class="ticket-card__event" x-text="event().name"></p>
+                    <p class="ticket-card__event" x-text="$store.lang.pick(event().name)"></p>
                     <p
                       class="ticket-card__dates"
                       x-text="formatDates(event())"
@@ -2208,14 +2208,14 @@
                     <img
                       class="event-addons__image"
                       :src="merchImage(item)"
-                      :alt="$store.lang.t('shop.image_alt', { name: item.name })"
+                      :alt="$store.lang.t('shop.image_alt', { name: $store.lang.pick(item.name) })"
                       loading="lazy"
                       decoding="async"
                     />
                   </template>
                   <div class="event-addons__body">
-                    <p class="event-addons__name" x-text="item.name"></p>
-                    <p class="event-addons__desc" x-text="item.description"></p>
+                    <p class="event-addons__name" x-text="$store.lang.pick(item.name)"></p>
+                    <p class="event-addons__desc" x-text="$store.lang.pick(item.description)"></p>
                     <p class="event-addons__cost" x-text="$store.lang.t('event.addons_cost', { cost: item.points_cost })"></p>
                     <p
                       class="event-addons__stock"
