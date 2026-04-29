@@ -199,6 +199,24 @@ test("langStore.t(): forwards interpolation params", () => {
   });
 });
 
+test("langStore.label(): translates seeded type / category / track values in the active language", () => {
+  // The display label flips with the active UI language, while the
+  // underlying column value (passed in unchanged) stays canonical so
+  // filter comparisons keep working — see calendar.test.mjs.
+  withStubbedDom({}, () => {
+    const store = langStore();
+    store.init();
+    assert.equal(store.label("event.type", "Trade fair"), "Trade fair");
+    store.set("sv");
+    assert.equal(store.label("event.type", "Trade fair"), "Mässa");
+    assert.equal(
+      store.label("event.category", "Health & Medicine"),
+      "Hälsa och medicin",
+    );
+    assert.equal(store.label("program.track", "Plenary"), "Plenum");
+  });
+});
+
 test("langStore.dateLocale(): returns the Intl locale for the active language", () => {
   withStubbedDom({}, () => {
     const store = langStore();

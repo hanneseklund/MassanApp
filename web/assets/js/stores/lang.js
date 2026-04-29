@@ -15,6 +15,7 @@ import {
   SUPPORTED_LANGUAGES,
   LANGUAGE_LABELS,
   translate,
+  translateLabel,
   dateLocaleFor,
 } from "../i18n.js";
 import { pickLang } from "../util/i18n-content.js";
@@ -67,6 +68,16 @@ export function langStore() {
     // semantics (incl. the transitional plain-string fallback).
     pick(value) {
       return pickLang(value, this.current);
+    },
+
+    // Translate a canonical-English seeded identifier into its display
+    // label under `prefix` (`event.type`, `event.category`, or
+    // `program.track`). The column value stays canonical so filter
+    // comparisons keep working — only the rendered label changes.
+    // Unmapped values render as the original string so unknown
+    // identifiers stay visible in the UI instead of disappearing.
+    label(prefix, value) {
+      return translateLabel(prefix, value, this.current);
     },
 
     dateLocale() {

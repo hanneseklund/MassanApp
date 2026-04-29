@@ -16,6 +16,8 @@ import {
   SUPPORTED_LANGUAGES,
   DEFAULT_LANGUAGE,
   translate,
+  translateLabel,
+  labelKey,
   dateLocaleFor,
   activeTranslate,
   canonicalTranslate,
@@ -116,6 +118,64 @@ test("canonicalTranslate: interpolates params on the canonical entry", () => {
     canonicalTranslate("title.get_tickets_for", { name: "Nordbygg 2026" }),
     "Get tickets · Nordbygg 2026",
   );
+});
+
+test("labelKey: slugifies seeded values with whitespace, ampersand, and hyphens", () => {
+  // Spaces, hyphens, and ampersands are collapsed into a single
+  // underscore as a side-effect of the `[^a-z0-9]+` rule. Note that the
+  // literal word "and" (alphabetic) survives — so "Construction and real
+  // estate" keeps "and" while "Health & Medicine" drops the `&` entirely.
+  assert.equal(labelKey("event.type", "Trade fair"), "event.type.trade_fair");
+  assert.equal(
+    labelKey("event.category", "Health & Medicine"),
+    "event.category.health_medicine",
+  );
+  assert.equal(
+    labelKey("event.category", "Construction and real estate"),
+    "event.category.construction_and_real_estate",
+  );
+  assert.equal(
+    labelKey("program.track", "Late-breaking"),
+    "program.track.late_breaking",
+  );
+});
+
+test("labelKey: empty / null input yields null", () => {
+  assert.equal(labelKey("event.type", null), null);
+  assert.equal(labelKey("event.type", ""), null);
+});
+
+test("translateLabel: maps seeded value to its English display label", () => {
+  assert.equal(translateLabel("event.type", "Trade fair", "en"), "Trade fair");
+  assert.equal(
+    translateLabel("event.category", "Health & Medicine", "en"),
+    "Health & Medicine",
+  );
+});
+
+test("translateLabel: maps seeded value to its Swedish display label", () => {
+  assert.equal(translateLabel("event.type", "Trade fair", "sv"), "Mässa");
+  assert.equal(translateLabel("event.type", "Congress", "sv"), "Kongress");
+  assert.equal(
+    translateLabel("event.category", "Health & Medicine", "sv"),
+    "Hälsa och medicin",
+  );
+  assert.equal(
+    translateLabel("program.track", "Sustainability", "sv"),
+    "Hållbarhet",
+  );
+});
+
+test("translateLabel: unmapped value returns the raw input so it stays visible", () => {
+  assert.equal(
+    translateLabel("event.type", "Unknown future type", "sv"),
+    "Unknown future type",
+  );
+});
+
+test("translateLabel: null / empty input yields the empty string", () => {
+  assert.equal(translateLabel("event.type", null, "en"), "");
+  assert.equal(translateLabel("event.type", "", "sv"), "");
 });
 
 test("availableKeys: every supported language has the same key set", () => {

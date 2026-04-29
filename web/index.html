@@ -292,7 +292,7 @@
               <select x-model="$store.filters.type">
                 <option value="" x-text="$store.lang.t('calendar.all_types')"></option>
                 <template x-for="t in types" :key="t">
-                  <option :value="t" x-text="t"></option>
+                  <option :value="t" x-text="$store.lang.label('event.type', t)"></option>
                 </template>
               </select>
             </label>
@@ -301,7 +301,7 @@
               <select x-model="$store.filters.category">
                 <option value="" x-text="$store.lang.t('calendar.all_categories')"></option>
                 <template x-for="c in categories" :key="c">
-                  <option :value="c" x-text="c"></option>
+                  <option :value="c" x-text="$store.lang.label('event.category', c)"></option>
                 </template>
               </select>
             </label>
@@ -355,7 +355,7 @@
                     decoding="async"
                   />
                 </template>
-                <span class="events__type" x-text="event.type"></span>
+                <span class="events__type" x-text="$store.lang.label('event.type', event.type)"></span>
                 <span class="events__name" x-text="$store.lang.pick(event.name)"></span>
                 <span class="events__dates" x-text="formatDates(event)"></span>
                 <span class="events__summary" x-text="$store.lang.pick(event.summary)"></span>
@@ -397,7 +397,7 @@
                     ></figcaption>
                   </figure>
                 </template>
-                <p class="event-hero__type" x-text="event().type"></p>
+                <p class="event-hero__type" x-text="$store.lang.label('event.type', event().type)"></p>
                 <h2 class="event-hero__name" x-text="$store.lang.pick(event().name)"></h2>
                 <p class="event-hero__dates" x-text="formatDates(event())"></p>
                 <p class="event-hero__summary" x-text="$store.lang.pick(event().summary)"></p>
@@ -611,7 +611,7 @@
                             ></h5>
                             <p
                               class="session__meta"
-                              x-text="$store.lang.pick(session.location) + (session.track ? ' · ' + session.track : '')"
+                              x-text="$store.lang.pick(session.location) + (session.track ? ' · ' + $store.lang.label('program.track', session.track) : '')"
                             ></p>
                             <p
                               class="session__description"
@@ -995,7 +995,7 @@
                           ></h4>
                           <p
                             class="session__meta"
-                            x-text="$store.lang.pick(session.location) + (session.track ? ' · ' + session.track : '')"
+                            x-text="$store.lang.pick(session.location) + (session.track ? ' · ' + $store.lang.label('program.track', session.track) : '')"
                           ></p>
                           <div
                             class="session__speakers"

@@ -1,7 +1,19 @@
-// UI translations for the prototype. Only the app chrome is
-// translated — event content (news, articles, program, exhibitor
-// copy) remains in the language it was seeded in. See the
-// internationalization section of docs/functional-specification.md.
+// UI translations for the prototype.
+//
+// Two layers of translated copy live here:
+//   - App chrome: the static keys under `chrome.*`, `calendar.*`, etc.
+//     looked up directly by `translate(key, lang)`.
+//   - Display labels for canonical-English seeded identifiers (the
+//     `events.type` / `events.category` columns and `program_items.track`
+//     entries). Those columns stay in English so filter comparisons keep
+//     working across locales; their translated display label is resolved
+//     via `translateLabel(prefix, value, lang)`, which slugifies the
+//     stored value into a key under `event.type.*`, `event.category.*`,
+//     or `program.track.*`. Unmapped values fall back to the value as-is.
+//
+// Multilingual seeded long-form copy (event names, news bodies, exhibitor
+// descriptions, …) is handled separately by `pickLang` in
+// util/i18n-content.js, not by this module.
 //
 // Adding a new key: add it to both `en` and `sv` entries. When a key
 // is missing from the active locale the English copy is used as the
@@ -60,6 +72,35 @@ const TRANSLATIONS = {
     "calendar.loading": "Loading events…",
     "calendar.load_error": "Could not load events: {error}",
     "calendar.no_match": "No events match the current filters.",
+
+    "event.type.conference": "Conference",
+    "event.type.congress": "Congress",
+    "event.type.event": "Event",
+    "event.type.public_fair": "Public fair",
+    "event.type.trade_fair": "Trade fair",
+
+    "event.category.construction_and_real_estate": "Construction and real estate",
+    "event.category.education_and_training": "Education and training",
+    "event.category.entertainment": "Entertainment",
+    "event.category.food_drink": "Food & drink",
+    "event.category.health_medicine": "Health & Medicine",
+    "event.category.industry": "Industry",
+    "event.category.interior_design": "Interior design",
+    "event.category.leisure_and_consumer": "Leisure and consumer",
+    "event.category.other": "Other",
+
+    "program.track.clinical": "Clinical",
+    "program.track.digital": "Digital",
+    "program.track.industry": "Industry",
+    "program.track.keynote": "Keynote",
+    "program.track.late_breaking": "Late-breaking",
+    "program.track.networking": "Networking",
+    "program.track.physics": "Physics",
+    "program.track.plenary": "Plenary",
+    "program.track.posters": "Posters",
+    "program.track.radiobiology": "Radiobiology",
+    "program.track.safety": "Safety",
+    "program.track.sustainability": "Sustainability",
 
     "event.pick_section": "Pick a section above to explore this event.",
     "event.no_news": "No news yet for this event.",
@@ -501,6 +542,35 @@ const TRANSLATIONS = {
     "calendar.loading": "Laddar evenemang…",
     "calendar.load_error": "Kunde inte ladda evenemang: {error}",
     "calendar.no_match": "Inga evenemang matchar de valda filtren.",
+
+    "event.type.conference": "Konferens",
+    "event.type.congress": "Kongress",
+    "event.type.event": "Evenemang",
+    "event.type.public_fair": "Publikmässa",
+    "event.type.trade_fair": "Mässa",
+
+    "event.category.construction_and_real_estate": "Bygg och fastighet",
+    "event.category.education_and_training": "Utbildning",
+    "event.category.entertainment": "Underhållning",
+    "event.category.food_drink": "Mat och dryck",
+    "event.category.health_medicine": "Hälsa och medicin",
+    "event.category.industry": "Industri",
+    "event.category.interior_design": "Inredning",
+    "event.category.leisure_and_consumer": "Fritid och konsument",
+    "event.category.other": "Övrigt",
+
+    "program.track.clinical": "Klinisk",
+    "program.track.digital": "Digitalt",
+    "program.track.industry": "Industri",
+    "program.track.keynote": "Keynote",
+    "program.track.late_breaking": "Sena nyheter",
+    "program.track.networking": "Mingel",
+    "program.track.physics": "Fysik",
+    "program.track.plenary": "Plenum",
+    "program.track.posters": "Postrar",
+    "program.track.radiobiology": "Strålningsbiologi",
+    "program.track.safety": "Säkerhet",
+    "program.track.sustainability": "Hållbarhet",
 
     "event.pick_section":
       "Välj en sektion ovan för att utforska evenemanget.",
@@ -963,4 +1033,36 @@ export function activeTranslate(key, params) {
 // later.
 export function canonicalTranslate(key, params) {
   return translate(key, DEFAULT_LANGUAGE, params);
+}
+
+// Slugify a canonical-English seeded value (e.g. "Trade fair", "Health
+// & Medicine", "Late-breaking") into the suffix used for its display-label
+// key under `event.type.*`, `event.category.*`, or `program.track.*`.
+// The column itself stays the original English string — this only derives
+// a stable lookup suffix from it.
+export function labelKey(prefix, value) {
+  if (value == null) return null;
+  const slug = String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+  return slug ? `${prefix}.${slug}` : null;
+}
+
+// Translate a canonical-English seeded value (an `events.type`,
+// `events.category`, or `program_items.track` cell) into its display
+// label in `lang`, by looking up `<prefix>.<slug>` in the dictionary.
+// Returns the original `value` as-is when the key is not registered, so
+// unrecognised identifiers still render — they just don't get translated.
+// Empty input returns the empty string.
+export function translateLabel(prefix, value, lang) {
+  if (value == null || value === "") return "";
+  const key = labelKey(prefix, value);
+  if (!key) return String(value);
+  const active = TRANSLATIONS[lang] ?? TRANSLATIONS[DEFAULT_LANGUAGE];
+  if (active && active[key] != null) return active[key];
+  if (TRANSLATIONS[DEFAULT_LANGUAGE][key] != null) {
+    return TRANSLATIONS[DEFAULT_LANGUAGE][key];
+  }
+  return String(value);
 }
