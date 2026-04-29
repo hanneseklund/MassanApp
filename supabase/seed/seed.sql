@@ -2083,16 +2083,16 @@ CW Lundberg erbjuder ett brett sortiment av taksäkerhetsprodukter och infästni
 Svensktillverkat – Vår kvalitetsstämpel
 All tillverkning sker i Sverige. Med hållbara materialval och 40 års garanti är det en säker investering för både installatörer och fastighetsägare. Svensk produktion är en central del av CW Lundbergs identitet och kvalitetsarbete.'), 'https://www.cwlundberg.com', 'assets/images/exhibitors/nordbygg-2026-cw-lundberg-industri-ab.jpg'),
   ('nordbygg-2026-exhibitor-133969', 'nordbygg-2026', 'Cylinda Bygg och Fastighet', 'C06:31', jsonb_build_object('en', 'Since 1958, Cylinda has been at the side of the Swedes. With our roots in Västergötland, we manufacture energy-smart, user-friendly and reliable household appliances that stand up to all of life''s challenges. Always with the goal of making everyday life a little easier. And more enjoyable.', 'sv', 'Sedan 1958 har Cylinda funnits vid svenskarnas sida. Med rötterna i Västergötland tillverkar vi energismarta, användarvänliga och pålitliga vitvaror som står pall för livets alla utmaningar. Alltid med målet att göra vardagen lite enklare. Och roligare.'), 'https://www.cylinda.se', 'assets/images/exhibitors/nordbygg-2026-cylinda-bygg-och-fastighet.jpg'),
-  ('nordbygg-2026-exhibitor-139105', 'nordbygg-2026', 'Dafo', 'C03:30', jsonb_build_object('en', 'Vi erbjuder marknadens bredaste sortiment av tjänster och produkter för en säker vardag, för alla typer av verksamheter. Välkommen till Dafo!', 'sv', 'Vi erbjuder marknadens bredaste sortiment av tjänster och produkter för en säker vardag, för alla typer av verksamheter. Välkommen till Dafo!'), 'https://www.dafo.se', 'assets/images/exhibitors/nordbygg-2026-dafo.jpg'),
-  ('nordbygg-2026-exhibitor-137076', 'nordbygg-2026', 'Dala-Profil AB', 'C17:51', jsonb_build_object('en', 'KVALITET OCH HÅLLBARHET INOM BYGGPLÅT
+  ('nordbygg-2026-exhibitor-139105', 'nordbygg-2026', 'Dafo', 'C03:30', jsonb_build_object('en', 'We offer the market''s broadest range of services and products for a safer everyday life, for every kind of operation. Welcome to Dafo!', 'sv', 'Vi erbjuder marknadens bredaste sortiment av tjänster och produkter för en säker vardag, för alla typer av verksamheter. Välkommen till Dafo!'), 'https://www.dafo.se', 'assets/images/exhibitors/nordbygg-2026-dafo.jpg'),
+  ('nordbygg-2026-exhibitor-137076', 'nordbygg-2026', 'Dala-Profil AB', 'C17:51', jsonb_build_object('en', 'QUALITY AND DURABILITY IN BUILDING SHEET METAL
 
-Dala-Profil är en ledande tillverkare och leverantör av tak- och väggprofiler med fokus på kvalitet, hållbarhet och snabb leverans. Vi erbjuder ett brett sortiment av profilerad plåt, slätplåt, takavvattning, taksäkerhet och infästningssystem – allt anpassat för bygg och plåtslageri.
+Dala-Profil is a leading manufacturer and supplier of roof and wall profiles, with a focus on quality, durability and fast delivery. We offer a broad range of profiled sheet, flat sheet, roof drainage, roof safety and fastening systems — all tailored for the construction and sheet-metal trades.
 
-Som GreenCoat® partner med SSAB använder vi svenskt stål av högsta kvalitet, vilket gör det möjligt att erbjuda funktionsgarantier upp till 50 år.
+As a GreenCoat® partner with SSAB, we use top-quality Swedish steel, which lets us offer functional warranties of up to 50 years.
 
-Vår produktionsanläggning i Borlänge omfattar 13 000 kvm och vår effektiva logistik med kranförsedda turbilar säkerställer snabba och tillförlitliga leveranser.
+Our production facility in Borlänge covers 13,000 sqm, and our efficient logistics with crane-equipped delivery trucks ensure fast and reliable shipments.
 
-Din flexibla och pålitliga plåtleverantör!', 'sv', 'KVALITET OCH HÅLLBARHET INOM BYGGPLÅT
+Your flexible and dependable sheet-metal supplier!', 'sv', 'KVALITET OCH HÅLLBARHET INOM BYGGPLÅT
 
 Dala-Profil är en ledande tillverkare och leverantör av tak- och väggprofiler med fokus på kvalitet, hållbarhet och snabb leverans. Vi erbjuder ett brett sortiment av profilerad plåt, slätplåt, takavvattning, taksäkerhet och infästningssystem – allt anpassat för bygg och plåtslageri.
 
@@ -2101,48 +2101,48 @@ Som GreenCoat® partner med SSAB använder vi svenskt stål av högsta kvalitet,
 Vår produktionsanläggning i Borlänge omfattar 13 000 kvm och vår effektiva logistik med kranförsedda turbilar säkerställer snabba och tillförlitliga leveranser.
 
 Din flexibla och pålitliga plåtleverantör!'), 'https://www.dala-profil.se', 'assets/images/exhibitors/nordbygg-2026-dala-profil-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134398', 'nordbygg-2026', 'Daloc AB', 'C12:31', jsonb_build_object('en', 'I ett byggprojekt har dörren ofta en avgörande betydelse. Det är därför vi tillverkar alla våra dörrar med ett tydligt syfte. Att hejda eldsvådor, dödliga brandgaser och störa skön sömn i hotell till exempel. Att skydda mot skott och explosioner. Att rädda liv.
-Men det här med dörrar är inte så enkelt som det ser ut. Så vi hjälper dig gärna med det du behöver för att lyckas med dina projekt. Du kan tryggt luta dig mot vår kunskap var du än befinner dig i processen. På så sätt slipper du onödiga kostnader och otrevliga överraskningar.', 'sv', 'I ett byggprojekt har dörren ofta en avgörande betydelse. Det är därför vi tillverkar alla våra dörrar med ett tydligt syfte. Att hejda eldsvådor, dödliga brandgaser och störa skön sömn i hotell till exempel. Att skydda mot skott och explosioner. Att rädda liv.
+  ('nordbygg-2026-exhibitor-134398', 'nordbygg-2026', 'Daloc AB', 'C12:31', jsonb_build_object('en', 'In a construction project, the door is often critical. That is why we manufacture every one of our doors with a clear purpose. To stop fires, deadly smoke gases and disturbed sleep in hotels, for example. To protect against gunfire and explosions. To save lives.
+But this business of doors is not as simple as it looks. So we are happy to help you with whatever you need to make your projects succeed. You can lean confidently on our knowledge wherever you are in the process. That way you avoid unnecessary costs and unpleasant surprises.', 'sv', 'I ett byggprojekt har dörren ofta en avgörande betydelse. Det är därför vi tillverkar alla våra dörrar med ett tydligt syfte. Att hejda eldsvådor, dödliga brandgaser och störa skön sömn i hotell till exempel. Att skydda mot skott och explosioner. Att rädda liv.
 Men det här med dörrar är inte så enkelt som det ser ut. Så vi hjälper dig gärna med det du behöver för att lyckas med dina projekt. Du kan tryggt luta dig mot vår kunskap var du än befinner dig i processen. På så sätt slipper du onödiga kostnader och otrevliga överraskningar.'), 'https://www.daloc.se', 'assets/images/exhibitors/nordbygg-2026-daloc-ab.jpg'),
   ('nordbygg-2026-exhibitor-134363', 'nordbygg-2026', 'Dana Lim AB', 'C05:20', jsonb_build_object('en', 'CHOICE OF PROFESSIONALS
 
-BYGGPROFFSENS FÖRSTAHANDSVAL SEDAN 1929
+THE FIRST CHOICE OF BUILDING PROFESSIONALS SINCE 1929
 
-Vi är Skandinaviens ledande tillverkare av lim, fogmassa och spackel. Vi utvecklar och tillverkar kvalitetslösningar med fokus på kundens behov.
+We are Scandinavia''s leading manufacturer of adhesives, sealants and fillers. We develop and manufacture quality solutions with a focus on customer needs.
 
-Hos oss är vägen från tanke till handling alltid kort, därför anpassar vi kontinuerligt vårt omfattande produktsortiment och våra tjänster till marknaden.', 'sv', 'CHOICE OF PROFESSIONALS
+With us, the path from idea to action is always short, which is why we continuously adapt our extensive product range and services to the market.', 'sv', 'CHOICE OF PROFESSIONALS
 
 BYGGPROFFSENS FÖRSTAHANDSVAL SEDAN 1929
 
 Vi är Skandinaviens ledande tillverkare av lim, fogmassa och spackel. Vi utvecklar och tillverkar kvalitetslösningar med fokus på kundens behov.
 
 Hos oss är vägen från tanke till handling alltid kort, därför anpassar vi kontinuerligt vårt omfattande produktsortiment och våra tjänster till marknaden.'), 'https://www.danalim.se', 'assets/images/exhibitors/nordbygg-2026-dana-lim-ab.jpg'),
-  ('nordbygg-2026-exhibitor-133962', 'nordbygg-2026', 'Danfoss', 'A09:10', jsonb_build_object('en', 'Tänk dig att få se hur framtidens energieffektiva lösningar ser ut när de lyfts ur ritningar och specifikationer och får nytt liv som konst. På Nordbygg 2026 visar Danfoss en installation där ingenjörskonst möter konstnärlig vision – och tillsammans skapar ett nytt sätt att förstå hållbarhet. Det är en oväntad, inspirerande och visuellt stark upplevelse som kommer att bli en naturlig samtalspunkt på mässan. Kom och besök oss.', 'sv', 'Tänk dig att få se hur framtidens energieffektiva lösningar ser ut när de lyfts ur ritningar och specifikationer och får nytt liv som konst. På Nordbygg 2026 visar Danfoss en installation där ingenjörskonst möter konstnärlig vision – och tillsammans skapar ett nytt sätt att förstå hållbarhet. Det är en oväntad, inspirerande och visuellt stark upplevelse som kommer att bli en naturlig samtalspunkt på mässan. Kom och besök oss.'), 'https://www.danfoss.com/sv-se/campaigns/dhs/danfoss-nordbygg-2026', 'assets/images/exhibitors/nordbygg-2026-danfoss.jpg'),
-  ('nordbygg-2026-exhibitor-137197', 'nordbygg-2026', 'DBM Nordic AB', 'A18:12', jsonb_build_object('en', 'DBM Nordic är den nordiska delen av DBM – en europeisk tillverkare av värmeväxlare med över 40 års erfarenhet. Vi designar och producerar värmeväxlare för HVAC, ventilation, industriella processer, marina applikationer, energiåtervinning och datahallar.
+  ('nordbygg-2026-exhibitor-133962', 'nordbygg-2026', 'Danfoss', 'A09:10', jsonb_build_object('en', 'Imagine seeing what tomorrow''s energy-efficient solutions look like once they are lifted out of drawings and specifications and given new life as art. At Nordbygg 2026, Danfoss is presenting an installation where engineering meets artistic vision — and together they create a new way of understanding sustainability. It is an unexpected, inspiring and visually striking experience that is set to become a natural talking point at the fair. Come and visit us.', 'sv', 'Tänk dig att få se hur framtidens energieffektiva lösningar ser ut när de lyfts ur ritningar och specifikationer och får nytt liv som konst. På Nordbygg 2026 visar Danfoss en installation där ingenjörskonst möter konstnärlig vision – och tillsammans skapar ett nytt sätt att förstå hållbarhet. Det är en oväntad, inspirerande och visuellt stark upplevelse som kommer att bli en naturlig samtalspunkt på mässan. Kom och besök oss.'), 'https://www.danfoss.com/sv-se/campaigns/dhs/danfoss-nordbygg-2026', 'assets/images/exhibitors/nordbygg-2026-danfoss.jpg'),
+  ('nordbygg-2026-exhibitor-137197', 'nordbygg-2026', 'DBM Nordic AB', 'A18:12', jsonb_build_object('en', 'DBM Nordic is the Nordic arm of DBM — a European manufacturer of heat exchangers with more than 40 years of experience. We design and produce heat exchangers for HVAC, ventilation, industrial processes, marine applications, energy recovery and data centres.
 
-Som nordiskt sälj- och teknikkontor sätter vi dig direktkontakt med tillverkaren av dina värmeväxlare, utan mellanhänder. Det innebär snabbare kommunikation, kortare ledtider och attraktiva priser.
+As the Nordic sales and engineering office, we put you in direct contact with the manufacturer of your heat exchangers, with no intermediaries. That means faster communication, shorter lead times and attractive prices.
 
-Våra ingenjörer designar varje batteri in-house med fokus på energieffektivitet, prestanda och tillförlitlighet. Oavsett om du behöver värme, kyla eller återvinning hjälper vi dig att hitta rätt värmeväxlare — effektiv, tillförlitlig och optimerad för just ditt projekt.', 'sv', 'DBM Nordic är den nordiska delen av DBM – en europeisk tillverkare av värmeväxlare med över 40 års erfarenhet. Vi designar och producerar värmeväxlare för HVAC, ventilation, industriella processer, marina applikationer, energiåtervinning och datahallar.
+Our engineers design every coil in-house, with a focus on energy efficiency, performance and reliability. Whether you need heating, cooling or recovery, we help you find the right heat exchanger — efficient, reliable and optimised for your specific project.', 'sv', 'DBM Nordic är den nordiska delen av DBM – en europeisk tillverkare av värmeväxlare med över 40 års erfarenhet. Vi designar och producerar värmeväxlare för HVAC, ventilation, industriella processer, marina applikationer, energiåtervinning och datahallar.
 
 Som nordiskt sälj- och teknikkontor sätter vi dig direktkontakt med tillverkaren av dina värmeväxlare, utan mellanhänder. Det innebär snabbare kommunikation, kortare ledtider och attraktiva priser.
 
 Våra ingenjörer designar varje batteri in-house med fokus på energieffektivitet, prestanda och tillförlitlighet. Oavsett om du behöver värme, kyla eller återvinning hjälper vi dig att hitta rätt värmeväxlare — effektiv, tillförlitlig och optimerad för just ditt projekt.'), 'https://www.dbmnordic.se', 'assets/images/exhibitors/nordbygg-2026-dbm-nordic-ab.jpg'),
   ('nordbygg-2026-exhibitor-133970', 'nordbygg-2026', 'Debe Flow Group AB', 'A05:10', null, 'https://www.debe.se', null),
-  ('nordbygg-2026-exhibitor-137952', 'nordbygg-2026', 'DEC International', 'A19:23', jsonb_build_object('en', 'Vill du se det senaste inom smarta ventilationskanalsystem?
+  ('nordbygg-2026-exhibitor-137952', 'nordbygg-2026', 'DEC International', 'A19:23', jsonb_build_object('en', 'Want to see the latest in smart ventilation duct systems?
 
-Vi på Ravensberg Consulting AB vill dela med oss av två stora nyheter inom den Nordiska ventilationsbranschen,
-nämligen Ubbink''s unika kanalsystem Air Excellent samt DEC internationals rektangulära kanalsystem QuadroDec.
+We at Ravensberg Consulting AB want to share two big pieces of news from the Nordic ventilation industry,
+namely Ubbink''s unique duct system Air Excellent and DEC International''s rectangular duct system QuadroDec.
 
-DEC & UBBINK är bland de främsta innovatörerna inom ventilationsbranschen när det kommer till
-ventilationskanalsystem och allt detta samlat i en monter.
-Båda systemen bjuder på fantastisk innovation med flera fördelar, de sista pusselbitarna som skapar en modern
-ventilation i alla vinklar och vrår.
+DEC & UBBINK are among the foremost innovators in the ventilation industry when it comes to
+ventilation duct systems, and all of this is brought together in a single stand.
+Both systems offer fantastic innovation with several advantages — the final pieces of the puzzle that create modern
+ventilation in every angle and corner.
 
-Ubbink utvecklar och tillverkar kanalsystem för hållbara ventilationslösningar och taktillbehör, som hjälper till att förbättra inomhusklimatet i nya och befintliga bostäder och kommersiella byggnader samt hälsan för de människor som bor och arbetar där.
+Ubbink develops and manufactures duct systems for sustainable ventilation solutions and roof accessories, which help improve the indoor climate in new and existing residential and commercial buildings, and the health of the people who live and work in them.
 
-Ravensberg Consulting AB är DEC & Ubbinks partner i Norden. Dem erbjuder kompletta lösningar på ventilation och arbetar alltid direkt med tillverkaren.
+Ravensberg Consulting AB is DEC & Ubbink''s partner in the Nordic region. They offer complete ventilation solutions and always work directly with the manufacturer.
 
-Ni kan läsa mer om produkterna via tillverkarnas hemsidor nedtill:
+You can read more about the products on the manufacturers'' websites below:
 
 www.ubbink.com
 www.decinternational.com', 'sv', 'Vill du se det senaste inom smarta ventilationskanalsystem?
@@ -2164,8 +2164,8 @@ Ni kan läsa mer om produkterna via tillverkarnas hemsidor nedtill:
 www.ubbink.com
 www.decinternational.com'), 'https://www.ravensberg.se', 'assets/images/exhibitors/nordbygg-2026-dec-international.jpg'),
   ('nordbygg-2026-exhibitor-139874', 'nordbygg-2026', 'Dekker Nordic AB', 'C18:20', null, 'https://www.dekkernordic.se', null),
-  ('nordbygg-2026-exhibitor-134464', 'nordbygg-2026', 'Demex AB', 'B07:41', jsonb_build_object('en', 'Demex erbjuder helhetslösningar inom områdesskydd samt säkerhetsprodukter. Genom ett brett produktsortiment, hög leveranssäkerhet och personlig service skapar vi lönsamhet för våra kunder.
-Vi är ett ledande företag i Nordeuropa som förser 65% av stängselmarknaden i Sverige med material.', 'sv', 'Demex erbjuder helhetslösningar inom områdesskydd samt säkerhetsprodukter. Genom ett brett produktsortiment, hög leveranssäkerhet och personlig service skapar vi lönsamhet för våra kunder.
+  ('nordbygg-2026-exhibitor-134464', 'nordbygg-2026', 'Demex AB', 'B07:41', jsonb_build_object('en', 'Demex offers complete solutions in perimeter protection and security products. Through a broad product range, reliable delivery performance and personal service, we create profitability for our customers.
+We are a leading company in Northern Europe, supplying 65% of the fencing market in Sweden with materials.', 'sv', 'Demex erbjuder helhetslösningar inom områdesskydd samt säkerhetsprodukter. Genom ett brett produktsortiment, hög leveranssäkerhet och personlig service skapar vi lönsamhet för våra kunder.
 Vi är ett ledande företag i Nordeuropa som förser 65% av stängselmarknaden i Sverige med material.'), 'https://www.demex.se', 'assets/images/exhibitors/nordbygg-2026-demex-ab.jpg'),
   ('nordbygg-2026-exhibitor-134911', 'nordbygg-2026', 'Derome', 'C15:41', null, 'https://www.derome.se', 'assets/images/exhibitors/nordbygg-2026-derome.jpg'),
   ('nordbygg-2026-exhibitor-140097', 'nordbygg-2026', 'Desah - Noardling', 'C03:41', jsonb_build_object('en', 'Desah designs, constructs, implements and operates biological decentralised wastewater treatment systems for domestic wastewater, all of which are modular and flexible. We have the following decentralized wastewater treatment solutions:
@@ -2177,36 +2177,36 @@ Vi är ett ledande företag i Nordeuropa som förser 65% av stängselmarknaden i
 
 Our solutions are applicable for the following markets: (new) neighbourhoods, holiday parks, hotels, office buildings, remote settlements, temporary situations like refugee camps or as additional capacity for your wastewater treatment plant.
 
-With our systems we treat the water in such a way that you can safely discharge it or reuse it for different purposes like toilet flushing or as irrigation water. It results in drinking water savings and the recovery and reuse of water, energy and nutrients. Energy and heat can be recovered to supply the neighbourhood and the treatment system. Sludge and struvite can be recovered and reused for agricultural purposes.', 'sv', 'Desah designs, constructs, implements and operates biological decentralised wastewater treatment systems for domestic wastewater, all of which are modular and flexible. We have the following decentralized wastewater treatment solutions:
+With our systems we treat the water in such a way that you can safely discharge it or reuse it for different purposes like toilet flushing or as irrigation water. It results in drinking water savings and the recovery and reuse of water, energy and nutrients. Energy and heat can be recovered to supply the neighbourhood and the treatment system. Sludge and struvite can be recovered and reused for agricultural purposes.', 'sv', 'Desah designar, bygger, levererar och driver biologiska decentraliserade reningsverk för hushållsspillvatten — alla modulära och flexibla. Vi erbjuder följande decentraliserade lösningar för avloppsrening:
 
--         Source separated wastewater treatment
--         Containerised, mobile wastewater treatment
--         Black water treatment
--         Operation and maintenance
+-         Källseparerad avloppsrening
+-         Containerbaserad, mobil avloppsrening
+-         Svartvattenrening
+-         Drift och underhåll
 
-Our solutions are applicable for the following markets: (new) neighbourhoods, holiday parks, hotels, office buildings, remote settlements, temporary situations like refugee camps or as additional capacity for your wastewater treatment plant.
+Våra lösningar är tillämpliga på följande marknader: (nya) bostadsområden, semesteranläggningar, hotell, kontorsbyggnader, avlägset belägna bosättningar, tillfälliga situationer som flyktingläger, eller som extra kapacitet för ert avloppsreningsverk.
 
-With our systems we treat the water in such a way that you can safely discharge it or reuse it for different purposes like toilet flushing or as irrigation water. It results in drinking water savings and the recovery and reuse of water, energy and nutrients. Energy and heat can be recovered to supply the neighbourhood and the treatment system. Sludge and struvite can be recovered and reused for agricultural purposes.'), 'https://desah.nl/en', 'assets/images/exhibitors/nordbygg-2026-desah-noardling.jpg'),
-  ('nordbygg-2026-exhibitor-138640', 'nordbygg-2026', 'Design4Bath', 'A07:08', jsonb_build_object('en', 'Design4Bath är ett privat bolag som grundades 2009 av Michael Thorell.
-Företagets affärsidé är att skapa ett mervärde i form av innovativa produkter, lösningar och design för ditt badrum på den Nordiska marknaden.
-Ett av kärnområdena är borrfritt montage och det mervärde som skapas genom att undvika håltagningar för att montera allehanda produkter såsom badrumstillbehör, duschset, duschväggar, blandare m.m. genom limning. I produktprogrammet erbjuder vi lim, limbrickor och badrumstillbehör som monteras utan onödiga håltagningar genom tätskikt.
-Våra huvudsakliga målgrupper är konsument, proffs och OEM.', 'sv', 'Design4Bath är ett privat bolag som grundades 2009 av Michael Thorell.
+Med våra system renar vi vattnet på ett sådant sätt att det säkert kan släppas ut eller återanvändas för olika ändamål, till exempel för toalettspolning eller som bevattningsvatten. Det leder till besparingar av dricksvatten och till återvinning och återanvändning av vatten, energi och näringsämnen. Energi och värme kan återvinnas för att försörja bostadsområdet och reningssystemet. Slam och struvit kan återvinnas och återanvändas för jordbruksändamål.'), 'https://desah.nl/en', 'assets/images/exhibitors/nordbygg-2026-desah-noardling.jpg'),
+  ('nordbygg-2026-exhibitor-138640', 'nordbygg-2026', 'Design4Bath', 'A07:08', jsonb_build_object('en', 'Design4Bath is a privately held company founded in 2009 by Michael Thorell.
+The company''s business idea is to create added value in the form of innovative products, solutions and design for your bathroom on the Nordic market.
+One of our core areas is drill-free mounting and the added value created by avoiding holes when installing all kinds of products — bathroom accessories, shower sets, shower walls, mixers and more — through bonding. Within the product range we offer adhesives, mounting pads and bathroom accessories that are installed without unnecessary holes through the waterproofing membrane.
+Our main target groups are consumers, professionals and OEMs.', 'sv', 'Design4Bath är ett privat bolag som grundades 2009 av Michael Thorell.
 Företagets affärsidé är att skapa ett mervärde i form av innovativa produkter, lösningar och design för ditt badrum på den Nordiska marknaden.
 Ett av kärnområdena är borrfritt montage och det mervärde som skapas genom att undvika håltagningar för att montera allehanda produkter såsom badrumstillbehör, duschset, duschväggar, blandare m.m. genom limning. I produktprogrammet erbjuder vi lim, limbrickor och badrumstillbehör som monteras utan onödiga håltagningar genom tätskikt.
 Våra huvudsakliga målgrupper är konsument, proffs och OEM.'), 'https://www.design4bath.se', 'assets/images/exhibitors/nordbygg-2026-design4bath.jpg'),
-  ('nordbygg-2026-exhibitor-133976', 'nordbygg-2026', 'Designlight Scandinavian AB', 'B10:21', jsonb_build_object('en', 'Designlight Scandinavian är ett företag med huvudkontor och centrallager beläget i Moheda, mitt i Småland. Vi är specialiserade på att leverera högkvalitativ belysning till konkurrenskraftiga priser till elektriker, fastighetsbolag och industriella kunder.
+  ('nordbygg-2026-exhibitor-133976', 'nordbygg-2026', 'Designlight Scandinavian AB', 'B10:21', jsonb_build_object('en', 'Designlight Scandinavian is a company with its head office and central warehouse located in Moheda, in the heart of Småland. We specialise in supplying high-quality lighting at competitive prices to electricians, property companies and industrial customers.
 
-Brett sortiment
-Vårt breda sortiment omfattar olika typer av belysningslösningar som möter de högsta kvalitetsstandarderna i Norden både när det gäller ljudkvalité och montagevänlighet. Vi strävar alltid efter att erbjuda pålitliga och effektiva produkter som möter våra kunders behov och förväntningar.
+Broad range
+Our broad range covers various types of lighting solutions that meet the highest quality standards in the Nordic region, both in terms of light quality and ease of installation. We always strive to offer reliable and efficient products that meet our customers'' needs and expectations.
 
-Skräddarsydda slösningar
-Utöver att erbjuda standardprodukter är vi stolta över att kunna erbjuda skräddarsydda lösningar för olika tillverkare inom köks, butiks- och hotellindustrin. Vi förstår vikten av att ha en belysning som passar perfekt till specifika miljöer och hjälper våra kunder att utforma och producera kundanpassade belysningslösningar som förhöjer deras produkter och utrymmen.
+Tailored solutions
+In addition to offering standard products, we are proud to provide tailored solutions for various manufacturers in the kitchen, retail and hotel industries. We understand the importance of having lighting that fits specific environments perfectly, and we help our customers design and produce custom lighting solutions that elevate their products and spaces.
 
-Erfarenhet
-Vårt team av erfarna och dedikerade medarbetare är alltid redo att ge professionell rådgivning och support till våra kunder. Vi strävar efter att bygga långsiktiga relationer och leverera enastående kundservice.
+Experience
+Our team of experienced and dedicated colleagues is always ready to give professional advice and support to our customers. We strive to build long-term relationships and deliver outstanding customer service.
 
-Pålitlighet
-Vi på Designlight är stolta över att vara en pålitlig partner för elektriker, fastighetsbolag och industriella kunder. Vi är övertygade om att vår kvalitetsbelysning och anpassade lösningar kan bidra till att skapa attraktiva och funktionella miljöer.', 'sv', 'Designlight Scandinavian är ett företag med huvudkontor och centrallager beläget i Moheda, mitt i Småland. Vi är specialiserade på att leverera högkvalitativ belysning till konkurrenskraftiga priser till elektriker, fastighetsbolag och industriella kunder.
+Reliability
+We at Designlight are proud to be a reliable partner for electricians, property companies and industrial customers. We are confident that our quality lighting and tailored solutions can help create attractive and functional environments.', 'sv', 'Designlight Scandinavian är ett företag med huvudkontor och centrallager beläget i Moheda, mitt i Småland. Vi är specialiserade på att leverera högkvalitativ belysning till konkurrenskraftiga priser till elektriker, fastighetsbolag och industriella kunder.
 
 Brett sortiment
 Vårt breda sortiment omfattar olika typer av belysningslösningar som möter de högsta kvalitetsstandarderna i Norden både när det gäller ljudkvalité och montagevänlighet. Vi strävar alltid efter att erbjuda pålitliga och effektiva produkter som möter våra kunders behov och förväntningar.
@@ -2219,62 +2219,62 @@ Vårt team av erfarna och dedikerade medarbetare är alltid redo att ge professi
 
 Pålitlighet
 Vi på Designlight är stolta över att vara en pålitlig partner för elektriker, fastighetsbolag och industriella kunder. Vi är övertygade om att vår kvalitetsbelysning och anpassade lösningar kan bidra till att skapa attraktiva och funktionella miljöer.'), 'https://www.designlight.nu', 'assets/images/exhibitors/nordbygg-2026-designlight-scandinavian-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134327', 'nordbygg-2026', 'Dewalt', 'B01:21', jsonb_build_object('en', 'DEWALT - 100 år av att bygga framtiden
+  ('nordbygg-2026-exhibitor-134327', 'nordbygg-2026', 'Dewalt', 'B01:21', jsonb_build_object('en', 'DEWALT — 100 years of building the future
 
-I över 100 år har namnet DEWALT stått för kvalitet, uthållighet och professionalism, och vunnit respekt och lojalitet bland de människor och företag som arbetar med oss. Sedan 1922 har vi varit drivande inom innovation, prestanda och säkerhet – och vi är mer engagerade än någonsin i att utveckla och optimera professionella lösningar för arbetsplatsen. Våra verktyg, tillbehör och tjänster är utformade för att ge proffs överlägsna helhetslösningar, med stöd av ett sekel av hårt förvärvad erfarenhet, på varje projekt och inom varje bransch världen över.
+For more than 100 years, the DEWALT name has stood for quality, endurance and professionalism, earning the respect and loyalty of the people and companies who work with us. Since 1922 we have been a driving force in innovation, performance and safety — and we are more committed than ever to developing and refining professional solutions for the worksite. Our tools, accessories and services are designed to give professionals superior end-to-end solutions, backed by a century of hard-won experience, on every project and across every industry around the world.
 
-Det har varit 100 år av ambition, framgång och hårt arbete – och detta är bara början. När vi sätter DEWALT-namnet på något är det ett löfte om att jobbet blir rätt gjort, även under de tuffaste förhållandena. Det är avtrycket vi har lämnat under 100 år av att hjälpa världens byggare att skapa den moderna världen.
+It has been 100 years of ambition, success and hard work — and this is only the beginning. When we put the DEWALT name on something, it is a promise that the job will be done right, even under the toughest conditions. That is the mark we have left over 100 years of helping the world''s builders create the modern world.
 
-Vi är DEWALT – och vi är GUARANTEED TOUGH.', 'sv', 'DEWALT - 100 år av att bygga framtiden
+We are DEWALT — and we are GUARANTEED TOUGH.', 'sv', 'DEWALT - 100 år av att bygga framtiden
 
 I över 100 år har namnet DEWALT stått för kvalitet, uthållighet och professionalism, och vunnit respekt och lojalitet bland de människor och företag som arbetar med oss. Sedan 1922 har vi varit drivande inom innovation, prestanda och säkerhet – och vi är mer engagerade än någonsin i att utveckla och optimera professionella lösningar för arbetsplatsen. Våra verktyg, tillbehör och tjänster är utformade för att ge proffs överlägsna helhetslösningar, med stöd av ett sekel av hårt förvärvad erfarenhet, på varje projekt och inom varje bransch världen över.
 
 Det har varit 100 år av ambition, framgång och hårt arbete – och detta är bara början. När vi sätter DEWALT-namnet på något är det ett löfte om att jobbet blir rätt gjort, även under de tuffaste förhållandena. Det är avtrycket vi har lämnat under 100 år av att hjälpa världens byggare att skapa den moderna världen.
 
 Vi är DEWALT – och vi är GUARANTEED TOUGH.'), 'https://www.dewalt.se', 'assets/images/exhibitors/nordbygg-2026-dewalt.jpg'),
-  ('nordbygg-2026-exhibitor-134664', 'nordbygg-2026', 'DIVELLO', 'A04:04', jsonb_build_object('en', 'OPTIMERA DINA VATTEN- OCH VÄRMESYSTEM™
+  ('nordbygg-2026-exhibitor-134664', 'nordbygg-2026', 'DIVELLO', 'A04:04', jsonb_build_object('en', 'OPTIMISE YOUR WATER AND HEATING SYSTEMS™
 
-DIVELLO erbjuder produkter för att optimera existerande sanitets- och värmeinstallationer (dusch, blandare, WC och radiator). Våra produkter är armatur- och radiatoroberoende och tillverkas av världsledande originalproducenter. Konceptet är unikt då våra universella produkter förbättrar samt förlänger livslängden på existerande sanitets- och värmeinstallationer oberoende av fabrikat.
+DIVELLO offers products that optimise existing sanitary and heating installations (shower, mixer, WC and radiator). Our products are independent of fitting and radiator brands, and are manufactured by world-leading original producers. The concept is unique: our universal products improve and extend the service life of existing sanitary and heating installations regardless of brand.
 
-DIVELLO har på kort tid blivit den ledande aktören i Skandinavien inom vårt affärsområde. De främsta anledningarna är vårt oberoende, högkvalitativa produkter och nära samarbeten med marknadsledande partners inom produktion, distribution och installation.', 'sv', 'OPTIMERA DINA VATTEN- OCH VÄRMESYSTEM™
+In a short time, DIVELLO has become the leading player in Scandinavia in our business area. The main reasons are our independence, our high-quality products and close collaboration with market-leading partners in production, distribution and installation.', 'sv', 'OPTIMERA DINA VATTEN- OCH VÄRMESYSTEM™
 
 DIVELLO erbjuder produkter för att optimera existerande sanitets- och värmeinstallationer (dusch, blandare, WC och radiator). Våra produkter är armatur- och radiatoroberoende och tillverkas av världsledande originalproducenter. Konceptet är unikt då våra universella produkter förbättrar samt förlänger livslängden på existerande sanitets- och värmeinstallationer oberoende av fabrikat.
 
 DIVELLO har på kort tid blivit den ledande aktören i Skandinavien inom vårt affärsområde. De främsta anledningarna är vårt oberoende, högkvalitativa produkter och nära samarbeten med marknadsledande partners inom produktion, distribution och installation.'), 'https://www.divello.com', 'assets/images/exhibitors/nordbygg-2026-divello.jpg'),
   ('nordbygg-2026-exhibitor-139582', 'nordbygg-2026', 'DMH- Den Moderna Hantverkaren', 'EH:19', null, 'https://www.dmh.nu', 'assets/images/exhibitors/nordbygg-2026-dmh-den-moderna-hantverkaren.jpg'),
-  ('nordbygg-2026-exhibitor-138756', 'nordbygg-2026', 'Dofab AB', 'C12:30', jsonb_build_object('en', 'En dörr är mer än en dörr. Ett fönster är mer än ett fönster. Det är en ljusare morgon, säkrare dag och varmare kväll. Kvalitet är vackert. I generationer. Så tänker vi.
+  ('nordbygg-2026-exhibitor-138756', 'nordbygg-2026', 'Dofab AB', 'C12:30', jsonb_build_object('en', 'A door is more than a door. A window is more than a window. It is a brighter morning, a safer day and a warmer evening. Quality is beautiful. For generations. That is how we think.
 
-DOFAB AB är ett familjärt företag som erbjuder skräddarsydda fönster, dörrar och portar efter dina mått och önskemål. Vi är experter på lite för högt, lite för lågt, udda mått och runda former. Vi går ett steg extra i allt vi gör - för dig, för ditt hus och för framtiden.
+DOFAB AB is a family-run company that offers tailor-made windows, doors and gates to your measurements and wishes. We are experts in slightly too tall, slightly too short, odd dimensions and round shapes. We go the extra mile in everything we do — for you, for your home and for the future.
 
-Vårt team har tillsammans många års erfarenhet av tillverkning, projektledning och arkitektur. Detta innebär att du som kund kan känna stor trygghet i vår breda kompetens, men även använda den för att förverkliga dina drömmar eller specifika önskemål.', 'sv', 'En dörr är mer än en dörr. Ett fönster är mer än ett fönster. Det är en ljusare morgon, säkrare dag och varmare kväll. Kvalitet är vackert. I generationer. Så tänker vi.
+Our team together has many years of experience in manufacturing, project management and architecture. That means you, as a customer, can feel confident in our broad expertise — and also draw on it to bring your dreams or specific wishes to life.', 'sv', 'En dörr är mer än en dörr. Ett fönster är mer än ett fönster. Det är en ljusare morgon, säkrare dag och varmare kväll. Kvalitet är vackert. I generationer. Så tänker vi.
 
 DOFAB AB är ett familjärt företag som erbjuder skräddarsydda fönster, dörrar och portar efter dina mått och önskemål. Vi är experter på lite för högt, lite för lågt, udda mått och runda former. Vi går ett steg extra i allt vi gör - för dig, för ditt hus och för framtiden.
 
 Vårt team har tillsammans många års erfarenhet av tillverkning, projektledning och arkitektur. Detta innebär att du som kund kan känna stor trygghet i vår breda kompetens, men även använda den för att förverkliga dina drömmar eller specifika önskemål.'), 'https://www.dofab.se', 'assets/images/exhibitors/nordbygg-2026-dofab-ab.jpg'),
-  ('nordbygg-2026-exhibitor-133977', 'nordbygg-2026', 'Doka Sverige AB', 'B05:11', jsonb_build_object('en', 'Doka är en världsledande leverantör av innovativa formlösningar och tjänster för alla typer av platsgjutna betongkonstruktioner. Med mer än 9000 anställda, 180 försäljnings- och logistikanläggningar i över 58 länder har Doka ett effektivt nätverk för distribution, rådgivning, kundservice och teknisk support.
+  ('nordbygg-2026-exhibitor-133977', 'nordbygg-2026', 'Doka Sverige AB', 'B05:11', jsonb_build_object('en', 'Doka is a world-leading supplier of innovative formwork solutions and services for every type of cast-in-place concrete structure. With more than 9,000 employees and 180 sales and logistics facilities in over 58 countries, Doka has an effective network for distribution, advisory services, customer service and technical support.
 
-Oavsett hur stort och komplicerat ditt projekt är så finns vi nära dig och ser till att leveranser tillhandahålls snabbt och smidigt. Doka är ett företag i Umdasch Group.
+No matter how large and complex your project is, we are close to you and make sure that deliveries arrive quickly and smoothly. Doka is part of the Umdasch Group.
 
-Doka – We make it work.', 'sv', 'Doka är en världsledande leverantör av innovativa formlösningar och tjänster för alla typer av platsgjutna betongkonstruktioner. Med mer än 9000 anställda, 180 försäljnings- och logistikanläggningar i över 58 länder har Doka ett effektivt nätverk för distribution, rådgivning, kundservice och teknisk support.
+Doka — We make it work.', 'sv', 'Doka är en världsledande leverantör av innovativa formlösningar och tjänster för alla typer av platsgjutna betongkonstruktioner. Med mer än 9000 anställda, 180 försäljnings- och logistikanläggningar i över 58 länder har Doka ett effektivt nätverk för distribution, rådgivning, kundservice och teknisk support.
 
 Oavsett hur stort och komplicerat ditt projekt är så finns vi nära dig och ser till att leveranser tillhandahålls snabbt och smidigt. Doka är ett företag i Umdasch Group.
 
 Doka – We make it work.'), 'https://www.doka.se', 'assets/images/exhibitors/nordbygg-2026-doka-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137212', 'nordbygg-2026', 'DOLLE NORDIC AB', 'C14:32', jsonb_build_object('en', 'DOLLE är världens största tillverkare av vindstrappor och en marknadsledande leverantör av åtkomstlösningar för byggbranschen. Produktutbudet omfattar allt från vindstrappor och takluckor till trappor, lofttrappor och räckessystem - alla utvecklade med stort fokus på kvalitet, funktionalitet och enkel installation.', 'sv', 'DOLLE är världens största tillverkare av vindstrappor och en marknadsledande leverantör av åtkomstlösningar för byggbranschen. Produktutbudet omfattar allt från vindstrappor och takluckor till trappor, lofttrappor och räckessystem - alla utvecklade med stort fokus på kvalitet, funktionalitet och enkel installation.'), 'https://www.dolle.se', 'assets/images/exhibitors/nordbygg-2026-dolle-nordic-ab.jpg'),
+  ('nordbygg-2026-exhibitor-137212', 'nordbygg-2026', 'DOLLE NORDIC AB', 'C14:32', jsonb_build_object('en', 'DOLLE is the world''s largest manufacturer of loft ladders and a market-leading supplier of access solutions for the construction industry. The product range covers everything from loft ladders and roof hatches to staircases, attic stairs and railing systems — all developed with a strong focus on quality, functionality and easy installation.', 'sv', 'DOLLE är världens största tillverkare av vindstrappor och en marknadsledande leverantör av åtkomstlösningar för byggbranschen. Produktutbudet omfattar allt från vindstrappor och takluckor till trappor, lofttrappor och räckessystem - alla utvecklade med stort fokus på kvalitet, funktionalitet och enkel installation.'), 'https://www.dolle.se', 'assets/images/exhibitors/nordbygg-2026-dolle-nordic-ab.jpg'),
   ('nordbygg-2026-exhibitor-139953', 'nordbygg-2026', 'DOMAX Sp. z o.o.', 'C03:61', jsonb_build_object('en', 'Company Description
 Founded in 1994 as a family-run business, Domax initially focused on the manufacturing and distribution of wood connectors in Poland. Over the years, through a strong commitment to high-quality products, a broad and continuously expanding product range, and the expertise of our dedicated team, the company has evolved from a small family enterprise into a market leader across Central and Eastern Europe.
 
 Company Offer
-DOMAX provides a comprehensive and competitive portfolio of several thousand products across key categories, including wood connectors, hardened screws, hinges, latches, garden fittings, shelving systems, and garage hooks. We support our partners with proven tools, effective strategies, and flexible solutions tailored to their needs. Thanks to advanced machinery and modern technologies, we consistently deliver high product quality and reliable service. The CE marking on our products confirms full compliance with applicable EU directives and standards.', 'sv', 'Company Description
-Founded in 1994 as a family-run business, Domax initially focused on the manufacturing and distribution of wood connectors in Poland. Over the years, through a strong commitment to high-quality products, a broad and continuously expanding product range, and the expertise of our dedicated team, the company has evolved from a small family enterprise into a market leader across Central and Eastern Europe.
+DOMAX provides a comprehensive and competitive portfolio of several thousand products across key categories, including wood connectors, hardened screws, hinges, latches, garden fittings, shelving systems, and garage hooks. We support our partners with proven tools, effective strategies, and flexible solutions tailored to their needs. Thanks to advanced machinery and modern technologies, we consistently deliver high product quality and reliable service. The CE marking on our products confirms full compliance with applicable EU directives and standards.', 'sv', 'Företagsbeskrivning
+Domax grundades 1994 som ett familjeföretag och fokuserade inledningsvis på tillverkning och distribution av träförbindare i Polen. Genom åren har företaget, tack vare ett starkt engagemang för högkvalitativa produkter, ett brett och ständigt växande produktsortiment och expertisen hos vårt engagerade team, utvecklats från ett litet familjeföretag till en marknadsledare i Central- och Östeuropa.
 
-Company Offer
-DOMAX provides a comprehensive and competitive portfolio of several thousand products across key categories, including wood connectors, hardened screws, hinges, latches, garden fittings, shelving systems, and garage hooks. We support our partners with proven tools, effective strategies, and flexible solutions tailored to their needs. Thanks to advanced machinery and modern technologies, we consistently deliver high product quality and reliable service. The CE marking on our products confirms full compliance with applicable EU directives and standards.'), 'https://www.domax.com', 'assets/images/exhibitors/nordbygg-2026-domax-sp-z-o-o.jpg'),
-  ('nordbygg-2026-exhibitor-138958', 'nordbygg-2026', 'DOORDEC', 'C17:20', jsonb_build_object('en', 'Doordec OÜ är en estnisk tillverkare av högkvalitativa stål- och brandklassade dörrar, specialiserad på kundanpassade lösningar för bostads-, kommersiella och industriella byggnader. Med mer än 15 års erfarenhet kombinerar vi modern produktionsteknik med flexibel ingenjörskompetens för att leverera hållbara, certifierade och projektspecifika dörrsystem till de nordiska och europeiska marknaderna.
+Företagets erbjudande
+DOMAX tillhandahåller en heltäckande och konkurrenskraftig portfölj med flera tusen produkter inom centrala kategorier — bland annat träförbindare, härdade skruvar, gångjärn, haspar, trädgårdsbeslag, hyllsystem och garagekrokar. Vi stöttar våra partner med beprövade verktyg, effektiva strategier och flexibla lösningar anpassade efter deras behov. Tack vare avancerade maskiner och modern teknik levererar vi konsekvent hög produktkvalitet och pålitlig service. CE-märkningen på våra produkter bekräftar full överensstämmelse med gällande EU-direktiv och standarder.'), 'https://www.domax.com', 'assets/images/exhibitors/nordbygg-2026-domax-sp-z-o-o.jpg'),
+  ('nordbygg-2026-exhibitor-138958', 'nordbygg-2026', 'DOORDEC', 'C17:20', jsonb_build_object('en', 'Doordec OÜ is an Estonian manufacturer of high-quality steel and fire-rated doors, specialising in custom solutions for residential, commercial and industrial buildings. With more than 15 years of experience, we combine modern production technology with flexible engineering expertise to deliver durable, certified and project-specific door systems for the Nordic and European markets.
 
-Vårt produktsortiment omfattar brandklassade dörrar (EI15–EI120), säkerhetsdörrar, RC-klassade produkter, isolerade profildörrar, glasade ståldörrar samt skräddarsydda lösningar för arkitekter och entreprenörer. Vi fokuserar på snabba leveranstider, pålitlig logistik och nära samarbete genom hela projektet – från teknisk design till slutlig leverans.
+Our product range covers fire-rated doors (EI15–EI120), security doors, RC-rated products, insulated profile doors, glazed steel doors and tailor-made solutions for architects and contractors. We focus on fast lead times, reliable logistics and close collaboration throughout the project — from technical design to final delivery.
 
-På Nordbygg ser vi fram emot att presentera våra senaste innovationer och diskutera hur Doordec kan stötta era projekt med säkra, robusta och estetiskt anpassningsbara ståldörrslösningar.', 'sv', 'Doordec OÜ är en estnisk tillverkare av högkvalitativa stål- och brandklassade dörrar, specialiserad på kundanpassade lösningar för bostads-, kommersiella och industriella byggnader. Med mer än 15 års erfarenhet kombinerar vi modern produktionsteknik med flexibel ingenjörskompetens för att leverera hållbara, certifierade och projektspecifika dörrsystem till de nordiska och europeiska marknaderna.
+At Nordbygg, we look forward to presenting our latest innovations and discussing how Doordec can support your projects with secure, robust and aesthetically adaptable steel-door solutions.', 'sv', 'Doordec OÜ är en estnisk tillverkare av högkvalitativa stål- och brandklassade dörrar, specialiserad på kundanpassade lösningar för bostads-, kommersiella och industriella byggnader. Med mer än 15 års erfarenhet kombinerar vi modern produktionsteknik med flexibel ingenjörskompetens för att leverera hållbara, certifierade och projektspecifika dörrsystem till de nordiska och europeiska marknaderna.
 
 Vårt produktsortiment omfattar brandklassade dörrar (EI15–EI120), säkerhetsdörrar, RC-klassade produkter, isolerade profildörrar, glasade ståldörrar samt skräddarsydda lösningar för arkitekter och entreprenörer. Vi fokuserar på snabba leveranstider, pålitlig logistik och nära samarbete genom hela projektet – från teknisk design till slutlig leverans.
 
@@ -2290,29 +2290,29 @@ Our products:
 
 Our services:
 ·Engineering and architecture;
-·On-site assembly / chief assembly.', 'sv', 'For 20 years, we''ve manufactured timber homes with care and conviction, firmly believing in the enduring beauty and sustainability of wood. Today, with our extensive knowledge in wood construction and over 1,200 completed projects worldwide, we handle wide range of builds, from holiday homes and residential dwellings to large-scale glulam structures for commercial and public buildings. Our expertise extends accross different sectors, including recreational properties, village developments, and commercial establishments.
+·On-site assembly / chief assembly.', 'sv', 'I 20 år har vi tillverkat trähus med omsorg och övertygelse, i en stark tro på träets bestående skönhet och hållbarhet. Idag, med vår omfattande kunskap inom träbyggnad och över 1 200 färdigställda projekt världen över, hanterar vi ett brett spann av byggen — från fritidshus och bostäder till storskaliga limträkonstruktioner för kommersiella och offentliga byggnader. Vår expertis sträcker sig över olika sektorer, däribland fritidshusprojekt, byutvecklingar och kommersiella anläggningar.
 
-Our products:
-·Glulam beams and structural components;
-·Prefabricated timber frame panels;
-·Glulam log house construction kits;
-·Timber frame construction kits;
-·Prefabricated ready-to-live tiny homes.
+Våra produkter:
+·Limträbalkar och bärande komponenter;
+·Prefabricerade element för regelstomme i trä;
+·Byggsatser för limträtimrade hus;
+·Byggsatser för trästomme;
+·Prefabricerade inflyttningsklara minihus.
 
-Our services:
-·Engineering and architecture;
-·On-site assembly / chief assembly.'), 'https://www.dores.house', 'assets/images/exhibitors/nordbygg-2026-dores-wooden-homes.jpg'),
+Våra tjänster:
+·Konstruktion och arkitektur;
+·Montering på plats / huvudmontage.'), 'https://www.dores.house', 'assets/images/exhibitors/nordbygg-2026-dores-wooden-homes.jpg'),
   ('nordbygg-2026-exhibitor-135291', 'nordbygg-2026', 'dormakaba Sverige AB', 'C11:30', null, 'https://www.dormakaba.se', 'assets/images/exhibitors/nordbygg-2026-dormakaba-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-139664', 'nordbygg-2026', 'Drabest Sp. z o.o.', 'AG:100', null, 'https://drabest.pl', 'assets/images/exhibitors/nordbygg-2026-drabest-sp-z-o-o.jpg'),
   ('nordbygg-2026-exhibitor-138509', 'nordbygg-2026', 'DRUTEX SA', 'C14:61', null, 'https://www.drutex.eu', null),
   ('nordbygg-2026-exhibitor-137626', 'nordbygg-2026', 'Dry-Top AB', 'C08:13', null, 'https://dry-top.se', null),
-  ('nordbygg-2026-exhibitor-139194', 'nordbygg-2026', 'Dryft AB', 'BG:23', jsonb_build_object('en', 'Dryft är ett hantverksföretag, som utför massor av olika typer av projekt hemma hos människor. Vi söker nu fler samarbetspartners inom fler yrkeskompetenser!
+  ('nordbygg-2026-exhibitor-139194', 'nordbygg-2026', 'Dryft AB', 'BG:23', jsonb_build_object('en', 'Dryft is a tradesperson company that takes on lots of different types of projects in people''s homes. We are now looking for more partners across more trades!
 
-Dryft samarbetar idag med utvalda hantverksföretag i Stockholm, Göteborg, Malmö och Uppsala. Nu söker vi fler duktiga företag som vill växa tillsammans med oss och ta del av de uppdrag som utförs under Dryfts varumärke.
+Dryft works today with selected tradesperson companies in Stockholm, Gothenburg, Malmö and Uppsala. We are now looking for more skilled companies that want to grow with us and take part in the assignments delivered under the Dryft brand.
 
-Som partnerbolag får du fastprisade projekt, bokade direkt in i din eller dina anställdas kalender, med väldigt tydliga underag som underlättar din vardag. Dryft Partnerskap hjälper dig att balansera och optimera din och företagets beläggning.
+As a partner company, you get fixed-price projects booked directly into your or your employees'' calendars, with very clear briefs that make your day-to-day easier. Dryft Partnerships help you balance and optimise your and your company''s workload.
 
-Det kostar ingenting och du binder inte upp dig på någonting. Vi söker helt enkelt samarbetspartners, och kanske är det du?', 'sv', 'Dryft är ett hantverksföretag, som utför massor av olika typer av projekt hemma hos människor. Vi söker nu fler samarbetspartners inom fler yrkeskompetenser!
+It costs nothing and you don''t tie yourself down to anything. We are simply looking for partners — and perhaps that''s you?', 'sv', 'Dryft är ett hantverksföretag, som utför massor av olika typer av projekt hemma hos människor. Vi söker nu fler samarbetspartners inom fler yrkeskompetenser!
 
 Dryft samarbetar idag med utvalda hantverksföretag i Stockholm, Göteborg, Malmö och Uppsala. Nu söker vi fler duktiga företag som vill växa tillsammans med oss och ta del av de uppdrag som utförs under Dryfts varumärke.
 
@@ -2320,23 +2320,23 @@ Som partnerbolag får du fastprisade projekt, bokade direkt in i din eller dina 
 
 Det kostar ingenting och du binder inte upp dig på någonting. Vi söker helt enkelt samarbetspartners, och kanske är det du?'), 'https://dryft.se', null),
   ('nordbygg-2026-exhibitor-138332', 'nordbygg-2026', 'Drynex Technologies AB', 'C17:10', null, 'https://www.drynex.se', null),
-  ('nordbygg-2026-exhibitor-138570', 'nordbygg-2026', 'Duka Ventilation', 'A24:28', jsonb_build_object('en', 'DUKA Ventilation är en ledande leverantör av systemlösningar för bostadsventilation. Vi har producerat ventilationsprodukter sedan 1968 och har löpande utökat vårt sortiment så att det motsvarar marknadens behov. Vi arbetar tillsammans med externa experter och rådgivare för att säkerställa att alla produkter är testade och utprovade, så att allt passar ihop som en systemlösning.', 'sv', 'DUKA Ventilation är en ledande leverantör av systemlösningar för bostadsventilation. Vi har producerat ventilationsprodukter sedan 1968 och har löpande utökat vårt sortiment så att det motsvarar marknadens behov. Vi arbetar tillsammans med externa experter och rådgivare för att säkerställa att alla produkter är testade och utprovade, så att allt passar ihop som en systemlösning.'), 'https://www.dukaventilation.dk', 'assets/images/exhibitors/nordbygg-2026-duka-ventilation.jpg'),
-  ('nordbygg-2026-exhibitor-138846', 'nordbygg-2026', 'Dunlop Protective Footwear', 'B07:51', jsonb_build_object('en', 'Dunlop Protective Footwear är världsledande tillverkare av skyddstövlar med +130år som innovatör i stövelbranschen när det gäller både komfort och säkerhet. Kom förbi så förklarar vi vad en stövel är idag, ni kommer bli förvånade!
-Välkomna', 'sv', 'Dunlop Protective Footwear är världsledande tillverkare av skyddstövlar med +130år som innovatör i stövelbranschen när det gäller både komfort och säkerhet. Kom förbi så förklarar vi vad en stövel är idag, ni kommer bli förvånade!
+  ('nordbygg-2026-exhibitor-138570', 'nordbygg-2026', 'Duka Ventilation', 'A24:28', jsonb_build_object('en', 'DUKA Ventilation is a leading supplier of system solutions for residential ventilation. We have been producing ventilation products since 1968 and have continuously expanded our range to match the needs of the market. We work together with external experts and advisors to ensure that all products are tested and validated, so that everything fits together as a system solution.', 'sv', 'DUKA Ventilation är en ledande leverantör av systemlösningar för bostadsventilation. Vi har producerat ventilationsprodukter sedan 1968 och har löpande utökat vårt sortiment så att det motsvarar marknadens behov. Vi arbetar tillsammans med externa experter och rådgivare för att säkerställa att alla produkter är testade och utprovade, så att allt passar ihop som en systemlösning.'), 'https://www.dukaventilation.dk', 'assets/images/exhibitors/nordbygg-2026-duka-ventilation.jpg'),
+  ('nordbygg-2026-exhibitor-138846', 'nordbygg-2026', 'Dunlop Protective Footwear', 'B07:51', jsonb_build_object('en', 'Dunlop Protective Footwear is the world-leading manufacturer of safety boots, with 130+ years as an innovator in the boot industry in terms of both comfort and safety. Stop by and we will explain what a boot is today — you will be surprised!
+Welcome', 'sv', 'Dunlop Protective Footwear är världsledande tillverkare av skyddstövlar med +130år som innovatör i stövelbranschen när det gäller både komfort och säkerhet. Kom förbi så förklarar vi vad en stövel är idag, ni kommer bli förvånade!
 Välkomna'), 'https://www.dunlopboots.com', 'assets/images/exhibitors/nordbygg-2026-dunlop-protective-footwear.jpg'),
-  ('nordbygg-2026-exhibitor-140057', 'nordbygg-2026', 'Duravit', 'A05:16', jsonb_build_object('en', 'Duravit står för passion i badrummet.
+  ('nordbygg-2026-exhibitor-140057', 'nordbygg-2026', 'Duravit', 'A05:16', jsonb_build_object('en', 'Duravit stands for passion in the bathroom.
 
-Vi skapar badrumslösningar där kraften i vår unika design, kvalitet och funktionalitet påverkar
-våra kunders välbefinnande varje dag.
-Som en komplett badrumstillverkare erbjuder
-Duravit allt som krävs för att skapa ett perfekt koordinerat badrum.
+We create bathroom solutions where the power of our distinctive design, quality and functionality shapes
+our customers'' wellbeing every day.
+As a complete bathroom manufacturer,
+Duravit offers everything required to create a perfectly coordinated bathroom.
 
-	Huvudkontor i Hornberg, Tyskland. Etablerat 1817.
+	Headquartered in Hornberg, Germany. Established 1817.
 
-	Verksamhet i >130 länder med 11
-	produktionsanläggningar och ca. 7000 anställda.
+	Active in more than 130 countries, with 11
+	production facilities and around 7,000 employees.
 
-	Omsättning 2024: >€ 631 Miljoner.', 'sv', 'Duravit står för passion i badrummet.
+	Revenue 2024: more than €631 million.', 'sv', 'Duravit står för passion i badrummet.
 
 Vi skapar badrumslösningar där kraften i vår unika design, kvalitet och funktionalitet påverkar
 våra kunders välbefinnande varje dag.
@@ -2352,14 +2352,14 @@ Duravit allt som krävs för att skapa ett perfekt koordinerat badrum.
   ('nordbygg-2026-exhibitor-138573', 'nordbygg-2026', 'DURI SVENSKA AKTIEBOLAG', 'C16:30', null, 'https://www.duri.se', 'assets/images/exhibitors/nordbygg-2026-duri-svenska-aktiebolag.jpg'),
   ('nordbygg-2026-exhibitor-138832', 'nordbygg-2026', 'Duschbyggarna AB', 'A10:13', null, 'https://www.duschbyggarna.se', 'assets/images/exhibitors/nordbygg-2026-duschbyggarna-ab.jpg'),
   ('nordbygg-2026-exhibitor-133965', 'nordbygg-2026', 'Dustcontrol AB', 'B06:31', null, 'https://www.dustcontrol.se', 'assets/images/exhibitors/nordbygg-2026-dustcontrol-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137942', 'nordbygg-2026', 'DynaMaker', 'AG:43', jsonb_build_object('en', 'Gör det enkelt för dina kunder att konfigurera produkter, direkt på din hemsida!
+  ('nordbygg-2026-exhibitor-137942', 'nordbygg-2026', 'DynaMaker', 'AG:43', jsonb_build_object('en', 'Make it easy for your customers to configure products, directly on your website!
 
-Med DynaMaker kan du bygga och publicera visuella produktkonfiguratorer till din hemsida eller e-handel. Visualisera produkten under konfigurering och skapa PDF-ritningar, BIM-filer och tillverkningsunderlag automatiskt för varje unik konfigurering.
-Färdiga integrationer till bland annat Monitor ERP ingår.
+With DynaMaker you can build and publish visual product configurators on your website or e-commerce store. Visualise the product during configuration and automatically generate PDF drawings, BIM files and manufacturing documents for every unique configuration.
+Ready-made integrations to systems including Monitor ERP are included.
 
-Kom och prata med oss om dina behov så guidar vi dig.
+Come and talk to us about your needs — we will guide you.
 
-DynaMaker utvecklas av SkyMaker AB med kontor i Linköping.', 'sv', 'Gör det enkelt för dina kunder att konfigurera produkter, direkt på din hemsida!
+DynaMaker is developed by SkyMaker AB, with offices in Linköping.', 'sv', 'Gör det enkelt för dina kunder att konfigurera produkter, direkt på din hemsida!
 
 Med DynaMaker kan du bygga och publicera visuella produktkonfiguratorer till din hemsida eller e-handel. Visualisera produkten under konfigurering och skapa PDF-ritningar, BIM-filer och tillverkningsunderlag automatiskt för varje unik konfigurering.
 Färdiga integrationer till bland annat Monitor ERP ingår.
