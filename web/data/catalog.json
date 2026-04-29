@@ -11846,11 +11846,11 @@
       "event_id": "nordbygg-2026",
       "name": {
         "en": "Exhibitor gift bag",
-        "sv": "Exhibitor gift bag"
+        "sv": "Utställargåvopåse"
       },
       "description": {
         "en": "Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin.",
-        "sv": "Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin."
+        "sv": "Simulerat tillval. En kurerad tygkasse med varuprover, en hållbarhetsguide och en Nordbygg-pin."
       },
       "points_cost": 80,
       "image": "assets/images/events/nordbygg-2026.jpg",
@@ -11862,11 +11862,11 @@
       "event_id": "nordbygg-2026",
       "name": {
         "en": "Sustainability Stage seat reservation",
-        "sv": "Sustainability Stage seat reservation"
+        "sv": "Sittplatsreservation, Hållbarhetsscenen"
       },
       "description": {
         "en": "Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one.",
-        "sv": "Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one."
+        "sv": "Simulerat tillval. Reserverar en plats längst fram vid Hållbarhetsscenens huvudtal under dag ett."
       },
       "points_cost": 150,
       "image": "assets/images/events/nordbygg-2026.jpg",
@@ -11878,11 +11878,11 @@
       "event_id": "nordbygg-2026",
       "name": {
         "en": "Event catalog hardcover",
-        "sv": "Event catalog hardcover"
+        "sv": "Evenemangskatalog inbunden"
       },
       "description": {
         "en": "Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan.",
-        "sv": "Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan."
+        "sv": "Simulerat tillval. Inbundet exemplar av Nordbygg 2026-katalogen med utställarregister och planritning."
       },
       "points_cost": 120,
       "image": "assets/images/events/nordbygg-2026.jpg",
@@ -11894,11 +11894,11 @@
       "event_id": "estro-2026",
       "name": {
         "en": "Delegate gift bag",
-        "sv": "Delegate gift bag"
+        "sv": "Delegatgåvopåse"
       },
       "description": {
         "en": "Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples.",
-        "sv": "Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples."
+        "sv": "Simulerat tillval. ESTRO 2026 delegattygkasse med abstracthäfte och sponsorprover."
       },
       "points_cost": 80,
       "image": "assets/images/events/estro-2026.webp",
@@ -11910,11 +11910,11 @@
       "event_id": "estro-2026",
       "name": {
         "en": "VIP access to keynote",
-        "sv": "VIP access to keynote"
+        "sv": "VIP-tillträde till huvudtalet"
       },
       "description": {
         "en": "Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote.",
-        "sv": "Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote."
+        "sv": "Simulerat tillval. Förtursplats och meet-and-greet-pass efter öppningstalet."
       },
       "points_cost": 200,
       "image": "assets/images/events/estro-2026.webp",
@@ -11926,11 +11926,11 @@
       "event_id": "estro-2026",
       "name": {
         "en": "Proceedings hardcover",
-        "sv": "Proceedings hardcover"
+        "sv": "Konferensrapport inbunden"
       },
       "description": {
         "en": "Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings.",
-        "sv": "Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings."
+        "sv": "Simulerat tillval. Inbunden tryckning av hela ESTRO 2026-konferensrapporten."
       },
       "points_cost": 150,
       "image": "assets/images/events/estro-2026.webp",
@@ -11943,11 +11943,11 @@
       "id": "merch-tote-bag",
       "name": {
         "en": "Stockholmsmassan tote bag",
-        "sv": "Stockholmsmassan tote bag"
+        "sv": "Stockholmsmässan-tygkasse"
       },
       "description": {
         "en": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark.",
-        "sv": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark."
+        "sv": "Simulerad artikel. Robust tygkasse med Stockholmsmässans ordmärke."
       },
       "points_cost": 120,
       "image": "assets/images/merchandise/tote-bag.svg",
@@ -11958,11 +11958,11 @@
       "id": "merch-cap",
       "name": {
         "en": "Stockholmsmassan cap",
-        "sv": "Stockholmsmassan cap"
+        "sv": "Stockholmsmässan-keps"
       },
       "description": {
         "en": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo.",
-        "sv": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo."
+        "sv": "Simulerad artikel. Sexpanelskeps med broderad Stockholmsmässan-logotyp."
       },
       "points_cost": 150,
       "image": "assets/images/merchandise/cap.svg",
@@ -11973,11 +11973,11 @@
       "id": "merch-notebook",
       "name": {
         "en": "Notebook",
-        "sv": "Notebook"
+        "sv": "Anteckningsbok"
       },
       "description": {
         "en": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker.",
-        "sv": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker."
+        "sv": "Simulerad artikel. Inbunden A5-anteckningsbok med numrerade sidor och bokmärkesband."
       },
       "points_cost": 90,
       "image": "assets/images/merchandise/notebook.svg",
@@ -11988,11 +11988,11 @@
       "id": "merch-enamel-pin",
       "name": {
         "en": "Enamel pin",
-        "sv": "Enamel pin"
+        "sv": "Emaljpin"
       },
       "description": {
         "en": "Simulated item. Enamel pin with the Stockholmsmassan roundel.",
-        "sv": "Simulated item. Enamel pin with the Stockholmsmassan roundel."
+        "sv": "Simulerad artikel. Emaljpin med Stockholmsmässans cirkelmärke."
       },
       "points_cost": 60,
       "image": "assets/images/merchandise/enamel-pin.svg",
