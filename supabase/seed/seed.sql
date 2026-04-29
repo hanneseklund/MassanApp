@@ -4007,15 +4007,15 @@ Försäljning av byggbeslag – såsom balkskor, vinkelbeslag, hålplattor och h
   ('nordbygg-2026-exhibitor-138658', 'nordbygg-2026', 'Järnet Smide Stockholm AB', 'C17:18', jsonb_build_object('en', 'Järnet Smide Stockholm AB is a well-respected, capable supplier of services in property smithing and maintenance. From its start in 1988 our focus has been on serving public housing companies and property owners, and we have continued in that vein for more than 30 years.
 Our goal and direction today is the same as then: to serve public housing and private property owners with work and advice in sheet metal, smithing and locks, as well as the manufacture and installation of bespoke entrance doors in steel, stainless steel and wood, and fire doors built to the customer''s specification. To deliver the highest quality and finish, most of our products are developed and produced in-house.', 'sv', 'Järnet Smide Stockholm AB är en välrenommerad, och kompetent leverantör av tjänster inom service och fastighetssmide. Redan från starten 1988 har vi haft fokus på att serva allmännyttan och fastighetsägare och har fortsatt så i över 30 år.
 Målsättning och inriktning är nu som då att serva allmännyttan och privata fastighetsägare med arbeten och rådgivning inom plåt, smide, lås samt även tillverkning och montage av specialbyggda entrédörrar i stål, rostfritt samt trä och branddörrar enligt kundens önskemål. För att kunna leverera med högsta kvalitet och finish utvecklas och produceras det mesta av våra produkter i egen regi.'), 'https://jarnetsmide.se', 'assets/images/exhibitors/nordbygg-2026-jarnet-smide-stockholm-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139041', 'nordbygg-2026', 'Kakelspecialisten', 'A01:202', jsonb_build_object('en', 'Kakelspecialisten är ett av Sveriges ledande företag inom kakel och badrumsinredningar. Vi säljer och marknadsför allt inom kakel, klinker, granitkeramik, badrumsinredning, fäst & fogprodukter och andra kringprodukter till både privata och offentliga projekt . Hos oss hittar du marknadens i särklass bredaste projektsortiment.
+  ('nordbygg-2026-exhibitor-139041', 'nordbygg-2026', 'Kakelspecialisten', 'A01:202', jsonb_build_object('en', 'Kakelspecialisten is one of Sweden''s leading companies for tile and bathroom interiors. We sell and market everything in tile, porcelain, granite ceramic, bathroom fittings, adhesives & grouts and other related products for both private and public projects. With us you will find by far the broadest project range on the market.
 
-På Nordbygg kommer vi visa det senast inom kakel och klinker till badrum, med särskilt fokus på hållbarhet. Vi kommer visa vårt sortiment med kakel och klinker som har en mycket stor andel återvunnet material bland annat engelska Alusids sortiment.', 'sv', 'Kakelspecialisten är ett av Sveriges ledande företag inom kakel och badrumsinredningar. Vi säljer och marknadsför allt inom kakel, klinker, granitkeramik, badrumsinredning, fäst & fogprodukter och andra kringprodukter till både privata och offentliga projekt . Hos oss hittar du marknadens i särklass bredaste projektsortiment.
+At Nordbygg we will showcase the latest in bathroom tiles and porcelain, with a particular focus on sustainability. We will be presenting our range of tiles and porcelain with a very high share of recycled content, including the British Alusid range.', 'sv', 'Kakelspecialisten är ett av Sveriges ledande företag inom kakel och badrumsinredningar. Vi säljer och marknadsför allt inom kakel, klinker, granitkeramik, badrumsinredning, fäst & fogprodukter och andra kringprodukter till både privata och offentliga projekt . Hos oss hittar du marknadens i särklass bredaste projektsortiment.
 
 På Nordbygg kommer vi visa det senast inom kakel och klinker till badrum, med särskilt fokus på hållbarhet. Vi kommer visa vårt sortiment med kakel och klinker som har en mycket stor andel återvunnet material bland annat engelska Alusids sortiment.'), 'https://www.kakelspecialisten.se', 'assets/images/exhibitors/nordbygg-2026-kakelspecialisten.jpg'),
-  ('nordbygg-2026-exhibitor-139184', 'nordbygg-2026', 'Kalkylhjälp AB / Bluebeam', 'BG:01', jsonb_build_object('en', 'Smartare kalkylering. Bättre arbetsflöden.
-En träffsäker kalkyl är grunden för ett smidigt och effektivt projekt. Vi har stor erfarenhet av alla typer av kalkyler inom bygg-, VVS- och elbranschen. Vill du lära dig mer om smart kalkylering erbjuder vi även utbildningar för flera programvaror.
+  ('nordbygg-2026-exhibitor-139184', 'nordbygg-2026', 'Kalkylhjälp AB / Bluebeam', 'BG:01', jsonb_build_object('en', 'Smarter estimating. Better workflows.
+An accurate estimate is the foundation of a smooth and efficient project. We have wide experience of every kind of estimate in the construction, HVAC and electrical trades. If you want to learn more about smart estimating, we also offer training for several software packages.
 
-Välkommen till oss! Vi är ett gäng erfarna och flexibla personer som gillar vårt jobb och vet hur man undviker fallgropar. Det lönar sig alltid med en riktig kalkyl, både ekonomiskt och tidsmässigt.', 'sv', 'Smartare kalkylering. Bättre arbetsflöden.
+Welcome to us! We are a team of experienced and flexible people who enjoy our work and know how to avoid the pitfalls. A proper estimate always pays off, both financially and time-wise.', 'sv', 'Smartare kalkylering. Bättre arbetsflöden.
 En träffsäker kalkyl är grunden för ett smidigt och effektivt projekt. Vi har stor erfarenhet av alla typer av kalkyler inom bygg-, VVS- och elbranschen. Vill du lära dig mer om smart kalkylering erbjuder vi även utbildningar för flera programvaror.
 
 Välkommen till oss! Vi är ett gäng erfarna och flexibla personer som gillar vårt jobb och vet hur man undviker fallgropar. Det lönar sig alltid med en riktig kalkyl, både ekonomiskt och tidsmässigt.'), 'https://kalkylhjalp.se', 'assets/images/exhibitors/nordbygg-2026-kalkylhjalp-ab-bluebeam.jpg'),
@@ -4025,60 +4025,60 @@ Välkommen till oss! Vi är ett gäng erfarna och flexibla personer som gillar v
   ('nordbygg-2026-exhibitor-139567', 'nordbygg-2026', 'KE Therm AB', 'A07:21', null, 'https://www.ketherm.se', 'assets/images/exhibitors/nordbygg-2026-ke-therm-ab.jpg'),
   ('nordbygg-2026-exhibitor-140138', 'nordbygg-2026', 'KGA', 'C13:33', null, 'https://www.kga.com.pl', 'assets/images/exhibitors/nordbygg-2026-kga.jpg'),
   ('nordbygg-2026-exhibitor-136561', 'nordbygg-2026', 'Kia Sweden AB', 'AG:114', null, 'https://www.kia.com', null),
-  ('nordbygg-2026-exhibitor-137396', 'nordbygg-2026', 'Kiilax inspektionsluckor', 'C19:43', jsonb_build_object('en', '• Marknadens smidigaste inspektionsluckor med patenterade montagelösningar.
-• Byggkilar i plywood och fukttrög spånskiva.
-• Väderskydd för luftvärmepumpar
-• Distansplattor i plywood
-• Stödbensplattor', 'sv', '• Marknadens smidigaste inspektionsluckor med patenterade montagelösningar.
+  ('nordbygg-2026-exhibitor-137396', 'nordbygg-2026', 'Kiilax inspektionsluckor', 'C19:43', jsonb_build_object('en', '• The market''s smoothest inspection hatches with patented mounting solutions.
+• Construction wedges in plywood and moisture-tolerant chipboard.
+• Weather covers for air-source heat pumps
+• Spacer plates in plywood
+• Outrigger pads', 'sv', '• Marknadens smidigaste inspektionsluckor med patenterade montagelösningar.
 • Byggkilar i plywood och fukttrög spånskiva.
 • Väderskydd för luftvärmepumpar
 • Distansplattor i plywood
 • Stödbensplattor'), 'https://www.kiilax.fi', 'assets/images/exhibitors/nordbygg-2026-kiilax-inspektionsluckor.jpg'),
-  ('nordbygg-2026-exhibitor-134000', 'nordbygg-2026', 'Kiona', 'A20:10 (+1)', jsonb_build_object('en', 'Vi integrerar och ansluter alla tekniska system oavsett varumärke och antal år i drift, utan att det krävs intern programvara och servrar. Vi bevisar att det är möjligt att möta framtiden kostnadseffektivt genom en öppen, flexibel och oberoende proptech-plattform genom våra produkter Web Port, Edge, Energinet och IWMAC.
+  ('nordbygg-2026-exhibitor-134000', 'nordbygg-2026', 'Kiona', 'A20:10 (+1)', jsonb_build_object('en', 'We integrate and connect every technical system regardless of brand or how many years it has been in operation, with no need for in-house software or servers. We prove that it is possible to meet the future cost-effectively through an open, flexible and independent proptech platform via our products Web Port, Edge, Energinet and IWMAC.
 
-I år satsar vi på en större monter med fler möjligheter till att lära sig mer om Kionas produkter, där vi i år lägger extra fokus på vårt partnerprogram och våra nya certifieringskurser och produktnyheter. Oavsett om du är en långvarig partner eller bara nyfiken på vad vi gör, har vi mycket att visa dig.
+This year we are investing in a larger stand with more opportunities to learn about Kiona''s products, with extra focus on our partner programme and our new certification courses and product news. Whether you are a long-standing partner or simply curious about what we do, we have plenty to show you.
 
-Att ligga steget före inom vårt område innebär att hålla sig utbildad. Våra certifieringskurser är utformade för att ge dig den djupa tekniska förståelse du behöver för att leverera de bästa lösningarna till dina kunder. Från grundläggande installation till avancerad konfiguration, vi har en väg för en mängd olika partners och roller.', 'sv', 'Vi integrerar och ansluter alla tekniska system oavsett varumärke och antal år i drift, utan att det krävs intern programvara och servrar. Vi bevisar att det är möjligt att möta framtiden kostnadseffektivt genom en öppen, flexibel och oberoende proptech-plattform genom våra produkter Web Port, Edge, Energinet och IWMAC.
+Staying ahead in our field means staying trained. Our certification courses are designed to give you the deep technical understanding you need to deliver the best solutions to your customers. From basic installation to advanced configuration, we have a path for a wide range of partners and roles.', 'sv', 'Vi integrerar och ansluter alla tekniska system oavsett varumärke och antal år i drift, utan att det krävs intern programvara och servrar. Vi bevisar att det är möjligt att möta framtiden kostnadseffektivt genom en öppen, flexibel och oberoende proptech-plattform genom våra produkter Web Port, Edge, Energinet och IWMAC.
 
 I år satsar vi på en större monter med fler möjligheter till att lära sig mer om Kionas produkter, där vi i år lägger extra fokus på vårt partnerprogram och våra nya certifieringskurser och produktnyheter. Oavsett om du är en långvarig partner eller bara nyfiken på vad vi gör, har vi mycket att visa dig.
 
 Att ligga steget före inom vårt område innebär att hålla sig utbildad. Våra certifieringskurser är utformade för att ge dig den djupa tekniska förståelse du behöver för att leverera de bästa lösningarna till dina kunder. Från grundläggande installation till avancerad konfiguration, vi har en väg för en mängd olika partners och roller.'), 'https://www.kiona.com', 'assets/images/exhibitors/nordbygg-2026-kiona.jpg'),
-  ('nordbygg-2026-exhibitor-138695', 'nordbygg-2026', 'Kiso A/S', 'C07:71', jsonb_build_object('en', 'KISO A/S – Tillförlitliga tätningslösningar för byggindustrin
+  ('nordbygg-2026-exhibitor-138695', 'nordbygg-2026', 'Kiso A/S', 'C07:71', jsonb_build_object('en', 'KISO A/S — Reliable sealing solutions for the construction industry
 
-KISO A/S är en dansk tillverkare och leverantör av högpresterande tätnings- och isoleringslösningar, med ett starkt fokus på bygg- och anläggningssektorn.
+KISO A/S is a Danish manufacturer and supplier of high-performance sealing and insulation solutions, with a strong focus on the construction and civil-engineering sector.
 
-Med många års erfarenhet är vi specialiserade på butylbaserade tejper, gummiprofiler och kundanpassade tätningslösningar, utvecklade för att möta de höga krav som ställs inom modernt byggande – särskilt för fönster- och fasadtillverkare.
+With many years of experience we specialise in butyl-based tapes, rubber profiles and bespoke sealing solutions, developed to meet the high demands of modern construction — particularly for window and façade manufacturers.
 
-Våra lösningar används bland annat inom:
+Our solutions are used in areas such as:
 
-Fönster- och dörrproduktion
+Window and door production
 
-Fasader och klimatskal
+Façades and building envelopes
 
-HVAC- och isoleringssystem
+HVAC and insulation systems
 
-Industriella OEM-applikationer
+Industrial OEM applications
 
-Varför välja KISO?
+Why choose KISO?
 
-Godkända gummiprofiler registrerade i Byggvarubedömningen
+Approved rubber profiles registered in the Byggvarubedömningen building product database
 
-ISO-certifierad produktion och kvalitetsstyrning
+ISO-certified production and quality management
 
-Dokumenterad prestanda i nordiskt klimat
+Documented performance in Nordic climates
 
-Kund- och projektspecifika lösningar
+Customer- and project-specific solutions
 
-Stark teknisk support och snabb respons
+Strong technical support and rapid response
 
-Miljöansvarstagande produkter – fria från skadliga lösningsmedel
+Environmentally responsible products — free from harmful solvents
 
-Vi arbetar nära våra kunder genom hela processen – från teknisk rådgivning och tester till implementering i produktion – för att säkerställa hög kvalitet, enkel montering och lång livslängd.
+We work closely with our customers throughout the process — from technical advice and testing to implementation in production — to ensure high quality, easy installation and a long service life.
 
-Träffa KISO på Nordbygg
-Låt oss visa hur våra tätningslösningar kan skapa mervärde i era byggprojekt.
+Meet KISO at Nordbygg
+Let us show you how our sealing solutions can add value to your construction projects.
 
-KISO A/S – Din partner för säkra och hållbara tätningslösningar.', 'sv', 'KISO A/S – Tillförlitliga tätningslösningar för byggindustrin
+KISO A/S — Your partner for safe and sustainable sealing solutions.', 'sv', 'KISO A/S – Tillförlitliga tätningslösningar för byggindustrin
 
 KISO A/S är en dansk tillverkare och leverantör av högpresterande tätnings- och isoleringslösningar, med ett starkt fokus på bygg- och anläggningssektorn.
 
@@ -4114,16 +4114,16 @@ Träffa KISO på Nordbygg
 Låt oss visa hur våra tätningslösningar kan skapa mervärde i era byggprojekt.
 
 KISO A/S – Din partner för säkra och hållbara tätningslösningar.'), 'https://www.kiso.dk', 'assets/images/exhibitors/nordbygg-2026-kiso-a-s.jpg'),
-  ('nordbygg-2026-exhibitor-134708', 'nordbygg-2026', 'Kiwa Sweden AB', 'AG:26', jsonb_build_object('en', 'Vi är Kiwa, ett av världens största företag inom besiktning, provning och certifiering. Våra tjänster skapar förtroende för våra kunders produkter, tjänster, ledningssystem och medarbetare.', 'sv', 'Vi är Kiwa, ett av världens största företag inom besiktning, provning och certifiering. Våra tjänster skapar förtroende för våra kunders produkter, tjänster, ledningssystem och medarbetare.'), 'https://www.kiwa.se', 'assets/images/exhibitors/nordbygg-2026-kiwa-sweden-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138678', 'nordbygg-2026', 'KiwiTOOLS', 'B06:50', jsonb_build_object('en', 'Vi säljer inte skit. Punkt.
-Bara grejer som håller – Makita, Mafell, Wera, Knipex, Bessey, Stabila, Picard, Halder m.fl.
+  ('nordbygg-2026-exhibitor-134708', 'nordbygg-2026', 'Kiwa Sweden AB', 'AG:26', jsonb_build_object('en', 'We are Kiwa, one of the world''s largest companies in inspection, testing and certification. Our services build trust in our customers'' products, services, management systems and people.', 'sv', 'Vi är Kiwa, ett av världens största företag inom besiktning, provning och certifiering. Våra tjänster skapar förtroende för våra kunders produkter, tjänster, ledningssystem och medarbetare.'), 'https://www.kiwa.se', 'assets/images/exhibitors/nordbygg-2026-kiwa-sweden-ab.jpg'),
+  ('nordbygg-2026-exhibitor-138678', 'nordbygg-2026', 'KiwiTOOLS', 'B06:50', jsonb_build_object('en', 'We don''t sell rubbish. Period.
+Only gear that lasts — Makita, Mafell, Wera, Knipex, Bessey, Stabila, Picard, Halder and more.
 
-Rätt verktyg gör jobbet. Fel verktyg kostar dig tid, pengar och tålamod.
-Vi väljer rätt – så du slipper chansa.
+The right tool gets the job done. The wrong tool costs you time, money and patience.
+We pick the right ones — so you don''t have to take a chance.
 
-Snabba leveranser från Skellefteå, raka besked och noll bullshit.
+Fast deliveries from Skellefteå, straight talk and zero bullshit.
 
-Kom förbi montern på Nordbygg om du vill ha verktyg som levererar!', 'sv', 'Vi säljer inte skit. Punkt.
+Drop by our stand at Nordbygg if you want tools that deliver!', 'sv', 'Vi säljer inte skit. Punkt.
 Bara grejer som håller – Makita, Mafell, Wera, Knipex, Bessey, Stabila, Picard, Halder m.fl.
 
 Rätt verktyg gör jobbet. Fel verktyg kostar dig tid, pengar och tålamod.
@@ -4132,47 +4132,47 @@ Vi väljer rätt – så du slipper chansa.
 Snabba leveranser från Skellefteå, raka besked och noll bullshit.
 
 Kom förbi montern på Nordbygg om du vill ha verktyg som levererar!'), 'https://kiwitools.se', 'assets/images/exhibitors/nordbygg-2026-kiwitools.jpg'),
-  ('nordbygg-2026-exhibitor-138016', 'nordbygg-2026', 'Klima Nor AB', 'A15:24', jsonb_build_object('en', 'Klima Nor AB är ett dotterbolag till Klima Nor A/S i Norge och etableras i Karlstad 2025, med verksamhet över hela Sverige via starka partners.
+  ('nordbygg-2026-exhibitor-138016', 'nordbygg-2026', 'Klima Nor AB', 'A15:24', jsonb_build_object('en', 'Klima Nor AB is a subsidiary of Klima Nor A/S in Norway and is being established in Karlstad in 2025, operating across the whole of Sweden through strong partners.
 
-Klima Nor AB äger agenturen för det Österrikiska bolaget M-Tec Systems.
+Klima Nor AB holds the agency for the Austrian company M-Tec Systems.
 
-M-TEC kan se tillbaka på över 50 års erfarenhet som pionjär inom hållbara energilösningar. Det som började som ett banbrytande företag inom värmepumpsteknik är nu en ledande leverantör av integrerade energisystem i Europa.
+M-TEC can look back on more than 50 years of experience as a pioneer in sustainable energy solutions. What started as a pioneering company in heat-pump technology is now a leading supplier of integrated energy systems in Europe.
 
-Med innovativa produkter, heltäckande tjänster och ett starkt partner nätverk driver vi aktivt energiomställningen – för hushåll, företag och kommuner.M-TEC kan se tillbaka på över 50 års erfarenhet som pionjär inom hållbara energilösningar. Det som började som ett banbrytande företag inom värmepumpsteknik är nu en ledande leverantör av integrerade energisystem i Europa.
+With innovative products, comprehensive services and a strong partner network we are actively driving the energy transition — for households, businesses and municipalities. M-TEC can look back on more than 50 years of experience as a pioneer in sustainable energy solutions. What started as a pioneering company in heat-pump technology is now a leading supplier of integrated energy systems in Europe.
 
-Med innovativa produkter, heltäckande tjänster och ett starkt partner nätverk driver vi aktivt energiomställningen – för hushåll, företag och kommuner.
-Moderbolaget, Klima Nor A/S, är den ledande ventilations grossisten i Inlandsregionen. Med egen produktion av spiral rör och ett brett sortiment av ventilations delar, kompletterar vi vårt erbjudande med energilösningar inom solpaneler och värmepumpar. Hos oss finns även fäst material, teknisk utrustning, arbetskläder och verktyg – allt samlat på ett ställe.
+With innovative products, comprehensive services and a strong partner network we are actively driving the energy transition — for households, businesses and municipalities.
+The parent company, Klima Nor A/S, is the leading ventilation wholesaler in Norway''s Inland region. With our own production of spiral ducting and a broad range of ventilation parts, we round out our offering with energy solutions in solar panels and heat pumps. We also stock fasteners, technical equipment, workwear and tools — everything in one place.
 
-Våra styrkor:
+Our strengths:
 
-Ventilation – egen produktion av spiral rör och omfattande sortiment av ventilations delar
+Ventilation — own production of spiral ducting and an extensive range of ventilation parts
 
-Energi – lösningar med solpaneler och värmepumpar
+Energy — solutions with solar panels and heat pumps
 
-Tillbehör – fäst material, teknisk utrustning, arbetskläder och verktyg
+Accessories — fasteners, technical equipment, workwear and tools
 
-Hållbara energilösningar
+Sustainable energy solutions
 
-Tillsammans med våra samarbetspartners M-TEC och DualSun levererar vi framtidens energilösningar. Fokus ligger på högeffektiva system som samverkar för att täcka:
+Together with our partners M-TEC and DualSun we deliver tomorrow''s energy solutions. The focus is on highly efficient systems that work together to cover:
 
--Värmepumpar
+-Heat pumps
 
--Energi styrning
+-Energy management
 
--Varmvatten
+-Hot water
 
--Solenergi
+-Solar power
 
--Batteri-lagring
+-Battery storage
 
--PVT Värmepumpar
+-PVT heat pumps
 
-Klima Nor AB bygger på lång erfarenhet, teknisk kompetens och innovation. Vår vision är att bidra till en grönare framtid genom helhetslösningar som skapar effektivitet, trygghet och hållbarhet för våra kunder i hela Sverige.
+Klima Nor AB is built on long experience, technical expertise and innovation. Our vision is to contribute to a greener future through end-to-end solutions that bring efficiency, security and sustainability to our customers across Sweden.
 
 www.klima-nor.se
 www.mtec-systems.com
 
-Edward Gawor VD/CEO Sverige', 'sv', 'Klima Nor AB är ett dotterbolag till Klima Nor A/S i Norge och etableras i Karlstad 2025, med verksamhet över hela Sverige via starka partners.
+Edward Gawor MD/CEO Sweden', 'sv', 'Klima Nor AB är ett dotterbolag till Klima Nor A/S i Norge och etableras i Karlstad 2025, med verksamhet över hela Sverige via starka partners.
 
 Klima Nor AB äger agenturen för det Österrikiska bolaget M-Tec Systems.
 
@@ -4215,17 +4215,17 @@ www.mtec-systems.com
 Edward Gawor VD/CEO Sverige'), 'https://www.klima-nor.se', 'assets/images/exhibitors/nordbygg-2026-klima-nor-ab.jpg'),
   ('nordbygg-2026-exhibitor-138638', 'nordbygg-2026', 'KlimaTherm AB', 'A19:26', null, 'https://www.klima-therm.com/se', null),
   ('nordbygg-2026-exhibitor-139208', 'nordbygg-2026', 'KlimaTherm AB 2', 'A19:32', null, 'https://www.klima-therm.com/se', null),
-  ('nordbygg-2026-exhibitor-138158', 'nordbygg-2026', 'Klimatkoncept Sweden AB', 'A13:30', jsonb_build_object('en', 'Klimatkoncept - Din kvalitetsmedvetna partner inom HVAC
+  ('nordbygg-2026-exhibitor-138158', 'nordbygg-2026', 'Klimatkoncept Sweden AB', 'A13:30', jsonb_build_object('en', 'Klimatkoncept — Your quality-conscious partner in HVAC
 
-Vårt mål på Klimatkoncept är tydligt - att förse HVAC-branschen med högkvalitativa värme och kylprodukter samt installationsmaterial som garanterar en framgångsrik och pålitlig installation eller service varje gång.
+Our goal at Klimatkoncept is clear — to supply the HVAC trade with high-quality heating and cooling products and installation materials that guarantee a successful, reliable installation or service every time.
 
-Vi grundade vårt företag med en stark övertygelse om att marknaden förtjänade bättre installationsmaterial än det som tidigare fanns tillgängligt på marknaden. Med en passion för överlägsen kvalitet och en vilja att höja standarden, strävar vi efter att vara din pålitliga grossist inom HVAC-branschen.
+We founded our company with a strong conviction that the market deserved better installation materials than what had previously been available. With a passion for superior quality and a determination to raise the standard, we strive to be your trusted wholesaler in the HVAC industry.
 
-Vårt sortiment inkluderar värmepumpar av alla sorter och allt nödvändigt installationsmaterial som behövs för att du som installatör ska lyckas med din verksamhet, från början till slut, och vi välkomnar dig att utförska vårt utbud av produkter.
+Our range includes heat pumps of every kind and all the installation materials needed for you as an installer to succeed in your business, from start to finish, and we welcome you to explore our product line-up.
 
-Hos Klimatkoncept hittar du inte bara produkter, du hittar en samarbetspartner som delar dina kvalitetskrav och strävan efter enastående resultat, varje gång.
+At Klimatkoncept you do not just find products, you find a partner who shares your quality demands and pursuit of outstanding results, every time.
 
-Utforska vårt sortiment och låt oss tillsammans forma en bättre framtid för HVAC-branschen med högkvalitativa produkter och material. Kontakta oss idag för att ta din verksamhet till nästa nivå med Klimatkoncept som din pålitliga partner.', 'sv', 'Klimatkoncept - Din kvalitetsmedvetna partner inom HVAC
+Explore our range and let us together shape a better future for the HVAC industry with high-quality products and materials. Get in touch today to take your business to the next level with Klimatkoncept as your trusted partner.', 'sv', 'Klimatkoncept - Din kvalitetsmedvetna partner inom HVAC
 
 Vårt mål på Klimatkoncept är tydligt - att förse HVAC-branschen med högkvalitativa värme och kylprodukter samt installationsmaterial som garanterar en framgångsrik och pålitlig installation eller service varje gång.
 
@@ -4237,14 +4237,14 @@ Hos Klimatkoncept hittar du inte bara produkter, du hittar en samarbetspartner s
 
 Utforska vårt sortiment och låt oss tillsammans forma en bättre framtid för HVAC-branschen med högkvalitativa produkter och material. Kontakta oss idag för att ta din verksamhet till nästa nivå med Klimatkoncept som din pålitliga partner.'), 'https://www.klimatkoncept.se', 'assets/images/exhibitors/nordbygg-2026-klimatkoncept-sweden-ab.jpg'),
   ('nordbygg-2026-exhibitor-138612', 'nordbygg-2026', 'KMP Pellet Heating AB', 'A06:30', null, 'https://www.kmp-ab.se', null),
-  ('nordbygg-2026-exhibitor-136729', 'nordbygg-2026', 'KNIPEX WERK', 'B04:31', jsonb_build_object('en', 'KNIPEX Grundades 1882 av Carl Gustav Putsch och är sedan dess en världsledande tångtillverkare.
-Med 1,900 anställda i Tyska Wuppertal och 65,000 m² produktionsyta tillverkar vi 14 miljoner tänger per år (± 70,000 tänger varje dag).
-I 144 år har vi levererat högkvalitativa tänger för professionella användare som har förbättrat deras arbeten.
-Innovationer som Aligator, Cobra, Cobolt, Tångnyckeln, X-cut och Ergostrip används idag i fler än 110 länder via världsomspännande distributionsnät.
-För varje verktygsfunktion väljer vi stål av bästa kvalite och smider den med exakt rätt värme samt korrekta och precisa efterbehandlingar.
-Vi konstruerar och bygger våra egna maskiner, producerar tängerna med hög precision följt av en nolltolerans kvalitékontroll, allt för att kunna garantera full tillförlitlighet.
-Vi erbjuder 1,200 tång-modeller som är väldesignad, simulerad och testade innan de hamnar i dina händer.
-Vi är KNIPEX!', 'sv', 'KNIPEX Grundades 1882 av Carl Gustav Putsch och är sedan dess en världsledande tångtillverkare.
+  ('nordbygg-2026-exhibitor-136729', 'nordbygg-2026', 'KNIPEX WERK', 'B04:31', jsonb_build_object('en', 'KNIPEX was founded in 1882 by Carl Gustav Putsch and has been a world-leading pliers manufacturer ever since.
+With 1,900 employees in Wuppertal, Germany and 65,000 m² of production space, we make 14 million pliers every year (± 70,000 pliers each day).
+For 144 years we have supplied high-quality pliers for professional users that have improved their work.
+Innovations such as Aligator, Cobra, Cobolt, the Pliers Wrench, X-cut and Ergostrip are used today in more than 110 countries via a worldwide distribution network.
+For each tool function we choose steel of the highest quality and forge it at exactly the right temperature, with correct and precise post-processing.
+We design and build our own machines, produce the pliers with high precision followed by zero-tolerance quality control — all to guarantee complete reliability.
+We offer 1,200 pliers models that are well designed, simulated and tested before they reach your hands.
+We are KNIPEX!', 'sv', 'KNIPEX Grundades 1882 av Carl Gustav Putsch och är sedan dess en världsledande tångtillverkare.
 Med 1,900 anställda i Tyska Wuppertal och 65,000 m² produktionsyta tillverkar vi 14 miljoner tänger per år (± 70,000 tänger varje dag).
 I 144 år har vi levererat högkvalitativa tänger för professionella användare som har förbättrat deras arbeten.
 Innovationer som Aligator, Cobra, Cobolt, Tångnyckeln, X-cut och Ergostrip används idag i fler än 110 länder via världsomspännande distributionsnät.
@@ -4252,29 +4252,29 @@ För varje verktygsfunktion väljer vi stål av bästa kvalite och smider den me
 Vi konstruerar och bygger våra egna maskiner, producerar tängerna med hög precision följt av en nolltolerans kvalitékontroll, allt för att kunna garantera full tillförlitlighet.
 Vi erbjuder 1,200 tång-modeller som är väldesignad, simulerad och testade innan de hamnar i dina händer.
 Vi är KNIPEX!'), 'https://www.knipex.se', 'assets/images/exhibitors/nordbygg-2026-knipex-werk.jpg'),
-  ('nordbygg-2026-exhibitor-137900', 'nordbygg-2026', 'Knutwall Marking Systems AB', 'B04:50', jsonb_build_object('en', 'Knutwall erbjuder kundanpassade skyltar och märksystem till marknadens snabbaste leveranser.
+  ('nordbygg-2026-exhibitor-137900', 'nordbygg-2026', 'Knutwall Marking Systems AB', 'B04:50', jsonb_build_object('en', 'Knutwall offers customised signs and labelling systems with the fastest deliveries on the market.
 
-Vi har två produktionsenheter i Sverige men levererar produkter över hela Skandinavien varje dag.
+We have two production sites in Sweden but ship products across the whole of Scandinavia every day.
 
-Designa dina skyltar & märksystem grafiskt online på vår hemsida www.knutwall.com och beställ före 16.00 så skickas dina produkter redan samma dag. Eller maila in din order till order@knutwall.com
+Design your signs & labelling systems graphically online at our website www.knutwall.com and order before 16:00 — your products will be despatched the same day. Or send your order by email to order@knutwall.com
 
-Vi erbjuder kundanpassade produkter så som:
+We offer customised products such as:
 
-• Graverade skyltar i plast, rostfritt och aluminium
-• Taktila skyltar / Blindskriftsskyltar
-• Printade skyltar i plast och aluminium
-• Paneler i plast, aluminium och rostfritt
-• Klistermärken i olika material och utföranden
-• Kabelmärkning i halogenfri plast
-• Rostfri kabelmärkning
-• Partmärkning i halogenfri plast
-• Öppen partmärkning
-• Plintmärkning
-• Rörmärkning & rörmärkningsdekaler
-• Ventilationsmärkning
-• Hammarprodukter
+• Engraved signs in plastic, stainless steel and aluminium
+• Tactile signs / braille signs
+• Printed signs in plastic and aluminium
+• Panels in plastic, aluminium and stainless steel
+• Stickers in various materials and finishes
+• Cable marking in halogen-free plastic
+• Stainless-steel cable marking
+• Component marking in halogen-free plastic
+• Open component marking
+• Terminal-block marking
+• Pipe marking & pipe-marking decals
+• Ventilation marking
+• Hammer products
 
-Och mycket mera, välkommen till vår monter!', 'sv', 'Knutwall erbjuder kundanpassade skyltar och märksystem till marknadens snabbaste leveranser.
+And much more — welcome to our stand!', 'sv', 'Knutwall erbjuder kundanpassade skyltar och märksystem till marknadens snabbaste leveranser.
 
 Vi har två produktionsenheter i Sverige men levererar produkter över hela Skandinavien varje dag.
 
@@ -4306,61 +4306,61 @@ In addition to our Finnish pump factory, Kolmeks operates production facilities 
 
 Kolmeks pumps are typically used in process industries, for example in pulp and paper, marine and offshore, power plants and district heating/cooling systems. Kolmeks In-line speed-controlled pumps with motor-integrated or wall mounted frequency converter are used in the heating and cooling systems of industrial and building technology.
 
-We provide solutions to helping our customers succeed by offering efficient, reliable and sustainable products and services. We are proud of our world-class after sales services, including maintenance and commissioning.', 'sv', 'Kolmeks is a leading Finnish pump manufacturer with 80 years of experience. We are adding new products to our selection of high-quality products.
+We provide solutions to helping our customers succeed by offering efficient, reliable and sustainable products and services. We are proud of our world-class after sales services, including maintenance and commissioning.', 'sv', 'Kolmeks är en ledande finsk pumptillverkare med 80 års erfarenhet. Vi utökar löpande vårt sortiment med nya högkvalitativa produkter.
 
-We have been engineering and manufacturing pumps for 80 years, building a portfolio of industry-driven, reliable, and energy-efficient pumping equipment. Pump technology and application know-how are our core competencies.
+I 80 år har vi konstruerat och tillverkat pumpar och byggt upp en portfölj av branschdrivna, tillförlitliga och energieffektiva pumpar. Pumpteknik och applikationskunnande är våra kärnkompetenser.
 
-In addition to our Finnish pump factory, Kolmeks operates production facilities in Estonia, China, and India focused on component contract manufacturing. We support our customers with high-quality, tailor-made pump and HVAC solutions, complemented by expert maintenance and after-sales services.
+Utöver vår finska pumpfabrik driver Kolmeks produktionsenheter i Estland, Kina och Indien med fokus på legotillverkning av komponenter. Vi stöttar våra kunder med högkvalitativa, skräddarsydda pump- och VVS-lösningar, kompletterade med erfaren service och eftermarknadssupport.
 
-Kolmeks pumps are typically used in process industries, for example in pulp and paper, marine and offshore, power plants and district heating/cooling systems. Kolmeks In-line speed-controlled pumps with motor-integrated or wall mounted frequency converter are used in the heating and cooling systems of industrial and building technology.
+Kolmeks pumpar används typiskt inom processindustrin, exempelvis inom massa och papper, marint och offshore, kraftverk samt fjärrvärme- och fjärrkylasystem. Kolmeks In-line varvtalsstyrda pumpar med motorintegrerad eller väggmonterad frekvensomriktare används i värme- och kylsystem inom industri- och fastighetsteknik.
 
-We provide solutions to helping our customers succeed by offering efficient, reliable and sustainable products and services. We are proud of our world-class after sales services, including maintenance and commissioning.'), 'https://kolmeks.com/en/frontpage', 'assets/images/exhibitors/nordbygg-2026-kolmeks-oy.jpg'),
+Vi levererar lösningar som hjälper våra kunder att lyckas genom att erbjuda effektiva, tillförlitliga och hållbara produkter och tjänster. Vi är stolta över vår eftermarknadsservice i världsklass, inklusive underhåll och driftsättning.'), 'https://kolmeks.com/en/frontpage', 'assets/images/exhibitors/nordbygg-2026-kolmeks-oy.jpg'),
   ('nordbygg-2026-exhibitor-135839', 'nordbygg-2026', 'Komfovent AB', 'A19:16', null, 'https://www.komfovent.se', null),
   ('nordbygg-2026-exhibitor-139412', 'nordbygg-2026', 'Konstraktor i Gävle AB', 'C08:22', jsonb_build_object('en', 'Konstraktor i Gävle AB
-utvecklar smarta lösningar och innovationer för byggbranschen. Under Q1 2026 lanserades vår första produkt XPND - en ny standardlösning för montering av takanslutning.', 'sv', 'Konstraktor i Gävle AB
+develops smart solutions and innovations for the construction industry. In Q1 2026 we launched our first product, XPND — a new standard solution for installing roof connections.', 'sv', 'Konstraktor i Gävle AB
 utvecklar smarta lösningar och innovationer för byggbranschen. Under Q1 2026 lanserades vår första produkt XPND - en ny standardlösning för montering av takanslutning.'), 'https://www.konstraktor.se', 'assets/images/exhibitors/nordbygg-2026-konstraktor-i-gavle-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139092', 'nordbygg-2026', 'KRUFF AB', 'A12:33', jsonb_build_object('en', 'Kruff AB levererar komponenter och reservdelar till företag inom kyla och värme. Vi samarbetar med tillverkare, installatörer och serviceföretag som bygger, underhåller och optimerar tekniska anläggningar i vardagen.
+  ('nordbygg-2026-exhibitor-139092', 'nordbygg-2026', 'KRUFF AB', 'A12:33', jsonb_build_object('en', 'Kruff AB supplies components and spare parts to companies in cooling and heating. We work with manufacturers, installers and service companies that build, maintain and optimise technical installations every day.
 
-Med ett brett sortiment och hög tillgänglighet gör vi det enkelt att hitta rätt produkter, oavsett om det gäller aggregat, kompressorer eller styrningar till kyl- och frysrum samt värmerier. Vårt fokus är att erbjuda pålitliga lösningar som sparar tid och förenklar arbetet för våra kunder.', 'sv', 'Kruff AB levererar komponenter och reservdelar till företag inom kyla och värme. Vi samarbetar med tillverkare, installatörer och serviceföretag som bygger, underhåller och optimerar tekniska anläggningar i vardagen.
+With a broad range and high availability we make it easy to find the right products, whether it is units, compressors or controls for cold and freezer rooms or heating plants. Our focus is to offer reliable solutions that save time and simplify the work for our customers.', 'sv', 'Kruff AB levererar komponenter och reservdelar till företag inom kyla och värme. Vi samarbetar med tillverkare, installatörer och serviceföretag som bygger, underhåller och optimerar tekniska anläggningar i vardagen.
 
 Med ett brett sortiment och hög tillgänglighet gör vi det enkelt att hitta rätt produkter, oavsett om det gäller aggregat, kompressorer eller styrningar till kyl- och frysrum samt värmerier. Vårt fokus är att erbjuda pålitliga lösningar som sparar tid och förenklar arbetet för våra kunder.'), 'https://www.kruff.se', 'assets/images/exhibitors/nordbygg-2026-kruff-ab.jpg'),
   ('nordbygg-2026-exhibitor-139623', 'nordbygg-2026', 'Kruge Sverige AB', 'A10:25', null, 'https://www.kruge.com', 'assets/images/exhibitors/nordbygg-2026-kruge-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-135227', 'nordbygg-2026', 'KSB Sverige AB', 'A04:18', jsonb_build_object('en', 'KSB Sverige AB är ett av Sveriges ledande företag inom flödesteknik med försäljning och service av pumpar och ventiler samt tillhörande automation och reglerutrustning för Industri, Energi, Processindustri samt VA och VVS. Vi är ett dotterföretag i den globala KSB-koncernen.
-Våra produkter kännetecknas av hög kvalitet och effektivitet, god driftekonomi och servicevänlighet.
-Vi finns alltid nära till hands med försäljning och service för den svenska marknaden. Vårt branschkunnande, lagerhållning, egen serviceorganisation tillsammans med utbyggt servicenät bidrar till en lång och säker drift.', 'sv', 'KSB Sverige AB är ett av Sveriges ledande företag inom flödesteknik med försäljning och service av pumpar och ventiler samt tillhörande automation och reglerutrustning för Industri, Energi, Processindustri samt VA och VVS. Vi är ett dotterföretag i den globala KSB-koncernen.
+  ('nordbygg-2026-exhibitor-135227', 'nordbygg-2026', 'KSB Sverige AB', 'A04:18', jsonb_build_object('en', 'KSB Sverige AB is one of Sweden''s leading companies in fluid technology, with sales and service of pumps and valves and the associated automation and control equipment for industry, energy, process industry, water/wastewater and HVAC. We are a subsidiary of the global KSB Group.
+Our products are characterised by high quality and efficiency, sound operating economy and ease of service.
+We are always close at hand with sales and service for the Swedish market. Our industry know-how, stockholding, in-house service organisation and extensive service network all contribute to long, safe operation.', 'sv', 'KSB Sverige AB är ett av Sveriges ledande företag inom flödesteknik med försäljning och service av pumpar och ventiler samt tillhörande automation och reglerutrustning för Industri, Energi, Processindustri samt VA och VVS. Vi är ett dotterföretag i den globala KSB-koncernen.
 Våra produkter kännetecknas av hög kvalitet och effektivitet, god driftekonomi och servicevänlighet.
 Vi finns alltid nära till hands med försäljning och service för den svenska marknaden. Vårt branschkunnande, lagerhållning, egen serviceorganisation tillsammans med utbyggt servicenät bidrar till en lång och säker drift.'), 'https://www.ksb.se', 'assets/images/exhibitors/nordbygg-2026-ksb-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-135160', 'nordbygg-2026', 'KTC Product AB', 'A14:03', null, 'https://www.ktc.se', null),
   ('nordbygg-2026-exhibitor-136723', 'nordbygg-2026', 'Kultursten Norden', 'C04:61K', null, 'https://kultursten.com', null),
   ('nordbygg-2026-exhibitor-136359', 'nordbygg-2026', 'Kylpanel i Nässjö AB', 'C12:61', null, 'https://www.kylpanel.se', 'assets/images/exhibitors/nordbygg-2026-kylpanel-i-nassjo-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137610', 'nordbygg-2026', 'KYOCERA Fastening Solutions Sweden AB', 'B03:30', jsonb_build_object('en', 'Vi är experter på infästningslösningar! Med över 40 års erfarenhet på den svenska marknaden erbjuder vi, under våra varumärken Senco, Tjep, Camo, Stinger och Expandet, marknadens bredaste sortiment av verktyg och infästning till trä och betong. För både professionella hantverkare, hemmafixare och automatiserade industrilösningar.', 'sv', 'Vi är experter på infästningslösningar! Med över 40 års erfarenhet på den svenska marknaden erbjuder vi, under våra varumärken Senco, Tjep, Camo, Stinger och Expandet, marknadens bredaste sortiment av verktyg och infästning till trä och betong. För både professionella hantverkare, hemmafixare och automatiserade industrilösningar.'), 'https://www.kyocera-fastening.com', 'assets/images/exhibitors/nordbygg-2026-kyocera-fastening-solutions-sweden-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137982', 'nordbygg-2026', 'Kåbe-Mattan AB', 'C15:51', jsonb_build_object('en', 'Välkommen till C15:51 och möt oss från Kåbe-Mattan!
+  ('nordbygg-2026-exhibitor-137610', 'nordbygg-2026', 'KYOCERA Fastening Solutions Sweden AB', 'B03:30', jsonb_build_object('en', 'We are experts in fastening solutions! With more than 40 years'' experience on the Swedish market we offer, under our brands Senco, Tjep, Camo, Stinger and Expandet, the broadest range on the market of tools and fasteners for wood and concrete. For professional craftspeople, DIY users and automated industrial applications alike.', 'sv', 'Vi är experter på infästningslösningar! Med över 40 års erfarenhet på den svenska marknaden erbjuder vi, under våra varumärken Senco, Tjep, Camo, Stinger och Expandet, marknadens bredaste sortiment av verktyg och infästning till trä och betong. För både professionella hantverkare, hemmafixare och automatiserade industrilösningar.'), 'https://www.kyocera-fastening.com', 'assets/images/exhibitors/nordbygg-2026-kyocera-fastening-solutions-sweden-ab.jpg'),
+  ('nordbygg-2026-exhibitor-137982', 'nordbygg-2026', 'Kåbe-Mattan AB', 'C15:51', jsonb_build_object('en', 'Welcome to C15:51 and meet us from Kåbe-Mattan!
 
-Kom hit och utforska våra entrémattor och galler i gummi, stål och aluminium.
+Come along and explore our entrance mats and gratings in rubber, steel and aluminium.
 
-Kåbe-Mattan är marknadsledande i Sverige. Vi erbjuder ett komplett program av entrémattor i och skrapgaller med tillbehör som passar alla tänkbara entréer.
+Kåbe-Mattan is the market leader in Sweden. We offer a complete programme of entrance mats and scraper gratings with accessories that suit every conceivable entrance.
 
-Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!', 'sv', 'Välkommen till C15:51 och möt oss från Kåbe-Mattan!
+Swedish, innovative and sustainable — at our stand you will, alongside us, also meet some of the other companies in the Weland Group. A very warm welcome!', 'sv', 'Välkommen till C15:51 och möt oss från Kåbe-Mattan!
 
 Kom hit och utforska våra entrémattor och galler i gummi, stål och aluminium.
 
 Kåbe-Mattan är marknadsledande i Sverige. Vi erbjuder ett komplett program av entrémattor i och skrapgaller med tillbehör som passar alla tänkbara entréer.
 
 Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!'), 'https://www.kabe-mattan.se', 'assets/images/exhibitors/nordbygg-2026-kabe-mattan-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138580', 'nordbygg-2026', 'Kährs AB', 'C06:33', jsonb_build_object('en', 'Kährs – Skandinavisk design med ansvar och kvalitet
-I Sverige har vi i århundraden lärt oss att skapa mycket av lite. Denna tradition av innovation och hållbarhet är en del av Kährs DNA. Vi förvandlar naturresurser till värde med omtanke, precision och ett tidlöst formspråk.
+  ('nordbygg-2026-exhibitor-138580', 'nordbygg-2026', 'Kährs AB', 'C06:33', jsonb_build_object('en', 'Kährs — Scandinavian design with responsibility and quality
+In Sweden we have spent centuries learning to create much from little. That tradition of innovation and sustainability is part of the Kährs DNA. We turn natural resources into value with care, precision and a timeless visual language.
 
-Vår designfilosofi
-Skandinavisk design hos Kährs är mer än estetik – den förenar funktion, hållbarhet och modern minimalism. Våra golv är skapade för att hålla, med en känsla som är både välkomnande och tidlös.
+Our design philosophy
+Scandinavian design at Kährs is more than aesthetics — it brings together function, durability and modern minimalism. Our floors are crafted to last, with a feel that is both welcoming and timeless.
 
-Innovation med ansvar
-För oss handlar innovation om att driva utvecklingen framåt på ett hållbart sätt. Från ansvarsfull materialanskaffning till cirkulära lösningar arbetar vi för att minska miljöpåverkan och samtidigt höja prestandan.
+Innovation with responsibility
+For us, innovation is about pushing development forward in a sustainable way. From responsible material sourcing to circular solutions, we work to reduce environmental impact while at the same time raising performance.
 
-Kvalitet som standard
-Sedan 1857 har kvalitet varit vår norm, inte ett löfte. Varje steg – från produktion till partnerskap – präglas av konsekvens och omsorg. Våra golv är byggda för att prestera och hålla över tid.
+Quality as standard
+Since 1857 quality has been our norm, not a promise. Every step — from production to partnership — is shaped by consistency and care. Our floors are built to perform and to endure.
 
-Vårt mål
-Att inte bara möta förväntningar, utan att överträffa dem. Att ständigt omdefiniera vad ledarskap i branschen innebär.', 'sv', 'Kährs – Skandinavisk design med ansvar och kvalitet
+Our goal
+To not just meet expectations, but to exceed them. To continually redefine what industry leadership means.', 'sv', 'Kährs – Skandinavisk design med ansvar och kvalitet
 I Sverige har vi i århundraden lärt oss att skapa mycket av lite. Denna tradition av innovation och hållbarhet är en del av Kährs DNA. Vi förvandlar naturresurser till värde med omtanke, precision och ett tidlöst formspråk.
 
 Vår designfilosofi
@@ -4379,17 +4379,17 @@ Att inte bara möta förväntningar, utan att överträffa dem. Att ständigt om
   ('nordbygg-2026-exhibitor-134661', 'nordbygg-2026', 'LAUFEN', 'A08:13', null, 'https://www.laufen.se', 'assets/images/exhibitors/nordbygg-2026-laufen.jpg'),
   ('nordbygg-2026-exhibitor-139250', 'nordbygg-2026', 'Lavoro', 'B01:52', null, 'https://www.lavoroeurope.com', 'assets/images/exhibitors/nordbygg-2026-lavoro.jpg'),
   ('nordbygg-2026-exhibitor-134586', 'nordbygg-2026', 'Layher AB', 'B07:21', null, 'https://www.layher.se', null),
-  ('nordbygg-2026-exhibitor-135276', 'nordbygg-2026', 'Lca.no', 'C01:06', jsonb_build_object('en', 'LCA.no AS is a provider of tools and services for environmental documentation and innovation. Our tools use research-based data and comply with international standards to ensure the best possible quality. This means that our tools have a high professional quality while making the development of environmental documentation and analyzes effective and resource-saving.', 'sv', 'LCA.no AS is a provider of tools and services for environmental documentation and innovation. Our tools use research-based data and comply with international standards to ensure the best possible quality. This means that our tools have a high professional quality while making the development of environmental documentation and analyzes effective and resource-saving.'), 'https://www.lca.no', 'assets/images/exhibitors/nordbygg-2026-lca-no.jpg'),
-  ('nordbygg-2026-exhibitor-137849', 'nordbygg-2026', 'Lett Tak Systemer AS', 'C13:61', jsonb_build_object('en', 'Lett-Tak Systemer AS har sedan 1980 projekterat, producerat, levererat och monterat skräddarsydda och hållbara taklösningar för alla typer av byggnader i Norden. Taklösningarna föredras särskilt när det ställs höga krav på byggtid, miljö och tekniska egenskaper.', 'sv', 'Lett-Tak Systemer AS har sedan 1980 projekterat, producerat, levererat och monterat skräddarsydda och hållbara taklösningar för alla typer av byggnader i Norden. Taklösningarna föredras särskilt när det ställs höga krav på byggtid, miljö och tekniska egenskaper.'), 'https://lett-tak.no/sv', 'assets/images/exhibitors/nordbygg-2026-lett-tak-systemer-as.jpg'),
-  ('nordbygg-2026-exhibitor-134530', 'nordbygg-2026', 'Liftroller', 'B08:40', jsonb_build_object('en', 'Effektiv materiallogistik – direkt in i byggnaden
-Liftroller utvecklar smarta lösningar som förenklar och effektiviserar materialhanteringen på byggarbetsplatser. Våra system gör det möjligt att leverera material direkt från kran in genom fasaden – och transportera det hela vägen fram till montageplatsen, snabbt och säkert.
-Resultatet? Mindre bäring, färre lyftmoment och en betydligt bättre arbetsmiljö.
+  ('nordbygg-2026-exhibitor-135276', 'nordbygg-2026', 'Lca.no', 'C01:06', jsonb_build_object('en', 'LCA.no AS is a provider of tools and services for environmental documentation and innovation. Our tools use research-based data and comply with international standards to ensure the best possible quality. This means that our tools have a high professional quality while making the development of environmental documentation and analyzes effective and resource-saving.', 'sv', 'LCA.no AS är en leverantör av verktyg och tjänster för miljödokumentation och innovation. Våra verktyg använder forskningsbaserad data och följer internationella standarder för att säkerställa bästa möjliga kvalitet. Det innebär att våra verktyg håller en hög professionell kvalitet samtidigt som de gör arbetet med miljödokumentation och analyser effektivt och resurssnålt.'), 'https://www.lca.no', 'assets/images/exhibitors/nordbygg-2026-lca-no.jpg'),
+  ('nordbygg-2026-exhibitor-137849', 'nordbygg-2026', 'Lett Tak Systemer AS', 'C13:61', jsonb_build_object('en', 'Lett-Tak Systemer AS has, since 1980, designed, produced, supplied and installed bespoke and durable roofing solutions for every kind of building in the Nordics. The roofing solutions are particularly favoured when high demands are placed on construction time, environment and technical performance.', 'sv', 'Lett-Tak Systemer AS har sedan 1980 projekterat, producerat, levererat och monterat skräddarsydda och hållbara taklösningar för alla typer av byggnader i Norden. Taklösningarna föredras särskilt när det ställs höga krav på byggtid, miljö och tekniska egenskaper.'), 'https://lett-tak.no/sv', 'assets/images/exhibitors/nordbygg-2026-lett-tak-systemer-as.jpg'),
+  ('nordbygg-2026-exhibitor-134530', 'nordbygg-2026', 'Liftroller', 'B08:40', jsonb_build_object('en', 'Efficient material logistics — straight into the building
+Liftroller develops smart solutions that simplify and streamline material handling on construction sites. Our systems make it possible to deliver materials directly from the crane in through the façade — and transport them all the way to the point of installation, quickly and safely.
+The result? Less manual carrying, fewer lifting steps and a significantly better working environment.
 
-Genom Liftroller Rental Sweden AB erbjuder vi flexibla uthyrningslösningar anpassade efter projektets behov. För kunder som vill bygga egen kapacitet erbjuder vi även direktköp av våra produkter.
-Våra rådgivare har erfarenhet från komplexa byggprojekt och hjälper dig att hitta rätt setup – oavsett om det gäller nyproduktion eller rehab.
+Through Liftroller Rental Sweden AB we offer flexible rental solutions tailored to the needs of the project. For customers who want to build up their own capacity, we also offer outright purchase of our products.
+Our advisors have experience from complex construction projects and will help you find the right setup — whether it is new build or refurbishment.
 
-Du känner din byggarbetsplats. Vi optimerar logistiken.
-Besök oss på mässan eller kontakta oss direkt:
+You know your construction site. We optimise the logistics.
+Visit us at the trade show or get in touch directly:
 +46 73 44 18 133
 liftroller.se', 'sv', 'Effektiv materiallogistik – direkt in i byggnaden
 Liftroller utvecklar smarta lösningar som förenklar och effektiviserar materialhanteringen på byggarbetsplatser. Våra system gör det möjligt att leverera material direkt från kran in genom fasaden – och transportera det hela vägen fram till montageplatsen, snabbt och säkert.
@@ -4402,14 +4402,14 @@ Du känner din byggarbetsplats. Vi optimerar logistiken.
 Besök oss på mässan eller kontakta oss direkt:
 +46 73 44 18 133
 liftroller.se'), 'https://www.liftroller.se', 'assets/images/exhibitors/nordbygg-2026-liftroller.jpg'),
-  ('nordbygg-2026-exhibitor-137599', 'nordbygg-2026', 'LIGHT BOY', 'B10:12', jsonb_build_object('en', 'LIGHT BOY EUROPE AB – Företagsprofil
-På LIGHT BOY EUROPE AB tror vi att bra belysning gör mer än att bara lysa upp en plats – den skapar säkerhet, komfort och produktivitet.
+  ('nordbygg-2026-exhibitor-137599', 'nordbygg-2026', 'LIGHT BOY', 'B10:12', jsonb_build_object('en', 'LIGHT BOY EUROPE AB — Company profile
+At LIGHT BOY EUROPE AB we believe that good lighting does more than simply light up a place — it creates safety, comfort and productivity.
 
-Som den europeiska grenen av japanska LIGHT BOY CO., LTD., har vi med oss över 40 års erfarenhet av att utveckla mobila belysningslösningar som är enkla att använda, lätta att transportera och smidiga att arbeta med.
+As the European arm of Japanese LIGHT BOY CO., LTD., we bring with us more than 40 years of experience in developing mobile lighting solutions that are easy to use, easy to transport and easy to work with.
 
-Från bländfria ballongljus till kompakta ljustorn som kan tas med överallt – våra system är skapade för att stötta byggarbetare, evenemangsarrangörer och räddningstjänst, oavsett var pålitligt ljus behövs.
+From glare-free balloon lights to compact light towers that can be taken anywhere — our systems are built to support construction crews, event organisers and emergency services, wherever reliable light is needed.
 
-Vi grundades i Sverige 2022 och vårt mål är att lysa upp hela Europa. Vi är alltid öppna för nya partnerskap – så om du letar efter belysning som presterar maximalt och samtidigt är användarvänlig, kom och prata med oss.', 'sv', 'LIGHT BOY EUROPE AB – Företagsprofil
+We were founded in Sweden in 2022 and our goal is to light up the whole of Europe. We are always open to new partnerships — so if you are looking for lighting that delivers maximum performance while still being user-friendly, come and have a chat with us.', 'sv', 'LIGHT BOY EUROPE AB – Företagsprofil
 På LIGHT BOY EUROPE AB tror vi att bra belysning gör mer än att bara lysa upp en plats – den skapar säkerhet, komfort och produktivitet.
 
 Som den europeiska grenen av japanska LIGHT BOY CO., LTD., har vi med oss över 40 års erfarenhet av att utveckla mobila belysningslösningar som är enkla att använda, lätta att transportera och smidiga att arbeta med.
@@ -4417,22 +4417,22 @@ Som den europeiska grenen av japanska LIGHT BOY CO., LTD., har vi med oss över 
 Från bländfria ballongljus till kompakta ljustorn som kan tas med överallt – våra system är skapade för att stötta byggarbetare, evenemangsarrangörer och räddningstjänst, oavsett var pålitligt ljus behövs.
 
 Vi grundades i Sverige 2022 och vårt mål är att lysa upp hela Europa. Vi är alltid öppna för nya partnerskap – så om du letar efter belysning som presterar maximalt och samtidigt är användarvänlig, kom och prata med oss.'), 'https://www.light-boy.eu/', 'assets/images/exhibitors/nordbygg-2026-light-boy.jpg'),
-  ('nordbygg-2026-exhibitor-137405', 'nordbygg-2026', 'Limestone Factories of Estonia: BRAND: REVAL STONE', 'C07:60', jsonb_build_object('en', 'Limestone Factories of Estonia OÜ, verksamt under varumärket Reval Stone, är en av Estlands mest erfarna producenter av natursten med industriella rötter som sträcker sig tillbaka till 1967.
+  ('nordbygg-2026-exhibitor-137405', 'nordbygg-2026', 'Limestone Factories of Estonia: BRAND: REVAL STONE', 'C07:60', jsonb_build_object('en', 'Limestone Factories of Estonia OÜ, trading under the Reval Stone brand, is one of Estonia''s most experienced producers of natural stone, with industrial roots going back to 1967.
 
-Vi hanterar hela värdekedjan – från stenbrott till färdiga produkter – och levererar högkvalitativ estnisk kalksten och dolomit för fasader, golv, trappor, fönsterbänkar och kundanpassade arkitektoniska element. Våra egna stenbrott i Tallinn, Saaremaa och Märjamaa säkerställer jämn kvalitet, full spårbarhet och leveranssäkerhet.
+We handle the entire value chain — from quarry to finished product — and supply high-quality Estonian limestone and dolomite for façades, floors, stairs, window sills and bespoke architectural elements. Our own quarries in Tallinn, Saaremaa and Märjamaa ensure consistent quality, full traceability and supply security.
 
-Med över 55 års erfarenhet kombinerar vi traditionellt hantverk med modern produktionsteknik för att betjäna arkitekter, fastighetsutvecklare och entreprenörer i Baltikum, Skandinavien och övriga Europa. Sedan 2023 drivs vår produktion med 100 % förnybar energi, vilket stödjer hållbara byggmål.
+With more than 55 years of experience we combine traditional craftsmanship with modern production technology to serve architects, property developers and contractors in the Baltics, Scandinavia and the rest of Europe. Since 2023 our production has run on 100% renewable energy, supporting sustainable construction goals.
 
-Utvalda referensprojekt i Estland:
-Konstmuseet KUMU, Tallinn – omfattande användning av Kaarma- och Orgita-dolomit i fasader samt Reval-kalksten i golv;
-Tallinns universitets huvudbyggnad – fasad i Kaarma-dolomit;
-Noblessner-kvarteret, Tallinn – slipade fasader i Kaarma- och Orgita-dolomit på flera bostadsbyggnader m.fl.
+Selected reference projects in Estonia:
+KUMU Art Museum, Tallinn — extensive use of Kaarma and Orgita dolomite in façades and Reval limestone in floors;
+Main building of Tallinn University — façade in Kaarma dolomite;
+Noblessner district, Tallinn — polished façades in Kaarma and Orgita dolomite on several residential buildings, and more.
 
-Referensprojekt i Lettland:
-Estlands ambassad i Riga – arkitektoniskt projekt med estnisk naturdolomit som speglar minimalistisk nordisk design och kulturell identitet.
+Reference projects in Latvia:
+Embassy of Estonia in Riga — an architectural project featuring Estonian natural dolomite that reflects minimalist Nordic design and cultural identity.
 
-Referenser i Sverige:
-Pineedgevilla samt många andra offentliga och privata byggnader.', 'sv', 'Limestone Factories of Estonia OÜ, verksamt under varumärket Reval Stone, är en av Estlands mest erfarna producenter av natursten med industriella rötter som sträcker sig tillbaka till 1967.
+References in Sweden:
+Pineedgevilla and many other public and private buildings.', 'sv', 'Limestone Factories of Estonia OÜ, verksamt under varumärket Reval Stone, är en av Estlands mest erfarna producenter av natursten med industriella rötter som sträcker sig tillbaka till 1967.
 
 Vi hanterar hela värdekedjan – från stenbrott till färdiga produkter – och levererar högkvalitativ estnisk kalksten och dolomit för fasader, golv, trappor, fönsterbänkar och kundanpassade arkitektoniska element. Våra egna stenbrott i Tallinn, Saaremaa och Märjamaa säkerställer jämn kvalitet, full spårbarhet och leveranssäkerhet.
 
@@ -4449,31 +4449,31 @@ Estlands ambassad i Riga – arkitektoniskt projekt med estnisk naturdolomit som
 Referenser i Sverige:
 Pineedgevilla samt många andra offentliga och privata byggnader.'), 'https://www.revalstone.com', 'assets/images/exhibitors/nordbygg-2026-limestone-factories-of-estonia-brand-reval-stone.jpg'),
   ('nordbygg-2026-exhibitor-137070', 'nordbygg-2026', 'Lindab Sverige AB', 'C17:51', null, 'https://www.lindab.se', 'assets/images/exhibitors/nordbygg-2026-lindab-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138397', 'nordbygg-2026', 'Lindinvent', 'A17:02', jsonb_build_object('en', 'Lindinvents systemlösning för styrning av ventilation, belysning och solavskärmning består av den mest energieffektiva teknologin och algoritmerna och har den lägsta dokumenterade livscykel- och installationskostnaden.
+  ('nordbygg-2026-exhibitor-138397', 'nordbygg-2026', 'Lindinvent', 'A17:02', jsonb_build_object('en', 'Lindinvent''s system solution for control of ventilation, lighting and solar shading is built on the most energy-efficient technology and algorithms, and has the lowest documented life-cycle and installation cost.
 
-Tusentals fastigheter över hela Sverige har en systemlösning från Lindinvent som skapar en bättre arbetsmiljö för de som arbetar där samtidigt som stora mängder energi sparas. Vi har ett fokus i åtanke när vi utvecklar våra produkter; hållbarhet.', 'sv', 'Lindinvents systemlösning för styrning av ventilation, belysning och solavskärmning består av den mest energieffektiva teknologin och algoritmerna och har den lägsta dokumenterade livscykel- och installationskostnaden.
+Thousands of properties across Sweden run on a Lindinvent system solution that creates a better working environment for the people who use the building, while at the same time saving large amounts of energy. We have one focus in mind when we develop our products: sustainability.', 'sv', 'Lindinvents systemlösning för styrning av ventilation, belysning och solavskärmning består av den mest energieffektiva teknologin och algoritmerna och har den lägsta dokumenterade livscykel- och installationskostnaden.
 
 Tusentals fastigheter över hela Sverige har en systemlösning från Lindinvent som skapar en bättre arbetsmiljö för de som arbetar där samtidigt som stora mängder energi sparas. Vi har ett fokus i åtanke när vi utvecklar våra produkter; hållbarhet.'), 'https://www.lindinvent.se', 'assets/images/exhibitors/nordbygg-2026-lindinvent.jpg'),
   ('nordbygg-2026-exhibitor-137118', 'nordbygg-2026', 'Lindner Scandinavia', 'C10:32', null, 'https://www.linscan.se', null),
   ('nordbygg-2026-exhibitor-138007', 'nordbygg-2026', 'Linervent AB', 'A20:29', null, 'https://www.linervent.se', null),
-  ('nordbygg-2026-exhibitor-137894', 'nordbygg-2026', 'Lingbo Kulturfönster', 'C07:33H', jsonb_build_object('en', 'Svensktillverkade fönster och dörrar med äkta spröjs och speglar. Kundanpassade produkter av kvalitetsträ för dig som respektfullt renoverar ett gammalt hus eller bygger nytt med det lilla extra.', 'sv', 'Svensktillverkade fönster och dörrar med äkta spröjs och speglar. Kundanpassade produkter av kvalitetsträ för dig som respektfullt renoverar ett gammalt hus eller bygger nytt med det lilla extra.'), 'https://www.lingbo.se', 'assets/images/exhibitors/nordbygg-2026-lingbo-kulturfonster.jpg'),
+  ('nordbygg-2026-exhibitor-137894', 'nordbygg-2026', 'Lingbo Kulturfönster', 'C07:33H', jsonb_build_object('en', 'Swedish-made windows and doors with genuine glazing bars and panels. Customised products in quality timber for those who are respectfully renovating an old house or building new with that little extra.', 'sv', 'Svensktillverkade fönster och dörrar med äkta spröjs och speglar. Kundanpassade produkter av kvalitetsträ för dig som respektfullt renoverar ett gammalt hus eller bygger nytt med det lilla extra.'), 'https://www.lingbo.se', 'assets/images/exhibitors/nordbygg-2026-lingbo-kulturfonster.jpg'),
   ('nordbygg-2026-exhibitor-139302', 'nordbygg-2026', 'Litescreen Sweden AB', 'B08:42', null, 'https://www.litescreen.se', null),
   ('nordbygg-2026-exhibitor-140102', 'nordbygg-2026', 'LJ Solutions', 'C03:41', jsonb_build_object('en', 'LJ Solutions works with a passion for facades. With our upcyclable cladding we provide healthy and beautiful facades, where the indoor climate, the living environment and social sustainability come first.
 
 Contact is paramount in their cooperation: We consider social sustainability enormously important towards our partners, clients and colleagues. But also towards our living environment. With our sustainable product range we steer on products that are reusable, upcyclable and efficiently assembled, without nitrogen and CO2 emissions. Our products are produced in Europe, to guarantee high quality products and to limit CO2?and transport.
 
-Neolife® stands for natural wood composite cladding that barely contains any plastic. The natural substance lignine in wood is also the binder instead of plastics. And minerals are responsible for the fireresistantclass D, C or B. No a coating needed! This makes them maintenance-free and circular: the panels can be fully upcycled, up to three times!', 'sv', 'LJ Solutions works with a passion for facades. With our upcyclable cladding we provide healthy and beautiful facades, where the indoor climate, the living environment and social sustainability come first.
+Neolife® stands for natural wood composite cladding that barely contains any plastic. The natural substance lignine in wood is also the binder instead of plastics. And minerals are responsible for the fireresistantclass D, C or B. No a coating needed! This makes them maintenance-free and circular: the panels can be fully upcycled, up to three times!', 'sv', 'LJ Solutions arbetar med en passion för fasader. Med vår uppcyklingsbara fasadbeklädnad levererar vi sunda och vackra fasader, där inomhusklimatet, livsmiljön och social hållbarhet kommer i första rummet.
 
-Contact is paramount in their cooperation: We consider social sustainability enormously important towards our partners, clients and colleagues. But also towards our living environment. With our sustainable product range we steer on products that are reusable, upcyclable and efficiently assembled, without nitrogen and CO2 emissions. Our products are produced in Europe, to guarantee high quality products and to limit CO2?and transport.
+Kontakt är centralt i samarbetet: Vi anser att social hållbarhet är oerhört viktigt gentemot våra partners, kunder och kollegor. Men också gentemot vår livsmiljö. Med vårt hållbara produktsortiment styr vi mot produkter som är återanvändbara, uppcyklingsbara och effektivt monterade, utan utsläpp av kväve och koldioxid. Våra produkter tillverkas i Europa för att garantera produkter av hög kvalitet och för att begränsa koldioxid och transporter.
 
-Neolife® stands for natural wood composite cladding that barely contains any plastic. The natural substance lignine in wood is also the binder instead of plastics. And minerals are responsible for the fireresistantclass D, C or B. No a coating needed! This makes them maintenance-free and circular: the panels can be fully upcycled, up to three times!'), 'https://ljsolutions.nl/', 'assets/images/exhibitors/nordbygg-2026-lj-solutions.jpg'),
-  ('nordbygg-2026-exhibitor-133979', 'nordbygg-2026', 'LK Systems AB', 'A05:20', jsonb_build_object('en', 'Din leverantör inom VVS
-LK Systems är ledande i Norden inom lösningar för värme- och tappvattensystem. Vi utvecklar system för vattenburen golvvärme, tappvatten och renovering. Våra system är enkla att installera och i vår prefabriceringsanläggning tillverkar vi även skräddarsydda system som ytterligare förenklar installationen. Från idé till färdig produkt, här får du de smartaste lösningarna, idag och i framtiden.', 'sv', 'Din leverantör inom VVS
+Neolife® står för fasadbeklädnad i naturlig träkomposit som nästan inte innehåller någon plast. Det naturliga ämnet lignin i trä fungerar också som bindemedel i stället för plaster. Och mineraler ansvarar för brandklass D, C eller B. Ingen ytbehandling behövs! Det gör dem underhållsfria och cirkulära: panelerna kan uppcyklas fullt ut, upp till tre gånger!'), 'https://ljsolutions.nl/', 'assets/images/exhibitors/nordbygg-2026-lj-solutions.jpg'),
+  ('nordbygg-2026-exhibitor-133979', 'nordbygg-2026', 'LK Systems AB', 'A05:20', jsonb_build_object('en', 'Your supplier in plumbing and heating
+LK Systems is the leading Nordic supplier of solutions for heating and tap-water systems. We develop systems for hydronic underfloor heating, tap water and renovation. Our systems are easy to install, and at our prefabrication facility we also produce bespoke systems that simplify installation even further. From idea to finished product, here you get the smartest solutions, today and in the future.', 'sv', 'Din leverantör inom VVS
 LK Systems är ledande i Norden inom lösningar för värme- och tappvattensystem. Vi utvecklar system för vattenburen golvvärme, tappvatten och renovering. Våra system är enkla att installera och i vår prefabriceringsanläggning tillverkar vi även skräddarsydda system som ytterligare förenklar installationen. Från idé till färdig produkt, här får du de smartaste lösningarna, idag och i framtiden.'), 'https://www.lksystems.se', 'assets/images/exhibitors/nordbygg-2026-lk-systems-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134782', 'nordbygg-2026', 'Loggamera AB', 'A15:02', jsonb_build_object('en', 'Vi erbjuder tjänster in om IMD, individuell mätning och debitering och temperaturmätning. Våra kunder är fastighetsägare, bostadsrättsföreningar som vill samla in mätning av el, vatten, laddboxar och värme för debitering. Loggamera har direktintegration med de flesta fastighetssystem och förvaltare på marknaden.', 'sv', 'Vi erbjuder tjänster in om IMD, individuell mätning och debitering och temperaturmätning. Våra kunder är fastighetsägare, bostadsrättsföreningar som vill samla in mätning av el, vatten, laddboxar och värme för debitering. Loggamera har direktintegration med de flesta fastighetssystem och förvaltare på marknaden.'), 'https://www.loggamera.se', 'assets/images/exhibitors/nordbygg-2026-loggamera-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137788', 'nordbygg-2026', 'Loimaan Kivi', 'C05:63', jsonb_build_object('en', 'Under vår +100-åriga historia har Loimaan Kivi alltid varit en stark pionjär inom stenbearbetning i Finland och en ledande aktör inom natursten i Norden. Från berg till färdig produkt, nordisk natursten för trädgård och offentlig miljö.', 'sv', 'Under vår +100-åriga historia har Loimaan Kivi alltid varit en stark pionjär inom stenbearbetning i Finland och en ledande aktör inom natursten i Norden. Från berg till färdig produkt, nordisk natursten för trädgård och offentlig miljö.'), 'https://www.natursten.fi', 'assets/images/exhibitors/nordbygg-2026-loimaan-kivi.jpg'),
-  ('nordbygg-2026-exhibitor-139314', 'nordbygg-2026', 'Lumenor AB', 'AG:78', jsonb_build_object('en', 'Mobil batteridriven arbetsbelysning.
-Lysmaster upp till 5,3meter.', 'sv', 'Mobil batteridriven arbetsbelysning.
+  ('nordbygg-2026-exhibitor-134782', 'nordbygg-2026', 'Loggamera AB', 'A15:02', jsonb_build_object('en', 'We offer services in IMD (individual metering and billing) and temperature monitoring. Our customers are property owners and tenant-owner associations who want to gather metering data for electricity, water, EV charging and heating for billing purposes. Loggamera has direct integration with most of the property management systems and managers on the market.', 'sv', 'Vi erbjuder tjänster in om IMD, individuell mätning och debitering och temperaturmätning. Våra kunder är fastighetsägare, bostadsrättsföreningar som vill samla in mätning av el, vatten, laddboxar och värme för debitering. Loggamera har direktintegration med de flesta fastighetssystem och förvaltare på marknaden.'), 'https://www.loggamera.se', 'assets/images/exhibitors/nordbygg-2026-loggamera-ab.jpg'),
+  ('nordbygg-2026-exhibitor-137788', 'nordbygg-2026', 'Loimaan Kivi', 'C05:63', jsonb_build_object('en', 'Throughout our 100+ year history, Loimaan Kivi has always been a strong pioneer in stone processing in Finland and a leading natural-stone player in the Nordics. From rock to finished product, Nordic natural stone for gardens and public environments.', 'sv', 'Under vår +100-åriga historia har Loimaan Kivi alltid varit en stark pionjär inom stenbearbetning i Finland och en ledande aktör inom natursten i Norden. Från berg till färdig produkt, nordisk natursten för trädgård och offentlig miljö.'), 'https://www.natursten.fi', 'assets/images/exhibitors/nordbygg-2026-loimaan-kivi.jpg'),
+  ('nordbygg-2026-exhibitor-139314', 'nordbygg-2026', 'Lumenor AB', 'AG:78', jsonb_build_object('en', 'Mobile battery-powered work lighting.
+Light masts up to 5.3 metres.', 'sv', 'Mobil batteridriven arbetsbelysning.
 Lysmaster upp till 5,3meter.'), 'https://lumenor.se', null),
   ('nordbygg-2026-exhibitor-138222', 'nordbygg-2026', 'Maba Maskin Nordic AB', 'C09:19', jsonb_build_object('en', 'Maba Maskin Nordic AB är ett grossistföretag som utvecklar, importerar, lagerhåller och erbjuder
 produkter till framför allt glasmästeribranschen, byggbranschen och planglasindustrin.
