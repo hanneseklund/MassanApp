@@ -60,3 +60,33 @@ References:
 - Comment on issue #27 with the fix summary; only close the issue if
   the user has confirmed there are no other untranslated surfaces
   remaining.
+
+## Resolution
+
+**Root cause: data, not renderer.** The renderer
+(`web/index.html:361,403` → `$store.lang.pick(event.summary)`) and the
+seed file (`supabase/seed/seed.sql`) were both correct — every event
+already had natural Swedish copy in `summary`, `subtitle`, and the
+overrides/branding leaves. The live Supabase project
+(`esvyrbsypfgpdhijyywz`), however, still held the duplicate-fill from
+sub-task 01 of the dual-language migration: 42/42 events had
+`summary->>'en' = summary->>'sv'`, same for `subtitle` and `name`. The
+catalog store (`web/assets/js/stores/catalog.js`) loads from Supabase,
+so the UI rendered English in both languages despite the seed and
+`web/data/catalog.json` carrying real translations.
+
+**Fix.** Re-applied the two `insert into public.events ... on conflict
+(id) do update set ...` blocks from `supabase/seed/seed.sql`
+(lines 104-186 and 196-720) to the live Supabase project via
+`mcp__claude_ai_Supabase__execute_sql`. Idempotent — the upsert
+overwrote the duplicated slots without touching anything else.
+
+**Post-apply verification (live DB):**
+- `summary_dup = 0`, `subtitle_dup = 0` across all 42 events.
+- `name_dup = 32` remains as intended (brand names like "Nordbygg
+  2026", "ESTRO 2026", "Skydd 2032" stay identical in both languages
+  per task 02 guidance).
+- Spot-check on `nordbygg-2026`, `yrkes-sm-2026`, `skydd-2032`
+  confirms natural Swedish copy.
+
+**No code changed.** `npm run test:unit` still passes (442 tests).
