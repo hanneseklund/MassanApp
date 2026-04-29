@@ -449,6 +449,11 @@ stay in lockstep. Grouped by module area:
   `lang.test.mjs` covers the `stores/lang.js` persistence,
   `set()` same-language guard, storage and `<html lang>` side
   effects, and delegation to the i18n helpers.
+  `i18n-content.test.mjs` covers `pickLang` / `pickLangArray`
+  in `util/i18n-content.js` — the dual-language `{ en, sv }`
+  resolver used by views to render seeded catalog leaves,
+  including the English fallback, the plain-string
+  transitional pass-through, and null/undefined handling.
 - **Calendar and dates** — `calendar.test.mjs` covers
   `util/calendar.js` filter/sort; `dates.test.mjs` covers
   formatters in `util/dates.js`.

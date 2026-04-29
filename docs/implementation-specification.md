@@ -237,6 +237,13 @@ web/assets/js/
                                newsletter-preference shape shared by the
                                newsletter store and the signup /
                                preferences views
+    i18n-content.js            pickLang(value, lang),
+                               pickLangArray(value, lang) — render-time
+                               resolver for dual-language seeded catalog
+                               leaves (`jsonb { en, sv }`) with a
+                               plain-string fallback used during the
+                               transitional window before a column is
+                               migrated
   simulations/
     qr.js                      ticketQrPayload, ticketQrSvgFor +
                                internal hash / matrix helpers
@@ -258,7 +265,8 @@ web/assets/js/
                                without a live Supabase session.
     catalog.js                 Alpine.store("catalog", ...) (venue,
                                events, news, articles, program,
-                               exhibitors, speakers)
+                               exhibitors, speakers, point add-ons,
+                               merchandise)
     tickets.js                 Alpine.store("tickets", ...)
     newsletter.js              Alpine.store("newsletter", ...)
     food-orders.js             Alpine.store("foodOrders", ...) (signed-in
