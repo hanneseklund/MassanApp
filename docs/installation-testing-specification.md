@@ -484,10 +484,12 @@ stay in lockstep. Grouped by module area:
   ticket-type catalog and stacked-layout section order in
   `util/sections.js`.
 - **Food and newsletter shape** — `food.test.mjs` covers the
-  ordering catalog and `upcomingTimeslots` next-half-hour
-  generator in `util/food.js`. `preferences.test.mjs` covers the
-  newsletter preference shape in `util/newsletter.js`
-  (`defaultNewsletterPreferences`, `normalizeNewsletterPreferences`).
+  ordering catalog, the `upcomingTimeslots` next-half-hour
+  generator, and the per-event themed-menu lookup
+  (`themeIdForEvent`, `themedMenuForEvent`) in `util/food.js`.
+  `preferences.test.mjs` covers the newsletter preference shape
+  in `util/newsletter.js` (`defaultNewsletterPreferences`,
+  `normalizeNewsletterPreferences`).
 - **Simulations** — `qr.test.mjs` covers the QR payload builder
   in `simulations/qr.js`; `payment.test.mjs` covers the
   transaction-ref format in `simulations/payment.js`;

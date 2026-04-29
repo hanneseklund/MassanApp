@@ -178,8 +178,10 @@ web/assets/js/
     food.js                    FOOD_MENUS, PICKUP_LOCATIONS,
                                RESTAURANTS, menuById, pickupById,
                                restaurantById, canonical*Label,
-                               upcomingTimeslots (food ordering catalog
-                               and 30-minute timeslot generator)
+                               upcomingTimeslots, themeIdForEvent,
+                               themedMenuForEvent (food ordering catalog,
+                               30-minute timeslot generator, and per-event
+                               themed-menu lookup driven by event.category)
     points.js                  POINTS_PER_TICKET (=100),
                                pointsForTicket(ticket),
                                pointsForFoodOrder(order),
