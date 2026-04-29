@@ -1,5 +1,29 @@
 # Translate seeded content — 04: exhibitors
 
+> **Status:** split into four runnable sub-tasks on 2026-04-29
+> because the change touches ~566 non-null exhibitor descriptions
+> across the Nordbygg, ESTRO, and EHA events — far too many natural-
+> language translations for one agent session. The duplicate-fill
+> from 01c3 already shipped, so each chunk can land independently.
+>
+> Sub-tasks (in `agent/tasks/`, can land in any order, but 04d holds
+> the milestone comment and should land last):
+>
+> 1. `translate-seeded-content-dual-language-04a-simulated-and-nordbygg-a-d.md`
+>    — 3 simulated rows (ESTRO + EHA) plus Nordbygg names A–D
+>    (~146 rows). Sets up the translation tooling/payload pattern
+>    and the terminology-mapping comment at the top of the
+>    exhibitors `INSERT` block.
+> 2. `translate-seeded-content-dual-language-04b-nordbygg-e-j.md`
+>    — Nordbygg names E–J (~139 rows).
+> 3. `translate-seeded-content-dual-language-04c-nordbygg-k-r.md`
+>    — Nordbygg names K–R (~133 rows).
+> 4. `translate-seeded-content-dual-language-04d-nordbygg-s-z.md`
+>    — Nordbygg names S–Z (~148 rows). Carries the issue #27
+>    milestone comment for the exhibitor roll-up; should land last.
+>
+> The original task content is preserved below for context.
+
 References:
 - issue #27 follow-up comment:
   https://github.com/hanneseklund/MassanApp/issues/27#issuecomment-4341441409
