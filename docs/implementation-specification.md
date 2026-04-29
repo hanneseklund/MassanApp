@@ -480,11 +480,21 @@ skip the `.select()` return — see the comment in
   supported languages are `en` and `sv`. English is the canonical
   source; missing keys in another language fall back to the English
   value.
-- Event content (event names, summaries, news, articles, program
-  items, exhibitor copy, and the shared venue's practical-info fields)
-  is not translated by the app. The data model does not preclude
-  per-language content; a later task can seed translated columns and
-  extend the selectors without changing the i18n infrastructure.
+- Catalog content (event names/subtitles/summaries, the shared venue's
+  practical-info fields, news, articles, program items, exhibitors,
+  speaker bios, point add-ons, and venue-wide merchandise) is stored
+  in a dual-language `jsonb { "en", "sv" }` shape and rendered in the
+  active UI language by the `pickLang` helper in
+  `web/assets/js/util/i18n-content.js`. Views read either through
+  `pickLang(value, $store.lang.current)` or the ergonomic
+  `$store.lang.pick(value)` getter, and the helper accepts a plain
+  string as a transitional fallback so the views remain robust against
+  any column that is still being migrated. The schema migration was
+  split across `0007_dual_language_events_venues.sql`,
+  `0008_dual_language_editorial.sql`,
+  `0009_dual_language_exhibitors.sql`, and
+  `0010_dual_language_points.sql` — one per table group — so each
+  migration could land independently with its matching seed rewrite.
 - Date helpers in `util/dates.js` read the active language's Intl
   locale from `$store.lang.dateLocale()` so weekday and month names
   render in the active language.
@@ -824,6 +834,24 @@ Exactly one venue record is expected in the prototype.
     `tickets.questionnaire` (JSONB) and
     `events.questionnaire_subjects` (JSONB) for the
     ticket-purchase questionnaire.
+  - `0007_dual_language_events_venues.sql` — converts user-facing
+    text columns on `events` (`name`, `subtitle`, `summary`,
+    branding/overrides leaves) and the shared `venues` row
+    (`transport`, `parking`, `restaurants`, `security`,
+    `sustainability`, `maps`) to the dual-language
+    `jsonb { en, sv }` shape resolved by `pickLang`.
+  - `0008_dual_language_editorial.sql` — converts the editorial
+    tables (`news_items.title/body`, `articles.title/body`,
+    `program_items.title/description/location`, `speakers.bio` and
+    `speakers.affiliation`) to the same shape. `speakers.name` and
+    `program_items.track` stay single-string by design.
+  - `0009_dual_language_exhibitors.sql` — converts
+    `exhibitors.description` to `jsonb { en, sv }`. The exhibitor
+    `name` stays a single canonical string (company brand name).
+  - `0010_dual_language_points.sql` — converts
+    `point_addons.name/description` and
+    `merchandise.name/description` to `jsonb { en, sv }`, completing
+    the dual-language rollout across every catalog text column.
 - The frontend talks to Supabase directly using the anon key. There is no
   separate API layer in the prototype.
 - Email confirmation in Supabase Auth is left disabled for the shared
@@ -858,6 +886,15 @@ without querying Supabase:
   "merchandise":   [ ... venue-wide points shop catalog ... ]
 }
 ```
+
+User-facing text leaves on the catalog tables are stored as
+`{ "en": "...", "sv": "..." }` objects (jsonb) and resolved at render
+time by `pickLang`. Brand/proper-name leaves — `events.id`,
+`exhibitors.name`, `speakers.name`, `program_items.track`,
+`venues.id`, asset paths, slugs, and similar canonical identifiers —
+remain single strings. Both `seed.sql` and the `catalog.json` mirror
+emit the same shape; when a leaf is updated, it must be updated in
+both files.
 
 Per-entity `event_id` values match the `id` of the event they belong to.
 The venue is a single object, not a list, because the prototype only
