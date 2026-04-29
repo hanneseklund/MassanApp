@@ -1,5 +1,28 @@
 # Translate seeded content — 04b: Nordbygg exhibitors E–J
 
+> **Status:** split into five per-letter runnable sub-tasks on
+> 2026-04-29 because the change touches ~142 non-null exhibitor
+> descriptions across letters E–J — too many natural-language
+> translations for one agent session (the per-letter precedent
+> from 04a-cont-{b,c,d} already established that one letter is
+> roughly the upper bound). Each chunk can land independently.
+>
+> Sub-tasks (in `agent/tasks/`, can land in any order; none of
+> them carry the milestone comment — that still waits for 04d):
+>
+> 1. `translate-seeded-content-dual-language-04b-cont-e-nordbygg.md`
+>    — Nordbygg names starting with E (~40 rows).
+> 2. `translate-seeded-content-dual-language-04b-cont-f-nordbygg.md`
+>    — Nordbygg names starting with F (~25 rows).
+> 3. `translate-seeded-content-dual-language-04b-cont-g-nordbygg.md`
+>    — Nordbygg names starting with G (~24 rows).
+> 4. `translate-seeded-content-dual-language-04b-cont-h-nordbygg.md`
+>    — Nordbygg names starting with H (~35 rows).
+> 5. `translate-seeded-content-dual-language-04b-cont-i-j-nordbygg.md`
+>    — Nordbygg names starting with I or J (~18 rows).
+>
+> The original task content is preserved below for context.
+
 References:
 - issue #27 follow-up comment:
   https://github.com/hanneseklund/MassanApp/issues/27#issuecomment-4341441409
