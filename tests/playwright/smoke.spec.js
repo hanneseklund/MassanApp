@@ -689,16 +689,37 @@ test.describe("Food ordering (simulated)", () => {
     await waitForSignedIn(page);
 
     await openEventByName(page, "Nordbygg 2026");
-    await openSubview(page, "food");
+    // Click a food preview tile on the event landing instead of jumping
+    // straight to the food page — this exercises the issue #28 path
+    // where the tile click should navigate to the dedicated page and
+    // preselect that menu.
+    const foodPreviewSection = page.locator("#event-section-food");
+    const previewTile = foodPreviewSection.locator(".menu-card--preview").first();
+    const previewName = (
+      await previewTile.locator(".menu-card__name").textContent()
+    )?.trim();
+    expect(previewName).toBeTruthy();
+    await previewTile.click();
     // Scope menu-card lookups to the dedicated food page; the stacked
     // landing also renders preview tiles with the same class but they
     // are hidden under the parent x-show toggle.
     const foodPage = page.locator(".event-dedicated.food");
     await expect(foodPage.locator(".menu-card").first()).toBeVisible();
+    // The clicked preview's menu should be preselected on the food
+    // page. Match by name since the preview's display label and the
+    // step-1 card's label come from the same translation key.
+    await expect(
+      foodPage.locator(
+        ".menu-card.menu-card--selected .menu-card__name",
+      ),
+    ).toHaveText(previewName);
 
     // 30. Pickup order: first menu (Classic Burger), first pickup
-    //     location (North Entrance kiosk), confirm.
-    await foodPage.locator(".menu-card").first().click();
+    //     location (North Entrance kiosk), confirm. The preview-click
+    //     above already selected the first menu, so just hit Continue.
+    await expect(
+      foodPage.locator(".menu-card.menu-card--selected").first(),
+    ).toBeVisible();
     await page
       .locator(".food .purchase__primary", { hasText: "Continue" })
       .click();

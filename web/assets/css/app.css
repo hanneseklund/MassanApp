@@ -567,13 +567,11 @@ a {
   font-weight: 700;
 }
 
-/* Food preview tile: shown on the stacked landing as a presentational
-   thumbnail for one of the first INLINE_LIMIT menus. The full
-   3-step ordering flow lives behind the "see all" link on the
-   dedicated #/event/<id>/food page. */
-.menu-card--preview {
-  cursor: default;
-}
+/* Food preview tile: shown on the stacked landing as a clickable
+   thumbnail for one of the first INLINE_LIMIT menus. Clicking jumps
+   to the dedicated #/event/<id>/food page with the chosen menu
+   preselected; the "see all" link below opens the same page with
+   nothing preselected. */
 
 .menu-grid--preview .menu-card__body {
   padding: 8px 10px 10px;

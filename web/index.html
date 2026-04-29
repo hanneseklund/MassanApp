@@ -774,7 +774,11 @@
                   <ul class="menu-grid menu-grid--preview">
                     <template x-for="m in inlineFoodMenus()" :key="m.id">
                       <li>
-                        <div class="menu-card menu-card--preview">
+                        <button
+                          type="button"
+                          class="menu-card menu-card--preview"
+                          @click="$store.app.goEventFood(m.id)"
+                        >
                           <img
                             class="menu-card__image"
                             :src="m.image"
@@ -791,7 +795,7 @@
                             ></span>
                             <span class="menu-card__price" x-text="m.price"></span>
                           </span>
-                        </div>
+                        </button>
                       </li>
                     </template>
                   </ul>

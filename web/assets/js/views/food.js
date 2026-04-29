@@ -63,7 +63,7 @@ export function foodView() {
 
     _hydrate() {
       this.step = 1;
-      this.menuId = null;
+      this.menuId = this._consumePendingMenuId();
       this.deliveryMode = "pickup";
       this.pickupId = null;
       this.restaurantId = null;
@@ -72,6 +72,13 @@ export function foodView() {
       this.processing = false;
       this.error = "";
       this.confirmedOrder = null;
+    },
+
+    _consumePendingMenuId() {
+      const app = Alpine.store("app");
+      const pending = app.pendingFoodMenuId ?? null;
+      app.pendingFoodMenuId = null;
+      return pending && menuById(pending) ? pending : null;
     },
 
     event() {

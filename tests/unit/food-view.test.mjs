@@ -50,6 +50,7 @@ function makeStores({
   goAuthCalls = [],
   foodOrdersAdd = async (draft) => ({ ...draft }),
   pointsTryEarnCalls = [],
+  pendingFoodMenuId = null,
 } = {}) {
   return {
     lang: langStub(),
@@ -57,6 +58,7 @@ function makeStores({
       view,
       eventSubview,
       eventId,
+      pendingFoodMenuId,
       goAuth(...args) {
         goAuthCalls.push(args);
       },
@@ -103,39 +105,64 @@ test("initial state: step 1, nothing selected, default delivery mode is pickup",
   assert.equal(view.restaurants.length, RESTAURANTS.length);
 });
 
-test("_hydrate: resets every form field and populates timeslots", () => {
-  const view = foodView();
-  view.step = 3;
-  view.menuId = "burger_classic";
-  view.deliveryMode = "timeslot";
-  view.pickupId = "entrance_north";
-  view.restaurantId = "smakverket";
-  view.timeslotId = "some-slot";
-  view.timeslots = [];
-  view.processing = true;
-  view.error = "boom";
-  view.confirmedOrder = { id: "o1" };
+test("_hydrate: resets every form field and populates timeslots", async () => {
+  const stores = makeStores();
+  await withAlpine(stores, async () => {
+    const view = foodView();
+    view.step = 3;
+    view.menuId = "burger_classic";
+    view.deliveryMode = "timeslot";
+    view.pickupId = "entrance_north";
+    view.restaurantId = "smakverket";
+    view.timeslotId = "some-slot";
+    view.timeslots = [];
+    view.processing = true;
+    view.error = "boom";
+    view.confirmedOrder = { id: "o1" };
 
-  view._hydrate();
+    view._hydrate();
 
-  assert.equal(view.step, 1);
-  assert.equal(view.menuId, null);
-  assert.equal(view.deliveryMode, "pickup");
-  assert.equal(view.pickupId, null);
-  assert.equal(view.restaurantId, null);
-  assert.equal(view.timeslotId, null);
-  assert.equal(view.processing, false);
-  assert.equal(view.error, "");
-  assert.equal(view.confirmedOrder, null);
-  // `upcomingTimeslots()` returns five slots anchored on the next half
-  // hour; the exact labels depend on the wall clock, so assert shape.
-  assert.equal(view.timeslots.length, 5);
-  for (const slot of view.timeslots) {
-    assert.equal(typeof slot.id, "string");
-    assert.equal(typeof slot.from, "string");
-    assert.equal(typeof slot.to, "string");
-    assert.equal(typeof slot.label, "string");
-  }
+    assert.equal(view.step, 1);
+    assert.equal(view.menuId, null);
+    assert.equal(view.deliveryMode, "pickup");
+    assert.equal(view.pickupId, null);
+    assert.equal(view.restaurantId, null);
+    assert.equal(view.timeslotId, null);
+    assert.equal(view.processing, false);
+    assert.equal(view.error, "");
+    assert.equal(view.confirmedOrder, null);
+    // `upcomingTimeslots()` returns five slots anchored on the next half
+    // hour; the exact labels depend on the wall clock, so assert shape.
+    assert.equal(view.timeslots.length, 5);
+    for (const slot of view.timeslots) {
+      assert.equal(typeof slot.id, "string");
+      assert.equal(typeof slot.from, "string");
+      assert.equal(typeof slot.to, "string");
+      assert.equal(typeof slot.label, "string");
+    }
+  });
+});
+
+test("_hydrate: consumes pendingFoodMenuId from the app store and preselects that menu", async () => {
+  const stores = makeStores({ pendingFoodMenuId: "burger_classic" });
+  await withAlpine(stores, async () => {
+    const view = foodView();
+    view._hydrate();
+    assert.equal(view.menuId, "burger_classic");
+    // Pending value is cleared so a later visit doesn't preselect it
+    // again.
+    assert.equal(stores.app.pendingFoodMenuId, null);
+  });
+});
+
+test("_hydrate: ignores unknown pendingFoodMenuId values", async () => {
+  const stores = makeStores({ pendingFoodMenuId: "not-a-real-menu" });
+  await withAlpine(stores, async () => {
+    const view = foodView();
+    view._hydrate();
+    assert.equal(view.menuId, null);
+    assert.equal(stores.app.pendingFoodMenuId, null);
+  });
 });
 
 test("event(): resolves the selected event through the catalog", async () => {

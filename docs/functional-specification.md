@@ -182,7 +182,9 @@ The prototype must support this end-to-end path without gaps:
 - The Exhibitor full-list page keeps the search box; the inline
   preview does not.
 - The Food full-list page is the full 3-step ordering flow; the inline
-  preview shows up to 5 menu thumbnails as a teaser.
+  preview shows up to 5 menu thumbnails as a teaser. Each thumbnail is
+  clickable and opens the full ordering flow with that menu
+  preselected.
 - Practical information and Newsletter do not have full-list pages.
   Visiting `#/event/<id>/practical` or `#/event/<id>/newsletter`
   collapses to the stacked landing view and scrolls to the matching
@@ -221,7 +223,9 @@ The prototype must support this end-to-end path without gaps:
 ### Food
 
 - Reachable from the event landing's Food section (via its "see all"
-  link) and from the hamburger-menu "Food" entry while an event is
+  link, or by clicking any of the menu thumbnails inline — that
+  jumps to the dedicated page with the clicked menu preselected on
+  step 1) and from the hamburger-menu "Food" entry while an event is
   selected. The flow is scoped to the selected event but the menu
   catalog and venue locations are shared across every event because
   Stockholmsmassan has one set of on-site food vendors.

@@ -235,6 +235,39 @@ test("goEventSubview: navigates only when an event is selected", () => {
   });
 });
 
+test("goEventFood: navigates to the food subview and stashes the menu id", () => {
+  withStubbedGlobals({}, ({ location }) => {
+    const store = appStore();
+    store.init();
+    // No event yet → goEventFood is a no-op and leaves pendingFoodMenuId
+    // untouched.
+    store.goEventFood("burger_classic");
+    assert.equal(location.hash, "");
+    assert.equal(store.pendingFoodMenuId, null);
+    // With an event selected the navigation target carries the menu id
+    // through the app store (the URL itself stays clean).
+    store.selectEvent("nordbygg-2026");
+    store.goEventFood("burger_classic");
+    assert.equal(location.hash, "#/event/nordbygg-2026/food");
+    assert.equal(store.eventSubview, "food");
+    assert.equal(store.pendingFoodMenuId, "burger_classic");
+  });
+});
+
+test("goEventFood: omitting the menu id clears any previous pending value", () => {
+  withStubbedGlobals(
+    { initialHash: "#/event/nordbygg-2026" },
+    () => {
+      const store = appStore();
+      store.init();
+      store.pendingFoodMenuId = "burger_classic";
+      store.goEventFood();
+      assert.equal(store.pendingFoodMenuId, null);
+      assert.equal(store.eventSubview, "food");
+    },
+  );
+});
+
 test("selectExhibitor: requires an event and carries exhibitorId in the hash", () => {
   withStubbedGlobals({}, ({ location }) => {
     const store = appStore();

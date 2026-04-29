@@ -118,6 +118,9 @@ export function appStore() {
     // dedicated page (practical, newsletter); the event view watches
     // this and scrolls the matching section anchor into view.
     pendingScrollSection: null,
+    // Set when the user clicks a food preview tile on the event page;
+    // the food view consumes it on hydrate to preselect that menu.
+    pendingFoodMenuId: null,
     // Where to go after an auth flow completes. Stored as a route-like
     // object so that deep targets (e.g. the purchase flow for a given
     // event) can be resumed after sign-in.
@@ -232,6 +235,15 @@ export function appStore() {
         view: "event",
         eventId: this.eventId,
         eventSubview: subview,
+      });
+    },
+    goEventFood(menuId) {
+      if (!this.eventId) return;
+      this.pendingFoodMenuId = menuId ?? null;
+      this._navigate({
+        view: "event",
+        eventId: this.eventId,
+        eventSubview: "food",
       });
     },
     selectExhibitor(exhibitorId) {
