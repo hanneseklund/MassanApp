@@ -78,8 +78,10 @@ loyalty points balance earned on ticket purchases and food orders,
 per-event points add-ons, and a venue-wide points merchandise shop.
 The catalog, authentication, tickets, food orders, newsletter
 subscriptions, and point transactions are all served from the shared
-Supabase project. Payments and Google / Microsoft sign-in remain
-simulated.
+Supabase project. The `Nordbygg 2026` exhibitor list is scraped from
+the official Stockholmsmassan digital-stand directory; other events'
+exhibitor entries are still simulated. Payments and Google / Microsoft
+sign-in remain simulated.
 
 ## Reviewing a change
 

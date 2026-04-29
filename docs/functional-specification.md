@@ -211,6 +211,11 @@ The prototype must support this end-to-end path without gaps:
 - Exhibitor index lists the event's exhibitors and supports text search.
 - Exhibitor detail pages show the exhibitor name, booth or location,
   description, and links where available.
+- For `Nordbygg 2026`, the exhibitor catalog is scraped from the
+  official Stockholmsmassan digital-stand directory rather than
+  simulated, so the index reflects the actual fair (~865 exhibitors,
+  with logos for those whose source pages provide one). Other seeded
+  events keep simulated exhibitor entries.
 
 ### Practical information
 
