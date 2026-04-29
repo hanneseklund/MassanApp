@@ -1,5 +1,24 @@
 # Translate seeded/catalog content to both languages (issue #27 follow-up)
 
+> **Status:** split into five runnable sub-tasks on 2026-04-29 because
+> the change touches 8+ catalog tables, ~880 exhibitor rows, and a
+> 4,400-line seed file — too large for a single agent session.
+>
+> Sub-tasks (in `agent/tasks/`, must land in order):
+>
+> 1. `translate-seeded-content-dual-language-01-shape-and-render-helpers.md`
+>    — picks the `{en, sv}` jsonb shape, ships the migration, adds the
+>    `pickLang` render helper, and seeds both slots with duplicated
+>    English copy so the app keeps rendering. **Must land first.**
+> 2. `translate-seeded-content-dual-language-02-translate-events-and-venue.md`
+> 3. `translate-seeded-content-dual-language-03-translate-news-articles-program-speakers.md`
+> 4. `translate-seeded-content-dual-language-04-translate-exhibitors.md`
+>    — by far the largest payload (~870 exhibitor descriptions).
+> 5. `translate-seeded-content-dual-language-05-translate-addons-and-merchandise.md`
+>
+> Sub-tasks 02–05 only depend on 01 having landed; among themselves
+> they can run in any order or in parallel.
+
 Address the new comment on issue #27 from @hanneseklund:
 
 > translate seeded content also, so that all texts including content is dual language
