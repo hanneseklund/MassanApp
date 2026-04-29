@@ -6583,11 +6583,11 @@ Värmebaronen tillverkar pelletsbrännare, pelletspannor, vedpannor, solfångare
 
 Värmebaronen tillverkar pelletsbrännare, pelletspannor, vedpannor, solfångare och elpannor för villor, industrier och fastigheter.'), 'https://www.varmebaronen.se', 'assets/images/exhibitors/nordbygg-2026-varmebaronen-ab.jpg'),
   ('nordbygg-2026-exhibitor-139452', 'nordbygg-2026', 'W.AG Funktion + Design GmbH', 'B11:37', null, 'https://www.wag.de', null),
-  ('nordbygg-2026-exhibitor-139555', 'nordbygg-2026', 'W.steps', 'B01:31 (+1)', jsonb_build_object('en', 'W.steps är den ledande nordiska tillverkaren av stegar, arbetsbockar och byggnadsställningar för professionella användare. I mer än 90 år har vi lett utvecklingen av pålitliga stegar som uppfyller de allra högsta marknadsstandarderna.', 'sv', 'W.steps är den ledande nordiska tillverkaren av stegar, arbetsbockar och byggnadsställningar för professionella användare. I mer än 90 år har vi lett utvecklingen av pålitliga stegar som uppfyller de allra högsta marknadsstandarderna.'), 'https://www.wsteps.se', 'assets/images/exhibitors/nordbygg-2026-w-steps.jpg'),
-  ('nordbygg-2026-exhibitor-139592', 'nordbygg-2026', 'Wanas sp. z o. o.', 'A22:22', jsonb_build_object('en', 'Varför besöka vår monter?
-Upptäck förstklassig ventilationsutrustning med värmeåtervinning. Besök vår monter och upplev effektivitet, komfort och design – konstruerad enligt de högsta standarderna.
+  ('nordbygg-2026-exhibitor-139555', 'nordbygg-2026', 'W.steps', 'B01:31 (+1)', jsonb_build_object('en', 'W.steps is the leading Nordic manufacturer of ladders, trestles and scaffolding for professional users. For more than 90 years we have led the development of reliable ladders that meet the very highest market standards.', 'sv', 'W.steps är den ledande nordiska tillverkaren av stegar, arbetsbockar och byggnadsställningar för professionella användare. I mer än 90 år har vi lett utvecklingen av pålitliga stegar som uppfyller de allra högsta marknadsstandarderna.'), 'https://www.wsteps.se', 'assets/images/exhibitors/nordbygg-2026-w-steps.jpg'),
+  ('nordbygg-2026-exhibitor-139592', 'nordbygg-2026', 'Wanas sp. z o. o.', 'A22:22', jsonb_build_object('en', 'Why visit our booth?
+Discover premium ventilation equipment with heat recovery. Visit our booth and experience efficiency, comfort and design – built to the highest standards.
 
-Vi är en polsk tillverkare av förstklassiga ventilationssystem med värmeåtervinning med över 18 års erfarenhet. Vi använder endast material av högsta kvalitet och beprövad teknik. Som det enda företaget i världen tillverkar vi en unik 4-i-1-ventilationsenhet som erbjuder ventilation, befuktning, uppvärmning och kylning. Våra system levereras som standard med avancerad automatisering som maximerar prestandan, inklusive intelligent zonstyrning.
+We are a Polish manufacturer of premium ventilation systems with heat recovery, with more than 18 years of experience. We use only the highest-quality materials and proven technology. As the only company in the world, we manufacture a unique 4-in-1 ventilation unit that delivers ventilation, humidification, heating and cooling. Our systems come standard with advanced automation that maximises performance, including intelligent zone control.
 
 Translated with DeepL.com (free version)', 'sv', 'Varför besöka vår monter?
 Upptäck förstklassig ventilationsutrustning med värmeåtervinning. Besök vår monter och upplev effektivitet, komfort och design – konstruerad enligt de högsta standarderna.
@@ -6595,49 +6595,49 @@ Upptäck förstklassig ventilationsutrustning med värmeåtervinning. Besök vå
 Vi är en polsk tillverkare av förstklassiga ventilationssystem med värmeåtervinning med över 18 års erfarenhet. Vi använder endast material av högsta kvalitet och beprövad teknik. Som det enda företaget i världen tillverkar vi en unik 4-i-1-ventilationsenhet som erbjuder ventilation, befuktning, uppvärmning och kylning. Våra system levereras som standard med avancerad automatisering som maximerar prestandan, inklusive intelligent zonstyrning.
 
 Translated with DeepL.com (free version)'), 'https://www.wanas.pl', 'assets/images/exhibitors/nordbygg-2026-wanas-sp-z-o-o.jpg'),
-  ('nordbygg-2026-exhibitor-138327', 'nordbygg-2026', 'Wareco International AB', 'AG:96', jsonb_build_object('en', 'Wareco bildades 1967 med en klar vision om att bli en ledande leverantör på marknaden.
+  ('nordbygg-2026-exhibitor-138327', 'nordbygg-2026', 'Wareco International AB', 'AG:96', jsonb_build_object('en', 'Wareco was founded in 1967 with a clear vision of becoming a leading supplier on the market.
 
-Vi tycker att vi har lyckats. Ett stort antal av världens ledande verktygsleverantörer samarbetar idag med Wareco på den Skandinaviska marknaden.
+We think we have succeeded. A large number of the world''s leading tool suppliers work with Wareco today on the Scandinavian market.
 
-Wareco finns i Norge sedan 1988
-och i Danmark sedan 1999. Försäljning i Finland startade 2003.', 'sv', 'Wareco bildades 1967 med en klar vision om att bli en ledande leverantör på marknaden.
+Wareco has been in Norway since 1988
+and in Denmark since 1999. Sales in Finland started in 2003.', 'sv', 'Wareco bildades 1967 med en klar vision om att bli en ledande leverantör på marknaden.
 
 Vi tycker att vi har lyckats. Ett stort antal av världens ledande verktygsleverantörer samarbetar idag med Wareco på den Skandinaviska marknaden.
 
 Wareco finns i Norge sedan 1988
 och i Danmark sedan 1999. Försäljning i Finland startade 2003.'), 'https://www.wareco.se', 'assets/images/exhibitors/nordbygg-2026-wareco-international-ab.jpg'),
-  ('nordbygg-2026-exhibitor-136728', 'nordbygg-2026', 'Wasasten of Sweden', 'C04:61A', jsonb_build_object('en', 'På Wasasten of Sweden förstår vi att varje byggnadsprojekt, oavsett om det är ett arkitektoniskt mästerverk eller ett privat hem, förtjänar material av högsta kvalitet. Vi är stolta över att kunna erbjuda den mest exklusiva och unika stenen på marknaden – Älvdalskvartsit.
+  ('nordbygg-2026-exhibitor-136728', 'nordbygg-2026', 'Wasasten of Sweden', 'C04:61A', jsonb_build_object('en', 'At Wasasten of Sweden we understand that every construction project, whether an architectural masterpiece or a private home, deserves materials of the highest quality. We are proud to offer the most exclusive and unique stone on the market – Älvdalskvartsit.
 
-Med en lång och stolt historia av att leverera sten av enastående kvalitet, är vi inte bara en pålitlig partner för arkitekter och byggnadsentreprenörer, utan vi är också kunglig hovleverantör. Vår sten är så anmärkningsvärd att den valts för att pryda några av Sveriges och Europas mest prestigefyllda byggnader.', 'sv', 'På Wasasten of Sweden förstår vi att varje byggnadsprojekt, oavsett om det är ett arkitektoniskt mästerverk eller ett privat hem, förtjänar material av högsta kvalitet. Vi är stolta över att kunna erbjuda den mest exklusiva och unika stenen på marknaden – Älvdalskvartsit.
+With a long and proud history of supplying stone of outstanding quality, we are not only a reliable partner for architects and building contractors, we are also Purveyor to the Royal Court. Our stone is so remarkable that it has been chosen to adorn some of the most prestigious buildings in Sweden and Europe.', 'sv', 'På Wasasten of Sweden förstår vi att varje byggnadsprojekt, oavsett om det är ett arkitektoniskt mästerverk eller ett privat hem, förtjänar material av högsta kvalitet. Vi är stolta över att kunna erbjuda den mest exklusiva och unika stenen på marknaden – Älvdalskvartsit.
 
 Med en lång och stolt historia av att leverera sten av enastående kvalitet, är vi inte bara en pålitlig partner för arkitekter och byggnadsentreprenörer, utan vi är också kunglig hovleverantör. Vår sten är så anmärkningsvärd att den valts för att pryda några av Sveriges och Europas mest prestigefyllda byggnader.'), 'https://www.wasasten.se', 'assets/images/exhibitors/nordbygg-2026-wasasten-of-sweden.jpg'),
   ('nordbygg-2026-exhibitor-140104', 'nordbygg-2026', 'Watermeln', 'C03:41', jsonb_build_object('en', 'Watermeln provides zero-emission, off-grid power solutions for construction sites facing grid constraints or strict environmental requirements. Our hydrogen-powered generators and large batteries function as a direct replacement for diesel gensets, delivering reliable baseload power while enabling the full electrification of on-site equipment.
 
-With fast deployment and no need for grid connection, we help construction companies start projects sooner, reduce emissions, and comply with increasingly strict zero-emission regulations—without compromising on performance or uptime.', 'sv', 'Watermeln provides zero-emission, off-grid power solutions for construction sites facing grid constraints or strict environmental requirements. Our hydrogen-powered generators and large batteries function as a direct replacement for diesel gensets, delivering reliable baseload power while enabling the full electrification of on-site equipment.
+With fast deployment and no need for grid connection, we help construction companies start projects sooner, reduce emissions, and comply with increasingly strict zero-emission regulations—without compromising on performance or uptime.', 'sv', 'Watermeln levererar nollutsläppslösningar för elförsörjning utanför elnätet till byggarbetsplatser med begränsad nätkapacitet eller strikta miljökrav. Våra vätgasdrivna generatorer och stora batterier fungerar som direkta ersättare för dieselelverk och ger pålitlig baslasteffekt samtidigt som de möjliggör full elektrifiering av utrustning på plats.
 
-With fast deployment and no need for grid connection, we help construction companies start projects sooner, reduce emissions, and comply with increasingly strict zero-emission regulations—without compromising on performance or uptime.'), 'https://watermeln.com/en', 'assets/images/exhibitors/nordbygg-2026-watermeln.jpg'),
+Med snabb etablering och utan behov av nätanslutning hjälper vi byggföretag att starta projekt tidigare, minska utsläppen och uppfylla allt strängare nollutsläppsregler – utan att kompromissa med prestanda eller drifttid.'), 'https://watermeln.com/en', 'assets/images/exhibitors/nordbygg-2026-watermeln.jpg'),
   ('nordbygg-2026-exhibitor-137949', 'nordbygg-2026', 'Watts Industries Nordic AB', 'A11:29', null, 'https://watts.eu', 'assets/images/exhibitors/nordbygg-2026-watts-industries-nordic-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134555', 'nordbygg-2026', 'Weland AB ', 'C15:51', jsonb_build_object('en', 'Välkommen till C15:51 och möt oss från Weland AB!
+  ('nordbygg-2026-exhibitor-134555', 'nordbygg-2026', 'Weland AB ', 'C15:51', jsonb_build_object('en', 'Welcome to C15:51 and meet us from Weland AB!
 
-Weland AB är ett familjeföretag med rötterna i Smålandsstenar och en ledande tillverkare av trappor, räcken, gallerdurk, gångbryggor och entresoler. Vårt breda sortiment kombinerar flexibilitet, innovation och svenskt kunnande med fokus på hållbarhet.
+Weland AB is a family business with its roots in Smålandsstenar and a leading manufacturer of stairs, railings, gratings, walkways and mezzanines. Our broad range combines flexibility, innovation and Swedish know-how with a focus on sustainability.
 
-I vår monter möter du, förutom oss, flera av bolagen inom Welandkoncernen. Lär känna dem under Innovationsdagen – mässans första dag – då även finalisterna och vinnaren i Weland  Next Step offentliggörs. Smålandsprofilen Thomas Ravelli finns dessutom på plats redo att bli utmanad i räckhäng i aktiviteten Mässans Mästare. Dagens bästa tid vinner en Welandcykel från Skeppshult med ny chans varje mässdag!
+In our booth you will meet, in addition to us, several of the companies in the Weland Group. Get to know them during Innovation Day – the first day of the fair – when the finalists and the winner of Weland Next Step will also be announced. Småland personality Thomas Ravelli will also be on hand, ready to be challenged in a railing-hang in the Mässans Mästare activity. The best time of the day wins a Weland bicycle from Skeppshult, with a fresh chance every day of the fair!
 
-Varmt välkommen till spännande dagar med Weland!', 'sv', 'Välkommen till C15:51 och möt oss från Weland AB!
+A warm welcome to exciting days with Weland!', 'sv', 'Välkommen till C15:51 och möt oss från Weland AB!
 
 Weland AB är ett familjeföretag med rötterna i Smålandsstenar och en ledande tillverkare av trappor, räcken, gallerdurk, gångbryggor och entresoler. Vårt breda sortiment kombinerar flexibilitet, innovation och svenskt kunnande med fokus på hållbarhet.
 
 I vår monter möter du, förutom oss, flera av bolagen inom Welandkoncernen. Lär känna dem under Innovationsdagen – mässans första dag – då även finalisterna och vinnaren i Weland  Next Step offentliggörs. Smålandsprofilen Thomas Ravelli finns dessutom på plats redo att bli utmanad i räckhäng i aktiviteten Mässans Mästare. Dagens bästa tid vinner en Welandcykel från Skeppshult med ny chans varje mässdag!
 
 Varmt välkommen till spännande dagar med Weland!'), 'https://www.weland.se', 'assets/images/exhibitors/nordbygg-2026-weland-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137984', 'nordbygg-2026', 'Weland Aluminim', 'C15:51', jsonb_build_object('en', 'Välkommen till C15:51 och möt oss från Weland Aluminium & Utemiljö!
+  ('nordbygg-2026-exhibitor-137984', 'nordbygg-2026', 'Weland Aluminim', 'C15:51', jsonb_build_object('en', 'Welcome to C15:51 and meet us from Weland Aluminium & Outdoor Environment!
 
-Här kan du utforska balkongräcken och vårt modulära miljöhus.
+Here you can explore balcony railings and our modular waste-and-recycling enclosure.
 
-Weland Aluminium erbjuder smarta lösningar och inglasningar av balkonger i aluminium – underhållsfria produkter som är hållbara och flexibla.
-Weland Utemiljö tillverkar bland annat miljöhus, cykelskydd och förråd – snygga, funktionella och hållbara lösningar för olika typer av utemiljöer.
+Weland Aluminium offers smart solutions and aluminium balcony glazing – maintenance-free products that are durable and flexible.
+Weland Utemiljö manufactures, among other things, waste-and-recycling enclosures, bicycle shelters and storage units – stylish, functional and durable solutions for many kinds of outdoor environments.
 
-Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!', 'sv', 'Välkommen till C15:51 och möt oss från Weland Aluminium & Utemiljö!
+Swedish, innovative and sustainable – in the booth you will meet, in addition to us, several of the other companies that are part of the Weland Group. A warm welcome!', 'sv', 'Välkommen till C15:51 och möt oss från Weland Aluminium & Utemiljö!
 
 Här kan du utforska balkongräcken och vårt modulära miljöhus.
 
@@ -6645,67 +6645,67 @@ Weland Aluminium erbjuder smarta lösningar och inglasningar av balkonger i alum
 Weland Utemiljö tillverkar bland annat miljöhus, cykelskydd och förråd – snygga, funktionella och hållbara lösningar för olika typer av utemiljöer.
 
 Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!'), 'https://www.welandalumi.se', 'assets/images/exhibitors/nordbygg-2026-weland-aluminim.jpg'),
-  ('nordbygg-2026-exhibitor-137987', 'nordbygg-2026', 'Weland Design', 'C15:51', jsonb_build_object('en', 'Välkommen till C15:51 och möt oss från Weland Design!
+  ('nordbygg-2026-exhibitor-137987', 'nordbygg-2026', 'Weland Design', 'C15:51', jsonb_build_object('en', 'Welcome to C15:51 and meet us from Weland Design!
 
-Här visar vi upp våra hållbara produkter för utomhusmiljöer – som planteringskärl, kantplåt och cortenrör med utskuren text.
+Here we showcase our durable products for outdoor environments – such as planters, edging steel and Corten tubes with cut-out lettering.
 
-Weland Design erbjuder tidlös och minimalistisk design i stål med produkter som planteringskärl, odlingslådor, kantstål och avskärmare. Vi kombinerar hållbarhet, funktionalitet och estetik för både större offentliga miljöer och privata trädgårdar – och tar även fram kundspecifika, skräddarsydda lösningar.
+Weland Design offers timeless and minimalist design in steel with products such as planters, growing boxes, edging steel and screens. We combine durability, function and aesthetics for both larger public spaces and private gardens – and we also develop customer-specific, bespoke solutions.
 
-Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!', 'sv', 'Välkommen till C15:51 och möt oss från Weland Design!
+Swedish, innovative and sustainable – in the booth you will meet, in addition to us, several of the other companies that are part of the Weland Group. A warm welcome!', 'sv', 'Välkommen till C15:51 och möt oss från Weland Design!
 
 Här visar vi upp våra hållbara produkter för utomhusmiljöer – som planteringskärl, kantplåt och cortenrör med utskuren text.
 
 Weland Design erbjuder tidlös och minimalistisk design i stål med produkter som planteringskärl, odlingslådor, kantstål och avskärmare. Vi kombinerar hållbarhet, funktionalitet och estetik för både större offentliga miljöer och privata trädgårdar – och tar även fram kundspecifika, skräddarsydda lösningar.
 
 Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!'), 'https://www.welanddesign.se', 'assets/images/exhibitors/nordbygg-2026-weland-design.jpg'),
-  ('nordbygg-2026-exhibitor-137986', 'nordbygg-2026', 'Weland Stål', 'C15:51', jsonb_build_object('en', 'Välkommen till C15:51 och möt oss från Weland Stål!
+  ('nordbygg-2026-exhibitor-137986', 'nordbygg-2026', 'Weland Stål', 'C15:51', jsonb_build_object('en', 'Welcome to C15:51 and meet us from Weland Stål!
 
-Här visar vi upp våra lösningar för taksäkerhet och solpanelsfästen.
+Here we showcase our solutions for roof safety and solar-panel mounts.
 
-Vi är en ledande leverantör av produkter för taksäkerhet och utrymning. I vårt sortiment ingår även räcken. Vårt löfte är att leverera pålitliga svensktillverkade produkter med lång livslängd.
+We are a leading supplier of products for roof safety and roof evacuation. Our range also includes railings. Our promise is to deliver reliable Swedish-made products with a long service life.
 
-Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!', 'sv', 'Välkommen till C15:51 och möt oss från Weland Stål!
+Swedish, innovative and sustainable – in the booth you will meet, in addition to us, several of the other companies that are part of the Weland Group. A warm welcome!', 'sv', 'Välkommen till C15:51 och möt oss från Weland Stål!
 
 Här visar vi upp våra lösningar för taksäkerhet och solpanelsfästen.
 
 Vi är en ledande leverantör av produkter för taksäkerhet och utrymning. I vårt sortiment ingår även räcken. Vårt löfte är att leverera pålitliga svensktillverkade produkter med lång livslängd.
 
 Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!'), 'https://www.welandstal.se', 'assets/images/exhibitors/nordbygg-2026-weland-stal.jpg'),
-  ('nordbygg-2026-exhibitor-136772', 'nordbygg-2026', 'Wemel Wood', 'C08:11', jsonb_build_object('en', '99,9% of wall surface outlets and switches are still today made from plastic. We are the first in the world to use thermowood as a replacement for plastics in wall surface outlets and switches. Our mission is that by 2040, at least half of all wall surface outlets and switches will be made from renewable materials such as thermowood.', 'sv', '99,9% of wall surface outlets and switches are still today made from plastic. We are the first in the world to use thermowood as a replacement for plastics in wall surface outlets and switches. Our mission is that by 2040, at least half of all wall surface outlets and switches will be made from renewable materials such as thermowood.'), 'https://www.wemelwood.com', 'assets/images/exhibitors/nordbygg-2026-wemel-wood.jpg'),
-  ('nordbygg-2026-exhibitor-137432', 'nordbygg-2026', 'Wera Tools Sweden AB', 'B04:51', jsonb_build_object('en', 'Använder du skruvverktyg professionellt? Tror du att det är säkrare och roligare att arbeta med högkvalitativa och hållbara verktyg? Om du svarade ja, kan vi göra dig till en Tool Rebel!
+  ('nordbygg-2026-exhibitor-136772', 'nordbygg-2026', 'Wemel Wood', 'C08:11', jsonb_build_object('en', '99,9% of wall surface outlets and switches are still today made from plastic. We are the first in the world to use thermowood as a replacement for plastics in wall surface outlets and switches. Our mission is that by 2040, at least half of all wall surface outlets and switches will be made from renewable materials such as thermowood.', 'sv', '99,9 % av alla utanpåliggande vägguttag och strömbrytare tillverkas än idag av plast. Vi är först i världen med att använda termoträ som ersättning för plast i utanpåliggande vägguttag och strömbrytare. Vårt uppdrag är att senast 2040 ska minst hälften av alla utanpåliggande vägguttag och strömbrytare vara tillverkade av förnybara material såsom termoträ.'), 'https://www.wemelwood.com', 'assets/images/exhibitors/nordbygg-2026-wemel-wood.jpg'),
+  ('nordbygg-2026-exhibitor-137432', 'nordbygg-2026', 'Wera Tools Sweden AB', 'B04:51', jsonb_build_object('en', 'Do you use screwdriving tools professionally? Do you think it is safer and more enjoyable to work with high-quality, durable tools? If you answered yes, we can make you into a Tool Rebel!
 
-Wera är en tysk tillverkare av skruvverktyg av högsta kvalitet. Vi kallar både oss själva och våra kunder för Tool Rebels. Vi är verktygsmarknadens rebeller. Vi går vår egen väg, ifrågasätter och utmanar befintliga standarder för att hjälpa dig att utföra ditt arbete enklare, snabbare och säkrare. Vi tror genuint att våra produkter oftare sätter ett leende på dina läppar än en svordom under arbetsdagen. Vi älskar innovationer. Vi älskar design. Vi älskar rockmusik.
+Wera is a German manufacturer of top-quality screwdriving tools. We call both ourselves and our customers Tool Rebels. We are the rebels of the tool market. We go our own way, questioning and challenging existing standards to help you do your work more easily, more quickly and more safely. We genuinely believe our products put a smile on your lips more often than a curse during the working day. We love innovation. We love design. We love rock music.
 
-Under årens lopp har vi utvecklat ett flertal geniala nyheter som Zyklop-spärrskaften och Joker-blocknycklarna. I vårt växande sortiment med över 3 000 produkter finns det garanterat rätt verktyg även för dig.', 'sv', 'Använder du skruvverktyg professionellt? Tror du att det är säkrare och roligare att arbeta med högkvalitativa och hållbara verktyg? Om du svarade ja, kan vi göra dig till en Tool Rebel!
+Over the years we have developed a number of clever innovations such as the Zyklop ratchets and the Joker combination spanners. With a growing range of more than 3,000 products, we are sure to have the right tool for you, too.', 'sv', 'Använder du skruvverktyg professionellt? Tror du att det är säkrare och roligare att arbeta med högkvalitativa och hållbara verktyg? Om du svarade ja, kan vi göra dig till en Tool Rebel!
 
 Wera är en tysk tillverkare av skruvverktyg av högsta kvalitet. Vi kallar både oss själva och våra kunder för Tool Rebels. Vi är verktygsmarknadens rebeller. Vi går vår egen väg, ifrågasätter och utmanar befintliga standarder för att hjälpa dig att utföra ditt arbete enklare, snabbare och säkrare. Vi tror genuint att våra produkter oftare sätter ett leende på dina läppar än en svordom under arbetsdagen. Vi älskar innovationer. Vi älskar design. Vi älskar rockmusik.
 
 Under årens lopp har vi utvecklat ett flertal geniala nyheter som Zyklop-spärrskaften och Joker-blocknycklarna. I vårt växande sortiment med över 3 000 produkter finns det garanterat rätt verktyg även för dig.'), 'https://www-de.wera.de/se', 'assets/images/exhibitors/nordbygg-2026-wera-tools-sweden-ab.jpg'),
   ('nordbygg-2026-exhibitor-134598', 'nordbygg-2026', 'WESAG', 'A04:21', null, 'https://www.wesag.se', 'assets/images/exhibitors/nordbygg-2026-wesag.jpg'),
-  ('nordbygg-2026-exhibitor-138241', 'nordbygg-2026', 'Wide Industrier AS', 'A19:25', jsonb_build_object('en', 'Wide Industrier grundades 1996 som ett ingenjörsföretag med specialkompetens inom droppteknologi. Företagets huvudprodukt var redan från starten luftintagssystem, bestående av ventilationsgaller och filter för montering på yttervägg.
-Med användning av ett egenutvecklat testlaboratorium, sannolikt ett av Europas mest avancerade, är Widerista marknadens mest effektiva ventilationsgaller.
-Wides målsättning är att mekaniskt stoppa 100 % av regn och dimma med lägsta möjliga tryckfall. Ljudnivå har också varit viktig. Produkterna Wide har kan bevisligen stoppa 100 % av regn och vid hastigheter över ca 2 m/s även upp till 100 % av dimma. Tryckfall och ljudnivå är mycket låga.
-Wide hade 2025 en omsättning på 38 miljoner. Den största kundgruppen är byggventilation och offshore', 'sv', 'Wide Industrier grundades 1996 som ett ingenjörsföretag med specialkompetens inom droppteknologi. Företagets huvudprodukt var redan från starten luftintagssystem, bestående av ventilationsgaller och filter för montering på yttervägg.
+  ('nordbygg-2026-exhibitor-138241', 'nordbygg-2026', 'Wide Industrier AS', 'A19:25', jsonb_build_object('en', 'Wide Industrier was founded in 1996 as an engineering company with specialist expertise in droplet technology. From the start, the company''s main product has been air-intake systems consisting of ventilation grilles and filters for mounting on external walls.
+Using an in-house-developed test laboratory, probably one of the most advanced in Europe, the Widerista is the most efficient ventilation grille on the market.
+Wide''s aim is to mechanically stop 100% of rain and mist with the lowest possible pressure drop. Sound level has also been important. Wide''s products can demonstrably stop 100% of rain and, at speeds above approximately 2 m/s, up to 100% of mist as well. Pressure drop and sound level are very low.
+Wide had a turnover of SEK 38 million in 2025. The largest customer group is building ventilation and offshore.', 'sv', 'Wide Industrier grundades 1996 som ett ingenjörsföretag med specialkompetens inom droppteknologi. Företagets huvudprodukt var redan från starten luftintagssystem, bestående av ventilationsgaller och filter för montering på yttervägg.
 Med användning av ett egenutvecklat testlaboratorium, sannolikt ett av Europas mest avancerade, är Widerista marknadens mest effektiva ventilationsgaller.
 Wides målsättning är att mekaniskt stoppa 100 % av regn och dimma med lägsta möjliga tryckfall. Ljudnivå har också varit viktig. Produkterna Wide har kan bevisligen stoppa 100 % av regn och vid hastigheter över ca 2 m/s även upp till 100 % av dimma. Tryckfall och ljudnivå är mycket låga.
 Wide hade 2025 en omsättning på 38 miljoner. Den största kundgruppen är byggventilation och offshore'), 'https://www.wide.no', 'assets/images/exhibitors/nordbygg-2026-wide-industrier-as.jpg'),
   ('nordbygg-2026-exhibitor-140039', 'nordbygg-2026', 'WIDMO Spectral Technologies', 'C03:61', null, 'https://www.widmo.tech', 'assets/images/exhibitors/nordbygg-2026-widmo-spectral-technologies.jpg'),
-  ('nordbygg-2026-exhibitor-140115', 'nordbygg-2026', 'Wiitta Oy', 'A04:02', jsonb_build_object('en', 'Wiitta Oy är en finländsk tillverkare av formsprutade plastprodukter med över 50 års erfarenhet av krävande produktion i Finland.
+  ('nordbygg-2026-exhibitor-140115', 'nordbygg-2026', 'Wiitta Oy', 'A04:02', jsonb_build_object('en', 'Wiitta Oy is a Finnish manufacturer of injection-moulded plastic products with more than 50 years of experience in demanding production in Finland.
 
-Vår kärnkompetens ligger i rördelar, som vi har tillverkat ända sedan företaget grundades. Våra produkter är designade för hållbarhet och tillförlitlig prestanda. Nordic Polymark-certifieringen garanterar jämn kvalitet och att alla krav uppfylls.
+Our core expertise lies in pipe fittings, which we have manufactured ever since the company was founded. Our products are designed for durability and reliable performance. Nordic Polymark certification guarantees consistent quality and that all requirements are met.
 
-Vi betjänar kunder inom olika branscher med både standardprodukter och skräddarsydda lösningar, med ett flexibelt och långsiktigt förhållningssätt.
+We serve customers in many different industries with both standard products and tailored solutions, taking a flexible and long-term approach.
 
-Utöver rördelar tillverkar vi konsumentprodukter under varumärket ”The Pulkka” och erbjuder såväl kontraktstillverkning som storskaliga lösningar inom 3D-printing.
+In addition to pipe fittings, we manufacture consumer products under the “The Pulkka” brand and offer both contract manufacturing and large-scale 3D-printing solutions.
 
-Wiitta, en pålitlig partner inom plasttillverkning.
+Wiitta — a reliable partner in plastics manufacturing.
 
-Varför välja Wiitta?
+Why choose Wiitta?
 
-Tillverkning i Finland
-Över 50 års erfarenhet
-Jämn kvalitet och leveranssäkerhet
-Flexibelt och kundorienterat samarbete', 'sv', 'Wiitta Oy är en finländsk tillverkare av formsprutade plastprodukter med över 50 års erfarenhet av krävande produktion i Finland.
+Manufacturing in Finland
+More than 50 years of experience
+Consistent quality and reliable delivery
+Flexible and customer-oriented partnership', 'sv', 'Wiitta Oy är en finländsk tillverkare av formsprutade plastprodukter med över 50 års erfarenhet av krävande produktion i Finland.
 
 Vår kärnkompetens ligger i rördelar, som vi har tillverkat ända sedan företaget grundades. Våra produkter är designade för hållbarhet och tillförlitlig prestanda. Nordic Polymark-certifieringen garanterar jämn kvalitet och att alla krav uppfylls.
 
@@ -6721,50 +6721,50 @@ Tillverkning i Finland
 Över 50 års erfarenhet
 Jämn kvalitet och leveranssäkerhet
 Flexibelt och kundorienterat samarbete'), 'https://www.wiitta.fi', 'assets/images/exhibitors/nordbygg-2026-wiitta-oy.jpg'),
-  ('nordbygg-2026-exhibitor-134012', 'nordbygg-2026', 'Wikells Byggberäkningar AB', 'C02:13', jsonb_build_object('en', 'Varje kalkyl du gör påverkar ditt företags ekonomi. Med Wikells kalkylverktyg är det enkelt att räkna på hur ett jobb ska prissättas för att ge den lönsamhet som behövs.
-Tillsammans bygger vi affärer.
+  ('nordbygg-2026-exhibitor-134012', 'nordbygg-2026', 'Wikells Byggberäkningar AB', 'C02:13', jsonb_build_object('en', 'Every estimate you make affects your company''s finances. With Wikells'' estimating tools it is easy to work out how a job should be priced to deliver the profitability you need.
+Together we build business.
 
-Med över 60 års erfarenhet har vi utvecklat kalkylverktyg som förenklar vardagen för entreprenörer, installatörer, projektörer, konsulter, kommuner, regioner och fastighetsbolag inom bygg, el och VVS.
+With more than 60 years of experience we have developed estimating tools that simplify everyday work for contractors, installers, designers, consultants, municipalities, regions and property companies in construction, electrical and HVAC.
 
-Oavsett om du räknar på mindre jobb eller stora projekt finns ett verktyg som passar – anpassat efter din bransch, dina behov och ditt sätt att arbeta.', 'sv', 'Varje kalkyl du gör påverkar ditt företags ekonomi. Med Wikells kalkylverktyg är det enkelt att räkna på hur ett jobb ska prissättas för att ge den lönsamhet som behövs.
+Whether you are estimating smaller jobs or large projects, there is a tool to suit – tailored to your industry, your needs and the way you work.', 'sv', 'Varje kalkyl du gör påverkar ditt företags ekonomi. Med Wikells kalkylverktyg är det enkelt att räkna på hur ett jobb ska prissättas för att ge den lönsamhet som behövs.
 Tillsammans bygger vi affärer.
 
 Med över 60 års erfarenhet har vi utvecklat kalkylverktyg som förenklar vardagen för entreprenörer, installatörer, projektörer, konsulter, kommuner, regioner och fastighetsbolag inom bygg, el och VVS.
 
 Oavsett om du räknar på mindre jobb eller stora projekt finns ett verktyg som passar – anpassat efter din bransch, dina behov och ditt sätt att arbeta.'), 'https://www.wikells.se', 'assets/images/exhibitors/nordbygg-2026-wikells-byggberakningar-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138634', 'nordbygg-2026', 'Wiklunds Åkeri AB', 'C10:53', jsonb_build_object('en', 'Wiklunds är ett bolag med lång erfarenhet av lösningar för bygg-, fastighets- och anläggningssektorn. Vi arbetar nära våra kunder för att skapa funktionella, hållbara och kostnadseffektiva lösningar som möter både dagens och morgondagens krav.
+  ('nordbygg-2026-exhibitor-138634', 'nordbygg-2026', 'Wiklunds Åkeri AB', 'C10:53', jsonb_build_object('en', 'Wiklunds is a company with long experience of solutions for the construction, real-estate and civil-engineering sectors. We work closely with our customers to create functional, sustainable and cost-effective solutions that meet both today''s and tomorrow''s requirements.
 
-En central del av vår verksamhet är satsningen inom KRETS – ett cirkulärt arbetssätt där vi fokuserar på återbruk, resurseffektivitet och minskad miljöpåverkan genom hela värdekedjan. Genom KRETS hjälper vi våra kunder att kombinera praktisk funktion med ökade hållbarhetskrav. Se mer på www.kretsaterbruk.se
+A central part of our business is our work within KRETS – a circular way of working in which we focus on reuse, resource efficiency and reduced environmental impact across the entire value chain. Through KRETS we help our customers combine practical function with growing sustainability requirements. Read more at www.kretsaterbruk.se
 
-Wiklunds är en del av en koncern med kompletterande kompetenser. Tillsammans med våra systerbolag Wiklunds Logistik, EDS Återvinning och CUWAB Verkstad kan vi erbjuda helhetslösningar som omfattar logistik, återvinning, verkstad och teknisk utveckling – från etablering till återbruk och avveckling.
+Wiklunds is part of a group with complementary capabilities. Together with our sister companies Wiklunds Logistik, EDS Återvinning and CUWAB Verkstad we can offer end-to-end solutions covering logistics, recycling, workshop services and technical development – from setup through reuse to decommissioning.
 
-På Nordbygg möter du Wiklunds för att diskutera cirkulära lösningar, effektiva byggarbetsplatser och hur vi tillsammans kan bidra till ett mer hållbart byggande.', 'sv', 'Wiklunds är ett bolag med lång erfarenhet av lösningar för bygg-, fastighets- och anläggningssektorn. Vi arbetar nära våra kunder för att skapa funktionella, hållbara och kostnadseffektiva lösningar som möter både dagens och morgondagens krav.
+At Nordbygg you can meet Wiklunds to discuss circular solutions, efficient construction sites and how, together, we can contribute to more sustainable building.', 'sv', 'Wiklunds är ett bolag med lång erfarenhet av lösningar för bygg-, fastighets- och anläggningssektorn. Vi arbetar nära våra kunder för att skapa funktionella, hållbara och kostnadseffektiva lösningar som möter både dagens och morgondagens krav.
 
 En central del av vår verksamhet är satsningen inom KRETS – ett cirkulärt arbetssätt där vi fokuserar på återbruk, resurseffektivitet och minskad miljöpåverkan genom hela värdekedjan. Genom KRETS hjälper vi våra kunder att kombinera praktisk funktion med ökade hållbarhetskrav. Se mer på www.kretsaterbruk.se
 
 Wiklunds är en del av en koncern med kompletterande kompetenser. Tillsammans med våra systerbolag Wiklunds Logistik, EDS Återvinning och CUWAB Verkstad kan vi erbjuda helhetslösningar som omfattar logistik, återvinning, verkstad och teknisk utveckling – från etablering till återbruk och avveckling.
 
 På Nordbygg möter du Wiklunds för att diskutera cirkulära lösningar, effektiva byggarbetsplatser och hur vi tillsammans kan bidra till ett mer hållbart byggande.'), 'https://www.wiklunds.se', 'assets/images/exhibitors/nordbygg-2026-wiklunds-akeri-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134723', 'nordbygg-2026', 'Wilfa', 'A19:28', jsonb_build_object('en', 'Sedan 1948 har Wilfa skapat kvalitetsprodukter med tydligt fokus på hållbarhet, innovativa lösningar och nordisk design. Som klimatleverantör erbjuder vi energieffektiva produkter som kombinerar hög prestanda med en design som ofta lyfts fram som Nordens snyggaste.
+  ('nordbygg-2026-exhibitor-134723', 'nordbygg-2026', 'Wilfa', 'A19:28', jsonb_build_object('en', 'Since 1948 Wilfa has created quality products with a clear focus on sustainability, innovative solutions and Nordic design. As a climate-products supplier we offer energy-efficient products that combine high performance with a design often singled out as the most attractive in the Nordics.
 
-Varmt välkommen till vår monter, där vi visar våra värmepumpar utvecklade för nordiskt klimat och backade av marknadens längsta garanti på 7 år.', 'sv', 'Sedan 1948 har Wilfa skapat kvalitetsprodukter med tydligt fokus på hållbarhet, innovativa lösningar och nordisk design. Som klimatleverantör erbjuder vi energieffektiva produkter som kombinerar hög prestanda med en design som ofta lyfts fram som Nordens snyggaste.
+A warm welcome to our booth, where we showcase our heat pumps developed for the Nordic climate and backed by the market''s longest warranty, at 7 years.', 'sv', 'Sedan 1948 har Wilfa skapat kvalitetsprodukter med tydligt fokus på hållbarhet, innovativa lösningar och nordisk design. Som klimatleverantör erbjuder vi energieffektiva produkter som kombinerar hög prestanda med en design som ofta lyfts fram som Nordens snyggaste.
 
 Varmt välkommen till vår monter, där vi visar våra värmepumpar utvecklade för nordiskt klimat och backade av marknadens längsta garanti på 7 år.'), 'https://www.wilfa.se', 'assets/images/exhibitors/nordbygg-2026-wilfa.jpg'),
   ('nordbygg-2026-exhibitor-138978', 'nordbygg-2026', 'Wilms', 'C14:62', jsonb_build_object('en', 'Since 1975, we have been Wilms. A family business where well-being and innovation come together harmoniously. With roller shutters, sun protection and ventilation, we create a new dimension in extraordinary living comfort.
 
-With Wilms, you choose durability, quality and innovation. Our roller shutters, sun protection and ventilation are cleverly developed and craftily produced in our factory in Belgium.', 'sv', 'Since 1975, we have been Wilms. A family business where well-being and innovation come together harmoniously. With roller shutters, sun protection and ventilation, we create a new dimension in extraordinary living comfort.
+With Wilms, you choose durability, quality and innovation. Our roller shutters, sun protection and ventilation are cleverly developed and craftily produced in our factory in Belgium.', 'sv', 'Sedan 1975 är vi Wilms. Ett familjeföretag där välmående och innovation möts i harmoni. Med rulljalusier, solskydd och ventilation skapar vi en ny dimension av enastående boendekomfort.
 
-With Wilms, you choose durability, quality and innovation. Our roller shutters, sun protection and ventilation are cleverly developed and craftily produced in our factory in Belgium.'), 'https://www.wilms.se', 'assets/images/exhibitors/nordbygg-2026-wilms.jpg'),
-  ('nordbygg-2026-exhibitor-135543', 'nordbygg-2026', 'WILO Nordic AB', 'A04:15', jsonb_build_object('en', 'WILO SE är med över 70 dotterbolag och en årlig omsättning på 22,4 miljarder SEK en världsledande tillverkare av pumpar och pumpsystem inom segmenten för cirkulation, tryckstegring och avlopp.
-Med blicken riktad mot framtiden engagerar sig pumpföretaget starkt inom forskning och utveckling. Företaget med säte i Dortmund utvecklas mer och mer från komponentleverantör till systemleverantör.
-Wilo erbjuder hållbara lösningar genom ett helhetsgrepp som omfattar produktion, energieffektivitet och proaktiv service. I produktionen arbetar Wilo systematiskt för att minska miljöpåverkan genom resurseffektiva processer, minskade utsläpp och ett ökat fokus på materialval med lång livslängd och återvinningsbarhet.', 'sv', 'WILO SE är med över 70 dotterbolag och en årlig omsättning på 22,4 miljarder SEK en världsledande tillverkare av pumpar och pumpsystem inom segmenten för cirkulation, tryckstegring och avlopp.
+Med Wilms väljer du hållbarhet, kvalitet och innovation. Våra rulljalusier, solskydd och vår ventilation är genomtänkt utvecklade och hantverksskickligt tillverkade i vår fabrik i Belgien.'), 'https://www.wilms.se', 'assets/images/exhibitors/nordbygg-2026-wilms.jpg'),
+  ('nordbygg-2026-exhibitor-135543', 'nordbygg-2026', 'WILO Nordic AB', 'A04:15', jsonb_build_object('en', 'With more than 70 subsidiaries and an annual turnover of SEK 22.4 billion, WILO SE is a world-leading manufacturer of pumps and pump systems in the segments of circulation, pressure boosting and wastewater.
+With its sights set on the future, the pump company is strongly committed to research and development. Headquartered in Dortmund, the company is increasingly evolving from a component supplier into a systems supplier.
+Wilo offers sustainable solutions through a holistic approach that covers production, energy efficiency and proactive service. In production, Wilo works systematically to reduce environmental impact through resource-efficient processes, lower emissions and a stronger focus on material choices with long service life and recyclability.', 'sv', 'WILO SE är med över 70 dotterbolag och en årlig omsättning på 22,4 miljarder SEK en världsledande tillverkare av pumpar och pumpsystem inom segmenten för cirkulation, tryckstegring och avlopp.
 Med blicken riktad mot framtiden engagerar sig pumpföretaget starkt inom forskning och utveckling. Företaget med säte i Dortmund utvecklas mer och mer från komponentleverantör till systemleverantör.
 Wilo erbjuder hållbara lösningar genom ett helhetsgrepp som omfattar produktion, energieffektivitet och proaktiv service. I produktionen arbetar Wilo systematiskt för att minska miljöpåverkan genom resurseffektiva processer, minskade utsläpp och ett ökat fokus på materialval med lång livslängd och återvinningsbarhet.'), 'https://www.wilo.se', 'assets/images/exhibitors/nordbygg-2026-wilo-nordic-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134372', 'nordbygg-2026', 'Winbag', 'B07:01', jsonb_build_object('en', 'WINBAG är ett danskutvecklat professionellt installationsverktyg som gör det enklare att lyfta, positionera och justera tunga komponenter med precision och kontroll. Produkten bygger på en uppblåsbar luftkudde som ersätter traditionella kilar och distanser, vilket förbättrar effektivitet, noggrannhet och säkerhet vid installationsarbete.
+  ('nordbygg-2026-exhibitor-134372', 'nordbygg-2026', 'Winbag', 'B07:01', jsonb_build_object('en', 'WINBAG is a Danish-developed professional installation tool that makes it easier to lift, position and adjust heavy components with precision and control. The product is based on an inflatable air cushion that replaces traditional wedges and shims, improving efficiency, accuracy and safety during installation work.
 
-WINBAG utvecklades ursprungligen för montering av fönster och dörrar men används idag inom flera olika branscher, bland annat bygg, inredningsinstallation, fordonsapplikationer, industriell montering och räddningsinsatser. Dess mångsidighet, hållbarhet och användarvänlighet gör den till en uppskattad lösning bland yrkesproffs världen över.
+WINBAG was originally developed for window and door installation but is today used in many different industries, including construction, interior installation, automotive applications, industrial assembly and rescue operations. Its versatility, durability and ease of use make it a valued solution among professionals worldwide.
 
-WINBAG-produkterna är kända för hög kvalitet, tillförlitlighet och stark dansk designtradition. Idag distribueras varumärket internationellt och fortsätter att expandera genom samarbeten med professionella verktygsleverantörer och byggvaruhandelskedjor globalt.', 'sv', 'WINBAG är ett danskutvecklat professionellt installationsverktyg som gör det enklare att lyfta, positionera och justera tunga komponenter med precision och kontroll. Produkten bygger på en uppblåsbar luftkudde som ersätter traditionella kilar och distanser, vilket förbättrar effektivitet, noggrannhet och säkerhet vid installationsarbete.
+WINBAG products are known for high quality, reliability and a strong Danish design tradition. Today the brand is distributed internationally and continues to expand through partnerships with professional tool suppliers and building-materials retail chains around the world.', 'sv', 'WINBAG är ett danskutvecklat professionellt installationsverktyg som gör det enklare att lyfta, positionera och justera tunga komponenter med precision och kontroll. Produkten bygger på en uppblåsbar luftkudde som ersätter traditionella kilar och distanser, vilket förbättrar effektivitet, noggrannhet och säkerhet vid installationsarbete.
 
 WINBAG utvecklades ursprungligen för montering av fönster och dörrar men används idag inom flera olika branscher, bland annat bygg, inredningsinstallation, fordonsapplikationer, industriell montering och räddningsinsatser. Dess mångsidighet, hållbarhet och användarvänlighet gör den till en uppskattad lösning bland yrkesproffs världen över.
 
@@ -6775,9 +6775,9 @@ WINBAG-produkterna är kända för hög kvalitet, tillförlitlighet och stark da
   ('nordbygg-2026-exhibitor-139846', 'nordbygg-2026', 'Wood Panel of Sweden', 'C15:22', null, 'https://woodpanelofsweden.com', 'assets/images/exhibitors/nordbygg-2026-wood-panel-of-sweden.jpg'),
   ('nordbygg-2026-exhibitor-139035', 'nordbygg-2026', 'Woodlife', 'C14:41', null, 'https://arbio.se/om-arbio', 'assets/images/exhibitors/nordbygg-2026-woodlife.jpg'),
   ('nordbygg-2026-exhibitor-137596', 'nordbygg-2026', 'Woolpower AB', 'B03:43', null, 'https://www.woolpower.se', null),
-  ('nordbygg-2026-exhibitor-135008', 'nordbygg-2026', 'Work System', 'AG:111', jsonb_build_object('en', 'Work System erbjuder premiumlösningar till marknadens bästa pris och med marknadens bästa service. Med 100% fokus på bilutrustning, bilinredningar och tillbehör skapar vi ordning och reda för maximal effektivitet samt bästa arbetsmiljö och säkerhet för arbetsbilar.
+  ('nordbygg-2026-exhibitor-135008', 'nordbygg-2026', 'Work System', 'AG:111', jsonb_build_object('en', 'Work System offers premium solutions at the best price on the market and with the best service on the market. With 100% focus on vehicle equipment, vehicle interiors and accessories, we create order and structure for maximum efficiency and the best working environment and safety for work vehicles.
 
-Work System är en One-Stop-Shop, där man hittar allt man behöver i utrustningsväg för att skräddarsy sin arbetsbil. All inredning är uppbyggd genom ett modulärt koncept så att inredningslösningen kan anpassas exakt efter dina specifika behov. Vår prioritet är din arbetsbil och våra lösningar kan hjälpa till att göra din vardag säkrare och effektivare.', 'sv', 'Work System erbjuder premiumlösningar till marknadens bästa pris och med marknadens bästa service. Med 100% fokus på bilutrustning, bilinredningar och tillbehör skapar vi ordning och reda för maximal effektivitet samt bästa arbetsmiljö och säkerhet för arbetsbilar.
+Work System is a one-stop shop where you can find everything you need in terms of equipment to tailor your work vehicle. All interiors are built around a modular concept so the interior solution can be adapted exactly to your specific needs. Our priority is your work vehicle, and our solutions can help make your everyday work safer and more efficient.', 'sv', 'Work System erbjuder premiumlösningar till marknadens bästa pris och med marknadens bästa service. Med 100% fokus på bilutrustning, bilinredningar och tillbehör skapar vi ordning och reda för maximal effektivitet samt bästa arbetsmiljö och säkerhet för arbetsbilar.
 
 Work System är en One-Stop-Shop, där man hittar allt man behöver i utrustningsväg för att skräddarsy sin arbetsbil. All inredning är uppbyggd genom ett modulärt koncept så att inredningslösningen kan anpassas exakt efter dina specifika behov. Vår prioritet är din arbetsbil och våra lösningar kan hjälpa till att göra din vardag säkrare och effektivare.'), 'https://www.worksystem.se', 'assets/images/exhibitors/nordbygg-2026-work-system.jpg'),
   ('nordbygg-2026-exhibitor-139530', 'nordbygg-2026', 'WORKSOBER.COM', 'AG:94', null, 'https://www.ips.lt', null),
