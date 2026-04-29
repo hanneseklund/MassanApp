@@ -2928,31 +2928,31 @@ www.exsitec.se/nordbygg-2026
 https://www.exsitec.se/bransch/bygg'), 'https://www.exsitec.se', 'assets/images/exhibitors/nordbygg-2026-exsitec-ab.jpg'),
   ('nordbygg-2026-exhibitor-133967', 'nordbygg-2026', 'Ezze AB', 'A05:02', null, 'https://www.ezze.se', null),
   ('nordbygg-2026-exhibitor-134751', 'nordbygg-2026', 'F Engel K/S', 'B04:11', null, 'https://www.f-engel.com', null),
-  ('nordbygg-2026-exhibitor-133960', 'nordbygg-2026', 'Faluplast', 'A04:14', jsonb_build_object('en', 'Faluplast är en ledande tillverkare av VVS-produkter i plast, med fokus på innovation, kvalitet och hållbarhet. Vi konstruerar, tillverkar och levererar smarta lösningar som underlättar och effektiviserar rörinstallatörens arbete. Våra produkter kombinerar hög funktionalitet, stilren design och hållbarhet – alltid med installatören i fokus.
+  ('nordbygg-2026-exhibitor-133960', 'nordbygg-2026', 'Faluplast', 'A04:14', jsonb_build_object('en', 'Faluplast is a leading manufacturer of plastic plumbing products, with a focus on innovation, quality and sustainability. We design, manufacture and deliver smart solutions that simplify and streamline the work of the pipe installer. Our products combine high functionality, clean design and durability — always with the installer at the centre.
 
-Vi är stolta över att ha full kontroll på hela processen, från idé och produktutveckling till tillverkning och leverans. Med vår produktion i Falun säkerställer vi hög kvalitet, snabba leveranser och en stark miljöprofil.', 'sv', 'Faluplast är en ledande tillverkare av VVS-produkter i plast, med fokus på innovation, kvalitet och hållbarhet. Vi konstruerar, tillverkar och levererar smarta lösningar som underlättar och effektiviserar rörinstallatörens arbete. Våra produkter kombinerar hög funktionalitet, stilren design och hållbarhet – alltid med installatören i fokus.
+We are proud to have full control over the entire process, from idea and product development through to manufacture and delivery. With our production based in Falun we ensure high quality, fast deliveries and a strong environmental profile.', 'sv', 'Faluplast är en ledande tillverkare av VVS-produkter i plast, med fokus på innovation, kvalitet och hållbarhet. Vi konstruerar, tillverkar och levererar smarta lösningar som underlättar och effektiviserar rörinstallatörens arbete. Våra produkter kombinerar hög funktionalitet, stilren design och hållbarhet – alltid med installatören i fokus.
 
 Vi är stolta över att ha full kontroll på hela processen, från idé och produktutveckling till tillverkning och leverans. Med vår produktion i Falun säkerställer vi hög kvalitet, snabba leveranser och en stark miljöprofil.'), 'https://www.faluplast.se', 'assets/images/exhibitors/nordbygg-2026-faluplast.jpg'),
-  ('nordbygg-2026-exhibitor-138848', 'nordbygg-2026', 'Fasadgruppen Norden AB', 'C15:54', jsonb_build_object('en', 'Våra tjänster
+  ('nordbygg-2026-exhibitor-138848', 'nordbygg-2026', 'Fasadgruppen Norden AB', 'C15:54', jsonb_build_object('en', 'Our services
 
-Vi erbjuder smarta, vackra och energieffektiva tjänster på fastighetens utsida, såsom fasader, fönster, balkonger och tak, till kunder som kräver kvalitet, kompetens och erfarenhet.
+We deliver smart, attractive and energy-efficient services on the outside of the property — façades, windows, balconies and roofs — to customers who demand quality, expertise and experience.
 
-Vårt arbetsområde är hela Norden och vi är verksamma via lokala dotterbolag med expertkunskap inom respektive kategori.', 'sv', 'Våra tjänster
+We work across the whole Nordic region, operating through local subsidiaries with deep expertise in each category.', 'sv', 'Våra tjänster
 
 Vi erbjuder smarta, vackra och energieffektiva tjänster på fastighetens utsida, såsom fasader, fönster, balkonger och tak, till kunder som kräver kvalitet, kompetens och erfarenhet.
 
 Vårt arbetsområde är hela Norden och vi är verksamma via lokala dotterbolag med expertkunskap inom respektive kategori.'), 'https://www.fasadgruppen.se', 'assets/images/exhibitors/nordbygg-2026-fasadgruppen-norden-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139054', 'nordbygg-2026', 'Fastdev', 'AG:57', jsonb_build_object('en', 'Fastdev is a Stockholm-based software development and IT consulting company helping organizations accelerate digital transformation. We specialize in custom software development, scalable digital platforms, and dedicated development teams. By combining strong technical expertise with a collaborative approach, Fastdev delivers reliable, user-focused solutions that help businesses innovate faster, streamline operations, and bring new digital products to market.', 'sv', 'Fastdev is a Stockholm-based software development and IT consulting company helping organizations accelerate digital transformation. We specialize in custom software development, scalable digital platforms, and dedicated development teams. By combining strong technical expertise with a collaborative approach, Fastdev delivers reliable, user-focused solutions that help businesses innovate faster, streamline operations, and bring new digital products to market.'), 'https://www.fastdev.com', 'assets/images/exhibitors/nordbygg-2026-fastdev.jpg'),
-  ('nordbygg-2026-exhibitor-139606', 'nordbygg-2026', 'Fein', 'B01:31 (+1)', jsonb_build_object('en', 'FEIN är ett tyskt premiumvarumärke med över 150 års erfarenhet av att utveckla robusta elverktyg för proffs. Vi uppfann den första elektriska handborrmaskinen redan 1895 – ett genombrott som lade grunden för dagens moderna elverktyg.
+  ('nordbygg-2026-exhibitor-139054', 'nordbygg-2026', 'Fastdev', 'AG:57', jsonb_build_object('en', 'Fastdev is a Stockholm-based software development and IT consulting company helping organizations accelerate digital transformation. We specialize in custom software development, scalable digital platforms, and dedicated development teams. By combining strong technical expertise with a collaborative approach, Fastdev delivers reliable, user-focused solutions that help businesses innovate faster, streamline operations, and bring new digital products to market.', 'sv', 'Fastdev är ett Stockholmsbaserat företag inom mjukvaruutveckling och IT-konsulting som hjälper organisationer att accelerera sin digitala transformation. Vi är specialiserade på skräddarsydd mjukvaruutveckling, skalbara digitala plattformar och dedikerade utvecklingsteam. Genom att kombinera djup teknisk kompetens med ett samarbetsinriktat arbetssätt levererar Fastdev tillförlitliga, användarfokuserade lösningar som hjälper företag att innovera snabbare, effektivisera verksamheten och föra ut nya digitala produkter på marknaden.'), 'https://www.fastdev.com', 'assets/images/exhibitors/nordbygg-2026-fastdev.jpg'),
+  ('nordbygg-2026-exhibitor-139606', 'nordbygg-2026', 'Fein', 'B01:31 (+1)', jsonb_build_object('en', 'FEIN is a German premium brand with more than 150 years of experience developing robust power tools for professionals. We invented the first electric hand-held drill back in 1895 — a breakthrough that laid the foundation for today''s modern power tools.
 
-FEIN är också skaparen av det oscillerande multiverktyget, ursprungligen utvecklat 1967 och idag känt bland hantverkare världen över som Multimaster – ett mångsidigt verktyg för allt från sågning och slipning till precisionsarbeten i trånga utrymmen.
+FEIN is also the creator of the oscillating multi-tool, originally developed in 1967 and known to tradespeople around the world as the Multimaster — a versatile tool for everything from sawing and sanding to precision work in tight spaces.
 
-Vi erbjuder lösningar för bygg, renovering, metallbearbetning och montage – verktyg du kan lita på varje dag.', 'sv', 'FEIN är ett tyskt premiumvarumärke med över 150 års erfarenhet av att utveckla robusta elverktyg för proffs. Vi uppfann den första elektriska handborrmaskinen redan 1895 – ett genombrott som lade grunden för dagens moderna elverktyg.
+We offer solutions for construction, renovation, metalworking and assembly — tools you can rely on every day.', 'sv', 'FEIN är ett tyskt premiumvarumärke med över 150 års erfarenhet av att utveckla robusta elverktyg för proffs. Vi uppfann den första elektriska handborrmaskinen redan 1895 – ett genombrott som lade grunden för dagens moderna elverktyg.
 
 FEIN är också skaparen av det oscillerande multiverktyget, ursprungligen utvecklat 1967 och idag känt bland hantverkare världen över som Multimaster – ett mångsidigt verktyg för allt från sågning och slipning till precisionsarbeten i trånga utrymmen.
 
 Vi erbjuder lösningar för bygg, renovering, metallbearbetning och montage – verktyg du kan lita på varje dag.'), 'https://www.fein.se', 'assets/images/exhibitors/nordbygg-2026-fein.jpg'),
-  ('nordbygg-2026-exhibitor-136787', 'nordbygg-2026', 'Fellowmind', 'C01:11', jsonb_build_object('en', 'Fellowmind is a European leader in digital transformation. By combining deep industry knowledge, technology expertise, and personal guidance we enable our customers to digitize what makes sense and use human skills where it matters most. We offer service for the entire business platform – from ERP, cloud infrastructure, data analytics, to CRM, intranet, and Digital Employee Experience and infuse AI in all our solutions. With the continuous release of new Microsoft AI Solutions, we can further accelerate on this promise.', 'sv', 'Fellowmind is a European leader in digital transformation. By combining deep industry knowledge, technology expertise, and personal guidance we enable our customers to digitize what makes sense and use human skills where it matters most. We offer service for the entire business platform – from ERP, cloud infrastructure, data analytics, to CRM, intranet, and Digital Employee Experience and infuse AI in all our solutions. With the continuous release of new Microsoft AI Solutions, we can further accelerate on this promise.'), 'https://www.fellowmind.com/sv-se', 'assets/images/exhibitors/nordbygg-2026-fellowmind.jpg'),
+  ('nordbygg-2026-exhibitor-136787', 'nordbygg-2026', 'Fellowmind', 'C01:11', jsonb_build_object('en', 'Fellowmind is a European leader in digital transformation. By combining deep industry knowledge, technology expertise, and personal guidance we enable our customers to digitize what makes sense and use human skills where it matters most. We offer service for the entire business platform – from ERP, cloud infrastructure, data analytics, to CRM, intranet, and Digital Employee Experience and infuse AI in all our solutions. With the continuous release of new Microsoft AI Solutions, we can further accelerate on this promise.', 'sv', 'Fellowmind är en europeisk ledare inom digital transformation. Genom att kombinera djup branschkunskap, teknisk expertis och personlig vägledning gör vi det möjligt för våra kunder att digitalisera där det skapar värde och att använda mänsklig kompetens där den behövs som mest. Vi erbjuder service för hela affärsplattformen – från ERP, molninfrastruktur och dataanalys till CRM, intranät och Digital Employee Experience – och vi för in AI i alla våra lösningar. Med Microsofts kontinuerliga lansering av nya AI-lösningar kan vi ta detta löfte ännu längre.'), 'https://www.fellowmind.com/sv-se', 'assets/images/exhibitors/nordbygg-2026-fellowmind.jpg'),
   ('nordbygg-2026-exhibitor-139930', 'nordbygg-2026', 'Ferroloq OÜ', 'C03:51', jsonb_build_object('en', 'We know how projects really work.
 
 At Ferroloq, we manufacture steel profile doors — but more importantly, we support the people behind the projects.
@@ -2972,34 +2972,34 @@ We try to be the kind of partner we would want ourselves:
 Most of our work is in Scandinavia, where expectations are high — and we’ve learned to match that with clear communication and accountability.
 
 In the end, it’s simple:
-if your job is easier because of us, we’ve done our job right.', 'sv', 'We know how projects really work.
+if your job is easier because of us, we’ve done our job right.', 'sv', 'Vi vet hur projekt egentligen fungerar.
 
-At Ferroloq, we manufacture steel profile doors — but more importantly, we support the people behind the projects.
+På Ferroloq tillverkar vi dörrar i stålprofil – men ännu viktigare är att vi stöttar människorna bakom projekten.
 
-Our main partners are façade companies and installation teams who deal with real-life challenges every day:
+Våra främsta partner är fasadföretag och monteringsteam som hanterar verkliga utmaningar varje dag:
 
-- last-minute changes
-- tight deadlines
-- details that don’t quite match on site
+- ändringar i sista minuten
+- snäva tidplaner
+- detaljer som inte riktigt stämmer på plats
 
-We try to be the kind of partner we would want ourselves:
+Vi försöker vara den sortens partner som vi själva skulle vilja ha:
 
-- reliable in quality — so you don’t have to double-check everything;
-- flexible in approach — because no project goes exactly as planned;
-- strong in engineering — so problems get solved, not passed on;
+- pålitliga i kvalitet – så att du inte behöver dubbelkolla allt;
+- flexibla i arbetssättet – för inget projekt går exakt enligt plan;
+- starka i konstruktion – så att problem löses i stället för att skickas vidare;
 
-Most of our work is in Scandinavia, where expectations are high — and we’ve learned to match that with clear communication and accountability.
+Det mesta av vårt arbete sker i Skandinavien, där förväntningarna är höga – och vi har lärt oss att möta dem med tydlig kommunikation och ansvarstagande.
 
-In the end, it’s simple:
-if your job is easier because of us, we’ve done our job right.'), 'https://www.linkedin.com/company/ferroloq/?originalSubdomain=ee', 'assets/images/exhibitors/nordbygg-2026-ferroloq-ou.jpg'),
+I slutändan är det enkelt:
+om ditt jobb blir lättare tack vare oss har vi gjort vårt jobb rätt.'), 'https://www.linkedin.com/company/ferroloq/?originalSubdomain=ee', 'assets/images/exhibitors/nordbygg-2026-ferroloq-ou.jpg'),
   ('nordbygg-2026-exhibitor-139782', 'nordbygg-2026', 'Ferumeta', 'C19:41', null, 'https://www.ferumeta.lt', null),
-  ('nordbygg-2026-exhibitor-133968', 'nordbygg-2026', 'Fibo AB', 'C07:21', jsonb_build_object('en', 'I över 70 år har Fibo utvecklat väggsystem för våtrum och andra miljöer med höga krav. Företaget grundades 1952 i Lyngdal i Norge, där produktionen till en början var inriktad på skeppsbyggnad. Med tiden utvecklades detta till det Fibo är känt för i dag: ett komplett väggsystem som ger 100 % vattentäta väggar, tål tuff användning, är enkla att rengöra och kräver minimalt underhåll.
+  ('nordbygg-2026-exhibitor-133968', 'nordbygg-2026', 'Fibo AB', 'C07:21', jsonb_build_object('en', 'For more than 70 years Fibo has developed wall systems for wet rooms and other demanding environments. The company was founded in 1952 in Lyngdal, Norway, where production initially focused on shipbuilding. Over time this evolved into what Fibo is known for today: a complete wall system that delivers 100 % waterproof walls, withstands heavy use, is easy to clean and requires minimal maintenance.
 
-Redan från start har fokus legat på hållbarhet, funktion och enkel installation. Det som började som enkla paneler är i dag ett komplett väggsystem som används i allt från privata bostäder till skolor, sjukhus och andra kommersiella byggnader.
+From the very beginning the focus has been on durability, function and easy installation. What started as simple panels is today a complete wall system used in everything from private homes to schools, hospitals and other commercial buildings.
 
-Med över en miljon installationer i Skandinavien, Europa, Nordamerika och Australien har Fibo byggt upp en gedigen erfarenhet av hur väggsystem fungerar i praktiken.
+With more than a million installations across Scandinavia, Europe, North America and Australia, Fibo has built deep experience in how wall systems perform in practice.
 
-Alla Fibos väggskivor tillverkas i Lyngdal, Norge. Här utvecklas och förbättras lösningarna kontinuerligt. Med produktion i egen fabrik har vi full kontroll över material, processer och kvalitet. Samtidigt arbetar vi systematiskt för att minska avfall och miljöpåverkan.', 'sv', 'I över 70 år har Fibo utvecklat väggsystem för våtrum och andra miljöer med höga krav. Företaget grundades 1952 i Lyngdal i Norge, där produktionen till en början var inriktad på skeppsbyggnad. Med tiden utvecklades detta till det Fibo är känt för i dag: ett komplett väggsystem som ger 100 % vattentäta väggar, tål tuff användning, är enkla att rengöra och kräver minimalt underhåll.
+All Fibo wall panels are manufactured in Lyngdal, Norway. The solutions are continuously developed and refined here. By producing in our own factory we have full control over materials, processes and quality. At the same time we work systematically to reduce waste and environmental impact.', 'sv', 'I över 70 år har Fibo utvecklat väggsystem för våtrum och andra miljöer med höga krav. Företaget grundades 1952 i Lyngdal i Norge, där produktionen till en början var inriktad på skeppsbyggnad. Med tiden utvecklades detta till det Fibo är känt för i dag: ett komplett väggsystem som ger 100 % vattentäta väggar, tål tuff användning, är enkla att rengöra och kräver minimalt underhåll.
 
 Redan från start har fokus legat på hållbarhet, funktion och enkel installation. Det som började som enkla paneler är i dag ett komplett väggsystem som används i allt från privata bostäder till skolor, sjukhus och andra kommersiella byggnader.
 
@@ -3007,34 +3007,34 @@ Med över en miljon installationer i Skandinavien, Europa, Nordamerika och Austr
 
 Alla Fibos väggskivor tillverkas i Lyngdal, Norge. Här utvecklas och förbättras lösningarna kontinuerligt. Med produktion i egen fabrik har vi full kontroll över material, processer och kvalitet. Samtidigt arbetar vi systematiskt för att minska avfall och miljöpåverkan.'), 'https://www.fibo.se', 'assets/images/exhibitors/nordbygg-2026-fibo-ab.jpg'),
   ('nordbygg-2026-exhibitor-137352', 'nordbygg-2026', 'Fidelix / Larmia / Lansen', 'A16:12', null, 'https://www.fidelix.se', 'assets/images/exhibitors/nordbygg-2026-fidelix-larmia-lansen.jpg'),
-  ('nordbygg-2026-exhibitor-136975', 'nordbygg-2026', 'Fieldly AB', 'C01:20', jsonb_build_object('en', 'Fieldly är ett affärssystem för byggbranschen som hjälper dig få koll på hela projektet, från första jobbet till fakturan är betald.
+  ('nordbygg-2026-exhibitor-136975', 'nordbygg-2026', 'Fieldly AB', 'C01:20', jsonb_build_object('en', 'Fieldly is a business system for the construction industry that helps you keep track of an entire project, from the first job to the invoice being paid.
 
-Vi har byggt Fieldly för verkligheten ute på bygget. Det ska vara enkelt att planera, rapportera tid och material, följa upp ekonomi och ha allt samlat på ett ställe - utan krångel. Resultatet? Bättre överblick, smidigare arbetsdagar och färre saker som faller mellan stolarna.
+We have built Fieldly for the reality out on the construction site. Planning, reporting time and materials, keeping an eye on finances and having everything in one place should be straightforward — with no hassle. The result? Better overview, smoother working days and fewer things falling through the cracks.
 
-Kort sagt: mindre administration, mer gjort och du missar inga timmar eller kostnader. Kom förbi vår monter så visar vi hur det funkar i praktiken.', 'sv', 'Fieldly är ett affärssystem för byggbranschen som hjälper dig få koll på hela projektet, från första jobbet till fakturan är betald.
+In short: less admin, more done and no hours or costs slipping past you. Stop by our stand and we will show you how it works in practice.', 'sv', 'Fieldly är ett affärssystem för byggbranschen som hjälper dig få koll på hela projektet, från första jobbet till fakturan är betald.
 
 Vi har byggt Fieldly för verkligheten ute på bygget. Det ska vara enkelt att planera, rapportera tid och material, följa upp ekonomi och ha allt samlat på ett ställe - utan krångel. Resultatet? Bättre överblick, smidigare arbetsdagar och färre saker som faller mellan stolarna.
 
 Kort sagt: mindre administration, mer gjort och du missar inga timmar eller kostnader. Kom förbi vår monter så visar vi hur det funkar i praktiken.'), 'https://www.fieldly.com', 'assets/images/exhibitors/nordbygg-2026-fieldly-ab.jpg'),
   ('nordbygg-2026-exhibitor-134478', 'nordbygg-2026', 'FILA Nordic AB', 'B01:51', null, 'https://www.fila.it/se/en', null),
-  ('nordbygg-2026-exhibitor-138220', 'nordbygg-2026', 'Filterteknik Sverige AB', 'A21:26', jsonb_build_object('en', 'Filterteknik tar nästa steg – in på ventilationsmarknaden
+  ('nordbygg-2026-exhibitor-138220', 'nordbygg-2026', 'Filterteknik Sverige AB', 'A21:26', jsonb_build_object('en', 'Filterteknik takes the next step — into the ventilation market
 
-Efter många år som Nordens största oberoende filterleverantör breddar vi nu vårt erbjudande och går in på ventilationsmarknaden.
-Med ett större sortiment och mer kompletta lösningar fortsätter vi förenkla våra kunders vardag genom kunskap, kvalitet och effektiva lösningar – alltid med samma trygghet och värme som kännetecknar Filterteknik.
+After many years as the Nordic region''s largest independent filter supplier we are now broadening our offer and moving into the ventilation market.
+With a wider range and more complete solutions we keep making our customers'' working day easier through knowledge, quality and effective solutions — always with the same trust and warmth that characterise Filterteknik.
 
-Kom och besök oss i monter A21:26', 'sv', 'Filterteknik tar nästa steg – in på ventilationsmarknaden
+Come and visit us at stand A21:26', 'sv', 'Filterteknik tar nästa steg – in på ventilationsmarknaden
 
 Efter många år som Nordens största oberoende filterleverantör breddar vi nu vårt erbjudande och går in på ventilationsmarknaden.
 Med ett större sortiment och mer kompletta lösningar fortsätter vi förenkla våra kunders vardag genom kunskap, kvalitet och effektiva lösningar – alltid med samma trygghet och värme som kännetecknar Filterteknik.
 
 Kom och besök oss i monter A21:26'), 'https://filterteknik.se', 'assets/images/exhibitors/nordbygg-2026-filterteknik-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-134551', 'nordbygg-2026', 'Filtrena AB', 'A07:02', null, 'https://www.filtrena.se', null),
-  ('nordbygg-2026-exhibitor-134002', 'nordbygg-2026', 'Finfo', 'C01:02', jsonb_build_object('en', 'Finfo är Sveriges främsta leverantör av produkt- och artikelinformation för byggsektorn, specialiserad på att skapa och leverera data som driver effektivare och mer hållbara byggprojekt. Vårt mål är att förenkla och förbättra informationsflödet mellan leverantörer, grossister och entreprenörer genom att erbjuda strukturerad, kvalitetssäkrad och realtidsuppdaterad produktinformation. Detta möjliggör smidigare processer och starkare samarbeten i hela byggkedjan.
+  ('nordbygg-2026-exhibitor-134002', 'nordbygg-2026', 'Finfo', 'C01:02', jsonb_build_object('en', 'Finfo is Sweden''s leading supplier of product and item information for the construction sector, specialised in creating and delivering data that drives more efficient and more sustainable construction projects. Our goal is to simplify and improve the flow of information between suppliers, wholesalers and contractors by providing structured, quality-assured and real-time-updated product information. This enables smoother processes and stronger collaboration throughout the construction value chain.
 
-Med Finfos lösningar får företag tillgång till pålitlig och standardiserad information som uppfyller byggbranschens krav och underlättar för företag att göra informerade produktval och säkerställa korrekta materialanvändningar. Vår plattform stödjer företagets behov av att effektivisera inköp, logistik och kundkommunikation, vilket sparar både tid och resurser och leder till högre kvalitet i varje led.', 'sv', 'Finfo är Sveriges främsta leverantör av produkt- och artikelinformation för byggsektorn, specialiserad på att skapa och leverera data som driver effektivare och mer hållbara byggprojekt. Vårt mål är att förenkla och förbättra informationsflödet mellan leverantörer, grossister och entreprenörer genom att erbjuda strukturerad, kvalitetssäkrad och realtidsuppdaterad produktinformation. Detta möjliggör smidigare processer och starkare samarbeten i hela byggkedjan.
+With Finfo''s solutions, companies gain access to reliable and standardised information that meets the construction industry''s requirements and makes it easier to make informed product choices and ensure that materials are used correctly. Our platform supports the business''s need to streamline purchasing, logistics and customer communication, which saves both time and resources and leads to higher quality at every stage.', 'sv', 'Finfo är Sveriges främsta leverantör av produkt- och artikelinformation för byggsektorn, specialiserad på att skapa och leverera data som driver effektivare och mer hållbara byggprojekt. Vårt mål är att förenkla och förbättra informationsflödet mellan leverantörer, grossister och entreprenörer genom att erbjuda strukturerad, kvalitetssäkrad och realtidsuppdaterad produktinformation. Detta möjliggör smidigare processer och starkare samarbeten i hela byggkedjan.
 
 Med Finfos lösningar får företag tillgång till pålitlig och standardiserad information som uppfyller byggbranschens krav och underlättar för företag att göra informerade produktval och säkerställa korrekta materialanvändningar. Vår plattform stödjer företagets behov av att effektivisera inköp, logistik och kundkommunikation, vilket sparar både tid och resurser och leder till högre kvalitet i varje led.'), 'https://www.finfo.se', 'assets/images/exhibitors/nordbygg-2026-finfo.jpg'),
-  ('nordbygg-2026-exhibitor-138847', 'nordbygg-2026', 'FireSeal AB', 'B10:30', jsonb_build_object('en', 'Företaget grundades för drygt 40 år sedan för att utföra ett uppdrag från den svenska staten – att brandtäta de svenska kärnkraftverken. Med avstamp i denna pionjärinsats har FireSeal under åren utvecklat en framgångsrik verksamhet inom två sektorer: marin- och offshoresektorn i Asien och USA, samt byggsektorn i främst Sverige och Norge, där FireSeal är marknadsledande inom mjuka brandtätningslösningar.', 'sv', 'Företaget grundades för drygt 40 år sedan för att utföra ett uppdrag från den svenska staten – att brandtäta de svenska kärnkraftverken. Med avstamp i denna pionjärinsats har FireSeal under åren utvecklat en framgångsrik verksamhet inom två sektorer: marin- och offshoresektorn i Asien och USA, samt byggsektorn i främst Sverige och Norge, där FireSeal är marknadsledande inom mjuka brandtätningslösningar.'), 'https://www.fireseal.se', 'assets/images/exhibitors/nordbygg-2026-fireseal-ab.jpg'),
+  ('nordbygg-2026-exhibitor-138847', 'nordbygg-2026', 'FireSeal AB', 'B10:30', jsonb_build_object('en', 'The company was founded just over 40 years ago to carry out an assignment from the Swedish state — to fire-stop the Swedish nuclear power plants. Building on that pioneering effort, FireSeal has over the years developed a successful business across two sectors: the marine and offshore sector in Asia and the United States, and the construction sector primarily in Sweden and Norway, where FireSeal is the market leader in soft fire-stopping solutions.', 'sv', 'Företaget grundades för drygt 40 år sedan för att utföra ett uppdrag från den svenska staten – att brandtäta de svenska kärnkraftverken. Med avstamp i denna pionjärinsats har FireSeal under åren utvecklat en framgångsrik verksamhet inom två sektorer: marin- och offshoresektorn i Asien och USA, samt byggsektorn i främst Sverige och Norge, där FireSeal är marknadsledande inom mjuka brandtätningslösningar.'), 'https://www.fireseal.se', 'assets/images/exhibitors/nordbygg-2026-fireseal-ab.jpg'),
   ('nordbygg-2026-exhibitor-136108', 'nordbygg-2026', 'fischer Sverige AB', 'B02:40', null, 'https://www.fischersverige.se', 'assets/images/exhibitors/nordbygg-2026-fischer-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-139429', 'nordbygg-2026', 'FJORDD | AQUASTONE', 'A11:15', jsonb_build_object('en', 'AQUASTONE® is a brand founded by enthusiasts of creating unique things. Our products were created by experts in the bathroom industry.
 We are a manufacturer of bathtubs, washbasins and shower trays.
@@ -3052,35 +3052,35 @@ ensuring they turn your business into a successful venture.
 VALUES
 
 In our operations, we place emphasis on reliability, integrity and timeliness. We strongly
-believe that these values make the foundation of a long-lasting business relationship.', 'sv', 'AQUASTONE® is a brand founded by enthusiasts of creating unique things. Our products were created by experts in the bathroom industry.
-We are a manufacturer of bathtubs, washbasins and shower trays.
-We produce them from the AQUASTONE® stone composite that we have developed. They are created according to customer specifications or based on a design prepared by our specialists. We operate in the B2B sector, offering partners to make models under our own brand. Our innovative approach means support not only at the design or production stage, but also comprehensive assistance in launching the private label on the market.
+believe that these values make the foundation of a long-lasting business relationship.', 'sv', 'AQUASTONE® är ett varumärke som grundats av entusiaster med passion för att skapa unika produkter. Våra produkter har tagits fram av experter inom badrumsbranschen.
+Vi är tillverkare av badkar, tvättställ och duschkar.
+Vi tillverkar dem av den AQUASTONE®-stenkomposit som vi själva har utvecklat. De skapas enligt kundens specifikationer eller utifrån en design som tagits fram av våra specialister. Vi är verksamma inom B2B-segmentet och erbjuder våra partners att tillverka modeller under deras eget varumärke. Vårt innovativa arbetssätt innebär stöd inte bara i design- och produktionsfasen, utan även heltäckande hjälp med att lansera private label-produkterna på marknaden.
 
 MISSION
 
-Our mission is to support business partners in gaining competitive edge.
+Vår mission är att stötta affärspartners i att skaffa sig konkurrensfördelar.
 
 VISION
 
-We provide innovative bathroom products of the highest quality and exceptional design,
-ensuring they turn your business into a successful venture.
+Vi erbjuder innovativa badrumsprodukter av högsta kvalitet och med exceptionell design,
+så att de förvandlar din verksamhet till en framgångsrik affär.
 
-VALUES
+VÄRDERINGAR
 
-In our operations, we place emphasis on reliability, integrity and timeliness. We strongly
-believe that these values make the foundation of a long-lasting business relationship.'), 'https://www.aquastone.eu', 'assets/images/exhibitors/nordbygg-2026-fjordd-aquastone.jpg'),
+I vår verksamhet lägger vi vikt vid pålitlighet, integritet och punktlighet. Vi är starkt övertygade
+om att dessa värderingar utgör grunden för en långsiktig affärsrelation.'), 'https://www.aquastone.eu', 'assets/images/exhibitors/nordbygg-2026-fjordd-aquastone.jpg'),
   ('nordbygg-2026-exhibitor-138592', 'nordbygg-2026', 'FLA Material AB', 'C09:22', null, 'https://flamaterial.com', 'assets/images/exhibitors/nordbygg-2026-fla-material-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134440', 'nordbygg-2026', 'Flex Scandinavia AB', 'B02:11', jsonb_build_object('en', 'Flex Scandinavia AB är distributör av maskiner och tillbehör på den svenska hantverkar- och park & trädgårdsmarknaden från våra varumärken FLEX Power Tools och EGO Power+. Vi är sedan 240601 en del av CHERVON Group och vår kundbas domineras av återförsäljare inom måleri, industri, bygg, bilrekond, park & trädgård samt uthyrningsbolag i Sverige
-Vårt huvudkontor, serviceverkstad och lager ligger i Karlstad.
-Vi har sedan slutet av 1940-talet varit generalagent i Sverige för FLEX Power Tools®, ett varumärke mest känt som innovatören av vinkelslipen på 50-talet samt den långhalsade slipmaskinen Giraffen® som sattes på marknaden i slutet av 90-talet.
-Sedan 2014 har vi även i portföljen urstarka 56-volts batterimaskiner för professionell park- och trädgårdsskötsel från EGO Power+®.
-Som tillbehör till FLEX-maskinerna har vi vårt eget varumärke FLEXXTRA® för att ge återförsäljare och slutkunder bästa möjliga sammanlagda kundvärde för sin maskin. Vi väljer högsta möjliga kvalitet på våra tillbehör och omfånget riktar sig mot användare inom slipning, polering, kapning & fog fräsning, håltagning och borrning samt blandning av bruk.
+  ('nordbygg-2026-exhibitor-134440', 'nordbygg-2026', 'Flex Scandinavia AB', 'B02:11', jsonb_build_object('en', 'Flex Scandinavia AB is the distributor of machines and accessories for the Swedish trade and park & garden markets, representing our brands FLEX Power Tools and EGO Power+. Since 1 June 2024 we are part of the CHERVON Group, and our customer base is dominated by resellers within painting, industry, construction, vehicle reconditioning, park & garden, as well as rental companies in Sweden
+Our head office, service workshop and warehouse are located in Karlstad.
+Since the late 1940s we have been the general agent in Sweden for FLEX Power Tools®, a brand best known as the innovator of the angle grinder in the 1950s and of the long-neck sander Giraffen®, which was launched in the late 1990s.
+Since 2014 our portfolio also includes the powerful 56 V battery-powered machines for professional park and garden care from EGO Power+®.
+As accessories for the FLEX machines we have our own brand FLEXXTRA®, designed to give resellers and end customers the best possible total value out of their machine. We pick the highest possible quality for our accessories, and the range is aimed at users working with grinding, polishing, cutting & joint routing, hole-making and drilling, as well as mortar mixing.
 
-Vår kundbas domineras av återförsäljare inom Automotve, bil/båtrekond, måleri, industri, bygg, park&trädgård samt uthyrningsbolag i Sverige.
+Our customer base is dominated by resellers within Automotive, car/boat reconditioning, painting, industry, construction, park & garden, and rental companies in Sweden.
 
-Är du som återförsäljare intresserad av att jobba med oss, tveka inte att kontakta oss.
+If you are a reseller and interested in working with us, please do not hesitate to get in touch.
 
-Vi är certifierade enligt ISO9001 & ISO14001 och har största fokus på att du som kund skall bli helnöjd.
+We are certified to ISO 9001 & ISO 14001 and our top priority is making sure that you, as a customer, are completely satisfied.
 
 www.flex-tools.se
 
@@ -3105,34 +3105,34 @@ wwww.egopowerplus.se
 www.flexscandinavia.se'), 'https://www.flexscandinavia.se', 'assets/images/exhibitors/nordbygg-2026-flex-scandinavia-ab.jpg'),
   ('nordbygg-2026-exhibitor-138296', 'nordbygg-2026', 'Flexiheater', 'B10:01', null, 'https://www.aselemek.com', null),
   ('nordbygg-2026-exhibitor-138763', 'nordbygg-2026', 'Flexit Kuben AB', 'A18:30', null, 'https://www.kubenventilation.se', null),
-  ('nordbygg-2026-exhibitor-134757', 'nordbygg-2026', 'Flexit Sverige AB', 'A15:18', jsonb_build_object('en', 'Flexit är en av Nordens ledande leverantörer av inomhusklimatlösningar.
-Vår kompetens och våra lösningar är speciellt utvecklade för att förbättra inomhusklimatet i bostäder, i ett krävande nordiskt klimat.
+  ('nordbygg-2026-exhibitor-134757', 'nordbygg-2026', 'Flexit Sverige AB', 'A15:18', jsonb_build_object('en', 'Flexit is one of the Nordic region''s leading suppliers of indoor climate solutions.
+Our expertise and our solutions are specifically developed to improve the indoor climate in homes, in a demanding Nordic climate.
 
-Välkomna till vår monter A15:18 för att se våra produkter för ett bättre inneklimat.
+Welcome to our stand A15:18 to see our products for a better indoor climate.
 
-Vi visar vår nya rotorteknologi med skyhög prestanda; patenterade Stage Wheel som ger upp till 10 procentenheter bättre värmeåtervinning i ventilationsaggregat för bostäder och fler kommande nyheter.', 'sv', 'Flexit är en av Nordens ledande leverantörer av inomhusklimatlösningar.
+We will be showing our new high-performance rotor technology — the patented Stage Wheel, which delivers up to 10 percentage points more heat recovery in residential ventilation units — together with several more upcoming launches.', 'sv', 'Flexit är en av Nordens ledande leverantörer av inomhusklimatlösningar.
 Vår kompetens och våra lösningar är speciellt utvecklade för att förbättra inomhusklimatet i bostäder, i ett krävande nordiskt klimat.
 
 Välkomna till vår monter A15:18 för att se våra produkter för ett bättre inneklimat.
 
 Vi visar vår nya rotorteknologi med skyhög prestanda; patenterade Stage Wheel som ger upp till 10 procentenheter bättre värmeåtervinning i ventilationsaggregat för bostäder och fler kommande nyheter.'), 'https://www.flexit.se', 'assets/images/exhibitors/nordbygg-2026-flexit-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138611', 'nordbygg-2026', 'Flobar AB', 'A09:33', jsonb_build_object('en', 'Flobar - Skyddar fastigheter och samhällen mot översvämningar
+  ('nordbygg-2026-exhibitor-138611', 'nordbygg-2026', 'Flobar AB', 'A09:33', jsonb_build_object('en', 'Flobar - Protecting properties and communities from flooding
 
-Vi är skandinavisk distributör av världsledande produkter för översvämningsskydd och miljösäkerhet. Vårt fokus ligger på att skydda fastigheter, infrastruktur och miljön från skador orsakade av vatten oavsett om det handlar om stigande havsnivåer, kraftiga regn eller kontaminerat släckvatten.
+We are the Scandinavian distributor of world-leading products for flood protection and environmental safety. Our focus is on protecting properties, infrastructure and the environment from damage caused by water — whether it concerns rising sea levels, heavy rainfall or contaminated firefighting water.
 
-- Översvämningsbarriärer och mobila skyddssystem
+- Flood barriers and mobile protection systems
 
-- Lösningar för industri, kommun och privat sektor
+- Solutions for industry, the public sector and private clients
 
-- Skydd mot utsläpp av släckvatten vid brand
+- Protection against the release of firefighting water in the event of a fire
 
-- Förvaringsskåp för tex kemikalier, batterier mm.
+- Storage cabinets for e.g. chemicals, batteries, etc.
 
-Vi kombinerar kvalitativa produkter med lokal expertis och erbjuder helhetslösningar, från rådgivning och försäljning till support och logistik i hela Skandinavien.
+We combine high-quality products with local expertise and offer complete solutions, from advice and sales through to support and logistics across the whole of Scandinavia.
 
-Klimatförändringar ökar riskerna – vi hjälper dig att vara förberedd.
+Climate change is increasing the risks — we help you stay prepared.
 
-Kontakta oss för att diskutera hur vi kan skydda din fastighet eller verksamhet.
+Contact us to discuss how we can protect your property or your operations.
 
                             info@flobar.se / www.flobar.se', 'sv', 'Flobar - Skyddar fastigheter och samhällen mot översvämningar
 
@@ -3153,56 +3153,56 @@ Klimatförändringar ökar riskerna – vi hjälper dig att vara förberedd.
 Kontakta oss för att diskutera hur vi kan skydda din fastighet eller verksamhet.
 
                             info@flobar.se / www.flobar.se'), 'https://flobar.se', 'assets/images/exhibitors/nordbygg-2026-flobar-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137981', 'nordbygg-2026', 'Floby Durk AB', 'C15:51', jsonb_build_object('en', 'Välkommen till C15:51 och möt oss från Floby Durk!
+  ('nordbygg-2026-exhibitor-137981', 'nordbygg-2026', 'Floby Durk AB', 'C15:51', jsonb_build_object('en', 'Welcome to C15:51 and come meet us from Floby Durk!
 
-Här visar vi vår raka trappa med stora möjligheter till anpassning.
+In the stand we are showing our straight staircase, with extensive options for customisation.
 
-Floby Durk tillverkar olika sorters trappor, räcken, ramper och durk till allt från industrier och offentliga miljöer till kontor och bostäder.
+Floby Durk manufactures different types of stairs, railings, ramps and gratings for everything from industry and public spaces to offices and homes.
 
-Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!', 'sv', 'Välkommen till C15:51 och möt oss från Floby Durk!
+Swedish, innovative and durable — alongside us in the stand you''ll also meet several of the other companies that are part of the Weland Group. A warm welcome!', 'sv', 'Välkommen till C15:51 och möt oss från Floby Durk!
 
 Här visar vi vår raka trappa med stora möjligheter till anpassning.
 
 Floby Durk tillverkar olika sorters trappor, räcken, ramper och durk till allt från industrier och offentliga miljöer till kontor och bostäder.
 
 Svenskt, innovativt och hållbart – i montern möter du, förutom oss, även några av de andra företagen som ingår i Welandkoncernen. Varmt välkommen!'), 'https://flobydurk.se', 'assets/images/exhibitors/nordbygg-2026-floby-durk-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139459', 'nordbygg-2026', 'Florian Eichinger GmbH', 'C02:51', jsonb_build_object('en', 'Florian Eichinger GmbH is a family-run German manufacturer of robust construction and industrial equipment, producing concrete skips, muck skips, hoisting gear, containers and site accessories for global markets. With over 100 years of innovation, it leads in quality and reliability.', 'sv', 'Florian Eichinger GmbH is a family-run German manufacturer of robust construction and industrial equipment, producing concrete skips, muck skips, hoisting gear, containers and site accessories for global markets. With over 100 years of innovation, it leads in quality and reliability.'), 'https://eichinger.de/de', 'assets/images/exhibitors/nordbygg-2026-florian-eichinger-gmbh.jpg'),
-  ('nordbygg-2026-exhibitor-139316', 'nordbygg-2026', 'Fluetec AB', 'A21:15', jsonb_build_object('en', 'Vi erbjuder en kostnadseffektiv och hållbar lösning för att täta ventilationskanaler utan rivning. Som exklusiv distributör av TKR-systemet i Sverige och med Fluetec som utförande specialist levererar vi biooljebaserad invändig tätning som återställer tryck, funktion och energieffektivitet i befintliga system.
+  ('nordbygg-2026-exhibitor-139459', 'nordbygg-2026', 'Florian Eichinger GmbH', 'C02:51', jsonb_build_object('en', 'Florian Eichinger GmbH is a family-run German manufacturer of robust construction and industrial equipment, producing concrete skips, muck skips, hoisting gear, containers and site accessories for global markets. With over 100 years of innovation, it leads in quality and reliability.', 'sv', 'Florian Eichinger GmbH är en familjeägd tysk tillverkare av robust bygg- och industriutrustning som producerar betongbehållare, schaktmassebehållare, lyftutrustning, containrar och tillbehör för byggarbetsplatser för globala marknader. Med över 100 år av innovation är företaget ledande inom kvalitet och tillförlitlighet.'), 'https://eichinger.de/de', 'assets/images/exhibitors/nordbygg-2026-florian-eichinger-gmbh.jpg'),
+  ('nordbygg-2026-exhibitor-139316', 'nordbygg-2026', 'Fluetec AB', 'A21:15', jsonb_build_object('en', 'We offer a cost-effective and sustainable solution for sealing ventilation ducts without demolition. As the exclusive distributor of the TKR system in Sweden, with Fluetec as the specialist carrying out the work, we deliver bio-oil-based internal sealing that restores pressure, function and energy efficiency in existing systems.
 
-Resultatet är godkänd OVK, sänkta driftkostnader och upp till 75 % lägre kostnad jämfört med kanalbyte.', 'sv', 'Vi erbjuder en kostnadseffektiv och hållbar lösning för att täta ventilationskanaler utan rivning. Som exklusiv distributör av TKR-systemet i Sverige och med Fluetec som utförande specialist levererar vi biooljebaserad invändig tätning som återställer tryck, funktion och energieffektivitet i befintliga system.
+The result is an approved mandatory ventilation inspection (OVK), reduced operating costs and up to 75 % lower cost compared with replacing the ductwork.', 'sv', 'Vi erbjuder en kostnadseffektiv och hållbar lösning för att täta ventilationskanaler utan rivning. Som exklusiv distributör av TKR-systemet i Sverige och med Fluetec som utförande specialist levererar vi biooljebaserad invändig tätning som återställer tryck, funktion och energieffektivitet i befintliga system.
 
 Resultatet är godkänd OVK, sänkta driftkostnader och upp till 75 % lägre kostnad jämfört med kanalbyte.'), 'https://btyb.se', 'assets/images/exhibitors/nordbygg-2026-fluetec-ab.jpg'),
-  ('nordbygg-2026-exhibitor-140093', 'nordbygg-2026', 'FläktGroup', 'A17:22', jsonb_build_object('en', 'FläktGroup, som är en del av Samsung, är en ledare inom ventilation och inomhusklimat. Vi levererar innovativa och energieffektiva produkter och lösningar av högsta klass, samtidigt som vi minskar kundernas koldioxidavtryck. FläktGroups ledande varumärken har satt den tekniska standarden i över 100 år och uppfyller även de mest krävande kundbehoven. FläktGroup har globala verksamheter med produktionsanläggningar i Europa, Asien och USA.', 'sv', 'FläktGroup, som är en del av Samsung, är en ledare inom ventilation och inomhusklimat. Vi levererar innovativa och energieffektiva produkter och lösningar av högsta klass, samtidigt som vi minskar kundernas koldioxidavtryck. FläktGroups ledande varumärken har satt den tekniska standarden i över 100 år och uppfyller även de mest krävande kundbehoven. FläktGroup har globala verksamheter med produktionsanläggningar i Europa, Asien och USA.'), 'https://info.se@flaktgroup.com', 'assets/images/exhibitors/nordbygg-2026-flaktgroup.jpg'),
-  ('nordbygg-2026-exhibitor-135977', 'nordbygg-2026', 'FM Mattsson Group AB', 'A03:10', jsonb_build_object('en', 'I en tid där hållbarhet, pålitlighet och närhet blir allt viktigare står FM Mattsson Group stadigt – med svensk förankring, lång erfarenhet och blicken riktad framåt. Med tekniska innovationer, design och smarta funktioner är vi din one stop shop för framtidens vattenlösningar.
+  ('nordbygg-2026-exhibitor-140093', 'nordbygg-2026', 'FläktGroup', 'A17:22', jsonb_build_object('en', 'FläktGroup, part of Samsung, is a leader in ventilation and indoor climate. We deliver innovative, top-tier energy-efficient products and solutions while reducing our customers'' carbon footprint. FläktGroup''s leading brands have set the technical standard for more than 100 years and meet even the most demanding customer needs. FläktGroup operates globally, with production facilities in Europe, Asia and the United States.', 'sv', 'FläktGroup, som är en del av Samsung, är en ledare inom ventilation och inomhusklimat. Vi levererar innovativa och energieffektiva produkter och lösningar av högsta klass, samtidigt som vi minskar kundernas koldioxidavtryck. FläktGroups ledande varumärken har satt den tekniska standarden i över 100 år och uppfyller även de mest krävande kundbehoven. FläktGroup har globala verksamheter med produktionsanläggningar i Europa, Asien och USA.'), 'https://info.se@flaktgroup.com', 'assets/images/exhibitors/nordbygg-2026-flaktgroup.jpg'),
+  ('nordbygg-2026-exhibitor-135977', 'nordbygg-2026', 'FM Mattsson Group AB', 'A03:10', jsonb_build_object('en', 'In a time when sustainability, reliability and being close to the customer are becoming ever more important, FM Mattsson Group stands firm — with Swedish roots, long experience and an eye on the future. With technical innovation, design and smart features, we are your one-stop shop for the water solutions of tomorrow.
 
-Från stora sjukhus till exklusiva designhotell. Ja, alla som vill ha en riktigt snygg och hållbar kran eller dusch.
+From large hospitals to exclusive design hotels. In short, anyone who wants a really good-looking and durable tap or shower.
 
-På Nordbygg presenterar vi det senaste från Mora Armatur, FM Mattsson och Damixa: produkter och tjänster som sparar vatten och energi, skapar sköna upplevelser och som håller över tid. I vår monter finns också våra experter på plats, redo att hjälpa dig att hitta rätt lösningar för just dina projekt.', 'sv', 'I en tid där hållbarhet, pålitlighet och närhet blir allt viktigare står FM Mattsson Group stadigt – med svensk förankring, lång erfarenhet och blicken riktad framåt. Med tekniska innovationer, design och smarta funktioner är vi din one stop shop för framtidens vattenlösningar.
+At Nordbygg we present the latest from Mora Armatur, FM Mattsson and Damixa: products and services that save water and energy, create great experiences and last over time. In our stand our experts will also be on hand, ready to help you find the right solutions for your specific projects.', 'sv', 'I en tid där hållbarhet, pålitlighet och närhet blir allt viktigare står FM Mattsson Group stadigt – med svensk förankring, lång erfarenhet och blicken riktad framåt. Med tekniska innovationer, design och smarta funktioner är vi din one stop shop för framtidens vattenlösningar.
 
 Från stora sjukhus till exklusiva designhotell. Ja, alla som vill ha en riktigt snygg och hållbar kran eller dusch.
 
 På Nordbygg presenterar vi det senaste från Mora Armatur, FM Mattsson och Damixa: produkter och tjänster som sparar vatten och energi, skapar sköna upplevelser och som håller över tid. I vår monter finns också våra experter på plats, redo att hjälpa dig att hitta rätt lösningar för just dina projekt.'), 'https://www.fmmattssongroup.com', 'assets/images/exhibitors/nordbygg-2026-fm-mattsson-group-ab.jpg'),
   ('nordbygg-2026-exhibitor-137909', 'nordbygg-2026', 'FOAMGLAS Nordic AB', 'C09:71', null, 'https://www.foamglas.se', 'assets/images/exhibitors/nordbygg-2026-foamglas-nordic-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137804', 'nordbygg-2026', 'Forenom Hotels & Apartments', 'AG:27', jsonb_build_object('en', 'Forenom är marknadsledande leverantör inom företagsboende och projektbostäder. Vi samarbetar med flera av de större projekten i Norden inom exempelvis Datacenter, Infrastrukturprojekt sam Bostadsbyggande. Vi hjälper er personal att sova gott och bo tryggt för att kunna prestera som bäst på arbetsplatsen eller projektet', 'sv', 'Forenom är marknadsledande leverantör inom företagsboende och projektbostäder. Vi samarbetar med flera av de större projekten i Norden inom exempelvis Datacenter, Infrastrukturprojekt sam Bostadsbyggande. Vi hjälper er personal att sova gott och bo tryggt för att kunna prestera som bäst på arbetsplatsen eller projektet'), 'https://www.forenom.com/sv', 'assets/images/exhibitors/nordbygg-2026-forenom-hotels-apartments.jpg'),
-  ('nordbygg-2026-exhibitor-139200', 'nordbygg-2026', 'Forestia', 'C04:11', jsonb_build_object('en', 'Forestia är en tillverkare av spånskivor som levererar produkter till den skandinaviska och nordeuropeiska marknaden.
+  ('nordbygg-2026-exhibitor-137804', 'nordbygg-2026', 'Forenom Hotels & Apartments', 'AG:27', jsonb_build_object('en', 'Forenom is the market-leading supplier of corporate accommodation and project housing. We work with several of the larger projects in the Nordics within for example data centres, infrastructure projects and residential construction. We help your staff sleep well and live safely, so that they can perform at their best at the workplace or on the project', 'sv', 'Forenom är marknadsledande leverantör inom företagsboende och projektbostäder. Vi samarbetar med flera av de större projekten i Norden inom exempelvis Datacenter, Infrastrukturprojekt sam Bostadsbyggande. Vi hjälper er personal att sova gott och bo tryggt för att kunna prestera som bäst på arbetsplatsen eller projektet'), 'https://www.forenom.com/sv', 'assets/images/exhibitors/nordbygg-2026-forenom-hotels-apartments.jpg'),
+  ('nordbygg-2026-exhibitor-139200', 'nordbygg-2026', 'Forestia', 'C04:11', jsonb_build_object('en', 'Forestia is a manufacturer of particle boards that delivers products to the Scandinavian and Northern European markets.
 
-Forestia AS är en del av Byggma-koncernen och tillverkar totalt omkring 300.000 kubikmeter möbel-, interiör, bygg- och konstruktionsskivor varje år.
+Forestia AS is part of the Byggma Group and produces in total around 300,000 cubic metres of furniture, interior, building and construction boards every year.
 
-Ta del av de senaste nyheterna inom interiör- eller spånskivor i vår monter CO4:11 på Nordbygg.', 'sv', 'Forestia är en tillverkare av spånskivor som levererar produkter till den skandinaviska och nordeuropeiska marknaden.
+Discover the latest news in interior and particle boards in our stand CO4:11 at Nordbygg.', 'sv', 'Forestia är en tillverkare av spånskivor som levererar produkter till den skandinaviska och nordeuropeiska marknaden.
 
 Forestia AS är en del av Byggma-koncernen och tillverkar totalt omkring 300.000 kubikmeter möbel-, interiör, bygg- och konstruktionsskivor varje år.
 
 Ta del av de senaste nyheterna inom interiör- eller spånskivor i vår monter CO4:11 på Nordbygg.'), 'https://www.forestia.se', 'assets/images/exhibitors/nordbygg-2026-forestia.jpg'),
-  ('nordbygg-2026-exhibitor-139261', 'nordbygg-2026', 'Forsbergs Metallduk AB', 'C05:71', jsonb_build_object('en', 'Forsbergs Metallduk AB, grundades 1913 och är ett familjeföretag med sju anställda. Genom alla år av utveckling har vi vuxit till ett företag med medarbetare som har hög kompetens och stor erfarenhet när det gäller metallduk. Vi är kvalitets- och miljöcertifierade enligt ISO 9001:2008 och ISO 14001:2004.
+  ('nordbygg-2026-exhibitor-139261', 'nordbygg-2026', 'Forsbergs Metallduk AB', 'C05:71', jsonb_build_object('en', 'Forsbergs Metallduk AB was founded in 1913 and is a family business with seven employees. Through all the years of development we have grown into a company with staff who have deep expertise and long experience when it comes to metal mesh. We are quality- and environmentally certified to ISO 9001:2008 and ISO 14001:2004.
 
-Vi har specialiserat oss på att väva metallduk. Vår maskinpark består av 16 vävstolar i olika storlekar. Vävstolarna varierar från moderna datastyrda skyttelösa vävstolar, till vanliga skyttelmaskiner som väver med stadkant.', 'sv', 'Forsbergs Metallduk AB, grundades 1913 och är ett familjeföretag med sju anställda. Genom alla år av utveckling har vi vuxit till ett företag med medarbetare som har hög kompetens och stor erfarenhet när det gäller metallduk. Vi är kvalitets- och miljöcertifierade enligt ISO 9001:2008 och ISO 14001:2004.
+We have specialised in weaving metal mesh. Our machine park consists of 16 looms in various sizes. The looms range from modern computer-controlled shuttleless looms to conventional shuttle machines that weave with a selvedge.', 'sv', 'Forsbergs Metallduk AB, grundades 1913 och är ett familjeföretag med sju anställda. Genom alla år av utveckling har vi vuxit till ett företag med medarbetare som har hög kompetens och stor erfarenhet när det gäller metallduk. Vi är kvalitets- och miljöcertifierade enligt ISO 9001:2008 och ISO 14001:2004.
 
 Vi har specialiserat oss på att väva metallduk. Vår maskinpark består av 16 vävstolar i olika storlekar. Vävstolarna varierar från moderna datastyrda skyttelösa vävstolar, till vanliga skyttelmaskiner som väver med stadkant.'), 'https://www.forsbergsmetallduk.se / www.gnagarskydd.se', 'assets/images/exhibitors/nordbygg-2026-forsbergs-metallduk-ab.jpg'),
-  ('nordbygg-2026-exhibitor-136246', 'nordbygg-2026', 'Forserum Safety Glass AB', 'C09:40', jsonb_build_object('en', 'Vi är en stor glasgrossist i Sverige som utvecklar och producerar produkter av förädlat planglas. Vi levererar glas till hela Norden. Forserum Safety Glass AB ligger i hjärtat av Småland med bra logistiska förbindelser, både genom vägtransport och järnväg. Detta gör att vi kan leverera skyddsglas lika snabbt och smidigt oavsett om det ska levereras till Ystad eller Haparanda. Som glasgrossist arbetar vi i hela spektrat av planglasförädling, från enstycksproduktion till långa serier. Skyddsglas, Säkerhetsglas, Brandglas och Isolerglas är några av de sorters skyddsglas vi arbetar med. Vi har skyddsglas som skyddar mot personskador, buller, beskjutning, tryckvågor, intrång och inbrott.', 'sv', 'Vi är en stor glasgrossist i Sverige som utvecklar och producerar produkter av förädlat planglas. Vi levererar glas till hela Norden. Forserum Safety Glass AB ligger i hjärtat av Småland med bra logistiska förbindelser, både genom vägtransport och järnväg. Detta gör att vi kan leverera skyddsglas lika snabbt och smidigt oavsett om det ska levereras till Ystad eller Haparanda. Som glasgrossist arbetar vi i hela spektrat av planglasförädling, från enstycksproduktion till långa serier. Skyddsglas, Säkerhetsglas, Brandglas och Isolerglas är några av de sorters skyddsglas vi arbetar med. Vi har skyddsglas som skyddar mot personskador, buller, beskjutning, tryckvågor, intrång och inbrott.'), 'https://www.fsglass.se', 'assets/images/exhibitors/nordbygg-2026-forserum-safety-glass-ab.jpg'),
+  ('nordbygg-2026-exhibitor-136246', 'nordbygg-2026', 'Forserum Safety Glass AB', 'C09:40', jsonb_build_object('en', 'We are a large glass wholesaler in Sweden that develops and produces products in processed flat glass. We deliver glass throughout the Nordics. Forserum Safety Glass AB is located in the heart of Småland, with good logistics connections by both road and rail. This means we can deliver protective glass just as quickly and smoothly whether it is going to Ystad or to Haparanda. As a glass wholesaler we work across the full spectrum of flat-glass processing, from single-piece production to long runs. Protective glass, safety glass, fire-resistant glass and insulating glass are some of the types of protective glass we work with. We have protective glass that guards against personal injury, noise, gunfire, blast waves, intrusion and burglary.', 'sv', 'Vi är en stor glasgrossist i Sverige som utvecklar och producerar produkter av förädlat planglas. Vi levererar glas till hela Norden. Forserum Safety Glass AB ligger i hjärtat av Småland med bra logistiska förbindelser, både genom vägtransport och järnväg. Detta gör att vi kan leverera skyddsglas lika snabbt och smidigt oavsett om det ska levereras till Ystad eller Haparanda. Som glasgrossist arbetar vi i hela spektrat av planglasförädling, från enstycksproduktion till långa serier. Skyddsglas, Säkerhetsglas, Brandglas och Isolerglas är några av de sorters skyddsglas vi arbetar med. Vi har skyddsglas som skyddar mot personskador, buller, beskjutning, tryckvågor, intrång och inbrott.'), 'https://www.fsglass.se', 'assets/images/exhibitors/nordbygg-2026-forserum-safety-glass-ab.jpg'),
   ('nordbygg-2026-exhibitor-137702', 'nordbygg-2026', 'Franke', 'A14:21', null, 'https://www.franke.se', 'assets/images/exhibitors/nordbygg-2026-franke.jpg'),
-  ('nordbygg-2026-exhibitor-135507', 'nordbygg-2026', 'Frico AB', 'A12:13', jsonb_build_object('en', 'Sedan 1932 har Frico utvecklat och tillverkat högkvalitativa, energieffektiva produkter för ett bättre inomhusklimat. Som Europas ledande tillverkare av luftridåer, värmefläktar och värmestrålare skapar vi lösningar som stoppar energiförluster, minskar kostnader och förbättrar arbetsmiljön.
+  ('nordbygg-2026-exhibitor-135507', 'nordbygg-2026', 'Frico AB', 'A12:13', jsonb_build_object('en', 'Since 1932 Frico has developed and manufactured high-quality, energy-efficient products for a better indoor climate. As Europe''s leading manufacturer of air curtains, fan heaters and radiant heaters we create solutions that stop energy losses, reduce costs and improve the working environment.
 
-Våra produkter är utvecklade för offentliga byggnader, kommersiella lokaler, logistikcenter och industrimiljöer – även i de tuffaste förhållanden. Med snart hundra års erfarenhet arbetar Frico långsiktigt för en mer energieffektiv och grönare framtid.', 'sv', 'Sedan 1932 har Frico utvecklat och tillverkat högkvalitativa, energieffektiva produkter för ett bättre inomhusklimat. Som Europas ledande tillverkare av luftridåer, värmefläktar och värmestrålare skapar vi lösningar som stoppar energiförluster, minskar kostnader och förbättrar arbetsmiljön.
+Our products are developed for public buildings, commercial premises, logistics centres and industrial environments — even in the toughest conditions. With nearly a hundred years of experience, Frico works for the long term toward a more energy-efficient and greener future.', 'sv', 'Sedan 1932 har Frico utvecklat och tillverkat högkvalitativa, energieffektiva produkter för ett bättre inomhusklimat. Som Europas ledande tillverkare av luftridåer, värmefläktar och värmestrålare skapar vi lösningar som stoppar energiförluster, minskar kostnader och förbättrar arbetsmiljön.
 
 Våra produkter är utvecklade för offentliga byggnader, kommersiella lokaler, logistikcenter och industrimiljöer – även i de tuffaste förhållanden. Med snart hundra års erfarenhet arbetar Frico långsiktigt för en mer energieffektiv och grönare framtid.'), 'https://www.frico.net/en', 'assets/images/exhibitors/nordbygg-2026-frico-ab.jpg'),
   ('nordbygg-2026-exhibitor-139247', 'nordbygg-2026', 'FutureCalc', 'AG:48', null, 'https://futurecalc.ai', null),
