@@ -4793,33 +4793,33 @@ Through functional buildings in the public realm we promote long-term sustainabl
 Genom funktionella byggnader i det offentliga rummet främjar vi långsiktigt hållbara fasader av tegel och puts – beständiga material med låg miljöpåverkan och lång livslängd.'), 'https://murochputsforetagen.org', 'assets/images/exhibitors/nordbygg-2026-mur-putsforetagen.jpg'),
   ('nordbygg-2026-exhibitor-137185', 'nordbygg-2026', 'Naturfönster', 'C13:31', jsonb_build_object('en', 'Naturfönster - Love the Future!
 
-Riktiga Träfönster och massiva Trädörrar. Allmogefönster, Ytterdörrar, Fönsterdörrar, Specialfönster, Vikpartier och Skjutpartier. Naturfönster tillverkar också specialfönster i högsta kvalitet. Furu är standard men vi har även andra träslag som Ekfönster, Mahogny och Lärk.
+Real wooden windows and solid wooden doors. Traditional cottage-style windows, exterior doors, French doors, custom windows, folding panels and sliding panels. Naturfönster also manufactures custom windows of the highest quality. Pine is standard, but we also offer other wood species such as oak, mahogany and larch.
 
-Vi är specialiserade på tillverkning av fönster och dörrar i gammal stil, men vi har även komplett sortiment av moderna fönster i Trä/aluminium och helaluminium.', 'sv', 'Naturfönster - Love the Future!
+We specialise in manufacturing windows and doors in traditional styles, but we also offer a complete range of modern windows in wood/aluminium and all-aluminium.', 'sv', 'Naturfönster - Love the Future!
 
 Riktiga Träfönster och massiva Trädörrar. Allmogefönster, Ytterdörrar, Fönsterdörrar, Specialfönster, Vikpartier och Skjutpartier. Naturfönster tillverkar också specialfönster i högsta kvalitet. Furu är standard men vi har även andra träslag som Ekfönster, Mahogny och Lärk.
 
 Vi är specialiserade på tillverkning av fönster och dörrar i gammal stil, men vi har även komplett sortiment av moderna fönster i Trä/aluminium och helaluminium.'), 'https://www.naturfonster.se', 'assets/images/exhibitors/nordbygg-2026-naturfonster.jpg'),
-  ('nordbygg-2026-exhibitor-133980', 'nordbygg-2026', 'NEXT', 'C02:01', jsonb_build_object('en', 'Next One Technology AB heter numera Aceve Sverige AB.
-I mars 2025 blev Next One Technology AB tillsammans med HVD Group, Aceve.
+  ('nordbygg-2026-exhibitor-133980', 'nordbygg-2026', 'NEXT', 'C02:01', jsonb_build_object('en', 'Next One Technology AB is now called Aceve Sverige AB.
+In March 2025, Next One Technology AB joined HVD Group to form Aceve.
 
-Det innebär att Next One Technology AB med produkterna Next Project, Accurator, Dox och Next Planning nu är en del av en större grupp med flera bolag inom bygg, installation och fastighetsservice i Europa.
+This means that Next One Technology AB, with the products Next Project, Accurator, Dox and Next Planning, is now part of a larger group of several companies in construction, installation and property services across Europe.
 
-Det betyder att vi har fått fler kollegor med mycket kunskap och erfarenhet – och tillsammans kan vi fortsätta utveckla ännu bättre lösningar för branschen.', 'sv', 'Next One Technology AB heter numera Aceve Sverige AB.
+It also means that we have gained more colleagues with deep knowledge and experience — and together we can continue to develop even better solutions for the industry.', 'sv', 'Next One Technology AB heter numera Aceve Sverige AB.
 I mars 2025 blev Next One Technology AB tillsammans med HVD Group, Aceve.
 
 Det innebär att Next One Technology AB med produkterna Next Project, Accurator, Dox och Next Planning nu är en del av en större grupp med flera bolag inom bygg, installation och fastighetsservice i Europa.
 
 Det betyder att vi har fått fler kollegor med mycket kunskap och erfarenhet – och tillsammans kan vi fortsätta utveckla ännu bättre lösningar för branschen.'), 'https://www.aceve.com/', 'assets/images/exhibitors/nordbygg-2026-next.jpg'),
   ('nordbygg-2026-exhibitor-138774', 'nordbygg-2026', 'NGL Sweden', 'A12:18', null, 'https://www.nglsweden.se', 'assets/images/exhibitors/nordbygg-2026-ngl-sweden.jpg'),
-  ('nordbygg-2026-exhibitor-136185', 'nordbygg-2026', 'NIBE Energy Systems', 'A01:10', jsonb_build_object('en', 'Sedan 1952 har NIBE utvecklat lösningar för hållbar och intelligent inomhuskomfort. Med småländsk ingenjörstradition, lång erfarenhet och naturens energi som grund skapar vi system för värme, kyla, ventilation och varmvatten – utvecklade för låg energianvändning och hög komfort i hem och fastigheter. Våra system är byggda för att fungera långsiktigt – i vardagen, i olika klimat och i en tid där varje byggnad behöver vara en del av klimatomställningen.', 'sv', 'Sedan 1952 har NIBE utvecklat lösningar för hållbar och intelligent inomhuskomfort. Med småländsk ingenjörstradition, lång erfarenhet och naturens energi som grund skapar vi system för värme, kyla, ventilation och varmvatten – utvecklade för låg energianvändning och hög komfort i hem och fastigheter. Våra system är byggda för att fungera långsiktigt – i vardagen, i olika klimat och i en tid där varje byggnad behöver vara en del av klimatomställningen.'), 'https://www.nibe.se', 'assets/images/exhibitors/nordbygg-2026-nibe-energy-systems.jpg'),
-  ('nordbygg-2026-exhibitor-134591', 'nordbygg-2026', 'Nicotra Gebhardt / Regal Rexnord', 'A21:20', jsonb_build_object('en', 'Nicotra Gebhardt AB är en del av den globala koncernen Regal Rexnord´s division Power Efficiency Systems som är verksamma inom HVAC-branschen och representerar varumärkena Nicotra Gebhardt, Elco & Fasco. Vi har funnits i Sverige i 35 år och har kontor på fem olika orter. Vi är en ledande aktör inom branschen som både utvecklar, tillverkar, säljer och fläktar för större fastigheter och industrier.', 'sv', 'Nicotra Gebhardt AB är en del av den globala koncernen Regal Rexnord´s division Power Efficiency Systems som är verksamma inom HVAC-branschen och representerar varumärkena Nicotra Gebhardt, Elco & Fasco. Vi har funnits i Sverige i 35 år och har kontor på fem olika orter. Vi är en ledande aktör inom branschen som både utvecklar, tillverkar, säljer och fläktar för större fastigheter och industrier.'), 'https://www.nicotra-gebhardt.se', null),
+  ('nordbygg-2026-exhibitor-136185', 'nordbygg-2026', 'NIBE Energy Systems', 'A01:10', jsonb_build_object('en', 'Since 1952, NIBE has developed solutions for sustainable and intelligent indoor comfort. Drawing on Småland engineering tradition, long experience and the energy of nature as our foundation, we create systems for heating, cooling, ventilation and hot water — designed for low energy use and high comfort in homes and properties. Our systems are built to perform over the long term — in everyday life, in different climates and at a time when every building needs to be part of the climate transition.', 'sv', 'Sedan 1952 har NIBE utvecklat lösningar för hållbar och intelligent inomhuskomfort. Med småländsk ingenjörstradition, lång erfarenhet och naturens energi som grund skapar vi system för värme, kyla, ventilation och varmvatten – utvecklade för låg energianvändning och hög komfort i hem och fastigheter. Våra system är byggda för att fungera långsiktigt – i vardagen, i olika klimat och i en tid där varje byggnad behöver vara en del av klimatomställningen.'), 'https://www.nibe.se', 'assets/images/exhibitors/nordbygg-2026-nibe-energy-systems.jpg'),
+  ('nordbygg-2026-exhibitor-134591', 'nordbygg-2026', 'Nicotra Gebhardt / Regal Rexnord', 'A21:20', jsonb_build_object('en', 'Nicotra Gebhardt AB is part of the global Regal Rexnord group''s Power Efficiency Systems division, which operates in the HVAC industry and represents the brands Nicotra Gebhardt, Elco & Fasco. We have been in Sweden for 35 years and have offices in five different locations. We are a leading player in the industry that develops, manufactures and sells fans for larger properties and industrial facilities.', 'sv', 'Nicotra Gebhardt AB är en del av den globala koncernen Regal Rexnord´s division Power Efficiency Systems som är verksamma inom HVAC-branschen och representerar varumärkena Nicotra Gebhardt, Elco & Fasco. Vi har funnits i Sverige i 35 år och har kontor på fem olika orter. Vi är en ledande aktör inom branschen som både utvecklar, tillverkar, säljer och fläktar för större fastigheter och industrier.'), 'https://www.nicotra-gebhardt.se', null),
   ('nordbygg-2026-exhibitor-139605', 'nordbygg-2026', 'Nika Inglasning AB', 'C10:71', null, 'https://nika.se', null),
-  ('nordbygg-2026-exhibitor-139069', 'nordbygg-2026', 'Nils Ahlgren AB', 'B10:50', jsonb_build_object('en', 'Leverantör till stora och små bygghandlare
-Vi levererar infästningsprodukter såsom skruv, spik, bult, plugg, byggbeslag, infästningar, järntråd, hinkar, kärror, verktyg med mera till några av Sveriges största bygghandelskedjor, men även till mindre företag. Vi ser till att ditt företag får de bästa produkterna och tjänsterna för ändamålet – såväl vad gäller områdesskydd som vårt sortiment av skruv, spik, infästningar och andra produkter. Nils Ahlgren AB är certifierad leverantör i enlighet med både BASTA och Vilma.
+  ('nordbygg-2026-exhibitor-139069', 'nordbygg-2026', 'Nils Ahlgren AB', 'B10:50', jsonb_build_object('en', 'Supplier to building merchants large and small
+We deliver fastening products such as screws, nails, bolts, plugs, construction fittings, fasteners, iron wire, buckets, trolleys, tools and more to some of Sweden''s largest building merchant chains, as well as to smaller companies. We make sure your company gets the best products and services for the job — both for site protection and from our range of screws, nails, fasteners and other products. Nils Ahlgren AB is a certified supplier in accordance with both BASTA and Vilma.
 
-Heltäckande lösningar för områdesskydd
-Nils Ahlgren AB har heltäckande lösningar för områdesskydd och lång erfarenhet i stängselbranschen. Vi kan leverera allt från temporära byggstängsel till gedigna industristängsel med bommar och grindar som ger en hög säkerhet och skapar en trygg arbetsplats. Hos oss får du alltid personlig och kunnig hjälp av våra säljare.', 'sv', 'Leverantör till stora och små bygghandlare
+Complete solutions for site protection
+Nils Ahlgren AB offers complete solutions for site protection and has long experience in the fencing industry. We can deliver everything from temporary construction fencing to robust industrial fencing with barriers and gates that provide a high level of security and create a safe workplace. With us, you always get personal and knowledgeable help from our sales team.', 'sv', 'Leverantör till stora och små bygghandlare
 Vi levererar infästningsprodukter såsom skruv, spik, bult, plugg, byggbeslag, infästningar, järntråd, hinkar, kärror, verktyg med mera till några av Sveriges största bygghandelskedjor, men även till mindre företag. Vi ser till att ditt företag får de bästa produkterna och tjänsterna för ändamålet – såväl vad gäller områdesskydd som vårt sortiment av skruv, spik, infästningar och andra produkter. Nils Ahlgren AB är certifierad leverantör i enlighet med både BASTA och Vilma.
 
 Heltäckande lösningar för områdesskydd
@@ -4850,11 +4850,11 @@ Solarix: https://invitepeople.com/events/eb6de9171b/companies/82015
 
 Zavhy 3D concrete printing: https://invitepeople.com/events/eb6de9171b/companies/82009
 
-Interested in exploring opportunities in one of Europe’s most dynamic business hubs? Get in touch with Invest in Holland at the NL pavilion - a governmental network dedicated to helping international companies establish and grow sustainable, innovative business in the Netherlands. Contact nordics@nfia.com or visit https://investinholland.com/ to learn more.', 'sv', 'The Netherlands is internationally recognised as a frontrunner in sustainable construction and integrated urban development. At the Netherlands Pavilion, Dutch companies present concrete, market-ready solutions that help cities, developers and infrastructure partners accelerate the transition to a climate-resilient built environment.
+Interested in exploring opportunities in one of Europe''s most dynamic business hubs? Get in touch with Invest in Holland at the NL pavilion - a governmental network dedicated to helping international companies establish and grow sustainable, innovative business in the Netherlands. Contact nordics@nfia.com or visit https://investinholland.com/ to learn more.', 'sv', 'Nederländerna är internationellt erkänt som en föregångare inom hållbart byggande och integrerad stadsutveckling. I Nederländska paviljongen presenterar nederländska företag konkreta, marknadsfärdiga lösningar som hjälper städer, fastighetsutvecklare och infrastrukturpartner att påskynda övergången till en klimatresilient byggd miljö.
 
-Visitors will discover practical technologies and collaboration opportunities that enable faster, more sustainable and more efficient construction. The showcased solutions range from digital construction and circular building systems to clean mobility, energy storage and smart water management.
+Besökarna får upptäcka praktiska tekniker och samarbetsmöjligheter som möjliggör snabbare, mer hållbart och mer effektivt byggande. De presenterade lösningarna sträcker sig från digitalt byggande och cirkulära byggsystem till ren mobilitet, energilagring och smart vattenhantering.
 
-Get to know all the companies active in the pavilion!
+Lär känna alla företag som är aktiva i paviljongen!
 
 Brainial: https://invitepeople.com/events/eb6de9171b/companies/82011
 
@@ -4874,42 +4874,42 @@ Solarix: https://invitepeople.com/events/eb6de9171b/companies/82015
 
 Zavhy 3D concrete printing: https://invitepeople.com/events/eb6de9171b/companies/82009
 
-Interested in exploring opportunities in one of Europe’s most dynamic business hubs? Get in touch with Invest in Holland at the NL pavilion - a governmental network dedicated to helping international companies establish and grow sustainable, innovative business in the Netherlands. Contact nordics@nfia.com or visit https://investinholland.com/ to learn more.'), 'https://www.netherlandsandyou.nl/web/sweden/about-us', 'assets/images/exhibitors/nordbygg-2026-nl-pavilion-netherlands-embassy.jpg'),
-  ('nordbygg-2026-exhibitor-134005', 'nordbygg-2026', 'NORD METAL', 'C10:61', jsonb_build_object('en', '”Nord metal“ UAB är ett erfaret företag med omfattande expertis, specialiserat på tillverkning av kapade och bockade armeringsjärn och prefabricerade armeringskorgar av stål. Företaget hanterar framgångsrikt B2B-projekt i Litauen såväl som på utländska marknader.', 'sv', '”Nord metal“ UAB är ett erfaret företag med omfattande expertis, specialiserat på tillverkning av kapade och bockade armeringsjärn och prefabricerade armeringskorgar av stål. Företaget hanterar framgångsrikt B2B-projekt i Litauen såväl som på utländska marknader.'), 'https://www.nordmetal.eu', 'assets/images/exhibitors/nordbygg-2026-nord-metal.jpg'),
-  ('nordbygg-2026-exhibitor-138160', 'nordbygg-2026', 'Nordic Kitchen Group', 'C09:20', jsonb_build_object('en', 'Nordic Kitchen Group (NKG) är en av de ledande aktörerna i Norden för design och tillverkning av skräddarsydda kökslösningar. Koncernen med sina fem varumärken har en fördelaktig position på marknaden, med tillverkning och försäljning av kök till både företag och privatpersoner.', 'sv', 'Nordic Kitchen Group (NKG) är en av de ledande aktörerna i Norden för design och tillverkning av skräddarsydda kökslösningar. Koncernen med sina fem varumärken har en fördelaktig position på marknaden, med tillverkning och försäljning av kök till både företag och privatpersoner.'), 'https://www.nordickitchen.se', 'assets/images/exhibitors/nordbygg-2026-nordic-kitchen-group.jpg'),
-  ('nordbygg-2026-exhibitor-134497', 'nordbygg-2026', 'Nordic Pump AB', 'B10:22', jsonb_build_object('en', 'Svensktillverkade brukspumpar och blandare för byggindustrin.
-Våra maskiner är genuint hantverk från Dalarna, Sverige och vi sätter en stor stolthet i att leverera egenproducerade, ergonomiska och effektiva kvalitetsprodukter med hållbarhet och användarvänlighet i fokus.
-Nordic Pump - Blandarpumpar, bruksblandare och brukspumpar - made in Hedemora.', 'sv', 'Svensktillverkade brukspumpar och blandare för byggindustrin.
+Intresserad av att utforska möjligheter i ett av Europas mest dynamiska näringslivsnav? Ta kontakt med Invest in Holland i NL-paviljongen – ett statligt nätverk som hjälper internationella företag att etablera och utveckla hållbar, innovativ verksamhet i Nederländerna. Kontakta nordics@nfia.com eller besök https://investinholland.com/ för att läsa mer.'), 'https://www.netherlandsandyou.nl/web/sweden/about-us', 'assets/images/exhibitors/nordbygg-2026-nl-pavilion-netherlands-embassy.jpg'),
+  ('nordbygg-2026-exhibitor-134005', 'nordbygg-2026', 'NORD METAL', 'C10:61', jsonb_build_object('en', '”Nord metal“ UAB is an experienced company with extensive expertise, specialising in the manufacture of cut and bent reinforcement bar and prefabricated steel reinforcement cages. The company successfully handles B2B projects in Lithuania as well as on international markets.', 'sv', '”Nord metal“ UAB är ett erfaret företag med omfattande expertis, specialiserat på tillverkning av kapade och bockade armeringsjärn och prefabricerade armeringskorgar av stål. Företaget hanterar framgångsrikt B2B-projekt i Litauen såväl som på utländska marknader.'), 'https://www.nordmetal.eu', 'assets/images/exhibitors/nordbygg-2026-nord-metal.jpg'),
+  ('nordbygg-2026-exhibitor-138160', 'nordbygg-2026', 'Nordic Kitchen Group', 'C09:20', jsonb_build_object('en', 'Nordic Kitchen Group (NKG) is one of the leading players in the Nordic region for the design and manufacture of bespoke kitchen solutions. The group, with its five brands, holds a strong market position, manufacturing and selling kitchens to both businesses and private customers.', 'sv', 'Nordic Kitchen Group (NKG) är en av de ledande aktörerna i Norden för design och tillverkning av skräddarsydda kökslösningar. Koncernen med sina fem varumärken har en fördelaktig position på marknaden, med tillverkning och försäljning av kök till både företag och privatpersoner.'), 'https://www.nordickitchen.se', 'assets/images/exhibitors/nordbygg-2026-nordic-kitchen-group.jpg'),
+  ('nordbygg-2026-exhibitor-134497', 'nordbygg-2026', 'Nordic Pump AB', 'B10:22', jsonb_build_object('en', 'Swedish-made mortar pumps and mixers for the construction industry.
+Our machines are genuine craftsmanship from Dalarna, Sweden, and we take great pride in delivering in-house produced, ergonomic and efficient quality products with durability and ease of use at the centre.
+Nordic Pump - mixing pumps, mortar mixers and mortar pumps - made in Hedemora.', 'sv', 'Svensktillverkade brukspumpar och blandare för byggindustrin.
 Våra maskiner är genuint hantverk från Dalarna, Sverige och vi sätter en stor stolthet i att leverera egenproducerade, ergonomiska och effektiva kvalitetsprodukter med hållbarhet och användarvänlighet i fokus.
 Nordic Pump - Blandarpumpar, bruksblandare och brukspumpar - made in Hedemora.'), 'https://www.nordicpump.se', 'assets/images/exhibitors/nordbygg-2026-nordic-pump-ab.jpg'),
   ('nordbygg-2026-exhibitor-133987', 'nordbygg-2026', 'Nordic Waterproofing', 'C04:51', null, 'https://www.nordicwaterproofing.com', 'assets/images/exhibitors/nordbygg-2026-nordic-waterproofing.jpg'),
-  ('nordbygg-2026-exhibitor-140047', 'nordbygg-2026', 'Nordisk Innovation', 'A10:27', jsonb_build_object('en', 'Giftfri skydd mot råttor i avlopp
+  ('nordbygg-2026-exhibitor-140047', 'nordbygg-2026', 'Nordisk Innovation', 'A10:27', jsonb_build_object('en', 'Non-toxic protection against rats in drains
 
-Vi stoppar råttor från att ta sig in i byggnader via avloppssystemet.
+We stop rats from entering buildings via the sewer system.
 
-+300 000 installationer. Tillverkad i Danmark. VA-godkänd.', 'sv', 'Giftfri skydd mot råttor i avlopp
++300,000 installations. Made in Denmark. VA-approved.', 'sv', 'Giftfri skydd mot råttor i avlopp
 
 Vi stoppar råttor från att ta sig in i byggnader via avloppssystemet.
 
 +300 000 installationer. Tillverkad i Danmark. VA-godkänd.'), 'https://nordiskinnovation.com/sv-se', 'assets/images/exhibitors/nordbygg-2026-nordisk-innovation.jpg'),
-  ('nordbygg-2026-exhibitor-137186', 'nordbygg-2026', 'Nordiska Fönster i Ängelholm AB', 'C15:33', jsonb_build_object('en', 'Vi erbjuder ett brett sortiment av fönster, altandörrar, skjut- och vikdörrar, ytterdörrar, takfönster och mer. Alltid med hög kvalitet och möjlighet till specialanpassning utefter dina behov.
+  ('nordbygg-2026-exhibitor-137186', 'nordbygg-2026', 'Nordiska Fönster i Ängelholm AB', 'C15:33', jsonb_build_object('en', 'We offer a broad range of windows, patio doors, sliding and folding doors, exterior doors, roof windows and more. Always with high quality and the option of custom adaptation to your needs.
 
-Vi har gjort det enkelt att hitta rätt lösning för både budget och behov. Vi gör vägen till din husdröm enkel, trygg och inspirerande, utan att kompromissa på kvalitet eller design.
+We''ve made it easy to find the right solution for both budget and need. We make the path to your dream home simple, secure and inspiring, without compromising on quality or design.
 
-Sedan 2010 har vi gått vår egen väg - för att du ska kunna välja din.', 'sv', 'Vi erbjuder ett brett sortiment av fönster, altandörrar, skjut- och vikdörrar, ytterdörrar, takfönster och mer. Alltid med hög kvalitet och möjlighet till specialanpassning utefter dina behov.
+Since 2010 we have gone our own way - so that you can choose yours.', 'sv', 'Vi erbjuder ett brett sortiment av fönster, altandörrar, skjut- och vikdörrar, ytterdörrar, takfönster och mer. Alltid med hög kvalitet och möjlighet till specialanpassning utefter dina behov.
 
 Vi har gjort det enkelt att hitta rätt lösning för både budget och behov. Vi gör vägen till din husdröm enkel, trygg och inspirerande, utan att kompromissa på kvalitet eller design.
 
 Sedan 2010 har vi gått vår egen väg - för att du ska kunna välja din.'), 'https://www.nordiskafonster.se', 'assets/images/exhibitors/nordbygg-2026-nordiska-fonster-i-angelholm-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134734', 'nordbygg-2026', 'Nordskiffer AB', 'C04:70', jsonb_build_object('en', 'Nordskiffer grundades 2005 med idén att lyfta fram takskiffer som ett hållbart fasadmaterial. Med egenutvecklade system, lång erfarenhet och gedigen kunskap är vi idag Nordens ledande specialister på skiffer för fasad.
+  ('nordbygg-2026-exhibitor-134734', 'nordbygg-2026', 'Nordskiffer AB', 'C04:70', jsonb_build_object('en', 'Nordskiffer was founded in 2005 with the idea of bringing roofing slate to the fore as a sustainable facade material. With proprietary systems, long experience and solid expertise, we are today the Nordic region''s leading specialists in slate for facades.
 
-Ända sedan starten har vi arbetat efter en tydlig idé: att ge skiffer en ny roll i samtida arkitektur – som ett modernt, hållbart och vackert material. Vi såg potentialen i ett av världens mest hållbara byggmaterial och ville göra det mer tillgängligt.
+From the very start, we have worked from a clear idea: to give slate a new role in contemporary architecture — as a modern, sustainable and beautiful material. We saw the potential in one of the world''s most sustainable building materials and wanted to make it more accessible.
 
-Vi började som agentur för kvalitetsskiffer och byggde snabbt upp djup kunskap om material, leverantörer och montage. Men vi nöjde oss inte där. Tidigt insåg vi att ett material med så stor potential förtjänade smartare system – därför tog vi fram egna lösningar för att förenkla och förbättra användningen av skiffer på fasad. Det blev grunden till våra NordClad-system som idag används i hela Skandinavien.
+We started out as an agency for quality slate and quickly built up deep knowledge of materials, suppliers and installation. But we did not stop there. Early on, we realised that a material with such great potential deserved smarter systems — so we developed our own solutions to simplify and improve the use of slate on facades. That became the foundation of our NordClad systems, which today are used across Scandinavia.
 
-Genom åren har vi varit aktiva i utvecklingen av branschstandarder och testmetoder, bland annat som remissinstans till RISE, ByggAMA och Stenindustriförbundet. 2017 tog vår resa en ny vändning när vi blev en del av St Eriks – Sveriges ledande koncern för betong och natursten. Det gav oss möjlighet att växa, utveckla sortimentet och erbjuda våra kunder ännu bättre helhetslösningar.
+Over the years, we have been active in the development of industry standards and test methods, including as a consultative body to RISE, ByggAMA and the Swedish Stone Industry Federation. In 2017, our journey took a new turn when we became part of St Eriks — Sweden''s leading group for concrete and natural stone. That gave us the opportunity to grow, develop the range and offer our customers even better complete solutions.
 
-Idag är vi Nordens ledande specialister på skiffer för fasad, men vi fortsätter att drivas av samma tanke som från början: att lyfta fram ett tidlöst naturmaterial – och göra det till en självklar del av framtidens byggande.', 'sv', 'Nordskiffer grundades 2005 med idén att lyfta fram takskiffer som ett hållbart fasadmaterial. Med egenutvecklade system, lång erfarenhet och gedigen kunskap är vi idag Nordens ledande specialister på skiffer för fasad.
+Today we are the Nordic region''s leading specialists in slate for facades, but we continue to be driven by the same idea as from the beginning: to bring a timeless natural material to the fore — and make it a natural part of the buildings of tomorrow.', 'sv', 'Nordskiffer grundades 2005 med idén att lyfta fram takskiffer som ett hållbart fasadmaterial. Med egenutvecklade system, lång erfarenhet och gedigen kunskap är vi idag Nordens ledande specialister på skiffer för fasad.
 
 Ända sedan starten har vi arbetat efter en tydlig idé: att ge skiffer en ny roll i samtida arkitektur – som ett modernt, hållbart och vackert material. Vi såg potentialen i ett av världens mest hållbara byggmaterial och ville göra det mer tillgängligt.
 
@@ -4918,43 +4918,43 @@ Vi började som agentur för kvalitetsskiffer och byggde snabbt upp djup kunskap
 Genom åren har vi varit aktiva i utvecklingen av branschstandarder och testmetoder, bland annat som remissinstans till RISE, ByggAMA och Stenindustriförbundet. 2017 tog vår resa en ny vändning när vi blev en del av St Eriks – Sveriges ledande koncern för betong och natursten. Det gav oss möjlighet att växa, utveckla sortimentet och erbjuda våra kunder ännu bättre helhetslösningar.
 
 Idag är vi Nordens ledande specialister på skiffer för fasad, men vi fortsätter att drivas av samma tanke som från början: att lyfta fram ett tidlöst naturmaterial – och göra det till en självklar del av framtidens byggande.'), 'https://www.nordskiffer.com', 'assets/images/exhibitors/nordbygg-2026-nordskiffer-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134831', 'nordbygg-2026', 'Nordtec Instrument AB', 'A13:20', jsonb_build_object('en', 'Vi har funnits sedan 1976 och erbjuder världsledande mätlösningar samt ackrediterad labb- och fältkalibrering till proffsanvändare inom inneklimat, ventilation, kyla, värme, betong och bygg.', 'sv', 'Vi har funnits sedan 1976 och erbjuder världsledande mätlösningar samt ackrediterad labb- och fältkalibrering till proffsanvändare inom inneklimat, ventilation, kyla, värme, betong och bygg.'), 'https://www.nordtec.se', 'assets/images/exhibitors/nordbygg-2026-nordtec-instrument-ab.jpg'),
-  ('nordbygg-2026-exhibitor-140106', 'nordbygg-2026', 'Nordtech Energy Oy', 'A13:38', jsonb_build_object('en', 'Världsledande teknik inom värmeväxling och gröna energilösningar
+  ('nordbygg-2026-exhibitor-134831', 'nordbygg-2026', 'Nordtec Instrument AB', 'A13:20', jsonb_build_object('en', 'We have been around since 1976 and offer world-leading measurement solutions as well as accredited laboratory and field calibration for professional users in indoor climate, ventilation, refrigeration, heating, concrete and construction.', 'sv', 'Vi har funnits sedan 1976 och erbjuder världsledande mätlösningar samt ackrediterad labb- och fältkalibrering till proffsanvändare inom inneklimat, ventilation, kyla, värme, betong och bygg.'), 'https://www.nordtec.se', 'assets/images/exhibitors/nordbygg-2026-nordtec-instrument-ab.jpg'),
+  ('nordbygg-2026-exhibitor-140106', 'nordbygg-2026', 'Nordtech Energy Oy', 'A13:38', jsonb_build_object('en', 'World-leading technology in heat exchange and green energy solutions
 
-NordTech Energy är en ledande leverantör av värmeväxlingsteknik och gröna energilösningar för industriella och kommersiella applikationer. Med över 20 års erfarenhet i branschen förstår vi de tekniska, operativa och tillförlitlighetskrav som ställs på moderna energi- och processystem.
+NordTech Energy is a leading supplier of heat-exchange technology and green energy solutions for industrial and commercial applications. With more than 20 years of experience in the industry, we understand the technical, operational and reliability demands placed on modern energy and process systems.
 
-Vi stöttar våra kunder genom hela utrustningens livscykel — från systemval och konstruktion till leverans, service och långsiktig optimering. Vårt fokus är att leverera driftsäkra, effektiva och kostnadseffektiva lösningar som maximerar tillgänglighet och prestanda samtidigt som de stödjer hållbara energimål.
+We support our customers throughout the equipment lifecycle — from system selection and design through delivery, service and long-term optimisation. Our focus is on delivering reliable, efficient and cost-effective solutions that maximise availability and performance while supporting sustainable energy goals.
 
-Kompletta lösningar för värme och kyla inom:
+Complete solutions for heating and cooling within:
 
-HVAC och fjärrvärmesystem
-Datacenter och kylapplikationer
-Förnybar energi och kraftverk
-Industriella processer för värme och kyla
-Kemisk och petrokemisk industri
-Energiåtervinning och spillvärmeutnyttjande
+HVAC and district heating systems
+Data centres and cooling applications
+Renewable energy and power plants
+Industrial heating and cooling processes
+Chemical and petrochemical industry
+Energy recovery and waste-heat utilisation
 
-Vårt produktsortiment omfattar:
+Our product range includes:
 
-Lödda värmeväxlare
-Plattvärmeväxlare (packningsförsedda)
-Platt- och mantelvärmeväxlare
-Halvsvetsade värmeväxlare
-Rörvärmeväxlare (shell and tube)
-Spiralvärmeväxlare
-Adiabatiska kondensorer och luftkylare
-Luftridåer och luftvärmare
-Turboblåsare och kompressorer
+Brazed heat exchangers
+Gasketed plate heat exchangers
+Plate-and-shell heat exchangers
+Semi-welded heat exchangers
+Shell-and-tube heat exchangers
+Spiral heat exchangers
+Adiabatic condensers and air coolers
+Air curtains and air heaters
+Turbo blowers and compressors
 
-Snabb leverans av reservdelar och pålitlig leveranskedja
+Fast spare-parts delivery and a reliable supply chain
 
-För att minimera stillestånd och säkerställa oavbruten produktion lagerhåller NordTech Energy ett omfattande sortiment av vanligt förekommande reservdelar, vilket möjliggör leverans inom 24 timmar för kritiska komponenter.
+To minimise downtime and ensure uninterrupted production, NordTech Energy stocks an extensive range of common spare parts, enabling 24-hour delivery for critical components.
 
-Vi har starka partnerskap med både OEM-tillverkare och högkvalitativa eftermarknadsleverantörer, vilket gör att vi kan erbjuda ett brett och konkurrenskraftigt produktsortiment anpassat efter varje kunds tekniska och operativa behov.
+We have strong partnerships with both OEM manufacturers and high-quality aftermarket suppliers, which lets us offer a broad and competitive product range tailored to each customer''s technical and operational needs.
 
-Din partner för effektiv värmeenergi
+Your partner for efficient thermal energy
 
-NordTech Energy — tekniska lösningar för effektiv och hållbar värmeenergi.', 'sv', 'Världsledande teknik inom värmeväxling och gröna energilösningar
+NordTech Energy — engineered solutions for efficient and sustainable thermal energy.', 'sv', 'Världsledande teknik inom värmeväxling och gröna energilösningar
 
 NordTech Energy är en ledande leverantör av värmeväxlingsteknik och gröna energilösningar för industriella och kommersiella applikationer. Med över 20 års erfarenhet i branschen förstår vi de tekniska, operativa och tillförlitlighetskrav som ställs på moderna energi- och processystem.
 
@@ -4990,25 +4990,25 @@ Vi har starka partnerskap med både OEM-tillverkare och högkvalitativa eftermar
 Din partner för effektiv värmeenergi
 
 NordTech Energy — tekniska lösningar för effektiv och hållbar värmeenergi.'), 'https://www.nordtechenergy.com', 'assets/images/exhibitors/nordbygg-2026-nordtech-energy-oy.jpg'),
-  ('nordbygg-2026-exhibitor-139270', 'nordbygg-2026', 'Northmill Bank', 'AG:44', jsonb_build_object('en', 'Northmill Bank är en nordisk digital utmanarbank med visionen att förbättra människors finansiella liv genom att kombinera teknisk innovation med en personlig kundupplevelse. Med en fullständig svensk banklicens erbjuder banken finansiella tjänster för både privatpersoner och företag. Northmill blev den EU-baserade bank som tilldelades flest utmärkelser i Banking Tech Awards 2025 och har två gånger rankats som ett av Europas snabbast växande företag av Financial Times. Under fjärde kvartalet 2024 blev Northmill den första svenska banken att genomföra en betalning via Riksbankens nya infrastruktur för realtidsöverföringar mellan konton, RIX-INST.', 'sv', 'Northmill Bank är en nordisk digital utmanarbank med visionen att förbättra människors finansiella liv genom att kombinera teknisk innovation med en personlig kundupplevelse. Med en fullständig svensk banklicens erbjuder banken finansiella tjänster för både privatpersoner och företag. Northmill blev den EU-baserade bank som tilldelades flest utmärkelser i Banking Tech Awards 2025 och har två gånger rankats som ett av Europas snabbast växande företag av Financial Times. Under fjärde kvartalet 2024 blev Northmill den första svenska banken att genomföra en betalning via Riksbankens nya infrastruktur för realtidsöverföringar mellan konton, RIX-INST.'), 'https://www.northmill.com/se', 'assets/images/exhibitors/nordbygg-2026-northmill-bank.jpg'),
+  ('nordbygg-2026-exhibitor-139270', 'nordbygg-2026', 'Northmill Bank', 'AG:44', jsonb_build_object('en', 'Northmill Bank is a Nordic digital challenger bank with a vision to improve people''s financial lives by combining technological innovation with a personal customer experience. With a full Swedish banking licence, the bank offers financial services for both private customers and businesses. Northmill became the EU-based bank that received the most awards at the Banking Tech Awards 2025 and has twice been ranked as one of Europe''s fastest-growing companies by the Financial Times. During the fourth quarter of 2024, Northmill became the first Swedish bank to execute a payment via the Riksbank''s new infrastructure for real-time account-to-account transfers, RIX-INST.', 'sv', 'Northmill Bank är en nordisk digital utmanarbank med visionen att förbättra människors finansiella liv genom att kombinera teknisk innovation med en personlig kundupplevelse. Med en fullständig svensk banklicens erbjuder banken finansiella tjänster för både privatpersoner och företag. Northmill blev den EU-baserade bank som tilldelades flest utmärkelser i Banking Tech Awards 2025 och har två gånger rankats som ett av Europas snabbast växande företag av Financial Times. Under fjärde kvartalet 2024 blev Northmill den första svenska banken att genomföra en betalning via Riksbankens nya infrastruktur för realtidsöverföringar mellan konton, RIX-INST.'), 'https://www.northmill.com/se', 'assets/images/exhibitors/nordbygg-2026-northmill-bank.jpg'),
   ('nordbygg-2026-exhibitor-139376', 'nordbygg-2026', 'Novatronik Sp. z o.o.', 'A22:17', null, 'https://www.novatronik.com', 'assets/images/exhibitors/nordbygg-2026-novatronik-sp-z-o-o.jpg'),
   ('nordbygg-2026-exhibitor-134523', 'nordbygg-2026', 'Nässjö Takstolsfabrik AB', 'C14:30', null, 'https://www.takstolsfabriken.se', 'assets/images/exhibitors/nordbygg-2026-nassjo-takstolsfabrik-ab.jpg'),
   ('nordbygg-2026-exhibitor-139411', 'nordbygg-2026', 'OLIVE badrum', 'A09:12', null, 'https://www.olivebadrum.se', 'assets/images/exhibitors/nordbygg-2026-olive-badrum.jpg'),
   ('nordbygg-2026-exhibitor-138317', 'nordbygg-2026', 'OMKON YAPI SAN. VE TIC. A.S.', 'C14:60', null, 'https://www.omkon.com.tr', 'assets/images/exhibitors/nordbygg-2026-omkon-yapi-san-ve-tic-a-s.jpg'),
   ('nordbygg-2026-exhibitor-138212', 'nordbygg-2026', 'One Click LCA', 'C02:23', null, 'https://oneclicklca.com', 'assets/images/exhibitors/nordbygg-2026-one-click-lca.jpg'),
-  ('nordbygg-2026-exhibitor-139740', 'nordbygg-2026', 'Onlevel Nordic Aps', 'C11:70', jsonb_build_object('en', 'Sluta anpassa dig till systemet – välj ett som anpassar sig till dig.
-Våra glasräskessystem är utvecklade för verkliga arbetsförhållanden: enkla att installera, flexibla på plats och utan kompromisser i kvalitet och design.
-För yrkesproffs. Använda världen över', 'sv', 'Sluta anpassa dig till systemet – välj ett som anpassar sig till dig.
+  ('nordbygg-2026-exhibitor-139740', 'nordbygg-2026', 'Onlevel Nordic Aps', 'C11:70', jsonb_build_object('en', 'Stop adapting to the system — choose one that adapts to you.
+Our glass railing systems are developed for real-world working conditions: easy to install, flexible on site and uncompromising in quality and design.
+For trade professionals. Used around the world', 'sv', 'Sluta anpassa dig till systemet – välj ett som anpassar sig till dig.
 Våra glasräskessystem är utvecklade för verkliga arbetsförhållanden: enkla att installera, flexibla på plats och utan kompromisser i kvalitet och design.
 För yrkesproffs. Använda världen över'), 'https://www.onlevel.com', 'assets/images/exhibitors/nordbygg-2026-onlevel-nordic-aps.jpg'),
-  ('nordbygg-2026-exhibitor-139149', 'nordbygg-2026', 'OnTheGo Living', 'AG:28', jsonb_build_object('en', 'Vi är specialiserade på Meta-annonsering för byggbranschen.
+  ('nordbygg-2026-exhibitor-139149', 'nordbygg-2026', 'OnTheGo Living', 'AG:28', jsonb_build_object('en', 'We specialise in Meta advertising for the construction industry.
 
-Vi hjälper byggföretag att skapa ett stabilt inflöde av egna offertförfrågningar genom träffsäker annonsering.
+We help construction companies build a steady flow of their own quote requests through precisely targeted advertising.
 
-Ni slipper konkurrera om samma jobb på prisjaktssajter – kunderna kontaktar er direkt.
+You don''t have to compete for the same jobs on price-comparison sites — customers contact you directly.
 
-Personlig service. Tätt samarbete.
-En partner som är tillgänglig och engagerad i er tillväxt.', 'sv', 'Vi är specialiserade på Meta-annonsering för byggbranschen.
+Personal service. Close collaboration.
+A partner who is available and committed to your growth.', 'sv', 'Vi är specialiserade på Meta-annonsering för byggbranschen.
 
 Vi hjälper byggföretag att skapa ett stabilt inflöde av egna offertförfrågningar genom träffsäker annonsering.
 
@@ -5017,7 +5017,7 @@ Ni slipper konkurrera om samma jobb på prisjaktssajter – kunderna kontaktar e
 Personlig service. Tätt samarbete.
 En partner som är tillgänglig och engagerad i er tillväxt.'), 'https://Vmarketing.se', 'assets/images/exhibitors/nordbygg-2026-onthego-living.jpg'),
   ('nordbygg-2026-exhibitor-138253', 'nordbygg-2026', 'ORGADATA Scandinavia AB', 'C11:41C', null, 'https://www.orgadata.com', 'assets/images/exhibitors/nordbygg-2026-orgadata-scandinavia-ab.jpg'),
-  ('nordbygg-2026-exhibitor-136724', 'nordbygg-2026', 'Orsa Stenhuggeri', 'C04:61F', jsonb_build_object('en', 'Orsa stenhuggeri bryter Orsa sandsten i Dalaskogen. Orsa sandsten är en ljusrosa porös stensort som är smidig att forma och används till största del till byggnadsdelar som fasader och ordnament men även till olika inredningar. Kom och kolla in vår mångsidiga sten och hör om vår långa historia!', 'sv', 'Orsa stenhuggeri bryter Orsa sandsten i Dalaskogen. Orsa sandsten är en ljusrosa porös stensort som är smidig att forma och används till största del till byggnadsdelar som fasader och ordnament men även till olika inredningar. Kom och kolla in vår mångsidiga sten och hör om vår långa historia!'), 'https://www.orsasten.se', 'assets/images/exhibitors/nordbygg-2026-orsa-stenhuggeri.jpg'),
+  ('nordbygg-2026-exhibitor-136724', 'nordbygg-2026', 'Orsa Stenhuggeri', 'C04:61F', jsonb_build_object('en', 'Orsa Stenhuggeri quarries Orsa sandstone in the forests of Dalarna. Orsa sandstone is a light pink, porous stone variety that is easy to shape and is used mainly for building elements such as facades and ornamental work, but also for various interior fittings. Come and check out our versatile stone and hear about our long history!', 'sv', 'Orsa stenhuggeri bryter Orsa sandsten i Dalaskogen. Orsa sandsten är en ljusrosa porös stensort som är smidig att forma och används till största del till byggnadsdelar som fasader och ordnament men även till olika inredningar. Kom och kolla in vår mångsidiga sten och hör om vår långa historia!'), 'https://www.orsasten.se', 'assets/images/exhibitors/nordbygg-2026-orsa-stenhuggeri.jpg'),
   ('nordbygg-2026-exhibitor-134853', 'nordbygg-2026', 'OSO Hotwater AB', 'A10:19', null, 'https://osohotwater.se', null),
   ('nordbygg-2026-exhibitor-133986', 'nordbygg-2026', 'Ouman AB', 'A19:10', null, 'https://www.ouman.se', 'assets/images/exhibitors/nordbygg-2026-ouman-ab.jpg'),
   ('nordbygg-2026-exhibitor-139590', 'nordbygg-2026', 'OVA System / Wanas', 'A22:22', null, 'https://www.ova-system.pl', null),
