@@ -501,12 +501,18 @@ stay in lockstep. Grouped by module area:
   `email.test.mjs` covers the prototype-host allowlist in
   `simulations/email.js`; `placeholders.test.mjs` covers the
   deterministic exhibitor/speaker SVGs in `util/placeholders.js`.
-- **View-level helpers** — `event.test.mjs` covers the
-  inline 5-item truncation, themed-first food preview,
-  ticket-gated add-ons visibility, and override-label lookup
-  in `views/event.js`. `my-tickets.test.mjs` covers the
-  My Tickets sort rule that keeps the currently-selected
-  event's tickets on top. `me.test.mjs` covers the My Pages
+- **View-level helpers** — `calendar-view.test.mjs` covers
+  the wiring in `views/calendar.js`: that `visible()` /
+  `types` / `categories` / `months` only reflect events
+  inside the calendar grace window, and that `filtered()`
+  passes the active language into `filterEvents` so the
+  free-text search hits the correct dual-language slot.
+  `event.test.mjs` covers the inline 5-item truncation,
+  themed-first food preview, ticket-gated add-ons
+  visibility, and override-label lookup in `views/event.js`.
+  `my-tickets.test.mjs` covers the My Tickets sort rule
+  that keeps the currently-selected event's tickets on top.
+  `me.test.mjs` covers the My Pages
   formatters for the points balance, ticket-count hint,
   recent-transactions slice, and per-transaction labels.
   `auth.test.mjs` covers the register / sign-in / simulated
