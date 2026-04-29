@@ -5762,31 +5762,31 @@ Besök oss i vår monter CO4:11 för att uppleva hur vi förenklar vardagen för
   ('nordbygg-2026-exhibitor-139282', 'nordbygg-2026', 'Smartproduktion Sverige AB', 'BG:12', jsonb_build_object('en', 'Smartproduktion är ett entreprenörsdrivet bolag specifikt inriktat på bygg- och tjänsteföretag. Vi hjälper dig att spara tid, öka lönsamheten och växa tryggt genom digital marknadsföring, digitalisering och branschspecifik mjukvara.', 'sv', 'Smartproduktion är ett entreprenörsdrivet bolag specifikt inriktat på bygg- och tjänsteföretag. Vi hjälper dig att spara tid, öka lönsamheten och växa tryggt genom digital marknadsföring, digitalisering och branschspecifik mjukvara.'), 'https://www.smartproduktion.se', 'assets/images/exhibitors/nordbygg-2026-smartproduktion-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-134391', 'nordbygg-2026', 'Smeg Nordic AB', 'C06:12', null, 'https://www.smeg.se', 'assets/images/exhibitors/nordbygg-2026-smeg-nordic-ab.jpg'),
   ('nordbygg-2026-exhibitor-134022', 'nordbygg-2026', 'Snidex AB', 'C13:40', null, 'https://www.snidex.se', null),
-  ('nordbygg-2026-exhibitor-139175', 'nordbygg-2026', 'SoftOne', 'A07:33', jsonb_build_object('en', 'SoftOne hjälper företag att förenkla och effektivisera sina verksamheter genom smarta, molnbaserade affärssystem. Med över 30 års erfarenhet erbjuder vi lösningar inom HR, lön, tidrapportering, schemaläggning och ekonomi – särskilt anpassade för tjänsteintensiva branscher som retail, hotell och restaurang.
+  ('nordbygg-2026-exhibitor-139175', 'nordbygg-2026', 'SoftOne', 'A07:33', jsonb_build_object('en', 'SoftOne helps companies simplify and streamline their operations through smart, cloud-based business systems. With more than 30 years of experience we offer solutions in HR, payroll, time reporting, scheduling and finance – specifically tailored to service-intensive sectors such as retail, hotels and restaurants.
 
-Vår plattform samlar hela verksamheten i ett och samma system, vilket ger bättre kontroll, ökad lönsamhet och mer tid till det som verkligen skapar värde. Med fokus på användarvänlighet och automation hjälper vi företag att växa – utan att öka administrationen.', 'sv', 'SoftOne hjälper företag att förenkla och effektivisera sina verksamheter genom smarta, molnbaserade affärssystem. Med över 30 års erfarenhet erbjuder vi lösningar inom HR, lön, tidrapportering, schemaläggning och ekonomi – särskilt anpassade för tjänsteintensiva branscher som retail, hotell och restaurang.
+Our platform brings the entire business together in one and the same system, giving better control, higher profitability and more time for what really creates value. With a focus on usability and automation we help companies grow – without growing the administration.', 'sv', 'SoftOne hjälper företag att förenkla och effektivisera sina verksamheter genom smarta, molnbaserade affärssystem. Med över 30 års erfarenhet erbjuder vi lösningar inom HR, lön, tidrapportering, schemaläggning och ekonomi – särskilt anpassade för tjänsteintensiva branscher som retail, hotell och restaurang.
 
 Vår plattform samlar hela verksamheten i ett och samma system, vilket ger bättre kontroll, ökad lönsamhet och mer tid till det som verkligen skapar värde. Med fokus på användarvänlighet och automation hjälper vi företag att växa – utan att öka administrationen.'), 'https://www.softone.se', 'assets/images/exhibitors/nordbygg-2026-softone.jpg'),
   ('nordbygg-2026-exhibitor-140105', 'nordbygg-2026', 'Solarix', 'C03:41', jsonb_build_object('en', 'Transform every building into a powerhouse with solar facades.
 
-Solarix designs and manufactures coloured solar panels for building facades. Using advanced colour technology, curated design collections, and an integrated mounting system, Solarix panels blend seamlessly into architecture, creating elegant facades that support energy-positive buildings and more sustainable cities.', 'sv', 'Transform every building into a powerhouse with solar facades.
+Solarix designs and manufactures coloured solar panels for building facades. Using advanced colour technology, curated design collections, and an integrated mounting system, Solarix panels blend seamlessly into architecture, creating elegant facades that support energy-positive buildings and more sustainable cities.', 'sv', 'Förvandla varje byggnad till ett kraftverk med solcellsfasader.
 
-Solarix designs and manufactures coloured solar panels for building facades. Using advanced colour technology, curated design collections, and an integrated mounting system, Solarix panels blend seamlessly into architecture, creating elegant facades that support energy-positive buildings and more sustainable cities.'), 'https://solarix-solar.com/en', 'assets/images/exhibitors/nordbygg-2026-solarix.jpg'),
-  ('nordbygg-2026-exhibitor-139845', 'nordbygg-2026', 'Sollenberg Verktyg', 'BG:28', jsonb_build_object('en', 'S Sollenberg Verktyg är en av Sveriges mest erfarna leverantörer av kvalitetsverktyg så som Borr, Bits, Sågblad, Hammare mm.', 'sv', 'S Sollenberg Verktyg är en av Sveriges mest erfarna leverantörer av kvalitetsverktyg så som Borr, Bits, Sågblad, Hammare mm.'), 'https://www.sollenberg-verktyg.se', null),
-  ('nordbygg-2026-exhibitor-134645', 'nordbygg-2026', 'Somatherm VVS AB', 'A06:18', jsonb_build_object('en', 'Somatherm VVS AB ligger i Arvika, Värmland där vi har lager och kontor. Vår verksamhet bedriver försäljning inom tryckhållning/expansionskärl, avgasning, avskiljning och VVS armatur.', 'sv', 'Somatherm VVS AB ligger i Arvika, Värmland där vi har lager och kontor. Vår verksamhet bedriver försäljning inom tryckhållning/expansionskärl, avgasning, avskiljning och VVS armatur.'), 'https://somathermvvs.se', 'assets/images/exhibitors/nordbygg-2026-somatherm-vvs-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139196', 'nordbygg-2026', 'Sortimo Bilinredning', 'AG:132', jsonb_build_object('en', 'Maximera din arbetsdag med Sortimo bilinredning
+Solarix designar och tillverkar färgade solpaneler för byggnadsfasader. Med avancerad färgteknik, omsorgsfullt sammansatta designkollektioner och ett integrerat infästningssystem smälter Solarix-panelerna sömlöst in i arkitekturen och skapar eleganta fasader som stödjer energipositiva byggnader och mer hållbara städer.'), 'https://solarix-solar.com/en', 'assets/images/exhibitors/nordbygg-2026-solarix.jpg'),
+  ('nordbygg-2026-exhibitor-139845', 'nordbygg-2026', 'Sollenberg Verktyg', 'BG:28', jsonb_build_object('en', 'S Sollenberg Verktyg is one of Sweden''s most experienced suppliers of quality tools such as drills, bits, saw blades, hammers and more.', 'sv', 'S Sollenberg Verktyg är en av Sveriges mest erfarna leverantörer av kvalitetsverktyg så som Borr, Bits, Sågblad, Hammare mm.'), 'https://www.sollenberg-verktyg.se', null),
+  ('nordbygg-2026-exhibitor-134645', 'nordbygg-2026', 'Somatherm VVS AB', 'A06:18', jsonb_build_object('en', 'Somatherm VVS AB is located in Arvika, Värmland, where we have our warehouse and offices. Our business is the sale of pressurisation and expansion vessels, degassing, separation and HVAC fittings.', 'sv', 'Somatherm VVS AB ligger i Arvika, Värmland där vi har lager och kontor. Vår verksamhet bedriver försäljning inom tryckhållning/expansionskärl, avgasning, avskiljning och VVS armatur.'), 'https://somathermvvs.se', 'assets/images/exhibitors/nordbygg-2026-somatherm-vvs-ab.jpg'),
+  ('nordbygg-2026-exhibitor-139196', 'nordbygg-2026', 'Sortimo Bilinredning', 'AG:132', jsonb_build_object('en', 'Maximise your workday with Sortimo van interiors
 
-Vill du ha full kontroll i servicebilen, spara tid varje dag och samtidigt ge ett professionellt intryck hos kund? Med bilinredning från Sortimo får du en genomtänkt lösning där kvalitet, säkerhet och effektivitet står i centrum.
+Want full control in the service vehicle, save time every day and at the same time give a professional impression to your customers? With van interiors from Sortimo you get a well-thought-out solution where quality, safety and efficiency are at the centre.
 
-Slipp leta efter verktyg och material. Sortimos system gör det enkelt att organisera allt från smådelar till tunga maskiner. Varje sak har sin plats – vilket minskar stress, sparar tid och ökar produktiviteten.
+No more hunting for tools and materials. Sortimo''s system makes it easy to organise everything from small parts to heavy machines. Every item has its place – which reduces stress, saves time and increases productivity.
 
-Sortimos krocktestade inredningar är utvecklade för att skydda både förare och last. Smarta låssystem, robusta material och innovativ design gör att du kan köra tryggt, även med tung utrustning ombord.
+Sortimo''s crash-tested interiors are developed to protect both driver and load. Smart locking systems, robust materials and innovative design let you drive safely, even with heavy equipment on board.
 
-Skräddarsytt för din verksamhet
+Tailored to your business
 
-Oavsett om du är elektriker, VVS-montör, servicetekniker eller entreprenör anpassas lösningen efter dina behov och ditt fordon. Resultatet? En mobil arbetsplats som stärker ditt varumärke och gör varje uppdrag mer effektivt.
+Whether you are an electrician, plumber, service technician or contractor, the solution is adapted to your needs and your vehicle. The result? A mobile workplace that strengthens your brand and makes every assignment more efficient.
 
-Gör servicebilen till din bästa medarbetare – välj Sortimo.', 'sv', 'Maximera din arbetsdag med Sortimo bilinredning
+Make your service vehicle your best colleague – choose Sortimo.', 'sv', 'Maximera din arbetsdag med Sortimo bilinredning
 
 Vill du ha full kontroll i servicebilen, spara tid varje dag och samtidigt ge ett professionellt intryck hos kund? Med bilinredning från Sortimo får du en genomtänkt lösning där kvalitet, säkerhet och effektivitet står i centrum.
 
@@ -5805,23 +5805,23 @@ Gör servicebilen till din bästa medarbetare – välj Sortimo.'), 'https://www
   ('nordbygg-2026-exhibitor-139620', 'nordbygg-2026', 'Spilka Building Solutions AS', 'C12:51', null, 'https://www.spilka-sbs.com/en', 'assets/images/exhibitors/nordbygg-2026-spilka-building-solutions-as.jpg'),
   ('nordbygg-2026-exhibitor-136294', 'nordbygg-2026', 'SSAB', 'C17:33', jsonb_build_object('en', 'Great things start from within
 
-Stål finns överallt. SSAB är en global ledare inom special- och premiumstål. Vi omdefinierar framtidens stålproduktion och leder stålindustrins gröna omställning. SSAB utmanar gränserna för innovationer med stål som har praktiskt taget noll fossila CO2-utsläpp, och hjälper till att forma en grönare värld. Upptäck en ny era av ståltillverkning.', 'sv', 'Great things start from within
+Steel is everywhere. SSAB is a global leader in special and premium steels. We are redefining the future of steel production and leading the steel industry''s green transition. SSAB pushes the boundaries of innovation with steel that has virtually zero fossil CO2 emissions, and helps shape a greener world. Discover a new era of steelmaking.', 'sv', 'Great things start from within
 
 Stål finns överallt. SSAB är en global ledare inom special- och premiumstål. Vi omdefinierar framtidens stålproduktion och leder stålindustrins gröna omställning. SSAB utmanar gränserna för innovationer med stål som har praktiskt taget noll fossila CO2-utsläpp, och hjälper till att forma en grönare värld. Upptäck en ny era av ståltillverkning.'), 'https://www.ssab.se', 'assets/images/exhibitors/nordbygg-2026-ssab.jpg'),
   ('nordbygg-2026-exhibitor-138872', 'nordbygg-2026', 'STACBOND', 'C15:23', null, 'https://stacbond.com', 'assets/images/exhibitors/nordbygg-2026-stacbond.jpg'),
-  ('nordbygg-2026-exhibitor-139927', 'nordbygg-2026', 'Standwood OÜ', 'C03:51', jsonb_build_object('en', 'Standwoods högteknologiska fabrik för termiskt modifierat trä ligger i byn Alliku nära Tallinn, mitt i naturen, på ett område om tre hektar. Sedan 2018 har vi fokuserat på produktion av högkvalitativa träprodukter. Vi är stolta över vår hållbarhet och våra innovativa lösningar.
-Standwoods fabrik producerar paneler och lavar (bänkskivor) med hjälp av naturträ, limträ och termiskt modifierade trämaterial. Tack vare vår avancerade maskinpark kan vi producera en mängd olika profiler, huvudsakligen av asp, termoasp, al och termoal.
-Våra produkter är de första i Estland som behandlas i en värmebehandlingskammare baserad på vakuumteknologi. Denna innovativa teknik avlägsnar fukt, kåda och mögel från träet helt utan användning av kemikalier, vilket gör träet stabilt, hållbart och underhållsfritt. Resultatet är ett lättare trä med låg fukthalt som passar väl i olika miljöer, med en vacker struktur och smutsavvisande egenskaper.
-Vår produktionsprocess är energieffektiv och miljövänlig. Speciella behandlingskammare säkerställer noggrannhet och jämn kvalitet i varje steg. Varje produkt genomgår noggrann kvalitetskontroll för att garantera konsekvent hög kvalitet.
-Standwoods tillverkningsprocess kombinerar innovativ teknik, omsorg om naturen och långsiktig hållbarhet, och erbjuder högkvalitativa träprodukter som uppfyller alla dina behov inom byggnation och inredning.
-Väggpanelen Respect är Standwoods senaste produkt som kombinerar naturvård, innovation och kvalitet. Den är det perfekta valet för både företag och privatkunder och erbjuder miljövänliga och funktionella lösningar.
-Innovativ och hållbar lösning
-• Sparar naturen: Väggpanelen Respect produceras med upp till 7 gånger mindre råmaterial, vilket minskar avverkning och följer hållbarhetsprinciper.
-• Kemikaliefri och luktfri: Bearbetad med vakuumteknologi är Respect fri från kemikalier, vilket gör den till ett hälsosamt och rent val – idealiskt för allergiker och hälsomedvetna kunder.
-• Perfekt för varma och fuktiga miljöer: Respect är motståndskraftig mot värme och fukt, vilket gör den idealisk för bastur, badrum och terrasser.
-• Enkel att installera: Den snabba och enkla installationen gör Respect lämplig för både små företag och större projekt.
-• Verkligt hållbar: Respect-produkter är slitstarka och långlivade, och klarar även de mest krävande väderförhållanden.
-Respect hjälper till att bevara skogar, minska CO2-avtrycket och bidra till en mer miljövänlig framtid. Genom att välja Respect väljer du kvalitet, lång livslängd och naturvård. Standwood – en ledare inom hållbart tänkande och kvalitet i träindustrin.', 'sv', 'Standwoods högteknologiska fabrik för termiskt modifierat trä ligger i byn Alliku nära Tallinn, mitt i naturen, på ett område om tre hektar. Sedan 2018 har vi fokuserat på produktion av högkvalitativa träprodukter. Vi är stolta över vår hållbarhet och våra innovativa lösningar.
+  ('nordbygg-2026-exhibitor-139927', 'nordbygg-2026', 'Standwood OÜ', 'C03:51', jsonb_build_object('en', 'Standwood''s high-tech factory for thermally modified wood lies in the village of Alliku near Tallinn, in the heart of nature, on a three-hectare site. Since 2018 we have focused on producing high-quality wood products. We take pride in our sustainability and our innovative solutions.
+Standwood''s factory produces panels and benches (worktops) using natural wood, glulam and thermally modified wood materials. Thanks to our advanced machinery, we can produce a wide range of profiles, mainly in aspen, thermo-aspen, alder and thermo-alder.
+Our products are the first in Estonia to be treated in a heat-treatment chamber based on vacuum technology. This innovative process removes moisture, resin and mould from the wood entirely without using chemicals, making the wood stable, durable and maintenance-free. The result is a lighter wood with low moisture content that fits well in different environments, with a beautiful structure and dirt-repellent properties.
+Our production process is energy-efficient and environmentally friendly. Special treatment chambers ensure accuracy and consistent quality at every step. Each product undergoes careful quality control to guarantee a consistently high standard.
+Standwood''s manufacturing process combines innovative technology, care for nature and long-term sustainability, offering high-quality wood products that meet all your needs in construction and interior design.
+The Respect wall panel is Standwood''s latest product, combining nature conservation, innovation and quality. It is the perfect choice for both businesses and private customers, offering environmentally friendly and functional solutions.
+Innovative and sustainable solution
+• Saves nature: the Respect wall panel is produced using up to 7 times less raw material, which reduces logging and follows sustainability principles.
+• Chemical-free and odour-free: processed with vacuum technology, Respect is free of chemicals, making it a healthy and clean choice – ideal for allergy sufferers and health-conscious customers.
+• Perfect for warm and humid environments: Respect is resistant to heat and moisture, making it ideal for saunas, bathrooms and terraces.
+• Easy to install: the quick and simple installation makes Respect suitable for both small businesses and larger projects.
+• Truly durable: Respect products are hard-wearing and long-lasting, and stand up even to the most demanding weather conditions.
+Respect helps preserve forests, reduce the CO2 footprint and contribute to a more environmentally friendly future. By choosing Respect you choose quality, long life and nature conservation. Standwood – a leader in sustainable thinking and quality in the wood industry.', 'sv', 'Standwoods högteknologiska fabrik för termiskt modifierat trä ligger i byn Alliku nära Tallinn, mitt i naturen, på ett område om tre hektar. Sedan 2018 har vi fokuserat på produktion av högkvalitativa träprodukter. Vi är stolta över vår hållbarhet och våra innovativa lösningar.
 Standwoods fabrik producerar paneler och lavar (bänkskivor) med hjälp av naturträ, limträ och termiskt modifierade trämaterial. Tack vare vår avancerade maskinpark kan vi producera en mängd olika profiler, huvudsakligen av asp, termoasp, al och termoal.
 Våra produkter är de första i Estland som behandlas i en värmebehandlingskammare baserad på vakuumteknologi. Denna innovativa teknik avlägsnar fukt, kåda och mögel från träet helt utan användning av kemikalier, vilket gör träet stabilt, hållbart och underhållsfritt. Resultatet är ett lättare trä med låg fukthalt som passar väl i olika miljöer, med en vacker struktur och smutsavvisande egenskaper.
 Vår produktionsprocess är energieffektiv och miljövänlig. Speciella behandlingskammare säkerställer noggrannhet och jämn kvalitet i varje steg. Varje produkt genomgår noggrann kvalitetskontroll för att garantera konsekvent hög kvalitet.
@@ -5834,11 +5834,11 @@ Innovativ och hållbar lösning
 • Enkel att installera: Den snabba och enkla installationen gör Respect lämplig för både små företag och större projekt.
 • Verkligt hållbar: Respect-produkter är slitstarka och långlivade, och klarar även de mest krävande väderförhållanden.
 Respect hjälper till att bevara skogar, minska CO2-avtrycket och bidra till en mer miljövänlig framtid. Genom att välja Respect väljer du kvalitet, lång livslängd och naturvård. Standwood – en ledare inom hållbart tänkande och kvalitet i träindustrin.'), 'https://standwood.com/en', 'assets/images/exhibitors/nordbygg-2026-standwood-ou.jpg'),
-  ('nordbygg-2026-exhibitor-138118', 'nordbygg-2026', 'Stanley', 'B02:20', jsonb_build_object('en', 'STANLEY® har satt standarden för kvalitetsverktyg och tekniska lösningar för specialister över hela världen i mer än 175 år. Med en lång erfarenhet av tillförlitlighet är STANLEY nummer ett 1 bland måttbandstillverkare i världen och fortsätter att driva branschen framåt med innovationer som produktserien STANLEY® FATMAX® samt handverktyg, batteri- och nätdrivna elverktyg, förvaring och tillbehör som får jobbet gjort.
+  ('nordbygg-2026-exhibitor-138118', 'nordbygg-2026', 'Stanley', 'B02:20', jsonb_build_object('en', 'STANLEY® has set the standard for quality tools and technical solutions for specialists around the world for more than 175 years. With a long heritage of reliability, STANLEY is the world''s number 1 measuring-tape manufacturer and continues to drive the industry forward with innovations such as the STANLEY® FATMAX® product range, hand tools, cordless and corded power tools, storage and accessories that get the job done.
 
-Vi är stolta över vårt rykte om utmärkt kvalitet och arbetar ständigt med att testa, designa och förbättra våra produkter för att säkerställa kvalitet och maximal funktion. Att upprätthålla vår ställning som bäst i världen på det vi gör är mycket viktigt för oss, och för dina förväntningar på namnet STANLEY.
+We are proud of our reputation for outstanding quality and continuously test, design and improve our products to ensure quality and maximum functionality. Maintaining our position as the best in the world at what we do is very important to us – and to your expectations of the STANLEY name.
 
-I mer än 175 år har våra innovativa produkter hjälpt till att bygga, reparera och skydda vår värld. Vi arbetar i dag vidare med detta arv.
+For more than 175 years our innovative products have helped build, repair and protect our world. We continue that legacy today.
 
 DO MORE WITH STANLEY', 'sv', 'STANLEY® har satt standarden för kvalitetsverktyg och tekniska lösningar för specialister över hela världen i mer än 175 år. Med en lång erfarenhet av tillförlitlighet är STANLEY nummer ett 1 bland måttbandstillverkare i världen och fortsätter att driva branschen framåt med innovationer som produktserien STANLEY® FATMAX® samt handverktyg, batteri- och nätdrivna elverktyg, förvaring och tillbehör som får jobbet gjort.
 
@@ -5849,18 +5849,18 @@ I mer än 175 år har våra innovativa produkter hjälpt till att bygga, reparer
 DO MORE WITH STANLEY'), 'https://www.stanleyworks.se', 'assets/images/exhibitors/nordbygg-2026-stanley.jpg'),
   ('nordbygg-2026-exhibitor-137696', 'nordbygg-2026', 'Starke Arvid AB', 'B05:03', null, 'https://www.starkearvid.se', null),
   ('nordbygg-2026-exhibitor-138850', 'nordbygg-2026', 'Stegia AB', 'A22:26', null, 'https://www.stegia.se', 'assets/images/exhibitors/nordbygg-2026-stegia-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139179', 'nordbygg-2026', 'Steins Diamantwerkzeuge GmbH', 'B06:53', jsonb_build_object('en', 'Steins Diamantwerkzeuge GmbH – Din specialist på diamantverktyg för private label från Tyskland
-Vi är baserade i Wuppertal och specialiserar oss på diamantverktyg för private label (egna märkesvaror) inom industri och byggbranschen – högpresterande produkter som säljs under ditt eget varumärke.
-Våra huvudprodukter inkluderar:
+  ('nordbygg-2026-exhibitor-139179', 'nordbygg-2026', 'Steins Diamantwerkzeuge GmbH', 'B06:53', jsonb_build_object('en', 'Steins Diamantwerkzeuge GmbH – Your specialist for private-label diamond tools from Germany
+We are based in Wuppertal and specialise in private-label diamond tools (own-brand products) for industry and the construction sector – high-performance products sold under your own brand.
+Our main products include:
 
-•	Diamantsågar för precisionskapning
-•	Diamantskålskivor för snabb slipning
-•	Diamantslipskivor för slät ytbehandling
-•	Diamantkärnborrar för exakt borrning
+•	Diamond saw blades for precision cutting
+•	Diamond cup wheels for fast grinding
+•	Diamond grinding discs for smooth surface finishing
+•	Diamond core drills for accurate drilling
 
-Tack vare vårt breda produktsortiment och starka samarbeten med tillverkare garanterar vi snabba leveranstider – du får rätt verktyg snabbt och pålitligt. Vi erbjuder även anpassad branding (logotyper, förpackningar, specifikationer) och skräddarsydda lösningar för unika behov.
+Thanks to our broad product range and strong partnerships with manufacturers, we guarantee fast delivery times – you get the right tool quickly and reliably. We also offer custom branding (logos, packaging, specifications) and tailor-made solutions for unique needs.
 
-Stick ut på marknaden med verktyg gjorda för dina kunder. Kontakta oss för att bygga din private label-framgång.', 'sv', 'Steins Diamantwerkzeuge GmbH – Din specialist på diamantverktyg för private label från Tyskland
+Stand out in the market with tools made for your customers. Contact us to build your private-label success.', 'sv', 'Steins Diamantwerkzeuge GmbH – Din specialist på diamantverktyg för private label från Tyskland
 Vi är baserade i Wuppertal och specialiserar oss på diamantverktyg för private label (egna märkesvaror) inom industri och byggbranschen – högpresterande produkter som säljs under ditt eget varumärke.
 Våra huvudprodukter inkluderar:
 
@@ -5875,41 +5875,41 @@ Stick ut på marknaden med verktyg gjorda för dina kunder. Kontakta oss för at
   ('nordbygg-2026-exhibitor-139390', 'nordbygg-2026', 'Stikla Serviss', 'C04:41', null, 'https://www.stikla-serviss.lv', null),
   ('nordbygg-2026-exhibitor-140016', 'nordbygg-2026', 'Stockholm Business Region AB', 'EH:07', null, 'https://www.stockholmbusinessregion.se', null),
   ('nordbygg-2026-exhibitor-137893', 'nordbygg-2026', 'Stombergs Massiva Trägolv AB', 'C07:33D', null, 'https://www.stombergs.se', 'assets/images/exhibitors/nordbygg-2026-stombergs-massiva-tragolv-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138859', 'nordbygg-2026', 'STRAUSS', 'B03:42', jsonb_build_object('en', 'STRAUSS – Europe’s No. 1 for professional workwear and safety footwear
+  ('nordbygg-2026-exhibitor-138859', 'nordbygg-2026', 'STRAUSS', 'B03:42', jsonb_build_object('en', 'STRAUSS – Europe''s No. 1 for professional workwear and safety footwear
 
 Strauss is known for professional workwear – specially designed for the tough conditions of the crafts and construction sectors. With over 40,000 products available online, ranging from workwear and safety footwear to protective equipment and high-quality custom branding service, we reliably equip various industries from head to toe.
 
 At Nordbygg, we present a product range tailored to the specific requirements of the construction and installation sectors.
 
-www.strauss.com', 'sv', 'STRAUSS – Europe’s No. 1 for professional workwear and safety footwear
+www.strauss.com', 'sv', 'STRAUSS – Europas nr 1 inom professionella arbetskläder och skyddsskor
 
-Strauss is known for professional workwear – specially designed for the tough conditions of the crafts and construction sectors. With over 40,000 products available online, ranging from workwear and safety footwear to protective equipment and high-quality custom branding service, we reliably equip various industries from head to toe.
+Strauss är kända för professionella arbetskläder – speciellt utformade för de tuffa förhållandena inom hantverks- och byggbranschen. Med över 40 000 produkter tillgängliga online – från arbetskläder och skyddsskor till skyddsutrustning och högkvalitativ logotryckservice – utrustar vi olika branscher tillförlitligt från topp till tå.
 
-At Nordbygg, we present a product range tailored to the specific requirements of the construction and installation sectors.
+På Nordbygg visar vi ett sortiment som är skräddarsytt efter bygg- och installationsbranschens specifika krav.
 
 www.strauss.com'), 'https://strauss.com', 'assets/images/exhibitors/nordbygg-2026-strauss.jpg'),
-  ('nordbygg-2026-exhibitor-140081', 'nordbygg-2026', 'StreamBIM', 'C01:14', jsonb_build_object('en', 'StreamBIM bygger för framtiden med TotalBIM
+  ('nordbygg-2026-exhibitor-140081', 'nordbygg-2026', 'StreamBIM', 'C01:14', jsonb_build_object('en', 'StreamBIM builds for the future with TotalBIM
 
-StreamBIM hjälper bygg- och fastighetsbranschen att arbeta datadrivet genom hela projektet. Med TotalBIM binder vi samman projektering, bygg och överlämning i en gemensam datagrund – med modellen som nav och data som grund för bättre beslut, bättre samordning och bättre överlämning.
+StreamBIM helps the construction and property industry work in a data-driven way through the entire project. With TotalBIM we tie design, construction and handover together on a common data foundation – with the model as the hub and data as the basis for better decisions, better coordination and better handover.
 
-Vår modell bygger på sex centrala delar: projektering, bygg, överlämning, Single source of truth, SecureBIM och OpenDataBIM. Tillsammans skapar de bättre kontroll på säkerhet, ägarskap, spårbarhet och informationsflöde i komplexa projekt.
+Our model rests on six central parts: design, construction, handover, single source of truth, SecureBIM and OpenDataBIM. Together they create better control over safety, ownership, traceability and information flow in complex projects.
 
-Besök oss om du vill se hur en gemensam datagrund kan minska versionskaos, stärka samordningen och skapa mer värde från tidig fas till färdig överlämning.', 'sv', 'StreamBIM bygger för framtiden med TotalBIM
+Visit us if you want to see how a common data foundation can reduce version chaos, strengthen coordination and create more value from early phase to completed handover.', 'sv', 'StreamBIM bygger för framtiden med TotalBIM
 
 StreamBIM hjälper bygg- och fastighetsbranschen att arbeta datadrivet genom hela projektet. Med TotalBIM binder vi samman projektering, bygg och överlämning i en gemensam datagrund – med modellen som nav och data som grund för bättre beslut, bättre samordning och bättre överlämning.
 
 Vår modell bygger på sex centrala delar: projektering, bygg, överlämning, Single source of truth, SecureBIM och OpenDataBIM. Tillsammans skapar de bättre kontroll på säkerhet, ägarskap, spårbarhet och informationsflöde i komplexa projekt.
 
 Besök oss om du vill se hur en gemensam datagrund kan minska versionskaos, stärka samordningen och skapa mer värde från tidig fas till färdig överlämning.'), 'https://www.streambim.com', 'assets/images/exhibitors/nordbygg-2026-streambim.jpg'),
-  ('nordbygg-2026-exhibitor-139995', 'nordbygg-2026', 'Struqtur AB', 'C02:41', jsonb_build_object('en', 'Struqtur är projektverktyget för små och snabba byggföretag som inte är intresserade av krångel och dyra lösningar.', 'sv', 'Struqtur är projektverktyget för små och snabba byggföretag som inte är intresserade av krångel och dyra lösningar.'), 'https://www.struqtur.se', 'assets/images/exhibitors/nordbygg-2026-struqtur-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134980', 'nordbygg-2026', 'Ställning.se', 'B06:41', jsonb_build_object('en', 'Välkommen till Ställning.se!
-Det självklara valet för alla som behöver arbeta på höjd, låg som hög, utan att tumma på säkerheten.
-Vare sig Ni är ute efter en fasadställning, hantverks- eller rullställning så har Ställning.se de produkter Ni behöver.
+  ('nordbygg-2026-exhibitor-139995', 'nordbygg-2026', 'Struqtur AB', 'C02:41', jsonb_build_object('en', 'Struqtur is the project tool for small, fast-moving construction companies that aren''t interested in hassle and expensive solutions.', 'sv', 'Struqtur är projektverktyget för små och snabba byggföretag som inte är intresserade av krångel och dyra lösningar.'), 'https://www.struqtur.se', 'assets/images/exhibitors/nordbygg-2026-struqtur-ab.jpg'),
+  ('nordbygg-2026-exhibitor-134980', 'nordbygg-2026', 'Ställning.se', 'B06:41', jsonb_build_object('en', 'Welcome to Ställning.se!
+The obvious choice for everyone who needs to work at height – low or high – without compromising on safety.
+Whether you are looking for a façade scaffold, craft scaffold or rolling scaffold, Ställning.se has the products you need.
 
-Vår affärsidé är enkel - Att sälja lättbyggda och säkra byggställningar till oslagbara priser.
-Vi stävar ständigt efter att hålla korta ledtider och ett sätt är att hålla vårt 20.000 m² stora lager av ställning och ställningsdelar så välfyllt vi bara kan.
+Our business idea is simple: to sell easy-to-build, safe scaffolding at unbeatable prices.
+We constantly strive to keep lead times short, and one way is to keep our 20,000 m² warehouse of scaffold and scaffold parts as well stocked as we possibly can.
 
-Vi ses!', 'sv', 'Välkommen till Ställning.se!
+See you there!', 'sv', 'Välkommen till Ställning.se!
 Det självklara valet för alla som behöver arbeta på höjd, låg som hög, utan att tumma på säkerheten.
 Vare sig Ni är ute efter en fasadställning, hantverks- eller rullställning så har Ställning.se de produkter Ni behöver.
 
@@ -5918,15 +5918,15 @@ Vi stävar ständigt efter att hålla korta ledtider och ett sätt är att håll
 
 Vi ses!'), 'https://www.stallning.se', 'assets/images/exhibitors/nordbygg-2026-stallning-se.jpg'),
   ('nordbygg-2026-exhibitor-136644', 'nordbygg-2026', 'Ställningsdepån Sverige AB', 'B08:30', null, 'https://www.stallningsdepan.se', null),
-  ('nordbygg-2026-exhibitor-134018', 'nordbygg-2026', 'Ställningsprodukter.se', 'B05:41', jsonb_build_object('en', 'Ställningsprodukter.se på NORDBYGG 2026
+  ('nordbygg-2026-exhibitor-134018', 'nordbygg-2026', 'Ställningsprodukter.se', 'B05:41', jsonb_build_object('en', 'Ställningsprodukter.se at NORDBYGG 2026
 
-Ställningsprodukter.se är din kompletta leverantör av ställningar, stegar, arbetsplattformar och fallskydd för säkert arbete på hög höjd. Vi erbjuder godkända, användarvänliga och prisvärda produkter, alltid med fokus på säkerhet, kvalitet och funktion i vardagen.
+Ställningsprodukter.se is your complete supplier of scaffolds, ladders, work platforms and fall protection for safe work at height. We offer approved, user-friendly and affordable products, always with a focus on safety, quality and everyday function.
 
-På NORDBYGG 2026 satsar vi större än någonsin med vår största monter hittills. Här visar vi upp våra storsäljare, presenterar nya innovativa lösningar och bjuder på aktiviteter i montern hela dagarna. Hos oss får du se, testa och diskutera produkter tillsammans med ett kunnigt team som kan branschen på riktigt.
+At NORDBYGG 2026 we are going bigger than ever with our largest booth so far. Here we show our best-sellers, present innovative new solutions and run activities in the booth throughout the days. With us you can see, test and discuss products together with a knowledgeable team that really knows the industry.
 
-Vi är ett familjeägt företag med butik, lager och kontor i Göteborg, där personlig service, snabba leveranser och hög tillgänglighet är en självklar del av erbjudandet.
+We are a family-owned company with shop, warehouse and offices in Gothenburg, where personal service, fast delivery and high availability are a natural part of the offer.
 
-Välkommen till Ställningsprodukter.se – mer än bara ställning.', 'sv', 'Ställningsprodukter.se på NORDBYGG 2026
+Welcome to Ställningsprodukter.se – more than just scaffolding.', 'sv', 'Ställningsprodukter.se på NORDBYGG 2026
 
 Ställningsprodukter.se är din kompletta leverantör av ställningar, stegar, arbetsplattformar och fallskydd för säkert arbete på hög höjd. Vi erbjuder godkända, användarvänliga och prisvärda produkter, alltid med fokus på säkerhet, kvalitet och funktion i vardagen.
 
@@ -5937,27 +5937,27 @@ Vi är ett familjeägt företag med butik, lager och kontor i Göteborg, där pe
 Välkommen till Ställningsprodukter.se – mer än bara ställning.'), 'https://Stallningsprodukter.se', 'assets/images/exhibitors/nordbygg-2026-stallningsprodukter-se.jpg'),
   ('nordbygg-2026-exhibitor-138267', 'nordbygg-2026', 'SUN WINNER GROUP', 'C15:21', null, 'https://www.sunwinner.pl', null),
   ('nordbygg-2026-exhibitor-135705', 'nordbygg-2026', 'Sundström Safety AB', 'B03:31', null, 'https://www.srsafety.com', 'assets/images/exhibitors/nordbygg-2026-sundstrom-safety-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137913', 'nordbygg-2026', 'SunStop Solskydd', 'C14:22', jsonb_build_object('en', 'Smart solskydd för fastigheter!
+  ('nordbygg-2026-exhibitor-137913', 'nordbygg-2026', 'SunStop Solskydd', 'C14:22', jsonb_build_object('en', 'Smart sun shading for properties!
 
-Genom en ärlig, faktabaserad och kompetent rådgivning levererar vi på SunStop alltid rätt solskydd till fastigheten.
-Vi analyserar och ställer rätt frågor för att hitta den optimala lösningen.', 'sv', 'Smart solskydd för fastigheter!
+Through honest, fact-based and expert advice, we at SunStop always deliver the right sun-shading solution for the property.
+We analyse and ask the right questions to find the optimal solution.', 'sv', 'Smart solskydd för fastigheter!
 
 Genom en ärlig, faktabaserad och kompetent rådgivning levererar vi på SunStop alltid rätt solskydd till fastigheten.
 Vi analyserar och ställer rätt frågor för att hitta den optimala lösningen.'), 'https://www.sunstop.se', 'assets/images/exhibitors/nordbygg-2026-sunstop-solskydd.jpg'),
-  ('nordbygg-2026-exhibitor-134013', 'nordbygg-2026', 'Svalson AB', 'C10:33', jsonb_build_object('en', 'Skräddarsydda glaslösningar för alla miljöer.
+  ('nordbygg-2026-exhibitor-134013', 'nordbygg-2026', 'Svalson AB', 'C10:33', jsonb_build_object('en', 'Tailor-made glass solutions for every environment.
 
-Under drygt 40 år har Svalson erbjudit kreativa och specialanpassade glas- och säkerhetslösningar – som balkongsystem, höj- och sänkbara glasräcken, eldrivna fönster eller skottsäkra receptionsluckor.
+For more than 40 years Svalson has offered creative and custom-built glass and security solutions – such as balcony systems, height-adjustable glass railings, electrically operated windows and bullet-resistant reception hatches.
 
-På Nordbygg, norra Europas största mötesplats för bygg- och fastighetsbranschen, presenterar vi ett urval av våra produkter, bland annat:
+At Nordbygg, northern Europe''s largest meeting place for the construction and property industry, we present a selection of our products, including:
 
 Svalson AB
-•	Höj- och sänkbart glasräcke - manuellt och eldrivet utförande
-•	Eldrivet vertikalgående fönster för bostäder, kontor och liknande
+•	Height-adjustable glass railing – manual and powered versions
+•	Electrically operated vertical-sliding window for housing, offices and similar spaces
 
 Svalson Safety AB
-•	Skottsäker eldriven skjutlucka för optimalt skydd mot skjutvapen
-•	Brandklassad eldriven skjutlucka
-•	Skottsäkra skjutlådor och intercomsystem', 'sv', 'Skräddarsydda glaslösningar för alla miljöer.
+•	Bullet-resistant powered sliding hatch for optimal protection against firearms
+•	Fire-rated powered sliding hatch
+•	Bullet-resistant cash drawers and intercom systems', 'sv', 'Skräddarsydda glaslösningar för alla miljöer.
 
 Under drygt 40 år har Svalson erbjudit kreativa och specialanpassade glas- och säkerhetslösningar – som balkongsystem, höj- och sänkbara glasräcken, eldrivna fönster eller skottsäkra receptionsluckor.
 
@@ -5972,25 +5972,25 @@ Svalson Safety AB
 •	Brandklassad eldriven skjutlucka
 •	Skottsäkra skjutlådor och intercomsystem'), 'https://www.svalson.com', 'assets/images/exhibitors/nordbygg-2026-svalson-ab.jpg'),
   ('nordbygg-2026-exhibitor-138432', 'nordbygg-2026', 'Svanen, Miljömärkning Sverige AB', 'C09:11', null, 'https://www.svanen.se', 'assets/images/exhibitors/nordbygg-2026-svanen-miljomarkning-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134583', 'nordbygg-2026', 'Svedbergs i Dalstorp AB', 'A10:14', jsonb_build_object('en', 'Våra tidlösa och personligt anpassade badrumsinredningar tillverkas i vår egen fabrik i Dalstorp. Där har vi odlat vårt design- och hantverkskunnande så att vi tillsammans med dig kan forma rummet som ger dig energi och formar din dag. Från morgon till kväll, idag och imorgon.', 'sv', 'Våra tidlösa och personligt anpassade badrumsinredningar tillverkas i vår egen fabrik i Dalstorp. Där har vi odlat vårt design- och hantverkskunnande så att vi tillsammans med dig kan forma rummet som ger dig energi och formar din dag. Från morgon till kväll, idag och imorgon.'), 'https://www.svedbergs.se', 'assets/images/exhibitors/nordbygg-2026-svedbergs-i-dalstorp-ab.jpg'),
-  ('nordbygg-2026-exhibitor-135299', 'nordbygg-2026', 'Svensk Byggplåt', 'C17:51', jsonb_build_object('en', 'Svensk Byggplåt är en branschorganisation för tak- och fasadplåt. Vi arbetar för att fler ska upptäcka byggplåtens möjligheter och fördelar.
+  ('nordbygg-2026-exhibitor-134583', 'nordbygg-2026', 'Svedbergs i Dalstorp AB', 'A10:14', jsonb_build_object('en', 'Our timeless and personally tailored bathroom interiors are manufactured in our own factory in Dalstorp. There we have nurtured our design and craft expertise so that, together with you, we can shape the room that gives you energy and shapes your day. From morning to evening, today and tomorrow.', 'sv', 'Våra tidlösa och personligt anpassade badrumsinredningar tillverkas i vår egen fabrik i Dalstorp. Där har vi odlat vårt design- och hantverkskunnande så att vi tillsammans med dig kan forma rummet som ger dig energi och formar din dag. Från morgon till kväll, idag och imorgon.'), 'https://www.svedbergs.se', 'assets/images/exhibitors/nordbygg-2026-svedbergs-i-dalstorp-ab.jpg'),
+  ('nordbygg-2026-exhibitor-135299', 'nordbygg-2026', 'Svensk Byggplåt', 'C17:51', jsonb_build_object('en', 'Svensk Byggplåt is the trade association for roof and façade sheet metal. We work to help more people discover the possibilities and advantages of architectural sheet metal.
 
-Vi representeras av i stort sett alla Sveriges ledande leverantörer inom byggplåt samt Plåt & Ventföretagen, bransch- och arbetsgivarorganisation för företag inom byggplåt och ventilation.
+We are represented by virtually all of Sweden''s leading suppliers of architectural sheet metal as well as Plåt & Ventföretagen, the industry and employer organisation for companies in sheet metal and ventilation.
 
-Våra medlemmar är:
+Our members are:
 ArcelorMittal, Areco, Bevego, Dala-Profil, Lindab, Plannja, Plåt & Ventföretagen, Prefa, Rheinzink, Ruukki, SSAB, VM Building Solutions.', 'sv', 'Svensk Byggplåt är en branschorganisation för tak- och fasadplåt. Vi arbetar för att fler ska upptäcka byggplåtens möjligheter och fördelar.
 
 Vi representeras av i stort sett alla Sveriges ledande leverantörer inom byggplåt samt Plåt & Ventföretagen, bransch- och arbetsgivarorganisation för företag inom byggplåt och ventilation.
 
 Våra medlemmar är:
 ArcelorMittal, Areco, Bevego, Dala-Profil, Lindab, Plannja, Plåt & Ventföretagen, Prefa, Rheinzink, Ruukki, SSAB, VM Building Solutions.'), 'https://www.svenskbyggplat.se', 'assets/images/exhibitors/nordbygg-2026-svensk-byggplat.jpg'),
-  ('nordbygg-2026-exhibitor-136831', 'nordbygg-2026', 'Svensk Dataförvaltning AB', 'A16:23', jsonb_build_object('en', 'Svensk Dataförvaltning (SDF) utvecklar program för service- och installationsbranschen. Programmen underlättar hantering och planering av arbetsorder, projekt och dokumentation
+  ('nordbygg-2026-exhibitor-136831', 'nordbygg-2026', 'Svensk Dataförvaltning AB', 'A16:23', jsonb_build_object('en', 'Svensk Dataförvaltning (SDF) develops software for the service and installation industries. The programs make it easier to handle and plan work orders, projects and documentation.
 
-SDF ger dig det perfekta stödet i varje del av hanteringen av dina arbetsordrar. Enkelt, tryggt och digitalt
+SDF gives you the perfect support in every part of managing your work orders. Simple, secure and digital.
 
-De flesta tekniker är utpräglade problemlösare. Men det finns många problem som de flesta helst av allt skulle vilja slippa. Offerter som ska skrivas, tid som ska rapporteras och fakturor som ska upprättas.
+Most technicians are natural problem solvers. But there are plenty of problems most of them would rather avoid. Quotes that need writing, time that needs reporting and invoices that need to be issued.
 
-Våra verktyg hjälper dig att lösa allt detta. Och det var faktiskt därför som vi startade SDF. För att hjälpa dig att lösa rätt problem – så att du kan gå till jobbet med lättare steg.', 'sv', 'Svensk Dataförvaltning (SDF) utvecklar program för service- och installationsbranschen. Programmen underlättar hantering och planering av arbetsorder, projekt och dokumentation
+Our tools help you solve all of that. And that, in fact, is why we started SDF – to help you solve the right problems, so you can head to work with a lighter step.', 'sv', 'Svensk Dataförvaltning (SDF) utvecklar program för service- och installationsbranschen. Programmen underlättar hantering och planering av arbetsorder, projekt och dokumentation
 
 SDF ger dig det perfekta stödet i varje del av hanteringen av dina arbetsordrar. Enkelt, tryggt och digitalt
 
@@ -5999,59 +5999,59 @@ De flesta tekniker är utpräglade problemlösare. Men det finns många problem 
 Våra verktyg hjälper dig att lösa allt detta. Och det var faktiskt därför som vi startade SDF. För att hjälpa dig att lösa rätt problem – så att du kan gå till jobbet med lättare steg.'), 'https://www.sdfab.se', 'assets/images/exhibitors/nordbygg-2026-svensk-dataforvaltning-ab.jpg'),
   ('nordbygg-2026-exhibitor-138805', 'nordbygg-2026', 'Svensk Ventilation', 'A18:15', null, 'https://www.svenskventilation.se', null),
   ('nordbygg-2026-exhibitor-139042', 'nordbygg-2026', 'Svenska Kakel AB', 'A01:205', null, 'https://www.svenskakakel.se', 'assets/images/exhibitors/nordbygg-2026-svenska-kakel-ab.jpg'),
-  ('nordbygg-2026-exhibitor-136817', 'nordbygg-2026', 'Svenskt Trä', 'C14:31', jsonb_build_object('en', 'Svenskt Trä sprider kunskap om trä, träprodukter och träbyggande för att främja ett hållbart samhälle och en livskraftig sågverksnäring.
+  ('nordbygg-2026-exhibitor-136817', 'nordbygg-2026', 'Svenskt Trä', 'C14:31', jsonb_build_object('en', 'Svenskt Trä spreads knowledge about wood, wood products and wood construction to promote a sustainable society and a thriving sawmill industry.
+
+This year we share the exhibition area with Setra Trävaror AB, Moelven Limtre AB, Holmen Wood Products AB/Martinsons Byggsystem AB, Norra Timber and Svenska Träskyddsföreningen.
+
+Together we show a selection that spans from materials to system solutions: decking, CMP panels, glulam and CLT constructions, a house model, a bridge model and several of Svenskt Trä''s sought-after publications. Right next door is the Woodlife exhibition, which highlights building projects where many of our member companies have been involved – a good place to discuss choice of materials, detail solutions and architectural design.
+
+In the booth we create meetings and hands-on experiences: a coffee station for quick conversations, a forest corner where our forestry experts answer questions on everything from forestry methods to biodiversity, a pétanque pitch with wooden balls, a ''guess the wood species'' game and a dedicated display area per company with models and examples. Welcome to booth C14:31.', 'sv', 'Svenskt Trä sprider kunskap om trä, träprodukter och träbyggande för att främja ett hållbart samhälle och en livskraftig sågverksnäring.
 
 I år delar vi utställningsytan med Setra Trävaror AB, Moelven Limtre AB, Holmen Wood Products AB/Martinsons Byggsystem AB, Norra Timber och Svenska Träskyddsföreningen.
 
 Tillsammans visar vi ett urval som spänner från material till systemlösningar: trall, CMP-paneler, limträ- och KL-trä¬konstruktioner, en husmodell, en bromodell samt flera av Svenskt Träs efterfrågade publikationer. Precis intill finns även Woodlife utställningen som lyfter fram byggprojekt där många av våra medlemsföretag medverkat – en bra plats för att diskutera val av material, detaljlösningar och gestaltning.
 
-I montern skapar vi möten och praktiska upplevelser: en kaffestation för snabba samtal, en skogshörna där våra skogsexperter svarar på frågor om allt från brukningsmetoder till biologisk mångfald, en boulebana med träklot, ”gissa träslaget” samt en dedikerad exponeringsyta per företag med modeller och exempel. Välkommen till monter C14:31.', 'sv', 'Svenskt Trä sprider kunskap om trä, träprodukter och träbyggande för att främja ett hållbart samhälle och en livskraftig sågverksnäring.
+I montern skapar vi möten och praktiska upplevelser: en kaffestation för snabba samtal, en skogshörna där våra skogsexperter svarar på frågor om allt från brukningsmetoder till biologisk mångfald, en boulebana med träklot, "gissa träslaget" samt en dedikerad exponeringsyta per företag med modeller och exempel. Välkommen till monter C14:31.'), 'https://arbio.se/om-arbio', 'assets/images/exhibitors/nordbygg-2026-svenskt-tra.jpg'),
+  ('nordbygg-2026-exhibitor-138259', 'nordbygg-2026', 'Svenssons i Tenhult AB', 'C11:41B', jsonb_build_object('en', 'Svenssons i Tenhult was founded in 1931 and we are experts in locks and fittings. In addition to locks and fittings for doors and windows, we also offer a wide range of furniture fittings, furniture locks, fastenings and other accessories.
 
-I år delar vi utställningsytan med Setra Trävaror AB, Moelven Limtre AB, Holmen Wood Products AB/Martinsons Byggsystem AB, Norra Timber och Svenska Träskyddsföreningen.
+Since 2021 we have been part of the international industrial group Indutrade. Our sales offices are in Tenhult (Småland) and Knislinge (Skåne), with our warehouse in Tenhult.
 
-Tillsammans visar vi ett urval som spänner från material till systemlösningar: trall, CMP-paneler, limträ- och KL-trä¬konstruktioner, en husmodell, en bromodell samt flera av Svenskt Träs efterfrågade publikationer. Precis intill finns även Woodlife utställningen som lyfter fram byggprojekt där många av våra medlemsföretag medverkat – en bra plats för att diskutera val av material, detaljlösningar och gestaltning.
+We choose our brands with care and make sure you get the quality and function you are looking for. Knowledge, service and commitment are our strengths, and for us it is important that you, as a customer, feel confident in your choice of fittings supplier!
 
-I montern skapar vi möten och praktiska upplevelser: en kaffestation för snabba samtal, en skogshörna där våra skogsexperter svarar på frågor om allt från brukningsmetoder till biologisk mångfald, en boulebana med träklot, ”gissa träslaget” samt en dedikerad exponeringsyta per företag med modeller och exempel. Välkommen till monter C14:31.'), 'https://arbio.se/om-arbio', 'assets/images/exhibitors/nordbygg-2026-svenskt-tra.jpg'),
-  ('nordbygg-2026-exhibitor-138259', 'nordbygg-2026', 'Svenssons i Tenhult AB', 'C11:41B', jsonb_build_object('en', 'Svenssons i Tenhult grundades 1931 och vi är experter på lås och beslag. Förutom lås och beslag till dörrar och fönster erbjuder vi även ett stort sortiment av inredningsbeslag, möbellås, fästmaterial och andra tillbehör.
-
-Sedan 2021 tillhör vi den internationella industrikoncernen Indutrade. Våra säljkontor finns i Tenhult (Småland) och Knislinge (Skåne), lagerplats i Tenhult.
-
-Vi väljer våra varumärken med omsorg och är noga med att du får den kvalité och funktion som du önskar. Kunskap, service och engagemang är vår styrka och för oss är det viktigt att du som kund känner dig trygg i ditt val av beslagsleverantör!
-
-Läs gärna mer om oss på vår hemsida: svenssonsbeslag.se', 'sv', 'Svenssons i Tenhult grundades 1931 och vi är experter på lås och beslag. Förutom lås och beslag till dörrar och fönster erbjuder vi även ett stort sortiment av inredningsbeslag, möbellås, fästmaterial och andra tillbehör.
+Read more about us on our website: svenssonsbeslag.se', 'sv', 'Svenssons i Tenhult grundades 1931 och vi är experter på lås och beslag. Förutom lås och beslag till dörrar och fönster erbjuder vi även ett stort sortiment av inredningsbeslag, möbellås, fästmaterial och andra tillbehör.
 
 Sedan 2021 tillhör vi den internationella industrikoncernen Indutrade. Våra säljkontor finns i Tenhult (Småland) och Knislinge (Skåne), lagerplats i Tenhult.
 
 Vi väljer våra varumärken med omsorg och är noga med att du får den kvalité och funktion som du önskar. Kunskap, service och engagemang är vår styrka och för oss är det viktigt att du som kund känner dig trygg i ditt val av beslagsleverantör!
 
 Läs gärna mer om oss på vår hemsida: svenssonsbeslag.se'), 'https://www.svenssonsitenhult.se', 'assets/images/exhibitors/nordbygg-2026-svenssons-i-tenhult-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137954', 'nordbygg-2026', 'Sveriges Bad & Värmebutiker AB', 'A06:19', jsonb_build_object('en', 'Bad & Värme är en av Sveriges ledande VVS-kedjor med över 140 lokala medlemsföretag och mer än 1 100 certifierade installatörer runt om i landet. Tillsammans erbjuder vi trygga, hållbara och professionella lösningar inom badrum, värme och VVS – alltid med kunden i fokus.
+  ('nordbygg-2026-exhibitor-137954', 'nordbygg-2026', 'Sveriges Bad & Värmebutiker AB', 'A06:19', jsonb_build_object('en', 'Bad & Värme is one of Sweden''s leading HVAC chains, with more than 140 local member companies and over 1,100 certified installers across the country. Together we offer secure, sustainable and professional solutions in bathroom, heating and HVAC – always with the customer in focus.
 
-Vår styrka ligger i kombinationen av lokalt hantverk och gemensam kraft. Varje Bad & Värme-företag är lokalt förankrat, samtidigt som de ingår i en rikstäckande kedja med gemensamma arbetssätt, kvalitetssäkring och starka leverantörssamarbeten.
+Our strength lies in the combination of local craftsmanship and collective power. Each Bad & Värme company is locally rooted while also being part of a national chain with shared working methods, quality assurance and strong supplier partnerships.
 
-Ett av våra viktigaste erbjudanden är konceptet Installerat & Klart – en helhetslösning där kunden får en trygg affär från första rådgivning till färdig installation, utförd av behöriga och certifierade installatörer.', 'sv', 'Bad & Värme är en av Sveriges ledande VVS-kedjor med över 140 lokala medlemsföretag och mer än 1 100 certifierade installatörer runt om i landet. Tillsammans erbjuder vi trygga, hållbara och professionella lösningar inom badrum, värme och VVS – alltid med kunden i fokus.
+One of our most important offers is the Installerat & Klart concept – a complete solution where the customer gets a secure deal from the first consultation through to completed installation, carried out by qualified and certified installers.', 'sv', 'Bad & Värme är en av Sveriges ledande VVS-kedjor med över 140 lokala medlemsföretag och mer än 1 100 certifierade installatörer runt om i landet. Tillsammans erbjuder vi trygga, hållbara och professionella lösningar inom badrum, värme och VVS – alltid med kunden i fokus.
 
 Vår styrka ligger i kombinationen av lokalt hantverk och gemensam kraft. Varje Bad & Värme-företag är lokalt förankrat, samtidigt som de ingår i en rikstäckande kedja med gemensamma arbetssätt, kvalitetssäkring och starka leverantörssamarbeten.
 
 Ett av våra viktigaste erbjudanden är konceptet Installerat & Klart – en helhetslösning där kunden får en trygg affär från första rådgivning till färdig installation, utförd av behöriga och certifierade installatörer.'), 'https://www.bad-varme.se', 'assets/images/exhibitors/nordbygg-2026-sveriges-bad-varmebutiker-ab.jpg'),
-  ('nordbygg-2026-exhibitor-136641', 'nordbygg-2026', 'Sveriges Stenindustri förbund', 'C04:61', jsonb_build_object('en', 'Sveriges Stenindustriförbund, STEN, är stenindustrins branschorganisation. Medlemmarna är företag i alla led, från brytning till tillverkning, försäljning och montering av naturstensprodukter. Även konsulter och leverantörer kan vara medlemmar. Den gemensamma nämnaren är materialet natursten.', 'sv', 'Sveriges Stenindustriförbund, STEN, är stenindustrins branschorganisation. Medlemmarna är företag i alla led, från brytning till tillverkning, försäljning och montering av naturstensprodukter. Även konsulter och leverantörer kan vara medlemmar. Den gemensamma nämnaren är materialet natursten.'), 'https://www.sten.se', 'assets/images/exhibitors/nordbygg-2026-sveriges-stenindustri-forbund.jpg'),
-  ('nordbygg-2026-exhibitor-139604', 'nordbygg-2026', 'Sweco', 'EH:65', jsonb_build_object('en', 'Sweco Environment & Planning – Livscykelperspektiv för hållbar samhällsutveckling
+  ('nordbygg-2026-exhibitor-136641', 'nordbygg-2026', 'Sveriges Stenindustri förbund', 'C04:61', jsonb_build_object('en', 'Sveriges Stenindustriförbund, STEN, is the trade association for the stone industry. Its members are companies at every stage – from quarrying through manufacturing, sales and installation of natural-stone products. Consultants and suppliers can also be members. The common denominator is the material – natural stone.', 'sv', 'Sveriges Stenindustriförbund, STEN, är stenindustrins branschorganisation. Medlemmarna är företag i alla led, från brytning till tillverkning, försäljning och montering av naturstensprodukter. Även konsulter och leverantörer kan vara medlemmar. Den gemensamma nämnaren är materialet natursten.'), 'https://www.sten.se', 'assets/images/exhibitors/nordbygg-2026-sveriges-stenindustri-forbund.jpg'),
+  ('nordbygg-2026-exhibitor-139604', 'nordbygg-2026', 'Sweco', 'EH:65', jsonb_build_object('en', 'Sweco Environment & Planning – A life-cycle perspective for sustainable societal development
 
-Inom Swecos division Environment & Planning arbetar vi med att skapa hållbara lösningar för samhällen, städer och infrastruktur – alltid med ett helhetsperspektiv på miljö, klimat och resurser. Swecos ambition är att vara en partner genom projekt där vi arbetar tillsammans för att nå uppsatta mål.
+Within Sweco''s Environment & Planning division we work on creating sustainable solutions for communities, cities and infrastructure – always with a holistic perspective on environment, climate and resources. Sweco''s ambition is to be a partner throughout the project, where we work together to reach the goals that have been set.
 
-En central del av vårt arbete är livscykelanalys (LCA). Genom att analysera miljöpåverkan från råvara till färdig produkt – och vidare till drift, underhåll och avveckling – hjälper vi våra kunder att fatta välgrundade, datadrivna beslut som leder till en hållbar utveckling.
+A central part of our work is life-cycle assessment (LCA). By analysing environmental impact from raw material to finished product – and on through operation, maintenance and decommissioning – we help our customers make well-founded, data-driven decisions that lead to sustainable development.
 
-Swecos erbjudande inom LCA inkluderar bland annat:
-•	Framtagande av miljövarudeklarationer (EPD:er): Sweco har omfattande erfarenhet av att ta fram EPD:er inom en rad olika produktkategorier som exempelvis byggmaterial och installationsprodukter
-•	LCA för produkter: Vi har omfattande erfarenhet av LCA enligt ISO 14040/44 och ISO 14067
-•	Rådgivning för att minska klimatpåverkan baserat på LCA och kommunikation av resultat
-•	Kritisk granskning av LCA enligt ISO 14040/44
-•	Tredjepartsverifiering inom EPD International
-•	Klimat- och miljöbedömningar: vi anpassar lösningar efter kundens behov, exempelvis genom skräddarsydda klimatberäkningsverktyg i Excel eller webbaserade gränssnitt enligt kundens önskemål
-•	Rådgivning kring aktuella och kommande kravställningar på marknaden
-•	Framtagande av underlag för beslut
+Sweco''s LCA offering includes:
+•	Producing Environmental Product Declarations (EPDs): Sweco has extensive experience producing EPDs across a wide range of product categories such as building materials and installation products
+•	LCA for products: we have extensive experience with LCA according to ISO 14040/44 and ISO 14067
+•	Advice on reducing climate impact based on LCA, and communication of results
+•	Critical review of LCA according to ISO 14040/44
+•	Third-party verification within EPD International
+•	Climate and environmental assessments: we adapt solutions to the customer''s needs, for example through bespoke climate-calculation tools in Excel or web-based interfaces as the customer wishes
+•	Advice on current and upcoming market requirements
+•	Producing decision-support material
 
-Tillsammans gör vi hållbarhet mätbar, jämförbar och genomförbar.', 'sv', 'Sweco Environment & Planning – Livscykelperspektiv för hållbar samhällsutveckling
+Together we make sustainability measurable, comparable and achievable.', 'sv', 'Sweco Environment & Planning – Livscykelperspektiv för hållbar samhällsutveckling
 
 Inom Swecos division Environment & Planning arbetar vi med att skapa hållbara lösningar för samhällen, städer och infrastruktur – alltid med ett helhetsperspektiv på miljö, klimat och resurser. Swecos ambition är att vara en partner genom projekt där vi arbetar tillsammans för att nå uppsatta mål.
 
@@ -6068,50 +6068,50 @@ Swecos erbjudande inom LCA inkluderar bland annat:
 •	Framtagande av underlag för beslut
 
 Tillsammans gör vi hållbarhet mätbar, jämförbar och genomförbar.'), 'https://www.sweco.se', 'assets/images/exhibitors/nordbygg-2026-sweco.jpg'),
-  ('nordbygg-2026-exhibitor-138803', 'nordbygg-2026', 'SweDendro AB', 'B07:51', jsonb_build_object('en', 'Snickerimaskiner i alla tänkbara modeller och utföranden, handmaskiner, skärande verktyg och maskintillbehör, handverktyg av hög kvalitet och enkla spånsugar samt mer kvalificerade system för spånhantering till såväl snickerier, som byggfirmor, institutioner, skolor och hobbysnickare.
-I vår utställning i Växjö, webshop samt hemsida visar vi ett urval av våra leverantörers produkter.
-Nu med över 25 års positiv utveckling ser vi med tillförsikt på framtiden.', 'sv', 'Snickerimaskiner i alla tänkbara modeller och utföranden, handmaskiner, skärande verktyg och maskintillbehör, handverktyg av hög kvalitet och enkla spånsugar samt mer kvalificerade system för spånhantering till såväl snickerier, som byggfirmor, institutioner, skolor och hobbysnickare.
+  ('nordbygg-2026-exhibitor-138803', 'nordbygg-2026', 'SweDendro AB', 'B07:51', jsonb_build_object('en', 'Woodworking machines in every conceivable model and configuration, hand machines, cutting tools and machine accessories, high-quality hand tools and simple chip extractors as well as more advanced chip-handling systems – for joineries, construction companies, institutions, schools and hobby woodworkers.
+In our showroom in Växjö, our webshop and on our website we show a selection of our suppliers'' products.
+Now with more than 25 years of positive growth behind us, we look to the future with confidence.', 'sv', 'Snickerimaskiner i alla tänkbara modeller och utföranden, handmaskiner, skärande verktyg och maskintillbehör, handverktyg av hög kvalitet och enkla spånsugar samt mer kvalificerade system för spånhantering till såväl snickerier, som byggfirmor, institutioner, skolor och hobbysnickare.
 I vår utställning i Växjö, webshop samt hemsida visar vi ett urval av våra leverantörers produkter.
 Nu med över 25 års positiv utveckling ser vi med tillförsikt på framtiden.'), 'https://www.swedendro.se', null),
-  ('nordbygg-2026-exhibitor-137856', 'nordbygg-2026', 'Swedol AB', 'B01:50 (+1)', jsonb_build_object('en', 'Swedol erbjuder produkter, tjänster och utbildningar som vilar på hög kunskapsnivå, djup branschkännedom och stor förståelse för Nordens yrkesfolk.
+  ('nordbygg-2026-exhibitor-137856', 'nordbygg-2026', 'Swedol AB', 'B01:50 (+1)', jsonb_build_object('en', 'Swedol offers products, services and training based on a high level of expertise, deep industry knowledge and a strong understanding of professionals across the Nordics.
 
-Vi fokuserar på att vara en engagerande partner till företag inom industri och verkstad, bygg och anläggning, offentlig verksamhet, åkeri- och transport samt jord- och skogsbruk.', 'sv', 'Swedol erbjuder produkter, tjänster och utbildningar som vilar på hög kunskapsnivå, djup branschkännedom och stor förståelse för Nordens yrkesfolk.
+We focus on being an engaged partner to companies in industry and workshops, construction and civil engineering, the public sector, haulage and transport, and agriculture and forestry.', 'sv', 'Swedol erbjuder produkter, tjänster och utbildningar som vilar på hög kunskapsnivå, djup branschkännedom och stor förståelse för Nordens yrkesfolk.
 
 Vi fokuserar på att vara en engagerande partner till företag inom industri och verkstad, bygg och anläggning, offentlig verksamhet, åkeri- och transport samt jord- och skogsbruk.'), 'https://www.swedol.se', 'assets/images/exhibitors/nordbygg-2026-swedol-ab.jpg'),
-  ('nordbygg-2026-exhibitor-140070', 'nordbygg-2026', 'Sweftico', 'AG:95', jsonb_build_object('en', 'Sweftico är en digital plattform för bygg- och fastighetsbranschen där företag, yrkespersoner, leverantörer och organisationer kan hitta varandra, visa kompetens och skapa nya affärsmöjligheter.
+  ('nordbygg-2026-exhibitor-140070', 'nordbygg-2026', 'Sweftico', 'AG:95', jsonb_build_object('en', 'Sweftico is a digital platform for the construction and property industry, where companies, professionals, suppliers and organisations can find each other, showcase their expertise and create new business opportunities.
 
-Plattformen gör det enkelt att hitta rätt företag, leverantörer, resurser och samarbetspartners genom smart filtrering och tydlig information om tillgänglighet.
+The platform makes it easy to find the right companies, suppliers, resources and partners through smart filtering and clear information about availability.
 
-Sweftico är utvecklad utifrån verkliga behov i branschen med fokus på effektivitet, transparens och bättre samarbete.', 'sv', 'Sweftico är en digital plattform för bygg- och fastighetsbranschen där företag, yrkespersoner, leverantörer och organisationer kan hitta varandra, visa kompetens och skapa nya affärsmöjligheter.
+Sweftico is built on real industry needs, with a focus on efficiency, transparency and better collaboration.', 'sv', 'Sweftico är en digital plattform för bygg- och fastighetsbranschen där företag, yrkespersoner, leverantörer och organisationer kan hitta varandra, visa kompetens och skapa nya affärsmöjligheter.
 
 Plattformen gör det enkelt att hitta rätt företag, leverantörer, resurser och samarbetspartners genom smart filtrering och tydlig information om tillgänglighet.
 
 Sweftico är utvecklad utifrån verkliga behov i branschen med fokus på effektivitet, transparens och bättre samarbete.'), 'https://Sweftico.se', 'assets/images/exhibitors/nordbygg-2026-sweftico.jpg'),
   ('nordbygg-2026-exhibitor-134009', 'nordbygg-2026', 'Swema AB', 'A13:11', null, 'https://www.swema.se', null),
-  ('nordbygg-2026-exhibitor-137876', 'nordbygg-2026', 'SWEP', 'A12:04', jsonb_build_object('en', 'SWEP ensures efficient heat transfer where less means more. Since 1983, millions of our innovative brazed plate heat exchangers have been integrated into HVACR and industrial applications worldwide, enhancing the quality of life for billions of people. Our expertise in sustainable energy use has grown SWEP into a global company with more than 1,100 employees, five production sites, and a presence in 50 countries. As part of Dover Corporation, we help redefine what is possible within the Climate & Sustainability Technologies segment. Make a difference. Visit swepgroup.com.', 'sv', 'SWEP ensures efficient heat transfer where less means more. Since 1983, millions of our innovative brazed plate heat exchangers have been integrated into HVACR and industrial applications worldwide, enhancing the quality of life for billions of people. Our expertise in sustainable energy use has grown SWEP into a global company with more than 1,100 employees, five production sites, and a presence in 50 countries. As part of Dover Corporation, we help redefine what is possible within the Climate & Sustainability Technologies segment. Make a difference. Visit swepgroup.com.'), 'https://www.swepgroup.com', 'assets/images/exhibitors/nordbygg-2026-swep.jpg'),
-  ('nordbygg-2026-exhibitor-138586', 'nordbygg-2026', 'SWISS KRONO', 'C14:51', jsonb_build_object('en', 'SWISS KRONO is one of the world’s leading manufacturers of wood-based materials. Our diverse portfolio includes solutions in the areas of Interiors, Flooring, and Building Materials.
+  ('nordbygg-2026-exhibitor-137876', 'nordbygg-2026', 'SWEP', 'A12:04', jsonb_build_object('en', 'SWEP ensures efficient heat transfer where less means more. Since 1983, millions of our innovative brazed plate heat exchangers have been integrated into HVACR and industrial applications worldwide, enhancing the quality of life for billions of people. Our expertise in sustainable energy use has grown SWEP into a global company with more than 1,100 employees, five production sites, and a presence in 50 countries. As part of Dover Corporation, we help redefine what is possible within the Climate & Sustainability Technologies segment. Make a difference. Visit swepgroup.com.', 'sv', 'SWEP säkerställer effektiv värmeöverföring där mindre betyder mer. Sedan 1983 har miljontals av våra innovativa lödda plattvärmeväxlare integrerats i HVACR- och industriapplikationer världen över, vilket förbättrar livskvaliteten för miljarder människor. Vår expertis inom hållbar energianvändning har gjort SWEP till ett globalt företag med över 1 100 anställda, fem produktionsanläggningar och närvaro i 50 länder. Som en del av Dover Corporation hjälper vi till att omdefiniera vad som är möjligt inom segmentet Climate & Sustainability Technologies. Gör skillnad. Besök swepgroup.com.'), 'https://www.swepgroup.com', 'assets/images/exhibitors/nordbygg-2026-swep.jpg'),
+  ('nordbygg-2026-exhibitor-138586', 'nordbygg-2026', 'SWISS KRONO', 'C14:51', jsonb_build_object('en', 'SWISS KRONO is one of the world''s leading manufacturers of wood-based materials. Our diverse portfolio includes solutions in the areas of Interiors, Flooring, and Building Materials.
 
 As a family-owned company, we have stood for high quality and outstanding price-performance ratio for more than 50 years. We set benchmarks in design, comfort, and durability – creating living spaces for our customers in over 120 countries worldwide.
 
-We ensure that our wood-based products are available anytime, anywhere, and in premium quality. This is made possible by around 5,000 dedicated employees at twelve locations worldwide.', 'sv', 'SWISS KRONO is one of the world’s leading manufacturers of wood-based materials. Our diverse portfolio includes solutions in the areas of Interiors, Flooring, and Building Materials.
+We ensure that our wood-based products are available anytime, anywhere, and in premium quality. This is made possible by around 5,000 dedicated employees at twelve locations worldwide.', 'sv', 'SWISS KRONO är en av världens ledande tillverkare av träbaserade material. Vår breda produktportfölj omfattar lösningar inom områdena interiör, golv och byggmaterial.
 
-As a family-owned company, we have stood for high quality and outstanding price-performance ratio for more than 50 years. We set benchmarks in design, comfort, and durability – creating living spaces for our customers in over 120 countries worldwide.
+Som familjeägt företag har vi i över 50 år stått för hög kvalitet och utmärkt prisvärdhet. Vi sätter måttstocken inom design, komfort och hållbarhet – och skapar livsmiljöer för våra kunder i över 120 länder världen över.
 
-We ensure that our wood-based products are available anytime, anywhere, and in premium quality. This is made possible by around 5,000 dedicated employees at twelve locations worldwide.'), 'https://swisskrono.com', 'assets/images/exhibitors/nordbygg-2026-swiss-krono.jpg'),
-  ('nordbygg-2026-exhibitor-134788', 'nordbygg-2026', 'Swisspearl', 'C04:21', jsonb_build_object('en', 'Swisspearl är en av Europas ledande tillverkare av byggmaterial i fibercement.
-Sortimentet omfattar bygg- och konstruktionsskivor samt fasadlösningar som används inom både nybyggnation och renovering.
-Produkterna erbjuder pålitliga och välutvecklade lösningar för tak, fasader och interiörer.
+Vi ser till att våra träbaserade produkter alltid finns tillgängliga, var som helst och i förstklassig kvalitet. Det möjliggörs av cirka 5 000 engagerade medarbetare vid tolv anläggningar runt om i världen.'), 'https://swisskrono.com', 'assets/images/exhibitors/nordbygg-2026-swiss-krono.jpg'),
+  ('nordbygg-2026-exhibitor-134788', 'nordbygg-2026', 'Swisspearl', 'C04:21', jsonb_build_object('en', 'Swisspearl is one of Europe''s leading manufacturers of fibre-cement building materials.
+The range covers building and construction boards as well as façade solutions used in both new build and renovation.
+The products offer reliable, well-developed solutions for roofs, façades and interiors.
 
-Utöver fibercementprodukterna erbjuder Swisspearl även byggnadsintegrerade solceller (BIPV) – en lösning som kombinerar design och energiproduktion.
-Solcellerna kan integreras direkt i tak och fasader och finns, för fasad, i flera färger utöver svart. Det ger möjlighet att förena teknik och arkitektur med ett enhetligt uttryck.
+In addition to the fibre-cement products, Swisspearl also offers building-integrated photovoltaics (BIPV) – a solution that combines design and energy production.
+The solar cells can be integrated directly into roofs and façades and, for façades, are available in several colours in addition to black. This makes it possible to bring technology and architecture together with a unified expression.
 
-Swisspearl arbetar för en mer hållbar byggbransch och stödjer sina kunder med produkter, lösningar och expertis utvecklade av ett internationellt team på cirka 2 400 medarbetare i över 20 länder.
+Swisspearl works for a more sustainable construction industry and supports its customers with products, solutions and expertise developed by an international team of around 2,400 employees in more than 20 countries.
 
-Swisspearls svenska försäljningskontor är beläget i Stockholm, medan koncernens huvudkontor ligger i Niederurnen i Schweiz. Swisspearl har dessutom nio produktionsanläggningar i Europa.
+Swisspearl''s Swedish sales office is located in Stockholm, while the group''s head office is in Niederurnen, Switzerland. Swisspearl also has nine production sites across Europe.
 
-Produkterna finns tillgängliga via landets ledande återförsäljare för byggproffs.
+The products are available through the country''s leading retailers for construction professionals.
 
-För mer information, besök www.swisspearl.com', 'sv', 'Swisspearl är en av Europas ledande tillverkare av byggmaterial i fibercement.
+For more information, visit www.swisspearl.com', 'sv', 'Swisspearl är en av Europas ledande tillverkare av byggmaterial i fibercement.
 Sortimentet omfattar bygg- och konstruktionsskivor samt fasadlösningar som används inom både nybyggnation och renovering.
 Produkterna erbjuder pålitliga och välutvecklade lösningar för tak, fasader och interiörer.
 
@@ -6125,35 +6125,35 @@ Swisspearls svenska försäljningskontor är beläget i Stockholm, medan koncern
 Produkterna finns tillgängliga via landets ledande återförsäljare för byggproffs.
 
 För mer information, besök www.swisspearl.com'), 'https://www.swisspearl.com', 'assets/images/exhibitors/nordbygg-2026-swisspearl.jpg'),
-  ('nordbygg-2026-exhibitor-137945', 'nordbygg-2026', 'Swoosh Group AB', 'A20:29', jsonb_build_object('en', 'Swoosh är en rikstäckande partner inom underhåll av fastigheters infrastruktur. Vi arbetar med tjänster som relining, stamspolning, högtrycksspolning, vacuumsugning och rörinspektion. Nu lyfter vi särskilt fram Kanaltätning som ett växande område där vi tillsammans med Linervent erbjuder lösningar för att täta ventilationskanaler miljövänligt, smidigt och kostnadseffektivt.
+  ('nordbygg-2026-exhibitor-137945', 'nordbygg-2026', 'Swoosh Group AB', 'A20:29', jsonb_build_object('en', 'Swoosh is a nationwide partner for maintaining the infrastructure of buildings. We work with services such as relining, drain flushing, high-pressure jetting, vacuum extraction and pipe inspection. We are now putting particular focus on duct sealing as a growing area, where together with Linervent we offer solutions for sealing ventilation ducts in an environmentally friendly, smooth and cost-effective way.
 
-Genom modern teknik och egen personal kan vi förbättra inneklimat, energieffektivitet och driftsäkerhet i både nya och äldre byggnader.
+Through modern technology and our own staff we can improve indoor climate, energy efficiency and operational reliability in both new and older buildings.
 
-Vi finns nära våra kunder genom lokala filialer i hela Sverige. Målet är alltid samma. trygg drift. hållbara lösningar. och minimal påverkan på verksamheten.
+We are close to our customers through local branches across Sweden. The goal is always the same: reliable operation, sustainable solutions and minimal impact on your business.
 
-Besök oss gärna så berättar vi mer om hur Kanaltätning kan ge både energibesparingar och bättre luftkvalitet.', 'sv', 'Swoosh är en rikstäckande partner inom underhåll av fastigheters infrastruktur. Vi arbetar med tjänster som relining, stamspolning, högtrycksspolning, vacuumsugning och rörinspektion. Nu lyfter vi särskilt fram Kanaltätning som ett växande område där vi tillsammans med Linervent erbjuder lösningar för att täta ventilationskanaler miljövänligt, smidigt och kostnadseffektivt.
+Come and visit us – we will tell you more about how duct sealing can deliver both energy savings and better air quality.', 'sv', 'Swoosh är en rikstäckande partner inom underhåll av fastigheters infrastruktur. Vi arbetar med tjänster som relining, stamspolning, högtrycksspolning, vacuumsugning och rörinspektion. Nu lyfter vi särskilt fram Kanaltätning som ett växande område där vi tillsammans med Linervent erbjuder lösningar för att täta ventilationskanaler miljövänligt, smidigt och kostnadseffektivt.
 
 Genom modern teknik och egen personal kan vi förbättra inneklimat, energieffektivitet och driftsäkerhet i både nya och äldre byggnader.
 
 Vi finns nära våra kunder genom lokala filialer i hela Sverige. Målet är alltid samma. trygg drift. hållbara lösningar. och minimal påverkan på verksamheten.
 
 Besök oss gärna så berättar vi mer om hur Kanaltätning kan ge både energibesparingar och bättre luftkvalitet.'), 'https://www.swooshsverige.se', 'assets/images/exhibitors/nordbygg-2026-swoosh-group-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139525', 'nordbygg-2026', 'Synoptik Sweden AB', 'BG:16', jsonb_build_object('en', 'Synoptik – framtidens arbetsverktyg är här
+  ('nordbygg-2026-exhibitor-139525', 'nordbygg-2026', 'Synoptik Sweden AB', 'BG:16', jsonb_build_object('en', 'Synoptik – the work tool of the future is here
 
-Vi på Synoptik är en av Nordens ledande optikkedjor och en del av EssilorLuxottica – världsledande inom glasögon och innovation.
+At Synoptik we are one of the Nordics'' leading optical chains and part of EssilorLuxottica – world leaders in eyewear and innovation.
 
-På den här mässan presenterar vi nästa steg inom optik:
-Framtidens arbetsverktyg – smarta glasögon
+At this fair we present the next step in optics:
+The work tool of the future – smart glasses
 
-Med smarta glasögon kan du arbeta effektivare, säkrare och helt handsfree:
+With smart glasses you can work more efficiently, more safely and completely hands-free:
 
-Kommunicera utan att ta upp telefonen – ring och ta emot samtal direkt
-Visa vad du ser i realtid via livevideo och få support direkt på plats
-Dokumentera arbetet enkelt med foto och video
-Gör anteckningar med rösten och dela information direkt
+Communicate without picking up the phone – make and take calls directly
+Show what you see in real time via live video and get support on the spot
+Document the work easily with photos and video
+Make notes with your voice and share information instantly
 
-Ett nytt sätt att arbeta smartare inom bygg, installation och service.
-Besök oss på Nordbygg – monter BG:16', 'sv', 'Synoptik – framtidens arbetsverktyg är här
+A new way to work smarter in construction, installation and service.
+Visit us at Nordbygg – booth BG:16', 'sv', 'Synoptik – framtidens arbetsverktyg är här
 
 Vi på Synoptik är en av Nordens ledande optikkedjor och en del av EssilorLuxottica – världsledande inom glasögon och innovation.
 
@@ -6169,16 +6169,16 @@ Gör anteckningar med rösten och dela information direkt
 
 Ett nytt sätt att arbeta smartare inom bygg, installation och service.
 Besök oss på Nordbygg – monter BG:16'), 'https://www.synoptik.se', 'assets/images/exhibitors/nordbygg-2026-synoptik-sweden-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137127', 'nordbygg-2026', 'System Edström Bilinredningar AB', 'AG:117', jsonb_build_object('en', 'På System Edström strävar vi alltid efter att skapa mobila arbetsplatser utifrån dina behov. Vi är marknadsledande inom bilinredning och har över 65 års erfarenhet i branschen. Idag finns vi i 20 länder och över 500 000 hantverkare litar på bilinredning från oss.
+  ('nordbygg-2026-exhibitor-137127', 'nordbygg-2026', 'System Edström Bilinredningar AB', 'AG:117', jsonb_build_object('en', 'At System Edström we always strive to create mobile workplaces based on your needs. We are market leaders in van interiors with more than 65 years of industry experience. Today we are present in 20 countries and over 500,000 craftspeople trust van interiors from us.
 
-Vi är specialiserade på skräddarsydda lösningar för alla märken och modeller. Oavsett vilken skåpbil du kör hjälper våra bilinredningssystem dig att få ut det mesta av din arbetsbil. Säkerhet och hållbarhet är centralt i vårt arbete. Vi utvecklar ständigt våra produkter för att möta framtidens krav genom nya och innovativa lösningar.
+We specialise in tailor-made solutions for every make and model. Whatever van you drive, our van-interior systems help you get the most out of your work vehicle. Safety and durability are central to what we do. We constantly develop our products to meet the demands of the future through new and innovative solutions.
 
-Under mässdagarna har du möjlighet att träffa våra säljare som gärna berättar mer om våra produkter och hur vi arbetar. Vi ser fram emot att träffa dig!', 'sv', 'På System Edström strävar vi alltid efter att skapa mobila arbetsplatser utifrån dina behov. Vi är marknadsledande inom bilinredning och har över 65 års erfarenhet i branschen. Idag finns vi i 20 länder och över 500 000 hantverkare litar på bilinredning från oss.
+During the fair you will have the chance to meet our sales team, who will be happy to tell you more about our products and how we work. We look forward to meeting you!', 'sv', 'På System Edström strävar vi alltid efter att skapa mobila arbetsplatser utifrån dina behov. Vi är marknadsledande inom bilinredning och har över 65 års erfarenhet i branschen. Idag finns vi i 20 länder och över 500 000 hantverkare litar på bilinredning från oss.
 
 Vi är specialiserade på skräddarsydda lösningar för alla märken och modeller. Oavsett vilken skåpbil du kör hjälper våra bilinredningssystem dig att få ut det mesta av din arbetsbil. Säkerhet och hållbarhet är centralt i vårt arbete. Vi utvecklar ständigt våra produkter för att möta framtidens krav genom nya och innovativa lösningar.
 
 Under mässdagarna har du möjlighet att träffa våra säljare som gärna berättar mer om våra produkter och hur vi arbetar. Vi ser fram emot att träffa dig!'), 'https://www.edstrom.se', 'assets/images/exhibitors/nordbygg-2026-system-edstrom-bilinredningar-ab.jpg'),
-  ('nordbygg-2026-exhibitor-135452', 'nordbygg-2026', 'Systemair Sverige AB', 'A16:14', jsonb_build_object('en', 'Systemair är ett världsledande ventilationsföretag som tillverkar och marknadsför energieffektiva och hållbara produkter som bidrar till att förbättra inomhusklimatet och minska koldioxidutsläppen.', 'sv', 'Systemair är ett världsledande ventilationsföretag som tillverkar och marknadsför energieffektiva och hållbara produkter som bidrar till att förbättra inomhusklimatet och minska koldioxidutsläppen.'), 'https://www.systemair.se', 'assets/images/exhibitors/nordbygg-2026-systemair-sverige-ab.jpg'),
+  ('nordbygg-2026-exhibitor-135452', 'nordbygg-2026', 'Systemair Sverige AB', 'A16:14', jsonb_build_object('en', 'Systemair is a world-leading ventilation company that manufactures and markets energy-efficient and sustainable products that contribute to improving the indoor climate and reducing carbon dioxide emissions.', 'sv', 'Systemair är ett världsledande ventilationsföretag som tillverkar och marknadsför energieffektiva och hållbara produkter som bidrar till att förbättra inomhusklimatet och minska koldioxidutsläppen.'), 'https://www.systemair.se', 'assets/images/exhibitors/nordbygg-2026-systemair-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-139759', 'nordbygg-2026', 'Säker Bostad AB', 'C15:20', jsonb_build_object('en', 'Vi på Säker Bostad är stolta över att erbjuda innovativa lösningar inom säkerhetsdörrar, branddörrar och ståldörrar. Med fokus på kvalitet och säkerhet strävar vi efter att skydda både människor och egendom. Våra produkter är designade för att möta de högsta standarderna och vi arbetar ständigt med att utveckla våra lösningar för att säkerställa trygghet och hållbarhet.Besök oss gärna för att lära dig mer om hur vi kan hjälpa till att skapa en säkrare miljö!', 'sv', 'Vi på Säker Bostad är stolta över att erbjuda innovativa lösningar inom säkerhetsdörrar, branddörrar och ståldörrar. Med fokus på kvalitet och säkerhet strävar vi efter att skydda både människor och egendom. Våra produkter är designade för att möta de högsta standarderna och vi arbetar ständigt med att utveckla våra lösningar för att säkerställa trygghet och hållbarhet.Besök oss gärna för att lära dig mer om hur vi kan hjälpa till att skapa en säkrare miljö!'), 'https://www.sakerbostad.se', 'assets/images/exhibitors/nordbygg-2026-saker-bostad-ab.jpg'),
   ('nordbygg-2026-exhibitor-138507', 'nordbygg-2026', 'Säker Vatten AB', 'AG:11', jsonb_build_object('en', 'Säker Vatten är en medlemsägd branschorganisation?som har till uppgift att skapa ekonomiskt, miljömässigt och socialt hållbara VVS-installationer. Det gör vi genom att utbilda, auktorisera och kontrollera företag i VVS-branschen. Att utföra installationer enligt branschregler Säker Vatteninstallation är idag likställt med fackmässigt utförande.
 Säker Vatten startades 2005. Den 1 sep 2005 lanserades den första upplagan av Branschregler Säker Vatteninstallation? som är ett regelverk framtaget av branschens aktörer för att minska risken för vattenskador, brännskador, förgiftning och mikrobiell tillväxt, framför allt legionella.  Målet är att ge en ökad säkerhet och trygghet för kunden. Branschreglerna ställer krav på det tekniska utförandet av installationerna, produkterna som ska användas samt på kunskap hos de personer och företag som utför arbetet.
