@@ -3207,16 +3207,16 @@ Our products are developed for public buildings, commercial premises, logistics 
 Våra produkter är utvecklade för offentliga byggnader, kommersiella lokaler, logistikcenter och industrimiljöer – även i de tuffaste förhållanden. Med snart hundra års erfarenhet arbetar Frico långsiktigt för en mer energieffektiv och grönare framtid.'), 'https://www.frico.net/en', 'assets/images/exhibitors/nordbygg-2026-frico-ab.jpg'),
   ('nordbygg-2026-exhibitor-139247', 'nordbygg-2026', 'FutureCalc', 'AG:48', null, 'https://futurecalc.ai', null),
   ('nordbygg-2026-exhibitor-137901', 'nordbygg-2026', 'Fönsterfabriken AB - Smarta fönster', 'C14:52', null, 'https://www.smartafonster.se', 'assets/images/exhibitors/nordbygg-2026-fonsterfabriken-ab-smarta-fonster.jpg'),
-  ('nordbygg-2026-exhibitor-138445', 'nordbygg-2026', 'GAFT NORD AB', 'C15:56', jsonb_build_object('en', 'GAFT Nord AB är specialiserade på att skapa moderna och diskreta skyddsrumslösningar för både privatpersoner och företag.
-Vi erbjuder helhetslösningar inom byggnation, modernisering och service av skyddsrum, panic rooms och andra skyddsanläggningar – alltid enligt MSB:s riktlinjer och internationella standarder.
+  ('nordbygg-2026-exhibitor-138445', 'nordbygg-2026', 'GAFT NORD AB', 'C15:56', jsonb_build_object('en', 'GAFT Nord AB specialises in creating modern and discreet shelter solutions for both private individuals and businesses.
+We offer turnkey solutions for the construction, modernisation and servicing of shelters, panic rooms and other protective facilities – always in line with MSB guidelines and international standards.
 
-Med lång erfarenhet inom bygg och säkerhet hanterar vi hela processen: från projektering och tillstånd till färdig installation.
-Våra projekt kombinerar hållbara konstruktioner, avancerad teknik och fullständig diskretion – oavsett om det gäller ett nytt fristående skyddsrum, en anläggning under huset eller en integrerad lösning i befintlig byggnad.
+With long experience in construction and security, we manage the entire process: from design and permits to finished installation.
+Our projects combine durable construction, advanced technology and complete discretion – whether it is a new free-standing shelter, a facility beneath the house or an integrated solution within an existing building.
 
-På Nordbygg-mässan visar vi exempel på våra lösningar och berättar hur ett skyddsrum kan vara både en trygg och funktionell del av hemmet – exempelvis som vinkällare, hobbyrum, hemmabio eller relaxyta i fredstid.
+At Nordbygg we showcase examples of our solutions and explain how a shelter can be both a safe and functional part of the home – for example as a wine cellar, hobby room, home cinema or relaxation area in peacetime.
 
-Vi samarbetar med erfarna ingenjörer och partners i hela Europa, och erbjuder även service, inspektioner och anpassning av befintliga skyddsrum till dagens krav.
-Besök oss på mässan och upptäck hur vi kan skapa lyx i trygghet – exklusiv säkerhet i ditt eget hem.', 'sv', 'GAFT Nord AB är specialiserade på att skapa moderna och diskreta skyddsrumslösningar för både privatpersoner och företag.
+We collaborate with experienced engineers and partners across Europe, and also offer service, inspections and adaptation of existing shelters to today''s requirements.
+Visit us at the fair and discover how we can create luxury in safety – exclusive security in your own home.', 'sv', 'GAFT Nord AB är specialiserade på att skapa moderna och diskreta skyddsrumslösningar för både privatpersoner och företag.
 Vi erbjuder helhetslösningar inom byggnation, modernisering och service av skyddsrum, panic rooms och andra skyddsanläggningar – alltid enligt MSB:s riktlinjer och internationella standarder.
 
 Med lång erfarenhet inom bygg och säkerhet hanterar vi hela processen: från projektering och tillstånd till färdig installation.
@@ -3226,46 +3226,46 @@ På Nordbygg-mässan visar vi exempel på våra lösningar och berättar hur ett
 
 Vi samarbetar med erfarna ingenjörer och partners i hela Europa, och erbjuder även service, inspektioner och anpassning av befintliga skyddsrum till dagens krav.
 Besök oss på mässan och upptäck hur vi kan skapa lyx i trygghet – exklusiv säkerhet i ditt eget hem.'), 'https://gaft.se', 'assets/images/exhibitors/nordbygg-2026-gaft-nord-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139100', 'nordbygg-2026', 'Garden Spot Int.', 'EÖ:25', jsonb_build_object('en', 'We are a Polish manufacturer of the Pixel Garden system for building vertical gardens, as well as turf grids - Garden Grid.', 'sv', 'We are a Polish manufacturer of the Pixel Garden system for building vertical gardens, as well as turf grids - Garden Grid.'), 'https://gardenspot.pl', 'assets/images/exhibitors/nordbygg-2026-garden-spot-int.jpg'),
-  ('nordbygg-2026-exhibitor-137997', 'nordbygg-2026', 'Garoff Decor', 'C06:63', jsonb_build_object('en', 'Vi erbjuder exklusiva inredningsprodukter som mosaik av natursten och metall, köksbänkskivor och marmorväggpaneler som ger ditt hem en unik och härlig känsla. Vi har ocksä: Keramikplattor alla storlekar  , över 1300 modeller i butiken. Inomhus och utomhus.
-Varmt Vällkomna till vår 3000m2 showroom i Vinsta/Stockholm', 'sv', 'Vi erbjuder exklusiva inredningsprodukter som mosaik av natursten och metall, köksbänkskivor och marmorväggpaneler som ger ditt hem en unik och härlig känsla. Vi har ocksä: Keramikplattor alla storlekar  , över 1300 modeller i butiken. Inomhus och utomhus.
+  ('nordbygg-2026-exhibitor-139100', 'nordbygg-2026', 'Garden Spot Int.', 'EÖ:25', jsonb_build_object('en', 'We are a Polish manufacturer of the Pixel Garden system for building vertical gardens, as well as turf grids - Garden Grid.', 'sv', 'Vi är en polsk tillverkare av Pixel Garden-systemet för att bygga vertikala trädgårdar samt gräsarmeringsraster – Garden Grid.'), 'https://gardenspot.pl', 'assets/images/exhibitors/nordbygg-2026-garden-spot-int.jpg'),
+  ('nordbygg-2026-exhibitor-137997', 'nordbygg-2026', 'Garoff Decor', 'C06:63', jsonb_build_object('en', 'We offer exclusive interior products such as mosaics in natural stone and metal, kitchen countertops and marble wall panels that give your home a unique and wonderful feel. We also have: ceramic tiles in all sizes, with over 1,300 models in store. Indoor and outdoor.
+Warmly welcome to our 3,000 m² showroom in Vinsta/Stockholm.', 'sv', 'Vi erbjuder exklusiva inredningsprodukter som mosaik av natursten och metall, köksbänkskivor och marmorväggpaneler som ger ditt hem en unik och härlig känsla. Vi har ocksä: Keramikplattor alla storlekar  , över 1300 modeller i butiken. Inomhus och utomhus.
 Varmt Vällkomna till vår 3000m2 showroom i Vinsta/Stockholm'), 'https://www.garoff-decor.com', 'assets/images/exhibitors/nordbygg-2026-garoff-decor.jpg'),
-  ('nordbygg-2026-exhibitor-136718', 'nordbygg-2026', 'Gatstensbolaget', 'C04:61G', jsonb_build_object('en', 'Tillverkning av natursten.
+  ('nordbygg-2026-exhibitor-136718', 'nordbygg-2026', 'Gatstensbolaget', 'C04:61G', jsonb_build_object('en', 'Manufacturing of natural stone.
 
--Kantsten
--Smågatsten
--Storgatsten
--Murar', 'sv', 'Tillverkning av natursten.
+-Kerb stone
+-Small cobblestones
+-Large cobblestones
+-Walls', 'sv', 'Tillverkning av natursten.
 
 -Kantsten
 -Smågatsten
 -Storgatsten
 -Murar'), 'https://gatstensbolaget.se', 'assets/images/exhibitors/nordbygg-2026-gatstensbolaget.jpg'),
-  ('nordbygg-2026-exhibitor-137872', 'nordbygg-2026', 'Gebwell Sverige AB', 'A11:22', jsonb_build_object('en', 'Gebwell är ett finländskt företag specialiserat på miljövänliga värme- och kylalösningar för fastigheter. Gebwell tillverkar fjärrvärmecentraler, värmepumpar och ackumulatortankar för fastigheter av alla storlekar. Produktionsanläggningarna finns i Finland och Polen. Gebwell Sverige AB marknadsför och säljer Gebwells produkter i Sverige.', 'sv', 'Gebwell är ett finländskt företag specialiserat på miljövänliga värme- och kylalösningar för fastigheter. Gebwell tillverkar fjärrvärmecentraler, värmepumpar och ackumulatortankar för fastigheter av alla storlekar. Produktionsanläggningarna finns i Finland och Polen. Gebwell Sverige AB marknadsför och säljer Gebwells produkter i Sverige.'), 'https://www.gebwell.se', 'assets/images/exhibitors/nordbygg-2026-gebwell-sverige-ab.jpg'),
+  ('nordbygg-2026-exhibitor-137872', 'nordbygg-2026', 'Gebwell Sverige AB', 'A11:22', jsonb_build_object('en', 'Gebwell is a Finnish company specialising in environmentally friendly heating and cooling solutions for buildings. Gebwell manufactures district-heating substations, heat pumps and buffer tanks for properties of all sizes. The production facilities are located in Finland and Poland. Gebwell Sverige AB markets and sells Gebwell''s products in Sweden.', 'sv', 'Gebwell är ett finländskt företag specialiserat på miljövänliga värme- och kylalösningar för fastigheter. Gebwell tillverkar fjärrvärmecentraler, värmepumpar och ackumulatortankar för fastigheter av alla storlekar. Produktionsanläggningarna finns i Finland och Polen. Gebwell Sverige AB marknadsför och säljer Gebwells produkter i Sverige.'), 'https://www.gebwell.se', 'assets/images/exhibitors/nordbygg-2026-gebwell-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-139445', 'nordbygg-2026', 'Genossenschafts-Werke für Solnhofener Platten GmbH', 'C02:51', null, 'https://genowe.de', null),
   ('nordbygg-2026-exhibitor-139895', 'nordbygg-2026', 'Geocon Mätteknik Stockholm AB', 'BG:21', null, 'https://www.geocon.se', 'assets/images/exhibitors/nordbygg-2026-geocon-matteknik-stockholm-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139084', 'nordbygg-2026', 'Geofix AB', 'B08:51', jsonb_build_object('en', 'Geofix AB – Lösningar för mätning, utsättning och verklighetsbaserad dokumentation
+  ('nordbygg-2026-exhibitor-139084', 'nordbygg-2026', 'Geofix AB', 'B08:51', jsonb_build_object('en', 'Geofix AB – Solutions for measurement, layout and reality-based documentation
 
-Geofix är en svensk specialistleverantör av professionella mät-, utsättnings- och digitala bygglösningar för bygg-, anläggnings- och mätbranschen. Vi arbetar nära entreprenörer, konsulter och projektorganisationer för att bidra till högre precision, effektivare arbetsflöden och bättre samverkan – från tidiga planeringsskeden till produktion och dokumentation.
+Geofix is a Swedish specialist supplier of professional measurement, layout and digital construction solutions for the building, civil engineering and surveying sectors. We work closely with contractors, consultants and project organisations to support higher precision, more efficient workflows and better collaboration – from early planning stages through to production and documentation.
 
-På Nordbygg visar Geofix hur modern teknik kan stötta smartare och mer automatiserade arbetssätt på byggarbetsplatsen. Tillsammans med våra partners FARO, HP SitePrint och Rothbucher Systeme presenterar vi praktiska lösningar som redan idag används i skarpa projekt runt om i Sverige.
+At Nordbygg, Geofix demonstrates how modern technology can support smarter and more automated ways of working on the construction site. Together with our partners FARO, HP SitePrint and Rothbucher Systeme, we present practical solutions already in use today on live projects across Sweden.
 
-Våra fokusområden omfattar:
+Our focus areas include:
 
-* Automatiserad utsättning och layout
-* Verklighetsbaserad dokumentation och 3D-skanning
-* Precision och kontroll i mätprocessen
-* Digitala arbetsflöden som minskar fel, omarbete och manuellt arbete
+* Automated layout and setting-out
+* Reality-based documentation and 3D scanning
+* Precision and control in the measurement process
+* Digital workflows that reduce errors, rework and manual effort
 
-HP SitePrint visar hur robotiserad utsättning kan förändra traditionell layout genom att skriva ut ritningar direkt på byggytan med hög noggrannhet och spårbarhet.
+HP SitePrint shows how robotic layout can transform traditional setting-out by printing drawings directly onto the building surface with high accuracy and traceability.
 
-FARO presenterar avancerade lösningar för 3D-laserskanning som stödjer verifiering, relationshandlingar och digitala tvillingar – och ger bättre beslutsunderlag genom hela projektets livscykel.
+FARO presents advanced 3D laser-scanning solutions that support verification, as-built documentation and digital twins – providing a better basis for decision-making throughout the project lifecycle.
 
-Rothbucher Systeme visar precisionslösningar för infästning och mätkontroll som säkerställer stabila och tillförlitliga referenspunkter även i krävande miljöer.
+Rothbucher Systeme presents precision solutions for fixings and measurement control that ensure stable and reliable reference points even in demanding environments.
 
-Tillsammans vill vi visa hur innovation, samarbete och beprövad teknik kan bidra till mer effektiva, förutsägbara och välkoordinerade byggprojekt.
+Together we want to show how innovation, collaboration and proven technology can contribute to more efficient, predictable and well-coordinated construction projects.
 
-Välkommen att besöka oss på Nordbygg för live-demonstrationer, dialog kring verkliga projekt och inspiration kring hur dessa lösningar kan skapa värde i era projekt.', 'sv', 'Geofix AB – Lösningar för mätning, utsättning och verklighetsbaserad dokumentation
+Welcome to visit us at Nordbygg for live demonstrations, conversations about real-world projects, and inspiration on how these solutions can create value in your own projects.', 'sv', 'Geofix AB – Lösningar för mätning, utsättning och verklighetsbaserad dokumentation
 
 Geofix är en svensk specialistleverantör av professionella mät-, utsättnings- och digitala bygglösningar för bygg-, anläggnings- och mätbranschen. Vi arbetar nära entreprenörer, konsulter och projektorganisationer för att bidra till högre precision, effektivare arbetsflöden och bättre samverkan – från tidiga planeringsskeden till produktion och dokumentation.
 
@@ -3287,17 +3287,17 @@ Rothbucher Systeme visar precisionslösningar för infästning och mätkontroll 
 Tillsammans vill vi visa hur innovation, samarbete och beprövad teknik kan bidra till mer effektiva, förutsägbara och välkoordinerade byggprojekt.
 
 Välkommen att besöka oss på Nordbygg för live-demonstrationer, dialog kring verkliga projekt och inspiration kring hur dessa lösningar kan skapa värde i era projekt.'), 'https://www.geofix.se', 'assets/images/exhibitors/nordbygg-2026-geofix-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137746', 'nordbygg-2026', 'GF (Uponor)', 'A01:18', jsonb_build_object('en', 'När branschen samlas på Nordbygg 2026 i Stockholm den 21–24 april introducerar GF en rad nya innovationer i Sverige. Lösningar som visar hur byggnader kan bli mer energieffektiva, driftsäkra och hållbara över tid.
+  ('nordbygg-2026-exhibitor-137746', 'nordbygg-2026', 'GF (Uponor)', 'A01:18', jsonb_build_object('en', 'When the industry gathers at Nordbygg 2026 in Stockholm on 21–24 April, GF will introduce a range of new innovations in Sweden. Solutions that show how buildings can become more energy-efficient, reliable and sustainable over time.
 
-Byggsektorn står för en betydande del av energianvändningen i samhället, vilket gör effektiva systemlösningar till en central del av klimatomställningen. Samtidigt ställs högre krav på säker och hygienisk vattendistribution, inte minst i fastigheter där drift och underhåll behöver fungera utan avbrott.
+The construction sector accounts for a significant share of society''s energy use, which makes efficient system solutions a central part of the climate transition. At the same time, demands are growing for safe and hygienic water distribution, particularly in buildings where operation and maintenance must run without interruption.
 
-Mot den bakgrunden utvecklas nu en ny generation lösningar som kombinerar energieffektivitet, driftsäkerhet och smartare systemintegration.
+Against this backdrop, a new generation of solutions is now being developed that combine energy efficiency, operational reliability and smarter system integration.
 
-– Branschen efterfrågar lösningar som både förenklar installation och bidrar till lägre energianvändning över tid. Vår ambition är att leverera system som skapar verkligt värde i hela byggnadens livscykel, säger Robert Molund, vd för GF VVS i Sverige.
+"The industry is asking for solutions that both simplify installation and contribute to lower energy use over time. Our ambition is to deliver systems that create real value across a building''s entire lifecycle," says Robert Molund, CEO of GF VVS in Sweden.
 
-I vår vattenbar kan du ta en paus med plus i kanten. Så slå dig ner en stund, ta något i glaset och prata med oss om det vi kan bäst. Eller kom bara förbi för något svalkande.
+In our water bar you can take a break with a little something extra. So sit down for a while, have something in your glass and chat with us about what we do best. Or just stop by for something refreshing.
 
-Du är varmt välkommen till monter A01:18!', 'sv', 'När branschen samlas på Nordbygg 2026 i Stockholm den 21–24 april introducerar GF en rad nya innovationer i Sverige. Lösningar som visar hur byggnader kan bli mer energieffektiva, driftsäkra och hållbara över tid.
+A warm welcome to booth A01:18!', 'sv', 'När branschen samlas på Nordbygg 2026 i Stockholm den 21–24 april introducerar GF en rad nya innovationer i Sverige. Lösningar som visar hur byggnader kan bli mer energieffektiva, driftsäkra och hållbara över tid.
 
 Byggsektorn står för en betydande del av energianvändningen i samhället, vilket gör effektiva systemlösningar till en central del av klimatomställningen. Samtidigt ställs högre krav på säker och hygienisk vattendistribution, inte minst i fastigheter där drift och underhåll behöver fungera utan avbrott.
 
@@ -3309,42 +3309,42 @@ I vår vattenbar kan du ta en paus med plus i kanten. Så slå dig ner en stund,
 
 Du är varmt välkommen till monter A01:18!'), 'https://www.uponor.com', 'assets/images/exhibitors/nordbygg-2026-gf-uponor.jpg'),
   ('nordbygg-2026-exhibitor-135934', 'nordbygg-2026', 'Glasbranschföreningen', 'C10:41 (+1)', jsonb_build_object('en', 'Glasbranschföreningen
-– vi bjuder på kunskap och inspiration om möjligheterna med glas
+– we share knowledge and inspiration about the possibilities of glass
 
-När samhällsbyggnadsbranschen samlas på Nordbygg i april 2026 står glas i centrum. Glasbranschföreningen, bransch- och arbetsgivarorganisationen för Sveriges glas- och metallentreprenörer, bjuder in till inspirerande samtal, kostnadsfri rådgivning och prisutdelningar som lyfter framtidens glasarkitektur.
+When the built-environment industry gathers at Nordbygg in April 2026, glass takes centre stage. Glasbranschföreningen, the trade and employer association for Sweden''s glass and metal contractors, invites you to inspiring conversations, free advice and award ceremonies that showcase the glass architecture of the future.
 
-I föreningens monter C10:41 möter du experter, tar del av ett scenprogram med aktuella branschfrågor och får möjlighet att nätverka med kollegor från hela landet.
+In our booth C10:41 you will meet experts, take part in a stage programme covering current industry topics, and have the chance to network with colleagues from across the country.
 
-Detta händer i Glasbranschföreningens monter:
-* Gratis glasrådgivning
-Onsdag 22 april och torsdag 23 april erbjuder Glascentrums expert Fredrik Hall Johansson fri rådgivning – perfekt för dig som vill diskutera konkreta lösningar.
+This is what is happening in Glasbranschföreningen''s booth:
+* Free glass advice
+On Wednesday 22 April and Thursday 23 April, Glascentrum''s expert Fredrik Hall Johansson offers free advice – ideal for anyone who wants to discuss concrete solutions.
 
-* Glasscenen – fyra temadagar
-Ta del av föredrag om fönsterrenovering, skydd och säkerhet samt arkitektur. Under torsdagen fördjupar vi oss bland annat i gestaltningen av World of Volvo och Sjustjärnan samt möter vinnarna av Glaspriset och Glaspärlan.
+* Glasscenen – four themed days
+Join talks on window restoration, protection and security, and architecture. On Thursday we look in particular at the design of World of Volvo and Sjustjärnan, and meet the winners of Glaspriset and Glaspärlan.
 
-* Hantverk live
-Se skickliga yrkesproffs visa fönsterrenovering - ett komplext hantverk som omfattar många moment.
+* Live craftsmanship
+Watch skilled professionals demonstrate window restoration – a complex craft involving many steps.
 
-Höjdpunkter du inte vill missa:
-23 april 09:30–11:00 – Föreningsmöte för medlemmar
+Highlights you don''t want to miss:
+23 April 09:30–11:00 – Members'' meeting
 
-23 april 12:30 – Arkitekturpriset i studenttävlingen Nya ögon på glas offentliggörs på Nordbygg Live-scenen
+23 April 12:30 – The architecture prize in the student competition Nya ögon på glas is announced on the Nordbygg Live stage
 
-23 april 14:00 – Arkitekturpriserna Glaspriset och Glaspärlan delas ut på Nordbygg Live-scenen
+23 April 14:00 – The architecture prizes Glaspriset and Glaspärlan are presented on the Nordbygg Live stage
 
-23 april 15:30 – Mingel i montern för att fira vinnarna av glaspriserna
+23 April 15:30 – Mingle in the booth to celebrate the glass-prize winners
 
-24 april – Kvinnlig nätverksfrukost följt av fortsatt nätverkande och lunch
+24 April – Women''s networking breakfast followed by continued networking and lunch
 
-Besök Glastorget i monter C11:41
-På Glastorget träffar du de ledande aktörerna Arton:1 Projekt, Certo Software, Fasadglas, Orgadata, Ragn-Sells Recycling, Svenssons i Tenhult och Vidaflam.
+Visit Glastorget in booth C11:41
+At Glastorget you will meet leading players Arton:1 Projekt, Certo Software, Fasadglas, Orgadata, Ragn-Sells Recycling, Svenssons i Tenhult and Vidaflam.
 
-Glas tar plats redan i entrén
-I årets studenttävling Nya ögon på glas har framtidens arkitekter skapat Nordbygg Live – en uttrycksfull mötesplats byggd av återbrukat glas och återvunna aluminiumprofiler.
-En bransch som ser ljust på framtiden
-Trots ett utmanande omvärldsläge pekar mycket på en positiv utveckling för glas i Sverige. Nordbygg blir därför en viktig kraftsamling för att rusta branschen inför framtiden.
+Glass takes its place right at the entrance
+In this year''s student competition Nya ögon på glas, the architects of the future have created Nordbygg Live – an expressive meeting place built from reused glass and recycled aluminium profiles.
+An industry that sees a bright future
+Despite a challenging external environment, much points to a positive trend for glass in Sweden. Nordbygg therefore becomes an important rallying point for preparing the industry for the future.
 
-Hjärtligt välkommen att uppleva glasets möjligheter på Nordbygg 2026!', 'sv', 'Glasbranschföreningen
+A warm welcome to experience the possibilities of glass at Nordbygg 2026!', 'sv', 'Glasbranschföreningen
 – vi bjuder på kunskap och inspiration om möjligheterna med glas
 
 När samhällsbyggnadsbranschen samlas på Nordbygg i april 2026 står glas i centrum. Glasbranschföreningen, bransch- och arbetsgivarorganisationen för Sveriges glas- och metallentreprenörer, bjuder in till inspirerande samtal, kostnadsfri rådgivning och prisutdelningar som lyfter framtidens glasarkitektur.
@@ -3382,18 +3382,18 @@ Trots ett utmanande omvärldsläge pekar mycket på en positiv utveckling för g
 
 Hjärtligt välkommen att uppleva glasets möjligheter på Nordbygg 2026!'), 'https://www.gbf.se', 'assets/images/exhibitors/nordbygg-2026-glasbranschforeningen.jpg'),
   ('nordbygg-2026-exhibitor-137716', 'nordbygg-2026', 'Glastorget', 'C11:41 (+1)', null, 'https://www.gbf.se', null),
-  ('nordbygg-2026-exhibitor-139059', 'nordbygg-2026', 'Godik AB', 'EÖ:27', jsonb_build_object('en', 'KOMPLETTA LÖSNINGAR – ANPASSADE EFTER DINA BEHOV
+  ('nordbygg-2026-exhibitor-139059', 'nordbygg-2026', 'Godik AB', 'EÖ:27', jsonb_build_object('en', 'COMPLETE SOLUTIONS – TAILORED TO YOUR NEEDS
 
-Inget projekt är det andra likt – varje festival, evenemang eller arbetsplats har sina unika krav och utmaningar. Hos Godik har vi lösningarna.
-Med över 30 års erfarenhet kombinerar vi modern utrustning, innovativa lösningar och en genuin förståelse för våra kunders behov, oavsett om du arrangerar ett stort festivalområde eller behöver praktisk utrustning till din byggarbetsplats, kan vi erbjuda:
+No two projects are alike – every festival, event or worksite has its own unique requirements and challenges. At Godik we have the solutions.
+With more than 30 years of experience, we combine modern equipment, innovative solutions and a genuine understanding of our customers'' needs. Whether you are organising a large festival site or need practical equipment for your construction site, we can offer:
 
-- Hållbara och bekväma sanitära lösningar
-- Mobil utrustning för olika användningsområden
-- Specialutrustning för ökad tillgänglighet och inkludering
-- Egen logistik som säkerställer leverans i tid
-- Professionellt service-team som finns till hands när du behöver det
+- Sustainable and comfortable sanitary solutions
+- Mobile equipment for a range of uses
+- Specialised equipment for improved accessibility and inclusion
+- Our own logistics that ensure on-time delivery
+- A professional service team on hand whenever you need it
 
-Med Godik får du allt från en och samma partner – trygghet och kvalitet för din framgång.', 'sv', 'KOMPLETTA LÖSNINGAR – ANPASSADE EFTER DINA BEHOV
+With Godik you get everything from a single partner – peace of mind and quality for your success.', 'sv', 'KOMPLETTA LÖSNINGAR – ANPASSADE EFTER DINA BEHOV
 
 Inget projekt är det andra likt – varje festival, evenemang eller arbetsplats har sina unika krav och utmaningar. Hos Godik har vi lösningarna.
 Med över 30 års erfarenhet kombinerar vi modern utrustning, innovativa lösningar och en genuin förståelse för våra kunders behov, oavsett om du arrangerar ett stort festivalområde eller behöver praktisk utrustning till din byggarbetsplats, kan vi erbjuda:
@@ -3405,26 +3405,26 @@ Med över 30 års erfarenhet kombinerar vi modern utrustning, innovativa lösnin
 - Professionellt service-team som finns till hands när du behöver det
 
 Med Godik får du allt från en och samma partner – trygghet och kvalitet för din framgång.'), 'https://www.godik.se', 'assets/images/exhibitors/nordbygg-2026-godik-ab.jpg'),
-  ('nordbygg-2026-exhibitor-136156', 'nordbygg-2026', 'Golvabia', 'C06:21', jsonb_build_object('en', 'På Golvabia tror vi på ett hem med stilsäkra och medvetna val av material och form. Vi skapar därför ett produktsortiment som kännetecknas av skandinavisk design och svensk kvalité, som lämpar sig för såväl hem som offentlig miljö.
+  ('nordbygg-2026-exhibitor-136156', 'nordbygg-2026', 'Golvabia', 'C06:21', jsonb_build_object('en', 'At Golvabia we believe in a home shaped by stylish and considered choices of material and form. We therefore create a product range characterised by Scandinavian design and Swedish quality, suitable for both private homes and public spaces.
 
-Vårt sortiment idag innefattar trägolv, textilgolv och kakel & klinker, vilket gör att vi har ett av marknadens bredaste sortiment. Du hittar oss alltid i närheten tack vare våra ca 500 återförsäljare runt om i Sverige.
+Our range today includes wood flooring, textile flooring and ceramic tiles, giving us one of the broadest assortments on the market. You will always find us nearby thanks to our roughly 500 retailers across Sweden.
 
-Trägolven tillverkar vi i vår moderna fabrik i småländska Anderstorp. Här återfinns även vårt huvudkontor och lager.', 'sv', 'På Golvabia tror vi på ett hem med stilsäkra och medvetna val av material och form. Vi skapar därför ett produktsortiment som kännetecknas av skandinavisk design och svensk kvalité, som lämpar sig för såväl hem som offentlig miljö.
+We manufacture our wood flooring in our modern factory in Anderstorp, Småland. This is also where you will find our head office and warehouse.', 'sv', 'På Golvabia tror vi på ett hem med stilsäkra och medvetna val av material och form. Vi skapar därför ett produktsortiment som kännetecknas av skandinavisk design och svensk kvalité, som lämpar sig för såväl hem som offentlig miljö.
 
 Vårt sortiment idag innefattar trägolv, textilgolv och kakel & klinker, vilket gör att vi har ett av marknadens bredaste sortiment. Du hittar oss alltid i närheten tack vare våra ca 500 återförsäljare runt om i Sverige.
 
 Trägolven tillverkar vi i vår moderna fabrik i småländska Anderstorp. Här återfinns även vårt huvudkontor och lager.'), 'https://www.golvabia.se', 'assets/images/exhibitors/nordbygg-2026-golvabia.jpg'),
   ('nordbygg-2026-exhibitor-139436', 'nordbygg-2026', 'Gor-Stal sp. z o.o.', 'C11:69', null, 'https://www.gor-stal.pl', null),
-  ('nordbygg-2026-exhibitor-134750', 'nordbygg-2026', 'Grabber / Arne Thuresson Byggmaterial AB', 'B02:41', jsonb_build_object('en', 'Ett svenskt familjeföretag grundat 1974
+  ('nordbygg-2026-exhibitor-134750', 'nordbygg-2026', 'Grabber / Arne Thuresson Byggmaterial AB', 'B02:41', jsonb_build_object('en', 'A Swedish family-owned company founded in 1974
 
-Arne Thuresson Byggmaterial AB är specialinriktade inom Skruv & infästning, Vägg och Grund. Med expertis och bred kompetens, skapar och levererar vi kvalitetssäkrade produkter och garanterar att rätt material och tryggaste konstruktionen erbjuds. Vi håller det vi lovar och vi investerar tid och engagemang när det kommer till relationen med våra kunder och anställda.
+Arne Thuresson Byggmaterial AB specialises in screws & fasteners, walls and foundations. With expertise and broad competence, we create and deliver quality-assured products and guarantee that the right material and the most reliable construction are offered. We keep our promises, and we invest time and dedication when it comes to the relationship with our customers and employees.
 
-Viljekraften som gav bestående kvalitet.
-Arne Thuresson levde alltid efter mottot att ingenting är omöjligt och det var just hans idésprudlande sinne och beslutsamhet som blev grunden till framgången av Arne Thuresson Byggmaterial, som han tillsammans med sina 5 barn, startade på 70-talet.
+The willpower behind lasting quality.
+Arne Thuresson always lived by the motto that nothing is impossible, and it was precisely his idea-bursting mind and determination that became the foundation for the success of Arne Thuresson Byggmaterial, which he started together with his five children in the 1970s.
 
-1974 fick Arne Thuresson ett samtal från grundaren av Grabber i USA, John Geyer. Ett samtal som skulle komma att ha stor betydelse inom skruvbranschen i Sverige. John Geyer kom till Stockholm och visade upp en gipsskruv med dubbelhuvud och sylvass spets som såg helt annorlunda ut än vad Arne tidigare sett på marknaden. Arne höll upp skruven och sa på knackig engelska. ”Om du lovar mig att alla skruvar håller samma kvalité som den här så lovar jag att sälja 25 miljoner skruv första året.”
+In 1974 Arne Thuresson received a call from John Geyer, the founder of Grabber in the USA. A call that would prove very significant for the screw industry in Sweden. John Geyer came to Stockholm and presented a drywall screw with a double head and a needle-sharp point, which looked completely different from anything Arne had seen on the market before. Arne held up the screw and said in halting English: "If you promise me that all the screws are of the same quality as this one, I promise to sell 25 million screws in the first year."
 
-Sagt och gjort. Arne sålde 40 miljoner skruv det första året och Arne Thuresson Byggmaterial blev därmed generalagent för Grabber® och i och med det kom det stora startskottet för kvalitetsskruven som sedan dess gjort succé i byggbranschen och för tusentals montörer dagligen Sverige över.', 'sv', 'Ett svenskt familjeföretag grundat 1974
+No sooner said than done. Arne sold 40 million screws in the first year, and Arne Thuresson Byggmaterial thereby became the general agent for Grabber®. With that came the great breakthrough for the quality screw which has since been a great success in the construction industry, used by thousands of fitters every day across Sweden.', 'sv', 'Ett svenskt familjeföretag grundat 1974
 
 Arne Thuresson Byggmaterial AB är specialinriktade inom Skruv & infästning, Vägg och Grund. Med expertis och bred kompetens, skapar och levererar vi kvalitetssäkrade produkter och garanterar att rätt material och tryggaste konstruktionen erbjuds. Vi håller det vi lovar och vi investerar tid och engagemang när det kommer till relationen med våra kunder och anställda.
 
@@ -3434,20 +3434,20 @@ Arne Thuresson levde alltid efter mottot att ingenting är omöjligt och det var
 1974 fick Arne Thuresson ett samtal från grundaren av Grabber i USA, John Geyer. Ett samtal som skulle komma att ha stor betydelse inom skruvbranschen i Sverige. John Geyer kom till Stockholm och visade upp en gipsskruv med dubbelhuvud och sylvass spets som såg helt annorlunda ut än vad Arne tidigare sett på marknaden. Arne höll upp skruven och sa på knackig engelska. ”Om du lovar mig att alla skruvar håller samma kvalité som den här så lovar jag att sälja 25 miljoner skruv första året.”
 
 Sagt och gjort. Arne sålde 40 miljoner skruv det första året och Arne Thuresson Byggmaterial blev därmed generalagent för Grabber® och i och med det kom det stora startskottet för kvalitetsskruven som sedan dess gjort succé i byggbranschen och för tusentals montörer dagligen Sverige över.'), 'https://www.thuresson.se', 'assets/images/exhibitors/nordbygg-2026-grabber-arne-thuresson-byggmaterial-ab.jpg'),
-  ('nordbygg-2026-exhibitor-133961', 'nordbygg-2026', 'Granab AB', 'C08:60', jsonb_build_object('en', 'Granab tillverkar golvregelsystem i stål och trä för bostäder, kontor, skolor, offentliga lokaler och sport- och gymgolv.
-Ett höjdjusterbart system som löser de akustiska kraven på bjälklag i både betong och trä.
-Monterat i mer än 6 000 000 m2 i snart hela Europa.', 'sv', 'Granab tillverkar golvregelsystem i stål och trä för bostäder, kontor, skolor, offentliga lokaler och sport- och gymgolv.
+  ('nordbygg-2026-exhibitor-133961', 'nordbygg-2026', 'Granab AB', 'C08:60', jsonb_build_object('en', 'Granab manufactures floor joist systems in steel and wood for residential, office, school, public premises and sports- and gym-floor applications.
+A height-adjustable system that meets the acoustic requirements for slabs in both concrete and wood.
+Installed in more than 6,000,000 m² across almost all of Europe.', 'sv', 'Granab tillverkar golvregelsystem i stål och trä för bostäder, kontor, skolor, offentliga lokaler och sport- och gymgolv.
 Ett höjdjusterbart system som löser de akustiska kraven på bjälklag i både betong och trä.
 Monterat i mer än 6 000 000 m2 i snart hela Europa.'), 'https://www.granab.se', 'assets/images/exhibitors/nordbygg-2026-granab-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134608', 'nordbygg-2026', 'Granitor Electro AB', 'A13:13', jsonb_build_object('en', 'Granitor Electro AB är ett av nordens ledande elteknikföretag och ett av de snabbast växande och har idag över 2500 medarbetare. Vi erbjuder tjänster inom elektrisk installation, instrumentation och laddstationer för elfordon, säkerhetsinstallationer och fastighetsautomation. Vi är dessutom leverantörsoberoende. Sammantaget innebär det att vi kan skräddarsy lösningar utifrån specifika behov – lösningar som håller över tid och tål att utvecklas.
+  ('nordbygg-2026-exhibitor-134608', 'nordbygg-2026', 'Granitor Electro AB', 'A13:13', jsonb_build_object('en', 'Granitor Electro AB is one of the Nordics'' leading electrical engineering companies and one of the fastest growing, with more than 2,500 employees today. We offer services in electrical installation, instrumentation and EV charging stations, security installations and building automation. We are also vendor-independent. Taken together, this means we can tailor solutions based on specific needs – solutions that hold up over time and are built to evolve.
 
-Strategin bygger på en stark lokal närvaro med lönsamma etableringar över hela Sverige och Norge. Verkar inom branscher som husbyggnation, infrastruktur, kärnkraft, stål, petrokemi och gruvdrift.', 'sv', 'Granitor Electro AB är ett av nordens ledande elteknikföretag och ett av de snabbast växande och har idag över 2500 medarbetare. Vi erbjuder tjänster inom elektrisk installation, instrumentation och laddstationer för elfordon, säkerhetsinstallationer och fastighetsautomation. Vi är dessutom leverantörsoberoende. Sammantaget innebär det att vi kan skräddarsy lösningar utifrån specifika behov – lösningar som håller över tid och tål att utvecklas.
+The strategy builds on a strong local presence with profitable establishments throughout Sweden and Norway. We operate in industries such as housing construction, infrastructure, nuclear power, steel, petrochemicals and mining.', 'sv', 'Granitor Electro AB är ett av nordens ledande elteknikföretag och ett av de snabbast växande och har idag över 2500 medarbetare. Vi erbjuder tjänster inom elektrisk installation, instrumentation och laddstationer för elfordon, säkerhetsinstallationer och fastighetsautomation. Vi är dessutom leverantörsoberoende. Sammantaget innebär det att vi kan skräddarsy lösningar utifrån specifika behov – lösningar som håller över tid och tål att utvecklas.
 
 Strategin bygger på en stark lokal närvaro med lönsamma etableringar över hela Sverige och Norge. Verkar inom branscher som husbyggnation, infrastruktur, kärnkraft, stål, petrokemi och gruvdrift.'), 'https://www.granitor.se/electro', 'assets/images/exhibitors/nordbygg-2026-granitor-electro-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139698', 'nordbygg-2026', 'Granlund Oy', 'BG:07', jsonb_build_object('en', 'Granlund Group är ett proptech och konsultföretag som specialiserar sig på fastighets- och byggsektorerna. Vi skapar en hållbar och smart framtid tillsammans med våra kunder och intressenter. Idag är vi över 1700 anställda med kontor i Sverige, Finland och Storbritannien.', 'sv', 'Granlund Group är ett proptech och konsultföretag som specialiserar sig på fastighets- och byggsektorerna. Vi skapar en hållbar och smart framtid tillsammans med våra kunder och intressenter. Idag är vi över 1700 anställda med kontor i Sverige, Finland och Storbritannien.'), 'https://www.granlund.fi', 'assets/images/exhibitors/nordbygg-2026-granlund-oy.jpg'),
+  ('nordbygg-2026-exhibitor-139698', 'nordbygg-2026', 'Granlund Oy', 'BG:07', jsonb_build_object('en', 'Granlund Group is a proptech and consulting company specialising in the real estate and construction sectors. We create a sustainable and smart future together with our customers and stakeholders. Today we are more than 1,700 employees with offices in Sweden, Finland and the United Kingdom.', 'sv', 'Granlund Group är ett proptech och konsultföretag som specialiserar sig på fastighets- och byggsektorerna. Vi skapar en hållbar och smart framtid tillsammans med våra kunder och intressenter. Idag är vi över 1700 anställda med kontor i Sverige, Finland och Storbritannien.'), 'https://www.granlund.fi', 'assets/images/exhibitors/nordbygg-2026-granlund-oy.jpg'),
   ('nordbygg-2026-exhibitor-136719', 'nordbygg-2026', 'Granum stenprodukter', 'C04:61B', null, 'https://granumstenprodukter.se', null),
   ('nordbygg-2026-exhibitor-139478', 'nordbygg-2026', 'Great Cosmo Petrochem Sdn Bhd', 'C05:69', null, 'https://www.greatcosmo.com', null),
-  ('nordbygg-2026-exhibitor-139063', 'nordbygg-2026', 'Green Box Sverige', 'A11:14', jsonb_build_object('en', 'Green Box producerar dansk­tillverkade prefabricerade badrum med en innovativ lättviktskonstruktion och gjutet betonggolv. Våra lösningar är utvecklade för en effektiv byggprocess med fokus på resurseffektivitet, hög kvalitet och ett tillförlitligt genomförande – vilket skapar värde både för projektets ekonomi och för produktionen på byggarbetsplatsen.', 'sv', 'Green Box producerar dansk­tillverkade prefabricerade badrum med en innovativ lättviktskonstruktion och gjutet betonggolv. Våra lösningar är utvecklade för en effektiv byggprocess med fokus på resurseffektivitet, hög kvalitet och ett tillförlitligt genomförande – vilket skapar värde både för projektets ekonomi och för produktionen på byggarbetsplatsen.'), 'https://www.greenbox.dk', 'assets/images/exhibitors/nordbygg-2026-green-box-sverige.jpg'),
+  ('nordbygg-2026-exhibitor-139063', 'nordbygg-2026', 'Green Box Sverige', 'A11:14', jsonb_build_object('en', 'Green Box produces Danish-manufactured prefabricated bathrooms with an innovative lightweight construction and a cast concrete floor. Our solutions are developed for an efficient construction process with a focus on resource efficiency, high quality and reliable execution – creating value both for the project''s economy and for production on site.', 'sv', 'Green Box producerar dansk­tillverkade prefabricerade badrum med en innovativ lättviktskonstruktion och gjutet betonggolv. Våra lösningar är utvecklade för en effektiv byggprocess med fokus på resurseffektivitet, hög kvalitet och ett tillförlitligt genomförande – vilket skapar värde både för projektets ekonomi och för produktionen på byggarbetsplatsen.'), 'https://www.greenbox.dk', 'assets/images/exhibitors/nordbygg-2026-green-box-sverige.jpg'),
   ('nordbygg-2026-exhibitor-138004', 'nordbygg-2026', 'Greener Power Solutions', 'B07:11', jsonb_build_object('en', 'We are Greener. With the largest battery fleet
 in Europe, we lead the way in the temporary
 energy market. We provide mobile battery
@@ -3455,43 +3455,43 @@ solutions for anyone needing more energy
 than the grid can supply. After all, everyone
 will need to join the energy transition
 eventually. Our aim is to make the transition
-easy. Easily emission-free.', 'sv', 'We are Greener. With the largest battery fleet
-in Europe, we lead the way in the temporary
-energy market. We provide mobile battery
-solutions for anyone needing more energy
-than the grid can supply. After all, everyone
-will need to join the energy transition
-eventually. Our aim is to make the transition
-easy. Easily emission-free.'), 'https://greenerpowersolutions.com', 'assets/images/exhibitors/nordbygg-2026-greener-power-solutions.jpg'),
-  ('nordbygg-2026-exhibitor-139483', 'nordbygg-2026', 'Greenworks', 'EÖ:06', jsonb_build_object('en', 'Greenworks specialitet är biofiliska designprodukter, skräddarsydda, unika gröna lösningar och vertikala trädgårdar för både inomhus- och utomhusbruk.
+easy. Easily emission-free.', 'sv', 'Vi är Greener. Med Europas största
+batteriflotta leder vi vägen på marknaden
+för tillfällig energi. Vi tillhandahåller mobila
+batterilösningar för alla som behöver mer
+energi än vad elnätet kan leverera. Förr eller
+senare kommer alla att behöva ansluta sig
+till energiomställningen. Vårt mål är att göra
+omställningen enkel. Enkelt utsläppsfri.'), 'https://greenerpowersolutions.com', 'assets/images/exhibitors/nordbygg-2026-greener-power-solutions.jpg'),
+  ('nordbygg-2026-exhibitor-139483', 'nordbygg-2026', 'Greenworks', 'EÖ:06', jsonb_build_object('en', 'Greenworks specialises in biophilic design products, bespoke unique green solutions, and vertical gardens for both indoor and outdoor use.
 
-Leafy Solutions är en del av Greenworks och erbjuder produkter och system som integrerar grönska i arkitektur utan att kompromissa med design eller funktion.
+Leafy Solutions is part of Greenworks and offers products and systems that integrate greenery into architecture without compromising on design or function.
 
-På Nordbygg 2026 lanserar Leafy Solutions ett nytt modulärt fasadsystem – det vill ni inte missa!', 'sv', 'Greenworks specialitet är biofiliska designprodukter, skräddarsydda, unika gröna lösningar och vertikala trädgårdar för både inomhus- och utomhusbruk.
+At Nordbygg 2026, Leafy Solutions launches a new modular façade system – you don''t want to miss it!', 'sv', 'Greenworks specialitet är biofiliska designprodukter, skräddarsydda, unika gröna lösningar och vertikala trädgårdar för både inomhus- och utomhusbruk.
 
 Leafy Solutions är en del av Greenworks och erbjuder produkter och system som integrerar grönska i arkitektur utan att kompromissa med design eller funktion.
 
 På Nordbygg 2026 lanserar Leafy Solutions ett nytt modulärt fasadsystem – det vill ni inte missa!'), 'https://www.greenworks.se', 'assets/images/exhibitors/nordbygg-2026-greenworks.jpg'),
   ('nordbygg-2026-exhibitor-137709', 'nordbygg-2026', 'GRIPP INREDNING AB', 'C07:33A', null, 'https://www.grippinredning.se', null),
-  ('nordbygg-2026-exhibitor-139049', 'nordbygg-2026', 'GROHE', 'A01:201', jsonb_build_object('en', 'GROHE är ett ledande, globalt varumärke med kompletta lösningar för badrum och kök.
+  ('nordbygg-2026-exhibitor-139049', 'nordbygg-2026', 'GROHE', 'A01:201', jsonb_build_object('en', 'GROHE is a leading global brand offering complete solutions for bathrooms and kitchens.
 
-Sedan 2014 är GROHE en del av den starka varumärkesportföljen hos LIXIL, en tillverkare av banbrytande vatten- och bostadsprodukter. För att kunna erbjuda "Pure Freude an Wasser" bygger varje produkt på varumärkets värderingar: teknologi, kvalitet, design och hållbarhet.
+Since 2014, GROHE has been part of the strong brand portfolio of LIXIL, a manufacturer of pioneering water and housing products. To deliver "Pure Freude an Wasser", every product is built on the brand''s values: technology, quality, design and sustainability.
 
-Med vatten i centrum för verksamheten, tar GROHE sitt ansvar enligt LIXILs påverkansstrategi (LIXIL Impact Strategy) med en resursbesparande värdekedja: från koldioxidneutral produktion, eliminering av plast i produktförpackningar, hela vägen till vatten- och energibesparande teknologier som GROHE Everstream, en dusch som återanvänder vattnet.', 'sv', 'GROHE är ett ledande, globalt varumärke med kompletta lösningar för badrum och kök.
+With water at the heart of its business, GROHE takes its responsibility under the LIXIL Impact Strategy with a resource-saving value chain: from carbon-neutral production and the elimination of plastic in product packaging, all the way to water- and energy-saving technologies such as GROHE Everstream, a shower that recirculates the water.', 'sv', 'GROHE är ett ledande, globalt varumärke med kompletta lösningar för badrum och kök.
 
 Sedan 2014 är GROHE en del av den starka varumärkesportföljen hos LIXIL, en tillverkare av banbrytande vatten- och bostadsprodukter. För att kunna erbjuda "Pure Freude an Wasser" bygger varje produkt på varumärkets värderingar: teknologi, kvalitet, design och hållbarhet.
 
 Med vatten i centrum för verksamheten, tar GROHE sitt ansvar enligt LIXILs påverkansstrategi (LIXIL Impact Strategy) med en resursbesparande värdekedja: från koldioxidneutral produktion, eliminering av plast i produktförpackningar, hela vägen till vatten- och energibesparande teknologier som GROHE Everstream, en dusch som återanvänder vattnet.'), 'https://www.grohe.se', 'assets/images/exhibitors/nordbygg-2026-grohe.jpg'),
-  ('nordbygg-2026-exhibitor-139140', 'nordbygg-2026', 'Grundéns Regnkläder AB', 'B08:43', jsonb_build_object('en', 'Det började för mer än 100 år sedan på Sveriges västkust, i det lilla fiskesamhället Grundsund, när Carl A. Grundén började tillverka vattentäta oljekläder för att skydda Nordsjöns fiskare från de krävande och hårda arbetsförhållandena.
+  ('nordbygg-2026-exhibitor-139140', 'nordbygg-2026', 'Grundéns Regnkläder AB', 'B08:43', jsonb_build_object('en', 'It began more than 100 years ago on Sweden''s west coast, in the small fishing community of Grundsund, when Carl A. Grundén began making waterproof oilskin clothing to protect North Sea fishermen from the demanding and harsh working conditions.
 
-Idag fortsätter vi att tillverka en betydande del av våra produkter i vår egen fabrik i Lissabon, Portugal, vilket gör det möjligt för oss att fokusera på konstruktion, hållbarhet och kvalitet. Denna fabrik är en avancerad ISO 9000-certifierad anläggning och ett produktutvecklingscenter för oss.', 'sv', 'Det började för mer än 100 år sedan på Sveriges västkust, i det lilla fiskesamhället Grundsund, när Carl A. Grundén började tillverka vattentäta oljekläder för att skydda Nordsjöns fiskare från de krävande och hårda arbetsförhållandena.
+Today we continue to produce a significant share of our products in our own factory in Lisbon, Portugal, which allows us to focus on construction, durability and quality. This factory is an advanced ISO 9000-certified facility and a product-development centre for us.', 'sv', 'Det började för mer än 100 år sedan på Sveriges västkust, i det lilla fiskesamhället Grundsund, när Carl A. Grundén började tillverka vattentäta oljekläder för att skydda Nordsjöns fiskare från de krävande och hårda arbetsförhållandena.
 
 Idag fortsätter vi att tillverka en betydande del av våra produkter i vår egen fabrik i Lissabon, Portugal, vilket gör det möjligt för oss att fokusera på konstruktion, hållbarhet och kvalitet. Denna fabrik är en avancerad ISO 9000-certifierad anläggning och ett produktutvecklingscenter för oss.'), 'https://www.regnklader.se', 'assets/images/exhibitors/nordbygg-2026-grundens-regnklader-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137442', 'nordbygg-2026', 'Grundfos AB', 'A08:20', jsonb_build_object('en', 'Grundfos är en global ledare inom energieffektiva och driftsäkra pumplösningar för bostäder, kommersiella byggnader, industri, VA och jordbruk. Med huvudkontor i Danmark, över 20 000 anställda och mer än 15 miljoner pumpar producerade årligen, är vi en av världens största aktörer i branschen.
+  ('nordbygg-2026-exhibitor-137442', 'nordbygg-2026', 'Grundfos AB', 'A08:20', jsonb_build_object('en', 'Grundfos is a global leader in energy-efficient and reliable pump solutions for housing, commercial buildings, industry, water and wastewater, and agriculture. With its head office in Denmark, more than 20,000 employees and over 15 million pumps produced each year, we are one of the largest players in the industry worldwide.
 
-Sedan 1963 har Grundfos AB varit verksamma i Sverige med huvudkontor i Mölndal och rikstäckande närvaro. Vi erbjuder helhetslösningar – från produktval och dimensionering till service och support – med lokal expertis och snabb leverans från vårt centrallager i Danmark.
+Since 1963, Grundfos AB has been active in Sweden, with its head office in Mölndal and a nationwide presence. We offer turnkey solutions – from product selection and sizing through to service and support – with local expertise and fast delivery from our central warehouse in Denmark.
 
-Vår serviceorganisation och våra auktoriserade partners säkerställer lång livslängd, hög effektivitet och trygg drift för varje pump vi levererar. Grundfos är också en drivande kraft bakom hållbara lösningar för vatten- och klimatutmaningar världen över.', 'sv', 'Grundfos är en global ledare inom energieffektiva och driftsäkra pumplösningar för bostäder, kommersiella byggnader, industri, VA och jordbruk. Med huvudkontor i Danmark, över 20 000 anställda och mer än 15 miljoner pumpar producerade årligen, är vi en av världens största aktörer i branschen.
+Our service organisation and our authorised partners ensure long service life, high efficiency and reliable operation for every pump we deliver. Grundfos is also a driving force behind sustainable solutions to water and climate challenges around the world.', 'sv', 'Grundfos är en global ledare inom energieffektiva och driftsäkra pumplösningar för bostäder, kommersiella byggnader, industri, VA och jordbruk. Med huvudkontor i Danmark, över 20 000 anställda och mer än 15 miljoner pumpar producerade årligen, är vi en av världens största aktörer i branschen.
 
 Sedan 1963 har Grundfos AB varit verksamma i Sverige med huvudkontor i Mölndal och rikstäckande närvaro. Vi erbjuder helhetslösningar – från produktval och dimensionering till service och support – med lokal expertis och snabb leverans från vårt centrallager i Danmark.
 
@@ -3500,22 +3500,22 @@ Vår serviceorganisation och våra auktoriserade partners säkerställer lång l
   ('nordbygg-2026-exhibitor-137850', 'nordbygg-2026', 'Gson Work', 'B07:50', null, 'https://www.gson.se', 'assets/images/exhibitors/nordbygg-2026-gson-work.jpg'),
   ('nordbygg-2026-exhibitor-138749', 'nordbygg-2026', 'GULATI BROTHERS', 'C11:11', null, 'https://www.gulatibros.com', 'assets/images/exhibitors/nordbygg-2026-gulati-brothers.jpg'),
   ('nordbygg-2026-exhibitor-136720', 'nordbygg-2026', 'Gullbergs MMVIII', 'C04:61E', null, 'https://gullbergs-sten.se', null),
-  ('nordbygg-2026-exhibitor-135326', 'nordbygg-2026', 'Gustavsberg', 'A08:14', jsonb_build_object('en', 'Gustavsberg är ett ikoniskt designvarumärke som har bidragit till livskvalitet för generationer sedan 1825. Med filosofin funktion är skönhet som grund, utvecklar Gustavsberg badrumsprodukter med starkt fokus på människocentrerad design, innovation och hållbarhet. Från privata hem till offentliga miljöer som hotell, skolor och sjukhus – Gustavsbergs produkter används och uppskattas för sin kvalitet, hållbarhet och tidlösa estetik.
-Vatette är ett ledande varumärke inom installationsprodukter för kompletta tappvattensystem. Känt för sina flexibla lösningar, byggt på traditionell teknik som tagits in i framtiden med nya innovationer.
-Gustavsberg och Vatette ägs av Gustavsberg AB som är en del av Oras Group, en komplett badrumsleverantör med en stark position i Norden och en betydande närvaro i Centraleuropa.', 'sv', 'Gustavsberg är ett ikoniskt designvarumärke som har bidragit till livskvalitet för generationer sedan 1825. Med filosofin funktion är skönhet som grund, utvecklar Gustavsberg badrumsprodukter med starkt fokus på människocentrerad design, innovation och hållbarhet. Från privata hem till offentliga miljöer som hotell, skolor och sjukhus – Gustavsbergs produkter används och uppskattas för sin kvalitet, hållbarhet och tidlösa estetik.
+  ('nordbygg-2026-exhibitor-135326', 'nordbygg-2026', 'Gustavsberg', 'A08:14', jsonb_build_object('en', 'Gustavsberg is an iconic design brand that has contributed to quality of life for generations since 1825. With the philosophy that function is beauty as its foundation, Gustavsberg develops bathroom products with a strong focus on people-centred design, innovation and sustainability. From private homes to public environments such as hotels, schools and hospitals – Gustavsberg''s products are used and appreciated for their quality, durability and timeless aesthetics.
+Vatette is a leading brand in installation products for complete potable-water systems. Known for its flexible solutions, built on traditional engineering brought into the future through new innovations.
+Gustavsberg and Vatette are owned by Gustavsberg AB, which is part of the Oras Group, a complete bathroom supplier with a strong position in the Nordics and a significant presence in Central Europe.', 'sv', 'Gustavsberg är ett ikoniskt designvarumärke som har bidragit till livskvalitet för generationer sedan 1825. Med filosofin funktion är skönhet som grund, utvecklar Gustavsberg badrumsprodukter med starkt fokus på människocentrerad design, innovation och hållbarhet. Från privata hem till offentliga miljöer som hotell, skolor och sjukhus – Gustavsbergs produkter används och uppskattas för sin kvalitet, hållbarhet och tidlösa estetik.
 Vatette är ett ledande varumärke inom installationsprodukter för kompletta tappvattensystem. Känt för sina flexibla lösningar, byggt på traditionell teknik som tagits in i framtiden med nya innovationer.
 Gustavsberg och Vatette ägs av Gustavsberg AB som är en del av Oras Group, en komplett badrumsleverantör med en stark position i Norden och en betydande närvaro i Centraleuropa.'), 'https://gustavsberg.se', 'assets/images/exhibitors/nordbygg-2026-gustavsberg.jpg'),
-  ('nordbygg-2026-exhibitor-134758', 'nordbygg-2026', 'Gustavsberg Rörsystem AB', 'A06:25', jsonb_build_object('en', 'Gustavsberg Rörsystem® — Lösningar som gör skillnad sedan 1947
+  ('nordbygg-2026-exhibitor-134758', 'nordbygg-2026', 'Gustavsberg Rörsystem AB', 'A06:25', jsonb_build_object('en', 'Gustavsberg Rörsystem® — Solutions that make a difference since 1947
 
-Gustavsberg Rörsystem utvecklar och tillverkar avloppssystem och tryckrörssystem med fokus på kvalitet, hållbarhet och teknisk tillförlitlighet. Med lång erfarenhet, egen produktion och centrallager i Halmstad står vi för välutvecklade system, hög leveranssäkerhet och nära teknisk support till kunder och projektörer.
+Gustavsberg Rörsystem develops and manufactures drainage systems and pressure-pipe systems with a focus on quality, durability and technical reliability. With long experience, in-house production and a central warehouse in Halmstad, we stand for well-developed systems, high delivery reliability and close technical support to customers and project planners.
 
-MA-SYSTEM® är ett komplett avloppssystem i gjutjärn där rör, rördelar och kopplingar är utvecklade, testade och certifierade tillsammans som ett helt system. Det är helheten som gör skillnad — och det är den som ger dokumenterad prestanda inom brandsäkerhet, ljudkomfort och hållbarhet.
+MA-SYSTEM® is a complete cast-iron drainage system in which pipes, fittings and couplings are developed, tested and certified together as a complete system. It is the whole that makes the difference – and that is what delivers documented performance in fire safety, acoustic comfort and durability.
 
-Inom mark och infrastruktur har vi VRS-SYSTEM, ett robust tryckrörssystem för vatten- och avloppsnät med höga krav på hållbarhet och lång livslängd.
+For civil engineering and infrastructure we offer VRS-SYSTEM, a robust pressure-pipe system for water and wastewater networks with high requirements for durability and long service life.
 
-Utöver våra huvudsystem har vi ett brett sortiment inom övrigt gjutjärn, bland annat golvbrunnar, spygatter, lätta betäckningar och handpumpar.
+In addition to our main systems, we have a broad range of other cast-iron products, including floor drains, scuppers, lightweight covers and hand pumps.
 
-På Nordbygg 2026 finns vi i monter A06:25. Där visar vi produkter, systemlösningar och dokumentation, och berättar mer om hur vi kan bidra med rätt lösning för både bygg och infrastruktur.', 'sv', 'Gustavsberg Rörsystem® — Lösningar som gör skillnad sedan 1947
+At Nordbygg 2026 you will find us in booth A06:25. There we showcase products, system solutions and documentation, and tell you more about how we can contribute the right solution for both buildings and infrastructure.', 'sv', 'Gustavsberg Rörsystem® — Lösningar som gör skillnad sedan 1947
 
 Gustavsberg Rörsystem utvecklar och tillverkar avloppssystem och tryckrörssystem med fokus på kvalitet, hållbarhet och teknisk tillförlitlighet. Med lång erfarenhet, egen produktion och centrallager i Halmstad står vi för välutvecklade system, hög leveranssäkerhet och nära teknisk support till kunder och projektörer.
 
@@ -3526,17 +3526,17 @@ Inom mark och infrastruktur har vi VRS-SYSTEM, ett robust tryckrörssystem för 
 Utöver våra huvudsystem har vi ett brett sortiment inom övrigt gjutjärn, bland annat golvbrunnar, spygatter, lätta betäckningar och handpumpar.
 
 På Nordbygg 2026 finns vi i monter A06:25. Där visar vi produkter, systemlösningar och dokumentation, och berättar mer om hur vi kan bidra med rätt lösning för både bygg och infrastruktur.'), 'https://www.gustavsberg-ror.se', 'assets/images/exhibitors/nordbygg-2026-gustavsberg-rorsystem-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139907', 'nordbygg-2026', 'Gyproc, Saint-Gobain Sweden AB', 'C13:51', jsonb_build_object('en', 'Gyproc bryr sig om att bygga bättre för människor och planeten genom att erbjuda lösningar för innerväggar, ytterväggar och undertak som levererar hållbarhet och funktion.
+  ('nordbygg-2026-exhibitor-139907', 'nordbygg-2026', 'Gyproc, Saint-Gobain Sweden AB', 'C13:51', jsonb_build_object('en', 'Gyproc cares about building better for people and the planet by offering solutions for interior walls, exterior walls and ceilings that deliver durability and function.
 
-I en värld där förändring är det enda konstanta, där livet utvecklas och nya behov uppstår, tror Gyproc på kraften i våra lösningar som bygger rum för livet.
+In a world where change is the only constant, where life evolves and new needs arise, Gyproc believes in the power of our solutions to build rooms for life.
 
-Som en global ledare inom gipsindustrin designer, tillverkar och distribuerar vi innovativa lösningar som möter mänskliga behov i utveckling.
+As a global leader in the gypsum industry, we design, manufacture and distribute innovative solutions that meet evolving human needs.
 
-Vi föreställer oss framtidens byggande och strävar efter att höja komforten för alla intressenter, för såväl arkitekter, installatörer som distributörer och boende. Som tillverkare är vårt uppdrag att utveckla och tillhandahålla högkvalitativa produkter och tjänster som erbjuder hållbarhet, funktion och support både till kunder och industrin. Det har alltid varit vårt fokus och vi står fast vid vårt åtagande att reducera vår miljöpåverkan eftersom vi tror på potentialen i våra lösningar att kunna anpassas och möta kraven för att bygga rum för livet, inte bara idag utan även imorgon.
+We imagine the construction of the future and strive to raise comfort for all stakeholders – architects, installers, distributors and residents alike. As a manufacturer, our mission is to develop and supply high-quality products and services that offer durability, function and support to both customers and the industry. This has always been our focus, and we stand by our commitment to reduce our environmental impact, because we believe in the potential of our solutions to adapt and meet the demands of building rooms for life – not only today, but tomorrow as well.
 
-Tillsammans med Dalapro, Isover och Weber ingår vi i Saint-Gobain Sweden AB som är en del av koncernen Saint-Gobain – med 360 års erfarenhet av material och byggnadslösningar med hög innovationsgrad.
+Together with Dalapro, Isover and Weber, we are part of Saint-Gobain Sweden AB, which is part of the Saint-Gobain Group – with 360 years of experience in materials and construction solutions with a high degree of innovation.
 
-Saint-Gobain är världsledande inom lätt och hållbart byggande och designar, tillverkar och distribuerar material och tjänster för byggmarknaden. Alla varumärken inom Saint-Gobain styrs av ett gemensamt syfte: "MAKING THE WORLD A BETTER HOME".', 'sv', 'Gyproc bryr sig om att bygga bättre för människor och planeten genom att erbjuda lösningar för innerväggar, ytterväggar och undertak som levererar hållbarhet och funktion.
+Saint-Gobain is the world leader in light and sustainable construction, designing, manufacturing and distributing materials and services for the building market. All brands within Saint-Gobain are guided by a shared purpose: "MAKING THE WORLD A BETTER HOME".', 'sv', 'Gyproc bryr sig om att bygga bättre för människor och planeten genom att erbjuda lösningar för innerväggar, ytterväggar och undertak som levererar hållbarhet och funktion.
 
 I en värld där förändring är det enda konstanta, där livet utvecklas och nya behov uppstår, tror Gyproc på kraften i våra lösningar som bygger rum för livet.
 
@@ -3548,9 +3548,9 @@ Tillsammans med Dalapro, Isover och Weber ingår vi i Saint-Gobain Sweden AB som
 
 Saint-Gobain är världsledande inom lätt och hållbart byggande och designar, tillverkar och distribuerar material och tjänster för byggmarknaden. Alla varumärken inom Saint-Gobain styrs av ett gemensamt syfte: "MAKING THE WORLD A BETTER HOME".'), 'https://www.gyproc.se', 'assets/images/exhibitors/nordbygg-2026-gyproc-saint-gobain-sweden-ab.jpg'),
   ('nordbygg-2026-exhibitor-134667', 'nordbygg-2026', 'Gårö Badrum', 'A07:08', null, 'https://www.gppab.se', 'assets/images/exhibitors/nordbygg-2026-garo-badrum.jpg'),
-  ('nordbygg-2026-exhibitor-133973', 'nordbygg-2026', 'Göthes Industribeslag AB', 'C10:21', jsonb_build_object('en', 'Lås, beslag, dörrstyrning, säkerhet och teknik – allt under ett tak.
+  ('nordbygg-2026-exhibitor-133973', 'nordbygg-2026', 'Göthes Industribeslag AB', 'C10:21', jsonb_build_object('en', 'Locks, fittings, door operators, security and technology – all under one roof.
 
-Med över 160 års erfarenhet, fler än 50 ledande varumärken och ett brett sortiment erbjuder Göthes Industribeslag smarta och heltäckande lösningar för dörr-, fönster- och fasadindustrin. Med teknisk support, hög tillgänglighet och effektiva logistiklösningar är vi en trygg partner för kunder i hela Sverige.', 'sv', 'Lås, beslag, dörrstyrning, säkerhet och teknik – allt under ett tak.
+With more than 160 years of experience, more than 50 leading brands and a broad assortment, Göthes Industribeslag offers smart and complete solutions for the door, window and façade industries. With technical support, high availability and efficient logistics, we are a reliable partner for customers across Sweden.', 'sv', 'Lås, beslag, dörrstyrning, säkerhet och teknik – allt under ett tak.
 
 Med över 160 års erfarenhet, fler än 50 ledande varumärken och ett brett sortiment erbjuder Göthes Industribeslag smarta och heltäckande lösningar för dörr-, fönster- och fasadindustrin. Med teknisk support, hög tillgänglighet och effektiva logistiklösningar är vi en trygg partner för kunder i hela Sverige.'), 'https://www.gothes.se', 'assets/images/exhibitors/nordbygg-2026-gothes-industribeslag-ab.jpg'),
   ('nordbygg-2026-exhibitor-134622', 'nordbygg-2026', 'H. Östberg AB', 'A14:14', null, 'https://www.ostberg.com', 'assets/images/exhibitors/nordbygg-2026-h-ostberg-ab.jpg'),
