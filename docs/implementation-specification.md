@@ -84,7 +84,7 @@ views:
 View switching is driven by hash-based routing: the URL hash is the
 canonical route and Alpine.js state mirrors it. `stores/app.js` parses
 the hash on load, subscribes to `hashchange`, and exposes navigation
-verbs (`goCalendar`, `selectEvent`, `goEventSubview`,
+verbs (`goCalendar`, `selectEvent`, `goEventSubview`, `goEventFood`,
 `selectExhibitor`, `backToExhibitors`, `goAuth`, `goMe`, `goTickets`,
 `goPoints`, `startPurchase`, `afterAuth`) that write
 `window.location.hash`; the parsed state in turn drives which view
@@ -93,6 +93,11 @@ through the internal `_requireAuth` guard: if the session is signed
 in they navigate directly, otherwise they stash the intended target
 on `_preAuth` and redirect to `#/auth`. The auth view calls
 `afterAuth()` once sign-in resolves to replay the stashed target.
+`goEventFood(menuId)` is the variant used by the event landing's
+food preview: it navigates to the event's food subview and stashes
+the optionally-supplied `menuId` on `pendingFoodMenuId` so the food
+view can preselect that menu on step 1 (see `pendingFoodMenuId`
+below).
 
 The `me`, `tickets`, `auth`, and `points` routes have no event
 segment in their URL but inherit the currently selected event in
@@ -139,6 +144,16 @@ view. The `eventSubview` field stays in the app store because the
 dedicated section routes still drive what the event view renders;
 only the practical/newsletter routes are collapsed to the landing
 view.
+
+A parallel `pendingFoodMenuId` field on the `app` store carries a
+food-menu id from the event landing's clickable food preview into
+the food subview. `goEventFood(menuId)` navigates to
+`#/event/<slug>/food` and stashes the id; the food view consumes it
+on hydrate (`_consumePendingMenuId`) and preselects that menu on
+step 1, matching the functional-spec behaviour where each preview
+thumbnail jumps into the ordering flow with the clicked menu
+selected. The id stays out of the URL because it is a one-shot
+selection hint, not a routable state.
 
 ### Frontend app structure
 
@@ -286,7 +301,10 @@ view or store definitions into `app.js` or into another view's file.
 Alpine.js stores and components own the following state:
 
 - `app`: current view, selected event, selected event subview, selected
-  exhibitor, and post-auth return target.
+  exhibitor, post-auth return target, and the one-shot
+  `pendingScrollSection` / `pendingFoodMenuId` selection hints
+  consumed by the event and food views (see the `pendingScrollSection`
+  and `pendingFoodMenuId` paragraphs under "App shell" above).
 - `lang`: active UI language (`en` or `sv`), the list of supported
   languages, and a `t(key, params)` translator backed by
   `web/assets/js/i18n.js`. The chosen language is persisted to
