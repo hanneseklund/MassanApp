@@ -51,43 +51,43 @@ insert into public.venues (
     'country', 'Sweden'
   ),
   jsonb_build_object(
-    'summary', jsonb_build_object('en', 'Alvsjo station is adjacent to Stockholmsmassan. Commuter trains from Stockholm City take about 9 minutes. Direct travel from Arlanda Airport to Alvsjo is also available.', 'sv', 'Alvsjo station is adjacent to Stockholmsmassan. Commuter trains from Stockholm City take about 9 minutes. Direct travel from Arlanda Airport to Alvsjo is also available.'),
+    'summary', jsonb_build_object('en', 'Alvsjo station is adjacent to Stockholmsmassan. Commuter trains from Stockholm City take about 9 minutes. Direct travel from Arlanda Airport to Alvsjo is also available.', 'sv', 'Älvsjö station ligger intill Stockholmsmässan. Pendeltåg från Stockholm City tar cirka 9 minuter. Det går också direkttåg från Arlanda flygplats till Älvsjö.'),
     'modes', jsonb_build_array(
-      jsonb_build_object('mode', jsonb_build_object('en', 'Commuter train', 'sv', 'Commuter train'), 'detail', jsonb_build_object('en', 'SL pendeltag from Stockholm City stops directly at Alvsjo station in about 9 minutes.', 'sv', 'SL pendeltag from Stockholm City stops directly at Alvsjo station in about 9 minutes.')),
-      jsonb_build_object('mode', jsonb_build_object('en', 'From Arlanda Airport', 'sv', 'From Arlanda Airport'), 'detail', jsonb_build_object('en', 'Direct services from Arlanda to Alvsjo are available without changing in central Stockholm.', 'sv', 'Direct services from Arlanda to Alvsjo are available without changing in central Stockholm.')),
-      jsonb_build_object('mode', jsonb_build_object('en', 'Bus', 'sv', 'Bus'), 'detail', jsonb_build_object('en', 'Several SL bus lines stop at Alvsjo stationsplan, which is a short walk from the main entrance.', 'sv', 'Several SL bus lines stop at Alvsjo stationsplan, which is a short walk from the main entrance.')),
-      jsonb_build_object('mode', jsonb_build_object('en', 'Bike', 'sv', 'Bike'), 'detail', jsonb_build_object('en', 'Marked cycle paths connect Alvsjo to central Stockholm. Covered bike parking is available near the main entrance.', 'sv', 'Marked cycle paths connect Alvsjo to central Stockholm. Covered bike parking is available near the main entrance.'))
+      jsonb_build_object('mode', jsonb_build_object('en', 'Commuter train', 'sv', 'Pendeltåg'), 'detail', jsonb_build_object('en', 'SL pendeltag from Stockholm City stops directly at Alvsjo station in about 9 minutes.', 'sv', 'SL:s pendeltåg från Stockholm City stannar direkt vid Älvsjö station efter cirka 9 minuter.')),
+      jsonb_build_object('mode', jsonb_build_object('en', 'From Arlanda Airport', 'sv', 'Från Arlanda flygplats'), 'detail', jsonb_build_object('en', 'Direct services from Arlanda to Alvsjo are available without changing in central Stockholm.', 'sv', 'Det går direkttrafik från Arlanda till Älvsjö utan byte i centrala Stockholm.')),
+      jsonb_build_object('mode', jsonb_build_object('en', 'Bus', 'sv', 'Buss'), 'detail', jsonb_build_object('en', 'Several SL bus lines stop at Alvsjo stationsplan, which is a short walk from the main entrance.', 'sv', 'Flera av SL:s busslinjer stannar vid Älvsjö stationsplan, som ligger en kort promenad från huvudentrén.')),
+      jsonb_build_object('mode', jsonb_build_object('en', 'Bike', 'sv', 'Cykel'), 'detail', jsonb_build_object('en', 'Marked cycle paths connect Alvsjo to central Stockholm. Covered bike parking is available near the main entrance.', 'sv', 'Markerade cykelvägar förbinder Älvsjö med centrala Stockholm. Det finns övertäckt cykelparkering nära huvudentrén.'))
     )
   ),
   jsonb_build_object(
-    'summary', jsonb_build_object('en', 'About 2,000 parking spaces on site, additional nearby overflow parking, and EV charging.', 'sv', 'About 2,000 parking spaces on site, additional nearby overflow parking, and EV charging.'),
+    'summary', jsonb_build_object('en', 'About 2,000 parking spaces on site, additional nearby overflow parking, and EV charging.', 'sv', 'Cirka 2 000 parkeringsplatser på området, ytterligare avlastningsparkering i närheten samt laddning för elbilar.'),
     'onsite_spaces', 2000,
     'ev_charging', true,
-    'notes', jsonb_build_object('en', 'Parking is paid and fills quickly during large trade fairs and congresses. Pre-booking is recommended for events with heavy visitor volumes.', 'sv', 'Parking is paid and fills quickly during large trade fairs and congresses. Pre-booking is recommended for events with heavy visitor volumes.')
+    'notes', jsonb_build_object('en', 'Parking is paid and fills quickly during large trade fairs and congresses. Pre-booking is recommended for events with heavy visitor volumes.', 'sv', 'Parkering är avgiftsbelagd och fylls snabbt vid stora mässor och kongresser. Förbokning rekommenderas vid evenemang med många besökare.')
   ),
   jsonb_build_array(
-    jsonb_build_object('name', jsonb_build_object('en', 'Restaurant Rattvik', 'sv', 'Restaurant Rattvik'), 'description', jsonb_build_object('en', 'Full-service on-site restaurant serving lunch during events.', 'sv', 'Full-service on-site restaurant serving lunch during events.')),
-    jsonb_build_object('name', jsonb_build_object('en', 'Cafe Kista', 'sv', 'Cafe Kista'), 'description', jsonb_build_object('en', 'Coffee, pastries, and quick lunch options near the main foyer.', 'sv', 'Coffee, pastries, and quick lunch options near the main foyer.')),
-    jsonb_build_object('name', jsonb_build_object('en', 'Bistro Nordic', 'sv', 'Bistro Nordic'), 'description', jsonb_build_object('en', 'Seasonal a-la-carte menu oriented to business lunches and congress delegates.', 'sv', 'Seasonal a-la-carte menu oriented to business lunches and congress delegates.')),
-    jsonb_build_object('name', jsonb_build_object('en', 'Hall Cafeteria East', 'sv', 'Hall Cafeteria East'), 'description', jsonb_build_object('en', 'Buffet-style cafeteria close to the East Halls for peak-lunch throughput.', 'sv', 'Buffet-style cafeteria close to the East Halls for peak-lunch throughput.')),
-    jsonb_build_object('name', jsonb_build_object('en', 'Hall Cafeteria West', 'sv', 'Hall Cafeteria West'), 'description', jsonb_build_object('en', 'Buffet-style cafeteria close to the West Halls.', 'sv', 'Buffet-style cafeteria close to the West Halls.')),
-    jsonb_build_object('name', jsonb_build_object('en', 'Espresso Bar Foyer', 'sv', 'Espresso Bar Foyer'), 'description', jsonb_build_object('en', 'Quick espresso and grab-and-go snacks inside the main foyer.', 'sv', 'Quick espresso and grab-and-go snacks inside the main foyer.'))
+    jsonb_build_object('name', jsonb_build_object('en', 'Restaurant Rattvik', 'sv', 'Restaurant Rattvik'), 'description', jsonb_build_object('en', 'Full-service on-site restaurant serving lunch during events.', 'sv', 'Fullservicerestaurang på området som serverar lunch under evenemangen.')),
+    jsonb_build_object('name', jsonb_build_object('en', 'Cafe Kista', 'sv', 'Cafe Kista'), 'description', jsonb_build_object('en', 'Coffee, pastries, and quick lunch options near the main foyer.', 'sv', 'Kaffe, bakverk och snabba lunchalternativ nära huvudfoajén.')),
+    jsonb_build_object('name', jsonb_build_object('en', 'Bistro Nordic', 'sv', 'Bistro Nordic'), 'description', jsonb_build_object('en', 'Seasonal a-la-carte menu oriented to business lunches and congress delegates.', 'sv', 'Säsongsbaserad à la carte-meny inriktad på affärsluncher och kongressdelegater.')),
+    jsonb_build_object('name', jsonb_build_object('en', 'Hall Cafeteria East', 'sv', 'Hallkafeteria öster'), 'description', jsonb_build_object('en', 'Buffet-style cafeteria close to the East Halls for peak-lunch throughput.', 'sv', 'Buffékafeteria intill östra hallarna för hög genomströmning under lunchtoppen.')),
+    jsonb_build_object('name', jsonb_build_object('en', 'Hall Cafeteria West', 'sv', 'Hallkafeteria väster'), 'description', jsonb_build_object('en', 'Buffet-style cafeteria close to the West Halls.', 'sv', 'Buffékafeteria intill västra hallarna.')),
+    jsonb_build_object('name', jsonb_build_object('en', 'Espresso Bar Foyer', 'sv', 'Espressobar i foajén'), 'description', jsonb_build_object('en', 'Quick espresso and grab-and-go snacks inside the main foyer.', 'sv', 'Snabb espresso och tilltugg att ta med inne i huvudfoajén.'))
   ),
   jsonb_build_object(
-    'summary', jsonb_build_object('en', 'Stockholmsmassan is the first exhibition venue in Sweden certified to the SHORE safety standard. Bag checks, access control, and event-specific entry procedures are in place.', 'sv', 'Stockholmsmassan is the first exhibition venue in Sweden certified to the SHORE safety standard. Bag checks, access control, and event-specific entry procedures are in place.'),
+    'summary', jsonb_build_object('en', 'Stockholmsmassan is the first exhibition venue in Sweden certified to the SHORE safety standard. Bag checks, access control, and event-specific entry procedures are in place.', 'sv', 'Stockholmsmässan är den första utställningsanläggningen i Sverige som certifierats enligt säkerhetsstandarden SHORE. Väskkontroller, tillträdeskontroll och evenemangsspecifika entrérutiner finns på plats.'),
     'general_rules', jsonb_build_array(
-      jsonb_build_object('en', 'Bags are subject to visual inspection at entry.', 'sv', 'Bags are subject to visual inspection at entry.'),
-      jsonb_build_object('en', 'Oversize luggage should be left at the cloakroom or returned to a hotel.', 'sv', 'Oversize luggage should be left at the cloakroom or returned to a hotel.'),
-      jsonb_build_object('en', 'Follow staff and signage regarding special entrances for specific events.', 'sv', 'Follow staff and signage regarding special entrances for specific events.'),
-      jsonb_build_object('en', 'Report anything suspicious to on-site security; emergency exits are marked throughout the venue.', 'sv', 'Report anything suspicious to on-site security; emergency exits are marked throughout the venue.')
+      jsonb_build_object('en', 'Bags are subject to visual inspection at entry.', 'sv', 'Väskor kan komma att kontrolleras visuellt vid entrén.'),
+      jsonb_build_object('en', 'Oversize luggage should be left at the cloakroom or returned to a hotel.', 'sv', 'Skrymmande bagage ska lämnas i garderoben eller återföras till hotellet.'),
+      jsonb_build_object('en', 'Follow staff and signage regarding special entrances for specific events.', 'sv', 'Följ personal och skyltning om särskilda entréer för enskilda evenemang.'),
+      jsonb_build_object('en', 'Report anything suspicious to on-site security; emergency exits are marked throughout the venue.', 'sv', 'Anmäl misstänkta händelser till väktarna på plats; nödutgångar är markerade i hela anläggningen.')
     )
   ),
-  jsonb_build_object('en', 'Stockholmsmassan is ISO 20121 certified and runs an active sustainability program spanning energy, waste, catering, and supplier choices.', 'sv', 'Stockholmsmassan is ISO 20121 certified and runs an active sustainability program spanning energy, waste, catering, and supplier choices.'),
+  jsonb_build_object('en', 'Stockholmsmassan is ISO 20121 certified and runs an active sustainability program spanning energy, waste, catering, and supplier choices.', 'sv', 'Stockholmsmässan är certifierad enligt ISO 20121 och driver ett aktivt hållbarhetsprogram som omfattar energi, avfall, mat och leverantörsval.'),
   jsonb_build_array(
     jsonb_build_object(
       'id', 'stockholmsmassan-overview',
-      'name', jsonb_build_object('en', 'Venue overview', 'sv', 'Venue overview'),
-      'description', jsonb_build_object('en', 'High-level map of entrances, halls, foyers, and conference rooms. The prototype lists available maps without rendering them.', 'sv', 'High-level map of entrances, halls, foyers, and conference rooms. The prototype lists available maps without rendering them.')
+      'name', jsonb_build_object('en', 'Venue overview', 'sv', 'Översiktskarta'),
+      'description', jsonb_build_object('en', 'High-level map of entrances, halls, foyers, and conference rooms. The prototype lists available maps without rendering them.', 'sv', 'Översiktskarta över entréer, hallar, foajéer och konferensrum. Prototypen listar tillgängliga kartor utan att rendera dem.')
     )
   )
 )
@@ -106,67 +106,67 @@ insert into public.events (
   start_date, end_date, summary, branding, overrides, questionnaire_subjects
 ) values
   (
-    'nordbygg-2026', 'stockholmsmassan', jsonb_build_object('en', 'Nordbygg 2026', 'sv', 'Nordbygg 2026'), jsonb_build_object('en', 'Nordic construction trade fair', 'sv', 'Nordic construction trade fair'),
+    'nordbygg-2026', 'stockholmsmassan', jsonb_build_object('en', 'Nordbygg 2026', 'sv', 'Nordbygg 2026'), jsonb_build_object('en', 'Nordic construction trade fair', 'sv', 'Nordisk byggmässa'),
     'Trade fair', 'Construction and real estate', 'public', 'public_ticket',
     date '2026-04-21', date '2026-04-24',
-    jsonb_build_object('en', 'Nordbygg is the leading Nordic meeting place for the construction and real-estate industry, with exhibitors, seminars, and industry news across four days at Stockholmsmassan.', 'sv', 'Nordbygg is the leading Nordic meeting place for the construction and real-estate industry, with exhibitors, seminars, and industry news across four days at Stockholmsmassan.'),
+    jsonb_build_object('en', 'Nordbygg is the leading Nordic meeting place for the construction and real-estate industry, with exhibitors, seminars, and industry news across four days at Stockholmsmassan.', 'sv', 'Nordbygg är den ledande nordiska mötesplatsen för bygg- och fastighetsbranschen, med utställare, seminarier och branschnyheter under fyra dagar på Stockholmsmässan.'),
     jsonb_build_object(
       'primary_color', '#0b3d91', 'accent_color', '#f4b400', 'logo', null,
       'hero_image', 'assets/images/events/nordbygg-2026.jpg',
-      'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')
+      'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')
     ),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.', 'sv', 'Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.', 'sv', 'Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis.', 'sv', 'A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis.')
+      'entrance', jsonb_build_object('en', 'Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.', 'sv', 'Gå in genom huvudfoajén på Stockholmsmässan. Nordbyggs skyltning vägleder besökare till registreringen i A-hallens foajé.'),
+      'bag_rules', jsonb_build_object('en', 'Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.', 'sv', 'Arbetsväskor och mindre ryggsäckar är tillåtna på mässgolvet; skrymmande bagage ska lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis.', 'sv', 'En besöksbiljett ger tillträde till alla utställningshallar och seminarierum. Vissa seminarier har begränsat antal platser enligt först-till-kvarn-principen.')
     ),
     jsonb_build_array(
-      jsonb_build_object('en', 'Sustainable construction', 'sv', 'Sustainable construction'),
-      jsonb_build_object('en', 'BIM and digital tools', 'sv', 'BIM and digital tools'),
-      jsonb_build_object('en', 'Renovation', 'sv', 'Renovation'),
-      jsonb_build_object('en', 'Heating and ventilation', 'sv', 'Heating and ventilation'),
-      jsonb_build_object('en', 'Smart buildings', 'sv', 'Smart buildings'),
-      jsonb_build_object('en', 'Building safety', 'sv', 'Building safety')
+      jsonb_build_object('en', 'Sustainable construction', 'sv', 'Hållbart byggande'),
+      jsonb_build_object('en', 'BIM and digital tools', 'sv', 'BIM och digitala verktyg'),
+      jsonb_build_object('en', 'Renovation', 'sv', 'Renovering'),
+      jsonb_build_object('en', 'Heating and ventilation', 'sv', 'Värme och ventilation'),
+      jsonb_build_object('en', 'Smart buildings', 'sv', 'Smarta byggnader'),
+      jsonb_build_object('en', 'Building safety', 'sv', 'Byggsäkerhet')
     )
   ),
   (
-    'estro-2026', 'stockholmsmassan', jsonb_build_object('en', 'ESTRO 2026', 'sv', 'ESTRO 2026'), jsonb_build_object('en', 'European Society for Radiotherapy and Oncology Annual Congress', 'sv', 'European Society for Radiotherapy and Oncology Annual Congress'),
+    'estro-2026', 'stockholmsmassan', jsonb_build_object('en', 'ESTRO 2026', 'sv', 'ESTRO 2026'), jsonb_build_object('en', 'European Society for Radiotherapy and Oncology Annual Congress', 'sv', 'Europeiska sällskapet för strålbehandling och onkologi – årlig kongress'),
     'Congress', 'Health & Medicine', 'professional', 'registration',
     date '2026-05-15', date '2026-05-19',
-    jsonb_build_object('en', 'ESTRO 2026 is the European Society for Radiotherapy and Oncology annual congress, covering clinical practice, physics, radiobiology, and technology across a multi-track program.', 'sv', 'ESTRO 2026 is the European Society for Radiotherapy and Oncology annual congress, covering clinical practice, physics, radiobiology, and technology across a multi-track program.'),
+    jsonb_build_object('en', 'ESTRO 2026 is the European Society for Radiotherapy and Oncology annual congress, covering clinical practice, physics, radiobiology, and technology across a multi-track program.', 'sv', 'ESTRO 2026 är den årliga kongressen för europeiska sällskapet för strålbehandling och onkologi och täcker klinisk praktik, fysik, strålningsbiologi och teknik i ett program med flera spår.'),
     jsonb_build_object(
       'primary_color', '#123f66', 'accent_color', '#ce3f4a', 'logo', null,
       'hero_image', 'assets/images/events/estro-2026.webp',
-      'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')
+      'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')
     ),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.', 'sv', 'Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.'),
-      'bag_rules', jsonb_build_object('en', 'Standard venue bag rules apply; congress materials are distributed at the registration desk.', 'sv', 'Standard venue bag rules apply; congress materials are distributed at the registration desk.'),
-      'access_notes', jsonb_build_object('en', 'Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes.', 'sv', 'Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes.')
+      'entrance', jsonb_build_object('en', 'Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.', 'sv', 'Registrering och utlämning av kongressbrickor för ESTRO 2026 finns i norra foajén. Delegater ska ta med fotolegitimation den första dagen.'),
+      'bag_rules', jsonb_build_object('en', 'Standard venue bag rules apply; congress materials are distributed at the registration desk.', 'sv', 'Anläggningens vanliga väskregler gäller; kongressmaterial delas ut i receptionen.'),
+      'access_notes', jsonb_build_object('en', 'Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes.', 'sv', 'Tillträde är begränsat till registrerade delegater, utställare och ackrediterad press. Sessioner märkta som stängda kräver ytterligare åtkomstkoder.')
     ),
     jsonb_build_array(
-      jsonb_build_object('en', 'Clinical radiation oncology', 'sv', 'Clinical radiation oncology'),
-      jsonb_build_object('en', 'Medical physics', 'sv', 'Medical physics'),
-      jsonb_build_object('en', 'Radiobiology', 'sv', 'Radiobiology'),
-      jsonb_build_object('en', 'Brachytherapy', 'sv', 'Brachytherapy'),
-      jsonb_build_object('en', 'Imaging and treatment planning', 'sv', 'Imaging and treatment planning'),
-      jsonb_build_object('en', 'Technology and innovation', 'sv', 'Technology and innovation')
+      jsonb_build_object('en', 'Clinical radiation oncology', 'sv', 'Klinisk strålonkologi'),
+      jsonb_build_object('en', 'Medical physics', 'sv', 'Medicinsk fysik'),
+      jsonb_build_object('en', 'Radiobiology', 'sv', 'Strålningsbiologi'),
+      jsonb_build_object('en', 'Brachytherapy', 'sv', 'Brakyterapi'),
+      jsonb_build_object('en', 'Imaging and treatment planning', 'sv', 'Bildgivning och behandlingsplanering'),
+      jsonb_build_object('en', 'Technology and innovation', 'sv', 'Teknik och innovation')
     )
   ),
   (
-    'eha-2026', 'stockholmsmassan', jsonb_build_object('en', 'EHA2026 Congress', 'sv', 'EHA2026 Congress'), jsonb_build_object('en', 'European Hematology Association Annual Congress', 'sv', 'European Hematology Association Annual Congress'),
+    'eha-2026', 'stockholmsmassan', jsonb_build_object('en', 'EHA2026 Congress', 'sv', 'EHA2026-kongressen'), jsonb_build_object('en', 'European Hematology Association Annual Congress', 'sv', 'Europeiska hematologföreningens årliga kongress'),
     'Congress', 'Health & Medicine', 'professional', 'registration',
     date '2026-06-11', date '2026-06-14',
-    jsonb_build_object('en', 'The European Hematology Association annual congress brings clinicians and researchers together for plenaries, symposia, abstract presentations, and an industry exhibition.', 'sv', 'The European Hematology Association annual congress brings clinicians and researchers together for plenaries, symposia, abstract presentations, and an industry exhibition.'),
+    jsonb_build_object('en', 'The European Hematology Association annual congress brings clinicians and researchers together for plenaries, symposia, abstract presentations, and an industry exhibition.', 'sv', 'Europeiska hematologföreningens årliga kongress samlar kliniker och forskare för plenarsessioner, symposier, abstraktpresentationer och en branschutställning.'),
     jsonb_build_object(
       'primary_color', '#8a1f57', 'accent_color', '#f5b233', 'logo', null,
       'hero_image', 'assets/images/events/eha-2026.jpg',
-      'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')
+      'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')
     ),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.', 'sv', 'EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.'),
-      'bag_rules', jsonb_build_object('en', 'Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom.', 'sv', 'Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'On-demand session recordings are available to registered delegates on the EHA congress platform after the congress.', 'sv', 'On-demand session recordings are available to registered delegates on the EHA congress platform after the congress.')
+      'entrance', jsonb_build_object('en', 'EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.', 'sv', 'Delegater på EHA2026 går in genom östra foajén. Kongressbrickor krävs för alla sessioner.'),
+      'bag_rules', jsonb_build_object('en', 'Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom.', 'sv', 'Anläggningens vanliga väskregler gäller. Posterrör och rullbara väskor kan lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'On-demand session recordings are available to registered delegates on the EHA congress platform after the congress.', 'sv', 'Inspelningar av sessioner finns tillgängliga på begäran för registrerade delegater på EHA:s kongressplattform efter kongressen.')
     ),
     null
   )
@@ -199,509 +199,509 @@ insert into public.events (
 ) values
   (
     'yrkes-sm-2026', 'stockholmsmassan', jsonb_build_object('en', 'Yrkes-SM 2026', 'sv', 'Yrkes-SM 2026'),
-    jsonb_build_object('en', 'Swedish national championship for vocational skills', 'sv', 'Swedish national championship for vocational skills'),
+    jsonb_build_object('en', 'Swedish national championship for vocational skills', 'sv', 'Svenskt mästerskap i yrkesskicklighet'),
     'Event', 'Education and training', 'public', 'none',
     date '2026-05-04', date '2026-05-06',
-    jsonb_build_object('en', 'Yrkes-SM is the Swedish national championship for vocational skills. The 2026 edition is hosted at Stockholmsmassan for the first time, with young professionals competing across trades and visitors exploring career paths.', 'sv', 'Yrkes-SM is the Swedish national championship for vocational skills. The 2026 edition is hosted at Stockholmsmassan for the first time, with young professionals competing across trades and visitors exploring career paths.'),
-    jsonb_build_object('primary_color', '#00549a', 'accent_color', '#ffc72c', 'logo', null, 'hero_image', 'assets/images/events/yrkes-sm-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Yrkes-SM is the Swedish national championship for vocational skills. The 2026 edition is hosted at Stockholmsmassan for the first time, with young professionals competing across trades and visitors exploring career paths.', 'sv', 'Yrkes-SM är det svenska mästerskapet i yrkesskicklighet. 2026 års upplaga arrangeras för första gången på Stockholmsmässan, där unga yrkesutövare tävlar i olika yrken och besökare utforskar karriärvägar.'),
+    jsonb_build_object('primary_color', '#00549a', 'accent_color', '#ffc72c', 'logo', null, 'hero_image', 'assets/images/events/yrkes-sm-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer, where the organizer operates information and registration desks.', 'sv', 'Simulated. Visitors enter through the main foyer, where the organizer operates information and registration desks.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Admission is free for visitors. Competitor and jury access is managed by the organizer.', 'sv', 'Simulated. Admission is free for visitors. Competitor and jury access is managed by the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer, where the organizer operates information and registration desks.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén, där arrangören har informations- och registreringsdiskar.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Admission is free for visitors. Competitor and jury access is managed by the organizer.', 'sv', 'Simulerad. Inträdet är fritt för besökare. Tillträde för tävlande och jury sköts av arrangören.')
     )
   ),
   (
     'ung-foretagsamhet-2026', 'stockholmsmassan', jsonb_build_object('en', 'Ung Foretagsamhet 2026', 'sv', 'Ung Foretagsamhet 2026'),
-    jsonb_build_object('en', 'Annual meeting for young entrepreneurs, schools, and policymakers', 'sv', 'Annual meeting for young entrepreneurs, schools, and policymakers'),
+    jsonb_build_object('en', 'Annual meeting for young entrepreneurs, schools, and policymakers', 'sv', 'Årlig samling för unga entreprenörer, skolor och beslutsfattare'),
     'Event', 'Education and training', 'public', 'registration',
     date '2026-05-26', date '2026-05-27',
-    jsonb_build_object('en', 'Ung Foretagsamhet brings together young entrepreneurs, schools, and policymakers to celebrate student-run companies and exchange ideas across Sweden.', 'sv', 'Ung Foretagsamhet brings together young entrepreneurs, schools, and policymakers to celebrate student-run companies and exchange ideas across Sweden.'),
-    jsonb_build_object('primary_color', '#f26522', 'accent_color', '#003a5d', 'logo', null, 'hero_image', 'assets/images/events/ung-foretagsamhet-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Ung Foretagsamhet brings together young entrepreneurs, schools, and policymakers to celebrate student-run companies and exchange ideas across Sweden.', 'sv', 'Ung Företagsamhet samlar unga entreprenörer, skolor och beslutsfattare för att uppmärksamma elevdrivna företag och utbyta idéer från hela Sverige.'),
+    jsonb_build_object('primary_color', '#f26522', 'accent_color', '#003a5d', 'logo', null, 'hero_image', 'assets/images/events/ung-foretagsamhet-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Participants and school groups enter via the East Foyer following event signage.', 'sv', 'Simulated. Participants and school groups enter via the East Foyer following event signage.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Admission is managed through organizer registration for school groups and UF members.', 'sv', 'Simulated. Admission is managed through organizer registration for school groups and UF members.')
+      'entrance', jsonb_build_object('en', 'Simulated. Participants and school groups enter via the East Foyer following event signage.', 'sv', 'Simulerad. Deltagare och skolgrupper går in via östra foajén enligt evenemangets skyltning.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Admission is managed through organizer registration for school groups and UF members.', 'sv', 'Simulerad. Inträde hanteras via arrangörens registrering för skolgrupper och UF-medlemmar.')
     )
   ),
   (
     'samhallsbyggararenan-2026', 'stockholmsmassan', jsonb_build_object('en', 'Samhallsbyggararenan 2026', 'sv', 'Samhallsbyggararenan 2026'),
-    jsonb_build_object('en', 'Community builders meeting on Swedish urban development', 'sv', 'Community builders meeting on Swedish urban development'),
+    jsonb_build_object('en', 'Community builders meeting on Swedish urban development', 'sv', 'Samhällsbyggarmöte om svensk stadsutveckling'),
     'Event', 'Other', 'professional', 'registration',
     date '2026-06-23', date '2026-06-25',
-    jsonb_build_object('en', 'Samhallsbyggararenan brings together public and private actors in Swedish urban development to discuss housing, infrastructure, and climate-adaptation challenges.', 'sv', 'Samhallsbyggararenan brings together public and private actors in Swedish urban development to discuss housing, infrastructure, and climate-adaptation challenges.'),
-    jsonb_build_object('primary_color', '#004e42', 'accent_color', '#c2d57e', 'logo', null, 'hero_image', 'assets/images/events/samhallsbyggararenan-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Samhallsbyggararenan brings together public and private actors in Swedish urban development to discuss housing, infrastructure, and climate-adaptation challenges.', 'sv', 'Samhällsbyggararenan samlar offentliga och privata aktörer inom svensk stadsutveckling för att diskutera bostäder, infrastruktur och klimatanpassning.'),
+    jsonb_build_object('primary_color', '#004e42', 'accent_color', '#c2d57e', 'logo', null, 'hero_image', 'assets/images/events/samhallsbyggararenan-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the North Foyer. Badge pickup opens one hour before the first session each day.', 'sv', 'Simulated. Delegates enter via the North Foyer. Badge pickup opens one hour before the first session each day.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is limited to registered delegates.', 'sv', 'Simulated. Access is limited to registered delegates.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the North Foyer. Badge pickup opens one hour before the first session each day.', 'sv', 'Simulerad. Delegater går in via norra foajén. Utlämning av kongressbrickor öppnar en timme före dagens första session.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is limited to registered delegates.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade delegater.')
     )
   ),
   (
-    'formex-aug-2026', 'stockholmsmassan', jsonb_build_object('en', 'Formex August 2026', 'sv', 'Formex August 2026'),
-    jsonb_build_object('en', 'Nordic interior design trade fair, autumn edition', 'sv', 'Nordic interior design trade fair, autumn edition'),
+    'formex-aug-2026', 'stockholmsmassan', jsonb_build_object('en', 'Formex August 2026', 'sv', 'Formex augusti 2026'),
+    jsonb_build_object('en', 'Nordic interior design trade fair, autumn edition', 'sv', 'Nordisk inredningsmässa, höstupplaga'),
     'Trade fair', 'Interior design', 'professional', 'registration',
     date '2026-08-25', date '2026-08-27',
-    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.', 'sv', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.'),
-    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-aug-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.', 'sv', 'Formex är den ledande nordiska mässan för inredning, present­artiklar och livsstilsvarumärken. Augustiupplagan fokuserar på höst- och vintersäsongen.'),
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-aug-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.', 'sv', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.', 'sv', 'Simulerad. Arbetsväskor är tillåtna; skrymmande föremål ska lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
-    'european-dog-show-2026', 'stockholmsmassan', jsonb_build_object('en', 'European Dog Show and Swedish Winner Show 2026', 'sv', 'European Dog Show and Swedish Winner Show 2026'),
-    jsonb_build_object('en', 'International canine exhibition and Swedish Winner show', 'sv', 'International canine exhibition and Swedish Winner show'),
+    'european-dog-show-2026', 'stockholmsmassan', jsonb_build_object('en', 'European Dog Show and Swedish Winner Show 2026', 'sv', 'European Dog Show och Swedish Winner Show 2026'),
+    jsonb_build_object('en', 'International canine exhibition and Swedish Winner show', 'sv', 'Internationell hundutställning och Svenska Vinnaren-utställning'),
     'Public fair', 'Entertainment', 'public', 'public_ticket',
     date '2026-09-04', date '2026-09-06',
-    jsonb_build_object('en', 'A multi-day international dog show drawing tens of thousands of dog enthusiasts and their dogs, with breed competitions, handling, and family-friendly programming.', 'sv', 'A multi-day international dog show drawing tens of thousands of dog enthusiasts and their dogs, with breed competitions, handling, and family-friendly programming.'),
-    jsonb_build_object('primary_color', '#5c2a2a', 'accent_color', '#d3c29c', 'logo', null, 'hero_image', 'assets/images/events/european-dog-show-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'A multi-day international dog show drawing tens of thousands of dog enthusiasts and their dogs, with breed competitions, handling, and family-friendly programming.', 'sv', 'En flera dagar lång internationell hundutställning som lockar tiotusentals hundentusiaster och deras hundar, med rasbedömningar, handling och familjevänligt program.'),
+    jsonb_build_object('primary_color', '#5c2a2a', 'accent_color', '#d3c29c', 'logo', null, 'hero_image', 'assets/images/events/european-dog-show-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Dog-show participants use the dedicated South Entrance for dogs and handlers. Visitors enter through the Main Foyer.', 'sv', 'Simulated. Dog-show participants use the dedicated South Entrance for dogs and handlers. Visitors enter through the Main Foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Pet carriers are allowed in the show halls. Oversize luggage should be checked at the cloakroom.', 'sv', 'Simulated. Pet carriers are allowed in the show halls. Oversize luggage should be checked at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to the show halls; handler and participant access is managed by the organizer.', 'sv', 'Simulated. A visitor ticket grants access to the show halls; handler and participant access is managed by the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Dog-show participants use the dedicated South Entrance for dogs and handlers. Visitors enter through the Main Foyer.', 'sv', 'Simulerad. Hundutställningens deltagare använder den särskilda södra entrén för hundar och förare. Besökare går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Pet carriers are allowed in the show halls. Oversize luggage should be checked at the cloakroom.', 'sv', 'Simulerad. Djurburar är tillåtna i utställningshallarna. Skrymmande bagage ska lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to the show halls; handler and participant access is managed by the organizer.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till utställningshallarna; tillträde för förare och deltagare sköts av arrangören.')
     )
   ),
   (
-    'european-congress-of-pathology-2026', 'stockholmsmassan', jsonb_build_object('en', '38th European Congress of Pathology 2026', 'sv', '38th European Congress of Pathology 2026'),
-    jsonb_build_object('en', 'European Society of Pathology annual congress', 'sv', 'European Society of Pathology annual congress'),
+    'european-congress-of-pathology-2026', 'stockholmsmassan', jsonb_build_object('en', '38th European Congress of Pathology 2026', 'sv', '38:e europeiska patologikongressen 2026'),
+    jsonb_build_object('en', 'European Society of Pathology annual congress', 'sv', 'Europeiska patologföreningens årliga kongress'),
     'Congress', 'Health & Medicine', 'professional', 'registration',
     date '2026-09-12', date '2026-09-16',
-    jsonb_build_object('en', 'The European Congress of Pathology is the leading European gathering for pathologists, bringing together clinicians and researchers for a multi-track scientific program and industry exhibition.', 'sv', 'The European Congress of Pathology is the leading European gathering for pathologists, bringing together clinicians and researchers for a multi-track scientific program and industry exhibition.'),
-    jsonb_build_object('primary_color', '#1c4d8f', 'accent_color', '#9d2235', 'logo', null, 'hero_image', 'assets/images/events/european-congress-of-pathology-2026.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'The European Congress of Pathology is the leading European gathering for pathologists, bringing together clinicians and researchers for a multi-track scientific program and industry exhibition.', 'sv', 'Europeiska patologikongressen är den ledande europeiska samlingen för patologer och samlar kliniker och forskare kring ett vetenskapligt program med flera spår samt en branschutställning.'),
+    jsonb_build_object('primary_color', '#1c4d8f', 'accent_color', '#9d2235', 'logo', null, 'hero_image', 'assets/images/events/european-congress-of-pathology-2026.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the East Foyer. Congress badges and photo ID are required at the door.', 'sv', 'Simulated. Delegates enter via the East Foyer. Congress badges and photo ID are required at the door.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.', 'sv', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.', 'sv', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the East Foyer. Congress badges and photo ID are required at the door.', 'sv', 'Simulerad. Delegater går in via östra foajén. Kongressbricka och fotolegitimation krävs vid entrén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller; posterrör kan lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade delegater, utställare och ackrediterad press.')
     )
   ),
   (
     'sweden-water-expo-2026', 'stockholmsmassan', jsonb_build_object('en', 'Sweden Water Expo 2026', 'sv', 'Sweden Water Expo 2026'),
-    jsonb_build_object('en', 'Water infrastructure and sustainability trade fair', 'sv', 'Water infrastructure and sustainability trade fair'),
+    jsonb_build_object('en', 'Water infrastructure and sustainability trade fair', 'sv', 'Mässa för vatteninfrastruktur och hållbarhet'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2026-09-16', date '2026-09-17',
-    jsonb_build_object('en', 'Sweden Water Expo gathers the water, wastewater, and stormwater sector around infrastructure, sustainability, and digital solutions for the Swedish market.', 'sv', 'Sweden Water Expo gathers the water, wastewater, and stormwater sector around infrastructure, sustainability, and digital solutions for the Swedish market.'),
-    jsonb_build_object('primary_color', '#006eb6', 'accent_color', '#5fc4ef', 'logo', null, 'hero_image', 'assets/images/events/sweden-water-expo-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Sweden Water Expo gathers the water, wastewater, and stormwater sector around infrastructure, sustainability, and digital solutions for the Swedish market.', 'sv', 'Sweden Water Expo samlar branschen för vatten, avlopp och dagvatten kring infrastruktur, hållbarhet och digitala lösningar på den svenska marknaden.'),
+    jsonb_build_object('primary_color', '#006eb6', 'accent_color', '#5fc4ef', 'logo', null, 'hero_image', 'assets/images/events/sweden-water-expo-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'llb-expo-2026', 'stockholmsmassan', jsonb_build_object('en', 'LLB Expo 2026', 'sv', 'LLB Expo 2026'),
-    jsonb_build_object('en', 'Logistics and material handling trade fair', 'sv', 'Logistics and material handling trade fair'),
+    jsonb_build_object('en', 'Logistics and material handling trade fair', 'sv', 'Mässa för logistik och materialhantering'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2026-10-06', date '2026-10-08',
-    jsonb_build_object('en', 'LLB Expo is an industry gathering for logistics, warehousing, and material handling with exhibitor demonstrations, networking, and seminars.', 'sv', 'LLB Expo is an industry gathering for logistics, warehousing, and material handling with exhibitor demonstrations, networking, and seminars.'),
-    jsonb_build_object('primary_color', '#f58220', 'accent_color', '#0a4a80', 'logo', null, 'hero_image', 'assets/images/events/llb-expo-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'LLB Expo is an industry gathering for logistics, warehousing, and material handling with exhibitor demonstrations, networking, and seminars.', 'sv', 'LLB Expo är en branschsamling för logistik, lagerhållning och materialhantering med utställardemonstrationer, mingel och seminarier.'),
+    jsonb_build_object('primary_color', '#f58220', 'accent_color', '#0a4a80', 'logo', null, 'hero_image', 'assets/images/events/llb-expo-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'hem-villamassan-2026', 'stockholmsmassan', jsonb_build_object('en', 'Hem & Villamassan 2026', 'sv', 'Hem & Villamassan 2026'),
-    jsonb_build_object('en', 'Consumer fair for home renovation and villa ownership', 'sv', 'Consumer fair for home renovation and villa ownership'),
+    jsonb_build_object('en', 'Consumer fair for home renovation and villa ownership', 'sv', 'Konsumentmässa för renovering och villaägande'),
     'Public fair', 'Leisure and consumer', 'public', 'public_ticket',
     date '2026-10-09', date '2026-10-11',
-    jsonb_build_object('en', 'Hem & Villamassan is a consumer fair covering home renovation, villa maintenance, and interior inspiration, combining exhibitors, lectures, and practical demonstrations.', 'sv', 'Hem & Villamassan is a consumer fair covering home renovation, villa maintenance, and interior inspiration, combining exhibitors, lectures, and practical demonstrations.'),
-    jsonb_build_object('primary_color', '#6bae3e', 'accent_color', '#44494e', 'logo', null, 'hero_image', 'assets/images/events/hem-villamassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Hem & Villamassan is a consumer fair covering home renovation, villa maintenance, and interior inspiration, combining exhibitors, lectures, and practical demonstrations.', 'sv', 'Hem & Villamässan är en konsumentmässa som täcker bostadsrenovering, villaunderhåll och inredningsinspiration, med utställare, föreläsningar och praktiska demonstrationer.'),
+    jsonb_build_object('primary_color', '#6bae3e', 'accent_color', '#44494e', 'logo', null, 'hero_image', 'assets/images/events/hem-villamassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulated. Visitors enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags and small backpacks are allowed. Oversize items should be checked at the cloakroom.', 'sv', 'Simulated. Work bags and small backpacks are allowed. Oversize items should be checked at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls in the fair.', 'sv', 'Simulated. A visitor ticket grants access to all halls in the fair.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags and small backpacks are allowed. Oversize items should be checked at the cloakroom.', 'sv', 'Simulerad. Arbetsväskor och små ryggsäckar är tillåtna. Skrymmande föremål ska lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls in the fair.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla mässans hallar.')
     )
   ),
   (
-    'tradgardsmassan-host-2026', 'stockholmsmassan', jsonb_build_object('en', 'Tradgardsmassan Host 2026', 'sv', 'Tradgardsmassan Host 2026'),
-    jsonb_build_object('en', 'Autumn edition of the Swedish gardening fair', 'sv', 'Autumn edition of the Swedish gardening fair'),
+    'tradgardsmassan-host-2026', 'stockholmsmassan', jsonb_build_object('en', 'Tradgardsmassan Host 2026', 'sv', 'Trädgårdsmässan Höst 2026'),
+    jsonb_build_object('en', 'Autumn edition of the Swedish gardening fair', 'sv', 'Höstupplaga av den svenska trädgårdsmässan'),
     'Public fair', 'Leisure and consumer', 'public', 'public_ticket',
     date '2026-10-09', date '2026-10-11',
-    jsonb_build_object('en', 'Tradgardsmassan Host is the autumn edition of the Swedish gardening fair, with exhibitors, talks, and demonstrations covering year-round gardening themes.', 'sv', 'Tradgardsmassan Host is the autumn edition of the Swedish gardening fair, with exhibitors, talks, and demonstrations covering year-round gardening themes.'),
-    jsonb_build_object('primary_color', '#b35b1c', 'accent_color', '#7e9b2c', 'logo', null, 'hero_image', 'assets/images/events/tradgardsmassan-host-2026.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Tradgardsmassan Host is the autumn edition of the Swedish gardening fair, with exhibitors, talks, and demonstrations covering year-round gardening themes.', 'sv', 'Trädgårdsmässan Höst är höstupplagan av den svenska trädgårdsmässan, med utställare, föredrag och demonstrationer kring trädgårdsteman året om.'),
+    jsonb_build_object('primary_color', '#b35b1c', 'accent_color', '#7e9b2c', 'logo', null, 'hero_image', 'assets/images/events/tradgardsmassan-host-2026.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulated. Visitors enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Gardening equipment and plants bought on site are allowed on the fair floor.', 'sv', 'Simulated. Gardening equipment and plants bought on site are allowed on the fair floor.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls in the fair.', 'sv', 'Simulated. A visitor ticket grants access to all halls in the fair.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Gardening equipment and plants bought on site are allowed on the fair floor.', 'sv', 'Simulerad. Trädgårdsutrustning och växter som köps på plats är tillåtna på mässgolvet.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls in the fair.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla mässans hallar.')
     )
   ),
   (
     'ecarexpo-2026', 'stockholmsmassan', jsonb_build_object('en', 'eCarExpo 2026', 'sv', 'eCarExpo 2026'),
-    jsonb_build_object('en', 'Nordic electric car and charging trade fair', 'sv', 'Nordic electric car and charging trade fair'),
+    jsonb_build_object('en', 'Nordic electric car and charging trade fair', 'sv', 'Nordisk mässa för elbilar och laddning'),
     'Trade fair', 'Industry', 'public', 'public_ticket',
     date '2026-10-09', date '2026-10-11',
-    jsonb_build_object('en', 'eCarExpo is the leading Nordic event for electric cars and charging, combining consumer demonstrations and industry exhibitions across car brands, charging operators, and accessories.', 'sv', 'eCarExpo is the leading Nordic event for electric cars and charging, combining consumer demonstrations and industry exhibitions across car brands, charging operators, and accessories.'),
-    jsonb_build_object('primary_color', '#00a651', 'accent_color', '#1b365d', 'logo', null, 'hero_image', 'assets/images/events/ecarexpo-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'eCarExpo is the leading Nordic event for electric cars and charging, combining consumer demonstrations and industry exhibitions across car brands, charging operators, and accessories.', 'sv', 'eCarExpo är det ledande nordiska eventet för elbilar och laddning och kombinerar konsumentdemonstrationer och branschutställningar med bilmärken, laddoperatörer och tillbehör.'),
+    jsonb_build_object('primary_color', '#00a651', 'accent_color', '#1b365d', 'logo', null, 'hero_image', 'assets/images/events/ecarexpo-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Test-drive check-in is handled at a dedicated desk in the foyer.', 'sv', 'Simulated. Visitors enter through the main foyer. Test-drive check-in is handled at a dedicated desk in the foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; trade-only sessions are badge-controlled.', 'sv', 'Simulated. A visitor ticket grants access to all halls; trade-only sessions are badge-controlled.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Test-drive check-in is handled at a dedicated desk in the foyer.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén. Incheckning för provkörning sker vid en särskild disk i foajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; trade-only sessions are badge-controlled.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla hallar; rena fackbesökarsessioner är brickkontrollerade.')
     )
   ),
   (
     'underbara-children-2026', 'stockholmsmassan', jsonb_build_object('en', 'UnderBARA CHILDREN 2026', 'sv', 'UnderBARA CHILDREN 2026'),
-    jsonb_build_object('en', 'Family entertainment fair for kids and families', 'sv', 'Family entertainment fair for kids and families'),
+    jsonb_build_object('en', 'Family entertainment fair for kids and families', 'sv', 'Familjemässa med underhållning för barn och familjer'),
     'Public fair', 'Entertainment', 'public', 'public_ticket',
     date '2026-10-16', date '2026-10-18',
-    jsonb_build_object('en', 'UnderBARA CHILDREN is a large family-and-kids fair with entertainment, activities, exhibitors, and shows for Swedish families.', 'sv', 'UnderBARA CHILDREN is a large family-and-kids fair with entertainment, activities, exhibitors, and shows for Swedish families.'),
-    jsonb_build_object('primary_color', '#e6007e', 'accent_color', '#ffe600', 'logo', null, 'hero_image', 'assets/images/events/underbara-children-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'UnderBARA CHILDREN is a large family-and-kids fair with entertainment, activities, exhibitors, and shows for Swedish families.', 'sv', 'UnderBARA CHILDREN är en stor familje- och barnmässa med underhållning, aktiviteter, utställare och föreställningar för svenska familjer.'),
+    jsonb_build_object('primary_color', '#e6007e', 'accent_color', '#ffe600', 'logo', null, 'hero_image', 'assets/images/events/underbara-children-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Families enter through the main foyer. Strollers are welcome on the fair floor.', 'sv', 'Simulated. Families enter through the main foyer. Strollers are welcome on the fair floor.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply. Strollers are allowed.', 'sv', 'Simulated. Standard venue bag rules apply. Strollers are allowed.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; some activities have on-site queuing.', 'sv', 'Simulated. A visitor ticket grants access to all halls; some activities have on-site queuing.')
+      'entrance', jsonb_build_object('en', 'Simulated. Families enter through the main foyer. Strollers are welcome on the fair floor.', 'sv', 'Simulerad. Familjer går in genom huvudfoajén. Barnvagnar är välkomna på mässgolvet.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply. Strollers are allowed.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller. Barnvagnar är tillåtna.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; some activities have on-site queuing.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla hallar; vissa aktiviteter har köhantering på plats.')
     )
   ),
   (
     'skydd-2026', 'stockholmsmassan', jsonb_build_object('en', 'Skydd 2026', 'sv', 'Skydd 2026'),
-    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordic security, fire-safety, and protection trade fair'),
+    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordisk mässa för säkerhet, brandskydd och skyddstjänster'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2026-10-20', date '2026-10-22',
-    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals, with exhibitors, demonstrations, and a conference program.', 'sv', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals, with exhibitors, demonstrations, and a conference program.'),
-    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals, with exhibitors, demonstrations, and a conference program.', 'sv', 'Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap, med utställare, demonstrationer och ett konferensprogram.'),
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'totalforsvarsmassan-2026', 'stockholmsmassan', jsonb_build_object('en', 'Totalforsvarsmassan 2026', 'sv', 'Totalforsvarsmassan 2026'),
-    jsonb_build_object('en', 'Swedish total-defense industry fair, co-located with Skydd', 'sv', 'Swedish total-defense industry fair, co-located with Skydd'),
+    jsonb_build_object('en', 'Swedish total-defense industry fair, co-located with Skydd', 'sv', 'Svensk totalförsvarsmässa, samlokaliserad med Skydd'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2026-10-20', date '2026-10-22',
-    jsonb_build_object('en', 'Totalforsvarsmassan is the Swedish total-defense industry fair and runs alongside Skydd, covering civil protection, defense, and emergency preparedness.', 'sv', 'Totalforsvarsmassan is the Swedish total-defense industry fair and runs alongside Skydd, covering civil protection, defense, and emergency preparedness.'),
-    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', 'assets/images/events/totalforsvarsmassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Totalforsvarsmassan is the Swedish total-defense industry fair and runs alongside Skydd, covering civil protection, defense, and emergency preparedness.', 'sv', 'Totalförsvarsmässan är den svenska totalförsvarsmässan och arrangeras tillsammans med Skydd. Den täcker civil beredskap, försvar och krisberedskap.'),
+    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', 'assets/images/events/totalforsvarsmassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'persontrafik-2026', 'stockholmsmassan', jsonb_build_object('en', 'Persontrafik 2026', 'sv', 'Persontrafik 2026'),
-    jsonb_build_object('en', 'European meeting place for public transport', 'sv', 'European meeting place for public transport'),
+    jsonb_build_object('en', 'European meeting place for public transport', 'sv', 'Europeisk mötesplats för kollektivtrafik'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2026-10-20', date '2026-10-22',
-    jsonb_build_object('en', 'Persontrafik is one of Europes most important meeting places for public transport, with exhibitors, a conference program, and networking for operators, authorities, and suppliers.', 'sv', 'Persontrafik is one of Europes most important meeting places for public transport, with exhibitors, a conference program, and networking for operators, authorities, and suppliers.'),
-    jsonb_build_object('primary_color', '#0073cf', 'accent_color', '#ffd100', 'logo', null, 'hero_image', 'assets/images/events/persontrafik-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Persontrafik is one of Europes most important meeting places for public transport, with exhibitors, a conference program, and networking for operators, authorities, and suppliers.', 'sv', 'Persontrafik är en av Europas viktigaste mötesplatser för kollektivtrafik, med utställare, ett konferensprogram och mingel för operatörer, myndigheter och leverantörer.'),
+    jsonb_build_object('primary_color', '#0073cf', 'accent_color', '#ffd100', 'logo', null, 'hero_image', 'assets/images/events/persontrafik-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates and trade visitors enter via the West Foyer.', 'sv', 'Simulated. Delegates and trade visitors enter via the West Foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered trade visitors and delegates.', 'sv', 'Simulated. Access is restricted to registered trade visitors and delegates.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates and trade visitors enter via the West Foyer.', 'sv', 'Simulerad. Delegater och fackbesökare går in via västra foajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered trade visitors and delegates.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade fackbesökare och delegater.')
     )
   ),
   (
     'larkraft-2026', 'stockholmsmassan', jsonb_build_object('en', 'Larkraft 2026', 'sv', 'Larkraft 2026'),
-    jsonb_build_object('en', 'Teacher professional-development conference', 'sv', 'Teacher professional-development conference'),
+    jsonb_build_object('en', 'Teacher professional-development conference', 'sv', 'Konferens för lärares kompetensutveckling'),
     'Conference', 'Education and training', 'professional', 'registration',
     date '2026-10-27', date '2026-10-27',
-    jsonb_build_object('en', 'Larkraft is a one-day professional-development conference for teachers and school leaders in Sweden, focused on classroom practice and educational policy.', 'sv', 'Larkraft is a one-day professional-development conference for teachers and school leaders in Sweden, focused on classroom practice and educational policy.'),
-    jsonb_build_object('primary_color', '#4a5d7e', 'accent_color', '#e8a33d', 'logo', null, 'hero_image', 'assets/images/events/larkraft-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Larkraft is a one-day professional-development conference for teachers and school leaders in Sweden, focused on classroom practice and educational policy.', 'sv', 'Lärkraft är en endagskonferens för kompetensutveckling för lärare och skolledare i Sverige, med fokus på klassrumsarbete och utbildningspolitik.'),
+    jsonb_build_object('primary_color', '#4a5d7e', 'accent_color', '#e8a33d', 'logo', null, 'hero_image', 'assets/images/events/larkraft-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter through the main foyer.', 'sv', 'Simulated. Delegates enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates.', 'sv', 'Simulated. Access is restricted to registered delegates.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter through the main foyer.', 'sv', 'Simulerad. Delegater går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade delegater.')
     )
   ),
   (
-    'comic-con-stockholm-winter-2026', 'stockholmsmassan', jsonb_build_object('en', 'Comic Con Stockholm Winter 2026', 'sv', 'Comic Con Stockholm Winter 2026'),
-    jsonb_build_object('en', 'Sweden''s largest popular culture meeting place', 'sv', 'Sweden''s largest popular culture meeting place'),
+    'comic-con-stockholm-winter-2026', 'stockholmsmassan', jsonb_build_object('en', 'Comic Con Stockholm Winter 2026', 'sv', 'Comic Con Stockholm Vinter 2026'),
+    jsonb_build_object('en', 'Sweden''s largest popular culture meeting place', 'sv', 'Sveriges största mötesplats för populärkultur'),
     'Event', 'Entertainment', 'public', 'public_ticket',
     date '2026-10-30', date '2026-11-01',
-    jsonb_build_object('en', 'Comic Con Stockholm Winter gathers fans of popular culture, gaming, anime, and comics for signings, panels, cosplay events, and an exhibitor floor.', 'sv', 'Comic Con Stockholm Winter gathers fans of popular culture, gaming, anime, and comics for signings, panels, cosplay events, and an exhibitor floor.'),
-    jsonb_build_object('primary_color', '#231f20', 'accent_color', '#f8b614', 'logo', null, 'hero_image', 'assets/images/events/comic-con-stockholm-winter-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Comic Con Stockholm Winter gathers fans of popular culture, gaming, anime, and comics for signings, panels, cosplay events, and an exhibitor floor.', 'sv', 'Comic Con Stockholm Vinter samlar fans av populärkultur, spel, anime och serier för signeringar, paneler, cosplay-arrangemang och en utställargolv.'),
+    jsonb_build_object('primary_color', '#231f20', 'accent_color', '#f8b614', 'logo', null, 'hero_image', 'assets/images/events/comic-con-stockholm-winter-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Cosplay check-in and prop check are handled near the entrance.', 'sv', 'Simulated. Visitors enter through the main foyer. Cosplay check-in and prop check are handled near the entrance.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Prop weapons are subject to the organizers prop policy; sharp or real weapons are not allowed.', 'sv', 'Simulated. Prop weapons are subject to the organizers prop policy; sharp or real weapons are not allowed.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; some panels and signings have separate queues or additional tickets.', 'sv', 'Simulated. A visitor ticket grants access to all halls; some panels and signings have separate queues or additional tickets.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer. Cosplay check-in and prop check are handled near the entrance.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén. Cosplayincheckning och propkontroll sker nära entrén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Prop weapons are subject to the organizers prop policy; sharp or real weapons are not allowed.', 'sv', 'Simulerad. Propvapen omfattas av arrangörens proppolicy; vassa eller riktiga vapen är inte tillåtna.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; some panels and signings have separate queues or additional tickets.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla hallar; vissa paneler och signeringar har egna köer eller kräver extra biljetter.')
     )
   ),
   (
     'allt-for-halsan-2026', 'stockholmsmassan', jsonb_build_object('en', 'Allt for Halsan 2026', 'sv', 'Allt for Halsan 2026'),
-    jsonb_build_object('en', 'Consumer fair for health and wellness', 'sv', 'Consumer fair for health and wellness'),
+    jsonb_build_object('en', 'Consumer fair for health and wellness', 'sv', 'Konsumentmässa för hälsa och välmående'),
     'Public fair', 'Health & Medicine', 'public', 'public_ticket',
     date '2026-11-06', date '2026-11-08',
-    jsonb_build_object('en', 'Allt for Halsan is a consumer fair for health, wellness, and lifestyle, with exhibitors, product demonstrations, lectures, and activities.', 'sv', 'Allt for Halsan is a consumer fair for health, wellness, and lifestyle, with exhibitors, product demonstrations, lectures, and activities.'),
-    jsonb_build_object('primary_color', '#7db249', 'accent_color', '#f58220', 'logo', null, 'hero_image', 'assets/images/events/allt-for-halsan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Allt for Halsan is a consumer fair for health, wellness, and lifestyle, with exhibitors, product demonstrations, lectures, and activities.', 'sv', 'Allt för Hälsan är en konsumentmässa för hälsa, välmående och livsstil, med utställare, produktdemonstrationer, föreläsningar och aktiviteter.'),
+    jsonb_build_object('primary_color', '#7db249', 'accent_color', '#f58220', 'logo', null, 'hero_image', 'assets/images/events/allt-for-halsan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulated. Visitors enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls in the fair.', 'sv', 'Simulated. A visitor ticket grants access to all halls in the fair.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls in the fair.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla mässans hallar.')
     )
   ),
   (
     'sthlm-food-wine-2026', 'stockholmsmassan', jsonb_build_object('en', 'Sthlm Food & Wine 2026', 'sv', 'Sthlm Food & Wine 2026'),
-    jsonb_build_object('en', 'Culinary consumer event with tastings and demonstrations', 'sv', 'Culinary consumer event with tastings and demonstrations'),
+    jsonb_build_object('en', 'Culinary consumer event with tastings and demonstrations', 'sv', 'Kulinariskt konsumentevent med provsmakningar och demonstrationer'),
     'Event', 'Food & drink', 'public', 'public_ticket',
     date '2026-11-06', date '2026-11-08',
-    jsonb_build_object('en', 'Sthlm Food & Wine is a culinary event combining exhibitors, tastings, cooking demonstrations, and wine pairings.', 'sv', 'Sthlm Food & Wine is a culinary event combining exhibitors, tastings, cooking demonstrations, and wine pairings.'),
-    jsonb_build_object('primary_color', '#8b1a1a', 'accent_color', '#c9a227', 'logo', null, 'hero_image', 'assets/images/events/sthlm-food-wine-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Sthlm Food & Wine is a culinary event combining exhibitors, tastings, cooking demonstrations, and wine pairings.', 'sv', 'Sthlm Food & Wine är ett kulinariskt event som kombinerar utställare, provsmakningar, matlagningsdemonstrationer och vinparningar.'),
+    jsonb_build_object('primary_color', '#8b1a1a', 'accent_color', '#c9a227', 'logo', null, 'hero_image', 'assets/images/events/sthlm-food-wine-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulated. Visitors enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Open-container and tasting rules follow organizer policy.', 'sv', 'Simulated. Open-container and tasting rules follow organizer policy.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; some tastings require additional tokens or tickets.', 'sv', 'Simulated. A visitor ticket grants access to all halls; some tastings require additional tokens or tickets.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Open-container and tasting rules follow organizer policy.', 'sv', 'Simulerad. Regler för öppna förpackningar och provsmakningar följer arrangörens policy.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls; some tastings require additional tokens or tickets.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla hallar; vissa provsmakningar kräver extra polletter eller biljetter.')
     )
   ),
   (
     'socionomdagarna-2026', 'stockholmsmassan', jsonb_build_object('en', 'Socionomdagarna 2026', 'sv', 'Socionomdagarna 2026'),
-    jsonb_build_object('en', 'Professional development conference for Swedish social workers', 'sv', 'Professional development conference for Swedish social workers'),
+    jsonb_build_object('en', 'Professional development conference for Swedish social workers', 'sv', 'Kompetensutvecklingskonferens för svenska socionomer'),
     'Conference', 'Education and training', 'professional', 'registration',
     date '2026-11-10', date '2026-11-11',
-    jsonb_build_object('en', 'Socionomdagarna is a professional development conference for Swedish social workers, in its 22nd edition, with keynotes, seminars, and an exhibition.', 'sv', 'Socionomdagarna is a professional development conference for Swedish social workers, in its 22nd edition, with keynotes, seminars, and an exhibition.'),
-    jsonb_build_object('primary_color', '#1d4e89', 'accent_color', '#e87a45', 'logo', null, 'hero_image', 'assets/images/events/socionomdagarna-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Socionomdagarna is a professional development conference for Swedish social workers, in its 22nd edition, with keynotes, seminars, and an exhibition.', 'sv', 'Socionomdagarna är en kompetensutvecklingskonferens för svenska socionomer som arrangeras för 22:a gången, med huvudtalare, seminarier och en utställning.'),
+    jsonb_build_object('primary_color', '#1d4e89', 'accent_color', '#e87a45', 'logo', null, 'hero_image', 'assets/images/events/socionomdagarna-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the North Foyer.', 'sv', 'Simulated. Delegates enter via the North Foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates.', 'sv', 'Simulated. Access is restricted to registered delegates.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the North Foyer.', 'sv', 'Simulerad. Delegater går in via norra foajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade delegater.')
     )
   ),
   (
     'battery-innovations-days-2026', 'stockholmsmassan', jsonb_build_object('en', 'Battery Innovations Days 2026', 'sv', 'Battery Innovations Days 2026'),
-    jsonb_build_object('en', 'European conference on battery research and innovation', 'sv', 'European conference on battery research and innovation'),
+    jsonb_build_object('en', 'European conference on battery research and innovation', 'sv', 'Europeisk konferens om batteriforskning och innovation'),
     'Congress', 'Industry', 'professional', 'registration',
     date '2026-11-11', date '2026-11-12',
-    jsonb_build_object('en', 'Battery Innovations Days is a European conference covering battery research, materials, manufacturing, and innovation, with scientific and industry tracks.', 'sv', 'Battery Innovations Days is a European conference covering battery research, materials, manufacturing, and innovation, with scientific and industry tracks.'),
-    jsonb_build_object('primary_color', '#00a398', 'accent_color', '#262626', 'logo', null, 'hero_image', 'assets/images/events/battery-innovations-days-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Battery Innovations Days is a European conference covering battery research, materials, manufacturing, and innovation, with scientific and industry tracks.', 'sv', 'Battery Innovations Days är en europeisk konferens om batteriforskning, material, tillverkning och innovation, med både vetenskapliga och industrirelaterade spår.'),
+    jsonb_build_object('primary_color', '#00a398', 'accent_color', '#262626', 'logo', null, 'hero_image', 'assets/images/events/battery-innovations-days-2026.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the West Foyer.', 'sv', 'Simulated. Delegates enter via the West Foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates.', 'sv', 'Simulated. Access is restricted to registered delegates.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the West Foyer.', 'sv', 'Simulerad. Delegater går in via västra foajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade delegater.')
     )
   ),
   (
     'gymnasiemassan-2026', 'stockholmsmassan', jsonb_build_object('en', 'Gymnasiemassan 2026', 'sv', 'Gymnasiemassan 2026'),
-    jsonb_build_object('en', 'Upper secondary school selection fair', 'sv', 'Upper secondary school selection fair'),
+    jsonb_build_object('en', 'Upper secondary school selection fair', 'sv', 'Gymnasievalsmässa'),
     'Public fair', 'Education and training', 'public', 'public_ticket',
     date '2026-11-17', date '2026-11-19',
-    jsonb_build_object('en', 'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.', 'sv', 'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.'),
-    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', 'assets/images/events/gymnasiemassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.', 'sv', 'Gymnasiemässan är den svenska gymnasievalsmässan, där elever och familjer möter skolor, program och studie- och yrkesvägledare.'),
+    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', 'assets/images/events/gymnasiemassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Students and families enter through the main foyer. School groups have a dedicated check-in.', 'sv', 'Simulated. Students and families enter through the main foyer. School groups have a dedicated check-in.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.', 'sv', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.')
+      'entrance', jsonb_build_object('en', 'Simulated. Students and families enter through the main foyer. School groups have a dedicated check-in.', 'sv', 'Simulerad. Elever och familjer går in genom huvudfoajén. Skolgrupper har en särskild incheckning.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.', 'sv', 'Simulerad. Inträde för besökare hanteras enligt arrangörens policy; skolgrupper bokar i förväg.')
     )
   ),
   (
-    'formex-jan-2027', 'stockholmsmassan', jsonb_build_object('en', 'Formex January 2027', 'sv', 'Formex January 2027'),
-    jsonb_build_object('en', 'Nordic interior design trade fair, spring edition', 'sv', 'Nordic interior design trade fair, spring edition'),
+    'formex-jan-2027', 'stockholmsmassan', jsonb_build_object('en', 'Formex January 2027', 'sv', 'Formex januari 2027'),
+    jsonb_build_object('en', 'Nordic interior design trade fair, spring edition', 'sv', 'Nordisk inredningsmässa, vårupplaga'),
     'Trade fair', 'Interior design', 'professional', 'registration',
     date '2027-01-19', date '2027-01-21',
-    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The January edition focuses on the spring-summer season.', 'sv', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The January edition focuses on the spring-summer season.'),
-    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-jan-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The January edition focuses on the spring-summer season.', 'sv', 'Formex är den ledande nordiska mässan för inredning, presentartiklar och livsstilsvarumärken. Januariupplagan fokuserar på vår- och sommarsäsongen.'),
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-jan-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.', 'sv', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.', 'sv', 'Simulerad. Arbetsväskor är tillåtna; skrymmande föremål ska lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'stockholm-design-week-2027', 'stockholmsmassan', jsonb_build_object('en', 'Stockholm Design Week 2027', 'sv', 'Stockholm Design Week 2027'),
-    jsonb_build_object('en', 'City-wide design week with venue events at Stockholmsmassan', 'sv', 'City-wide design week with venue events at Stockholmsmassan'),
+    jsonb_build_object('en', 'City-wide design week with venue events at Stockholmsmassan', 'sv', 'Stadsövergripande designvecka med arrangemang på Stockholmsmässan'),
     'Event', 'Interior design', 'public', 'none',
     date '2027-02-08', date '2027-02-14',
-    jsonb_build_object('en', 'Stockholm Design Week is a city-wide design program with showrooms, exhibitions, and events across Stockholm, anchored by activity at Stockholmsmassan during the Stockholm Furniture Fair week.', 'sv', 'Stockholm Design Week is a city-wide design program with showrooms, exhibitions, and events across Stockholm, anchored by activity at Stockholmsmassan during the Stockholm Furniture Fair week.'),
-    jsonb_build_object('primary_color', '#111111', 'accent_color', '#e4d9c5', 'logo', null, 'hero_image', 'assets/images/events/stockholm-design-week-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Stockholm Design Week is a city-wide design program with showrooms, exhibitions, and events across Stockholm, anchored by activity at Stockholmsmassan during the Stockholm Furniture Fair week.', 'sv', 'Stockholm Design Week är ett stadsövergripande designprogram med showrooms, utställningar och evenemang runt om i Stockholm, med tyngdpunkt på aktiviteter på Stockholmsmässan under veckan för Stockholm Furniture Fair.'),
+    jsonb_build_object('primary_color', '#111111', 'accent_color', '#e4d9c5', 'logo', null, 'hero_image', 'assets/images/events/stockholm-design-week-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Venue events at Stockholmsmassan share the main foyer entrance with the Stockholm Furniture Fair.', 'sv', 'Simulated. Venue events at Stockholmsmassan share the main foyer entrance with the Stockholm Furniture Fair.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Most city-wide programming is open; venue sessions inside Stockholmsmassan follow the Stockholm Furniture Fair access rules.', 'sv', 'Simulated. Most city-wide programming is open; venue sessions inside Stockholmsmassan follow the Stockholm Furniture Fair access rules.')
+      'entrance', jsonb_build_object('en', 'Simulated. Venue events at Stockholmsmassan share the main foyer entrance with the Stockholm Furniture Fair.', 'sv', 'Simulerad. Arrangemang på Stockholmsmässan delar entrén i huvudfoajén med Stockholm Furniture Fair.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Most city-wide programming is open; venue sessions inside Stockholmsmassan follow the Stockholm Furniture Fair access rules.', 'sv', 'Simulerad. Större delen av det stadsövergripande programmet är öppet; sessioner inne på Stockholmsmässan följer Stockholm Furniture Fairs tillträdesregler.')
     )
   ),
   (
     'stockholm-furniture-fair-2027', 'stockholmsmassan', jsonb_build_object('en', 'Stockholm Furniture Fair 2027', 'sv', 'Stockholm Furniture Fair 2027'),
-    jsonb_build_object('en', 'Leading platform for Scandinavian design', 'sv', 'Leading platform for Scandinavian design'),
+    jsonb_build_object('en', 'Leading platform for Scandinavian design', 'sv', 'Ledande plattform för skandinavisk design'),
     'Trade fair', 'Interior design', 'professional', 'registration',
     date '2027-02-09', date '2027-02-12',
-    jsonb_build_object('en', 'Stockholm Furniture Fair is the leading platform for Scandinavian design, with exhibitors, Greenhouse emerging-designer spaces, and a curated program. The 2027 edition is the next biennial edition.', 'sv', 'Stockholm Furniture Fair is the leading platform for Scandinavian design, with exhibitors, Greenhouse emerging-designer spaces, and a curated program. The 2027 edition is the next biennial edition.'),
-    jsonb_build_object('primary_color', '#1a1a1a', 'accent_color', '#bfb8a5', 'logo', null, 'hero_image', 'assets/images/events/stockholm-furniture-fair-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Stockholm Furniture Fair is the leading platform for Scandinavian design, with exhibitors, Greenhouse emerging-designer spaces, and a curated program. The 2027 edition is the next biennial edition.', 'sv', 'Stockholm Furniture Fair är den ledande plattformen för skandinavisk design, med utställare, Greenhouse-ytor för nya designers och ett kurerat program. 2027 års upplaga är nästa biennala upplaga.'),
+    jsonb_build_object('primary_color', '#1a1a1a', 'accent_color', '#bfb8a5', 'logo', null, 'hero_image', 'assets/images/events/stockholm-furniture-fair-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors and accredited media registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors and accredited media registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors and accredited media registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare och ackrediterad press som registrerats via arrangören.')
     )
   ),
   (
     'sportfiskemassan-2027', 'stockholmsmassan', jsonb_build_object('en', 'Sportfiskemassan 2027', 'sv', 'Sportfiskemassan 2027'),
-    jsonb_build_object('en', 'Swedish sport fishing consumer expo', 'sv', 'Swedish sport fishing consumer expo'),
+    jsonb_build_object('en', 'Swedish sport fishing consumer expo', 'sv', 'Svensk konsumentmässa för sportfiske'),
     'Public fair', 'Leisure and consumer', 'public', 'public_ticket',
     date '2027-03-19', date '2027-03-21',
-    jsonb_build_object('en', 'Sportfiskemassan is the Swedish sport-fishing consumer expo with exhibitors, demonstrations, and an expanded program for the 2027 edition.', 'sv', 'Sportfiskemassan is the Swedish sport-fishing consumer expo with exhibitors, demonstrations, and an expanded program for the 2027 edition.'),
-    jsonb_build_object('primary_color', '#1b5e96', 'accent_color', '#86bc40', 'logo', null, 'hero_image', 'assets/images/events/sportfiskemassan-2027.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Sportfiskemassan is the Swedish sport-fishing consumer expo with exhibitors, demonstrations, and an expanded program for the 2027 edition.', 'sv', 'Sportfiskemässan är den svenska sportfiskemässan för konsumenter med utställare, demonstrationer och ett utökat program för 2027 års upplaga.'),
+    jsonb_build_object('primary_color', '#1b5e96', 'accent_color', '#86bc40', 'logo', null, 'hero_image', 'assets/images/events/sportfiskemassan-2027.webp', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulated. Visitors enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Fishing rods and related equipment are allowed on the fair floor.', 'sv', 'Simulated. Fishing rods and related equipment are allowed on the fair floor.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls.', 'sv', 'Simulated. A visitor ticket grants access to all halls.')
+      'entrance', jsonb_build_object('en', 'Simulated. Visitors enter through the main foyer.', 'sv', 'Simulerad. Besökare går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Fishing rods and related equipment are allowed on the fair floor.', 'sv', 'Simulerad. Fiskespön och tillhörande utrustning är tillåtna på mässgolvet.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all halls.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla hallar.')
     )
   ),
   (
     'escmid-global-2027', 'stockholmsmassan', jsonb_build_object('en', 'ESCMID Global 2027', 'sv', 'ESCMID Global 2027'),
-    jsonb_build_object('en', 'European congress on infectious diseases and clinical microbiology', 'sv', 'European congress on infectious diseases and clinical microbiology'),
+    jsonb_build_object('en', 'European congress on infectious diseases and clinical microbiology', 'sv', 'Europeisk kongress om infektionssjukdomar och klinisk mikrobiologi'),
     'Congress', 'Health & Medicine', 'professional', 'registration',
     date '2027-04-09', date '2027-04-13',
-    jsonb_build_object('en', 'ESCMID Global is the leading European congress on infectious diseases and clinical microbiology, with a multi-track scientific program and large industry exhibition.', 'sv', 'ESCMID Global is the leading European congress on infectious diseases and clinical microbiology, with a multi-track scientific program and large industry exhibition.'),
-    jsonb_build_object('primary_color', '#004a94', 'accent_color', '#c8102e', 'logo', null, 'hero_image', 'assets/images/events/escmid-global-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'ESCMID Global is the leading European congress on infectious diseases and clinical microbiology, with a multi-track scientific program and large industry exhibition.', 'sv', 'ESCMID Global är den ledande europeiska kongressen om infektionssjukdomar och klinisk mikrobiologi, med ett vetenskapligt program i flera spår och en stor branschutställning.'),
+    jsonb_build_object('primary_color', '#004a94', 'accent_color', '#c8102e', 'logo', null, 'hero_image', 'assets/images/events/escmid-global-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the East Foyer. Badges and photo ID are required at the door.', 'sv', 'Simulated. Delegates enter via the East Foyer. Badges and photo ID are required at the door.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.', 'sv', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.', 'sv', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the East Foyer. Badges and photo ID are required at the door.', 'sv', 'Simulerad. Delegater går in via östra foajén. Bricka och fotolegitimation krävs vid entrén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller; posterrör kan lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade delegater, utställare och ackrediterad press.')
     )
   ),
   (
     'cired-2027', 'stockholmsmassan', jsonb_build_object('en', 'CIRED 2027', 'sv', 'CIRED 2027'),
-    jsonb_build_object('en', 'International conference and exhibition on electricity distribution', 'sv', 'International conference and exhibition on electricity distribution'),
+    jsonb_build_object('en', 'International conference and exhibition on electricity distribution', 'sv', 'Internationell konferens och utställning om eldistribution'),
     'Congress', 'Industry', 'professional', 'registration',
     date '2027-06-14', date '2027-06-17',
-    jsonb_build_object('en', 'CIRED is the leading forum for the global electricity distribution community, with technical sessions, poster presentations, and a large industry exhibition.', 'sv', 'CIRED is the leading forum for the global electricity distribution community, with technical sessions, poster presentations, and a large industry exhibition.'),
-    jsonb_build_object('primary_color', '#002147', 'accent_color', '#e6a22a', 'logo', null, 'hero_image', 'assets/images/events/cired-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'CIRED is the leading forum for the global electricity distribution community, with technical sessions, poster presentations, and a large industry exhibition.', 'sv', 'CIRED är det ledande forumet för den globala eldistributionsbranschen, med tekniska sessioner, posterpresentationer och en stor branschutställning.'),
+    jsonb_build_object('primary_color', '#002147', 'accent_color', '#e6a22a', 'logo', null, 'hero_image', 'assets/images/events/cired-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the North Foyer. Badges are required at the door.', 'sv', 'Simulated. Delegates enter via the North Foyer. Badges are required at the door.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates and exhibitors.', 'sv', 'Simulated. Access is restricted to registered delegates and exhibitors.')
+      'entrance', jsonb_build_object('en', 'Simulated. Delegates enter via the North Foyer. Badges are required at the door.', 'sv', 'Simulerad. Delegater går in via norra foajén. Bricka krävs vid entrén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to registered delegates and exhibitors.', 'sv', 'Simulerad. Tillträde är begränsat till registrerade delegater och utställare.')
     )
   ),
   (
-    'formex-aug-2027', 'stockholmsmassan', jsonb_build_object('en', 'Formex August 2027', 'sv', 'Formex August 2027'),
-    jsonb_build_object('en', 'Nordic interior design trade fair, autumn edition', 'sv', 'Nordic interior design trade fair, autumn edition'),
+    'formex-aug-2027', 'stockholmsmassan', jsonb_build_object('en', 'Formex August 2027', 'sv', 'Formex augusti 2027'),
+    jsonb_build_object('en', 'Nordic interior design trade fair, autumn edition', 'sv', 'Nordisk inredningsmässa, höstupplaga'),
     'Trade fair', 'Interior design', 'professional', 'registration',
     date '2027-08-24', date '2027-08-26',
-    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.', 'sv', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.'),
-    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-aug-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.', 'sv', 'Formex är den ledande nordiska mässan för inredning, present­artiklar och livsstilsvarumärken. Augustiupplagan fokuserar på höst- och vintersäsongen.'),
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-aug-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.', 'sv', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.', 'sv', 'Simulerad. Arbetsväskor är tillåtna; skrymmande föremål ska lämnas i garderoben.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'totalforsvarsmassan-2027', 'stockholmsmassan', jsonb_build_object('en', 'Totalforsvarsmassan 2027', 'sv', 'Totalforsvarsmassan 2027'),
-    jsonb_build_object('en', 'Swedish total-defense industry fair', 'sv', 'Swedish total-defense industry fair'),
+    jsonb_build_object('en', 'Swedish total-defense industry fair', 'sv', 'Svensk totalförsvarsmässa'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2027-10-26', date '2027-10-28',
-    jsonb_build_object('en', 'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.', 'sv', 'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.'),
-    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', 'assets/images/events/totalforsvarsmassan-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.', 'sv', 'Totalförsvarsmässan är den svenska totalförsvarsmässan och täcker civil beredskap, försvar och krisberedskap.'),
+    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', 'assets/images/events/totalforsvarsmassan-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'gymnasiemassan-2027', 'stockholmsmassan', jsonb_build_object('en', 'Gymnasiemassan 2027', 'sv', 'Gymnasiemassan 2027'),
-    jsonb_build_object('en', 'Upper secondary school selection fair', 'sv', 'Upper secondary school selection fair'),
+    jsonb_build_object('en', 'Upper secondary school selection fair', 'sv', 'Gymnasievalsmässa'),
     'Public fair', 'Education and training', 'public', 'public_ticket',
     date '2027-11-23', date '2027-11-25',
-    jsonb_build_object('en', 'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.', 'sv', 'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.'),
-    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', 'assets/images/events/gymnasiemassan-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.', 'sv', 'Gymnasiemässan är den svenska gymnasievalsmässan, där elever och familjer möter skolor, program och studie- och yrkesvägledare.'),
+    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', 'assets/images/events/gymnasiemassan-2027.png', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Students and families enter through the main foyer.', 'sv', 'Simulated. Students and families enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.', 'sv', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.')
+      'entrance', jsonb_build_object('en', 'Simulated. Students and families enter through the main foyer.', 'sv', 'Simulerad. Elever och familjer går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.', 'sv', 'Simulerad. Inträde för besökare hanteras enligt arrangörens policy; skolgrupper bokar i förväg.')
     )
   ),
   (
-    'formex-jan-2028', 'stockholmsmassan', jsonb_build_object('en', 'Formex January 2028', 'sv', 'Formex January 2028'),
-    jsonb_build_object('en', 'Nordic interior design trade fair, spring edition', 'sv', 'Nordic interior design trade fair, spring edition'),
+    'formex-jan-2028', 'stockholmsmassan', jsonb_build_object('en', 'Formex January 2028', 'sv', 'Formex januari 2028'),
+    jsonb_build_object('en', 'Nordic interior design trade fair, spring edition', 'sv', 'Nordisk inredningsmässa, vårupplaga'),
     'Trade fair', 'Interior design', 'professional', 'registration',
     date '2028-01-18', date '2028-01-20',
-    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.', 'sv', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.'),
-    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-jan-2028.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.', 'sv', 'Formex är den ledande nordiska mässan för inredning, presentartiklar och livsstilsvarumärken.'),
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-jan-2028.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed.', 'sv', 'Simulated. Work bags are allowed.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed.', 'sv', 'Simulerad. Arbetsväskor är tillåtna.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'nordbygg-2028', 'stockholmsmassan', jsonb_build_object('en', 'Nordbygg 2028', 'sv', 'Nordbygg 2028'),
-    jsonb_build_object('en', 'Nordic construction trade fair', 'sv', 'Nordic construction trade fair'),
+    jsonb_build_object('en', 'Nordic construction trade fair', 'sv', 'Nordisk byggmässa'),
     'Trade fair', 'Construction and real estate', 'public', 'public_ticket',
     date '2028-04-04', date '2028-04-07',
-    jsonb_build_object('en', 'Nordbygg returns to Stockholmsmassan as the leading Nordic meeting place for the construction and real-estate industry.', 'sv', 'Nordbygg returns to Stockholmsmassan as the leading Nordic meeting place for the construction and real-estate industry.'),
-    jsonb_build_object('primary_color', '#0b3d91', 'accent_color', '#f4b400', 'logo', null, 'hero_image', 'assets/images/events/nordbygg-2028.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmassan')),
+    jsonb_build_object('en', 'Nordbygg returns to Stockholmsmassan as the leading Nordic meeting place for the construction and real-estate industry.', 'sv', 'Nordbygg återvänder till Stockholmsmässan som den ledande nordiska mötesplatsen för bygg- och fastighetsbranschen.'),
+    jsonb_build_object('primary_color', '#0b3d91', 'accent_color', '#f4b400', 'logo', null, 'hero_image', 'assets/images/events/nordbygg-2028.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan', 'sv', 'Stockholmsmässan')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration.', 'sv', 'Simulated. Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags and smaller backpacks are allowed on the fair floor.', 'sv', 'Simulated. Work bags and smaller backpacks are allowed on the fair floor.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all exhibition halls and seminar rooms.', 'sv', 'Simulated. A visitor ticket grants access to all exhibition halls and seminar rooms.')
+      'entrance', jsonb_build_object('en', 'Simulated. Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration.', 'sv', 'Simulerad. Gå in genom huvudfoajén på Stockholmsmässan. Nordbyggs skyltning vägleder besökare till registreringen.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags and smaller backpacks are allowed on the fair floor.', 'sv', 'Simulerad. Arbetsväskor och mindre ryggsäckar är tillåtna på mässgolvet.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. A visitor ticket grants access to all exhibition halls and seminar rooms.', 'sv', 'Simulerad. En besöksbiljett ger tillträde till alla utställningshallar och seminarierum.')
     )
   ),
   (
-    'formex-aug-2028', 'stockholmsmassan', jsonb_build_object('en', 'Formex August 2028', 'sv', 'Formex August 2028'),
-    jsonb_build_object('en', 'Nordic interior design trade fair, autumn edition', 'sv', 'Nordic interior design trade fair, autumn edition'),
+    'formex-aug-2028', 'stockholmsmassan', jsonb_build_object('en', 'Formex August 2028', 'sv', 'Formex augusti 2028'),
+    jsonb_build_object('en', 'Nordic interior design trade fair, autumn edition', 'sv', 'Nordisk inredningsmässa, höstupplaga'),
     'Trade fair', 'Interior design', 'professional', 'registration',
     date '2028-08-29', date '2028-08-31',
-    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.', 'sv', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.'),
-    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-aug-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmassan (reused from earlier edition)')),
+    jsonb_build_object('en', 'Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.', 'sv', 'Formex är den ledande nordiska mässan för inredning, presentartiklar och livsstilsvarumärken.'),
+    jsonb_build_object('primary_color', '#2b2c2d', 'accent_color', '#d4af37', 'logo', null, 'hero_image', 'assets/images/events/formex-aug-2027.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmässan (återanvänd från tidigare upplaga)')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed.', 'sv', 'Simulated. Work bags are allowed.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Work bags are allowed.', 'sv', 'Simulerad. Arbetsväskor är tillåtna.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'skydd-2028', 'stockholmsmassan', jsonb_build_object('en', 'Skydd 2028', 'sv', 'Skydd 2028'),
-    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordic security, fire-safety, and protection trade fair'),
+    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordisk mässa för säkerhet, brandskydd och skyddstjänster'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2028-10-24', date '2028-10-26',
-    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.', 'sv', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.'),
-    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmassan (reused from earlier edition)')),
+    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.', 'sv', 'Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap.'),
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmässan (återanvänd från tidigare upplaga)')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'gymnasiemassan-2028', 'stockholmsmassan', jsonb_build_object('en', 'Gymnasiemassan 2028', 'sv', 'Gymnasiemassan 2028'),
-    jsonb_build_object('en', 'Upper secondary school selection fair', 'sv', 'Upper secondary school selection fair'),
+    jsonb_build_object('en', 'Upper secondary school selection fair', 'sv', 'Gymnasievalsmässa'),
     'Public fair', 'Education and training', 'public', 'public_ticket',
     date '2028-11-21', date '2028-11-23',
-    jsonb_build_object('en', 'Gymnasiemassan is the Swedish upper-secondary school selection fair.', 'sv', 'Gymnasiemassan is the Swedish upper-secondary school selection fair.'),
-    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', 'assets/images/events/gymnasiemassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmassan (reused from earlier edition)')),
+    jsonb_build_object('en', 'Gymnasiemassan is the Swedish upper-secondary school selection fair.', 'sv', 'Gymnasiemässan är den svenska gymnasievalsmässan.'),
+    jsonb_build_object('primary_color', '#e30613', 'accent_color', '#004b87', 'logo', null, 'hero_image', 'assets/images/events/gymnasiemassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmässan (återanvänd från tidigare upplaga)')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Students and families enter through the main foyer.', 'sv', 'Simulated. Students and families enter through the main foyer.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.', 'sv', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.')
+      'entrance', jsonb_build_object('en', 'Simulated. Students and families enter through the main foyer.', 'sv', 'Simulerad. Elever och familjer går in genom huvudfoajén.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.', 'sv', 'Simulerad. Inträde för besökare hanteras enligt arrangörens policy; skolgrupper bokar i förväg.')
     )
   ),
   (
     'skydd-2030', 'stockholmsmassan', jsonb_build_object('en', 'Skydd 2030', 'sv', 'Skydd 2030'),
-    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordic security, fire-safety, and protection trade fair'),
+    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordisk mässa för säkerhet, brandskydd och skyddstjänster'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2030-10-22', date '2030-10-24',
-    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.', 'sv', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.'),
-    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmassan (reused from earlier edition)')),
+    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.', 'sv', 'Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap.'),
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmässan (återanvänd från tidigare upplaga)')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'totalforsvarsmassan-2030', 'stockholmsmassan', jsonb_build_object('en', 'Totalforsvarsmassan 2030', 'sv', 'Totalforsvarsmassan 2030'),
-    jsonb_build_object('en', 'Swedish total-defense industry fair', 'sv', 'Swedish total-defense industry fair'),
+    jsonb_build_object('en', 'Swedish total-defense industry fair', 'sv', 'Svensk totalförsvarsmässa'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2030-10-22', date '2030-10-24',
-    jsonb_build_object('en', 'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.', 'sv', 'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.'),
-    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', 'assets/images/events/totalforsvarsmassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmassan (reused from earlier edition)')),
+    jsonb_build_object('en', 'Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.', 'sv', 'Totalförsvarsmässan är den svenska totalförsvarsmässan och täcker civil beredskap, försvar och krisberedskap.'),
+    jsonb_build_object('primary_color', '#4e5c32', 'accent_color', '#b39956', 'logo', null, 'hero_image', 'assets/images/events/totalforsvarsmassan-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmässan (återanvänd från tidigare upplaga)')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   ),
   (
     'skydd-2032', 'stockholmsmassan', jsonb_build_object('en', 'Skydd 2032', 'sv', 'Skydd 2032'),
-    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordic security, fire-safety, and protection trade fair'),
+    jsonb_build_object('en', 'Nordic security, fire-safety, and protection trade fair', 'sv', 'Nordisk mässa för säkerhet, brandskydd och skyddstjänster'),
     'Trade fair', 'Industry', 'professional', 'registration',
     date '2032-10-19', date '2032-10-21',
-    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.', 'sv', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.'),
-    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmassan (reused from earlier edition)')),
+    jsonb_build_object('en', 'Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.', 'sv', 'Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap.'),
+    jsonb_build_object('primary_color', '#c41e3a', 'accent_color', '#1a2e44', 'logo', null, 'hero_image', 'assets/images/events/skydd-2026.jpg', 'hero_image_credit', jsonb_build_object('en', 'Stockholmsmassan (reused from earlier edition)', 'sv', 'Stockholmsmässan (återanvänd från tidigare upplaga)')),
     jsonb_build_object(
-      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.'),
-      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulated. Standard venue bag rules apply.'),
-      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulated. Access is restricted to trade visitors registered through the organizer.')
+      'entrance', jsonb_build_object('en', 'Simulated. Trade visitors enter via the East Foyer. Badges are required for access.', 'sv', 'Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde.'),
+      'bag_rules', jsonb_build_object('en', 'Simulated. Standard venue bag rules apply.', 'sv', 'Simulerad. Anläggningens vanliga väskregler gäller.'),
+      'access_notes', jsonb_build_object('en', 'Simulated. Access is restricted to trade visitors registered through the organizer.', 'sv', 'Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören.')
     )
   )
 on conflict (id) do update set

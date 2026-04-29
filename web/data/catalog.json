@@ -13,47 +13,47 @@
     "transport": {
       "summary": {
         "en": "Alvsjo station is adjacent to Stockholmsmassan. Commuter trains from Stockholm City take about 9 minutes. Direct travel from Arlanda Airport to Alvsjo is also available.",
-        "sv": "Alvsjo station is adjacent to Stockholmsmassan. Commuter trains from Stockholm City take about 9 minutes. Direct travel from Arlanda Airport to Alvsjo is also available."
+        "sv": "Älvsjö station ligger intill Stockholmsmässan. Pendeltåg från Stockholm City tar cirka 9 minuter. Det går också direkttåg från Arlanda flygplats till Älvsjö."
       },
       "modes": [
         {
           "mode": {
             "en": "Commuter train",
-            "sv": "Commuter train"
+            "sv": "Pendeltåg"
           },
           "detail": {
             "en": "SL pendeltag from Stockholm City stops directly at Alvsjo station in about 9 minutes.",
-            "sv": "SL pendeltag from Stockholm City stops directly at Alvsjo station in about 9 minutes."
+            "sv": "SL:s pendeltåg från Stockholm City stannar direkt vid Älvsjö station efter cirka 9 minuter."
           }
         },
         {
           "mode": {
             "en": "From Arlanda Airport",
-            "sv": "From Arlanda Airport"
+            "sv": "Från Arlanda flygplats"
           },
           "detail": {
             "en": "Direct services from Arlanda to Alvsjo are available without changing in central Stockholm.",
-            "sv": "Direct services from Arlanda to Alvsjo are available without changing in central Stockholm."
+            "sv": "Det går direkttrafik från Arlanda till Älvsjö utan byte i centrala Stockholm."
           }
         },
         {
           "mode": {
             "en": "Bus",
-            "sv": "Bus"
+            "sv": "Buss"
           },
           "detail": {
             "en": "Several SL bus lines stop at Alvsjo stationsplan, which is a short walk from the main entrance.",
-            "sv": "Several SL bus lines stop at Alvsjo stationsplan, which is a short walk from the main entrance."
+            "sv": "Flera av SL:s busslinjer stannar vid Älvsjö stationsplan, som ligger en kort promenad från huvudentrén."
           }
         },
         {
           "mode": {
             "en": "Bike",
-            "sv": "Bike"
+            "sv": "Cykel"
           },
           "detail": {
             "en": "Marked cycle paths connect Alvsjo to central Stockholm. Covered bike parking is available near the main entrance.",
-            "sv": "Marked cycle paths connect Alvsjo to central Stockholm. Covered bike parking is available near the main entrance."
+            "sv": "Markerade cykelvägar förbinder Älvsjö med centrala Stockholm. Det finns övertäckt cykelparkering nära huvudentrén."
           }
         }
       ]
@@ -61,13 +61,13 @@
     "parking": {
       "summary": {
         "en": "About 2,000 parking spaces on site, additional nearby overflow parking, and EV charging.",
-        "sv": "About 2,000 parking spaces on site, additional nearby overflow parking, and EV charging."
+        "sv": "Cirka 2 000 parkeringsplatser på området, ytterligare avlastningsparkering i närheten samt laddning för elbilar."
       },
       "onsite_spaces": 2000,
       "ev_charging": true,
       "notes": {
         "en": "Parking is paid and fills quickly during large trade fairs and congresses. Pre-booking is recommended for events with heavy visitor volumes.",
-        "sv": "Parking is paid and fills quickly during large trade fairs and congresses. Pre-booking is recommended for events with heavy visitor volumes."
+        "sv": "Parkering är avgiftsbelagd och fylls snabbt vid stora mässor och kongresser. Förbokning rekommenderas vid evenemang med många besökare."
       }
     },
     "restaurants": [
@@ -78,7 +78,7 @@
         },
         "description": {
           "en": "Full-service on-site restaurant serving lunch during events.",
-          "sv": "Full-service on-site restaurant serving lunch during events."
+          "sv": "Fullservicerestaurang på området som serverar lunch under evenemangen."
         }
       },
       {
@@ -88,7 +88,7 @@
         },
         "description": {
           "en": "Coffee, pastries, and quick lunch options near the main foyer.",
-          "sv": "Coffee, pastries, and quick lunch options near the main foyer."
+          "sv": "Kaffe, bakverk och snabba lunchalternativ nära huvudfoajén."
         }
       },
       {
@@ -98,78 +98,78 @@
         },
         "description": {
           "en": "Seasonal a-la-carte menu oriented to business lunches and congress delegates.",
-          "sv": "Seasonal a-la-carte menu oriented to business lunches and congress delegates."
+          "sv": "Säsongsbaserad à la carte-meny inriktad på affärsluncher och kongressdelegater."
         }
       },
       {
         "name": {
           "en": "Hall Cafeteria East",
-          "sv": "Hall Cafeteria East"
+          "sv": "Hallkafeteria öster"
         },
         "description": {
           "en": "Buffet-style cafeteria close to the East Halls for peak-lunch throughput.",
-          "sv": "Buffet-style cafeteria close to the East Halls for peak-lunch throughput."
+          "sv": "Buffékafeteria intill östra hallarna för hög genomströmning under lunchtoppen."
         }
       },
       {
         "name": {
           "en": "Hall Cafeteria West",
-          "sv": "Hall Cafeteria West"
+          "sv": "Hallkafeteria väster"
         },
         "description": {
           "en": "Buffet-style cafeteria close to the West Halls.",
-          "sv": "Buffet-style cafeteria close to the West Halls."
+          "sv": "Buffékafeteria intill västra hallarna."
         }
       },
       {
         "name": {
           "en": "Espresso Bar Foyer",
-          "sv": "Espresso Bar Foyer"
+          "sv": "Espressobar i foajén"
         },
         "description": {
           "en": "Quick espresso and grab-and-go snacks inside the main foyer.",
-          "sv": "Quick espresso and grab-and-go snacks inside the main foyer."
+          "sv": "Snabb espresso och tilltugg att ta med inne i huvudfoajén."
         }
       }
     ],
     "security": {
       "summary": {
         "en": "Stockholmsmassan is the first exhibition venue in Sweden certified to the SHORE safety standard. Bag checks, access control, and event-specific entry procedures are in place.",
-        "sv": "Stockholmsmassan is the first exhibition venue in Sweden certified to the SHORE safety standard. Bag checks, access control, and event-specific entry procedures are in place."
+        "sv": "Stockholmsmässan är den första utställningsanläggningen i Sverige som certifierats enligt säkerhetsstandarden SHORE. Väskkontroller, tillträdeskontroll och evenemangsspecifika entrérutiner finns på plats."
       },
       "general_rules": [
         {
           "en": "Bags are subject to visual inspection at entry.",
-          "sv": "Bags are subject to visual inspection at entry."
+          "sv": "Väskor kan komma att kontrolleras visuellt vid entrén."
         },
         {
           "en": "Oversize luggage should be left at the cloakroom or returned to a hotel.",
-          "sv": "Oversize luggage should be left at the cloakroom or returned to a hotel."
+          "sv": "Skrymmande bagage ska lämnas i garderoben eller återföras till hotellet."
         },
         {
           "en": "Follow staff and signage regarding special entrances for specific events.",
-          "sv": "Follow staff and signage regarding special entrances for specific events."
+          "sv": "Följ personal och skyltning om särskilda entréer för enskilda evenemang."
         },
         {
           "en": "Report anything suspicious to on-site security; emergency exits are marked throughout the venue.",
-          "sv": "Report anything suspicious to on-site security; emergency exits are marked throughout the venue."
+          "sv": "Anmäl misstänkta händelser till väktarna på plats; nödutgångar är markerade i hela anläggningen."
         }
       ]
     },
     "sustainability": {
       "en": "Stockholmsmassan is ISO 20121 certified and runs an active sustainability program spanning energy, waste, catering, and supplier choices.",
-      "sv": "Stockholmsmassan is ISO 20121 certified and runs an active sustainability program spanning energy, waste, catering, and supplier choices."
+      "sv": "Stockholmsmässan är certifierad enligt ISO 20121 och driver ett aktivt hållbarhetsprogram som omfattar energi, avfall, mat och leverantörsval."
     },
     "maps": [
       {
         "id": "stockholmsmassan-overview",
         "name": {
           "en": "Venue overview",
-          "sv": "Venue overview"
+          "sv": "Översiktskarta"
         },
         "description": {
           "en": "High-level map of entrances, halls, foyers, and conference rooms. The prototype lists available maps without rendering them.",
-          "sv": "High-level map of entrances, halls, foyers, and conference rooms. The prototype lists available maps without rendering them."
+          "sv": "Översiktskarta över entréer, hallar, foajéer och konferensrum. Prototypen listar tillgängliga kartor utan att rendera dem."
         }
       }
     ]
@@ -184,7 +184,7 @@
       },
       "subtitle": {
         "en": "Nordic construction trade fair",
-        "sv": "Nordic construction trade fair"
+        "sv": "Nordisk byggmässa"
       },
       "type": "Trade fair",
       "category": "Construction and real estate",
@@ -194,7 +194,7 @@
       "end_date": "2026-04-24",
       "summary": {
         "en": "Nordbygg is the leading Nordic meeting place for the construction and real-estate industry, with exhibitors, seminars, and industry news across four days at Stockholmsmassan.",
-        "sv": "Nordbygg is the leading Nordic meeting place for the construction and real-estate industry, with exhibitors, seminars, and industry news across four days at Stockholmsmassan."
+        "sv": "Nordbygg är den ledande nordiska mötesplatsen för bygg- och fastighetsbranschen, med utställare, seminarier och branschnyheter under fyra dagar på Stockholmsmässan."
       },
       "branding": {
         "primary_color": "#0b3d91",
@@ -203,47 +203,47 @@
         "hero_image": "assets/images/events/nordbygg-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer.",
-          "sv": "Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration in the A-Hall foyer."
+          "sv": "Gå in genom huvudfoajén på Stockholmsmässan. Nordbyggs skyltning vägleder besökare till registreringen i A-hallens foajé."
         },
         "bag_rules": {
           "en": "Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom.",
-          "sv": "Work bags and smaller backpacks are allowed on the fair floor; oversize luggage should be checked at the cloakroom."
+          "sv": "Arbetsväskor och mindre ryggsäckar är tillåtna på mässgolvet; skrymmande bagage ska lämnas i garderoben."
         },
         "access_notes": {
           "en": "A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis.",
-          "sv": "A visitor ticket grants access to all exhibition halls and seminar rooms. Some seminars have limited seating on a first-come basis."
+          "sv": "En besöksbiljett ger tillträde till alla utställningshallar och seminarierum. Vissa seminarier har begränsat antal platser enligt först-till-kvarn-principen."
         }
       },
       "questionnaire_subjects": [
         {
           "en": "Sustainable construction",
-          "sv": "Sustainable construction"
+          "sv": "Hållbart byggande"
         },
         {
           "en": "BIM and digital tools",
-          "sv": "BIM and digital tools"
+          "sv": "BIM och digitala verktyg"
         },
         {
           "en": "Renovation",
-          "sv": "Renovation"
+          "sv": "Renovering"
         },
         {
           "en": "Heating and ventilation",
-          "sv": "Heating and ventilation"
+          "sv": "Värme och ventilation"
         },
         {
           "en": "Smart buildings",
-          "sv": "Smart buildings"
+          "sv": "Smarta byggnader"
         },
         {
           "en": "Building safety",
-          "sv": "Building safety"
+          "sv": "Byggsäkerhet"
         }
       ]
     },
@@ -256,7 +256,7 @@
       },
       "subtitle": {
         "en": "European Society for Radiotherapy and Oncology Annual Congress",
-        "sv": "European Society for Radiotherapy and Oncology Annual Congress"
+        "sv": "Europeiska sällskapet för strålbehandling och onkologi – årlig kongress"
       },
       "type": "Congress",
       "category": "Health & Medicine",
@@ -266,7 +266,7 @@
       "end_date": "2026-05-19",
       "summary": {
         "en": "ESTRO 2026 is the European Society for Radiotherapy and Oncology annual congress, covering clinical practice, physics, radiobiology, and technology across a multi-track program.",
-        "sv": "ESTRO 2026 is the European Society for Radiotherapy and Oncology annual congress, covering clinical practice, physics, radiobiology, and technology across a multi-track program."
+        "sv": "ESTRO 2026 är den årliga kongressen för europeiska sällskapet för strålbehandling och onkologi och täcker klinisk praktik, fysik, strålningsbiologi och teknik i ett program med flera spår."
       },
       "branding": {
         "primary_color": "#123f66",
@@ -275,47 +275,47 @@
         "hero_image": "assets/images/events/estro-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day.",
-          "sv": "Registration and badge pickup for ESTRO 2026 are located in the North Foyer. Delegates should bring photo ID on the first day."
+          "sv": "Registrering och utlämning av kongressbrickor för ESTRO 2026 finns i norra foajén. Delegater ska ta med fotolegitimation den första dagen."
         },
         "bag_rules": {
           "en": "Standard venue bag rules apply; congress materials are distributed at the registration desk.",
-          "sv": "Standard venue bag rules apply; congress materials are distributed at the registration desk."
+          "sv": "Anläggningens vanliga väskregler gäller; kongressmaterial delas ut i receptionen."
         },
         "access_notes": {
           "en": "Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes.",
-          "sv": "Access is restricted to registered delegates, exhibitors, and accredited media. Sessions marked as closed require additional access codes."
+          "sv": "Tillträde är begränsat till registrerade delegater, utställare och ackrediterad press. Sessioner märkta som stängda kräver ytterligare åtkomstkoder."
         }
       },
       "questionnaire_subjects": [
         {
           "en": "Clinical radiation oncology",
-          "sv": "Clinical radiation oncology"
+          "sv": "Klinisk strålonkologi"
         },
         {
           "en": "Medical physics",
-          "sv": "Medical physics"
+          "sv": "Medicinsk fysik"
         },
         {
           "en": "Radiobiology",
-          "sv": "Radiobiology"
+          "sv": "Strålningsbiologi"
         },
         {
           "en": "Brachytherapy",
-          "sv": "Brachytherapy"
+          "sv": "Brakyterapi"
         },
         {
           "en": "Imaging and treatment planning",
-          "sv": "Imaging and treatment planning"
+          "sv": "Bildgivning och behandlingsplanering"
         },
         {
           "en": "Technology and innovation",
-          "sv": "Technology and innovation"
+          "sv": "Teknik och innovation"
         }
       ]
     },
@@ -324,11 +324,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "EHA2026 Congress",
-        "sv": "EHA2026 Congress"
+        "sv": "EHA2026-kongressen"
       },
       "subtitle": {
         "en": "European Hematology Association Annual Congress",
-        "sv": "European Hematology Association Annual Congress"
+        "sv": "Europeiska hematologföreningens årliga kongress"
       },
       "type": "Congress",
       "category": "Health & Medicine",
@@ -338,7 +338,7 @@
       "end_date": "2026-06-14",
       "summary": {
         "en": "The European Hematology Association annual congress brings clinicians and researchers together for plenaries, symposia, abstract presentations, and an industry exhibition.",
-        "sv": "The European Hematology Association annual congress brings clinicians and researchers together for plenaries, symposia, abstract presentations, and an industry exhibition."
+        "sv": "Europeiska hematologföreningens årliga kongress samlar kliniker och forskare för plenarsessioner, symposier, abstraktpresentationer och en branschutställning."
       },
       "branding": {
         "primary_color": "#8a1f57",
@@ -347,21 +347,21 @@
         "hero_image": "assets/images/events/eha-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions.",
-          "sv": "EHA2026 delegates enter through the East Foyer. Congress badges are required for all sessions."
+          "sv": "Delegater på EHA2026 går in genom östra foajén. Kongressbrickor krävs för alla sessioner."
         },
         "bag_rules": {
           "en": "Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom.",
-          "sv": "Standard venue bag rules apply. Poster tubes and rollable cases are accommodated at the cloakroom."
+          "sv": "Anläggningens vanliga väskregler gäller. Posterrör och rullbara väskor kan lämnas i garderoben."
         },
         "access_notes": {
           "en": "On-demand session recordings are available to registered delegates on the EHA congress platform after the congress.",
-          "sv": "On-demand session recordings are available to registered delegates on the EHA congress platform after the congress."
+          "sv": "Inspelningar av sessioner finns tillgängliga på begäran för registrerade delegater på EHA:s kongressplattform efter kongressen."
         }
       }
     },
@@ -374,7 +374,7 @@
       },
       "subtitle": {
         "en": "Swedish national championship for vocational skills",
-        "sv": "Swedish national championship for vocational skills"
+        "sv": "Svenskt mästerskap i yrkesskicklighet"
       },
       "type": "Event",
       "category": "Education and training",
@@ -384,7 +384,7 @@
       "end_date": "2026-05-06",
       "summary": {
         "en": "Yrkes-SM is the Swedish national championship for vocational skills. The 2026 edition is hosted at Stockholmsmassan for the first time, with young professionals competing across trades and visitors exploring career paths.",
-        "sv": "Yrkes-SM is the Swedish national championship for vocational skills. The 2026 edition is hosted at Stockholmsmassan for the first time, with young professionals competing across trades and visitors exploring career paths."
+        "sv": "Yrkes-SM är det svenska mästerskapet i yrkesskicklighet. 2026 års upplaga arrangeras för första gången på Stockholmsmässan, där unga yrkesutövare tävlar i olika yrken och besökare utforskar karriärvägar."
       },
       "branding": {
         "primary_color": "#00549a",
@@ -393,21 +393,21 @@
         "hero_image": "assets/images/events/yrkes-sm-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer, where the organizer operates information and registration desks.",
-          "sv": "Simulated. Visitors enter through the main foyer, where the organizer operates information and registration desks."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén, där arrangören har informations- och registreringsdiskar."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Admission is free for visitors. Competitor and jury access is managed by the organizer.",
-          "sv": "Simulated. Admission is free for visitors. Competitor and jury access is managed by the organizer."
+          "sv": "Simulerad. Inträdet är fritt för besökare. Tillträde för tävlande och jury sköts av arrangören."
         }
       }
     },
@@ -420,7 +420,7 @@
       },
       "subtitle": {
         "en": "Annual meeting for young entrepreneurs, schools, and policymakers",
-        "sv": "Annual meeting for young entrepreneurs, schools, and policymakers"
+        "sv": "Årlig samling för unga entreprenörer, skolor och beslutsfattare"
       },
       "type": "Event",
       "category": "Education and training",
@@ -430,7 +430,7 @@
       "end_date": "2026-05-27",
       "summary": {
         "en": "Ung Foretagsamhet brings together young entrepreneurs, schools, and policymakers to celebrate student-run companies and exchange ideas across Sweden.",
-        "sv": "Ung Foretagsamhet brings together young entrepreneurs, schools, and policymakers to celebrate student-run companies and exchange ideas across Sweden."
+        "sv": "Ung Företagsamhet samlar unga entreprenörer, skolor och beslutsfattare för att uppmärksamma elevdrivna företag och utbyta idéer från hela Sverige."
       },
       "branding": {
         "primary_color": "#f26522",
@@ -439,21 +439,21 @@
         "hero_image": "assets/images/events/ung-foretagsamhet-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Participants and school groups enter via the East Foyer following event signage.",
-          "sv": "Simulated. Participants and school groups enter via the East Foyer following event signage."
+          "sv": "Simulerad. Deltagare och skolgrupper går in via östra foajén enligt evenemangets skyltning."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Admission is managed through organizer registration for school groups and UF members.",
-          "sv": "Simulated. Admission is managed through organizer registration for school groups and UF members."
+          "sv": "Simulerad. Inträde hanteras via arrangörens registrering för skolgrupper och UF-medlemmar."
         }
       }
     },
@@ -466,7 +466,7 @@
       },
       "subtitle": {
         "en": "Community builders meeting on Swedish urban development",
-        "sv": "Community builders meeting on Swedish urban development"
+        "sv": "Samhällsbyggarmöte om svensk stadsutveckling"
       },
       "type": "Event",
       "category": "Other",
@@ -476,7 +476,7 @@
       "end_date": "2026-06-25",
       "summary": {
         "en": "Samhallsbyggararenan brings together public and private actors in Swedish urban development to discuss housing, infrastructure, and climate-adaptation challenges.",
-        "sv": "Samhallsbyggararenan brings together public and private actors in Swedish urban development to discuss housing, infrastructure, and climate-adaptation challenges."
+        "sv": "Samhällsbyggararenan samlar offentliga och privata aktörer inom svensk stadsutveckling för att diskutera bostäder, infrastruktur och klimatanpassning."
       },
       "branding": {
         "primary_color": "#004e42",
@@ -485,21 +485,21 @@
         "hero_image": "assets/images/events/samhallsbyggararenan-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates enter via the North Foyer. Badge pickup opens one hour before the first session each day.",
-          "sv": "Simulated. Delegates enter via the North Foyer. Badge pickup opens one hour before the first session each day."
+          "sv": "Simulerad. Delegater går in via norra foajén. Utlämning av kongressbrickor öppnar en timme före dagens första session."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is limited to registered delegates.",
-          "sv": "Simulated. Access is limited to registered delegates."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade delegater."
         }
       }
     },
@@ -508,11 +508,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "Formex August 2026",
-        "sv": "Formex August 2026"
+        "sv": "Formex augusti 2026"
       },
       "subtitle": {
         "en": "Nordic interior design trade fair, autumn edition",
-        "sv": "Nordic interior design trade fair, autumn edition"
+        "sv": "Nordisk inredningsmässa, höstupplaga"
       },
       "type": "Trade fair",
       "category": "Interior design",
@@ -522,7 +522,7 @@
       "end_date": "2026-08-27",
       "summary": {
         "en": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.",
-        "sv": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season."
+        "sv": "Formex är den ledande nordiska mässan för inredning, present­artiklar och livsstilsvarumärken. Augustiupplagan fokuserar på höst- och vintersäsongen."
       },
       "branding": {
         "primary_color": "#2b2c2d",
@@ -531,21 +531,21 @@
         "hero_image": "assets/images/events/formex-aug-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.",
-          "sv": "Simulated. Work bags are allowed; oversize items should be checked at the cloakroom."
+          "sv": "Simulerad. Arbetsväskor är tillåtna; skrymmande föremål ska lämnas i garderoben."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -554,11 +554,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "European Dog Show and Swedish Winner Show 2026",
-        "sv": "European Dog Show and Swedish Winner Show 2026"
+        "sv": "European Dog Show och Swedish Winner Show 2026"
       },
       "subtitle": {
         "en": "International canine exhibition and Swedish Winner show",
-        "sv": "International canine exhibition and Swedish Winner show"
+        "sv": "Internationell hundutställning och Svenska Vinnaren-utställning"
       },
       "type": "Public fair",
       "category": "Entertainment",
@@ -568,7 +568,7 @@
       "end_date": "2026-09-06",
       "summary": {
         "en": "A multi-day international dog show drawing tens of thousands of dog enthusiasts and their dogs, with breed competitions, handling, and family-friendly programming.",
-        "sv": "A multi-day international dog show drawing tens of thousands of dog enthusiasts and their dogs, with breed competitions, handling, and family-friendly programming."
+        "sv": "En flera dagar lång internationell hundutställning som lockar tiotusentals hundentusiaster och deras hundar, med rasbedömningar, handling och familjevänligt program."
       },
       "branding": {
         "primary_color": "#5c2a2a",
@@ -577,21 +577,21 @@
         "hero_image": "assets/images/events/european-dog-show-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Dog-show participants use the dedicated South Entrance for dogs and handlers. Visitors enter through the Main Foyer.",
-          "sv": "Simulated. Dog-show participants use the dedicated South Entrance for dogs and handlers. Visitors enter through the Main Foyer."
+          "sv": "Simulerad. Hundutställningens deltagare använder den särskilda södra entrén för hundar och förare. Besökare går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Pet carriers are allowed in the show halls. Oversize luggage should be checked at the cloakroom.",
-          "sv": "Simulated. Pet carriers are allowed in the show halls. Oversize luggage should be checked at the cloakroom."
+          "sv": "Simulerad. Djurburar är tillåtna i utställningshallarna. Skrymmande bagage ska lämnas i garderoben."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to the show halls; handler and participant access is managed by the organizer.",
-          "sv": "Simulated. A visitor ticket grants access to the show halls; handler and participant access is managed by the organizer."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till utställningshallarna; tillträde för förare och deltagare sköts av arrangören."
         }
       }
     },
@@ -600,11 +600,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "38th European Congress of Pathology 2026",
-        "sv": "38th European Congress of Pathology 2026"
+        "sv": "38:e europeiska patologikongressen 2026"
       },
       "subtitle": {
         "en": "European Society of Pathology annual congress",
-        "sv": "European Society of Pathology annual congress"
+        "sv": "Europeiska patologföreningens årliga kongress"
       },
       "type": "Congress",
       "category": "Health & Medicine",
@@ -614,7 +614,7 @@
       "end_date": "2026-09-16",
       "summary": {
         "en": "The European Congress of Pathology is the leading European gathering for pathologists, bringing together clinicians and researchers for a multi-track scientific program and industry exhibition.",
-        "sv": "The European Congress of Pathology is the leading European gathering for pathologists, bringing together clinicians and researchers for a multi-track scientific program and industry exhibition."
+        "sv": "Europeiska patologikongressen är den ledande europeiska samlingen för patologer och samlar kliniker och forskare kring ett vetenskapligt program med flera spår samt en branschutställning."
       },
       "branding": {
         "primary_color": "#1c4d8f",
@@ -623,21 +623,21 @@
         "hero_image": "assets/images/events/european-congress-of-pathology-2026.png",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates enter via the East Foyer. Congress badges and photo ID are required at the door.",
-          "sv": "Simulated. Delegates enter via the East Foyer. Congress badges and photo ID are required at the door."
+          "sv": "Simulerad. Delegater går in via östra foajén. Kongressbricka och fotolegitimation krävs vid entrén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.",
-          "sv": "Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller; posterrör kan lämnas i garderoben."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.",
-          "sv": "Simulated. Access is restricted to registered delegates, exhibitors, and accredited media."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade delegater, utställare och ackrediterad press."
         }
       }
     },
@@ -650,7 +650,7 @@
       },
       "subtitle": {
         "en": "Water infrastructure and sustainability trade fair",
-        "sv": "Water infrastructure and sustainability trade fair"
+        "sv": "Mässa för vatteninfrastruktur och hållbarhet"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -660,7 +660,7 @@
       "end_date": "2026-09-17",
       "summary": {
         "en": "Sweden Water Expo gathers the water, wastewater, and stormwater sector around infrastructure, sustainability, and digital solutions for the Swedish market.",
-        "sv": "Sweden Water Expo gathers the water, wastewater, and stormwater sector around infrastructure, sustainability, and digital solutions for the Swedish market."
+        "sv": "Sweden Water Expo samlar branschen för vatten, avlopp och dagvatten kring infrastruktur, hållbarhet och digitala lösningar på den svenska marknaden."
       },
       "branding": {
         "primary_color": "#006eb6",
@@ -669,21 +669,21 @@
         "hero_image": "assets/images/events/sweden-water-expo-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -696,7 +696,7 @@
       },
       "subtitle": {
         "en": "Logistics and material handling trade fair",
-        "sv": "Logistics and material handling trade fair"
+        "sv": "Mässa för logistik och materialhantering"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -706,7 +706,7 @@
       "end_date": "2026-10-08",
       "summary": {
         "en": "LLB Expo is an industry gathering for logistics, warehousing, and material handling with exhibitor demonstrations, networking, and seminars.",
-        "sv": "LLB Expo is an industry gathering for logistics, warehousing, and material handling with exhibitor demonstrations, networking, and seminars."
+        "sv": "LLB Expo är en branschsamling för logistik, lagerhållning och materialhantering med utställardemonstrationer, mingel och seminarier."
       },
       "branding": {
         "primary_color": "#f58220",
@@ -715,21 +715,21 @@
         "hero_image": "assets/images/events/llb-expo-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -742,7 +742,7 @@
       },
       "subtitle": {
         "en": "Consumer fair for home renovation and villa ownership",
-        "sv": "Consumer fair for home renovation and villa ownership"
+        "sv": "Konsumentmässa för renovering och villaägande"
       },
       "type": "Public fair",
       "category": "Leisure and consumer",
@@ -752,7 +752,7 @@
       "end_date": "2026-10-11",
       "summary": {
         "en": "Hem & Villamassan is a consumer fair covering home renovation, villa maintenance, and interior inspiration, combining exhibitors, lectures, and practical demonstrations.",
-        "sv": "Hem & Villamassan is a consumer fair covering home renovation, villa maintenance, and interior inspiration, combining exhibitors, lectures, and practical demonstrations."
+        "sv": "Hem & Villamässan är en konsumentmässa som täcker bostadsrenovering, villaunderhåll och inredningsinspiration, med utställare, föreläsningar och praktiska demonstrationer."
       },
       "branding": {
         "primary_color": "#6bae3e",
@@ -761,21 +761,21 @@
         "hero_image": "assets/images/events/hem-villamassan-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer.",
-          "sv": "Simulated. Visitors enter through the main foyer."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Work bags and small backpacks are allowed. Oversize items should be checked at the cloakroom.",
-          "sv": "Simulated. Work bags and small backpacks are allowed. Oversize items should be checked at the cloakroom."
+          "sv": "Simulerad. Arbetsväskor och små ryggsäckar är tillåtna. Skrymmande föremål ska lämnas i garderoben."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls in the fair.",
-          "sv": "Simulated. A visitor ticket grants access to all halls in the fair."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla mässans hallar."
         }
       }
     },
@@ -784,11 +784,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "Tradgardsmassan Host 2026",
-        "sv": "Tradgardsmassan Host 2026"
+        "sv": "Trädgårdsmässan Höst 2026"
       },
       "subtitle": {
         "en": "Autumn edition of the Swedish gardening fair",
-        "sv": "Autumn edition of the Swedish gardening fair"
+        "sv": "Höstupplaga av den svenska trädgårdsmässan"
       },
       "type": "Public fair",
       "category": "Leisure and consumer",
@@ -798,7 +798,7 @@
       "end_date": "2026-10-11",
       "summary": {
         "en": "Tradgardsmassan Host is the autumn edition of the Swedish gardening fair, with exhibitors, talks, and demonstrations covering year-round gardening themes.",
-        "sv": "Tradgardsmassan Host is the autumn edition of the Swedish gardening fair, with exhibitors, talks, and demonstrations covering year-round gardening themes."
+        "sv": "Trädgårdsmässan Höst är höstupplagan av den svenska trädgårdsmässan, med utställare, föredrag och demonstrationer kring trädgårdsteman året om."
       },
       "branding": {
         "primary_color": "#b35b1c",
@@ -807,21 +807,21 @@
         "hero_image": "assets/images/events/tradgardsmassan-host-2026.png",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer.",
-          "sv": "Simulated. Visitors enter through the main foyer."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Gardening equipment and plants bought on site are allowed on the fair floor.",
-          "sv": "Simulated. Gardening equipment and plants bought on site are allowed on the fair floor."
+          "sv": "Simulerad. Trädgårdsutrustning och växter som köps på plats är tillåtna på mässgolvet."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls in the fair.",
-          "sv": "Simulated. A visitor ticket grants access to all halls in the fair."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla mässans hallar."
         }
       }
     },
@@ -834,7 +834,7 @@
       },
       "subtitle": {
         "en": "Nordic electric car and charging trade fair",
-        "sv": "Nordic electric car and charging trade fair"
+        "sv": "Nordisk mässa för elbilar och laddning"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -844,7 +844,7 @@
       "end_date": "2026-10-11",
       "summary": {
         "en": "eCarExpo is the leading Nordic event for electric cars and charging, combining consumer demonstrations and industry exhibitions across car brands, charging operators, and accessories.",
-        "sv": "eCarExpo is the leading Nordic event for electric cars and charging, combining consumer demonstrations and industry exhibitions across car brands, charging operators, and accessories."
+        "sv": "eCarExpo är det ledande nordiska eventet för elbilar och laddning och kombinerar konsumentdemonstrationer och branschutställningar med bilmärken, laddoperatörer och tillbehör."
       },
       "branding": {
         "primary_color": "#00a651",
@@ -853,21 +853,21 @@
         "hero_image": "assets/images/events/ecarexpo-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer. Test-drive check-in is handled at a dedicated desk in the foyer.",
-          "sv": "Simulated. Visitors enter through the main foyer. Test-drive check-in is handled at a dedicated desk in the foyer."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén. Incheckning för provkörning sker vid en särskild disk i foajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls; trade-only sessions are badge-controlled.",
-          "sv": "Simulated. A visitor ticket grants access to all halls; trade-only sessions are badge-controlled."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla hallar; rena fackbesökarsessioner är brickkontrollerade."
         }
       }
     },
@@ -880,7 +880,7 @@
       },
       "subtitle": {
         "en": "Family entertainment fair for kids and families",
-        "sv": "Family entertainment fair for kids and families"
+        "sv": "Familjemässa med underhållning för barn och familjer"
       },
       "type": "Public fair",
       "category": "Entertainment",
@@ -890,7 +890,7 @@
       "end_date": "2026-10-18",
       "summary": {
         "en": "UnderBARA CHILDREN is a large family-and-kids fair with entertainment, activities, exhibitors, and shows for Swedish families.",
-        "sv": "UnderBARA CHILDREN is a large family-and-kids fair with entertainment, activities, exhibitors, and shows for Swedish families."
+        "sv": "UnderBARA CHILDREN är en stor familje- och barnmässa med underhållning, aktiviteter, utställare och föreställningar för svenska familjer."
       },
       "branding": {
         "primary_color": "#e6007e",
@@ -899,21 +899,21 @@
         "hero_image": "assets/images/events/underbara-children-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Families enter through the main foyer. Strollers are welcome on the fair floor.",
-          "sv": "Simulated. Families enter through the main foyer. Strollers are welcome on the fair floor."
+          "sv": "Simulerad. Familjer går in genom huvudfoajén. Barnvagnar är välkomna på mässgolvet."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply. Strollers are allowed.",
-          "sv": "Simulated. Standard venue bag rules apply. Strollers are allowed."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller. Barnvagnar är tillåtna."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls; some activities have on-site queuing.",
-          "sv": "Simulated. A visitor ticket grants access to all halls; some activities have on-site queuing."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla hallar; vissa aktiviteter har köhantering på plats."
         }
       }
     },
@@ -926,7 +926,7 @@
       },
       "subtitle": {
         "en": "Nordic security, fire-safety, and protection trade fair",
-        "sv": "Nordic security, fire-safety, and protection trade fair"
+        "sv": "Nordisk mässa för säkerhet, brandskydd och skyddstjänster"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -936,7 +936,7 @@
       "end_date": "2026-10-22",
       "summary": {
         "en": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals, with exhibitors, demonstrations, and a conference program.",
-        "sv": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals, with exhibitors, demonstrations, and a conference program."
+        "sv": "Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap, med utställare, demonstrationer och ett konferensprogram."
       },
       "branding": {
         "primary_color": "#c41e3a",
@@ -945,21 +945,21 @@
         "hero_image": "assets/images/events/skydd-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access.",
-          "sv": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -972,7 +972,7 @@
       },
       "subtitle": {
         "en": "Swedish total-defense industry fair, co-located with Skydd",
-        "sv": "Swedish total-defense industry fair, co-located with Skydd"
+        "sv": "Svensk totalförsvarsmässa, samlokaliserad med Skydd"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -982,7 +982,7 @@
       "end_date": "2026-10-22",
       "summary": {
         "en": "Totalforsvarsmassan is the Swedish total-defense industry fair and runs alongside Skydd, covering civil protection, defense, and emergency preparedness.",
-        "sv": "Totalforsvarsmassan is the Swedish total-defense industry fair and runs alongside Skydd, covering civil protection, defense, and emergency preparedness."
+        "sv": "Totalförsvarsmässan är den svenska totalförsvarsmässan och arrangeras tillsammans med Skydd. Den täcker civil beredskap, försvar och krisberedskap."
       },
       "branding": {
         "primary_color": "#4e5c32",
@@ -991,21 +991,21 @@
         "hero_image": "assets/images/events/totalforsvarsmassan-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access.",
-          "sv": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -1018,7 +1018,7 @@
       },
       "subtitle": {
         "en": "European meeting place for public transport",
-        "sv": "European meeting place for public transport"
+        "sv": "Europeisk mötesplats för kollektivtrafik"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -1028,7 +1028,7 @@
       "end_date": "2026-10-22",
       "summary": {
         "en": "Persontrafik is one of Europes most important meeting places for public transport, with exhibitors, a conference program, and networking for operators, authorities, and suppliers.",
-        "sv": "Persontrafik is one of Europes most important meeting places for public transport, with exhibitors, a conference program, and networking for operators, authorities, and suppliers."
+        "sv": "Persontrafik är en av Europas viktigaste mötesplatser för kollektivtrafik, med utställare, ett konferensprogram och mingel för operatörer, myndigheter och leverantörer."
       },
       "branding": {
         "primary_color": "#0073cf",
@@ -1037,21 +1037,21 @@
         "hero_image": "assets/images/events/persontrafik-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates and trade visitors enter via the West Foyer.",
-          "sv": "Simulated. Delegates and trade visitors enter via the West Foyer."
+          "sv": "Simulerad. Delegater och fackbesökare går in via västra foajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to registered trade visitors and delegates.",
-          "sv": "Simulated. Access is restricted to registered trade visitors and delegates."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade fackbesökare och delegater."
         }
       }
     },
@@ -1064,7 +1064,7 @@
       },
       "subtitle": {
         "en": "Teacher professional-development conference",
-        "sv": "Teacher professional-development conference"
+        "sv": "Konferens för lärares kompetensutveckling"
       },
       "type": "Conference",
       "category": "Education and training",
@@ -1074,7 +1074,7 @@
       "end_date": "2026-10-27",
       "summary": {
         "en": "Larkraft is a one-day professional-development conference for teachers and school leaders in Sweden, focused on classroom practice and educational policy.",
-        "sv": "Larkraft is a one-day professional-development conference for teachers and school leaders in Sweden, focused on classroom practice and educational policy."
+        "sv": "Lärkraft är en endagskonferens för kompetensutveckling för lärare och skolledare i Sverige, med fokus på klassrumsarbete och utbildningspolitik."
       },
       "branding": {
         "primary_color": "#4a5d7e",
@@ -1083,21 +1083,21 @@
         "hero_image": "assets/images/events/larkraft-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates enter through the main foyer.",
-          "sv": "Simulated. Delegates enter through the main foyer."
+          "sv": "Simulerad. Delegater går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to registered delegates.",
-          "sv": "Simulated. Access is restricted to registered delegates."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade delegater."
         }
       }
     },
@@ -1106,11 +1106,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "Comic Con Stockholm Winter 2026",
-        "sv": "Comic Con Stockholm Winter 2026"
+        "sv": "Comic Con Stockholm Vinter 2026"
       },
       "subtitle": {
         "en": "Sweden's largest popular culture meeting place",
-        "sv": "Sweden's largest popular culture meeting place"
+        "sv": "Sveriges största mötesplats för populärkultur"
       },
       "type": "Event",
       "category": "Entertainment",
@@ -1120,7 +1120,7 @@
       "end_date": "2026-11-01",
       "summary": {
         "en": "Comic Con Stockholm Winter gathers fans of popular culture, gaming, anime, and comics for signings, panels, cosplay events, and an exhibitor floor.",
-        "sv": "Comic Con Stockholm Winter gathers fans of popular culture, gaming, anime, and comics for signings, panels, cosplay events, and an exhibitor floor."
+        "sv": "Comic Con Stockholm Vinter samlar fans av populärkultur, spel, anime och serier för signeringar, paneler, cosplay-arrangemang och en utställargolv."
       },
       "branding": {
         "primary_color": "#231f20",
@@ -1129,21 +1129,21 @@
         "hero_image": "assets/images/events/comic-con-stockholm-winter-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer. Cosplay check-in and prop check are handled near the entrance.",
-          "sv": "Simulated. Visitors enter through the main foyer. Cosplay check-in and prop check are handled near the entrance."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén. Cosplayincheckning och propkontroll sker nära entrén."
         },
         "bag_rules": {
           "en": "Simulated. Prop weapons are subject to the organizers prop policy; sharp or real weapons are not allowed.",
-          "sv": "Simulated. Prop weapons are subject to the organizers prop policy; sharp or real weapons are not allowed."
+          "sv": "Simulerad. Propvapen omfattas av arrangörens proppolicy; vassa eller riktiga vapen är inte tillåtna."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls; some panels and signings have separate queues or additional tickets.",
-          "sv": "Simulated. A visitor ticket grants access to all halls; some panels and signings have separate queues or additional tickets."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla hallar; vissa paneler och signeringar har egna köer eller kräver extra biljetter."
         }
       }
     },
@@ -1156,7 +1156,7 @@
       },
       "subtitle": {
         "en": "Consumer fair for health and wellness",
-        "sv": "Consumer fair for health and wellness"
+        "sv": "Konsumentmässa för hälsa och välmående"
       },
       "type": "Public fair",
       "category": "Health & Medicine",
@@ -1166,7 +1166,7 @@
       "end_date": "2026-11-08",
       "summary": {
         "en": "Allt for Halsan is a consumer fair for health, wellness, and lifestyle, with exhibitors, product demonstrations, lectures, and activities.",
-        "sv": "Allt for Halsan is a consumer fair for health, wellness, and lifestyle, with exhibitors, product demonstrations, lectures, and activities."
+        "sv": "Allt för Hälsan är en konsumentmässa för hälsa, välmående och livsstil, med utställare, produktdemonstrationer, föreläsningar och aktiviteter."
       },
       "branding": {
         "primary_color": "#7db249",
@@ -1175,21 +1175,21 @@
         "hero_image": "assets/images/events/allt-for-halsan-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer.",
-          "sv": "Simulated. Visitors enter through the main foyer."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls in the fair.",
-          "sv": "Simulated. A visitor ticket grants access to all halls in the fair."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla mässans hallar."
         }
       }
     },
@@ -1202,7 +1202,7 @@
       },
       "subtitle": {
         "en": "Culinary consumer event with tastings and demonstrations",
-        "sv": "Culinary consumer event with tastings and demonstrations"
+        "sv": "Kulinariskt konsumentevent med provsmakningar och demonstrationer"
       },
       "type": "Event",
       "category": "Food & drink",
@@ -1212,7 +1212,7 @@
       "end_date": "2026-11-08",
       "summary": {
         "en": "Sthlm Food & Wine is a culinary event combining exhibitors, tastings, cooking demonstrations, and wine pairings.",
-        "sv": "Sthlm Food & Wine is a culinary event combining exhibitors, tastings, cooking demonstrations, and wine pairings."
+        "sv": "Sthlm Food & Wine är ett kulinariskt event som kombinerar utställare, provsmakningar, matlagningsdemonstrationer och vinparningar."
       },
       "branding": {
         "primary_color": "#8b1a1a",
@@ -1221,21 +1221,21 @@
         "hero_image": "assets/images/events/sthlm-food-wine-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer.",
-          "sv": "Simulated. Visitors enter through the main foyer."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Open-container and tasting rules follow organizer policy.",
-          "sv": "Simulated. Open-container and tasting rules follow organizer policy."
+          "sv": "Simulerad. Regler för öppna förpackningar och provsmakningar följer arrangörens policy."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls; some tastings require additional tokens or tickets.",
-          "sv": "Simulated. A visitor ticket grants access to all halls; some tastings require additional tokens or tickets."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla hallar; vissa provsmakningar kräver extra polletter eller biljetter."
         }
       }
     },
@@ -1248,7 +1248,7 @@
       },
       "subtitle": {
         "en": "Professional development conference for Swedish social workers",
-        "sv": "Professional development conference for Swedish social workers"
+        "sv": "Kompetensutvecklingskonferens för svenska socionomer"
       },
       "type": "Conference",
       "category": "Education and training",
@@ -1258,7 +1258,7 @@
       "end_date": "2026-11-11",
       "summary": {
         "en": "Socionomdagarna is a professional development conference for Swedish social workers, in its 22nd edition, with keynotes, seminars, and an exhibition.",
-        "sv": "Socionomdagarna is a professional development conference for Swedish social workers, in its 22nd edition, with keynotes, seminars, and an exhibition."
+        "sv": "Socionomdagarna är en kompetensutvecklingskonferens för svenska socionomer som arrangeras för 22:a gången, med huvudtalare, seminarier och en utställning."
       },
       "branding": {
         "primary_color": "#1d4e89",
@@ -1267,21 +1267,21 @@
         "hero_image": "assets/images/events/socionomdagarna-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates enter via the North Foyer.",
-          "sv": "Simulated. Delegates enter via the North Foyer."
+          "sv": "Simulerad. Delegater går in via norra foajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to registered delegates.",
-          "sv": "Simulated. Access is restricted to registered delegates."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade delegater."
         }
       }
     },
@@ -1294,7 +1294,7 @@
       },
       "subtitle": {
         "en": "European conference on battery research and innovation",
-        "sv": "European conference on battery research and innovation"
+        "sv": "Europeisk konferens om batteriforskning och innovation"
       },
       "type": "Congress",
       "category": "Industry",
@@ -1304,7 +1304,7 @@
       "end_date": "2026-11-12",
       "summary": {
         "en": "Battery Innovations Days is a European conference covering battery research, materials, manufacturing, and innovation, with scientific and industry tracks.",
-        "sv": "Battery Innovations Days is a European conference covering battery research, materials, manufacturing, and innovation, with scientific and industry tracks."
+        "sv": "Battery Innovations Days är en europeisk konferens om batteriforskning, material, tillverkning och innovation, med både vetenskapliga och industrirelaterade spår."
       },
       "branding": {
         "primary_color": "#00a398",
@@ -1313,21 +1313,21 @@
         "hero_image": "assets/images/events/battery-innovations-days-2026.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates enter via the West Foyer.",
-          "sv": "Simulated. Delegates enter via the West Foyer."
+          "sv": "Simulerad. Delegater går in via västra foajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to registered delegates.",
-          "sv": "Simulated. Access is restricted to registered delegates."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade delegater."
         }
       }
     },
@@ -1340,7 +1340,7 @@
       },
       "subtitle": {
         "en": "Upper secondary school selection fair",
-        "sv": "Upper secondary school selection fair"
+        "sv": "Gymnasievalsmässa"
       },
       "type": "Public fair",
       "category": "Education and training",
@@ -1350,7 +1350,7 @@
       "end_date": "2026-11-19",
       "summary": {
         "en": "Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.",
-        "sv": "Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors."
+        "sv": "Gymnasiemässan är den svenska gymnasievalsmässan, där elever och familjer möter skolor, program och studie- och yrkesvägledare."
       },
       "branding": {
         "primary_color": "#e30613",
@@ -1359,21 +1359,21 @@
         "hero_image": "assets/images/events/gymnasiemassan-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Students and families enter through the main foyer. School groups have a dedicated check-in.",
-          "sv": "Simulated. Students and families enter through the main foyer. School groups have a dedicated check-in."
+          "sv": "Simulerad. Elever och familjer går in genom huvudfoajén. Skolgrupper har en särskild incheckning."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.",
-          "sv": "Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance."
+          "sv": "Simulerad. Inträde för besökare hanteras enligt arrangörens policy; skolgrupper bokar i förväg."
         }
       }
     },
@@ -1382,11 +1382,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "Formex January 2027",
-        "sv": "Formex January 2027"
+        "sv": "Formex januari 2027"
       },
       "subtitle": {
         "en": "Nordic interior design trade fair, spring edition",
-        "sv": "Nordic interior design trade fair, spring edition"
+        "sv": "Nordisk inredningsmässa, vårupplaga"
       },
       "type": "Trade fair",
       "category": "Interior design",
@@ -1396,7 +1396,7 @@
       "end_date": "2027-01-21",
       "summary": {
         "en": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The January edition focuses on the spring-summer season.",
-        "sv": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The January edition focuses on the spring-summer season."
+        "sv": "Formex är den ledande nordiska mässan för inredning, presentartiklar och livsstilsvarumärken. Januariupplagan fokuserar på vår- och sommarsäsongen."
       },
       "branding": {
         "primary_color": "#2b2c2d",
@@ -1405,21 +1405,21 @@
         "hero_image": "assets/images/events/formex-jan-2027.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.",
-          "sv": "Simulated. Work bags are allowed; oversize items should be checked at the cloakroom."
+          "sv": "Simulerad. Arbetsväskor är tillåtna; skrymmande föremål ska lämnas i garderoben."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -1432,7 +1432,7 @@
       },
       "subtitle": {
         "en": "City-wide design week with venue events at Stockholmsmassan",
-        "sv": "City-wide design week with venue events at Stockholmsmassan"
+        "sv": "Stadsövergripande designvecka med arrangemang på Stockholmsmässan"
       },
       "type": "Event",
       "category": "Interior design",
@@ -1442,7 +1442,7 @@
       "end_date": "2027-02-14",
       "summary": {
         "en": "Stockholm Design Week is a city-wide design program with showrooms, exhibitions, and events across Stockholm, anchored by activity at Stockholmsmassan during the Stockholm Furniture Fair week.",
-        "sv": "Stockholm Design Week is a city-wide design program with showrooms, exhibitions, and events across Stockholm, anchored by activity at Stockholmsmassan during the Stockholm Furniture Fair week."
+        "sv": "Stockholm Design Week är ett stadsövergripande designprogram med showrooms, utställningar och evenemang runt om i Stockholm, med tyngdpunkt på aktiviteter på Stockholmsmässan under veckan för Stockholm Furniture Fair."
       },
       "branding": {
         "primary_color": "#111111",
@@ -1451,21 +1451,21 @@
         "hero_image": "assets/images/events/stockholm-design-week-2027.png",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Venue events at Stockholmsmassan share the main foyer entrance with the Stockholm Furniture Fair.",
-          "sv": "Simulated. Venue events at Stockholmsmassan share the main foyer entrance with the Stockholm Furniture Fair."
+          "sv": "Simulerad. Arrangemang på Stockholmsmässan delar entrén i huvudfoajén med Stockholm Furniture Fair."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Most city-wide programming is open; venue sessions inside Stockholmsmassan follow the Stockholm Furniture Fair access rules.",
-          "sv": "Simulated. Most city-wide programming is open; venue sessions inside Stockholmsmassan follow the Stockholm Furniture Fair access rules."
+          "sv": "Simulerad. Större delen av det stadsövergripande programmet är öppet; sessioner inne på Stockholmsmässan följer Stockholm Furniture Fairs tillträdesregler."
         }
       }
     },
@@ -1478,7 +1478,7 @@
       },
       "subtitle": {
         "en": "Leading platform for Scandinavian design",
-        "sv": "Leading platform for Scandinavian design"
+        "sv": "Ledande plattform för skandinavisk design"
       },
       "type": "Trade fair",
       "category": "Interior design",
@@ -1488,7 +1488,7 @@
       "end_date": "2027-02-12",
       "summary": {
         "en": "Stockholm Furniture Fair is the leading platform for Scandinavian design, with exhibitors, Greenhouse emerging-designer spaces, and a curated program. The 2027 edition is the next biennial edition.",
-        "sv": "Stockholm Furniture Fair is the leading platform for Scandinavian design, with exhibitors, Greenhouse emerging-designer spaces, and a curated program. The 2027 edition is the next biennial edition."
+        "sv": "Stockholm Furniture Fair är den ledande plattformen för skandinavisk design, med utställare, Greenhouse-ytor för nya designers och ett kurerat program. 2027 års upplaga är nästa biennala upplaga."
       },
       "branding": {
         "primary_color": "#1a1a1a",
@@ -1497,21 +1497,21 @@
         "hero_image": "assets/images/events/stockholm-furniture-fair-2027.png",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors and accredited media registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors and accredited media registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare och ackrediterad press som registrerats via arrangören."
         }
       }
     },
@@ -1524,7 +1524,7 @@
       },
       "subtitle": {
         "en": "Swedish sport fishing consumer expo",
-        "sv": "Swedish sport fishing consumer expo"
+        "sv": "Svensk konsumentmässa för sportfiske"
       },
       "type": "Public fair",
       "category": "Leisure and consumer",
@@ -1534,7 +1534,7 @@
       "end_date": "2027-03-21",
       "summary": {
         "en": "Sportfiskemassan is the Swedish sport-fishing consumer expo with exhibitors, demonstrations, and an expanded program for the 2027 edition.",
-        "sv": "Sportfiskemassan is the Swedish sport-fishing consumer expo with exhibitors, demonstrations, and an expanded program for the 2027 edition."
+        "sv": "Sportfiskemässan är den svenska sportfiskemässan för konsumenter med utställare, demonstrationer och ett utökat program för 2027 års upplaga."
       },
       "branding": {
         "primary_color": "#1b5e96",
@@ -1543,21 +1543,21 @@
         "hero_image": "assets/images/events/sportfiskemassan-2027.webp",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Visitors enter through the main foyer.",
-          "sv": "Simulated. Visitors enter through the main foyer."
+          "sv": "Simulerad. Besökare går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Fishing rods and related equipment are allowed on the fair floor.",
-          "sv": "Simulated. Fishing rods and related equipment are allowed on the fair floor."
+          "sv": "Simulerad. Fiskespön och tillhörande utrustning är tillåtna på mässgolvet."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all halls.",
-          "sv": "Simulated. A visitor ticket grants access to all halls."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla hallar."
         }
       }
     },
@@ -1570,7 +1570,7 @@
       },
       "subtitle": {
         "en": "European congress on infectious diseases and clinical microbiology",
-        "sv": "European congress on infectious diseases and clinical microbiology"
+        "sv": "Europeisk kongress om infektionssjukdomar och klinisk mikrobiologi"
       },
       "type": "Congress",
       "category": "Health & Medicine",
@@ -1580,7 +1580,7 @@
       "end_date": "2027-04-13",
       "summary": {
         "en": "ESCMID Global is the leading European congress on infectious diseases and clinical microbiology, with a multi-track scientific program and large industry exhibition.",
-        "sv": "ESCMID Global is the leading European congress on infectious diseases and clinical microbiology, with a multi-track scientific program and large industry exhibition."
+        "sv": "ESCMID Global är den ledande europeiska kongressen om infektionssjukdomar och klinisk mikrobiologi, med ett vetenskapligt program i flera spår och en stor branschutställning."
       },
       "branding": {
         "primary_color": "#004a94",
@@ -1589,21 +1589,21 @@
         "hero_image": "assets/images/events/escmid-global-2027.png",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates enter via the East Foyer. Badges and photo ID are required at the door.",
-          "sv": "Simulated. Delegates enter via the East Foyer. Badges and photo ID are required at the door."
+          "sv": "Simulerad. Delegater går in via östra foajén. Bricka och fotolegitimation krävs vid entrén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom.",
-          "sv": "Simulated. Standard venue bag rules apply; poster tubes are accommodated at the cloakroom."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller; posterrör kan lämnas i garderoben."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to registered delegates, exhibitors, and accredited media.",
-          "sv": "Simulated. Access is restricted to registered delegates, exhibitors, and accredited media."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade delegater, utställare och ackrediterad press."
         }
       }
     },
@@ -1616,7 +1616,7 @@
       },
       "subtitle": {
         "en": "International conference and exhibition on electricity distribution",
-        "sv": "International conference and exhibition on electricity distribution"
+        "sv": "Internationell konferens och utställning om eldistribution"
       },
       "type": "Congress",
       "category": "Industry",
@@ -1626,7 +1626,7 @@
       "end_date": "2027-06-17",
       "summary": {
         "en": "CIRED is the leading forum for the global electricity distribution community, with technical sessions, poster presentations, and a large industry exhibition.",
-        "sv": "CIRED is the leading forum for the global electricity distribution community, with technical sessions, poster presentations, and a large industry exhibition."
+        "sv": "CIRED är det ledande forumet för den globala eldistributionsbranschen, med tekniska sessioner, posterpresentationer och en stor branschutställning."
       },
       "branding": {
         "primary_color": "#002147",
@@ -1635,21 +1635,21 @@
         "hero_image": "assets/images/events/cired-2027.png",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Delegates enter via the North Foyer. Badges are required at the door.",
-          "sv": "Simulated. Delegates enter via the North Foyer. Badges are required at the door."
+          "sv": "Simulerad. Delegater går in via norra foajén. Bricka krävs vid entrén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to registered delegates and exhibitors.",
-          "sv": "Simulated. Access is restricted to registered delegates and exhibitors."
+          "sv": "Simulerad. Tillträde är begränsat till registrerade delegater och utställare."
         }
       }
     },
@@ -1658,11 +1658,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "Formex August 2027",
-        "sv": "Formex August 2027"
+        "sv": "Formex augusti 2027"
       },
       "subtitle": {
         "en": "Nordic interior design trade fair, autumn edition",
-        "sv": "Nordic interior design trade fair, autumn edition"
+        "sv": "Nordisk inredningsmässa, höstupplaga"
       },
       "type": "Trade fair",
       "category": "Interior design",
@@ -1672,7 +1672,7 @@
       "end_date": "2027-08-26",
       "summary": {
         "en": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season.",
-        "sv": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands. The August edition focuses on the autumn-winter season."
+        "sv": "Formex är den ledande nordiska mässan för inredning, present­artiklar och livsstilsvarumärken. Augustiupplagan fokuserar på höst- och vintersäsongen."
       },
       "branding": {
         "primary_color": "#2b2c2d",
@@ -1681,21 +1681,21 @@
         "hero_image": "assets/images/events/formex-aug-2027.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Work bags are allowed; oversize items should be checked at the cloakroom.",
-          "sv": "Simulated. Work bags are allowed; oversize items should be checked at the cloakroom."
+          "sv": "Simulerad. Arbetsväskor är tillåtna; skrymmande föremål ska lämnas i garderoben."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -1708,7 +1708,7 @@
       },
       "subtitle": {
         "en": "Swedish total-defense industry fair",
-        "sv": "Swedish total-defense industry fair"
+        "sv": "Svensk totalförsvarsmässa"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -1718,7 +1718,7 @@
       "end_date": "2027-10-28",
       "summary": {
         "en": "Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.",
-        "sv": "Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness."
+        "sv": "Totalförsvarsmässan är den svenska totalförsvarsmässan och täcker civil beredskap, försvar och krisberedskap."
       },
       "branding": {
         "primary_color": "#4e5c32",
@@ -1727,21 +1727,21 @@
         "hero_image": "assets/images/events/totalforsvarsmassan-2027.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access.",
-          "sv": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -1754,7 +1754,7 @@
       },
       "subtitle": {
         "en": "Upper secondary school selection fair",
-        "sv": "Upper secondary school selection fair"
+        "sv": "Gymnasievalsmässa"
       },
       "type": "Public fair",
       "category": "Education and training",
@@ -1764,7 +1764,7 @@
       "end_date": "2027-11-25",
       "summary": {
         "en": "Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors.",
-        "sv": "Gymnasiemassan is the Swedish upper-secondary school selection fair, where students and families meet schools, programs, and study counsellors."
+        "sv": "Gymnasiemässan är den svenska gymnasievalsmässan, där elever och familjer möter skolor, program och studie- och yrkesvägledare."
       },
       "branding": {
         "primary_color": "#e30613",
@@ -1773,21 +1773,21 @@
         "hero_image": "assets/images/events/gymnasiemassan-2027.png",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Students and families enter through the main foyer.",
-          "sv": "Simulated. Students and families enter through the main foyer."
+          "sv": "Simulerad. Elever och familjer går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.",
-          "sv": "Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance."
+          "sv": "Simulerad. Inträde för besökare hanteras enligt arrangörens policy; skolgrupper bokar i förväg."
         }
       }
     },
@@ -1796,11 +1796,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "Formex January 2028",
-        "sv": "Formex January 2028"
+        "sv": "Formex januari 2028"
       },
       "subtitle": {
         "en": "Nordic interior design trade fair, spring edition",
-        "sv": "Nordic interior design trade fair, spring edition"
+        "sv": "Nordisk inredningsmässa, vårupplaga"
       },
       "type": "Trade fair",
       "category": "Interior design",
@@ -1810,7 +1810,7 @@
       "end_date": "2028-01-20",
       "summary": {
         "en": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.",
-        "sv": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands."
+        "sv": "Formex är den ledande nordiska mässan för inredning, presentartiklar och livsstilsvarumärken."
       },
       "branding": {
         "primary_color": "#2b2c2d",
@@ -1819,21 +1819,21 @@
         "hero_image": "assets/images/events/formex-jan-2028.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Work bags are allowed.",
-          "sv": "Simulated. Work bags are allowed."
+          "sv": "Simulerad. Arbetsväskor är tillåtna."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -1846,7 +1846,7 @@
       },
       "subtitle": {
         "en": "Nordic construction trade fair",
-        "sv": "Nordic construction trade fair"
+        "sv": "Nordisk byggmässa"
       },
       "type": "Trade fair",
       "category": "Construction and real estate",
@@ -1856,7 +1856,7 @@
       "end_date": "2028-04-07",
       "summary": {
         "en": "Nordbygg returns to Stockholmsmassan as the leading Nordic meeting place for the construction and real-estate industry.",
-        "sv": "Nordbygg returns to Stockholmsmassan as the leading Nordic meeting place for the construction and real-estate industry."
+        "sv": "Nordbygg återvänder till Stockholmsmässan som den ledande nordiska mötesplatsen för bygg- och fastighetsbranschen."
       },
       "branding": {
         "primary_color": "#0b3d91",
@@ -1865,21 +1865,21 @@
         "hero_image": "assets/images/events/nordbygg-2028.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan",
-          "sv": "Stockholmsmassan"
+          "sv": "Stockholmsmässan"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration.",
-          "sv": "Simulated. Enter through the main foyer at Stockholmsmassan. Nordbygg signage guides visitors to registration."
+          "sv": "Simulerad. Gå in genom huvudfoajén på Stockholmsmässan. Nordbyggs skyltning vägleder besökare till registreringen."
         },
         "bag_rules": {
           "en": "Simulated. Work bags and smaller backpacks are allowed on the fair floor.",
-          "sv": "Simulated. Work bags and smaller backpacks are allowed on the fair floor."
+          "sv": "Simulerad. Arbetsväskor och mindre ryggsäckar är tillåtna på mässgolvet."
         },
         "access_notes": {
           "en": "Simulated. A visitor ticket grants access to all exhibition halls and seminar rooms.",
-          "sv": "Simulated. A visitor ticket grants access to all exhibition halls and seminar rooms."
+          "sv": "Simulerad. En besöksbiljett ger tillträde till alla utställningshallar och seminarierum."
         }
       }
     },
@@ -1888,11 +1888,11 @@
       "venue_id": "stockholmsmassan",
       "name": {
         "en": "Formex August 2028",
-        "sv": "Formex August 2028"
+        "sv": "Formex augusti 2028"
       },
       "subtitle": {
         "en": "Nordic interior design trade fair, autumn edition",
-        "sv": "Nordic interior design trade fair, autumn edition"
+        "sv": "Nordisk inredningsmässa, höstupplaga"
       },
       "type": "Trade fair",
       "category": "Interior design",
@@ -1902,7 +1902,7 @@
       "end_date": "2028-08-31",
       "summary": {
         "en": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands.",
-        "sv": "Formex is the leading Nordic trade fair for interior design, gift items, and lifestyle brands."
+        "sv": "Formex är den ledande nordiska mässan för inredning, presentartiklar och livsstilsvarumärken."
       },
       "branding": {
         "primary_color": "#2b2c2d",
@@ -1911,21 +1911,21 @@
         "hero_image": "assets/images/events/formex-aug-2027.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan (reused from earlier edition)",
-          "sv": "Stockholmsmassan (reused from earlier edition)"
+          "sv": "Stockholmsmässan (återanvänd från tidigare upplaga)"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access.",
-          "sv": "Simulated. Trade visitors enter through the main foyer. Trade badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in genom huvudfoajén. Fackbricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Work bags are allowed.",
-          "sv": "Simulated. Work bags are allowed."
+          "sv": "Simulerad. Arbetsväskor är tillåtna."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -1938,7 +1938,7 @@
       },
       "subtitle": {
         "en": "Nordic security, fire-safety, and protection trade fair",
-        "sv": "Nordic security, fire-safety, and protection trade fair"
+        "sv": "Nordisk mässa för säkerhet, brandskydd och skyddstjänster"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -1948,7 +1948,7 @@
       "end_date": "2028-10-26",
       "summary": {
         "en": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.",
-        "sv": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals."
+        "sv": "Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap."
       },
       "branding": {
         "primary_color": "#c41e3a",
@@ -1957,21 +1957,21 @@
         "hero_image": "assets/images/events/skydd-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan (reused from earlier edition)",
-          "sv": "Stockholmsmassan (reused from earlier edition)"
+          "sv": "Stockholmsmässan (återanvänd från tidigare upplaga)"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access.",
-          "sv": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -1984,7 +1984,7 @@
       },
       "subtitle": {
         "en": "Upper secondary school selection fair",
-        "sv": "Upper secondary school selection fair"
+        "sv": "Gymnasievalsmässa"
       },
       "type": "Public fair",
       "category": "Education and training",
@@ -1994,7 +1994,7 @@
       "end_date": "2028-11-23",
       "summary": {
         "en": "Gymnasiemassan is the Swedish upper-secondary school selection fair.",
-        "sv": "Gymnasiemassan is the Swedish upper-secondary school selection fair."
+        "sv": "Gymnasiemässan är den svenska gymnasievalsmässan."
       },
       "branding": {
         "primary_color": "#e30613",
@@ -2003,21 +2003,21 @@
         "hero_image": "assets/images/events/gymnasiemassan-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan (reused from earlier edition)",
-          "sv": "Stockholmsmassan (reused from earlier edition)"
+          "sv": "Stockholmsmässan (återanvänd från tidigare upplaga)"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Students and families enter through the main foyer.",
-          "sv": "Simulated. Students and families enter through the main foyer."
+          "sv": "Simulerad. Elever och familjer går in genom huvudfoajén."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance.",
-          "sv": "Simulated. Admission for visitors is managed per the organizer policy; school groups book in advance."
+          "sv": "Simulerad. Inträde för besökare hanteras enligt arrangörens policy; skolgrupper bokar i förväg."
         }
       }
     },
@@ -2030,7 +2030,7 @@
       },
       "subtitle": {
         "en": "Nordic security, fire-safety, and protection trade fair",
-        "sv": "Nordic security, fire-safety, and protection trade fair"
+        "sv": "Nordisk mässa för säkerhet, brandskydd och skyddstjänster"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -2040,7 +2040,7 @@
       "end_date": "2030-10-24",
       "summary": {
         "en": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.",
-        "sv": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals."
+        "sv": "Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap."
       },
       "branding": {
         "primary_color": "#c41e3a",
@@ -2049,21 +2049,21 @@
         "hero_image": "assets/images/events/skydd-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan (reused from earlier edition)",
-          "sv": "Stockholmsmassan (reused from earlier edition)"
+          "sv": "Stockholmsmässan (återanvänd från tidigare upplaga)"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access.",
-          "sv": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -2076,7 +2076,7 @@
       },
       "subtitle": {
         "en": "Swedish total-defense industry fair",
-        "sv": "Swedish total-defense industry fair"
+        "sv": "Svensk totalförsvarsmässa"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -2086,7 +2086,7 @@
       "end_date": "2030-10-24",
       "summary": {
         "en": "Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness.",
-        "sv": "Totalforsvarsmassan is the Swedish total-defense industry fair, covering civil protection, defense, and emergency preparedness."
+        "sv": "Totalförsvarsmässan är den svenska totalförsvarsmässan och täcker civil beredskap, försvar och krisberedskap."
       },
       "branding": {
         "primary_color": "#4e5c32",
@@ -2095,21 +2095,21 @@
         "hero_image": "assets/images/events/totalforsvarsmassan-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan (reused from earlier edition)",
-          "sv": "Stockholmsmassan (reused from earlier edition)"
+          "sv": "Stockholmsmässan (återanvänd från tidigare upplaga)"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access.",
-          "sv": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     },
@@ -2122,7 +2122,7 @@
       },
       "subtitle": {
         "en": "Nordic security, fire-safety, and protection trade fair",
-        "sv": "Nordic security, fire-safety, and protection trade fair"
+        "sv": "Nordisk mässa för säkerhet, brandskydd och skyddstjänster"
       },
       "type": "Trade fair",
       "category": "Industry",
@@ -2132,7 +2132,7 @@
       "end_date": "2032-10-21",
       "summary": {
         "en": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals.",
-        "sv": "Skydd is the Nordic meeting place for security, fire-safety, and civil-protection professionals."
+        "sv": "Skydd är den nordiska mötesplatsen för yrkesverksamma inom säkerhet, brandskydd och civil beredskap."
       },
       "branding": {
         "primary_color": "#c41e3a",
@@ -2141,21 +2141,21 @@
         "hero_image": "assets/images/events/skydd-2026.jpg",
         "hero_image_credit": {
           "en": "Stockholmsmassan (reused from earlier edition)",
-          "sv": "Stockholmsmassan (reused from earlier edition)"
+          "sv": "Stockholmsmässan (återanvänd från tidigare upplaga)"
         }
       },
       "overrides": {
         "entrance": {
           "en": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access.",
-          "sv": "Simulated. Trade visitors enter via the East Foyer. Badges are required for access."
+          "sv": "Simulerad. Fackbesökare går in via östra foajén. Bricka krävs för tillträde."
         },
         "bag_rules": {
           "en": "Simulated. Standard venue bag rules apply.",
-          "sv": "Simulated. Standard venue bag rules apply."
+          "sv": "Simulerad. Anläggningens vanliga väskregler gäller."
         },
         "access_notes": {
           "en": "Simulated. Access is restricted to trade visitors registered through the organizer.",
-          "sv": "Simulated. Access is restricted to trade visitors registered through the organizer."
+          "sv": "Simulerad. Tillträde är begränsat till fackbesökare som registrerats via arrangören."
         }
       }
     }
@@ -11844,8 +11844,14 @@
     {
       "id": "nordbygg-2026-addon-gift-bag",
       "event_id": "nordbygg-2026",
-      "name": { "en": "Exhibitor gift bag", "sv": "Exhibitor gift bag" },
-      "description": { "en": "Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin.", "sv": "Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin." },
+      "name": {
+        "en": "Exhibitor gift bag",
+        "sv": "Exhibitor gift bag"
+      },
+      "description": {
+        "en": "Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin.",
+        "sv": "Simulated add-on. A curated canvas tote with samples, a sustainability guide, and a Nordbygg pin."
+      },
       "points_cost": 80,
       "image": "assets/images/events/nordbygg-2026.jpg",
       "stock": 50,
@@ -11854,8 +11860,14 @@
     {
       "id": "nordbygg-2026-addon-sustainability-stage",
       "event_id": "nordbygg-2026",
-      "name": { "en": "Sustainability Stage seat reservation", "sv": "Sustainability Stage seat reservation" },
-      "description": { "en": "Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one.", "sv": "Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one." },
+      "name": {
+        "en": "Sustainability Stage seat reservation",
+        "sv": "Sustainability Stage seat reservation"
+      },
+      "description": {
+        "en": "Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one.",
+        "sv": "Simulated add-on. Reserves a front-row seat at the Sustainability Stage keynote on day one."
+      },
       "points_cost": 150,
       "image": "assets/images/events/nordbygg-2026.jpg",
       "stock": 20,
@@ -11864,8 +11876,14 @@
     {
       "id": "nordbygg-2026-addon-catalog",
       "event_id": "nordbygg-2026",
-      "name": { "en": "Event catalog hardcover", "sv": "Event catalog hardcover" },
-      "description": { "en": "Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan.", "sv": "Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan." },
+      "name": {
+        "en": "Event catalog hardcover",
+        "sv": "Event catalog hardcover"
+      },
+      "description": {
+        "en": "Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan.",
+        "sv": "Simulated add-on. Hardcover copy of the Nordbygg 2026 catalog with exhibitor index and floor plan."
+      },
       "points_cost": 120,
       "image": "assets/images/events/nordbygg-2026.jpg",
       "stock": null,
@@ -11874,8 +11892,14 @@
     {
       "id": "estro-2026-addon-gift-bag",
       "event_id": "estro-2026",
-      "name": { "en": "Delegate gift bag", "sv": "Delegate gift bag" },
-      "description": { "en": "Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples.", "sv": "Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples." },
+      "name": {
+        "en": "Delegate gift bag",
+        "sv": "Delegate gift bag"
+      },
+      "description": {
+        "en": "Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples.",
+        "sv": "Simulated add-on. ESTRO 2026 delegate tote with abstracts booklet and sponsor samples."
+      },
       "points_cost": 80,
       "image": "assets/images/events/estro-2026.webp",
       "stock": 50,
@@ -11884,8 +11908,14 @@
     {
       "id": "estro-2026-addon-vip-keynote",
       "event_id": "estro-2026",
-      "name": { "en": "VIP access to keynote", "sv": "VIP access to keynote" },
-      "description": { "en": "Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote.", "sv": "Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote." },
+      "name": {
+        "en": "VIP access to keynote",
+        "sv": "VIP access to keynote"
+      },
+      "description": {
+        "en": "Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote.",
+        "sv": "Simulated add-on. Priority seating and a meet-and-greet slot after the opening keynote."
+      },
       "points_cost": 200,
       "image": "assets/images/events/estro-2026.webp",
       "stock": 10,
@@ -11894,8 +11924,14 @@
     {
       "id": "estro-2026-addon-proceedings",
       "event_id": "estro-2026",
-      "name": { "en": "Proceedings hardcover", "sv": "Proceedings hardcover" },
-      "description": { "en": "Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings.", "sv": "Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings." },
+      "name": {
+        "en": "Proceedings hardcover",
+        "sv": "Proceedings hardcover"
+      },
+      "description": {
+        "en": "Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings.",
+        "sv": "Simulated add-on. Hardcover printing of the full ESTRO 2026 proceedings."
+      },
       "points_cost": 150,
       "image": "assets/images/events/estro-2026.webp",
       "stock": null,
@@ -11905,8 +11941,14 @@
   "merchandise": [
     {
       "id": "merch-tote-bag",
-      "name": { "en": "Stockholmsmassan tote bag", "sv": "Stockholmsmassan tote bag" },
-      "description": { "en": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark.", "sv": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark." },
+      "name": {
+        "en": "Stockholmsmassan tote bag",
+        "sv": "Stockholmsmassan tote bag"
+      },
+      "description": {
+        "en": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark.",
+        "sv": "Simulated item. Sturdy canvas tote with the Stockholmsmassan wordmark."
+      },
       "points_cost": 120,
       "image": "assets/images/merchandise/tote-bag.svg",
       "stock": null,
@@ -11914,8 +11956,14 @@
     },
     {
       "id": "merch-cap",
-      "name": { "en": "Stockholmsmassan cap", "sv": "Stockholmsmassan cap" },
-      "description": { "en": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo.", "sv": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo." },
+      "name": {
+        "en": "Stockholmsmassan cap",
+        "sv": "Stockholmsmassan cap"
+      },
+      "description": {
+        "en": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo.",
+        "sv": "Simulated item. Six-panel cap with embroidered Stockholmsmassan logo."
+      },
       "points_cost": 150,
       "image": "assets/images/merchandise/cap.svg",
       "stock": 100,
@@ -11923,8 +11971,14 @@
     },
     {
       "id": "merch-notebook",
-      "name": { "en": "Notebook", "sv": "Notebook" },
-      "description": { "en": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker.", "sv": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker." },
+      "name": {
+        "en": "Notebook",
+        "sv": "Notebook"
+      },
+      "description": {
+        "en": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker.",
+        "sv": "Simulated item. A5 hardcover notebook with numbered pages and a ribbon marker."
+      },
       "points_cost": 90,
       "image": "assets/images/merchandise/notebook.svg",
       "stock": null,
@@ -11932,8 +11986,14 @@
     },
     {
       "id": "merch-enamel-pin",
-      "name": { "en": "Enamel pin", "sv": "Enamel pin" },
-      "description": { "en": "Simulated item. Enamel pin with the Stockholmsmassan roundel.", "sv": "Simulated item. Enamel pin with the Stockholmsmassan roundel." },
+      "name": {
+        "en": "Enamel pin",
+        "sv": "Enamel pin"
+      },
+      "description": {
+        "en": "Simulated item. Enamel pin with the Stockholmsmassan roundel.",
+        "sv": "Simulated item. Enamel pin with the Stockholmsmassan roundel."
+      },
       "points_cost": 60,
       "image": "assets/images/merchandise/enamel-pin.svg",
       "stock": 200,
