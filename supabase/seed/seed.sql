@@ -6782,13 +6782,13 @@ Work System is a one-stop shop where you can find everything you need in terms o
 Work System är en One-Stop-Shop, där man hittar allt man behöver i utrustningsväg för att skräddarsy sin arbetsbil. All inredning är uppbyggd genom ett modulärt koncept så att inredningslösningen kan anpassas exakt efter dina specifika behov. Vår prioritet är din arbetsbil och våra lösningar kan hjälpa till att göra din vardag säkrare och effektivare.'), 'https://www.worksystem.se', 'assets/images/exhibitors/nordbygg-2026-work-system.jpg'),
   ('nordbygg-2026-exhibitor-139530', 'nordbygg-2026', 'WORKSOBER.COM', 'AG:94', null, 'https://www.ips.lt', null),
   ('nordbygg-2026-exhibitor-138153', 'nordbygg-2026', 'WUKO Maschinenbau GmbH', 'C19:31', null, 'https://www.wuko.at', 'assets/images/exhibitors/nordbygg-2026-wuko-maschinenbau-gmbh.jpg'),
-  ('nordbygg-2026-exhibitor-138039', 'nordbygg-2026', 'X Workwear', 'B02:52', jsonb_build_object('en', 'X Workwear är uppstickaren som utvecklar och säljer egenutvecklade arbetskläder och arbetsskor direkt till yrkesproffs i hela Sverige via vår e-handel. Genom att plocka bort traditionella mellanhänder kan vi fokusera på funktion, passform och kvalitet, samtidigt som vi erbjuder ett mer konkurrenskraftigt pris utan att behöva kompromissa.
+  ('nordbygg-2026-exhibitor-138039', 'nordbygg-2026', 'X Workwear', 'B02:52', jsonb_build_object('en', 'X Workwear is the up-and-coming brand that develops and sells its own workwear and work shoes directly to industry professionals throughout Sweden via our e-commerce store. By cutting out traditional middlemen we can focus on function, fit and quality, while offering a more competitive price without having to compromise.
 
-På Nordbygg 2026 hittar du oss i monter B02:52. Här visar vi produktnyheter, våra storsäljare och bjuder in till tävlingar. För oss handlar mässan lika mycket om att visa produkter som att lyssna och låta er vara med och påverka branschen framåt.
+At Nordbygg 2026 you will find us in booth B02:52. Here we showcase product news and our bestsellers, and invite you to take part in competitions. For us the fair is just as much about showing products as it is about listening and letting you help shape the industry going forward.
 
-Till vardags möter vi våra kunder digitalt, vilket gör Nordbygg 2026 till ett av få tillfällen att uppleva våra produkter fysiskt. Följ resan mot Nordbygg i våra sociala medier, @xworkwear.
+Day-to-day we meet our customers digitally, which makes Nordbygg 2026 one of the few opportunities to experience our products in person. Follow our journey to Nordbygg on our social media, @xworkwear.
 
-Kom förbi, säg hej och ta en pratstund med oss!', 'sv', 'X Workwear är uppstickaren som utvecklar och säljer egenutvecklade arbetskläder och arbetsskor direkt till yrkesproffs i hela Sverige via vår e-handel. Genom att plocka bort traditionella mellanhänder kan vi fokusera på funktion, passform och kvalitet, samtidigt som vi erbjuder ett mer konkurrenskraftigt pris utan att behöva kompromissa.
+Come by, say hi and have a chat with us!', 'sv', 'X Workwear är uppstickaren som utvecklar och säljer egenutvecklade arbetskläder och arbetsskor direkt till yrkesproffs i hela Sverige via vår e-handel. Genom att plocka bort traditionella mellanhänder kan vi fokusera på funktion, passform och kvalitet, samtidigt som vi erbjuder ett mer konkurrenskraftigt pris utan att behöva kompromissa.
 
 På Nordbygg 2026 hittar du oss i monter B02:52. Här visar vi produktnyheter, våra storsäljare och bjuder in till tävlingar. För oss handlar mässan lika mycket om att visa produkter som att lyssna och låta er vara med och påverka branschen framåt.
 
@@ -6796,46 +6796,46 @@ Till vardags möter vi våra kunder digitalt, vilket gör Nordbygg 2026 till ett
 
 Kom förbi, säg hej och ta en pratstund med oss!'), 'https://xworkwear.com/se', 'assets/images/exhibitors/nordbygg-2026-x-workwear.jpg'),
   ('nordbygg-2026-exhibitor-140111', 'nordbygg-2026', 'X-Floc Dämmtechnik Maschinen GmbH', 'AG:106', null, 'https://www.x-floc.com/en', null),
-  ('nordbygg-2026-exhibitor-137926', 'nordbygg-2026', 'Xella Sverige AB', 'C09:50', jsonb_build_object('en', 'Xella Sverige är en del av Xella Group, som är en europeisk leverantör av effektiva och hållbara vägglösningar för alla typer av byggprojekt. Xella står bakom välkända varumärken som Ytong, Silka, Hebel och Multipor och är en pionjär inom digitalt stödda byggprocesser. Våra produkter är baserade på mineralråvaror och möter behovet av effektivt byggande samt efterfrågan på hållbara bygglösningar. Koncernen driver innovation längs hela värdekedjan, från planering till produktion och montering. Xella förbättrar byggnaders hållbarhet under hela deras livscykel och bidrar till en koldioxidsnål industri som är kompatibel med en cirkulär ekonomi. Xella-koncernen har sitt huvudkontor i Duisburg i Tyskland och sysselsätter mer än 4 000 personer.', 'sv', 'Xella Sverige är en del av Xella Group, som är en europeisk leverantör av effektiva och hållbara vägglösningar för alla typer av byggprojekt. Xella står bakom välkända varumärken som Ytong, Silka, Hebel och Multipor och är en pionjär inom digitalt stödda byggprocesser. Våra produkter är baserade på mineralråvaror och möter behovet av effektivt byggande samt efterfrågan på hållbara bygglösningar. Koncernen driver innovation längs hela värdekedjan, från planering till produktion och montering. Xella förbättrar byggnaders hållbarhet under hela deras livscykel och bidrar till en koldioxidsnål industri som är kompatibel med en cirkulär ekonomi. Xella-koncernen har sitt huvudkontor i Duisburg i Tyskland och sysselsätter mer än 4 000 personer.'), 'https://www.xella.se', 'assets/images/exhibitors/nordbygg-2026-xella-sverige-ab.jpg'),
+  ('nordbygg-2026-exhibitor-137926', 'nordbygg-2026', 'Xella Sverige AB', 'C09:50', jsonb_build_object('en', 'Xella Sverige is part of the Xella Group, a European supplier of efficient and sustainable wall solutions for every type of construction project. Xella is behind well-known brands such as Ytong, Silka, Hebel and Multipor, and is a pioneer in digitally supported construction processes. Our products are based on mineral raw materials and meet both the demand for efficient construction and the need for sustainable building solutions. The group drives innovation across the entire value chain, from planning to production and installation. Xella improves the durability of buildings throughout their full life cycle and contributes to a low-carbon industry compatible with a circular economy. The Xella Group is headquartered in Duisburg, Germany, and employs more than 4,000 people.', 'sv', 'Xella Sverige är en del av Xella Group, som är en europeisk leverantör av effektiva och hållbara vägglösningar för alla typer av byggprojekt. Xella står bakom välkända varumärken som Ytong, Silka, Hebel och Multipor och är en pionjär inom digitalt stödda byggprocesser. Våra produkter är baserade på mineralråvaror och möter behovet av effektivt byggande samt efterfrågan på hållbara bygglösningar. Koncernen driver innovation längs hela värdekedjan, från planering till produktion och montering. Xella förbättrar byggnaders hållbarhet under hela deras livscykel och bidrar till en koldioxidsnål industri som är kompatibel med en cirkulär ekonomi. Xella-koncernen har sitt huvudkontor i Duisburg i Tyskland och sysselsätter mer än 4 000 personer.'), 'https://www.xella.se', 'assets/images/exhibitors/nordbygg-2026-xella-sverige-ab.jpg'),
   ('nordbygg-2026-exhibitor-139668', 'nordbygg-2026', 'XMReality', 'A14:30', null, 'https://www.xmreality.se', 'assets/images/exhibitors/nordbygg-2026-xmreality.jpg'),
-  ('nordbygg-2026-exhibitor-139171', 'nordbygg-2026', 'Xodor AB', 'A11:19', jsonb_build_object('en', 'Xodor AB – Framtidens lösningar för lukt  och bakteriekontroll i avluftningar o golvbrunnar.
+  ('nordbygg-2026-exhibitor-139171', 'nordbygg-2026', 'Xodor AB', 'A11:19', jsonb_build_object('en', 'Xodor AB – Tomorrow''s solutions for odour and bacteria control in vent stacks and floor drains.
 
-På Xodor AB skapar vi nästa generations hållbara teknik för att eliminera bakterier och oönskade lukter – helt utan kemikalier. Vår unika patenterade filterteknik bygger på Sorbonite®, ett naturligt aktivt material med exceptionellt högt pH-värde som gör processen både effektiv och miljövänlig. Xodors produkter finns redan att beställa hos Ahlsell - se www.xodor.se hur beställning går till.
+At Xodor AB we create the next generation of sustainable technology to eliminate bacteria and unwanted odours – entirely without chemicals. Our unique patented filter technology is based on Sorbonite®, a naturally active material with an exceptionally high pH value that makes the process both effective and environmentally friendly. Xodor''s products can already be ordered from Ahlsell – see www.xodor.se for how to place an order.
 
-Med över 20 års forskning och utveckling i ryggen erbjuder vi produkter som löser verkliga problem för fastighetsägare, driftbolag och industrier – snabbt, enkelt och långsiktigt.
+With more than 20 years of research and development behind us, we offer products that solve real-world problems for property owners, operating companies and industry – quickly, easily and for the long term.
 ________________________________________
-Varför Sorbonite®?
+Why Sorbonite®?
 
-Naturligt. Kraftfullt. Pålitligt.
-Sorbonite® utvecklades ursprungligen för rening av avloppsvatten, där det visade sig reducera bakterietillväxt mycket effektivt. Under forskningen upptäckte en professor vid KTH att materialet även har en stark förmåga att neutralisera både bakterier och odörer i luftmiljöer – en upptäckt som lade grunden till Xodor AB:s innovationer.
+Natural. Powerful. Reliable.
+Sorbonite® was originally developed for waste-water treatment, where it was shown to reduce bacterial growth very effectively. During the research, a professor at KTH discovered that the material also has a strong ability to neutralise both bacteria and odours in air environments – a discovery that laid the foundation for Xodor AB''s innovations.
 
-Idag är Sorbonite® kärnan i vår passiva cirkulära filterteknik – en metod som:
+Today, Sorbonite® is the core of our passive circular filter technology – a method that:
 
-- Eliminerar bakterier
-- Neutraliserar odörer
-- Kräver ingen energi
-- Inga rörliga delar som kan gå sönder
-- Är helt fri från kemikalier
-- Är enkel att installera
-- Är kostnadseffektiv över tid
-- Kan nyttjas av växter
+- Eliminates bacteria
+- Neutralises odours
+- Requires no energy
+- Has no moving parts that can break
+- Is completely free of chemicals
+- Is easy to install
+- Is cost-effective over time
+- Can be used by plants
 
 ________________________________________
-Våra produkter – framtagen för verkliga problem
+Our products – designed for real problems
 
 PCF Pipe
 
-Ett smart och underhållsfritt system för att förhindra luktproblem från avluftningar såsom fettavskiljare och toaletter. PCF Pipe är också en ersättare till vakuumventiler som flera på marknaden efterfrågar.
+A smart, maintenance-free system that prevents odour problems from vent stacks such as grease separators and toilets. PCF Pipe is also a replacement for the vacuum valves that many on the market are calling for.
 
 DryDrain®
 
-En innovativ lösning som skyddar uttorkade golvbrunnar från att sprida dålig lukt och bakterier– helt utan kemikalier eller rörliga delar.
-Båda produkterna bygger på vår passiva filterteknik och är framtagna för att ge maximal effekt med minimal insats.
+An innovative solution that protects dried-out floor drains from spreading bad odours and bacteria – entirely without chemicals or moving parts.
+Both products are based on our passive filter technology and are designed to deliver maximum effect with minimal effort.
 ________________________________________
-På väg ut på marknaden – med starka partners
-Vi har redan etablerat oss hos ledande grossister och kontrakterat agenter som hjälper oss nå ut nationellt och internationellt.
+On the way to market – with strong partners
+We have already established ourselves with leading wholesalers and contracted agents who help us reach customers nationally and internationally.
 
-Genom vårt samgående med VJU AB får vi dessutom en marknadsföringspartner som accelererar vår tillväxt och stärker vår position i branschen. Tillsammans tar vi innovativa, hållbara och kemikaliefria lösningar för bakterie-  och odörkontroll till en helt ny nivå.', 'sv', 'Xodor AB – Framtidens lösningar för lukt  och bakteriekontroll i avluftningar o golvbrunnar.
+Through our merger with VJU AB we also gain a marketing partner that accelerates our growth and strengthens our position in the industry. Together we are taking innovative, sustainable and chemical-free solutions for bacteria and odour control to a whole new level.', 'sv', 'Xodor AB – Framtidens lösningar för lukt  och bakteriekontroll i avluftningar o golvbrunnar.
 
 På Xodor AB skapar vi nästa generations hållbara teknik för att eliminera bakterier och oönskade lukter – helt utan kemikalier. Vår unika patenterade filterteknik bygger på Sorbonite®, ett naturligt aktivt material med exceptionellt högt pH-värde som gör processen både effektiv och miljövänlig. Xodors produkter finns redan att beställa hos Ahlsell - se www.xodor.se hur beställning går till.
 
@@ -6873,13 +6873,13 @@ På väg ut på marknaden – med starka partners
 Vi har redan etablerat oss hos ledande grossister och kontrakterat agenter som hjälper oss nå ut nationellt och internationellt.
 
 Genom vårt samgående med VJU AB får vi dessutom en marknadsföringspartner som accelererar vår tillväxt och stärker vår position i branschen. Tillsammans tar vi innovativa, hållbara och kemikaliefria lösningar för bakterie-  och odörkontroll till en helt ny nivå.'), 'https://www.xodor.se', 'assets/images/exhibitors/nordbygg-2026-xodor-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139909', 'nordbygg-2026', 'YSS ab', 'C05:53', jsonb_build_object('en', 'YSS AB – Ytskyddsspecialisterna
+  ('nordbygg-2026-exhibitor-139909', 'nordbygg-2026', 'YSS ab', 'C05:53', jsonb_build_object('en', 'YSS AB – Ytskyddsspecialisterna (the surface-protection specialists)
 
-Ytskyddsspecialisterna är ett specialistföretag inom hygieniska och slitstarka golv- och ytskyddslösningar för industri, livsmedel, logistik och kommersiella miljöer. Vi projekterar och installerar moderna system i epoxi, polyuretan-cement och andra högpresterande beläggningar med fokus på funktion, hållbarhet och lång livslängd.
+Ytskyddsspecialisterna is a specialist company within hygienic and hard-wearing flooring and surface-protection solutions for industry, food production, logistics and commercial environments. We design and install modern systems in epoxy, polyurethane cement and other high-performance coatings, with a focus on function, durability and a long service life.
 
-Med gedigen erfarenhet från produktionsmiljöer över hela Sverige hjälper vi våra kunder att skapa säkra, lättstädade och driftsäkra ytor som uppfyller höga krav på hygien och slitstyrka.
+With extensive experience from production environments across Sweden, we help our customers create safe, easy-to-clean and reliable surfaces that meet stringent hygiene and wear-resistance requirements.
 
-Vi arbetar nära våra kunder genom hela processen – från behovsanalys och teknisk rådgivning till färdig installation och uppföljning.', 'sv', 'YSS AB – Ytskyddsspecialisterna
+We work closely with our customers throughout the whole process – from needs analysis and technical advice to completed installation and follow-up.', 'sv', 'YSS AB – Ytskyddsspecialisterna
 
 Ytskyddsspecialisterna är ett specialistföretag inom hygieniska och slitstarka golv- och ytskyddslösningar för industri, livsmedel, logistik och kommersiella miljöer. Vi projekterar och installerar moderna system i epoxi, polyuretan-cement och andra högpresterande beläggningar med fokus på funktion, hållbarhet och lång livslängd.
 
@@ -6892,27 +6892,27 @@ Vi arbetar nära våra kunder genom hela processen – från behovsanalys och te
 
 Our 3DCP microfactory with patented printhead systems integrates structural fibres, aggregates, and steel cable reinforcement directly during printing, enabling load-bearing construction. For bridges, facades, and infrastructure without formwork/moulds and with minimal waste.
 
-Zavhy delivers measurable impact: up to 70% lower CO2 emissions, 60% faster flexible construction, and improved structural printed performance. Our technology is proven in practice. Our CEO contributed to the world’s first 3D-printed bridges and house in Europe.
+Zavhy delivers measurable impact: up to 70% lower CO2 emissions, 60% faster flexible construction, and improved structural printed performance. Our technology is proven in practice. Our CEO contributed to the world''s first 3D-printed bridges and house in Europe.
 
-With labour shortages, sustainability targets, and a focus on prefabrication, the Nordic region is a good fit for Zavhy’s scalable, low-carbon construction solutions.', 'sv', 'Zavhy is a Dutch startup digitising and decarbonising construction through reinforced 3D concrete printing (3DCP) such as fabricating specialised bicycle bridges and landscape elements. We design, build, and operate the full technology stack in-house. Robotics, software, and materials. Enabling scalable, precision-engineered construction.
+With labour shortages, sustainability targets, and a focus on prefabrication, the Nordic region is a good fit for Zavhy''s scalable, low-carbon construction solutions.', 'sv', 'Zavhy är en holländsk startup som digitaliserar och avkarboniserar byggsektorn genom armerad 3D-betongutskrift (3DCP) och tillverkar bland annat specialdesignade cykelbroar och landskapselement. Vi designar, bygger och driver hela teknikstacken internt – robotik, mjukvara och material – och möjliggör skalbart och precisionsbyggt utförande.
 
-Our 3DCP microfactory with patented printhead systems integrates structural fibres, aggregates, and steel cable reinforcement directly during printing, enabling load-bearing construction. For bridges, facades, and infrastructure without formwork/moulds and with minimal waste.
+Vår 3DCP-mikrofabrik med patenterade skrivhuvudssystem integrerar strukturfibrer, ballast och stållinearmering direkt under utskriften, vilket möjliggör bärande konstruktioner. Det fungerar för broar, fasader och infrastruktur utan formverk eller gjutformar och med minimalt spill.
 
-Zavhy delivers measurable impact: up to 70% lower CO2 emissions, 60% faster flexible construction, and improved structural printed performance. Our technology is proven in practice. Our CEO contributed to the world’s first 3D-printed bridges and house in Europe.
+Zavhy levererar mätbar effekt: upp till 70 % lägre CO2-utsläpp, 60 % snabbare och flexibelt byggande samt förbättrad strukturell prestanda i utskrivna konstruktioner. Vår teknik är beprövad i praktiken – vår VD bidrog till världens första 3D-utskrivna broar och första 3D-utskrivna hus i Europa.
 
-With labour shortages, sustainability targets, and a focus on prefabrication, the Nordic region is a good fit for Zavhy’s scalable, low-carbon construction solutions.'), 'https://zavhy.com', 'assets/images/exhibitors/nordbygg-2026-zavhy.jpg'),
+Med rådande arbetskraftsbrist, hållbarhetsmål och ett ökat fokus på prefabricering passar Norden väl för Zavhys skalbara, koldioxidsnåla bygglösningar.'), 'https://zavhy.com', 'assets/images/exhibitors/nordbygg-2026-zavhy.jpg'),
   ('nordbygg-2026-exhibitor-138226', 'nordbygg-2026', 'Zego Tech Aps', 'A18:25', null, 'https://www.zegowater.dk               www.zegotech.dk', null),
-  ('nordbygg-2026-exhibitor-139065', 'nordbygg-2026', 'ZERN ENGINEERING / BLAUBERG MOTOREN', 'A22:27', jsonb_build_object('en', 'ZERN ENGINEERING is a full-cycle manufacturer with over 15 years of experience in the field of energy-efficient ventilation technologies. We specialize in the development and production of counter-flow, cross-flow, enthalpy, and rotary air-to-air heat exchangers. BLAUBERG MOTOREN produce wide range of motors and fans with EC and AC technology for clients all around the world. It includes axial fans, backward curved fans, forward curved fans, blowers.', 'sv', 'ZERN ENGINEERING is a full-cycle manufacturer with over 15 years of experience in the field of energy-efficient ventilation technologies. We specialize in the development and production of counter-flow, cross-flow, enthalpy, and rotary air-to-air heat exchangers. BLAUBERG MOTOREN produce wide range of motors and fans with EC and AC technology for clients all around the world. It includes axial fans, backward curved fans, forward curved fans, blowers.'), null, 'assets/images/exhibitors/nordbygg-2026-zern-engineering-blauberg-motoren.jpg'),
+  ('nordbygg-2026-exhibitor-139065', 'nordbygg-2026', 'ZERN ENGINEERING / BLAUBERG MOTOREN', 'A22:27', jsonb_build_object('en', 'ZERN ENGINEERING is a full-cycle manufacturer with over 15 years of experience in the field of energy-efficient ventilation technologies. We specialize in the development and production of counter-flow, cross-flow, enthalpy, and rotary air-to-air heat exchangers. BLAUBERG MOTOREN produce wide range of motors and fans with EC and AC technology for clients all around the world. It includes axial fans, backward curved fans, forward curved fans, blowers.', 'sv', 'ZERN ENGINEERING är en fullcykeltillverkare med över 15 års erfarenhet inom energieffektiv ventilationsteknik. Vi är specialiserade på utveckling och tillverkning av motströms-, korsströms-, entalpi- och roterande luft-till-luft-värmeväxlare. BLAUBERG MOTOREN tillverkar ett brett sortiment av motorer och fläktar med EC- och AC-teknik för kunder över hela världen. Sortimentet omfattar axialfläktar, bakåtböjda fläktar, framåtböjda fläktar och radialfläktar.'), null, 'assets/images/exhibitors/nordbygg-2026-zern-engineering-blauberg-motoren.jpg'),
   ('nordbygg-2026-exhibitor-139813', 'nordbygg-2026', 'Zhejiang Haozhuo', 'C15:61', null, 'https://www.sinomates.com', null),
-  ('nordbygg-2026-exhibitor-139392', 'nordbygg-2026', 'ZIEHL-ABEGG', 'A22:18', jsonb_build_object('en', 'ZIEHL-ABEGG är en global ledare inom ventilations-, styr- och drivteknik med fokus på energieffektiva och hållbara lösningar för byggnader och industri.
+  ('nordbygg-2026-exhibitor-139392', 'nordbygg-2026', 'ZIEHL-ABEGG', 'A22:18', jsonb_build_object('en', 'ZIEHL-ABEGG is a global leader in ventilation, control and drive technology, with a focus on energy-efficient and sustainable solutions for buildings and industry.
 
-Med över 110 års global erfarenhet och mer än 50 år i Sverige har ZIEHL-ABEGG byggt upp en djup kompetens och stark närvaro på marknaden. Sedan etableringen i Sverige på 1970-talet har vi varit en pålitlig partner inom ventilationslösningar och fortsatt att utvecklas tillsammans med våra kunder.
+With more than 110 years of global experience and more than 50 years in Sweden, ZIEHL-ABEGG has built up deep expertise and a strong market presence. Since establishing operations in Sweden in the 1970s, we have been a reliable partner in ventilation solutions and have continued to develop together with our customers.
 
-Med innovativ teknik och hög kvalitet utvecklar vi produkter som axial- och radialfläktar, elmotorer samt avancerade styrsystem – anpassade för allt från komfortventilation till komplexa industriella applikationer.
+With innovative technology and high quality, we develop products such as axial and centrifugal fans, electric motors and advanced control systems – tailored for everything from comfort ventilation to complex industrial applications.
 
-Vårt mål är att bidra till en mer hållbar framtid genom minskad energiförbrukning, lägre ljudnivåer och smartare systemlösningar. Genom kontinuerlig utveckling och nära samarbete med våra kunder skapar vi lösningar som möter morgondagens krav redan idag.
+Our goal is to contribute to a more sustainable future through reduced energy consumption, lower noise levels and smarter system solutions. Through continuous development and close collaboration with our customers, we create solutions that meet tomorrow''s requirements today.
 
-Besök vår monter för att upptäcka våra senaste innovationer – och hur över ett halvt sekels erfarenhet i Sverige kan hjälpa dig optimera dina ventilationslösningar.', 'sv', 'ZIEHL-ABEGG är en global ledare inom ventilations-, styr- och drivteknik med fokus på energieffektiva och hållbara lösningar för byggnader och industri.
+Visit our booth to discover our latest innovations – and how more than half a century of experience in Sweden can help you optimise your ventilation solutions.', 'sv', 'ZIEHL-ABEGG är en global ledare inom ventilations-, styr- och drivteknik med fokus på energieffektiva och hållbara lösningar för byggnader och industri.
 
 Med över 110 års global erfarenhet och mer än 50 år i Sverige har ZIEHL-ABEGG byggt upp en djup kompetens och stark närvaro på marknaden. Sedan etableringen i Sverige på 1970-talet har vi varit en pålitlig partner inom ventilationslösningar och fortsatt att utvecklas tillsammans med våra kunder.
 
@@ -6921,8 +6921,8 @@ Med innovativ teknik och hög kvalitet utvecklar vi produkter som axial- och rad
 Vårt mål är att bidra till en mer hållbar framtid genom minskad energiförbrukning, lägre ljudnivåer och smartare systemlösningar. Genom kontinuerlig utveckling och nära samarbete med våra kunder skapar vi lösningar som möter morgondagens krav redan idag.
 
 Besök vår monter för att upptäcka våra senaste innovationer – och hur över ett halvt sekels erfarenhet i Sverige kan hjälpa dig optimera dina ventilationslösningar.'), 'https://www.ziehl-abegg.se', 'assets/images/exhibitors/nordbygg-2026-ziehl-abegg.jpg'),
-  ('nordbygg-2026-exhibitor-134021', 'nordbygg-2026', 'Zip-Up Svenska AB', 'UTE:02 (+2)', jsonb_build_object('en', 'Zip-Up – Sveriges förstahandsval för säkra liftar och byggställningar sedan 1978
-Vi levererar kvalitet, service och trygghet till hela lift- och byggställningsbranschen. Hos oss hittar du allt du behöver för att arbeta säkert på höjd. Utforska vårt breda sortiment och hitta rätt lösning för dina behov.', 'sv', 'Zip-Up – Sveriges förstahandsval för säkra liftar och byggställningar sedan 1978
+  ('nordbygg-2026-exhibitor-134021', 'nordbygg-2026', 'Zip-Up Svenska AB', 'UTE:02 (+2)', jsonb_build_object('en', 'Zip-Up – Sweden''s first choice for safe lifts and scaffolding since 1978
+We deliver quality, service and reliability to the entire lift and scaffolding industry. With us you will find everything you need to work safely at height. Explore our broad range and find the right solution for your needs.', 'sv', 'Zip-Up – Sveriges förstahandsval för säkra liftar och byggställningar sedan 1978
 Vi levererar kvalitet, service och trygghet till hela lift- och byggställningsbranschen. Hos oss hittar du allt du behöver för att arbeta säkert på höjd. Utforska vårt breda sortiment och hitta rätt lösning för dina behov.'), 'https://www.zipup.se', null),
   ('nordbygg-2026-exhibitor-138786', 'nordbygg-2026', 'Zodiac Sverige AB', 'B10:10', null, 'https://www.zodiac.se', null),
   ('nordbygg-2026-exhibitor-138797', 'nordbygg-2026', 'Älvdalsfönster AB', 'C16:22', null, 'https://www.alvdalsfonster.se', 'assets/images/exhibitors/nordbygg-2026-alvdalsfonster-ab.jpg'),
