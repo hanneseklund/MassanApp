@@ -2165,56 +2165,98 @@
       "id": "nordbygg-2026-news-exhibitors-crossed",
       "event_id": "nordbygg-2026",
       "published_at": "2026-03-02T09:00:00Z",
-      "title": "Nordbygg 2026 exhibitor registrations cross 700",
-      "body": "Simulated. Nordbygg reports that more than 700 exhibitors have confirmed attendance, spanning sustainable materials, prefabrication, building services, and digital tools for the construction industry.",
+      "title": {
+        "en": "Nordbygg 2026 exhibitor registrations cross 700",
+        "sv": "Nordbygg 2026 exhibitor registrations cross 700"
+      },
+      "body": {
+        "en": "Simulated. Nordbygg reports that more than 700 exhibitors have confirmed attendance, spanning sustainable materials, prefabrication, building services, and digital tools for the construction industry.",
+        "sv": "Simulated. Nordbygg reports that more than 700 exhibitors have confirmed attendance, spanning sustainable materials, prefabrication, building services, and digital tools for the construction industry."
+      },
       "hero_image": "assets/images/events/nordbygg-2026.jpg"
     },
     {
       "id": "nordbygg-2026-news-sustainability-stage",
       "event_id": "nordbygg-2026",
       "published_at": "2026-03-18T09:00:00Z",
-      "title": "Sustainability stage program finalized",
-      "body": "Simulated. The Sustainability Stage program for Nordbygg 2026 covers circular construction, low-carbon concrete, and energy retrofits. All sessions are open to fair visitors without extra registration.",
+      "title": {
+        "en": "Sustainability stage program finalized",
+        "sv": "Sustainability stage program finalized"
+      },
+      "body": {
+        "en": "Simulated. The Sustainability Stage program for Nordbygg 2026 covers circular construction, low-carbon concrete, and energy retrofits. All sessions are open to fair visitors without extra registration.",
+        "sv": "Simulated. The Sustainability Stage program for Nordbygg 2026 covers circular construction, low-carbon concrete, and energy retrofits. All sessions are open to fair visitors without extra registration."
+      },
       "hero_image": "assets/images/events/nordbygg-2026.jpg"
     },
     {
       "id": "nordbygg-2026-news-safety-workshop",
       "event_id": "nordbygg-2026",
       "published_at": "2026-04-01T09:00:00Z",
-      "title": "Site-safety workshops added to day three",
-      "body": "Simulated. Day three of the fair adds hands-on workshops on site-safety equipment, PPE, and fall-protection. Capacity is limited and managed at the workshop entrance.",
+      "title": {
+        "en": "Site-safety workshops added to day three",
+        "sv": "Site-safety workshops added to day three"
+      },
+      "body": {
+        "en": "Simulated. Day three of the fair adds hands-on workshops on site-safety equipment, PPE, and fall-protection. Capacity is limited and managed at the workshop entrance.",
+        "sv": "Simulated. Day three of the fair adds hands-on workshops on site-safety equipment, PPE, and fall-protection. Capacity is limited and managed at the workshop entrance."
+      },
       "hero_image": "assets/images/events/nordbygg-2026.jpg"
     },
     {
       "id": "nordbygg-2026-news-ticket-pickup",
       "event_id": "nordbygg-2026",
       "published_at": "2026-04-14T09:00:00Z",
-      "title": "Ticket pickup and visitor tips for opening day",
-      "body": "Simulated. Visitors are encouraged to pre-register and use mobile tickets to skip the queues at opening. Coffee will be available in the main foyer from 8:00.",
+      "title": {
+        "en": "Ticket pickup and visitor tips for opening day",
+        "sv": "Ticket pickup and visitor tips for opening day"
+      },
+      "body": {
+        "en": "Simulated. Visitors are encouraged to pre-register and use mobile tickets to skip the queues at opening. Coffee will be available in the main foyer from 8:00.",
+        "sv": "Simulated. Visitors are encouraged to pre-register and use mobile tickets to skip the queues at opening. Coffee will be available in the main foyer from 8:00."
+      },
       "hero_image": "assets/images/events/nordbygg-2026.jpg"
     },
     {
       "id": "estro-2026-news-late-breaking",
       "event_id": "estro-2026",
       "published_at": "2026-04-05T09:00:00Z",
-      "title": "Late-breaking abstract window closes",
-      "body": "Simulated. The late-breaking abstract submission window for ESTRO 2026 has closed. Accepted late-breakers will be added to the searchable program next week.",
+      "title": {
+        "en": "Late-breaking abstract window closes",
+        "sv": "Late-breaking abstract window closes"
+      },
+      "body": {
+        "en": "Simulated. The late-breaking abstract submission window for ESTRO 2026 has closed. Accepted late-breakers will be added to the searchable program next week.",
+        "sv": "Simulated. The late-breaking abstract submission window for ESTRO 2026 has closed. Accepted late-breakers will be added to the searchable program next week."
+      },
       "hero_image": "assets/images/events/estro-2026.webp"
     },
     {
       "id": "estro-2026-news-industry-symposia",
       "event_id": "estro-2026",
       "published_at": "2026-04-20T09:00:00Z",
-      "title": "Industry symposia and hands-on demos announced",
-      "body": "Simulated. Industry symposia and hands-on demos for ESTRO 2026 have been published in the congress program. Delegates can filter their personal agenda to include or exclude industry content.",
+      "title": {
+        "en": "Industry symposia and hands-on demos announced",
+        "sv": "Industry symposia and hands-on demos announced"
+      },
+      "body": {
+        "en": "Simulated. Industry symposia and hands-on demos for ESTRO 2026 have been published in the congress program. Delegates can filter their personal agenda to include or exclude industry content.",
+        "sv": "Simulated. Industry symposia and hands-on demos for ESTRO 2026 have been published in the congress program. Delegates can filter their personal agenda to include or exclude industry content."
+      },
       "hero_image": "assets/images/events/estro-2026.webp"
     },
     {
       "id": "eha-2026-news-platform-open",
       "event_id": "eha-2026",
       "published_at": "2026-05-05T09:00:00Z",
-      "title": "EHA2026 congress platform opens to registered delegates",
-      "body": "Simulated. The EHA2026 congress platform is now available to registered delegates, with networking, profile setup, and the full searchable program.",
+      "title": {
+        "en": "EHA2026 congress platform opens to registered delegates",
+        "sv": "EHA2026 congress platform opens to registered delegates"
+      },
+      "body": {
+        "en": "Simulated. The EHA2026 congress platform is now available to registered delegates, with networking, profile setup, and the full searchable program.",
+        "sv": "Simulated. The EHA2026 congress platform is now available to registered delegates, with networking, profile setup, and the full searchable program."
+      },
       "hero_image": "assets/images/events/eha-2026.jpg"
     }
   ],
@@ -2222,22 +2264,40 @@
     {
       "id": "nordbygg-2026-article-why-attend",
       "event_id": "nordbygg-2026",
-      "title": "Why Nordbygg 2026 is the Nordic construction meeting point",
-      "body": "Simulated. Nordbygg collects the Nordic construction and real-estate industry under one roof at Stockholmsmassan: manufacturers, consultants, architects, developers, and public-sector procurement teams. The fair combines an exhibitor floor, a seminar program, and dedicated stages for sustainability and digital tools. Visitors use the fair to benchmark products, meet suppliers in person, and get an overview of emerging regulation.",
+      "title": {
+        "en": "Why Nordbygg 2026 is the Nordic construction meeting point",
+        "sv": "Why Nordbygg 2026 is the Nordic construction meeting point"
+      },
+      "body": {
+        "en": "Simulated. Nordbygg collects the Nordic construction and real-estate industry under one roof at Stockholmsmassan: manufacturers, consultants, architects, developers, and public-sector procurement teams. The fair combines an exhibitor floor, a seminar program, and dedicated stages for sustainability and digital tools. Visitors use the fair to benchmark products, meet suppliers in person, and get an overview of emerging regulation.",
+        "sv": "Simulated. Nordbygg collects the Nordic construction and real-estate industry under one roof at Stockholmsmassan: manufacturers, consultants, architects, developers, and public-sector procurement teams. The fair combines an exhibitor floor, a seminar program, and dedicated stages for sustainability and digital tools. Visitors use the fair to benchmark products, meet suppliers in person, and get an overview of emerging regulation."
+      },
       "hero_image": "assets/images/events/nordbygg-2026.jpg"
     },
     {
       "id": "nordbygg-2026-article-what-to-see",
       "event_id": "nordbygg-2026",
-      "title": "What to see on a one-day visit",
-      "body": "Simulated. If you only have one day at Nordbygg 2026, focus on the Sustainability Stage in the morning, spend midday on the exhibitor floor around the prefabrication and building-services areas, and close the day with a site-safety workshop or a digital-tools demo. The event-first app view lets you save a short list of exhibitors to visit on the floor.",
+      "title": {
+        "en": "What to see on a one-day visit",
+        "sv": "What to see on a one-day visit"
+      },
+      "body": {
+        "en": "Simulated. If you only have one day at Nordbygg 2026, focus on the Sustainability Stage in the morning, spend midday on the exhibitor floor around the prefabrication and building-services areas, and close the day with a site-safety workshop or a digital-tools demo. The event-first app view lets you save a short list of exhibitors to visit on the floor.",
+        "sv": "Simulated. If you only have one day at Nordbygg 2026, focus on the Sustainability Stage in the morning, spend midday on the exhibitor floor around the prefabrication and building-services areas, and close the day with a site-safety workshop or a digital-tools demo. The event-first app view lets you save a short list of exhibitors to visit on the floor."
+      },
       "hero_image": "assets/images/events/nordbygg-2026.jpg"
     },
     {
       "id": "estro-2026-article-program-highlights",
       "event_id": "estro-2026",
-      "title": "ESTRO 2026 program highlights",
-      "body": "Simulated. The ESTRO 2026 program covers clinical radiation oncology, medical physics, radiobiology, brachytherapy, and technology and innovation tracks. Plenary sessions open and close each day, with parallel tracks and poster sessions filling the rest of the schedule. Delegates are encouraged to build a personal agenda before the congress opens.",
+      "title": {
+        "en": "ESTRO 2026 program highlights",
+        "sv": "ESTRO 2026 program highlights"
+      },
+      "body": {
+        "en": "Simulated. The ESTRO 2026 program covers clinical radiation oncology, medical physics, radiobiology, brachytherapy, and technology and innovation tracks. Plenary sessions open and close each day, with parallel tracks and poster sessions filling the rest of the schedule. Delegates are encouraged to build a personal agenda before the congress opens.",
+        "sv": "Simulated. The ESTRO 2026 program covers clinical radiation oncology, medical physics, radiobiology, brachytherapy, and technology and innovation tracks. Plenary sessions open and close each day, with parallel tracks and poster sessions filling the rest of the schedule. Delegates are encouraged to build a personal agenda before the congress opens."
+      },
       "hero_image": "assets/images/events/estro-2026.webp"
     }
   ],
@@ -2248,9 +2308,18 @@
       "day": "2026-04-21",
       "start_time": "09:00",
       "end_time": "09:30",
-      "title": "Opening and industry welcome",
-      "description": "Simulated. Official opening of Nordbygg 2026 with remarks from industry and venue representatives.",
-      "location": "Main Stage, A-Hall",
+      "title": {
+        "en": "Opening and industry welcome",
+        "sv": "Opening and industry welcome"
+      },
+      "description": {
+        "en": "Simulated. Official opening of Nordbygg 2026 with remarks from industry and venue representatives.",
+        "sv": "Simulated. Official opening of Nordbygg 2026 with remarks from industry and venue representatives."
+      },
+      "location": {
+        "en": "Main Stage, A-Hall",
+        "sv": "Main Stage, A-Hall"
+      },
       "track": "Keynote"
     },
     {
@@ -2259,9 +2328,18 @@
       "day": "2026-04-21",
       "start_time": "10:00",
       "end_time": "11:00",
-      "title": "Low-carbon concrete in practice",
-      "description": "Simulated. Practitioner panel on low-carbon concrete mixes and procurement practices in Nordic construction projects.",
-      "location": "Sustainability Stage, B-Hall",
+      "title": {
+        "en": "Low-carbon concrete in practice",
+        "sv": "Low-carbon concrete in practice"
+      },
+      "description": {
+        "en": "Simulated. Practitioner panel on low-carbon concrete mixes and procurement practices in Nordic construction projects.",
+        "sv": "Simulated. Practitioner panel on low-carbon concrete mixes and procurement practices in Nordic construction projects."
+      },
+      "location": {
+        "en": "Sustainability Stage, B-Hall",
+        "sv": "Sustainability Stage, B-Hall"
+      },
       "track": "Sustainability"
     },
     {
@@ -2270,9 +2348,18 @@
       "day": "2026-04-21",
       "start_time": "13:00",
       "end_time": "14:00",
-      "title": "Circular construction from design to demolition",
-      "description": "Simulated. Case studies from Nordic developers on circular construction, material reuse, and end-of-life planning.",
-      "location": "Sustainability Stage, B-Hall",
+      "title": {
+        "en": "Circular construction from design to demolition",
+        "sv": "Circular construction from design to demolition"
+      },
+      "description": {
+        "en": "Simulated. Case studies from Nordic developers on circular construction, material reuse, and end-of-life planning.",
+        "sv": "Simulated. Case studies from Nordic developers on circular construction, material reuse, and end-of-life planning."
+      },
+      "location": {
+        "en": "Sustainability Stage, B-Hall",
+        "sv": "Sustainability Stage, B-Hall"
+      },
       "track": "Sustainability"
     },
     {
@@ -2281,9 +2368,18 @@
       "day": "2026-04-22",
       "start_time": "10:00",
       "end_time": "11:00",
-      "title": "Prefabrication and industrialized building",
-      "description": "Simulated. Current state of prefabricated construction systems in the Nordic market and what large public projects are adopting.",
-      "location": "Main Stage, A-Hall",
+      "title": {
+        "en": "Prefabrication and industrialized building",
+        "sv": "Prefabrication and industrialized building"
+      },
+      "description": {
+        "en": "Simulated. Current state of prefabricated construction systems in the Nordic market and what large public projects are adopting.",
+        "sv": "Simulated. Current state of prefabricated construction systems in the Nordic market and what large public projects are adopting."
+      },
+      "location": {
+        "en": "Main Stage, A-Hall",
+        "sv": "Main Stage, A-Hall"
+      },
       "track": "Industry"
     },
     {
@@ -2292,9 +2388,18 @@
       "day": "2026-04-22",
       "start_time": "11:30",
       "end_time": "12:30",
-      "title": "Digital tools on site",
-      "description": "Simulated. Live demos of site-management, BIM, and field-reporting tools relevant to Nordic contractors and consultants.",
-      "location": "Digital Stage, C-Hall",
+      "title": {
+        "en": "Digital tools on site",
+        "sv": "Digital tools on site"
+      },
+      "description": {
+        "en": "Simulated. Live demos of site-management, BIM, and field-reporting tools relevant to Nordic contractors and consultants.",
+        "sv": "Simulated. Live demos of site-management, BIM, and field-reporting tools relevant to Nordic contractors and consultants."
+      },
+      "location": {
+        "en": "Digital Stage, C-Hall",
+        "sv": "Digital Stage, C-Hall"
+      },
       "track": "Digital"
     },
     {
@@ -2303,9 +2408,18 @@
       "day": "2026-04-22",
       "start_time": "14:00",
       "end_time": "15:00",
-      "title": "Sustainable procurement in the public sector",
-      "description": "Simulated. How Nordic municipalities and public-sector developers are integrating climate, circularity, and social criteria into procurement.",
-      "location": "Sustainability Stage, B-Hall",
+      "title": {
+        "en": "Sustainable procurement in the public sector",
+        "sv": "Sustainable procurement in the public sector"
+      },
+      "description": {
+        "en": "Simulated. How Nordic municipalities and public-sector developers are integrating climate, circularity, and social criteria into procurement.",
+        "sv": "Simulated. How Nordic municipalities and public-sector developers are integrating climate, circularity, and social criteria into procurement."
+      },
+      "location": {
+        "en": "Sustainability Stage, B-Hall",
+        "sv": "Sustainability Stage, B-Hall"
+      },
       "track": "Sustainability"
     },
     {
@@ -2314,9 +2428,18 @@
       "day": "2026-04-23",
       "start_time": "10:00",
       "end_time": "11:30",
-      "title": "Hands-on site safety workshop",
-      "description": "Simulated. Hands-on workshop on PPE, fall-protection, and incident response on construction sites. Capacity is limited and managed at the workshop entrance.",
-      "location": "Workshop Room 3, C-Hall",
+      "title": {
+        "en": "Hands-on site safety workshop",
+        "sv": "Hands-on site safety workshop"
+      },
+      "description": {
+        "en": "Simulated. Hands-on workshop on PPE, fall-protection, and incident response on construction sites. Capacity is limited and managed at the workshop entrance.",
+        "sv": "Simulated. Hands-on workshop on PPE, fall-protection, and incident response on construction sites. Capacity is limited and managed at the workshop entrance."
+      },
+      "location": {
+        "en": "Workshop Room 3, C-Hall",
+        "sv": "Workshop Room 3, C-Hall"
+      },
       "track": "Safety"
     },
     {
@@ -2325,9 +2448,18 @@
       "day": "2026-04-23",
       "start_time": "13:00",
       "end_time": "14:00",
-      "title": "Energy retrofits at scale",
-      "description": "Simulated. Case studies from Nordic property owners on large-scale energy retrofits, financing, and tenant communication.",
-      "location": "Main Stage, A-Hall",
+      "title": {
+        "en": "Energy retrofits at scale",
+        "sv": "Energy retrofits at scale"
+      },
+      "description": {
+        "en": "Simulated. Case studies from Nordic property owners on large-scale energy retrofits, financing, and tenant communication.",
+        "sv": "Simulated. Case studies from Nordic property owners on large-scale energy retrofits, financing, and tenant communication."
+      },
+      "location": {
+        "en": "Main Stage, A-Hall",
+        "sv": "Main Stage, A-Hall"
+      },
       "track": "Industry"
     },
     {
@@ -2336,9 +2468,18 @@
       "day": "2026-04-23",
       "start_time": "16:00",
       "end_time": "18:00",
-      "title": "Industry networking reception",
-      "description": "Simulated. Evening networking reception for exhibitors and registered industry visitors in the main foyer.",
-      "location": "Main Foyer",
+      "title": {
+        "en": "Industry networking reception",
+        "sv": "Industry networking reception"
+      },
+      "description": {
+        "en": "Simulated. Evening networking reception for exhibitors and registered industry visitors in the main foyer.",
+        "sv": "Simulated. Evening networking reception for exhibitors and registered industry visitors in the main foyer."
+      },
+      "location": {
+        "en": "Main Foyer",
+        "sv": "Main Foyer"
+      },
       "track": "Networking"
     },
     {
@@ -2347,9 +2488,18 @@
       "day": "2026-04-24",
       "start_time": "13:00",
       "end_time": "14:00",
-      "title": "Closing panel and 2027 outlook",
-      "description": "Simulated. Closing panel reflecting on the 2026 edition and previewing the Nordic construction outlook for 2027.",
-      "location": "Main Stage, A-Hall",
+      "title": {
+        "en": "Closing panel and 2027 outlook",
+        "sv": "Closing panel and 2027 outlook"
+      },
+      "description": {
+        "en": "Simulated. Closing panel reflecting on the 2026 edition and previewing the Nordic construction outlook for 2027.",
+        "sv": "Simulated. Closing panel reflecting on the 2026 edition and previewing the Nordic construction outlook for 2027."
+      },
+      "location": {
+        "en": "Main Stage, A-Hall",
+        "sv": "Main Stage, A-Hall"
+      },
       "track": "Keynote"
     },
     {
@@ -2358,9 +2508,18 @@
       "day": "2026-05-15",
       "start_time": "09:00",
       "end_time": "10:00",
-      "title": "Opening plenary",
-      "description": "Simulated. Opening plenary of ESTRO 2026 with state-of-the-art lectures across radiation oncology.",
-      "location": "Auditorium North",
+      "title": {
+        "en": "Opening plenary",
+        "sv": "Opening plenary"
+      },
+      "description": {
+        "en": "Simulated. Opening plenary of ESTRO 2026 with state-of-the-art lectures across radiation oncology.",
+        "sv": "Simulated. Opening plenary of ESTRO 2026 with state-of-the-art lectures across radiation oncology."
+      },
+      "location": {
+        "en": "Auditorium North",
+        "sv": "Auditorium North"
+      },
       "track": "Plenary",
       "speaker_ids": [
         "estro-2026-speaker-lindqvist"
@@ -2372,9 +2531,18 @@
       "day": "2026-05-15",
       "start_time": "11:00",
       "end_time": "12:30",
-      "title": "Clinical track: adaptive radiotherapy",
-      "description": "Simulated. Parallel clinical session on adaptive radiotherapy workflows and outcomes.",
-      "location": "Room 210",
+      "title": {
+        "en": "Clinical track: adaptive radiotherapy",
+        "sv": "Clinical track: adaptive radiotherapy"
+      },
+      "description": {
+        "en": "Simulated. Parallel clinical session on adaptive radiotherapy workflows and outcomes.",
+        "sv": "Simulated. Parallel clinical session on adaptive radiotherapy workflows and outcomes."
+      },
+      "location": {
+        "en": "Room 210",
+        "sv": "Room 210"
+      },
       "track": "Clinical",
       "speaker_ids": [
         "estro-2026-speaker-morales"
@@ -2386,9 +2554,18 @@
       "day": "2026-05-16",
       "start_time": "09:00",
       "end_time": "10:30",
-      "title": "Physics track: dose calculation and QA",
-      "description": "Simulated. Parallel physics session on dose calculation advances and treatment quality assurance.",
-      "location": "Room 220",
+      "title": {
+        "en": "Physics track: dose calculation and QA",
+        "sv": "Physics track: dose calculation and QA"
+      },
+      "description": {
+        "en": "Simulated. Parallel physics session on dose calculation advances and treatment quality assurance.",
+        "sv": "Simulated. Parallel physics session on dose calculation advances and treatment quality assurance."
+      },
+      "location": {
+        "en": "Room 220",
+        "sv": "Room 220"
+      },
       "track": "Physics",
       "speaker_ids": [
         "estro-2026-speaker-bergstrom"
@@ -2400,9 +2577,18 @@
       "day": "2026-05-16",
       "start_time": "13:00",
       "end_time": "14:30",
-      "title": "Radiobiology track: combination therapies",
-      "description": "Simulated. Parallel radiobiology session on combining radiation with systemic therapies.",
-      "location": "Room 230",
+      "title": {
+        "en": "Radiobiology track: combination therapies",
+        "sv": "Radiobiology track: combination therapies"
+      },
+      "description": {
+        "en": "Simulated. Parallel radiobiology session on combining radiation with systemic therapies.",
+        "sv": "Simulated. Parallel radiobiology session on combining radiation with systemic therapies."
+      },
+      "location": {
+        "en": "Room 230",
+        "sv": "Room 230"
+      },
       "track": "Radiobiology"
     },
     {
@@ -2411,9 +2597,18 @@
       "day": "2026-05-17",
       "start_time": "12:30",
       "end_time": "14:00",
-      "title": "Poster session A",
-      "description": "Simulated. First poster session with authors present at their posters on the exhibition floor.",
-      "location": "Exhibition Hall",
+      "title": {
+        "en": "Poster session A",
+        "sv": "Poster session A"
+      },
+      "description": {
+        "en": "Simulated. First poster session with authors present at their posters on the exhibition floor.",
+        "sv": "Simulated. First poster session with authors present at their posters on the exhibition floor."
+      },
+      "location": {
+        "en": "Exhibition Hall",
+        "sv": "Exhibition Hall"
+      },
       "track": "Posters"
     },
     {
@@ -2422,9 +2617,18 @@
       "day": "2026-05-18",
       "start_time": "12:45",
       "end_time": "13:45",
-      "title": "Industry symposium: imaging advances",
-      "description": "Simulated. Sponsored industry symposium on imaging advances in radiation oncology.",
-      "location": "Auditorium East",
+      "title": {
+        "en": "Industry symposium: imaging advances",
+        "sv": "Industry symposium: imaging advances"
+      },
+      "description": {
+        "en": "Simulated. Sponsored industry symposium on imaging advances in radiation oncology.",
+        "sv": "Simulated. Sponsored industry symposium on imaging advances in radiation oncology."
+      },
+      "location": {
+        "en": "Auditorium East",
+        "sv": "Auditorium East"
+      },
       "track": "Industry"
     },
     {
@@ -2433,9 +2637,18 @@
       "day": "2026-05-19",
       "start_time": "15:00",
       "end_time": "16:00",
-      "title": "Closing ceremony",
-      "description": "Simulated. Closing ceremony and awards for ESTRO 2026.",
-      "location": "Auditorium North",
+      "title": {
+        "en": "Closing ceremony",
+        "sv": "Closing ceremony"
+      },
+      "description": {
+        "en": "Simulated. Closing ceremony and awards for ESTRO 2026.",
+        "sv": "Simulated. Closing ceremony and awards for ESTRO 2026."
+      },
+      "location": {
+        "en": "Auditorium North",
+        "sv": "Auditorium North"
+      },
       "track": "Plenary"
     },
     {
@@ -2444,9 +2657,18 @@
       "day": "2026-06-11",
       "start_time": "09:00",
       "end_time": "10:00",
-      "title": "Opening plenary",
-      "description": "Simulated. Opening plenary of the EHA2026 congress with keynote lectures on hematology research.",
-      "location": "Auditorium North",
+      "title": {
+        "en": "Opening plenary",
+        "sv": "Opening plenary"
+      },
+      "description": {
+        "en": "Simulated. Opening plenary of the EHA2026 congress with keynote lectures on hematology research.",
+        "sv": "Simulated. Opening plenary of the EHA2026 congress with keynote lectures on hematology research."
+      },
+      "location": {
+        "en": "Auditorium North",
+        "sv": "Auditorium North"
+      },
       "track": "Plenary"
     },
     {
@@ -2455,9 +2677,18 @@
       "day": "2026-06-12",
       "start_time": "11:00",
       "end_time": "12:30",
-      "title": "Symposium: lymphoid malignancies",
-      "description": "Simulated. Multi-presenter symposium on advances in lymphoid malignancy treatment.",
-      "location": "Room 310",
+      "title": {
+        "en": "Symposium: lymphoid malignancies",
+        "sv": "Symposium: lymphoid malignancies"
+      },
+      "description": {
+        "en": "Simulated. Multi-presenter symposium on advances in lymphoid malignancy treatment.",
+        "sv": "Simulated. Multi-presenter symposium on advances in lymphoid malignancy treatment."
+      },
+      "location": {
+        "en": "Room 310",
+        "sv": "Room 310"
+      },
       "track": "Clinical"
     },
     {
@@ -2466,9 +2697,18 @@
       "day": "2026-06-13",
       "start_time": "14:00",
       "end_time": "15:30",
-      "title": "Late-breaking abstracts",
-      "description": "Simulated. Late-breaking abstract session with oral presentations selected for high impact.",
-      "location": "Auditorium North",
+      "title": {
+        "en": "Late-breaking abstracts",
+        "sv": "Late-breaking abstracts"
+      },
+      "description": {
+        "en": "Simulated. Late-breaking abstract session with oral presentations selected for high impact.",
+        "sv": "Simulated. Late-breaking abstract session with oral presentations selected for high impact."
+      },
+      "location": {
+        "en": "Auditorium North",
+        "sv": "Auditorium North"
+      },
       "track": "Late-breaking"
     },
     {
@@ -2477,9 +2717,18 @@
       "day": "2026-06-13",
       "start_time": "12:30",
       "end_time": "14:00",
-      "title": "Poster walks",
-      "description": "Simulated. Guided poster walks through selected abstracts, with authors present.",
-      "location": "Exhibition Hall",
+      "title": {
+        "en": "Poster walks",
+        "sv": "Poster walks"
+      },
+      "description": {
+        "en": "Simulated. Guided poster walks through selected abstracts, with authors present.",
+        "sv": "Simulated. Guided poster walks through selected abstracts, with authors present."
+      },
+      "location": {
+        "en": "Exhibition Hall",
+        "sv": "Exhibition Hall"
+      },
       "track": "Posters"
     },
     {
@@ -2488,9 +2737,18 @@
       "day": "2026-06-14",
       "start_time": "15:30",
       "end_time": "16:30",
-      "title": "Closing ceremony",
-      "description": "Simulated. Closing ceremony with awards and 2027 preview.",
-      "location": "Auditorium North",
+      "title": {
+        "en": "Closing ceremony",
+        "sv": "Closing ceremony"
+      },
+      "description": {
+        "en": "Simulated. Closing ceremony with awards and 2027 preview.",
+        "sv": "Simulated. Closing ceremony with awards and 2027 preview."
+      },
+      "location": {
+        "en": "Auditorium North",
+        "sv": "Auditorium North"
+      },
       "track": "Plenary"
     }
   ],
@@ -9838,22 +10096,40 @@
     {
       "id": "estro-2026-speaker-lindqvist",
       "name": "Dr. Eva Lindqvist",
-      "bio": "Simulated speaker profile. Radiation oncologist focused on adaptive radiotherapy.",
-      "affiliation": "Karolinska University Hospital",
+      "bio": {
+        "en": "Simulated speaker profile. Radiation oncologist focused on adaptive radiotherapy.",
+        "sv": "Simulated speaker profile. Radiation oncologist focused on adaptive radiotherapy."
+      },
+      "affiliation": {
+        "en": "Karolinska University Hospital",
+        "sv": "Karolinska University Hospital"
+      },
       "avatar": "assets/images/speakers/estro-2026-lindqvist.svg"
     },
     {
       "id": "estro-2026-speaker-morales",
       "name": "Dr. Luis Morales",
-      "bio": "Simulated speaker profile. Clinical researcher in head-and-neck radiation oncology.",
-      "affiliation": "Hospital Clinic de Barcelona",
+      "bio": {
+        "en": "Simulated speaker profile. Clinical researcher in head-and-neck radiation oncology.",
+        "sv": "Simulated speaker profile. Clinical researcher in head-and-neck radiation oncology."
+      },
+      "affiliation": {
+        "en": "Hospital Clinic de Barcelona",
+        "sv": "Hospital Clinic de Barcelona"
+      },
       "avatar": "assets/images/speakers/estro-2026-morales.svg"
     },
     {
       "id": "estro-2026-speaker-bergstrom",
       "name": "Dr. Anna Bergstrom",
-      "bio": "Simulated speaker profile. Medical physicist focused on dose calculation and QA.",
-      "affiliation": "Uppsala University Hospital",
+      "bio": {
+        "en": "Simulated speaker profile. Medical physicist focused on dose calculation and QA.",
+        "sv": "Simulated speaker profile. Medical physicist focused on dose calculation and QA."
+      },
+      "affiliation": {
+        "en": "Uppsala University Hospital",
+        "sv": "Uppsala University Hospital"
+      },
       "avatar": "assets/images/speakers/estro-2026-bergstrom.svg"
     }
   ],
