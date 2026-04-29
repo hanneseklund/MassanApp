@@ -15,6 +15,7 @@ import { supabaseClient } from "../supabase.js";
 import {
   defaultQuestionnaire,
   subjectsFor,
+  subjectKey,
   buildQuestionnairePayload,
   buildProfileUpdate,
 } from "../util/questionnaire.js";
@@ -92,19 +93,25 @@ export function purchaseView() {
       return subjectsFor(this.event());
     },
 
+    subjectKey(subject) {
+      return subjectKey(subject);
+    },
+
     hasSubjects() {
       return this.subjects().length > 0;
     },
 
     toggleSubject(subject) {
+      const key = subjectKey(subject);
+      if (!key) return;
       const set = new Set(this.questionnaire.subjects);
-      if (set.has(subject)) set.delete(subject);
-      else set.add(subject);
+      if (set.has(key)) set.delete(key);
+      else set.add(key);
       this.questionnaire.subjects = [...set];
     },
 
     isSubjectSelected(subject) {
-      return this.questionnaire.subjects.includes(subject);
+      return this.questionnaire.subjects.includes(subjectKey(subject));
     },
 
     isProfessional() {

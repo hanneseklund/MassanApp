@@ -1899,11 +1899,11 @@
                 <fieldset class="questionnaire__field" x-show="hasSubjects()">
                   <legend class="auth-form__label" x-text="$store.lang.t('purchase.q_subjects')"></legend>
                   <p class="purchase__questionnaire-intro" x-text="$store.lang.t('purchase.q_subjects_hint')"></p>
-                  <template x-for="subject in subjects()" :key="subject">
+                  <template x-for="subject in subjects()" :key="subjectKey(subject)">
                     <label class="questionnaire__checkbox">
                       <input
                         type="checkbox"
-                        :value="subject"
+                        :value="subjectKey(subject)"
                         :checked="isSubjectSelected(subject)"
                         @change="toggleSubject(subject)"
                       />

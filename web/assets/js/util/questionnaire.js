@@ -40,15 +40,34 @@ export function defaultQuestionnaire(event, profile) {
 
 // Event-relevant subjects sourced from `events.questionnaire_subjects`.
 // A missing or non-array value means "no subjects configured" and the
-// subjects block is omitted from the UI. Display uses `pickLang` at
-// render time so the dual-language seed shape (sub-task 01c) renders
-// in the active UI language; before 01c the entries are still plain
-// strings and pickLang's transitional fallback returns them as-is.
+// subjects block is omitted from the UI. Entries arrive as either a
+// `{ en, sv }` object (post sub-task 01c1) or a plain string (during
+// the transitional window before the seed rewrite); both shapes are
+// kept as-is here. The view extracts a stable identity key with
+// `subjectKey` for selection state and renders the label via
+// `pickLang` at render time so toggling language does not flip the
+// persisted subject value.
 export function subjectsFor(event) {
   if (!event || !Array.isArray(event.questionnaire_subjects)) return [];
-  return event.questionnaire_subjects.filter(
-    (s) => typeof s === "string" && s.length > 0,
-  );
+  return event.questionnaire_subjects.filter((s) => subjectKey(s).length > 0);
+}
+
+// Stable identifier for a questionnaire subject, used as the toggle
+// key in the purchase form and as the value persisted in
+// `tickets.questionnaire.subjects`. The English slot is canonical so
+// the saved row stays comparable across UI languages — mirrors the
+// `canonicalTranslate` rule for ticket-type / food labels (see
+// util/sections.js).
+export function subjectKey(subject) {
+  if (typeof subject === "string") return subject;
+  if (subject && typeof subject === "object") {
+    return typeof subject.en === "string"
+      ? subject.en
+      : typeof subject.sv === "string"
+        ? subject.sv
+        : "";
+  }
+  return "";
 }
 
 // Serialize the questionnaire form state into the JSONB shape written
