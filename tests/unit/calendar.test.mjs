@@ -6,12 +6,19 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  PAST_EVENT_GRACE_DAYS,
   todayLocalIso,
-  isUpcoming,
-  upcomingEvents,
+  shiftIsoDate,
+  isCalendarVisible,
+  isOngoingOrUpcoming,
+  calendarVisibleEvents,
   eventMatchesQuery,
   filterEvents,
 } from "../../web/assets/js/util/calendar.js";
+
+test("PAST_EVENT_GRACE_DAYS: keeps events for three weeks after they end", () => {
+  assert.equal(PAST_EVENT_GRACE_DAYS, 21);
+});
 
 test("todayLocalIso: formats YYYY-MM-DD in local time", () => {
   // Build a date in the local timezone so the assertion is independent
@@ -25,41 +32,121 @@ test("todayLocalIso: zero-pads single-digit month and day", () => {
   assert.equal(todayLocalIso(d), "2026-01-05");
 });
 
-test("isUpcoming: event ending today is upcoming", () => {
+test("shiftIsoDate: subtracts days across a month boundary", () => {
+  assert.equal(shiftIsoDate("2026-04-21", -21), "2026-03-31");
+});
+
+test("shiftIsoDate: adds days across a year boundary", () => {
+  assert.equal(shiftIsoDate("2026-12-25", 10), "2027-01-04");
+});
+
+test("shiftIsoDate: zero shift is the identity", () => {
+  assert.equal(shiftIsoDate("2026-04-21", 0), "2026-04-21");
+});
+
+test("isCalendarVisible: event ending today is visible", () => {
   assert.equal(
-    isUpcoming({ start_date: "2026-04-20", end_date: "2026-04-21" }, "2026-04-21"),
+    isCalendarVisible(
+      { start_date: "2026-04-20", end_date: "2026-04-21" },
+      "2026-04-21",
+    ),
     true,
   );
 });
 
-test("isUpcoming: event that already ended is not upcoming", () => {
+test("isCalendarVisible: event ended within grace window stays visible", () => {
+  // Ended 5 days ago — within the 21-day grace window.
   assert.equal(
-    isUpcoming({ start_date: "2026-04-19", end_date: "2026-04-20" }, "2026-04-21"),
+    isCalendarVisible(
+      { start_date: "2026-04-15", end_date: "2026-04-16" },
+      "2026-04-21",
+    ),
+    true,
+  );
+});
+
+test("isCalendarVisible: event ended exactly on the cutoff stays visible", () => {
+  // 21 days before today — still inside the inclusive cutoff.
+  assert.equal(
+    isCalendarVisible(
+      { start_date: "2026-03-30", end_date: "2026-03-31" },
+      "2026-04-21",
+    ),
+    true,
+  );
+});
+
+test("isCalendarVisible: event ended more than 21 days ago drops off", () => {
+  // 22 days before today — past the cutoff.
+  assert.equal(
+    isCalendarVisible(
+      { start_date: "2026-03-29", end_date: "2026-03-30" },
+      "2026-04-21",
+    ),
     false,
   );
 });
 
-test("isUpcoming: single-day event in the future is upcoming", () => {
+test("isCalendarVisible: single-day event in the future is visible", () => {
   assert.equal(
-    isUpcoming({ start_date: "2026-05-01" }, "2026-04-21"),
+    isCalendarVisible({ start_date: "2026-05-01" }, "2026-04-21"),
     true,
   );
 });
 
-test("isUpcoming: events missing dates stay visible", () => {
-  assert.equal(isUpcoming({}, "2026-04-21"), true);
-  assert.equal(isUpcoming({ start_date: null, end_date: null }, "2026-04-21"), true);
+test("isCalendarVisible: single-day event ended yesterday stays visible", () => {
+  // No end_date — fall back to start_date for the cutoff.
+  assert.equal(
+    isCalendarVisible({ start_date: "2026-04-20" }, "2026-04-21"),
+    true,
+  );
 });
 
-test("upcomingEvents: drops events that already ended, keeps future and dateless ones", () => {
+test("isCalendarVisible: events missing dates stay visible", () => {
+  assert.equal(isCalendarVisible({}, "2026-04-21"), true);
+  assert.equal(
+    isCalendarVisible({ start_date: null, end_date: null }, "2026-04-21"),
+    true,
+  );
+});
+
+test("isOngoingOrUpcoming: ongoing event is upcoming-or-ongoing", () => {
+  assert.equal(
+    isOngoingOrUpcoming(
+      { start_date: "2026-04-20", end_date: "2026-04-22" },
+      "2026-04-21",
+    ),
+    true,
+  );
+});
+
+test("isOngoingOrUpcoming: event that already ended is not", () => {
+  assert.equal(
+    isOngoingOrUpcoming(
+      { start_date: "2026-04-19", end_date: "2026-04-20" },
+      "2026-04-21",
+    ),
+    false,
+  );
+});
+
+test("isOngoingOrUpcoming: dateless event is treated as ongoing", () => {
+  assert.equal(isOngoingOrUpcoming({}, "2026-04-21"), true);
+});
+
+test("calendarVisibleEvents: keeps future, ongoing, recently-ended, and dateless; drops long-past", () => {
   const events = [
-    { id: "past", start_date: "2025-01-01", end_date: "2025-01-02" },
+    { id: "long-past", start_date: "2025-01-01", end_date: "2025-01-02" },
     { id: "future", start_date: "2026-05-01", end_date: "2026-05-02" },
     { id: "today", start_date: "2026-04-21", end_date: "2026-04-21" },
+    { id: "recently-ended", start_date: "2026-04-10", end_date: "2026-04-12" },
     { id: "dateless" },
   ];
-  const out = upcomingEvents(events, "2026-04-21").map((e) => e.id);
-  assert.deepEqual(out.sort(), ["dateless", "future", "today"]);
+  const out = calendarVisibleEvents(events, "2026-04-21").map((e) => e.id);
+  assert.deepEqual(
+    out.sort(),
+    ["dateless", "future", "recently-ended", "today"],
+  );
 });
 
 test("eventMatchesQuery: empty query matches everything", () => {
@@ -103,7 +190,7 @@ test("filterEvents: type filter keeps matching rows", () => {
     { id: "a", name: "A", type: "Trade fair", category: "Industry", start_date: "2026-04-01" },
     { id: "b", name: "B", type: "Congress", category: "Health & Medicine", start_date: "2026-05-01" },
   ];
-  const out = filterEvents(events, { type: "Trade fair" });
+  const out = filterEvents(events, { type: "Trade fair" }, "2026-03-01");
   assert.deepEqual(out.map((e) => e.id), ["a"]);
 });
 
@@ -112,7 +199,7 @@ test("filterEvents: category filter keeps matching rows", () => {
     { id: "a", name: "A", type: "Trade fair", category: "Industry", start_date: "2026-04-01" },
     { id: "b", name: "B", type: "Trade fair", category: "Food & drink", start_date: "2026-05-01" },
   ];
-  const out = filterEvents(events, { category: "Food & drink" });
+  const out = filterEvents(events, { category: "Food & drink" }, "2026-03-01");
   assert.deepEqual(out.map((e) => e.id), ["b"]);
 });
 
@@ -123,7 +210,7 @@ test("filterEvents: month filter uses monthLabel and en-GB locale", () => {
     { id: "april", name: "April event", start_date: "2026-04-21" },
     { id: "may", name: "May event", start_date: "2026-05-15" },
   ];
-  const out = filterEvents(events, { month: "April 2026" });
+  const out = filterEvents(events, { month: "April 2026" }, "2026-03-01");
   assert.deepEqual(out.map((e) => e.id), ["april"]);
 });
 
@@ -133,11 +220,11 @@ test("filterEvents: query filter narrows by name or summary", () => {
     { id: "estro", name: "ESTRO 2026", summary: "Radiation oncology congress", start_date: "2026-05-01" },
   ];
   assert.deepEqual(
-    filterEvents(events, { query: "construction" }).map((e) => e.id),
+    filterEvents(events, { query: "construction" }, "2026-03-01").map((e) => e.id),
     ["nord"],
   );
   assert.deepEqual(
-    filterEvents(events, { query: "ESTRO" }).map((e) => e.id),
+    filterEvents(events, { query: "ESTRO" }, "2026-03-01").map((e) => e.id),
     ["estro"],
   );
 });
@@ -148,30 +235,32 @@ test("filterEvents: filters combine (AND) across fields", () => {
     { id: "b", name: "Nordbygg", type: "Congress", category: "Industry", start_date: "2026-05-01" },
     { id: "c", name: "Other", type: "Trade fair", category: "Industry", start_date: "2026-06-01" },
   ];
-  const out = filterEvents(events, {
-    type: "Trade fair",
-    category: "Industry",
-    query: "Nordbygg",
-  });
+  const out = filterEvents(
+    events,
+    { type: "Trade fair", category: "Industry", query: "Nordbygg" },
+    "2026-03-01",
+  );
   assert.deepEqual(out.map((e) => e.id), ["a"]);
 });
 
-test("filterEvents: sorts by start_date ascending", () => {
+test("filterEvents: ongoing/upcoming events sort by start_date ascending", () => {
+  // Pin `today` before all events so each one is upcoming and the
+  // recently-ended partition stays empty.
   const events = [
     { id: "late", name: "Late", start_date: "2026-06-01" },
     { id: "early", name: "Early", start_date: "2026-01-01" },
     { id: "mid", name: "Mid", start_date: "2026-03-01" },
   ];
-  const out = filterEvents(events, {});
+  const out = filterEvents(events, {}, "2025-12-01");
   assert.deepEqual(out.map((e) => e.id), ["early", "mid", "late"]);
 });
 
-test("filterEvents: empty filters returns every event sorted", () => {
+test("filterEvents: empty filters returns every event sorted ascending when all are upcoming", () => {
   const events = [
     { id: "b", name: "B", start_date: "2026-02-01" },
     { id: "a", name: "A", start_date: "2026-01-01" },
   ];
-  const out = filterEvents(events, {});
+  const out = filterEvents(events, {}, "2025-12-01");
   assert.deepEqual(out.map((e) => e.id), ["a", "b"]);
 });
 
@@ -180,8 +269,23 @@ test("filterEvents: missing start_date sorts to the front stably", () => {
     { id: "dated", name: "Dated", start_date: "2026-02-01" },
     { id: "dateless", name: "Dateless" },
   ];
-  const out = filterEvents(events, {});
+  // Pin today so the dated event is upcoming. Dateless events are
+  // treated as ongoing; both end up in the upcoming partition.
+  const out = filterEvents(events, {}, "2025-12-01");
   // `localeCompare` treats the empty string as less than any non-empty,
   // so the dateless row lands first — stable and deterministic.
   assert.deepEqual(out.map((e) => e.id), ["dateless", "dated"]);
+});
+
+test("filterEvents: recently-ended events come after upcoming ones, most-recent first", () => {
+  const events = [
+    { id: "ended-7d", name: "Ended 7d ago", start_date: "2026-04-13", end_date: "2026-04-14" },
+    { id: "future-jun", name: "Future Jun", start_date: "2026-06-01", end_date: "2026-06-02" },
+    { id: "ended-3d", name: "Ended 3d ago", start_date: "2026-04-17", end_date: "2026-04-18" },
+    { id: "future-may", name: "Future May", start_date: "2026-05-01", end_date: "2026-05-02" },
+  ];
+  // Today: 2026-04-21. Both "ended" events are inside the 21-day
+  // window, both "future" events are upcoming.
+  const out = filterEvents(events, {}, "2026-04-21").map((e) => e.id);
+  assert.deepEqual(out, ["future-may", "future-jun", "ended-3d", "ended-7d"]);
 });

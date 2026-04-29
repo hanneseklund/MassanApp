@@ -168,10 +168,14 @@ web/assets/js/
                                formatDayHeading, monthLabel, uniqueSorted
     sections.js                SECTION_LABELS, ticketCtaLabel,
                                ticketTypesFor, canonicalTicketTypeLabel
-    calendar.js                todayLocalIso, isUpcoming,
-                               upcomingEvents, eventMatchesQuery,
+    calendar.js                PAST_EVENT_GRACE_DAYS, todayLocalIso,
+                               shiftIsoDate, isCalendarVisible,
+                               isOngoingOrUpcoming,
+                               calendarVisibleEvents, eventMatchesQuery,
                                filterEvents (pure filter/sort behind
-                               the calendar view)
+                               the calendar view; events stay on the
+                               list for 21 days after they end —
+                               issue #26)
     placeholders.js            initialsFromName, logoDataUri,
                                avatarDataUri (deterministic SVG
                                fallbacks for exhibitors and speakers)

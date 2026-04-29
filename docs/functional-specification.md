@@ -133,7 +133,11 @@ The prototype must support this end-to-end path without gaps:
 
 ### Event calendar
 
-- Displays upcoming events ordered by start date.
+- Displays ongoing/upcoming events ordered by start date, followed by
+  any events that ended in the last 21 days (most recently ended
+  first). Events drop off the list once they have been over for more
+  than three weeks. The cutoff uses the event's end date, falling back
+  to its start date when no end is recorded.
 - Filters: category (Congress, Construction and real estate, Education and
   training, Entertainment, Food & drink, Gaming, Health & Medicine,
   Industry, Interior design, Leisure and consumer, Other, Travel), type

@@ -269,7 +269,8 @@
     </header>
 
     <main class="view">
-      <!-- Calendar view: upcoming events with filters and search. -->
+      <!-- Calendar view: ongoing/upcoming events plus recently-ended
+           ones (21-day grace window). Filters and search. -->
       <section
         class="view__body"
         x-show="$store.app.view === 'calendar'"

@@ -1,25 +1,26 @@
-// Calendar view: upcoming events with filters and search.
+// Calendar view: ongoing/upcoming events plus recently-ended ones
+// (within the past-event grace window — see `util/calendar.js`).
 
 import { formatDates, monthLabel, uniqueSorted } from "../util/dates.js";
-import { filterEvents, upcomingEvents } from "../util/calendar.js";
+import { calendarVisibleEvents, filterEvents } from "../util/calendar.js";
 
 export function calendarView() {
   return {
-    upcoming() {
-      return upcomingEvents(Alpine.store("catalog").events);
+    visible() {
+      return calendarVisibleEvents(Alpine.store("catalog").events);
     },
     get types() {
-      return uniqueSorted(this.upcoming().map((e) => e.type));
+      return uniqueSorted(this.visible().map((e) => e.type));
     },
     get categories() {
-      return uniqueSorted(this.upcoming().map((e) => e.category));
+      return uniqueSorted(this.visible().map((e) => e.category));
     },
     get months() {
-      return uniqueSorted(this.upcoming().map((e) => monthLabel(e.start_date)));
+      return uniqueSorted(this.visible().map((e) => monthLabel(e.start_date)));
     },
     formatDates,
     filtered() {
-      return filterEvents(this.upcoming(), Alpine.store("filters"));
+      return filterEvents(this.visible(), Alpine.store("filters"));
     },
   };
 }
