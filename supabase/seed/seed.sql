@@ -1676,13 +1676,13 @@ Bygg-Ström® är varumärket där vi vänder oss till professionella användare
 
 ”Bygg-Ström anpassar praktiska, prisvärda och funktionella produkter för branschen inom tillfällig el”.'), 'https://www.malmbergs.com', 'assets/images/exhibitors/nordbygg-2026-byggstrom.jpg'),
   ('nordbygg-2026-exhibitor-138682', 'nordbygg-2026', 'Byggvarubedömningen', 'C05:04', null, 'https://www.byggvarubedomningen.se', 'assets/images/exhibitors/nordbygg-2026-byggvarubedomningen.jpg'),
-  ('nordbygg-2026-exhibitor-136806', 'nordbygg-2026', 'C03:41', 'C07:51', jsonb_build_object('en', 'Hasopor – hållbara lösningar för bygg, hus och utemiljö
+  ('nordbygg-2026-exhibitor-136806', 'nordbygg-2026', 'C03:41', 'C07:51', jsonb_build_object('en', 'Hasopor – sustainable solutions for construction, homes and outdoor environments
 
-Hasopor presenterar innovativa lösningar med skumglas – ett lätt, starkt och miljövänligt material tillverkat av 100 % återvunnet glas. Materialet kombinerar låg vikt med hög bärighet samt isolerande, dränerande och kapillärbrytande egenskaper, vilket gör det idealiskt för moderna byggprojekt.
+Hasopor presents innovative solutions with foam glass — a lightweight, strong and environmentally friendly material made from 100% recycled glass. The material combines low weight with high load-bearing capacity along with insulating, drainage and capillary-breaking properties, making it ideal for modern construction projects.
 
-Inom hus och trädgård används Hasopor bland annat för grundläggning, isolering av grundmurar, dränering och uppbyggnad av gångvägar och uppfarter. Lösningarna bidrar till energieffektivitet, minskat marktryck och lång hållbarhet.
+For houses and gardens, Hasopor is used for foundations, insulation of foundation walls, drainage, and the construction of footpaths and driveways. The solutions contribute to energy efficiency, reduced ground pressure, and long-term durability.
 
-Upptäck smartare byggande – med fokus på funktion, klimat och framtid.', 'sv', 'Hasopor – hållbara lösningar för bygg, hus och utemiljö
+Discover smarter building — with a focus on function, climate and the future.', 'sv', 'Hasopor – hållbara lösningar för bygg, hus och utemiljö
 
 Hasopor presenterar innovativa lösningar med skumglas – ett lätt, starkt och miljövänligt material tillverkat av 100 % återvunnet glas. Materialet kombinerar låg vikt med hög bärighet samt isolerande, dränerande och kapillärbrytande egenskaper, vilket gör det idealiskt för moderna byggprojekt.
 
@@ -1690,15 +1690,15 @@ Inom hus och trädgård används Hasopor bland annat för grundläggning, isoler
 
 Upptäck smartare byggande – med fokus på funktion, klimat och framtid.'), 'https://www.hasopor.se', 'assets/images/exhibitors/nordbygg-2026-c03-41.jpg'),
   ('nordbygg-2026-exhibitor-139781', 'nordbygg-2026', 'C2 Elements ApS', 'EÖ:06', null, 'https://www.c2elements.dk/kontakt', 'assets/images/exhibitors/nordbygg-2026-c2-elements-aps.jpg'),
-  ('nordbygg-2026-exhibitor-138817', 'nordbygg-2026', 'CABSEAL Sweden', 'A15:25', jsonb_build_object('en', 'CABSEAL tillverkar och producerar kundspecifika produkter i diverse mjuka plast och gummibaserade material, med inriktning mot packningar, tätningar & isolering.', 'sv', 'CABSEAL tillverkar och producerar kundspecifika produkter i diverse mjuka plast och gummibaserade material, med inriktning mot packningar, tätningar & isolering.'), 'https://www.cabseal.se', 'assets/images/exhibitors/nordbygg-2026-cabseal-sweden.jpg'),
-  ('nordbygg-2026-exhibitor-134605', 'nordbygg-2026', 'Calectro AB', 'A15:13', jsonb_build_object('en', 'Nyheter på årets Nordbygg-mässa!
+  ('nordbygg-2026-exhibitor-138817', 'nordbygg-2026', 'CABSEAL Sweden', 'A15:25', jsonb_build_object('en', 'CABSEAL manufactures and produces customer-specific products in a range of soft plastic and rubber-based materials, with a focus on gaskets, seals and insulation.', 'sv', 'CABSEAL tillverkar och producerar kundspecifika produkter i diverse mjuka plast och gummibaserade material, med inriktning mot packningar, tätningar & isolering.'), 'https://www.cabseal.se', 'assets/images/exhibitors/nordbygg-2026-cabseal-sweden.jpg'),
+  ('nordbygg-2026-exhibitor-134605', 'nordbygg-2026', 'Calectro AB', 'A15:13', jsonb_build_object('en', 'News at this year''s Nordbygg fair!
 
-Välkommen till vår monter och upptäck vår nya produktserie för behovsstyrd ventilation – utvecklad för att möta kraven från installatörer, konsulter och inköpsansvariga.
-Serien består av två regulatorer (CRC) och två transmittrar (CRT), alla med fokus på energieffektivitet, enkel installation och lång livslängd.
+Welcome to our stand and discover our new product range for demand-controlled ventilation — developed to meet the needs of installers, consultants and purchasing managers.
+The range consists of two controllers (CRC) and two transmitters (CRT), all focused on energy efficiency, easy installation and long service life.
 
-Vi presenterar även nya modeller av vår senaste rökdetektor för ventilationssystem, Uniguard 8. Den finns nu i versioner med Modbus-kommunikation i kombination med antingen display eller blåtandsuppkoppling. I båda modellerna kan du snabbt och enkelt läsa av rökdetektorns försmutsningsgrad – direkt i displayen eller via en app i din smartphone. Otroligt smidigt!
+We are also presenting new models of our latest smoke detector for ventilation systems, Uniguard 8. It is now available in versions with Modbus communication combined with either a display or a Bluetooth connection. In both models you can quickly and easily read the smoke detector''s level of contamination — directly on the display or via an app on your smartphone. Incredibly convenient!
 
-Vi ses i monter A15:13!', 'sv', 'Nyheter på årets Nordbygg-mässa!
+See you in stand A15:13!', 'sv', 'Nyheter på årets Nordbygg-mässa!
 
 Välkommen till vår monter och upptäck vår nya produktserie för behovsstyrd ventilation – utvecklad för att möta kraven från installatörer, konsulter och inköpsansvariga.
 Serien består av två regulatorer (CRC) och två transmittrar (CRT), alla med fokus på energieffektivitet, enkel installation och lång livslängd.
@@ -1708,17 +1708,17 @@ Vi presenterar även nya modeller av vår senaste rökdetektor för ventilations
 Vi ses i monter A15:13!'), 'https://www.calectro.se', 'assets/images/exhibitors/nordbygg-2026-calectro-ab.jpg'),
   ('nordbygg-2026-exhibitor-138854', 'nordbygg-2026', 'CALEFFI HYDRONIC SOLUTIONS', 'A11:25', null, 'https://www.caleffi.com/en-int', 'assets/images/exhibitors/nordbygg-2026-caleffi-hydronic-solutions.jpg'),
   ('nordbygg-2026-exhibitor-138565', 'nordbygg-2026', 'CAMELEO GROUP', 'C05:72', null, 'https://www.cameleo.pl', 'assets/images/exhibitors/nordbygg-2026-cameleo-group.jpg'),
-  ('nordbygg-2026-exhibitor-135981', 'nordbygg-2026', 'Camfil Svenska AB', 'A19:15', jsonb_build_object('en', 'Vi hjälper människor andas renare luft - sedan 1963
-Kom förbi oss och prata med våra experter om hur vi kan skapa en hälsosam och produktiv innemiljö för just er. Med rätt filtreringslösningar kan du få en god luftkvalitet inomhus, oavsett om du jobbar på kontor, skola, lager eller i fabrik. Du sparar dessutom energi och därmed pengar.
+  ('nordbygg-2026-exhibitor-135981', 'nordbygg-2026', 'Camfil Svenska AB', 'A19:15', jsonb_build_object('en', 'We help people breathe cleaner air — since 1963
+Come and visit us and talk to our experts about how we can create a healthy and productive indoor environment for you. With the right filtration solutions you get good indoor air quality, whether you work in an office, school, warehouse or factory. You also save energy, and therefore money.
 
-Bland annat kommer vi att visa våra senaste produktinnovationer!
+Among other things, we will be showing our latest product innovations!
 
-Tävla och vinn
-I vår AIRhockey tävling som pågår under mässans alla dagar har du chansen att vinna fina priser.
+Compete and win
+Our AIRhockey competition runs throughout the fair and gives you the chance to win great prizes.
 
-Vill du veta mer om oss? Välkommen till camfil.se.
+Want to know more about us? Visit camfil.se.
 
-Du kan även följa oss på Sociala medier:
+You can also follow us on social media:
 Facebook - www.Facebook.com/CamfilSverige
 LinkedIn - www.linkedin.com/company/camfilsverige
 YouTube - www.youtube.com/@CamfilSvenska', 'sv', 'Vi hjälper människor andas renare luft - sedan 1963
@@ -1737,15 +1737,15 @@ LinkedIn - www.linkedin.com/company/camfilsverige
 YouTube - www.youtube.com/@CamfilSvenska'), 'https://www.camfil.se', 'assets/images/exhibitors/nordbygg-2026-camfil-svenska-ab.jpg'),
   ('nordbygg-2026-exhibitor-134509', 'nordbygg-2026', 'Carhartt Workwear', 'B01:10', null, 'https://www.feiber.se', null),
   ('nordbygg-2026-exhibitor-137417', 'nordbygg-2026', 'Carlmarks (LIROS Skandinavia AB)', 'B04:40', null, 'https://www.lirosropes.se', 'assets/images/exhibitors/nordbygg-2026-carlmarks-liros-skandinavia-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138411', 'nordbygg-2026', 'Carlo Casagrande & Co Oy', 'C06:34', jsonb_build_object('en', 'Historien om Carlo Casagrande & Co började år 1959.
+  ('nordbygg-2026-exhibitor-138411', 'nordbygg-2026', 'Carlo Casagrande & Co Oy', 'C06:34', jsonb_build_object('en', 'The story of Carlo Casagrande & Co began in 1959.
 
-Vid den tiden grundade Carlo Casagrande ett importföretag i Finland, som främst importerade belysning och elektrotekniska komponenter. Casagrandes far var italienare och hans mor tysk, så internationalitet blev redan från början en naturlig del av företagets vardag.
+At that time, Carlo Casagrande founded an import company in Finland, primarily importing lighting and electrotechnical components. Casagrande''s father was Italian and his mother German, so internationalism was a natural part of the company''s everyday life from the very start.
 
-CC & Co har vuxit stadigt och i Finland etablerat sig som en ledande partner inom möbelbranschen, med det bredaste sortimentet av möbel-, köks- och inredningskomponenter i branschen. Under årens gång har företaget slipat sig till en unik diamant – där europeisk innovation och design möter den internationellt uppskattade finska precisionen.
+CC & Co has grown steadily and established itself in Finland as a leading partner in the furniture industry, with the broadest range of furniture, kitchen and interior components in the sector. Over the years the company has been polished into a unique diamond — where European innovation and design meet the internationally recognised Finnish precision.
 
-CC & Co är idag ett familjeföretag i fjärde generationen, men de grundläggande värderingarna är desamma: CC & Co är en internationell, ansvarsfull, nytänkande och inspirerande partner som håller vad det lovar – och erbjuder lite mer.
+CC & Co is today a fourth-generation family business, but the core values remain the same: CC & Co is an international, responsible, forward-thinking and inspiring partner that delivers on its promises — and offers a little more.
 
-Det är så man når resultat, som finns sammanfattade i vår slogan:
+That is how you achieve results, summarised in our slogan:
 
 "Changing spaces into special places."', 'sv', 'Historien om Carlo Casagrande & Co började år 1959.
 
@@ -1783,67 +1783,67 @@ We are Viessmann Climate Solutions. Founded in 1917 as a heating technology manu
 Our integrated solution offering seamlessly connects products and systems via digital platforms and services to a holistic climate and energy solution, thus creating a safe and reliable feel-good climate for our users. All activities are driven by our company purpose, "We create living spaces for generations to come". This is the responsibility that we take on every day together with our (trade) partners.
 
 One partner. One vision. One complete solution.
-Together, these complementary portfolios enable the transition toward more sustainable, efficient and intelligent buildings, covering residential, commercial and industrial applications through a single, coherent offering.', 'sv', 'About Carrier
-Carrier is a global leader in intelligent climate and energy solutions focused on providing differentiated, digitally enabled lifecycle solutions to our customers.
-Through our performance-driven culture, we focus on creating long-term shareowner value by investing strategically to strengthen our position in homes, buildings and across the cold chain to drive profitable growth.
-Innovative solutions for a sustainable future.
+Together, these complementary portfolios enable the transition toward more sustainable, efficient and intelligent buildings, covering residential, commercial and industrial applications through a single, coherent offering.', 'sv', 'Om Carrier
+Carrier är en global ledare inom intelligenta klimat- och energilösningar med fokus på att leverera differentierade, digitalt anpassade lösningar för hela livscykeln till våra kunder.
+Genom vår prestationsdrivna kultur fokuserar vi på att skapa långsiktigt aktieägarvärde genom strategiska investeringar som stärker vår position inom bostäder, byggnader och längs hela kylkedjan för att driva lönsam tillväxt.
+Innovativa lösningar för en hållbar framtid.
 
-Sustainability at the core
-As the world recognizes the increasing urgency of climate change, and secular trends continue to increase the demand for HVAC and refrigeration products, Carrier is committed to aggressive actions that minimize our environmental impact and help address the most critical challenge our planet has ever faced.
-Through our road map to net zero, we are driving reductions in greenhouse gas emissions across our value chain by 2050.
+Hållbarhet i centrum
+När världen inser den allt större brådskan med klimatförändringarna, och långsiktiga trender fortsätter att öka efterfrågan på VVS- och kylprodukter, åtar sig Carrier att vidta kraftfulla åtgärder för att minimera vår miljöpåverkan och bidra till att möta den mest kritiska utmaning vår planet någonsin har stått inför.
+Genom vår färdplan mot nettonoll driver vi minskningar av växthusgasutsläpp i hela vår värdekedja till 2050.
 
-A complete portfolio for all markets
-Carrier is at the forefront of delivering cutting-edge HVAC, refrigeration and building automation solutions.
-Our commitment to sustainability and innovation ensures that we meet the diverse needs of residential, commercial and industrial customers worldwide.
-Together with Viessmann, we offer a complete and complementary portfolio built around strong, leading brands in each segment.
+En komplett portfölj för alla marknader
+Carrier ligger i framkant när det gäller att leverera spjutspetslösningar inom VVS, kyla och fastighetsautomation.
+Vårt åtagande för hållbarhet och innovation säkerställer att vi möter de skiftande behoven hos bostads-, kommersiella och industriella kunder över hela världen.
+Tillsammans med Viessmann erbjuder vi en komplett och kompletterande portfölj uppbyggd kring starka, ledande varumärken i varje segment.
 
-Carrier – Leading brand in Commercial
-Carrier’s commercial solutions are designed to optimize building performance and profitability.
-Our portfolio includes state-of-the-art chillers, building automation systems and innovative design tools that empower businesses to create smarter, more efficient spaces. Every solution is backed by decades of expertise and a relentless focus on sustainability, helping reduce environmental impact while supporting long-term performance.
+Carrier – Ledande varumärke inom kommersiella lösningar
+Carriers kommersiella lösningar är utformade för att optimera fastigheters prestanda och lönsamhet.
+Vår portfölj omfattar toppmoderna kylmaskiner, fastighetsautomationssystem och innovativa designverktyg som ger företag möjlighet att skapa smartare och mer effektiva utrymmen. Varje lösning bygger på decennier av expertis och ett obevekligt fokus på hållbarhet, vilket bidrar till minskad miljöpåverkan samtidigt som den långsiktiga prestandan stöds.
 
-Viessmann – Leading brand in Residential
-We are Viessmann Climate Solutions. Founded in 1917 as a heating technology manufacturer, and now part of Carrier, today we are one of the world''s leading providers of efficient and systemic climate (heating, water and air quality) and renewable energy solutions for the residential and commercial sector.
-Our integrated solution offering seamlessly connects products and systems via digital platforms and services to a holistic climate and energy solution, thus creating a safe and reliable feel-good climate for our users. All activities are driven by our company purpose, "We create living spaces for generations to come". This is the responsibility that we take on every day together with our (trade) partners.
+Viessmann – Ledande varumärke inom bostäder
+Vi är Viessmann Climate Solutions. Grundat 1917 som tillverkare av värmeteknik, och nu en del av Carrier, är vi i dag en av världens ledande leverantörer av effektiva och systemiska klimat- (värme, vatten och luftkvalitet) samt förnybara energilösningar för bostads- och kommersiell sektor.
+Vårt integrerade lösningserbjudande kopplar sömlöst samman produkter och system via digitala plattformar och tjänster till en helhetslösning för klimat och energi, och skapar därmed ett tryggt och pålitligt välmåendeklimat för våra användare. All vår verksamhet drivs av vårt företagssyfte: "Vi skapar livsmiljöer för kommande generationer". Det är det ansvar vi tar varje dag tillsammans med våra (bransch-)partners.
 
-One partner. One vision. One complete solution.
-Together, these complementary portfolios enable the transition toward more sustainable, efficient and intelligent buildings, covering residential, commercial and industrial applications through a single, coherent offering.'), 'https://www.carrier.com/commercial/sv/se', 'assets/images/exhibitors/nordbygg-2026-carrier-ab.jpg'),
+En partner. En vision. En komplett lösning.
+Tillsammans möjliggör dessa kompletterande portföljer omställningen mot mer hållbara, effektiva och intelligenta byggnader, och täcker bostads-, kommersiella och industriella tillämpningar genom ett enda sammanhållet erbjudande.'), 'https://www.carrier.com/commercial/sv/se', 'assets/images/exhibitors/nordbygg-2026-carrier-ab.jpg'),
   ('nordbygg-2026-exhibitor-138197', 'nordbygg-2026', 'CatchShift', 'B08:10', jsonb_build_object('en', 'For over a decade, we have been active in the vacuum lifter market. At Catchshift, we combine experience with modernity, developing devices that define the future of construction. We offering groundbreaking solutions in the transport and installation of concrete and paving elements.
 
 The Catchshift brand is headquartered in Wolsztyn, Poland.
 
-Catchshift vacuum lifters are designed with maximum safety and efficiency in mind. We utilize advanced technologies. Our vacuum lifters are designed and manufactured from start to finish in Poland. New machine designs are based on feedback gathered from customer interviews. We focus on quality feedback from the companies we collaborate with and our clients.', 'sv', 'For over a decade, we have been active in the vacuum lifter market. At Catchshift, we combine experience with modernity, developing devices that define the future of construction. We offering groundbreaking solutions in the transport and installation of concrete and paving elements.
+Catchshift vacuum lifters are designed with maximum safety and efficiency in mind. We utilize advanced technologies. Our vacuum lifters are designed and manufactured from start to finish in Poland. New machine designs are based on feedback gathered from customer interviews. We focus on quality feedback from the companies we collaborate with and our clients.', 'sv', 'I över ett decennium har vi varit aktiva på marknaden för vakuumlyftare. På Catchshift kombinerar vi erfarenhet med modernitet och utvecklar maskiner som definierar framtidens byggande. Vi erbjuder banbrytande lösningar för transport och montage av betong- och beläggningselement.
 
-The Catchshift brand is headquartered in Wolsztyn, Poland.
+Varumärket Catchshift har sitt huvudkontor i Wolsztyn, Polen.
 
-Catchshift vacuum lifters are designed with maximum safety and efficiency in mind. We utilize advanced technologies. Our vacuum lifters are designed and manufactured from start to finish in Poland. New machine designs are based on feedback gathered from customer interviews. We focus on quality feedback from the companies we collaborate with and our clients.'), 'https://www.catchshift.com', 'assets/images/exhibitors/nordbygg-2026-catchshift.jpg'),
+Catchshifts vakuumlyftare är konstruerade med maximal säkerhet och effektivitet i åtanke. Vi använder avancerad teknik. Våra vakuumlyftare konstrueras och tillverkas från början till slut i Polen. Nya maskinkonstruktioner bygger på återkoppling som samlats in genom kundintervjuer. Vi fokuserar på kvalitativ återkoppling från de företag vi samarbetar med och från våra kunder.'), 'https://www.catchshift.com', 'assets/images/exhibitors/nordbygg-2026-catchshift.jpg'),
   ('nordbygg-2026-exhibitor-134686', 'nordbygg-2026', 'Cederroth First Aid', 'B03:41', null, 'https://www.cederroth.com', 'assets/images/exhibitors/nordbygg-2026-cederroth-first-aid.jpg'),
-  ('nordbygg-2026-exhibitor-136418', 'nordbygg-2026', 'Cellglas Sweden AB', 'C06:50', jsonb_build_object('en', 'Cellglas Sweden arbetar för att ersätta brand- och miljöfarliga isolerings- och byggmaterial. På grund av cellglasets fantastiska materialegenskaper kan vi samtidigt minska eller helt ta bort stål och betong i bl.a. grunder.
-Vårt cellglas är gjort av återvunnet glas. Det har lägsta CO2-ekv i branschen och kan återbrukas i många generationer framåt.', 'sv', 'Cellglas Sweden arbetar för att ersätta brand- och miljöfarliga isolerings- och byggmaterial. På grund av cellglasets fantastiska materialegenskaper kan vi samtidigt minska eller helt ta bort stål och betong i bl.a. grunder.
+  ('nordbygg-2026-exhibitor-136418', 'nordbygg-2026', 'Cellglas Sweden AB', 'C06:50', jsonb_build_object('en', 'Cellglas Sweden works to replace fire- and environmentally hazardous insulation and building materials. Thanks to the remarkable material properties of foam glass, we can simultaneously reduce or completely remove steel and concrete in foundations, among other things.
+Our foam glass is made from recycled glass. It has the lowest CO2 equivalent in the industry and can be reused for many generations to come.', 'sv', 'Cellglas Sweden arbetar för att ersätta brand- och miljöfarliga isolerings- och byggmaterial. På grund av cellglasets fantastiska materialegenskaper kan vi samtidigt minska eller helt ta bort stål och betong i bl.a. grunder.
 Vårt cellglas är gjort av återvunnet glas. Det har lägsta CO2-ekv i branschen och kan återbrukas i många generationer framåt.'), 'https://cellglas.com', 'assets/images/exhibitors/nordbygg-2026-cellglas-sweden-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139407', 'nordbygg-2026', 'Centrum för Cirkulärt Byggande', 'EH:15', jsonb_build_object('en', 'CCBuild är en plattform för aktörer som vill bidra till ett mer hållbart och resurseffektivt byggande. I vårt nätverk samverkar nära 200 organisationer för att stärka marknaden för cirkulära produkter och tjänster samt etablera cirkulära arbetssätt.', 'sv', 'CCBuild är en plattform för aktörer som vill bidra till ett mer hållbart och resurseffektivt byggande. I vårt nätverk samverkar nära 200 organisationer för att stärka marknaden för cirkulära produkter och tjänster samt etablera cirkulära arbetssätt.'), 'https://ccbuild.se/', 'assets/images/exhibitors/nordbygg-2026-centrum-for-cirkulart-byggande.jpg'),
-  ('nordbygg-2026-exhibitor-138254', 'nordbygg-2026', 'Certo Software', 'C11:41D', jsonb_build_object('en', 'Certo Software är en molnbaserad programvara för tillverkare och installatörer av fönster, dörrar och fasadprodukter. Med Certo kan företag hantera hela projektkedjan i ett och samma system – från offert till produktion, montage och service.
+  ('nordbygg-2026-exhibitor-139407', 'nordbygg-2026', 'Centrum för Cirkulärt Byggande', 'EH:15', jsonb_build_object('en', 'CCBuild is a platform for actors who want to contribute to a more sustainable and resource-efficient construction sector. In our network, nearly 200 organisations work together to strengthen the market for circular products and services and to establish circular ways of working.', 'sv', 'CCBuild är en plattform för aktörer som vill bidra till ett mer hållbart och resurseffektivt byggande. I vårt nätverk samverkar nära 200 organisationer för att stärka marknaden för cirkulära produkter och tjänster samt etablera cirkulära arbetssätt.'), 'https://ccbuild.se/', 'assets/images/exhibitors/nordbygg-2026-centrum-for-cirkulart-byggande.jpg'),
+  ('nordbygg-2026-exhibitor-138254', 'nordbygg-2026', 'Certo Software', 'C11:41D', jsonb_build_object('en', 'Certo Software is a cloud-based software for manufacturers and installers of windows, doors and facade products. With Certo, companies can manage the entire project chain in a single system — from quotation to production, installation and service.
 
-Programvaran hjälper företag att uppfylla standard- och dokumentationskrav för byggprodukter och effektiviserar det dagliga arbetet. I Certo kan man enkelt skapa och hantera dokument såsom CE-märkning, prestandadeklarationer (DoP), egenkontroller, installationsprotokoll och servicebesök.
+The software helps companies meet standards and documentation requirements for construction products and streamlines daily work. In Certo you can easily create and manage documents such as CE marking, declarations of performance (DoP), in-house controls, installation reports and service visits.
 
-Certo har integrationer med vanligt förekommande konstruktionsprogram i branschen, såsom LogiKal (Forterro), SchüCal och PursoCal. Programmet innehåller även en databas med flera vanliga profilsystem och deras prestandavärden, vilket gör dokumentationen snabbare och enklare att skapa.
+Certo integrates with the construction software commonly used in the industry, such as LogiKal (Forterro), SchüCal and PursoCal. The program also includes a database with several common profile systems and their performance values, which makes documentation faster and easier to create.
 
-Certo stöder bland annat följande profilsystem: Aluprof, Forster, Jansen, Purso, Rehau, Reynaers, Sapa, Schüco, Stålprofil, VEKA och Wicona.', 'sv', 'Certo Software är en molnbaserad programvara för tillverkare och installatörer av fönster, dörrar och fasadprodukter. Med Certo kan företag hantera hela projektkedjan i ett och samma system – från offert till produktion, montage och service.
+Certo supports profile systems including: Aluprof, Forster, Jansen, Purso, Rehau, Reynaers, Sapa, Schüco, Stålprofil, VEKA and Wicona.', 'sv', 'Certo Software är en molnbaserad programvara för tillverkare och installatörer av fönster, dörrar och fasadprodukter. Med Certo kan företag hantera hela projektkedjan i ett och samma system – från offert till produktion, montage och service.
 
 Programvaran hjälper företag att uppfylla standard- och dokumentationskrav för byggprodukter och effektiviserar det dagliga arbetet. I Certo kan man enkelt skapa och hantera dokument såsom CE-märkning, prestandadeklarationer (DoP), egenkontroller, installationsprotokoll och servicebesök.
 
 Certo har integrationer med vanligt förekommande konstruktionsprogram i branschen, såsom LogiKal (Forterro), SchüCal och PursoCal. Programmet innehåller även en databas med flera vanliga profilsystem och deras prestandavärden, vilket gör dokumentationen snabbare och enklare att skapa.
 
 Certo stöder bland annat följande profilsystem: Aluprof, Forster, Jansen, Purso, Rehau, Reynaers, Sapa, Schüco, Stålprofil, VEKA och Wicona.'), 'https://www.certo-software.com', 'assets/images/exhibitors/nordbygg-2026-certo-software.jpg'),
-  ('nordbygg-2026-exhibitor-133974', 'nordbygg-2026', 'Cetetherm', 'A04:19', jsonb_build_object('en', 'Cetetherm som ingår i NIBE Group, utvecklar innovativa energilösningar för värme och kyla. Lösningar som är smarta, uppkopplade och utformade för att sänka kostnader. Med över 70 års erfarenhet och rötterna i svensk ingenjörskonst gör Cetetherm valet av energilösning tryggt och enkelt.
+  ('nordbygg-2026-exhibitor-133974', 'nordbygg-2026', 'Cetetherm', 'A04:19', jsonb_build_object('en', 'Cetetherm, part of NIBE Group, develops innovative energy solutions for heating and cooling. Solutions that are smart, connected and designed to lower costs. With more than 70 years of experience and roots in Swedish engineering, Cetetherm makes choosing an energy solution safe and easy.
 
-Vi erbjuder energieffektiva, smarta och uppkopplade produkter och lösningar med minimal miljöpåverkan.
+We offer energy-efficient, smart and connected products and solutions with minimal environmental impact.
 
-Hybridenergi - två energikällor, en framtid.
-Vi erbjuder även lösningar som är kompatibla med andra energikällor som exempelvis värmepumpar där vi förenar förnybar energi för optimal flexibilitet och effektivitet.
+Hybrid energy — two energy sources, one future.
+We also offer solutions that are compatible with other energy sources such as heat pumps, where we combine renewable energy for optimal flexibility and efficiency.
 
-Välkommen att prata mindre energiförluster, digital kontroll och maximal effektivitet med oss.
+Welcome to talk with us about lower energy losses, digital control and maximum efficiency.
 
-Cetetherm värmer en ny generation.', 'sv', 'Cetetherm som ingår i NIBE Group, utvecklar innovativa energilösningar för värme och kyla. Lösningar som är smarta, uppkopplade och utformade för att sänka kostnader. Med över 70 års erfarenhet och rötterna i svensk ingenjörskonst gör Cetetherm valet av energilösning tryggt och enkelt.
+Cetetherm is heating a new generation.', 'sv', 'Cetetherm som ingår i NIBE Group, utvecklar innovativa energilösningar för värme och kyla. Lösningar som är smarta, uppkopplade och utformade för att sänka kostnader. Med över 70 års erfarenhet och rötterna i svensk ingenjörskonst gör Cetetherm valet av energilösning tryggt och enkelt.
 
 Vi erbjuder energieffektiva, smarta och uppkopplade produkter och lösningar med minimal miljöpåverkan.
 
@@ -1853,17 +1853,17 @@ Vi erbjuder även lösningar som är kompatibla med andra energikällor som exem
 Välkommen att prata mindre energiförluster, digital kontroll och maximal effektivitet med oss.
 
 Cetetherm värmer en ny generation.'), 'https://www.cetetherm.com/sv', 'assets/images/exhibitors/nordbygg-2026-cetetherm.jpg'),
-  ('nordbygg-2026-exhibitor-137938', 'nordbygg-2026', 'CEWOOD', 'C12:53', jsonb_build_object('en', 'CEWOOD är en av världens ledande tillverkare av träullsplattor och den enda producenten i sitt slag i Baltikum.
-Vi kombinerar över 60 års erfarenhet med modern produktionsteknik för att erbjuda högkvalitativa, hållbara och pålitliga lösningar för bygg- och inredningsprojekt.
-CEWOOD-plattor tillverkas av naturliga råvaror – träull, cement och vatten. De erbjuder:
-•	mycket god ljudabsorption och akustisk komfort;
-•	hög brandsäkerhet;m
-•	lång livslängd och formstabilitet;
-•	ett hälsosamt inomhusklimat;
-•	stor designfrihet.
+  ('nordbygg-2026-exhibitor-137938', 'nordbygg-2026', 'CEWOOD', 'C12:53', jsonb_build_object('en', 'CEWOOD is one of the world''s leading manufacturers of wood wool boards and the only producer of its kind in the Baltics.
+We combine more than 60 years of experience with modern production technology to deliver high-quality, sustainable and reliable solutions for construction and interior projects.
+CEWOOD boards are made from natural raw materials — wood wool, cement and water. They offer:
+•	very good sound absorption and acoustic comfort;
+•	high fire safety;
+•	long service life and dimensional stability;
+•	a healthy indoor climate;
+•	great design freedom.
 
-Våra produkter används i skolor, kontor, offentliga miljöer och bostadsprojekt på internationella marknader.
-CEWOOD fokuserar på hållbar produktion, effektiva lösningar och långsiktiga samarbeten med arkitekter, designers och byggaktörer.', 'sv', 'CEWOOD är en av världens ledande tillverkare av träullsplattor och den enda producenten i sitt slag i Baltikum.
+Our products are used in schools, offices, public spaces and residential projects across international markets.
+CEWOOD focuses on sustainable production, efficient solutions and long-term partnerships with architects, designers and building actors.', 'sv', 'CEWOOD är en av världens ledande tillverkare av träullsplattor och den enda producenten i sitt slag i Baltikum.
 Vi kombinerar över 60 års erfarenhet med modern produktionsteknik för att erbjuda högkvalitativa, hållbara och pålitliga lösningar för bygg- och inredningsprojekt.
 CEWOOD-plattor tillverkas av naturliga råvaror – träull, cement och vatten. De erbjuder:
 •	mycket god ljudabsorption och akustisk komfort;
@@ -1874,49 +1874,49 @@ CEWOOD-plattor tillverkas av naturliga råvaror – träull, cement och vatten. 
 
 Våra produkter används i skolor, kontor, offentliga miljöer och bostadsprojekt på internationella marknader.
 CEWOOD fokuserar på hållbar produktion, effektiva lösningar och långsiktiga samarbeten med arkitekter, designers och byggaktörer.'), 'https://www.cewood.com', 'assets/images/exhibitors/nordbygg-2026-cewood.jpg'),
-  ('nordbygg-2026-exhibitor-133975', 'nordbygg-2026', 'CH Ståldörrar AB', 'C16:41', jsonb_build_object('en', 'CH Ståldörrar är specialiserade på säkerhetsdörrar och branddörrar av stål. Våra dörrar är framtagna tillsammans med medarbetare som har mycket lång erfarenhet i branschen. Vår tillverkningslina i Eskilstuna är en av de mest moderna i världen.', 'sv', 'CH Ståldörrar är specialiserade på säkerhetsdörrar och branddörrar av stål. Våra dörrar är framtagna tillsammans med medarbetare som har mycket lång erfarenhet i branschen. Vår tillverkningslina i Eskilstuna är en av de mest moderna i världen.'), 'https://www.chstaldorrar.se', 'assets/images/exhibitors/nordbygg-2026-ch-staldorrar-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137264', 'nordbygg-2026', 'Chiller Sverige AB', 'A13:21', jsonb_build_object('en', 'Chiller är ledande experter inom kyl-, värme- och luftbehandlingsbranschen. Vi designar och tillverkar lösningar efter kundspecifika behov och assisterar kunden från planering till implementering. Chiller utvecklar och tillverkar samtliga produkter i egna fabriker i Finland och utför underhåll på dem under hela livscykeln.', 'sv', 'Chiller är ledande experter inom kyl-, värme- och luftbehandlingsbranschen. Vi designar och tillverkar lösningar efter kundspecifika behov och assisterar kunden från planering till implementering. Chiller utvecklar och tillverkar samtliga produkter i egna fabriker i Finland och utför underhåll på dem under hela livscykeln.'), 'https://www.chiller.eu', 'assets/images/exhibitors/nordbygg-2026-chiller-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137908', 'nordbygg-2026', 'Christian Berner', 'C09:52', jsonb_build_object('en', 'Vi på Christian Berner arbetar med vibrationsisolering där kraven är som högst och marginalerna som minst. Oavsett om det gäller byggnader för människor, infrastruktur i ständig drift eller industriella miljöer med känslig och tung utrustning, utgår våra lösningar från samma princip: att kontrollera vibrationer där de uppstår och förhindra att de sprids vidare.
+  ('nordbygg-2026-exhibitor-133975', 'nordbygg-2026', 'CH Ståldörrar AB', 'C16:41', jsonb_build_object('en', 'CH Ståldörrar specialises in steel security doors and fire doors. Our doors have been developed together with employees who have very long experience in the industry. Our manufacturing line in Eskilstuna is one of the most modern in the world.', 'sv', 'CH Ståldörrar är specialiserade på säkerhetsdörrar och branddörrar av stål. Våra dörrar är framtagna tillsammans med medarbetare som har mycket lång erfarenhet i branschen. Vår tillverkningslina i Eskilstuna är en av de mest moderna i världen.'), 'https://www.chstaldorrar.se', 'assets/images/exhibitors/nordbygg-2026-ch-staldorrar-ab.jpg'),
+  ('nordbygg-2026-exhibitor-137264', 'nordbygg-2026', 'Chiller Sverige AB', 'A13:21', jsonb_build_object('en', 'Chiller is a leading expert in the cooling, heating and air-handling industry. We design and manufacture solutions tailored to customer-specific needs and assist the customer from planning through to implementation. Chiller develops and manufactures all its products in its own factories in Finland and provides maintenance for them throughout their entire lifecycle.', 'sv', 'Chiller är ledande experter inom kyl-, värme- och luftbehandlingsbranschen. Vi designar och tillverkar lösningar efter kundspecifika behov och assisterar kunden från planering till implementering. Chiller utvecklar och tillverkar samtliga produkter i egna fabriker i Finland och utför underhåll på dem under hela livscykeln.'), 'https://www.chiller.eu', 'assets/images/exhibitors/nordbygg-2026-chiller-sverige-ab.jpg'),
+  ('nordbygg-2026-exhibitor-137908', 'nordbygg-2026', 'Christian Berner', 'C09:52', jsonb_build_object('en', 'At Christian Berner we work with vibration isolation where the demands are at their highest and the margins at their smallest. Whether it concerns buildings for people, infrastructure in continuous operation, or industrial environments with sensitive and heavy equipment, our solutions are based on the same principle: control vibrations where they arise and prevent them from spreading further.
 
-Med erfarenhet från husgrunder, bjälklag, akustiklösningar till järnvägssystem, marina applikationer och industriella installationer hjälper vi er med ett helhetsansvar - från teknisk analys och dimensionering till rätt lösning för varje applikation. Resultatet är robust funktion, lång livslängd och miljöer som fungerar i praktiken.', 'sv', 'Vi på Christian Berner arbetar med vibrationsisolering där kraven är som högst och marginalerna som minst. Oavsett om det gäller byggnader för människor, infrastruktur i ständig drift eller industriella miljöer med känslig och tung utrustning, utgår våra lösningar från samma princip: att kontrollera vibrationer där de uppstår och förhindra att de sprids vidare.
+With experience from house foundations, slabs and acoustic solutions to railway systems, marine applications and industrial installations, we help you with overall responsibility — from technical analysis and dimensioning to the right solution for each application. The result is robust function, long service life and environments that work in practice.', 'sv', 'Vi på Christian Berner arbetar med vibrationsisolering där kraven är som högst och marginalerna som minst. Oavsett om det gäller byggnader för människor, infrastruktur i ständig drift eller industriella miljöer med känslig och tung utrustning, utgår våra lösningar från samma princip: att kontrollera vibrationer där de uppstår och förhindra att de sprids vidare.
 
 Med erfarenhet från husgrunder, bjälklag, akustiklösningar till järnvägssystem, marina applikationer och industriella installationer hjälper vi er med ett helhetsansvar - från teknisk analys och dimensionering till rätt lösning för varje applikation. Resultatet är robust funktion, lång livslängd och miljöer som fungerar i praktiken.'), 'https://christianberner.se', 'assets/images/exhibitors/nordbygg-2026-christian-berner.jpg'),
-  ('nordbygg-2026-exhibitor-133943', 'nordbygg-2026', 'CIDAN Machinery Sweden AB', 'C18:41', jsonb_build_object('en', 'CIDAN Machinery Group är din one-stop-partner inom plåtbearbetning, och erbjuder en global närvaro som säkerställer tillgång till marknadens bredaste utbud av innovativa produkter, mjukvarulösningar och omfattande serviceprogram.
+  ('nordbygg-2026-exhibitor-133943', 'nordbygg-2026', 'CIDAN Machinery Sweden AB', 'C18:41', jsonb_build_object('en', 'CIDAN Machinery Group is your one-stop partner in sheet-metal processing, offering a global presence that ensures access to the market''s broadest range of innovative products, software solutions and comprehensive service programs.
 
-Vårt sortiment inkluderar allt från smart programvara till kantvikmaskiner, maskingradsaxar och klippsträckor, vilket ger dig de verktyg som krävs för att ta din verksamhet till nästa nivå. Med över 117 års erfarenhet i branschen, hjälper vi dig att optimera din produktion med precision och innovation.', 'sv', 'CIDAN Machinery Group är din one-stop-partner inom plåtbearbetning, och erbjuder en global närvaro som säkerställer tillgång till marknadens bredaste utbud av innovativa produkter, mjukvarulösningar och omfattande serviceprogram.
+Our range includes everything from smart software to folding machines, machine guillotines and slitting lines, giving you the tools required to take your business to the next level. With over 117 years of experience in the industry, we help you optimise your production with precision and innovation.', 'sv', 'CIDAN Machinery Group är din one-stop-partner inom plåtbearbetning, och erbjuder en global närvaro som säkerställer tillgång till marknadens bredaste utbud av innovativa produkter, mjukvarulösningar och omfattande serviceprogram.
 
 Vårt sortiment inkluderar allt från smart programvara till kantvikmaskiner, maskingradsaxar och klippsträckor, vilket ger dig de verktyg som krävs för att ta din verksamhet till nästa nivå. Med över 117 års erfarenhet i branschen, hjälper vi dig att optimera din produktion med precision och innovation.'), 'https://se.cidanmachinery.com/', 'assets/images/exhibitors/nordbygg-2026-cidan-machinery-sweden-ab.jpg'),
-  ('nordbygg-2026-exhibitor-137659', 'nordbygg-2026', 'Clean Burn Trading AB', 'Ute:56 (+1)', jsonb_build_object('en', 'Vi tycker att det ska vara enkelt att välja det gröna alternativet. Därför ser vi till att våra lösningar inte bara är miljövänliga. Lika viktigt är att du som kund ska känna dig trygg i att du får högklassig kvalitet till ett rimligt pris.
-Vi brinner för att skapa en bättre miljö. Bokstavligen. Våra värmesystem är utformade för att minimera koldioxidutsläpp och partiklar, och därmed ha en minimal negativ miljöpåverkan.', 'sv', 'Vi tycker att det ska vara enkelt att välja det gröna alternativet. Därför ser vi till att våra lösningar inte bara är miljövänliga. Lika viktigt är att du som kund ska känna dig trygg i att du får högklassig kvalitet till ett rimligt pris.
+  ('nordbygg-2026-exhibitor-137659', 'nordbygg-2026', 'Clean Burn Trading AB', 'Ute:56 (+1)', jsonb_build_object('en', 'We believe choosing the green option should be easy. That is why we make sure our solutions are not only environmentally friendly. Equally important is that you as a customer should feel confident that you are getting top-quality products at a reasonable price.
+We are passionate about creating a better environment. Literally. Our heating systems are designed to minimise carbon dioxide emissions and particulates, and thereby have a minimal negative environmental impact.', 'sv', 'Vi tycker att det ska vara enkelt att välja det gröna alternativet. Därför ser vi till att våra lösningar inte bara är miljövänliga. Lika viktigt är att du som kund ska känna dig trygg i att du får högklassig kvalitet till ett rimligt pris.
 Vi brinner för att skapa en bättre miljö. Bokstavligen. Våra värmesystem är utformade för att minimera koldioxidutsläpp och partiklar, och därmed ha en minimal negativ miljöpåverkan.'), 'https://Cleanburn.se', null),
-  ('nordbygg-2026-exhibitor-140190', 'nordbygg-2026', 'Clean Water', 'AG:29', jsonb_build_object('en', 'Clean Water levererar driftsäkra och moderna lösningar inom vattenrening, med särskild kompetens inom brunnsrening och avsaltning av havsvatten.
-Vi samarbetar nära rörinstallatörer, grossister, föreningar, företag och kommuner och erbjuder beprövade system som säkerställer rent och säkert vatten i både små och större installationer.
-En av våra styrkor är vår kompetens inom tolkning av vattenanalyser. Genom att analysera vattenvärden kan vi rekommendera den mest kostnadseffektiva och tekniskt rätta lösningen för varje projekt. Det gör installationerna enklare och minskar risken för fel dimensionering eller onödigt dyra system.
-Vi fungerar också som tekniskt stöd för våra samarbetspartners. Vi hjälper till med rådgivning, dimensionering och produktval, och finns tillgängliga under hela processen – från offert och projektering till installation och efterföljande support.
-Vårt mål är att vara en pålitlig partner för installatörer och leverantörer, med lösningar som är enkla att installera, driftsäkra och långsiktigt hållbara.', 'sv', 'Clean Water levererar driftsäkra och moderna lösningar inom vattenrening, med särskild kompetens inom brunnsrening och avsaltning av havsvatten.
+  ('nordbygg-2026-exhibitor-140190', 'nordbygg-2026', 'Clean Water', 'AG:29', jsonb_build_object('en', 'Clean Water delivers reliable and modern solutions in water treatment, with particular expertise in well treatment and the desalination of seawater.
+We work closely with pipe installers, wholesalers, associations, companies and municipalities, and offer proven systems that ensure clean and safe water in both small and larger installations.
+One of our strengths is our expertise in interpreting water analyses. By analysing water values we can recommend the most cost-effective and technically correct solution for each project. This makes installations easier and reduces the risk of incorrect dimensioning or unnecessarily expensive systems.
+We also act as technical support for our partners. We help with advice, dimensioning and product selection, and are available throughout the process — from quotation and design to installation and follow-up support.
+Our goal is to be a reliable partner for installers and suppliers, with solutions that are easy to install, reliable in operation and sustainable over the long term.', 'sv', 'Clean Water levererar driftsäkra och moderna lösningar inom vattenrening, med särskild kompetens inom brunnsrening och avsaltning av havsvatten.
 Vi samarbetar nära rörinstallatörer, grossister, föreningar, företag och kommuner och erbjuder beprövade system som säkerställer rent och säkert vatten i både små och större installationer.
 En av våra styrkor är vår kompetens inom tolkning av vattenanalyser. Genom att analysera vattenvärden kan vi rekommendera den mest kostnadseffektiva och tekniskt rätta lösningen för varje projekt. Det gör installationerna enklare och minskar risken för fel dimensionering eller onödigt dyra system.
 Vi fungerar också som tekniskt stöd för våra samarbetspartners. Vi hjälper till med rådgivning, dimensionering och produktval, och finns tillgängliga under hela processen – från offert och projektering till installation och efterföljande support.
 Vårt mål är att vara en pålitlig partner för installatörer och leverantörer, med lösningar som är enkla att installera, driftsäkra och långsiktigt hållbara.'), 'https://Cleanwater.se', 'assets/images/exhibitors/nordbygg-2026-clean-water.jpg'),
-  ('nordbygg-2026-exhibitor-139312', 'nordbygg-2026', 'ClimaPri', 'A14:36 (+1)', jsonb_build_object('en', 'ClimaPri is a Finnish company providing smart IoT solutions for buildings, enabling property owners, managers, and residents to monitor, manage, and optimize energy use, safety, and indoor conditions through one unified platform.', 'sv', 'ClimaPri is a Finnish company providing smart IoT solutions for buildings, enabling property owners, managers, and residents to monitor, manage, and optimize energy use, safety, and indoor conditions through one unified platform.'), 'https://www.climapri.com', 'assets/images/exhibitors/nordbygg-2026-climapri.jpg'),
-  ('nordbygg-2026-exhibitor-138939', 'nordbygg-2026', 'CLIMATEC', 'A09:30', jsonb_build_object('en', 'Vi levererar lösningar inom värme, kyla, ventilation och bullerskydd. Våra produkter inom VVS består av ridåvärmare, fläktluftvärmare, värmeåtervinningsaggregat och kanalfläktar. Inom Buller så levererar vi modulära bullerskärmar, ljudhuvar, inbyggnader, ljuddämpare ventilationsgaller m.m.
-Inom VVS är vårt fokus kommersiella och industrilokaler. Vi hjälper er med bästa funktion ur ett ekonomiskt, klimat- och energimässigt perspektiv. Inom Bullerskydd designar vi rätt lösning för att skapa god ljudmiljö vid bullrande verksamhet, både inomhus och utomhus.', 'sv', 'Vi levererar lösningar inom värme, kyla, ventilation och bullerskydd. Våra produkter inom VVS består av ridåvärmare, fläktluftvärmare, värmeåtervinningsaggregat och kanalfläktar. Inom Buller så levererar vi modulära bullerskärmar, ljudhuvar, inbyggnader, ljuddämpare ventilationsgaller m.m.
+  ('nordbygg-2026-exhibitor-139312', 'nordbygg-2026', 'ClimaPri', 'A14:36 (+1)', jsonb_build_object('en', 'ClimaPri is a Finnish company providing smart IoT solutions for buildings, enabling property owners, managers, and residents to monitor, manage, and optimize energy use, safety, and indoor conditions through one unified platform.', 'sv', 'ClimaPri är ett finskt företag som tillhandahåller smarta IoT-lösningar för fastigheter och gör det möjligt för fastighetsägare, förvaltare och boende att övervaka, hantera och optimera energianvändning, säkerhet och inomhusförhållanden via en enda samlad plattform.'), 'https://www.climapri.com', 'assets/images/exhibitors/nordbygg-2026-climapri.jpg'),
+  ('nordbygg-2026-exhibitor-138939', 'nordbygg-2026', 'CLIMATEC', 'A09:30', jsonb_build_object('en', 'We deliver solutions in heating, cooling, ventilation and noise protection. Our HVAC products include air curtains, fan heaters, heat-recovery units and duct fans. Within Noise we deliver modular noise screens, sound hoods, enclosures, silencers, ventilation grilles and more.
+Within HVAC, our focus is on commercial and industrial premises. We help you achieve the best function from an economic, climate and energy perspective. Within Noise Protection we design the right solution to create a good sound environment for noisy operations, both indoors and outdoors.', 'sv', 'Vi levererar lösningar inom värme, kyla, ventilation och bullerskydd. Våra produkter inom VVS består av ridåvärmare, fläktluftvärmare, värmeåtervinningsaggregat och kanalfläktar. Inom Buller så levererar vi modulära bullerskärmar, ljudhuvar, inbyggnader, ljuddämpare ventilationsgaller m.m.
 Inom VVS är vårt fokus kommersiella och industrilokaler. Vi hjälper er med bästa funktion ur ett ekonomiskt, klimat- och energimässigt perspektiv. Inom Bullerskydd designar vi rätt lösning för att skapa god ljudmiljö vid bullrande verksamhet, både inomhus och utomhus.'), 'https://www.climatec.se', 'assets/images/exhibitors/nordbygg-2026-climatec.jpg'),
-  ('nordbygg-2026-exhibitor-139385', 'nordbygg-2026', 'CMB Housing Factory', 'C04:41', jsonb_build_object('en', 'Prefab- och modulära bygglösningar för bostads-, offentliga och kommersiella projekt.
+  ('nordbygg-2026-exhibitor-139385', 'nordbygg-2026', 'CMB Housing Factory', 'C04:41', jsonb_build_object('en', 'Prefab and modular building solutions for residential, public and commercial projects.
 
-CMB är en pålitlig tillverkningspartner för byggföretag, fastighetsutvecklare och investerare.', 'sv', 'Prefab- och modulära bygglösningar för bostads-, offentliga och kommersiella projekt.
+CMB is a reliable manufacturing partner for construction companies, property developers and investors.', 'sv', 'Prefab- och modulära bygglösningar för bostads-, offentliga och kommersiella projekt.
 
 CMB är en pålitlig tillverkningspartner för byggföretag, fastighetsutvecklare och investerare.'), 'https://cmbprefab.com/en/home/', 'assets/images/exhibitors/nordbygg-2026-cmb-housing-factory.jpg'),
   ('nordbygg-2026-exhibitor-135323', 'nordbygg-2026', 'CMC Sweden AB', 'B04:10', null, 'https://www.cmcsweden.se', null),
-  ('nordbygg-2026-exhibitor-138140', 'nordbygg-2026', 'CODI', 'C07:72', jsonb_build_object('en', 'Vi är en tillverkare av porttelefoner och system som är kopplade till dem (hårdvara och mjukvara).
+  ('nordbygg-2026-exhibitor-138140', 'nordbygg-2026', 'CODI', 'C07:72', jsonb_build_object('en', 'We are a manufacturer of door entry phones and the systems connected to them (hardware and software).
 
-Vår innovativa lösning för porttelefoner ökar både den sociala och personliga säkerheten.
+Our innovative door entry phone solution increases both social and personal security.
 
-Våra teknologiska kronjuveler är:
+Our technological crown jewels are:
 
-GSM-baserade system, självdessinfekterande skärmar samt dataanalys – dessa teknologier kan förändra framtiden.
+GSM-based systems, self-disinfecting screens and data analytics — these technologies can change the future.
 
-Och du kan förändra den tillsammans med oss.', 'sv', 'Vi är en tillverkare av porttelefoner och system som är kopplade till dem (hårdvara och mjukvara).
+And you can change it together with us.', 'sv', 'Vi är en tillverkare av porttelefoner och system som är kopplade till dem (hårdvara och mjukvara).
 
 Vår innovativa lösning för porttelefoner ökar både den sociala och personliga säkerheten.
 
@@ -1926,17 +1926,17 @@ GSM-baserade system, självdessinfekterande skärmar samt dataanalys – dessa t
 
 Och du kan förändra den tillsammans med oss.'), 'https://www.codi.pl', 'assets/images/exhibitors/nordbygg-2026-codi.jpg'),
   ('nordbygg-2026-exhibitor-136559', 'nordbygg-2026', 'Colia Scandinavia AB', 'A16:30', null, 'https://www.colia.se', null),
-  ('nordbygg-2026-exhibitor-138987', 'nordbygg-2026', 'Comfort', 'A08:10', jsonb_build_object('en', 'Comfort är en av Sveriges största installationsaktörer inom VS, el och ventilation. Med fokus på energieffektivitet utvecklar och installerar vi tekniska lösningar inom el, värme, sanitet, rör och ventilation för kontor, varuhus, sjukhus och industrianläggningar.', 'sv', 'Comfort är en av Sveriges största installationsaktörer inom VS, el och ventilation. Med fokus på energieffektivitet utvecklar och installerar vi tekniska lösningar inom el, värme, sanitet, rör och ventilation för kontor, varuhus, sjukhus och industrianläggningar.'), 'https://comfort.se', 'assets/images/exhibitors/nordbygg-2026-comfort.jpg'),
+  ('nordbygg-2026-exhibitor-138987', 'nordbygg-2026', 'Comfort', 'A08:10', jsonb_build_object('en', 'Comfort is one of Sweden''s largest installation actors within plumbing, electrical and ventilation. With a focus on energy efficiency, we develop and install technical solutions in electrical, heating, sanitation, piping and ventilation for offices, department stores, hospitals and industrial facilities.', 'sv', 'Comfort är en av Sveriges största installationsaktörer inom VS, el och ventilation. Med fokus på energieffektivitet utvecklar och installerar vi tekniska lösningar inom el, värme, sanitet, rör och ventilation för kontor, varuhus, sjukhus och industrianläggningar.'), 'https://comfort.se', 'assets/images/exhibitors/nordbygg-2026-comfort.jpg'),
   ('nordbygg-2026-exhibitor-134692', 'nordbygg-2026', 'Comfort Control AB', 'A16:33', null, 'https://www.comfort-control.se', null),
   ('nordbygg-2026-exhibitor-133966', 'nordbygg-2026', 'Comfortzone AB', 'A15:22', null, 'https://www.comfortzone.se', null),
-  ('nordbygg-2026-exhibitor-139617', 'nordbygg-2026', 'Conaxity', 'BG:14', jsonb_build_object('en', 'Ta kontroll över din arbetsplats.
+  ('nordbygg-2026-exhibitor-139617', 'nordbygg-2026', 'Conaxity', 'BG:14', jsonb_build_object('en', 'Take control of your worksite.
 
-Conaxity gör utrustning till en delad, digital tjänst.
-Inga nycklar. Ingen gissning. Ingen stillastående utrustning.
+Conaxity turns equipment into a shared, digital service.
+No keys. No guesswork. No idle equipment.
 
-Boka, lås upp, använd och avsluta hyra direkt från mobilen – samtidigt som plattformen spårar användning, säkerställer regler och automatiserar debitering.
+Book, unlock, use and end the rental directly from your phone — while the platform tracks usage, ensures rules are followed and automates billing.
 
-Minska flottan. Öka nyttjandegraden. Eliminera kaos.', 'sv', 'Ta kontroll över din arbetsplats.
+Reduce the fleet. Increase utilisation. Eliminate chaos.', 'sv', 'Ta kontroll över din arbetsplats.
 
 Conaxity gör utrustning till en delad, digital tjänst.
 Inga nycklar. Ingen gissning. Ingen stillastående utrustning.
@@ -1944,13 +1944,13 @@ Inga nycklar. Ingen gissning. Ingen stillastående utrustning.
 Boka, lås upp, använd och avsluta hyra direkt från mobilen – samtidigt som plattformen spårar användning, säkerställer regler och automatiserar debitering.
 
 Minska flottan. Öka nyttjandegraden. Eliminera kaos.'), 'https://conaxity.com/', 'assets/images/exhibitors/nordbygg-2026-conaxity.jpg'),
-  ('nordbygg-2026-exhibitor-136628', 'nordbygg-2026', 'Condair AB', 'A17:20', jsonb_build_object('en', 'Condair AB – Experter på fuktkontroll
-Condair AB levererar professionella lösningar för styrning av luftfuktighet i kommersiella byggnader och industriella miljöer. Med lång erfarenhet hjälper vi våra kunder att skapa stabila, effektiva och hälsosamma inomhusklimat genom avancerad teknik för befuktning, avfuktning och adiabatisk kylning.
-Rätt luftfuktighet är avgörande för att skydda människor, processer och material. Våra lösningar används inom många olika områden – från kontor, sjukhus och datacenter till produktion, museer, arkiv och andra miljöer där ett stabilt inomhusklimat är avgörande.
-Condair AB är en del av den globala Condair Group, med huvudkontor i Schweiz. Koncernen har över 1000 medarbetare globalt och driver fem produktionsanläggningar, som levererar lösningar för fuktkontroll till kunder över hela världen.
-I Norden arbetar vi i ett nära och integrerat samarbete mellan våra lokala organisationer. Det ger oss starka sälj-, service- och administrativa team som tillsammans kan erbjuda hög kompetens, snabb service och lösningar anpassade efter kundernas behov.
-Våra specialister samarbetar nära med konsulter, entreprenörer, fastighetsägare och industrikunder för att utveckla lösningar som säkerställer optimal luftfuktighet, förbättrad energieffektivitet och långsiktig driftsäkerhet.
-Genom att kombinera global expertis med stark lokal närvaro levererar Condair lösningar som skapar bättre inomhusklimat, skyddar värdefulla tillgångar och stödjer effektiv verksamhet.', 'sv', 'Condair AB – Experter på fuktkontroll
+  ('nordbygg-2026-exhibitor-136628', 'nordbygg-2026', 'Condair AB', 'A17:20', jsonb_build_object('en', 'Condair AB – Experts in humidity control
+Condair AB delivers professional solutions for controlling air humidity in commercial buildings and industrial environments. With long experience, we help our customers create stable, efficient and healthy indoor climates through advanced technology for humidification, dehumidification and adiabatic cooling.
+The right humidity is crucial for protecting people, processes and materials. Our solutions are used in many different areas — from offices, hospitals and data centres to production, museums, archives and other environments where a stable indoor climate is essential.
+Condair AB is part of the global Condair Group, headquartered in Switzerland. The group has more than 1,000 employees globally and operates five production facilities, delivering humidity-control solutions to customers worldwide.
+In the Nordics we work in close, integrated cooperation between our local organisations. This gives us strong sales, service and administrative teams that together can offer high competence, fast service and solutions tailored to customer needs.
+Our specialists work closely with consultants, contractors, property owners and industrial customers to develop solutions that ensure optimal air humidity, improved energy efficiency and long-term operational reliability.
+By combining global expertise with a strong local presence, Condair delivers solutions that create better indoor climates, protect valuable assets and support efficient operations.', 'sv', 'Condair AB – Experter på fuktkontroll
 Condair AB levererar professionella lösningar för styrning av luftfuktighet i kommersiella byggnader och industriella miljöer. Med lång erfarenhet hjälper vi våra kunder att skapa stabila, effektiva och hälsosamma inomhusklimat genom avancerad teknik för befuktning, avfuktning och adiabatisk kylning.
 Rätt luftfuktighet är avgörande för att skydda människor, processer och material. Våra lösningar används inom många olika områden – från kontor, sjukhus och datacenter till produktion, museer, arkiv och andra miljöer där ett stabilt inomhusklimat är avgörande.
 Condair AB är en del av den globala Condair Group, med huvudkontor i Schweiz. Koncernen har över 1000 medarbetare globalt och driver fem produktionsanläggningar, som levererar lösningar för fuktkontroll till kunder över hela världen.
@@ -1966,27 +1966,27 @@ Genom att kombinera global expertis med stark lokal närvaro levererar Condair l
  MP Aluminium sp. z o.o. - doors&windows, facades
 
 The Office of the Marshal of the Swietokrzyskie Voivodeship in Poland is a regional government authotity. Our Unit, the Division for Economic Cooperation and European Projects,  deals with promotion of our regional businesses on international markets. This time we would like to introduce our home companies in the construction business and we have brought 6 companies with us, our co-exhibitors.
-I would like to invite you to our stand for a B2B.', 'sv', 'See our co-exhiitors:
- Zaklad Kamieniarski Przywala Stones - natural stone, marble, bathroom, kitchen
- HOLZEXPORT sp. z o.o. - floors, wood
- KGA Sp. z o.o. - automation, climate chambers
- WJAP Sp. z o.o. - electricity
- R&M Alufasady Sp. z o.o - doors&windows, facades
- MP Aluminium sp. z o.o. - doors&windows, facades
+I would like to invite you to our stand for a B2B.', 'sv', 'Se våra medutställare:
+ Zaklad Kamieniarski Przywala Stones – natursten, marmor, badrum, kök
+ HOLZEXPORT sp. z o.o. – golv, trä
+ KGA Sp. z o.o. – automation, klimatkammare
+ WJAP Sp. z o.o. – el
+ R&M Alufasady Sp. z o.o – dörrar och fönster, fasader
+ MP Aluminium sp. z o.o. – dörrar och fönster, fasader
 
-The Office of the Marshal of the Swietokrzyskie Voivodeship in Poland is a regional government authotity. Our Unit, the Division for Economic Cooperation and European Projects,  deals with promotion of our regional businesses on international markets. This time we would like to introduce our home companies in the construction business and we have brought 6 companies with us, our co-exhibitors.
-I would like to invite you to our stand for a B2B.'), 'https://www.swietokrzyskie.pro/en', 'assets/images/exhibitors/nordbygg-2026-construction-office-of-the-marshal-of-the-swieto.jpg'),
-  ('nordbygg-2026-exhibitor-137433', 'nordbygg-2026', 'Containerpoolen AB', 'B09:42', jsonb_build_object('en', 'Din kompletta containerleverantör
+Marskalkens kontor för regionen Świętokrzyskie i Polen är en regional myndighet. Vår enhet, avdelningen för ekonomiskt samarbete och europeiska projekt, arbetar med att marknadsföra våra regionala företag på internationella marknader. Den här gången vill vi presentera våra inhemska företag inom byggbranschen, och vi har sex företag med oss, våra medutställare.
+Jag vill bjuda in er till vår monter för B2B-möten.'), 'https://www.swietokrzyskie.pro/en', 'assets/images/exhibitors/nordbygg-2026-construction-office-of-the-marshal-of-the-swieto.jpg'),
+  ('nordbygg-2026-exhibitor-137433', 'nordbygg-2026', 'Containerpoolen AB', 'B09:42', jsonb_build_object('en', 'Your complete container supplier
 
-Med över 30 år i branschen kan Containerpoolen erbjuda det vi kan bäst; en komplett container för just ert ändamål! Vi hyr ut och säljer containrar anpassade efter våra kunders behov.
+With more than 30 years in the industry, Containerpoolen offers what we do best — a complete container for your specific purpose. We rent out and sell containers tailored to our customers'' needs.
 
-Vi på Containerpoolen har sedan 1980 försett Sverige med högkvalitativa containrar.
-Kompletta lösningar. Fyra bemannade depåer i Sverige.
-Nyvång, Oxie, Jönköping och Nykvarn.
+Since 1980, we at Containerpoolen have provided Sweden with high-quality containers.
+Complete solutions. Four staffed depots in Sweden.
+Nyvång, Oxie, Jönköping and Nykvarn.
 
-Vi driver ett omfattande nätverk för leverans och expediering av containrar som täcker vårt avlånga land. Det inkluderar större städer som Stockholm, Västerås, Norrköping, Jönköping, Göteborg, Växjö, Karlskrona, Visby, Helsingborg och Malmö.
+We operate an extensive network for delivery and dispatch of containers covering our long country. It includes major cities such as Stockholm, Västerås, Norrköping, Jönköping, Gothenburg, Växjö, Karlskrona, Visby, Helsingborg and Malmö.
 
-Oavsett var ditt projekt befinner sig kan du lita på vår expertis och erfarenhet när det gäller att säkerställa smidig och effektiv containerlogistik.', 'sv', 'Din kompletta containerleverantör
+Wherever your project is located, you can rely on our expertise and experience to ensure smooth and efficient container logistics.', 'sv', 'Din kompletta containerleverantör
 
 Med över 30 år i branschen kan Containerpoolen erbjuda det vi kan bäst; en komplett container för just ert ändamål! Vi hyr ut och säljer containrar anpassade efter våra kunders behov.
 
@@ -1997,57 +1997,57 @@ Nyvång, Oxie, Jönköping och Nykvarn.
 Vi driver ett omfattande nätverk för leverans och expediering av containrar som täcker vårt avlånga land. Det inkluderar större städer som Stockholm, Västerås, Norrköping, Jönköping, Göteborg, Växjö, Karlskrona, Visby, Helsingborg och Malmö.
 
 Oavsett var ditt projekt befinner sig kan du lita på vår expertis och erfarenhet när det gäller att säkerställa smidig och effektiv containerlogistik.'), 'https://containerpoolen.se', 'assets/images/exhibitors/nordbygg-2026-containerpoolen-ab.jpg'),
-  ('nordbygg-2026-exhibitor-134706', 'nordbygg-2026', 'Corroventa Avfuktning AB', 'A20:27', jsonb_build_object('en', 'Corroventa är marknadsledande specialister på innovativa lösningar inom avfuktning vid vattenskador och byggavfuktning. Vi erbjuder även effektiva lösningar för hantering av fukt, lukt och radon för en trygg och sund boendemiljö.
+  ('nordbygg-2026-exhibitor-134706', 'nordbygg-2026', 'Corroventa Avfuktning AB', 'A20:27', jsonb_build_object('en', 'Corroventa is a market-leading specialist in innovative solutions for dehumidification in connection with water damage and construction drying. We also offer effective solutions for managing moisture, odour and radon for a safe and healthy living environment.
 
-Vi utvecklar, tillverkar och säljer produkter av högsta kvalitet. Genom att stötta professionella aktörer inom sanering, fuktkontroll och skadeservice samt industrier, uthyrningsföretag och byggsektorn bidrar Corroventa till effektiva, driftsäkra och hållbara torkprocesser.
+We develop, manufacture and sell products of the highest quality. By supporting professional actors in restoration, moisture control and damage services as well as industries, rental companies and the construction sector, Corroventa contributes to efficient, reliable and sustainable drying processes.
 
-Vid akuta situationer och översvämningar har Corroventas kunder tillgång till en av de största hyrparkerna i Europa. Corroventa grundades 1985 och än idag sker all tillverkning vid den egna fabriken i Bankeryd, Småland. Corroventa har 76 anställda, omsätter ca 320 mkr och har säljkontor samt maskindepåer i flera europeiska länder.
+In emergencies and floods, Corroventa''s customers have access to one of the largest rental fleets in Europe. Corroventa was founded in 1985 and to this day all manufacturing takes place at our own factory in Bankeryd, Småland. Corroventa has 76 employees, a turnover of approximately SEK 320 million, and sales offices and equipment depots in several European countries.
 
-Corroventa är en del av Volati.', 'sv', 'Corroventa är marknadsledande specialister på innovativa lösningar inom avfuktning vid vattenskador och byggavfuktning. Vi erbjuder även effektiva lösningar för hantering av fukt, lukt och radon för en trygg och sund boendemiljö.
+Corroventa is part of Volati.', 'sv', 'Corroventa är marknadsledande specialister på innovativa lösningar inom avfuktning vid vattenskador och byggavfuktning. Vi erbjuder även effektiva lösningar för hantering av fukt, lukt och radon för en trygg och sund boendemiljö.
 
 Vi utvecklar, tillverkar och säljer produkter av högsta kvalitet. Genom att stötta professionella aktörer inom sanering, fuktkontroll och skadeservice samt industrier, uthyrningsföretag och byggsektorn bidrar Corroventa till effektiva, driftsäkra och hållbara torkprocesser.
 
 Vid akuta situationer och översvämningar har Corroventas kunder tillgång till en av de största hyrparkerna i Europa. Corroventa grundades 1985 och än idag sker all tillverkning vid den egna fabriken i Bankeryd, Småland. Corroventa har 76 anställda, omsätter ca 320 mkr och har säljkontor samt maskindepåer i flera europeiska länder.
 
 Corroventa är en del av Volati.'), 'https://www.corroventa.se', 'assets/images/exhibitors/nordbygg-2026-corroventa-avfuktning-ab.jpg'),
-  ('nordbygg-2026-exhibitor-136428', 'nordbygg-2026', 'COT Sverige AB', 'B05:31', jsonb_build_object('en', 'COT Sveriges affärsmodell bygger på att leverera hyresmaskiner samt infästning & förbrukningsvaror till byggföretag i Stockholm & Mälardalen. Det är en liten del av våra kunders vardag rent omsättningsmässigt men om dessa områden inte levereras på ett snabbt, smidigt och säkert sätt kan det leda till stor ekonomisk förlust. Vi levererar därför med egna bilar och egen personal. Vi lägger även stor vikt på utvecklingen av vår kundportal där kunderna enkelt kan administrera sina beställningar, returer, projekt samt givetvis se sina priser. COT Sveriges motto lyder bland annat: "Det ska bara funka".', 'sv', 'COT Sveriges affärsmodell bygger på att leverera hyresmaskiner samt infästning & förbrukningsvaror till byggföretag i Stockholm & Mälardalen. Det är en liten del av våra kunders vardag rent omsättningsmässigt men om dessa områden inte levereras på ett snabbt, smidigt och säkert sätt kan det leda till stor ekonomisk förlust. Vi levererar därför med egna bilar och egen personal. Vi lägger även stor vikt på utvecklingen av vår kundportal där kunderna enkelt kan administrera sina beställningar, returer, projekt samt givetvis se sina priser. COT Sveriges motto lyder bland annat: "Det ska bara funka".'), 'https://cotsverige.se', 'assets/images/exhibitors/nordbygg-2026-cot-sverige-ab.jpg'),
-  ('nordbygg-2026-exhibitor-135346', 'nordbygg-2026', 'Cramo AB', 'UTE:49 (+1)', jsonb_build_object('en', 'Cramo grundades 1953 och är en av Sveriges största och Europas näst största företag inom uthyrning av maskiner, utrustning och hyresrelaterade tjänster. Cramo AB ingår i affärsområdet Cramo Norra Europa tillsammans med Norge, Finland, Estland, Litauen och är ett av de ledande uthyrningsföretagen i Sverige med över 90 depåer och ca 850 anställda över hela landet. Verksamheten omfattar såväl korttidsuthyrning av enstaka maskiner som totalåtaganden i större projekt, fullserviceåtaganden på flerårsavtal och outsourcinglösningar.
+  ('nordbygg-2026-exhibitor-136428', 'nordbygg-2026', 'COT Sverige AB', 'B05:31', jsonb_build_object('en', 'COT Sverige''s business model is built on delivering rental machines as well as fasteners and consumables to construction companies in Stockholm and the Mälardalen region. In terms of turnover this is a small part of our customers'' everyday work, but if these areas are not delivered quickly, smoothly and securely it can lead to significant financial loss. We therefore deliver with our own vehicles and our own staff. We also place great emphasis on developing our customer portal, where customers can easily manage their orders, returns and projects, and of course view their prices. COT Sverige''s motto includes: "It just has to work."', 'sv', 'COT Sveriges affärsmodell bygger på att leverera hyresmaskiner samt infästning & förbrukningsvaror till byggföretag i Stockholm & Mälardalen. Det är en liten del av våra kunders vardag rent omsättningsmässigt men om dessa områden inte levereras på ett snabbt, smidigt och säkert sätt kan det leda till stor ekonomisk förlust. Vi levererar därför med egna bilar och egen personal. Vi lägger även stor vikt på utvecklingen av vår kundportal där kunderna enkelt kan administrera sina beställningar, returer, projekt samt givetvis se sina priser. COT Sveriges motto lyder bland annat: "Det ska bara funka".'), 'https://cotsverige.se', 'assets/images/exhibitors/nordbygg-2026-cot-sverige-ab.jpg'),
+  ('nordbygg-2026-exhibitor-135346', 'nordbygg-2026', 'Cramo AB', 'UTE:49 (+1)', jsonb_build_object('en', 'Cramo was founded in 1953 and is one of Sweden''s largest and Europe''s second largest companies in the rental of machines, equipment and rental-related services. Cramo AB is part of the Cramo Northern Europe business area together with Norway, Finland, Estonia and Lithuania, and is one of the leading rental companies in Sweden with more than 90 depots and around 850 employees across the country. The business covers everything from short-term rental of individual machines to total commitments in larger projects, full-service commitments under multi-year contracts, and outsourcing solutions.
 
-Cramo AB är sedan 2019 en del i den nederländska maskinuthyrningskoncernen Boels Rental.', 'sv', 'Cramo grundades 1953 och är en av Sveriges största och Europas näst största företag inom uthyrning av maskiner, utrustning och hyresrelaterade tjänster. Cramo AB ingår i affärsområdet Cramo Norra Europa tillsammans med Norge, Finland, Estland, Litauen och är ett av de ledande uthyrningsföretagen i Sverige med över 90 depåer och ca 850 anställda över hela landet. Verksamheten omfattar såväl korttidsuthyrning av enstaka maskiner som totalåtaganden i större projekt, fullserviceåtaganden på flerårsavtal och outsourcinglösningar.
+Since 2019, Cramo AB has been part of the Dutch machine-rental group Boels Rental.', 'sv', 'Cramo grundades 1953 och är en av Sveriges största och Europas näst största företag inom uthyrning av maskiner, utrustning och hyresrelaterade tjänster. Cramo AB ingår i affärsområdet Cramo Norra Europa tillsammans med Norge, Finland, Estland, Litauen och är ett av de ledande uthyrningsföretagen i Sverige med över 90 depåer och ca 850 anställda över hela landet. Verksamheten omfattar såväl korttidsuthyrning av enstaka maskiner som totalåtaganden i större projekt, fullserviceåtaganden på flerårsavtal och outsourcinglösningar.
 
 Cramo AB är sedan 2019 en del i den nederländska maskinuthyrningskoncernen Boels Rental.'), 'https://www.cramo.se', 'assets/images/exhibitors/nordbygg-2026-cramo-ab.jpg'),
-  ('nordbygg-2026-exhibitor-133964', 'nordbygg-2026', 'CTC AB', 'A05:24', jsonb_build_object('en', 'Med över 100 års erfarenhet och innovation arbetar vi målmedvetet för ett hållbart och fossilfritt samhälle. Vi designar och tillverkar pålitliga och energieffektiva värmepumpar för hem, industri och kontor. Vårt breda sortiment består av bergvärmepumpar, luft/vattenvärmepumpar, inomhusmoduler och ackumulatortankar.
+  ('nordbygg-2026-exhibitor-133964', 'nordbygg-2026', 'CTC AB', 'A05:24', jsonb_build_object('en', 'With more than 100 years of experience and innovation, we work purposefully toward a sustainable and fossil-free society. We design and manufacture reliable and energy-efficient heat pumps for homes, industry and offices. Our broad range consists of geothermal heat pumps, air-to-water heat pumps, indoor modules and accumulator tanks.
 
-Med huvudkontoret i småländska Ljungby har vi i över ett sekel utvecklat hållbara, framtidssäkra och användarvänliga lösningar som ger komfort och flexibilitet – samtidigt som de bidrar till den gröna omställningen.
+With our headquarters in Ljungby, Småland, we have for more than a century developed sustainable, future-proof and user-friendly solutions that provide comfort and flexibility — while contributing to the green transition.
 
-CTC - omtanke som värmer.', 'sv', 'Med över 100 års erfarenhet och innovation arbetar vi målmedvetet för ett hållbart och fossilfritt samhälle. Vi designar och tillverkar pålitliga och energieffektiva värmepumpar för hem, industri och kontor. Vårt breda sortiment består av bergvärmepumpar, luft/vattenvärmepumpar, inomhusmoduler och ackumulatortankar.
+CTC — care that warms.', 'sv', 'Med över 100 års erfarenhet och innovation arbetar vi målmedvetet för ett hållbart och fossilfritt samhälle. Vi designar och tillverkar pålitliga och energieffektiva värmepumpar för hem, industri och kontor. Vårt breda sortiment består av bergvärmepumpar, luft/vattenvärmepumpar, inomhusmoduler och ackumulatortankar.
 
 Med huvudkontoret i småländska Ljungby har vi i över ett sekel utvecklat hållbara, framtidssäkra och användarvänliga lösningar som ger komfort och flexibilitet – samtidigt som de bidrar till den gröna omställningen.
 
 CTC - omtanke som värmer.'), 'https://www.ctc.se', 'assets/images/exhibitors/nordbygg-2026-ctc-ab.jpg'),
-  ('nordbygg-2026-exhibitor-138148', 'nordbygg-2026', 'Culina Products AB', 'A10:11', jsonb_build_object('en', 'Vi är en koncern med specialistbolag som tillsammans erbjuder genomtänkta, hållbara och effektiva lösningar för professionella miljöer där kvalitet, funktion och livslängd är avgörande.
-Det som förenar våra bolag är rostfritt stål, hög teknisk kompetens och produkter anpassade för tuffa miljöer.
+  ('nordbygg-2026-exhibitor-138148', 'nordbygg-2026', 'Culina Products AB', 'A10:11', jsonb_build_object('en', 'We are a group of specialist companies that together offer thoughtful, sustainable and efficient solutions for professional environments where quality, function and service life are decisive.
+What unites our companies is stainless steel, high technical expertise, and products designed for tough environments.
 
-UVtech | Effektiv luftrening med UV-teknik
-UVtech utvecklar och tillverkar luftreningsaggregat som effektivt eliminerar odörer i bland annat storkök, soprum, hotell, källare och andra utsatta utrymmen. Genom beprövad UV-teknik bryts luktmolekyler ner på ett säkert och energieffektivt sätt, vilket förbättrar både inomhusmiljö och arbetsmiljö utan kemikalier och utan att maskera problemet.
+UVtech | Effective air purification using UV technology
+UVtech develops and manufactures air-purification units that effectively eliminate odours in commercial kitchens, waste rooms, hotels, basements and other exposed spaces, among other places. Through proven UV technology, odour molecules are broken down in a safe and energy-efficient way, which improves both the indoor environment and the working environment without chemicals and without masking the problem.
 
-Molins Rostfria | Golvbrunnar för krävande verksamheter
-Molins Rostfria presenterar bl.a. ett brett sortiment av golvbrunnar i rostfritt stål, utvecklade för industriell och professionell användning. Med rätt materialval och genomtänkt konstruktion säkerställs lång livslängd, enkel rengöring och trygg funktion över tid. Produkterna är konstruerade för miljöer där slitstyrka, hygien och driftsäkerhet är avgörande exempelvis:
-- Biltvättar och tvätthallar
-- Storkök och restauranger
-- Livsmedelsproduktion
-- Campingplatser
-- Lantbruk och andra våta miljöer
+Molins Rostfria | Floor drains for demanding operations
+Molins Rostfria presents, among other things, a broad range of stainless-steel floor drains, developed for industrial and professional use. With the right material choice and well-considered design, long service life, easy cleaning and reliable function over time are ensured. The products are designed for environments where wear resistance, hygiene and operational reliability are decisive, for example:
+- Car washes and wash halls
+- Commercial kitchens and restaurants
+- Food production
+- Campsites
+- Agriculture and other wet environments
 
-Nordic Tech | Tidlös design för kök
-Nordic Tech visar upp ett urval av köksblandare, diskhoar, tvättbänkar och bänkskivor allt i rostfritt stål. Produkterna kombinerar skandinavisk design med robust funktion och är framtagna för miljöer där hygien, hållbarhet och estetik går hand i hand.
+Nordic Tech | Timeless design for kitchens
+Nordic Tech presents a selection of kitchen mixers, sinks, washing benches and worktops — all in stainless steel. The products combine Scandinavian design with robust function and are designed for environments where hygiene, durability and aesthetics go hand in hand.
 
-Tillsammans representerar våra bolag en bred kompetens inom rostfria lösningar från luft och vatten till arbetsytor och avvattning. Genom att samla flera specialistområden inom samma koncern kan vi erbjuda helhetslösningar som möter kraven i moderna bygg- och installationsprojekt.
+Together, our companies represent broad expertise in stainless solutions — from air and water to work surfaces and drainage. By bringing several specialist areas together within the same group, we can offer complete solutions that meet the demands of modern construction and installation projects.
 
-Vi ser fram emot att visa hur våra produkter kan bidra till mer hållbara, funktionella och framtidssäkra miljöer.
-Culina är sedan 2021 en del utav Idun Industrier.
+We look forward to showing how our products can contribute to more sustainable, functional and future-proof environments.
+Since 2021, Culina is part of Idun Industrier.
 
-Välkommen till Culina Products på Nordbygg!', 'sv', 'Vi är en koncern med specialistbolag som tillsammans erbjuder genomtänkta, hållbara och effektiva lösningar för professionella miljöer där kvalitet, funktion och livslängd är avgörande.
+Welcome to Culina Products at Nordbygg!', 'sv', 'Vi är en koncern med specialistbolag som tillsammans erbjuder genomtänkta, hållbara och effektiva lösningar för professionella miljöer där kvalitet, funktion och livslängd är avgörande.
 Det som förenar våra bolag är rostfritt stål, hög teknisk kompetens och produkter anpassade för tuffa miljöer.
 
 UVtech | Effektiv luftrening med UV-teknik
@@ -2071,18 +2071,18 @@ Culina är sedan 2021 en del utav Idun Industrier.
 
 Välkommen till Culina Products på Nordbygg!'), 'https://www.culinaproducts.se', 'assets/images/exhibitors/nordbygg-2026-culina-products-ab.jpg'),
   ('nordbygg-2026-exhibitor-139775', 'nordbygg-2026', 'Curant Klimat AB', 'A13:14', null, 'https://www.curant.se', null),
-  ('nordbygg-2026-exhibitor-138067', 'nordbygg-2026', 'CW Lundberg Industri AB', 'C18:31', jsonb_build_object('en', 'Helhetsleverantör av säkerhet på tak
+  ('nordbygg-2026-exhibitor-138067', 'nordbygg-2026', 'CW Lundberg Industri AB', 'C18:31', jsonb_build_object('en', 'Complete supplier of roof safety
 
-CW Lundberg erbjuder ett brett sortiment av taksäkerhetsprodukter och infästningssystem för solpaneler utvecklande för nordiska förhållanden. Våra innovativa produkter är säkra, har låg vikt och är montagevänliga. Genom moderna tillverkningsmetoder och processer skapar vi hållbarhet i alla led.
+CW Lundberg offers a broad range of roof safety products and mounting systems for solar panels, developed for Nordic conditions. Our innovative products are safe, low in weight and easy to install. Through modern manufacturing methods and processes, we create sustainability at every stage.
 
-Svensktillverkat – Vår kvalitetsstämpel
-All tillverkning sker i Sverige. Med hållbara materialval och 40 års garanti är det en säker investering för både installatörer och fastighetsägare. Svensk produktion är en central del av CW Lundbergs identitet och kvalitetsarbete.', 'sv', 'Helhetsleverantör av säkerhet på tak
+Swedish-made — Our quality stamp
+All manufacturing takes place in Sweden. With sustainable material choices and a 40-year warranty it is a safe investment for both installers and property owners. Swedish production is a central part of CW Lundberg''s identity and quality work.', 'sv', 'Helhetsleverantör av säkerhet på tak
 
 CW Lundberg erbjuder ett brett sortiment av taksäkerhetsprodukter och infästningssystem för solpaneler utvecklande för nordiska förhållanden. Våra innovativa produkter är säkra, har låg vikt och är montagevänliga. Genom moderna tillverkningsmetoder och processer skapar vi hållbarhet i alla led.
 
 Svensktillverkat – Vår kvalitetsstämpel
 All tillverkning sker i Sverige. Med hållbara materialval och 40 års garanti är det en säker investering för både installatörer och fastighetsägare. Svensk produktion är en central del av CW Lundbergs identitet och kvalitetsarbete.'), 'https://www.cwlundberg.com', 'assets/images/exhibitors/nordbygg-2026-cw-lundberg-industri-ab.jpg'),
-  ('nordbygg-2026-exhibitor-133969', 'nordbygg-2026', 'Cylinda Bygg och Fastighet', 'C06:31', jsonb_build_object('en', 'Sedan 1958 har Cylinda funnits vid svenskarnas sida. Med rötterna i Västergötland tillverkar vi energismarta, användarvänliga och pålitliga vitvaror som står pall för livets alla utmaningar. Alltid med målet att göra vardagen lite enklare. Och roligare.', 'sv', 'Sedan 1958 har Cylinda funnits vid svenskarnas sida. Med rötterna i Västergötland tillverkar vi energismarta, användarvänliga och pålitliga vitvaror som står pall för livets alla utmaningar. Alltid med målet att göra vardagen lite enklare. Och roligare.'), 'https://www.cylinda.se', 'assets/images/exhibitors/nordbygg-2026-cylinda-bygg-och-fastighet.jpg'),
+  ('nordbygg-2026-exhibitor-133969', 'nordbygg-2026', 'Cylinda Bygg och Fastighet', 'C06:31', jsonb_build_object('en', 'Since 1958, Cylinda has been at the side of the Swedes. With our roots in Västergötland, we manufacture energy-smart, user-friendly and reliable household appliances that stand up to all of life''s challenges. Always with the goal of making everyday life a little easier. And more enjoyable.', 'sv', 'Sedan 1958 har Cylinda funnits vid svenskarnas sida. Med rötterna i Västergötland tillverkar vi energismarta, användarvänliga och pålitliga vitvaror som står pall för livets alla utmaningar. Alltid med målet att göra vardagen lite enklare. Och roligare.'), 'https://www.cylinda.se', 'assets/images/exhibitors/nordbygg-2026-cylinda-bygg-och-fastighet.jpg'),
   ('nordbygg-2026-exhibitor-139105', 'nordbygg-2026', 'Dafo', 'C03:30', jsonb_build_object('en', 'Vi erbjuder marknadens bredaste sortiment av tjänster och produkter för en säker vardag, för alla typer av verksamheter. Välkommen till Dafo!', 'sv', 'Vi erbjuder marknadens bredaste sortiment av tjänster och produkter för en säker vardag, för alla typer av verksamheter. Välkommen till Dafo!'), 'https://www.dafo.se', 'assets/images/exhibitors/nordbygg-2026-dafo.jpg'),
   ('nordbygg-2026-exhibitor-137076', 'nordbygg-2026', 'Dala-Profil AB', 'C17:51', jsonb_build_object('en', 'KVALITET OCH HÅLLBARHET INOM BYGGPLÅT
 
