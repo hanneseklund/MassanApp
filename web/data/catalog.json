@@ -1,6 +1,6 @@
 {
   "_note": "Seed data for the MassanApp prototype. Venue facts come from the Stockholmsmassan research note. Event dates, types, and categories reflect the official Stockholmsmassan calendar on 2026-04-17. Per-event news, articles, program items, exhibitors, and speakers are clearly simulated content scoped to this prototype; production use would pull from the event's own sources.",
-  "_image_credits": "Event hero images stored in web/assets/images/events/ were downloaded from the Stockholmsmassan calendar event pages (https://stockholmsmassan.se/en/calendar/) on 2026-04-18 (Nordbygg 2026, ESTRO 2026, EHA2026 Congress) and 2026-04-19 (the remaining calendar events — see issue #14). Future editions that do not yet have a calendar page (e.g. skydd-2030, gymnasiemassan-2028) reuse the latest scraped edition's image with a note in hero_image_credit. Exhibitor logos and speaker avatars in web/assets/images/exhibitors/ and web/assets/images/speakers/ are auto-generated initial-based SVGs for simulated prototype content.",
+  "_image_credits": "Event hero images stored in web/assets/images/events/ were downloaded from the Stockholmsmassan calendar event pages (https://stockholmsmassan.se/en/calendar/) on 2026-04-18 (Nordbygg 2026, ESTRO 2026, EHA2026 Congress) and 2026-04-19 (the remaining calendar events — see issue #14). Future editions that do not yet have a calendar page (e.g. skydd-2030, gymnasiemassan-2028) reuse the latest scraped edition's image with a note in hero_image_credit. Per-item news and article hero images for Nordbygg 2026 in web/assets/images/news/ and web/assets/images/articles/ were downloaded from the Nordbygg WordPress media library (https://nordbygg.se/wp-content/uploads/) and the Stockholmsmassan WordPress media library on 2026-04-29 (issue #30) — each photo selected to match the item's specific subject. Exhibitor logos and speaker avatars in web/assets/images/exhibitors/ and web/assets/images/speakers/ are auto-generated initial-based SVGs for simulated prototype content.",
   "venue": {
     "id": "stockholmsmassan",
     "name": "Stockholmsmassan",
@@ -2173,7 +2173,7 @@
         "en": "Simulated. Nordbygg reports that more than 700 exhibitors have confirmed attendance, spanning sustainable materials, prefabrication, building services, and digital tools for the construction industry.",
         "sv": "Simulerad. Nordbygg meddelar att över 700 utställare har bekräftat deltagande, med inriktning på hållbara material, prefabricering, byggtjänster och digitala verktyg för byggbranschen."
       },
-      "hero_image": "assets/images/events/nordbygg-2026.jpg"
+      "hero_image": "assets/images/news/nordbygg-2026-exhibitors-crossed.jpg"
     },
     {
       "id": "nordbygg-2026-news-sustainability-stage",
@@ -2187,7 +2187,7 @@
         "en": "Simulated. The Sustainability Stage program for Nordbygg 2026 covers circular construction, low-carbon concrete, and energy retrofits. All sessions are open to fair visitors without extra registration.",
         "sv": "Simulerad. Programmet på Hållbarhetsscenen under Nordbygg 2026 omfattar cirkulärt byggande, klimatförbättrad betong och energirenoveringar. Alla pass är öppna för mässans besökare utan extra anmälan."
       },
-      "hero_image": "assets/images/events/nordbygg-2026.jpg"
+      "hero_image": "assets/images/news/nordbygg-2026-sustainability-stage.jpg"
     },
     {
       "id": "nordbygg-2026-news-safety-workshop",
@@ -2201,7 +2201,7 @@
         "en": "Simulated. Day three of the fair adds hands-on workshops on site-safety equipment, PPE, and fall-protection. Capacity is limited and managed at the workshop entrance.",
         "sv": "Simulerad. Mässans tredje dag kompletteras med praktiska workshops om säkerhetsutrustning, personlig skyddsutrustning och fallskydd. Antalet platser är begränsat och hanteras vid workshopens entré."
       },
-      "hero_image": "assets/images/events/nordbygg-2026.jpg"
+      "hero_image": "assets/images/news/nordbygg-2026-safety-workshop.jpg"
     },
     {
       "id": "nordbygg-2026-news-ticket-pickup",
@@ -2215,7 +2215,7 @@
         "en": "Simulated. Visitors are encouraged to pre-register and use mobile tickets to skip the queues at opening. Coffee will be available in the main foyer from 8:00.",
         "sv": "Simulerad. Besökare uppmanas att föranmäla sig och använda mobila biljetter för att slippa köerna vid öppning. Kaffe serveras i huvudfoajén från klockan 8:00."
       },
-      "hero_image": "assets/images/events/nordbygg-2026.jpg"
+      "hero_image": "assets/images/news/nordbygg-2026-ticket-pickup.jpg"
     },
     {
       "id": "estro-2026-news-late-breaking",
@@ -2272,7 +2272,7 @@
         "en": "Simulated. Nordbygg collects the Nordic construction and real-estate industry under one roof at Stockholmsmassan: manufacturers, consultants, architects, developers, and public-sector procurement teams. The fair combines an exhibitor floor, a seminar program, and dedicated stages for sustainability and digital tools. Visitors use the fair to benchmark products, meet suppliers in person, and get an overview of emerging regulation.",
         "sv": "Simulerad. Nordbygg samlar den nordiska bygg- och fastighetsbranschen under ett tak på Stockholmsmässan: tillverkare, konsulter, arkitekter, byggherrar och offentliga upphandlare. Mässan kombinerar utställargolv, seminarieprogram och egna scener för hållbarhet och digitala verktyg. Besökare använder mässan för att jämföra produkter, möta leverantörer på plats och få en överblick över nya regelverk."
       },
-      "hero_image": "assets/images/events/nordbygg-2026.jpg"
+      "hero_image": "assets/images/articles/nordbygg-2026-why-attend.jpg"
     },
     {
       "id": "nordbygg-2026-article-what-to-see",
@@ -2285,7 +2285,7 @@
         "en": "Simulated. If you only have one day at Nordbygg 2026, focus on the Sustainability Stage in the morning, spend midday on the exhibitor floor around the prefabrication and building-services areas, and close the day with a site-safety workshop or a digital-tools demo. The event-first app view lets you save a short list of exhibitors to visit on the floor.",
         "sv": "Simulerad. Om du bara har en dag på Nordbygg 2026, lägg förmiddagen på Hållbarhetsscenen, tillbringa middagstid på utställargolvet kring områdena prefabricering och byggtjänster, och avsluta dagen med en workshop om arbetsplatssäkerhet eller en demonstration av digitala verktyg. Evenemangsvyn i appen låter dig spara en kort lista över utställare att besöka på mässgolvet."
       },
-      "hero_image": "assets/images/events/nordbygg-2026.jpg"
+      "hero_image": "assets/images/articles/nordbygg-2026-what-to-see.jpg"
     },
     {
       "id": "estro-2026-article-program-highlights",
