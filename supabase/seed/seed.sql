@@ -3829,36 +3829,36 @@ Välkommen till Häfla Bruks AB', 'sv', 'Idag är Häfla Bruks en ledande levera
 Välkommen till Häfla Bruks AB'), 'https://www.hafla.se', 'assets/images/exhibitors/nordbygg-2026-hafla-bruks-ab.jpg'),
   ('nordbygg-2026-exhibitor-133985', 'nordbygg-2026', 'HögforsGST', 'A10:10', jsonb_build_object('en', 'Vi har utvecklat värmesystem och hybridlösningar i över 20 år. I en värld med snabbt föränderliga behov av smartare energianvändning, är vi den partner du kan lita på. Vårt mål är att erbjuda våra kunder kloka och anpassningsbara system för att använda energi så smart som möjligt – både för vår miljö och din budget.', 'sv', 'Vi har utvecklat värmesystem och hybridlösningar i över 20 år. I en värld med snabbt föränderliga behov av smartare energianvändning, är vi den partner du kan lita på. Vårt mål är att erbjuda våra kunder kloka och anpassningsbara system för att använda energi så smart som möjligt – både för vår miljö och din budget.'), 'https://www.hogforsgst.com/sv', 'assets/images/exhibitors/nordbygg-2026-hogforsgst.jpg'),
   ('nordbygg-2026-exhibitor-134448', 'nordbygg-2026', 'Hörby Bruk', 'B08:31', jsonb_build_object('en', 'Hörby Bruk är ett välkänt varumärke och vi är sedan många år tillbaka marknadsledande på skottkärror i Sverige. Vi är också en ledande producent i Norden på lekredskap för den privata trädgården. Och flera av våra produkter har genom åren blivit välkända klassiker. En anledning till detta är att vi konsekvent kombinerar lång svensk hantverkstradition med modern teknik i vår produktion. Resultatet är en unik kvalitet och ergonomi som inte bara syns utan som också upplevs, år efter år, från generation till generation. Vi är mycket stolta över att föra svensk hantverkstradition vidare in i framtiden.', 'sv', 'Hörby Bruk är ett välkänt varumärke och vi är sedan många år tillbaka marknadsledande på skottkärror i Sverige. Vi är också en ledande producent i Norden på lekredskap för den privata trädgården. Och flera av våra produkter har genom åren blivit välkända klassiker. En anledning till detta är att vi konsekvent kombinerar lång svensk hantverkstradition med modern teknik i vår produktion. Resultatet är en unik kvalitet och ergonomi som inte bara syns utan som också upplevs, år efter år, från generation till generation. Vi är mycket stolta över att föra svensk hantverkstradition vidare in i framtiden.'), 'https://www.horbybruk.se', 'assets/images/exhibitors/nordbygg-2026-horby-bruk.jpg'),
-  ('nordbygg-2026-exhibitor-134466', 'nordbygg-2026', 'iCell', 'C06:40', jsonb_build_object('en', 'Svenskproducerad isolering från naturens egna resurser
+  ('nordbygg-2026-exhibitor-134466', 'nordbygg-2026', 'iCell', 'C06:40', jsonb_build_object('en', 'Swedish-made insulation from nature''s own resources
 
-iCell förädlar återvunna pappers- och kartongfibrer till moderna, klimatsmarta isoleringsprodukter för diffusionsöppet byggande.
+iCell upgrades recycled paper and cardboard fibres into modern, climate-smart insulation products for diffusion-open construction.
 
-Genom innovativ teknik och energieffektiv produktion i Älvdalen skapar vi isolering med negativ klimatpåverkan, hög prestanda.
-Våra isolerprodukter binder mer koldioxid än de kräver att tillverka – ett konkret bidrag till ett mer hållbart byggande. Med fokus på kvalitet, cirkularitet och lokal produktion erbjuder iCell ett tryggt, svenskt alternativ för framtidens isoleringslösningar.', 'sv', 'Svenskproducerad isolering från naturens egna resurser
+Through innovative technology and energy-efficient production in Älvdalen we create insulation with a negative climate impact and high performance.
+Our insulation products lock in more carbon dioxide than is required to manufacture them — a concrete contribution to more sustainable construction. With a focus on quality, circularity and local production, iCell offers a reliable Swedish alternative for the insulation solutions of the future.', 'sv', 'Svenskproducerad isolering från naturens egna resurser
 
 iCell förädlar återvunna pappers- och kartongfibrer till moderna, klimatsmarta isoleringsprodukter för diffusionsöppet byggande.
 
 Genom innovativ teknik och energieffektiv produktion i Älvdalen skapar vi isolering med negativ klimatpåverkan, hög prestanda.
 Våra isolerprodukter binder mer koldioxid än de kräver att tillverka – ett konkret bidrag till ett mer hållbart byggande. Med fokus på kvalitet, cirkularitet och lokal produktion erbjuder iCell ett tryggt, svenskt alternativ för framtidens isoleringslösningar.'), 'https://www.icell.se', 'assets/images/exhibitors/nordbygg-2026-icell.jpg'),
   ('nordbygg-2026-exhibitor-134674', 'nordbygg-2026', 'iFenix affärssystem', 'C01:12', null, 'https://www.genesis.se', 'assets/images/exhibitors/nordbygg-2026-ifenix-affarssystem.jpg'),
-  ('nordbygg-2026-exhibitor-133983', 'nordbygg-2026', 'IMI', 'A03:18', jsonb_build_object('en', 'IMI Climate Control, tidigare IMI Hydronic Engineering, är en ledande leverantör inom energioptimering
-av framtidens klimatsmarta byggnader.', 'sv', 'IMI Climate Control, tidigare IMI Hydronic Engineering, är en ledande leverantör inom energioptimering
+  ('nordbygg-2026-exhibitor-133983', 'nordbygg-2026', 'IMI', 'A03:18', jsonb_build_object('en', 'IMI Climate Control, formerly IMI Hydronic Engineering, is a leading supplier in energy optimisation
+for the climate-smart buildings of the future.', 'sv', 'IMI Climate Control, tidigare IMI Hydronic Engineering, är en ledande leverantör inom energioptimering
 av framtidens klimatsmarta byggnader.'), 'https://climatecontrol.imiplc.com/sv-se', 'assets/images/exhibitors/nordbygg-2026-imi.jpg'),
-  ('nordbygg-2026-exhibitor-138767', 'nordbygg-2026', 'INCHEM POLONIA', 'C03:71', jsonb_build_object('en', 'Inchem Polonia är en europeisk tillverkare av pigmentpastor och avancerad byggkemi.
-Sedan 1988 har vi levererat miljömedvetna och högpresterande lösningar för professionell och industriell användning, betrodda på över 30 exportmarknader.
+  ('nordbygg-2026-exhibitor-138767', 'nordbygg-2026', 'INCHEM POLONIA', 'C03:71', jsonb_build_object('en', 'Inchem Polonia is a European manufacturer of pigment pastes and advanced construction chemistry.
+Since 1988 we have delivered environmentally aware, high-performance solutions for professional and industrial use, trusted on more than 30 export markets.
 
-På Nordbygg presenterar vi våra huvudsakliga produktlinjer:
+At Nordbygg we present our main product lines:
 
-lösningar för betong och mikrocement
+solutions for concrete and microcement
 
-träskyddssystem
+wood protection systems
 
-produkter för badrums- och ytrenovering
+products for bathroom and surface renovation
 
-Vårt eget laboratorium möjliggör skräddarsydd färgformulering, vilket säkerställer stabila och repeterbara färgresultat, produktionsflexibilitet samt tillförlitligt tekniskt stöd för varje samarbetspartner.
+Our in-house laboratory makes bespoke colour formulation possible, ensuring stable and repeatable colour results, production flexibility and reliable technical support for every partner.
 
-Europeisk kvalitet. Nordisk pålitlighet.
-Färg med samvete.', 'sv', 'Inchem Polonia är en europeisk tillverkare av pigmentpastor och avancerad byggkemi.
+European quality. Nordic reliability.
+Colour with a conscience.', 'sv', 'Inchem Polonia är en europeisk tillverkare av pigmentpastor och avancerad byggkemi.
 Sedan 1988 har vi levererat miljömedvetna och högpresterande lösningar för professionell och industriell användning, betrodda på över 30 exportmarknader.
 
 På Nordbygg presenterar vi våra huvudsakliga produktlinjer:
@@ -3874,30 +3874,30 @@ Vårt eget laboratorium möjliggör skräddarsydd färgformulering, vilket säke
 Europeisk kvalitet. Nordisk pålitlighet.
 Färg med samvete.'), 'https://www.inchem.pl', 'assets/images/exhibitors/nordbygg-2026-inchem-polonia.jpg'),
   ('nordbygg-2026-exhibitor-135468', 'nordbygg-2026', 'Indol AB', 'A07:16', null, 'https://www.indol.se', null),
-  ('nordbygg-2026-exhibitor-133996', 'nordbygg-2026', 'INR', 'A06:14', jsonb_build_object('en', 'På INR förenas vi i den gemensamma passionen för personliga lösningar i tidlös skandinavisk design för hemmets viktigaste rum. Tillsammans strävar vi efter att skapa lösningar som ska göra mer än att inreda rum – de ska också beröra dina sinnen genom att spegla just din personlighet och dina behov: A bathroom crafted with heart. Made to fit you.', 'sv', 'På INR förenas vi i den gemensamma passionen för personliga lösningar i tidlös skandinavisk design för hemmets viktigaste rum. Tillsammans strävar vi efter att skapa lösningar som ska göra mer än att inreda rum – de ska också beröra dina sinnen genom att spegla just din personlighet och dina behov: A bathroom crafted with heart. Made to fit you.'), 'https://inr.se', 'assets/images/exhibitors/nordbygg-2026-inr.jpg'),
-  ('nordbygg-2026-exhibitor-136821', 'nordbygg-2026', 'Installatörsföretagen', 'A08:21', jsonb_build_object('en', 'Hos Installatörsföretagen samlas företag som gör världen mer hållbar genom sitt arbete. Det är våra drygt 4 500 medlemsföretag med sina 65 000 medarbetare som dagligen jobbar för att potentialen inom elektrifiering och energieffektivisering ska tas tillvara, för Sveriges bästa. Vi finns i deras vardag och jobbar för deras framtid. Vi företräder också branschen i debatten och tryggar morgondagens arbetskraft.
+  ('nordbygg-2026-exhibitor-133996', 'nordbygg-2026', 'INR', 'A06:14', jsonb_build_object('en', 'At INR we are united by a shared passion for personal solutions in timeless Scandinavian design for the most important room in the home. Together we strive to create solutions that do more than furnish a space — they should also touch your senses by reflecting your personality and your needs: A bathroom crafted with heart. Made to fit you.', 'sv', 'På INR förenas vi i den gemensamma passionen för personliga lösningar i tidlös skandinavisk design för hemmets viktigaste rum. Tillsammans strävar vi efter att skapa lösningar som ska göra mer än att inreda rum – de ska också beröra dina sinnen genom att spegla just din personlighet och dina behov: A bathroom crafted with heart. Made to fit you.'), 'https://inr.se', 'assets/images/exhibitors/nordbygg-2026-inr.jpg'),
+  ('nordbygg-2026-exhibitor-136821', 'nordbygg-2026', 'Installatörsföretagen', 'A08:21', jsonb_build_object('en', 'Installatörsföretagen brings together companies that make the world more sustainable through their work. It is our 4,500-plus member companies, with their 65,000 employees, who work every day to ensure that the potential of electrification and energy efficiency is realised — for the good of Sweden. We are part of their everyday and we work for their future. We also represent the industry in the public debate and secure the workforce of tomorrow.
 
-Tillsammans skapar vi förutsättningarna för ett modernt, klimatsmart och hållbart Sverige. Det är vi som gör det möjligt.', 'sv', 'Hos Installatörsföretagen samlas företag som gör världen mer hållbar genom sitt arbete. Det är våra drygt 4 500 medlemsföretag med sina 65 000 medarbetare som dagligen jobbar för att potentialen inom elektrifiering och energieffektivisering ska tas tillvara, för Sveriges bästa. Vi finns i deras vardag och jobbar för deras framtid. Vi företräder också branschen i debatten och tryggar morgondagens arbetskraft.
+Together we create the conditions for a modern, climate-smart and sustainable Sweden. We are the ones who make it possible.', 'sv', 'Hos Installatörsföretagen samlas företag som gör världen mer hållbar genom sitt arbete. Det är våra drygt 4 500 medlemsföretag med sina 65 000 medarbetare som dagligen jobbar för att potentialen inom elektrifiering och energieffektivisering ska tas tillvara, för Sveriges bästa. Vi finns i deras vardag och jobbar för deras framtid. Vi företräder också branschen i debatten och tryggar morgondagens arbetskraft.
 
 Tillsammans skapar vi förutsättningarna för ett modernt, klimatsmart och hållbart Sverige. Det är vi som gör det möjligt.'), 'https://www.in.se', 'assets/images/exhibitors/nordbygg-2026-installatorsforetagen.jpg'),
-  ('nordbygg-2026-exhibitor-135335', 'nordbygg-2026', 'InventiAir', 'A21:14', jsonb_build_object('en', 'InventiAir startades ur en ambition att ge människor den bästa möjliga inomhusluften. All forskning, utveckling och produktion är baserad i Sverige och vår unika ventilationsteknik där du använder luften rätt kommer garanterat göra livet enklare för dig.
+  ('nordbygg-2026-exhibitor-135335', 'nordbygg-2026', 'InventiAir', 'A21:14', jsonb_build_object('en', 'InventiAir was founded out of an ambition to give people the best possible indoor air. All research, development and production is based in Sweden, and our unique ventilation technology — where you put the air to work the right way — is guaranteed to make life easier for you.
 
-Vi utvecklar och tillverkar ventilationsprodukter som kyler, värmer och ventilerar alla typer av lokaler. Tekniken skapar renare luft, kräver mindre mängd energi samt är ett hållbart alternativ.', 'sv', 'InventiAir startades ur en ambition att ge människor den bästa möjliga inomhusluften. All forskning, utveckling och produktion är baserad i Sverige och vår unika ventilationsteknik där du använder luften rätt kommer garanterat göra livet enklare för dig.
+We develop and manufacture ventilation products that cool, heat and ventilate every kind of space. The technology produces cleaner air, uses less energy and is a sustainable alternative.', 'sv', 'InventiAir startades ur en ambition att ge människor den bästa möjliga inomhusluften. All forskning, utveckling och produktion är baserad i Sverige och vår unika ventilationsteknik där du använder luften rätt kommer garanterat göra livet enklare för dig.
 
 Vi utvecklar och tillverkar ventilationsprodukter som kyler, värmer och ventilerar alla typer av lokaler. Tekniken skapar renare luft, kräver mindre mängd energi samt är ett hållbart alternativ.'), 'https://www.inventiair.se', 'assets/images/exhibitors/nordbygg-2026-inventiair.jpg'),
-  ('nordbygg-2026-exhibitor-139154', 'nordbygg-2026', 'Invitrea by GSAB', 'C09:31', jsonb_build_object('en', 'GSAB tillverkar och levererar duschväggar, glasväggar, räcken och andra relaterade produkter till glasbranschen, byggbranschen, aktörer inom fastighetsutveckling samt till våra väl utvalda återförsäljare. Dessa produkter erbjuds inom produktkategorierna Room, Railing, Bath, Exterior och Interior.
+  ('nordbygg-2026-exhibitor-139154', 'nordbygg-2026', 'Invitrea by GSAB', 'C09:31', jsonb_build_object('en', 'GSAB manufactures and supplies shower walls, glass walls, railings and other related products to the glass industry, the construction industry, real-estate developers and our carefully selected retailers. These products are offered in the categories Room, Railing, Bath, Exterior and Interior.
 
-Invitrea – Våra egna produkter:
+Invitrea — Our own products:
 
-Invitrea Room – Glasväggar och dörrar för interiöra miljöer
-Invitrea Railing – Räcken för interiöra och exteriöra miljöer
-Invitrea Bath – Bastu och duschväggar
-Invitrea Exterior – Uterum & skärmtak
-Invitrea Interior – Skjutdörrar för garderober
+Invitrea Room — Glass walls and doors for interior settings
+Invitrea Railing — Railings for interior and exterior settings
+Invitrea Bath — Sauna and shower walls
+Invitrea Exterior — Conservatories & canopies
+Invitrea Interior — Sliding wardrobe doors
 
-Elegant och exklusiv design, snabbmonterat och med möjlighet till kundanpassade mått – det är det vi vill uppnå med våra produkter från Invitrea.
+Elegant and exclusive design, quick to install and with custom sizes available — that is what we want to achieve with our Invitrea products.
 
-Mer info om vår verksamhet på gsab.se och invitrea.com.', 'sv', 'GSAB tillverkar och levererar duschväggar, glasväggar, räcken och andra relaterade produkter till glasbranschen, byggbranschen, aktörer inom fastighetsutveckling samt till våra väl utvalda återförsäljare. Dessa produkter erbjuds inom produktkategorierna Room, Railing, Bath, Exterior och Interior.
+More information about our business at gsab.se and invitrea.com.', 'sv', 'GSAB tillverkar och levererar duschväggar, glasväggar, räcken och andra relaterade produkter till glasbranschen, byggbranschen, aktörer inom fastighetsutveckling samt till våra väl utvalda återförsäljare. Dessa produkter erbjuds inom produktkategorierna Room, Railing, Bath, Exterior och Interior.
 
 Invitrea – Våra egna produkter:
 
@@ -3910,38 +3910,38 @@ Invitrea Interior – Skjutdörrar för garderober
 Elegant och exklusiv design, snabbmonterat och med möjlighet till kundanpassade mått – det är det vi vill uppnå med våra produkter från Invitrea.
 
 Mer info om vår verksamhet på gsab.se och invitrea.com.'), 'https://gsab.se', null),
-  ('nordbygg-2026-exhibitor-139699', 'nordbygg-2026', 'INWOCO', 'C06:50', jsonb_build_object('en', 'Inwocoväggen är en hybrid mellan regelväggen och KL-väggen och fungerar både som bärande vägg för trästommar och som utfackningsvägg för stål- och betongstommar. Själva modulerna anpassas efter projektets krav och tillverkas i vår fabrik, där de förses med tätskikt, luftspalt och installationsutrymme.
+  ('nordbygg-2026-exhibitor-139699', 'nordbygg-2026', 'INWOCO', 'C06:50', jsonb_build_object('en', 'The Inwoco wall is a hybrid between the stud wall and the cross-laminated timber (CLT) wall, and works both as a load-bearing wall for timber frames and as an infill wall for steel and concrete frames. The modules themselves are tailored to the requirements of each project and produced in our factory, where they are fitted with vapour barrier, air gap and installation cavity.
 
-Stomsystem eller väggarna levereras väderskyddade och i sekvens direkt till byggarbetsplatsen, där de snabbt och enkelt monteras. Konstruktionen ger hög lastkapacitet, lågt U-värde och möjliggör återbruk, vilket säkerställer minimal miljöpåverkan, korta byggtider och hög kvalitet genom hela kedjan.', 'sv', 'Inwocoväggen är en hybrid mellan regelväggen och KL-väggen och fungerar både som bärande vägg för trästommar och som utfackningsvägg för stål- och betongstommar. Själva modulerna anpassas efter projektets krav och tillverkas i vår fabrik, där de förses med tätskikt, luftspalt och installationsutrymme.
+The frame system, or the walls, are delivered weather-protected and in sequence directly to the construction site, where they are mounted quickly and easily. The design provides high load capacity, a low U-value and supports re-use, ensuring minimal environmental impact, short build times and high quality throughout the entire chain.', 'sv', 'Inwocoväggen är en hybrid mellan regelväggen och KL-väggen och fungerar både som bärande vägg för trästommar och som utfackningsvägg för stål- och betongstommar. Själva modulerna anpassas efter projektets krav och tillverkas i vår fabrik, där de förses med tätskikt, luftspalt och installationsutrymme.
 
 Stomsystem eller väggarna levereras väderskyddade och i sekvens direkt till byggarbetsplatsen, där de snabbt och enkelt monteras. Konstruktionen ger hög lastkapacitet, lågt U-värde och möjliggör återbruk, vilket säkerställer minimal miljöpåverkan, korta byggtider och hög kvalitet genom hela kedjan.'), 'https://www.inwoco.se', 'assets/images/exhibitors/nordbygg-2026-inwoco.jpg'),
-  ('nordbygg-2026-exhibitor-134459', 'nordbygg-2026', 'ISOCELL GmbH & Co KG', 'C02:60', jsonb_build_object('en', 'ISOCELL – utvecklar och marknadsför lösningar baserat på cellulosabaserad lösullsisolering och produkter för diffusionsöppet byggande.
-Vi är också marknadsledande avseende installationslösningar av lösull med en bred portfölj av installationsmaskiner och hela system för automatisk installation av lösull för PREFAB-industrin.
-Genom vår breda kompetens intar företaget en unik expertposition i Europa.
+  ('nordbygg-2026-exhibitor-134459', 'nordbygg-2026', 'ISOCELL GmbH & Co KG', 'C02:60', jsonb_build_object('en', 'ISOCELL develops and markets solutions based on cellulose-based loose-fill insulation and products for diffusion-open construction.
+We are also a market leader in loose-fill installation solutions, with a broad portfolio of installation machines and complete systems for automatic loose-fill installation for the PREFAB industry.
+Thanks to our broad expertise the company holds a unique specialist position in Europe.
 
-Med nästan 30 års erfarenhet erbjuder vi innovativa lösningar för nybyggnation, tillbyggnad och renovering. Produkterna i ISOCELL produktsortimentet är anpassade till varandra för att bilda effektiva klimatskydd där vind, hetta och kyla hålls utanför huset.', 'sv', 'ISOCELL – utvecklar och marknadsför lösningar baserat på cellulosabaserad lösullsisolering och produkter för diffusionsöppet byggande.
+With almost 30 years of experience we offer innovative solutions for new construction, extensions and renovation. The products in the ISOCELL range are matched to one another to form an effective climate envelope that keeps wind, heat and cold out of the building.', 'sv', 'ISOCELL – utvecklar och marknadsför lösningar baserat på cellulosabaserad lösullsisolering och produkter för diffusionsöppet byggande.
 Vi är också marknadsledande avseende installationslösningar av lösull med en bred portfölj av installationsmaskiner och hela system för automatisk installation av lösull för PREFAB-industrin.
 Genom vår breda kompetens intar företaget en unik expertposition i Europa.
 
 Med nästan 30 års erfarenhet erbjuder vi innovativa lösningar för nybyggnation, tillbyggnad och renovering. Produkterna i ISOCELL produktsortimentet är anpassade till varandra för att bilda effektiva klimatskydd där vind, hetta och kyla hålls utanför huset.'), 'https://www.isocell.se', 'assets/images/exhibitors/nordbygg-2026-isocell-gmbh-co-kg.jpg'),
   ('nordbygg-2026-exhibitor-138446', 'nordbygg-2026', 'Isodrän AB', 'C05:61', null, 'https://www.isodran.com', null),
   ('nordbygg-2026-exhibitor-139875', 'nordbygg-2026', 'Isomester AS', 'AG:106', null, 'https://Isomester.no', null),
-  ('nordbygg-2026-exhibitor-137117', 'nordbygg-2026', 'Isozero', 'C08:52', jsonb_build_object('en', 'Isozero arbetar med platsproducerad cellulär betong för lättfyllnad, isolering och nivellering i infrastruktur- och byggprojekt.
-Våra lösningar minskar schakt, transporter och materialåtgång, vilket ger både tydliga miljövinster och ekonomiska besparingar, samtidigt som vi hanterar sättningar, låg bärighet och komplex geometri på ett effektivt sätt.
-Sällan sparar man pengar just genom att välja det mer miljösmarta alternativet – men det är just där Isozero kommer in.', 'sv', 'Isozero arbetar med platsproducerad cellulär betong för lättfyllnad, isolering och nivellering i infrastruktur- och byggprojekt.
+  ('nordbygg-2026-exhibitor-137117', 'nordbygg-2026', 'Isozero', 'C08:52', jsonb_build_object('en', 'Isozero works with on-site-produced cellular concrete for lightweight fill, insulation and levelling in infrastructure and construction projects.
+Our solutions reduce excavation, transport and material use, delivering both clear environmental gains and cost savings, while we handle settlement, low bearing capacity and complex geometry efficiently.
+It is rare to save money precisely by choosing the more environmentally smart option — but that is exactly where Isozero comes in.', 'sv', 'Isozero arbetar med platsproducerad cellulär betong för lättfyllnad, isolering och nivellering i infrastruktur- och byggprojekt.
 Våra lösningar minskar schakt, transporter och materialåtgång, vilket ger både tydliga miljövinster och ekonomiska besparingar, samtidigt som vi hanterar sättningar, låg bärighet och komplex geometri på ett effektivt sätt.
 Sällan sparar man pengar just genom att välja det mer miljösmarta alternativet – men det är just där Isozero kommer in.'), 'https://isozero.se', 'assets/images/exhibitors/nordbygg-2026-isozero.jpg'),
-  ('nordbygg-2026-exhibitor-139460', 'nordbygg-2026', 'iTOOLS', 'B04:30', jsonb_build_object('en', 'År 2004 kunde de första danska snickarna börja lägga trägolv stående med vår golvhammare. Idag är hantverkare i 45 länder effektivare och hälsosammare tack vare innovativa och intelligenta verktyg "Made in Odder".
+  ('nordbygg-2026-exhibitor-139460', 'nordbygg-2026', 'iTOOLS', 'B04:30', jsonb_build_object('en', 'In 2004 the first Danish carpenters were able to start laying wood floors standing up, using our floor hammer. Today, craftspeople in 45 countries are more efficient and healthier thanks to innovative and intelligent tools "Made in Odder".
 
-Hösten 2023 köpte vi företaget ESKIMO. Företaget grundades 1926 och är en veritabel institution inom murningsbranschen. ESKIMO i Herning är den sista återstående fabriken i hela Skandinavien som producerar murverktyg.
+In the autumn of 2023 we acquired the company ESKIMO. Founded in 1926, ESKIMO is a true institution in the masonry trade. The ESKIMO factory in Herning is the last remaining factory in all of Scandinavia that still produces masonry tools.
 
-Vår entusiasm och starka kundrelationer hemma och utomlands har gjort att tillverkare av verktyg, maskiner och personlig skyddsutrustning från bland annat Australien, Singapore, USA, Schweiz, Holland och Tyskland väljer iTOOLS som sin distributör i Danmark, Skandinavien och i vissa fall i hela Europa.
+Our enthusiasm and strong customer relationships at home and abroad have led manufacturers of tools, machines and personal protective equipment from countries including Australia, Singapore, the USA, Switzerland, the Netherlands and Germany to choose iTOOLS as their distributor in Denmark, Scandinavia, and in some cases across the whole of Europe.
 
-iTOOLS är den skandinaviska importören av
-- FENTO knäskydd
-- CleanSpace aktivt andningsskydd
-- AIR+ engångsmask med ventilator
-- PerfectPro jobbradio', 'sv', 'År 2004 kunde de första danska snickarna börja lägga trägolv stående med vår golvhammare. Idag är hantverkare i 45 länder effektivare och hälsosammare tack vare innovativa och intelligenta verktyg "Made in Odder".
+iTOOLS is the Scandinavian importer of
+- FENTO knee pads
+- CleanSpace powered respirators
+- AIR+ disposable mask with valve
+- PerfectPro jobsite radio', 'sv', 'År 2004 kunde de första danska snickarna börja lägga trägolv stående med vår golvhammare. Idag är hantverkare i 45 länder effektivare och hälsosammare tack vare innovativa och intelligenta verktyg "Made in Odder".
 
 Hösten 2023 köpte vi företaget ESKIMO. Företaget grundades 1926 och är en veritabel institution inom murningsbranschen. ESKIMO i Herning är den sista återstående fabriken i hela Skandinavien som producerar murverktyg.
 
@@ -3954,20 +3954,20 @@ iTOOLS är den skandinaviska importören av
 - PerfectPro jobbradio'), 'https://www.itools.dk', 'assets/images/exhibitors/nordbygg-2026-itools.jpg'),
   ('nordbygg-2026-exhibitor-134958', 'nordbygg-2026', 'IV Produkt AB', 'A15:14', null, 'https://www.ivprodukt.se', 'assets/images/exhibitors/nordbygg-2026-iv-produkt-ab.jpg'),
   ('nordbygg-2026-exhibitor-139158', 'nordbygg-2026', 'IVL', 'EH:15', null, 'https://www.ivl.se', null),
-  ('nordbygg-2026-exhibitor-137860', 'nordbygg-2026', 'Jack Midhage AB', 'B09:41 (+1)', jsonb_build_object('en', 'JLM Group AB', 'sv', 'JLM Group AB'), 'https://jlmgroup.se', null),
-  ('nordbygg-2026-exhibitor-133982', 'nordbygg-2026', 'Jafo AB / Unidrain Sverige', 'A03:26', jsonb_build_object('en', 'Jafo utvecklar och säljer VVS-Produkter i plast & rostfritt med golvbrunnar och golvrännor som huvudprodukter.
+  ('nordbygg-2026-exhibitor-137860', 'nordbygg-2026', 'Jack Midhage AB', 'B09:41 (+1)', jsonb_build_object('en', 'Part of JLM Group AB.', 'sv', 'Tillhör JLM Group AB.'), 'https://jlmgroup.se', null),
+  ('nordbygg-2026-exhibitor-133982', 'nordbygg-2026', 'Jafo AB / Unidrain Sverige', 'A03:26', jsonb_build_object('en', 'Jafo develops and sells plumbing products in plastic and stainless steel, with floor drains and shower channels as our main products.
 
-I mer än 50 år har Jafo utvecklat och tillverkat golvbrunnar och många andra produkter för vattenavledning i svenska hem. Vi var till exempel först med att gjuta plastbrunnar i ett stycke och lansera koniska klämringar som skruvas fast. Vi såg dessutom till att det blev standard att golvbrunnar som installeras i träbjälklag säkras med en monteringsplatta. Och kanske kommer fler att följa efter sedan vi börjat använda återvunnen plast i våra produkter.
+For more than 50 years Jafo has developed and manufactured floor drains and many other products for water drainage in Swedish homes. We were, for example, the first to mould one-piece plastic drains and to launch tapered, screw-fitted clamping rings. We also made it standard practice for floor drains installed in timber joists to be secured with a mounting plate. And perhaps more will follow now that we have started using recycled plastic in our products.
 
-Vi påstår inte att vi har uppfunnit hjulet. Vi gör det bara lite rundare efterhand. Allt för att du och Sveriges 15 000 andra rörläggare ska kunna göra ett jobb som håller vad du lovar. Ett vattentätt jobb, helt enkelt.
+We do not claim to have invented the wheel. We just keep making it a little rounder. All so that you, together with Sweden''s 15,000 other plumbers, can do work that lives up to your promises. A watertight job, quite simply.
 
-På den svenska marknaden ansvarar Jafo AB även för försäljningen av Unidrain.
+In the Swedish market, Jafo AB is also responsible for the sale of Unidrain.
 
-Unidrains unika golvaloppssystem har på bara några år blivit byggbranschens mest populära. Idag finns Unidrain-installationer över hela världen, och Unidrain har blivit ett begrepp för moderna golvbrunn placerade mot väggen. Med den löpande utvecklingen inom både byggteknik och design är det Unidrains ambition att inte bara vara byggbranschens mest populära golvavloppssystem, utan att också vara branschens prioriterade leverantör inom badrumsområdet.
+Unidrain''s unique floor-drainage system has, in just a few years, become the construction industry''s most popular. Today, Unidrain installations can be found all over the world, and Unidrain has become a byword for the modern wall-mounted floor drain. With ongoing development in both construction technology and design, Unidrain''s ambition is not only to be the construction industry''s most popular floor-drainage system, but also to be the industry''s preferred supplier for the bathroom segment.
 
-Unidrains produkter kan användas i alla typer av byggnader: Vid renovering och nybyggnation samt i privata och offentliga byggnader. Alla Unidrain-produkter är utvecklade av danska arkitekter i nära samarbete med experter på våtrumsteknik och har alla relevanta godkännanden både lokalt och internationellt.
+Unidrain''s products can be used in all kinds of buildings: in renovation and new build, and in private as well as public buildings. All Unidrain products are developed by Danish architects in close collaboration with wet-room technology experts and carry all relevant approvals, both local and international.
 
-Unidrains golvavlopp har fått flera internationellt erkända designpriser, till exempel "iF product design award" och "Den Danske Designpris" för serien HighLine. 2015 fick Claus Dyre "Villum Fondens Bygningskomponentpris" för att ha uppfunnit linjegolvavloppet.', 'sv', 'Jafo utvecklar och säljer VVS-Produkter i plast & rostfritt med golvbrunnar och golvrännor som huvudprodukter.
+Unidrain''s floor drains have received several internationally recognised design awards, including the "iF product design award" and the "Den Danske Designpris" (Danish Design Prize) for the HighLine series. In 2015 Claus Dyre received the "Villum Foundation Building Component Prize" for inventing the linear floor drain.', 'sv', 'Jafo utvecklar och säljer VVS-Produkter i plast & rostfritt med golvbrunnar och golvrännor som huvudprodukter.
 
 I mer än 50 år har Jafo utvecklat och tillverkat golvbrunnar och många andra produkter för vattenavledning i svenska hem. Vi var till exempel först med att gjuta plastbrunnar i ett stycke och lansera koniska klämringar som skruvas fast. Vi såg dessutom till att det blev standard att golvbrunnar som installeras i träbjälklag säkras med en monteringsplatta. Och kanske kommer fler att följa efter sedan vi börjat använda återvunnen plast i våra produkter.
 
@@ -3982,30 +3982,30 @@ Unidrains produkter kan användas i alla typer av byggnader: Vid renovering och 
 Unidrains golvavlopp har fått flera internationellt erkända designpriser, till exempel "iF product design award" och "Den Danske Designpris" för serien HighLine. 2015 fick Claus Dyre "Villum Fondens Bygningskomponentpris" för att ha uppfunnit linjegolvavloppet.'), 'https://www.jafo.eu', 'assets/images/exhibitors/nordbygg-2026-jafo-ab-unidrain-sverige.jpg'),
   ('nordbygg-2026-exhibitor-137910', 'nordbygg-2026', 'James Hardie', 'C06:52', null, 'https://www.jameshardie.se', 'assets/images/exhibitors/nordbygg-2026-james-hardie.jpg'),
   ('nordbygg-2026-exhibitor-138670', 'nordbygg-2026', 'Jape Produkter AB', 'C07:70', null, 'https://www.jape.se', 'assets/images/exhibitors/nordbygg-2026-jape-produkter-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139476', 'nordbygg-2026', 'JBF Järn- Bygg- & Färgfackhandlarna', 'BG:06', jsonb_build_object('en', 'JBF är en oberoende branschtidning med över fyra decenniers erfarenhet av att bevaka utvecklingen inom järn-, bygg- och färghandeln. Vår ambition är att ge en nyanserad och trovärdig bild av en marknad som ständigt förändras – från lokala familjeföretag till rikstäckande kedjor.
+  ('nordbygg-2026-exhibitor-139476', 'nordbygg-2026', 'JBF Järn- Bygg- & Färgfackhandlarna', 'BG:06', jsonb_build_object('en', 'JBF is an independent trade magazine with more than four decades of experience covering developments across the hardware, building-supplies and paint trades. Our ambition is to provide a nuanced, trustworthy picture of a market that is constantly changing — from local family businesses to nationwide chains.
 
-Vi skildrar inte bara produkterna, utan också människorna, företagen och strategierna bakom handeln. Vår redaktion arbetar nära ett rådgivande råd med mångårig erfarenhet som företagare och branschaktörer, vilket ger oss djup kunskap och perspektiv.
+We portray not only the products, but also the people, companies and strategies behind the trade. Our editorial team works closely with an advisory board of long-standing entrepreneurs and industry players, which gives us deep knowledge and perspective.
 
-Att vara oberoende är kärnan i vår journalistik. Vi är inte knutna till någon organisation eller intressegrupp, vilket ger oss frihet att ställa frågor, granska trender och lyfta fram olika röster.', 'sv', 'JBF är en oberoende branschtidning med över fyra decenniers erfarenhet av att bevaka utvecklingen inom järn-, bygg- och färghandeln. Vår ambition är att ge en nyanserad och trovärdig bild av en marknad som ständigt förändras – från lokala familjeföretag till rikstäckande kedjor.
+Independence sits at the heart of our journalism. We are not tied to any organisation or interest group, which gives us the freedom to ask questions, scrutinise trends and bring different voices to the fore.', 'sv', 'JBF är en oberoende branschtidning med över fyra decenniers erfarenhet av att bevaka utvecklingen inom järn-, bygg- och färghandeln. Vår ambition är att ge en nyanserad och trovärdig bild av en marknad som ständigt förändras – från lokala familjeföretag till rikstäckande kedjor.
 
 Vi skildrar inte bara produkterna, utan också människorna, företagen och strategierna bakom handeln. Vår redaktion arbetar nära ett rådgivande råd med mångårig erfarenhet som företagare och branschaktörer, vilket ger oss djup kunskap och perspektiv.
 
 Att vara oberoende är kärnan i vår journalistik. Vi är inte knutna till någon organisation eller intressegrupp, vilket ger oss frihet att ställa frågor, granska trender och lyfta fram olika röster.'), 'https://jarnbyggfarg.se/', 'assets/images/exhibitors/nordbygg-2026-jbf-jarn-bygg-fargfackhandlarna.jpg'),
   ('nordbygg-2026-exhibitor-139475', 'nordbygg-2026', 'JCH A/S', 'A05:33', null, 'https://www.jch.as', null),
-  ('nordbygg-2026-exhibitor-134663', 'nordbygg-2026', 'Jeven AB', 'A16:18', jsonb_build_object('en', 'Bättre klimat i köket tack vare Jevens storköksventilation.
-En ren, sund och energiklok arbetsmiljö är en självklar drivkraft i vår produktutveckling av storköksventilation. Att skapa ett bättre arbetsklimat för professionell kökspersonal främjar personalens välbefinnande, förbättrar lönsamheten och ökar byggnadens energieffektivitet.', 'sv', 'Bättre klimat i köket tack vare Jevens storköksventilation.
+  ('nordbygg-2026-exhibitor-134663', 'nordbygg-2026', 'Jeven AB', 'A16:18', jsonb_build_object('en', 'A better kitchen climate thanks to Jeven''s commercial kitchen ventilation.
+A clean, healthy and energy-smart working environment is a self-evident driver in our product development of commercial kitchen ventilation. Creating a better working climate for professional kitchen staff promotes employee well-being, improves profitability and increases the building''s energy efficiency.', 'sv', 'Bättre klimat i köket tack vare Jevens storköksventilation.
 En ren, sund och energiklok arbetsmiljö är en självklar drivkraft i vår produktutveckling av storköksventilation. Att skapa ett bättre arbetsklimat för professionell kökspersonal främjar personalens välbefinnande, förbättrar lönsamheten och ökar byggnadens energieffektivitet.'), 'https://www.jeven.se', 'assets/images/exhibitors/nordbygg-2026-jeven-ab.jpg'),
-  ('nordbygg-2026-exhibitor-139990', 'nordbygg-2026', 'JIRICOM AB', 'C02:41', jsonb_build_object('en', 'Jiricom erbjuder marknadens bästa körjournaler och spårsändare för alla som kör bil i tjänsten eller vill ha koll på sina dyra maskiner och verktyg. Sväng förbi montern och kika på Sveriges billigaste körjournal!', 'sv', 'Jiricom erbjuder marknadens bästa körjournaler och spårsändare för alla som kör bil i tjänsten eller vill ha koll på sina dyra maskiner och verktyg. Sväng förbi montern och kika på Sveriges billigaste körjournal!'), 'https://jiricom.se/sv', 'assets/images/exhibitors/nordbygg-2026-jiricom-ab.jpg'),
+  ('nordbygg-2026-exhibitor-139990', 'nordbygg-2026', 'JIRICOM AB', 'C02:41', jsonb_build_object('en', 'Jiricom offers the market''s best driving logs and trackers for everyone who drives for work or wants to keep tabs on their expensive machines and tools. Drop by our stand and take a look at Sweden''s most affordable driving log!', 'sv', 'Jiricom erbjuder marknadens bästa körjournaler och spårsändare för alla som kör bil i tjänsten eller vill ha koll på sina dyra maskiner och verktyg. Sväng förbi montern och kika på Sveriges billigaste körjournal!'), 'https://jiricom.se/sv', 'assets/images/exhibitors/nordbygg-2026-jiricom-ab.jpg'),
   ('nordbygg-2026-exhibitor-139386', 'nordbygg-2026', 'JM GRUPA', 'C04:41', null, 'https://www.jmgrupa.lv/en', 'assets/images/exhibitors/nordbygg-2026-jm-grupa.jpg'),
-  ('nordbygg-2026-exhibitor-133989', 'nordbygg-2026', 'Joma AB', 'C13:53', jsonb_build_object('en', 'Joma utvecklar, tillverkar och marknadsför produkter för byggindustrin. Vårt sortiment omfattar byggbeslag och skalmursprodukter samt tråd som riktas och kapas enligt kundspecifika önskemål.
+  ('nordbygg-2026-exhibitor-133989', 'nordbygg-2026', 'Joma AB', 'C13:53', jsonb_build_object('en', 'Joma develops, manufactures and markets products for the construction industry. Our range covers structural fittings and brick-veneer products, along with wire that is straightened and cut to customer-specific requirements.
 
-Försäljning av byggbeslag – såsom balkskor, vinkelbeslag, hålplattor och hålband – samt skalmursprodukter som murkramlor, murverksarmering och glidskikt sker via våra återförsäljare. Våra trådprodukter säljs till både grossister och tillverkare.', 'sv', 'Joma utvecklar, tillverkar och marknadsför produkter för byggindustrin. Vårt sortiment omfattar byggbeslag och skalmursprodukter samt tråd som riktas och kapas enligt kundspecifika önskemål.
+Structural fittings — such as beam shoes, angle brackets, perforated plates and perforated strapping — and brick-veneer products such as wall ties, masonry reinforcement and slip layers are sold through our resellers. Our wire products are sold to both wholesalers and manufacturers.', 'sv', 'Joma utvecklar, tillverkar och marknadsför produkter för byggindustrin. Vårt sortiment omfattar byggbeslag och skalmursprodukter samt tråd som riktas och kapas enligt kundspecifika önskemål.
 
 Försäljning av byggbeslag – såsom balkskor, vinkelbeslag, hålplattor och hålband – samt skalmursprodukter som murkramlor, murverksarmering och glidskikt sker via våra återförsäljare. Våra trådprodukter säljs till både grossister och tillverkare.'), 'https://www.joma.se', 'assets/images/exhibitors/nordbygg-2026-joma-ab.jpg'),
   ('nordbygg-2026-exhibitor-139037', 'nordbygg-2026', 'Jukola Industries', 'C14:26', null, 'https://jukolaind.com', 'assets/images/exhibitors/nordbygg-2026-jukola-industries.jpg'),
   ('nordbygg-2026-exhibitor-139453', 'nordbygg-2026', 'JURES MEDIS', 'C14:70', null, 'https://www.juresmedis.lt/en', 'assets/images/exhibitors/nordbygg-2026-jures-medis.jpg'),
-  ('nordbygg-2026-exhibitor-138658', 'nordbygg-2026', 'Järnet Smide Stockholm AB', 'C17:18', jsonb_build_object('en', 'Järnet Smide Stockholm AB är en välrenommerad, och kompetent leverantör av tjänster inom service och fastighetssmide. Redan från starten 1988 har vi haft fokus på att serva allmännyttan och fastighetsägare och har fortsatt så i över 30 år.
-Målsättning och inriktning är nu som då att serva allmännyttan och privata fastighetsägare med arbeten och rådgivning inom plåt, smide, lås samt även tillverkning och montage av specialbyggda entrédörrar i stål, rostfritt samt trä och branddörrar enligt kundens önskemål. För att kunna leverera med högsta kvalitet och finish utvecklas och produceras det mesta av våra produkter i egen regi.', 'sv', 'Järnet Smide Stockholm AB är en välrenommerad, och kompetent leverantör av tjänster inom service och fastighetssmide. Redan från starten 1988 har vi haft fokus på att serva allmännyttan och fastighetsägare och har fortsatt så i över 30 år.
+  ('nordbygg-2026-exhibitor-138658', 'nordbygg-2026', 'Järnet Smide Stockholm AB', 'C17:18', jsonb_build_object('en', 'Järnet Smide Stockholm AB is a well-respected, capable supplier of services in property smithing and maintenance. From its start in 1988 our focus has been on serving public housing companies and property owners, and we have continued in that vein for more than 30 years.
+Our goal and direction today is the same as then: to serve public housing and private property owners with work and advice in sheet metal, smithing and locks, as well as the manufacture and installation of bespoke entrance doors in steel, stainless steel and wood, and fire doors built to the customer''s specification. To deliver the highest quality and finish, most of our products are developed and produced in-house.', 'sv', 'Järnet Smide Stockholm AB är en välrenommerad, och kompetent leverantör av tjänster inom service och fastighetssmide. Redan från starten 1988 har vi haft fokus på att serva allmännyttan och fastighetsägare och har fortsatt så i över 30 år.
 Målsättning och inriktning är nu som då att serva allmännyttan och privata fastighetsägare med arbeten och rådgivning inom plåt, smide, lås samt även tillverkning och montage av specialbyggda entrédörrar i stål, rostfritt samt trä och branddörrar enligt kundens önskemål. För att kunna leverera med högsta kvalitet och finish utvecklas och produceras det mesta av våra produkter i egen regi.'), 'https://jarnetsmide.se', 'assets/images/exhibitors/nordbygg-2026-jarnet-smide-stockholm-ab.jpg'),
   ('nordbygg-2026-exhibitor-139041', 'nordbygg-2026', 'Kakelspecialisten', 'A01:202', jsonb_build_object('en', 'Kakelspecialisten är ett av Sveriges ledande företag inom kakel och badrumsinredningar. Vi säljer och marknadsför allt inom kakel, klinker, granitkeramik, badrumsinredning, fäst & fogprodukter och andra kringprodukter till både privata och offentliga projekt . Hos oss hittar du marknadens i särklass bredaste projektsortiment.
 
